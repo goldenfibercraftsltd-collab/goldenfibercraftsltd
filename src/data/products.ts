@@ -1,14 +1,80 @@
-import { Product } from '../types/product';
+export interface ProductSpec {
+  key: string;
+  value: string;
+}
+
+export interface CategoryInfo {
+  id: string;
+  slug: string;
+  name: string;
+  description: string;
+  iconName: string;
+}
+
+export interface ProductItem {
+  id: string;
+  slug: string;
+  code: string;
+  name: string;
+  category: string;
+  categoryName: string;
+  categorySlug: string;
+  image: string;
+  description: string;
+  specifications: ProductSpec[];
+  features: string[];
+}
 
 export const TAGLINE = "Nature Woven into Every Creation.";
 
-export const PRODUCTS: Product[] = [
-  // 1. Storage Baskets & Hampers (PPT Items)
+export const CATEGORIES: CategoryInfo[] = [
+  {
+    id: 'baskets',
+    slug: 'storage-laundry-baskets',
+    name: 'Storage & Laundry Baskets',
+    description: 'Handwoven natural seagrass, water hyacinth, Kaisa grass, and jute hampers & storage baskets for global export.',
+    iconName: 'Package'
+  },
+  {
+    id: 'planters',
+    slug: 'planters-pots',
+    name: 'Planters & Pots',
+    description: 'Eco-chic natural fiber plant pots, floor planters, and hanging planter baskets with waterproof interior liners.',
+    iconName: 'Leaf'
+  },
+  {
+    id: 'bags',
+    slug: 'jute-bags-packaging',
+    name: 'Jute Bags & Packaging',
+    description: 'Custom printed golden jute shopping bags, tote bags, promotional gift bags, and wine bottle packaging.',
+    iconName: 'ShoppingBag'
+  },
+  {
+    id: 'decor',
+    slug: 'home-decor-mats',
+    name: 'Home Decor & Mats',
+    description: 'Artisan hand-braided jute floor rugs, placement sets, table mats, macrame plant holders, and wall decor.',
+    iconName: 'Sparkles'
+  },
+  {
+    id: 'bamboo',
+    slug: 'bamboo-crafts',
+    name: 'Bamboo Crafts',
+    description: 'Sustainable hand-carved bamboo trays, organizers, and eco-friendly home lifestyle accessories.',
+    iconName: 'Trees'
+  }
+];
+
+export const PRODUCTS: ProductItem[] = [
+  // 1. Storage & Laundry Baskets
   {
     id: 'GFC-SB-015',
+    slug: 'sancerre-seagrass-rectangular-basket-gfc-sb-015',
+    code: 'GFC-SB-015, 018',
     name: 'Sancerre Seagrass Rectangular Basket',
     category: 'baskets',
     categoryName: 'Storage & Laundry Baskets',
+    categorySlug: 'storage-laundry-baskets',
     image: '/products/gfc_sb_015.png',
     description: 'Handwoven rectangular storage basket made from seagrass, water hyacinth and natural jute fiber. Ideal for high-end home organization and retail export.',
     specifications: [
@@ -22,10 +88,33 @@ export const PRODUCTS: Product[] = [
     features: ['100% Natural Fiber', 'Handcrafted Craftsmanship', 'Heavy Duty Frame', 'Export Grade Quality']
   },
   {
-    id: 'GFC-SB-030',
-    name: 'Round Shape Jute & Seagrass Storage Basket',
+    id: 'GFC-SB-025',
+    slug: 'sancerre-seagrass-rectangular-basket-gfc-sb-025',
+    code: 'GFC-SB-025',
+    name: 'Sancerre Seagrass Rectangular Basket (Medium)',
     category: 'baskets',
     categoryName: 'Storage & Laundry Baskets',
+    categorySlug: 'storage-laundry-baskets',
+    image: '/products/gfc_sb_025.png',
+    description: 'Medium size seagrass rectangular storage basket with soft cotton rope handles for linen and toy organization.',
+    specifications: [
+      { key: 'Item Code', value: 'GFC-SB-025' },
+      { key: 'Item Name', value: 'Sancerre Seagrass Rectangular Basket' },
+      { key: 'Specification', value: 'Diameter-30cm & Height-30cm' },
+      { key: 'Materials', value: 'Seagrass, Cotton Rope' },
+      { key: 'MOQ', value: 'Flexible' },
+      { key: 'Country of Origin', value: 'Bangladesh' }
+    ],
+    features: ['Natural Seagrass Fiber', 'Soft Cotton Rope Wrap', 'Stackable & Lightweight', 'Eco Living Accent']
+  },
+  {
+    id: 'GFC-SB-030',
+    slug: 'round-shape-jute-storage-basket-gfc-sb-030',
+    code: 'GFC-SB-030',
+    name: 'Round Shape Jute Storage Basket',
+    category: 'baskets',
+    categoryName: 'Storage & Laundry Baskets',
+    categorySlug: 'storage-laundry-baskets',
     image: '/products/gfc_sb_030.png',
     description: 'Traditional round woven storage basket with cotton rope accents and reinforced natural seagrass weave.',
     specifications: [
@@ -40,9 +129,12 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'GFC-SB-024',
+    slug: 'casafield-round-storage-basket-gfc-sb-024',
+    code: 'GFC-SB-024',
     name: 'Casafield Round Storage Basket',
     category: 'baskets',
     categoryName: 'Storage & Laundry Baskets',
+    categorySlug: 'storage-laundry-baskets',
     image: '/products/gfc_sb_024.png',
     description: 'Large premium round storage hamper crafted from natural water hyacinth braided fibers.',
     specifications: [
@@ -57,9 +149,12 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'GFC-SB-017',
-    name: 'Seagrass Laundry & Storage Basket',
+    slug: 'round-seagrass-laundry-basket-gfc-sb-017',
+    code: 'GFC-SB-017',
+    name: 'Round Seagrass Laundry Basket',
     category: 'baskets',
     categoryName: 'Storage & Laundry Baskets',
+    categorySlug: 'storage-laundry-baskets',
     image: '/products/gfc_sb_017.png',
     description: 'Tall laundry hamper basket expertly handwoven using sustainably harvested Bangladesh seagrass.',
     specifications: [
@@ -74,9 +169,12 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'GFC-KB-005',
+    slug: 'kaisa-basket-bowl-gfc-kb-005',
+    code: 'GFC-KB-005, 015',
     name: 'Kaisa Grass Basket Bowl',
     category: 'baskets',
     categoryName: 'Storage & Laundry Baskets',
+    categorySlug: 'storage-laundry-baskets',
     image: '/products/gfc_kb_005.png',
     description: 'Handmade Kaisa grass basket bowl wrapped with natural cotton cord. Popular fair trade product for tabletop storage.',
     specifications: [
@@ -91,9 +189,12 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'GFC-WB-009',
-    name: 'Cotton Rope Woven Laundry Hamper',
+    slug: 'cotton-rope-laundry-hamper-woven-basket-gfc-wb-009',
+    code: 'GFC-WB-009',
+    name: 'Cotton Rope Laundry Hamper Woven Basket',
     category: 'baskets',
     categoryName: 'Storage & Laundry Baskets',
+    categorySlug: 'storage-laundry-baskets',
     image: '/products/gfc_wb_009.png',
     description: 'Modern coiled cotton rope hamper basket designed for nurseries, bedrooms, and clean bathroom decor.',
     specifications: [
@@ -107,12 +208,15 @@ export const PRODUCTS: Product[] = [
     features: ['100% Unbleached Cotton', 'Machine Washable', 'Soft & Scratch Free', 'Durable Coiled Construction']
   },
 
-  // 2. Planters & Pots (PPT Items)
+  // 2. Planters & Pots
   {
     id: 'GFC-SP-0029',
+    slug: 'seagrass-planters-gfc-sp-0029',
+    code: 'GFC-SP-0029',
     name: 'Seagrass Indoor & Outdoor Planters',
     category: 'planters',
     categoryName: 'Planters & Pots',
+    categorySlug: 'planters-pots',
     image: '/products/gfc_sp_0029.png',
     description: 'Eco-chic woven seagrass plant basket set for indoor house plants and garden decor.',
     specifications: [
@@ -126,12 +230,15 @@ export const PRODUCTS: Product[] = [
     features: ['Internal Waterproof Plastic Liner', 'Natural Plant Accent', 'Multi-size Set', 'Sustainable Harvest']
   },
 
-  // 3. Jute Bags & Packaging (PPT Items)
+  // 3. Jute Bags & Packaging
   {
     id: 'GFC-SB-011',
-    name: 'Custom Jute Shopping & Retail Bag',
+    slug: 'jute-shopping-bag-customize-bag-gfc-sb-011',
+    code: 'GFC-SB-011',
+    name: 'Jute Shopping Bag / Custom Bag',
     category: 'bags',
     categoryName: 'Jute Bags & Packaging',
+    categorySlug: 'jute-bags-packaging',
     image: '/products/gfc_sb_011.png',
     description: 'Laminated heavy-duty natural jute shopping bag with padded cotton handles. Perfect for retail branding.',
     specifications: [
@@ -146,9 +253,12 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'GFC-TB-012',
+    slug: 'jute-tote-bag-gfc-tb-012',
+    code: 'GFC-TB-012, 020',
     name: 'Artisan Jute Tote Bag',
     category: 'bags',
     categoryName: 'Jute Bags & Packaging',
+    categorySlug: 'jute-bags-packaging',
     image: '/products/gfc_tb_012.png',
     description: 'Stylish eco tote bag crafted from 100% natural jute fiber for daily shopping, beach, and promotional giveaways.',
     specifications: [
@@ -163,9 +273,12 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'GFC-PB-008',
-    name: 'Corporate Promotional Jute Bag',
+    slug: 'promotional-jute-bag-gfc-pb-008',
+    code: 'GFC-PB-008',
+    name: 'Promotional Jute Bag',
     category: 'bags',
     categoryName: 'Jute Bags & Packaging',
+    categorySlug: 'jute-bags-packaging',
     image: '/products/gfc_pb_008.png',
     description: 'Compact promotional jute gift bag tailored for corporate events, tradeshows, and brand branding.',
     specifications: [
@@ -180,9 +293,12 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'GFC-WB-007',
-    name: 'Jute Wine & Bottle Bag',
+    slug: 'jute-wine-bag-gfc-wb-007',
+    code: 'GFC-WB-007, 009',
+    name: 'Jute Wine Bag',
     category: 'bags',
     categoryName: 'Jute Bags & Packaging',
+    categorySlug: 'jute-bags-packaging',
     image: '/products/gfc_wb_007.png',
     description: 'Single and double bottle jute packaging bag with cane/rope handle and transparent cane window option.',
     specifications: [
@@ -196,12 +312,15 @@ export const PRODUCTS: Product[] = [
     features: ['Bottle Protection Divider', 'Clear View Window Option', 'Sturdy Rope Handle', 'Gift Ready']
   },
 
-  // 4. Home Decor & Mats (PPT Items)
+  // 4. Home Decor & Mats
   {
     id: 'GFC-TM-004',
+    slug: 'table-mat-gfc-tm-004',
+    code: 'GFC-TM-004, 013',
     name: 'Braided Jute & Cotton Table Mat',
     category: 'decor',
     categoryName: 'Home Decor & Mats',
+    categorySlug: 'home-decor-mats',
     image: '/products/gfc_tm_004.png',
     description: 'Circular hand-braided table placement mat combining natural jute fibers and unbleached cotton cord.',
     specifications: [
@@ -216,9 +335,12 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'GFC-PS-009',
-    name: 'Jute & Rattan Placemat Set',
+    slug: 'jute-rattan-placement-set-gfc-ps-009',
+    code: 'GFC-PS-009',
+    name: 'Jute & Rattan Placement Set',
     category: 'decor',
     categoryName: 'Home Decor & Mats',
+    categorySlug: 'home-decor-mats',
     image: '/products/gfc_ps_009.png',
     description: 'Luxury handcrafted dining placemat set made from woven raw jute and natural rattan cane strips.',
     specifications: [
@@ -233,9 +355,12 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'GFC-FM-017',
+    slug: 'floor-mat-rugs-gfc-fm-017',
+    code: 'GFC-FM-017, 019',
     name: 'Braided Jute Floor Rug & Mat',
     category: 'decor',
     categoryName: 'Home Decor & Mats',
+    categorySlug: 'home-decor-mats',
     image: '/products/gfc_fm_017.png',
     description: 'Large round hand-braided jute area rug providing warm natural texture to modern and traditional interiors.',
     specifications: [
@@ -250,9 +375,12 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'GFC-PH-008',
+    slug: 'plant-holder-macrame-gfc-ph-008',
+    code: 'GFC-PH-008, 015',
     name: 'Macrame Jute Plant Holder',
     category: 'decor',
     categoryName: 'Home Decor & Mats',
+    categorySlug: 'home-decor-mats',
     image: '/products/gfc_ph_008.png',
     description: 'Boho macrame hanging plant hanger crafted with knotted natural jute twine and cotton cord.',
     specifications: [
@@ -266,12 +394,15 @@ export const PRODUCTS: Product[] = [
     features: ['Hand-knotted Macrame', 'Heavy Weight Capacity', 'Ceiling & Wall Hanging', 'Indoor & Balcony Decor']
   },
 
-  // 5. Bamboo Crafts (PPT Items)
+  // 5. Bamboo Crafts
   {
     id: 'GFC-BP-007',
+    slug: 'bamboo-products-gfc-bp-007',
+    code: 'GFC-BP-007, 012, 022, 029',
     name: 'Artisan Bamboo Products & Crafts',
     category: 'bamboo',
     categoryName: 'Bamboo Crafts',
+    categorySlug: 'bamboo-crafts',
     image: '/products/gfc_bp_007.png',
     description: 'Eco-friendly bamboo trays, organizers, and kitchen accessories hand-carved from seasoned Bangladesh bamboo.',
     specifications: [
@@ -283,75 +414,5 @@ export const PRODUCTS: Product[] = [
       { key: 'Country of Origin', value: 'Bangladesh' }
     ],
     features: ['Termite & Mold Treated', 'Food Safe Oil Finish', 'Ultra-Lightweight & Tough', '100% Sustainable']
-  },
-
-  // 6. Garment Trims & Labels
-  {
-    id: 'GFC-WL-101',
-    name: 'Woven Damask Garment Labels',
-    category: 'labels',
-    categoryName: 'All types of Label',
-    image: '/banners/banner2.png',
-    description: 'High-density Damask woven neck labels, size tags, and brand logo patches with ultrasound soft cut edges.',
-    specifications: [
-      { key: 'Item Code', value: 'GFC-WL-101' },
-      { key: 'Item Name', value: 'Woven Damask Label' },
-      { key: 'Specification', value: 'High Density 50D Thread' },
-      { key: 'Materials', value: '100% Polyester / Organic Cotton' },
-      { key: 'MOQ', value: '1,000 pcs' },
-      { key: 'Country of Origin', value: 'Bangladesh' }
-    ],
-    features: ['Ultrasound Soft Cut Edges', 'OEKO-TEX Standard 100', 'OEKO-TEX Certified Colors', 'Fold Types: End Fold, Center Fold, Miter Fold']
-  },
-  {
-    id: 'GFC-HT-202',
-    name: 'FSC Cardboard Swing & Hangtags',
-    category: 'tags',
-    categoryName: 'Hangtag & Additional Tag',
-    image: '/banners/banner2.png',
-    description: 'Custom FSC certified paperboard hangtags with foil stamping, embossing, eyelets, and string attachments.',
-    specifications: [
-      { key: 'Item Code', value: 'GFC-HT-202' },
-      { key: 'Item Name', value: 'FSC Apparel Hangtag' },
-      { key: 'Specification', value: '350gsm - 700gsm Kraft & Art Paper' },
-      { key: 'Materials', value: 'FSC Recycled Paperboard' },
-      { key: 'MOQ', value: '1,000 pcs' },
-      { key: 'Country of Origin', value: 'Bangladesh' }
-    ],
-    features: ['Gold/Silver Foil Stamping', 'UV Spot & Embossing', 'Recycled Cotton Cord', 'Barcoding & RFID Ready']
-  },
-  {
-    id: 'GFC-TT-303',
-    name: 'Organic Cotton Twill Tape & Elastic',
-    category: 'tapes',
-    categoryName: 'Twill tape, Satin & Elastic',
-    image: '/banners/banner2.png',
-    description: 'Screen printed cotton twill tapes, satin care ribbons, and Jacquard elastic webbing for waistbands.',
-    specifications: [
-      { key: 'Item Code', value: 'GFC-TT-303' },
-      { key: 'Item Name', value: 'Cotton Twill Tape & Elastic' },
-      { key: 'Specification', value: 'Width 6mm to 50mm' },
-      { key: 'Materials', value: '100% Organic Cotton / Spandex' },
-      { key: 'MOQ', value: '500 meters' },
-      { key: 'Country of Origin', value: 'Bangladesh' }
-    ],
-    features: ['Screen Printed Brand Names', 'High Elastic Stretch Recovery', 'Colorfast Dyeing', 'Garment Wash Proof']
-  },
-  {
-    id: 'GFC-ST-404',
-    name: 'Apparel Security & RF Alarm Tags',
-    category: 'security',
-    categoryName: 'Security & Alarm Tags',
-    image: '/banners/banner2.png',
-    description: 'EAN Radio Frequency (RF) and Acoust-Magnetic (AM) anti-theft security tags for retail apparel protection.',
-    specifications: [
-      { key: 'Item Code', value: 'GFC-ST-404' },
-      { key: 'Item Name', value: 'Security & Alarm Tag' },
-      { key: 'Specification', value: '8.2MHz RF / 58kHz AM' },
-      { key: 'Materials', value: 'High Impact ABS Plastic' },
-      { key: 'MOQ', value: '1,000 pcs' },
-      { key: 'Country of Origin', value: 'Bangladesh' }
-    ],
-    features: ['8.2MHz & 58kHz Frequencies', 'Reusable Magnetic Lock', 'Lanyard Wire Attachment', 'Anti-Shoplifting Retail Standard']
   }
 ];
