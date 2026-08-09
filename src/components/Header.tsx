@@ -19,10 +19,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
   const location = useLocation();
 
   const categories = [
-    { id: 'labels', label: 'All types of Label', icon: Tag },
-    { id: 'tags', label: 'Hangtag & Additional Tag', icon: Scissors },
-    { id: 'tapes', label: 'Twill tape, Satin & Elastic', icon: Layers },
-    { id: 'security', label: 'Security & Alarm Tags', icon: ShieldCheck },
     { id: 'baskets', label: 'Storage & Laundry Baskets', icon: Package },
     { id: 'planters', label: 'Planters & Pots', icon: Leaf },
     { id: 'bags', label: 'Jute Bags & Packaging', icon: ShoppingBag },
