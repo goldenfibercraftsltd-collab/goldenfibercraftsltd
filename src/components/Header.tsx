@@ -65,7 +65,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white shadow-md font-sans">
+    <header className="relative z-30 w-full bg-white shadow-md font-sans">
       
       {/* 1. Dark Teal Top Bar (Currency, Language & 24/7 Support) */}
       <div className="bg-[#093843] text-white text-[11px] py-1.5 px-4 border-b border-teal-900/60">

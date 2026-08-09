@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
@@ -15,7 +15,22 @@ import { ContactPage } from './pages/ContactPage';
 import { QuoteModal } from './components/QuoteModal';
 import { InfoModal } from './components/InfoModal';
 
+// Admin Pages
+import { AdminLogin } from './pages/admin/AdminLogin';
+import { AdminDashboard } from './pages/admin/AdminDashboard';
+import { AdminProducts } from './pages/admin/AdminProducts';
+import { AdminProductForm } from './pages/admin/AdminProductForm';
+import { AdminCategories } from './pages/admin/AdminCategories';
+import { AdminClients } from './pages/admin/AdminClients';
+import { AdminCertificates } from './pages/admin/AdminCertificates';
+import { AdminBanners } from './pages/admin/AdminBanners';
+import { AdminInquiries } from './pages/admin/AdminInquiries';
+import { AdminSettings } from './pages/admin/AdminSettings';
+
 export const App: React.FC = () => {
+  const location = useLocation();
+  const isAdminRoute = location.pathname.startsWith('/admin');
+
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);
   const [selectedProductCode, setSelectedProductCode] = useState<string | undefined>(undefined);
 
@@ -31,6 +46,25 @@ export const App: React.FC = () => {
     setInfoModalData({ title, content });
     setInfoModalOpen(true);
   };
+
+  if (isAdminRoute) {
+    return (
+      <Routes>
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/products" element={<AdminProducts />} />
+        <Route path="/admin/products/new" element={<AdminProductForm />} />
+        <Route path="/admin/products/edit/:id" element={<AdminProductForm />} />
+        <Route path="/admin/categories" element={<AdminCategories />} />
+        <Route path="/admin/clients" element={<AdminClients />} />
+        <Route path="/admin/certificates" element={<AdminCertificates />} />
+        <Route path="/admin/banners" element={<AdminBanners />} />
+        <Route path="/admin/inquiries" element={<AdminInquiries />} />
+        <Route path="/admin/settings" element={<AdminSettings />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+      </Routes>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-stone-50 text-stone-900 flex flex-col font-sans selection:bg-emerald-200 selection:text-emerald-950">
@@ -56,12 +90,10 @@ export const App: React.FC = () => {
             path="/products"
             element={<ProductsPage onOpenQuoteModal={handleOpenQuoteModal} />}
           />
-          {/* Distinct Category Page matching Screenshot 1 */}
           <Route
             path="/categories/:categorySlug"
             element={<CategoryPage onOpenQuoteModal={() => handleOpenQuoteModal()} />}
           />
-          {/* Distinct Product Detail Page matching Screenshot 2 */}
           <Route
             path="/products/:productSlug"
             element={<ProductDetailPage onOpenQuoteModal={handleOpenQuoteModal} />}
