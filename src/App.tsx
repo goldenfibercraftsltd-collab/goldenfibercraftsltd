@@ -7,6 +7,7 @@ import { AboutPage } from './pages/AboutPage';
 import { ProductsPage } from './pages/ProductsPage';
 import { CategoryPage } from './pages/CategoryPage';
 import { ProductDetailPage } from './pages/ProductDetailPage';
+import { CartPage } from './pages/CartPage';
 import { InfrastructurePage } from './pages/InfrastructurePage';
 import { SustainabilityPage } from './pages/SustainabilityPage';
 import { QualityControlPage } from './pages/QualityControlPage';
@@ -14,6 +15,10 @@ import { ClientsPage } from './pages/ClientsPage';
 import { ContactPage } from './pages/ContactPage';
 import { QuoteModal } from './components/QuoteModal';
 import { InfoModal } from './components/InfoModal';
+
+// Context Providers
+import { CartProvider } from './context/CartContext';
+import { UserAuthProvider } from './context/UserAuthContext';
 
 // Admin Pages
 import { AdminLogin } from './pages/admin/AdminLogin';
@@ -27,7 +32,7 @@ import { AdminBanners } from './pages/admin/AdminBanners';
 import { AdminInquiries } from './pages/admin/AdminInquiries';
 import { AdminSettings } from './pages/admin/AdminSettings';
 
-export const App: React.FC = () => {
+export const AppContent: React.FC = () => {
   const location = useLocation();
   const isAdminRoute = location.pathname.startsWith('/admin');
 
@@ -98,6 +103,7 @@ export const App: React.FC = () => {
             path="/products/:productSlug"
             element={<ProductDetailPage onOpenQuoteModal={handleOpenQuoteModal} />}
           />
+          <Route path="/cart" element={<CartPage />} />
           <Route path="/infrastructure" element={<InfrastructurePage />} />
           <Route path="/sustainability" element={<SustainabilityPage />} />
           <Route path="/quality" element={<QualityControlPage />} />
@@ -127,6 +133,16 @@ export const App: React.FC = () => {
       />
 
     </div>
+  );
+};
+
+export const App: React.FC = () => {
+  return (
+    <UserAuthProvider>
+      <CartProvider>
+        <AppContent />
+      </CartProvider>
+    </UserAuthProvider>
   );
 };
 

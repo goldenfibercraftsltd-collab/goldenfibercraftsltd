@@ -5,12 +5,14 @@ import {
   Package, Tag, Scissors, Layers, ShieldCheck, Leaf, Sparkles
 } from 'lucide-react';
 import { TAGLINE } from '../data/products';
+import { useCart } from '../context/CartContext';
 
 interface HeaderProps {
   onOpenQuoteModal: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
+  const { cart, totalCartItemsCount } = useCart();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [categoryDropdownOpen, setCategoryDropdownOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -135,22 +137,22 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
 
           {/* Cart / Quote Bag Badge & Mobile Menu */}
           <div className="flex items-center gap-3 sm:gap-4 shrink-0">
-            <button
-              onClick={onOpenQuoteModal}
-              title="View Quote List"
+            <Link
+              to="/cart"
+              title="View B2B Shopping Cart"
               className="flex items-center gap-2 group p-1.5 sm:px-3 sm:py-2 rounded-xl hover:bg-stone-50 transition-colors"
             >
               <div className="relative">
                 <ShoppingBag className="h-7 w-7 text-[#65a30d] group-hover:scale-110 transition-transform" />
                 <span className="absolute -top-1 -right-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-red-600 text-[10px] font-bold text-white shadow-sm">
-                  0
+                  {cart.length}
                 </span>
               </div>
               <div className="hidden sm:flex flex-col text-left">
-                <span className="text-[11px] font-bold text-stone-500 uppercase leading-none">Cart</span>
-                <span className="text-xs font-extrabold text-stone-900">0 Items</span>
+                <span className="text-[11px] font-bold text-stone-500 uppercase leading-none">CART</span>
+                <span className="text-xs font-extrabold text-stone-900">{cart.length} Items</span>
               </div>
-            </button>
+            </Link>
 
             {/* Mobile Hamburger Toggle */}
             <button
