@@ -1,23 +1,25 @@
 import React from 'react';
 import { GlobalClients } from '../components/GlobalClients';
-import { Globe, HeartHandshake, ShieldCheck, Award, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { HeartHandshake, ShieldCheck, ArrowRight, CheckCircle2, Award } from 'lucide-react';
 
 interface ClientsPageProps {
   onOpenQuoteModal: () => void;
 }
 
 export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) => {
-  // Official Golden Fiber Crafts Ltd. Buyers from Corporate PPT
+  // Authentic Client Logos Extracted Directly from GFCL Product PPT
   const officialBuyers = [
     {
       name: 'Aarong',
+      logo: '/clients/aarong.png',
       origin: 'Bangladesh',
       category: 'Ethical Lifestyle & Craft Giant',
-      description: 'Bangladesh’s iconic fair trade retail chain & lifestyle brand empowering thousands of rural artisans.',
+      description: 'Bangladesh’s iconic fair trade retail chain empowering thousands of rural artisans.',
       badge: 'Premier Partner'
     },
     {
       name: 'Det Gamle Apotek',
+      logo: '/clients/det_gamle_apotek.png',
       origin: 'Denmark / Scandinavia',
       category: 'Scandinavia Home Decor',
       description: 'Renowned Nordic home decor, seasonal accents, and handcrafted basket importer.',
@@ -25,13 +27,15 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
     },
     {
       name: 'Ten Thousand Villages',
+      logo: '/clients/ten_thousand_villages.png',
       origin: 'USA & Canada',
       category: 'Fair Trade Pioneer',
-      description: 'One of the world’s oldest and largest fair trade organizations bringing ethical crafts to North America.',
+      description: 'One of the world’s largest fair trade organizations bringing ethical crafts to North America.',
       badge: 'North America Buyer'
     },
     {
       name: 'The Body Shop',
+      logo: '/clients/the_body_shop.png',
       origin: 'United Kingdom / Global',
       category: 'Global Ethical Beauty & Gifts',
       description: 'World-famous eco-ethical beauty brand sourcing natural jute bags and artisanal gift packaging.',
@@ -39,6 +43,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
     },
     {
       name: 'Bozy',
+      logo: '/clients/bozy.png',
       origin: 'Europe / International',
       category: 'Eco & Sustainable Living',
       description: 'Sustainable lifestyle brand specializing in natural seagrass and jute home accessories.',
@@ -46,6 +51,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
     },
     {
       name: 'Le Reve',
+      logo: '/clients/le_reve.png',
       origin: 'International Fashion',
       category: 'Apparel & Lifestyle Chain',
       description: 'Leading apparel and lifestyle retail chain sourcing eco-friendly accessories and trims.',
@@ -53,6 +59,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
     },
     {
       name: 'Dekker Decoration',
+      logo: '/clients/dekker_decoration.png',
       origin: 'Netherlands / Europe',
       category: 'Floral & Home Decor Importer',
       description: 'Major European wholesale distributor of natural fiber planters, pots, and decor products.',
@@ -60,6 +67,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
     },
     {
       name: 'Traidcraft',
+      logo: '/clients/traidcraft.png',
       origin: 'United Kingdom',
       category: 'Fair Trade & Ethical Commerce',
       description: 'Pioneering UK fair trade company fighting poverty through sustainable international trade.',
@@ -67,12 +75,12 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
     }
   ];
 
-  const certifications = [
-    { name: 'Fair Trade Certified', desc: 'Ensuring ethical artisan wages, zero child labor, and community development.' },
-    { name: 'BSCI Social Audit', desc: 'Business Social Compliance Initiative compliant factory environment.' },
-    { name: 'Sedex SMETA', desc: 'Audited labor standards, health & safety, environment, and business ethics.' },
-    { name: 'OEKO-TEX Standard 100', desc: '100% harmful substance-free certified textiles, dyes, and raw materials.' },
-    { name: 'ISO 9001:2015 Quality', desc: 'Certified quality management system across weaving, finishing, and packing.' }
+  // Authentic Certificate Images Extracted Directly from GFCL Product PPT
+  const certificateImages = [
+    { title: 'Factory Registration & Export License', image: '/certificates/cert1.png' },
+    { title: 'BSCI Social Compliance Certification', image: '/certificates/cert2.png' },
+    { title: 'Sedex SMETA Audit & Ethics Standard', image: '/certificates/cert3.png' },
+    { title: 'OEKO-TEX & Fair Trade Compliance', image: '/certificates/cert4.png' }
   ];
 
   return (
@@ -84,7 +92,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
           <div className="relative z-10 max-w-3xl space-y-3">
             <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/20 px-3.5 py-1 text-xs font-bold text-emerald-300 backdrop-blur-md border border-emerald-500/30">
               <HeartHandshake className="h-3.5 w-3.5" />
-              Official Corporate Presentation Data
+              Official GFCL Corporate Presentation Data
             </span>
             <h1 className="font-serif text-3xl sm:text-5xl font-extrabold tracking-tight">
               Buyers We Work With
@@ -95,15 +103,15 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
           </div>
         </div>
 
-        {/* Real Buyers Grid (From Official PPT) */}
+        {/* Real Buyers Grid (With Authentic Logos Extracted from PPT) */}
         <div className="space-y-6 bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-stone-200/80">
           <div className="text-center space-y-2">
             <span className="text-xs font-bold uppercase tracking-widest text-emerald-700">AUTHENTIC CLIENT PORTFOLIO</span>
             <h2 className="font-serif text-2xl sm:text-4xl font-extrabold text-stone-900">
-              Global Buyers & Partners
+              Our Official Buyers
             </h2>
             <p className="text-stone-500 text-xs sm:text-sm max-w-xl mx-auto">
-              Selected buyers who trust Golden Fiber Crafts Ltd. for ethical manufacturing, consistent quality, and on-time global shipments.
+              Real brand partners featured in the Golden Fiber Crafts Ltd. corporate portfolio.
             </p>
             <div className="mx-auto h-1 w-16 rounded-full bg-emerald-600 mt-2" />
           </div>
@@ -112,7 +120,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
             {officialBuyers.map((buyer, idx) => (
               <div
                 key={idx}
-                className="group flex flex-col justify-between rounded-2xl bg-stone-50 p-6 border border-stone-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-xl transition-all duration-300"
+                className="group flex flex-col justify-between rounded-2xl bg-stone-50/80 p-6 border border-stone-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-2xl transition-all duration-300"
               >
                 <div>
                   <div className="flex items-center justify-between gap-2">
@@ -124,11 +132,20 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
                     </span>
                   </div>
 
-                  <h3 className="mt-3 font-serif text-xl font-bold text-stone-900 group-hover:text-emerald-700 transition-colors">
+                  {/* Real Logo Image Container */}
+                  <div className="my-4 h-20 w-full flex items-center justify-center p-3 rounded-xl bg-white border border-stone-200/60 shadow-xs group-hover:scale-105 transition-transform">
+                    <img
+                      src={buyer.logo}
+                      alt={buyer.name}
+                      className="max-h-full max-w-full object-contain filter drop-shadow-xs"
+                    />
+                  </div>
+
+                  <h3 className="font-serif text-lg font-bold text-stone-900 group-hover:text-emerald-700 transition-colors">
                     {buyer.name}
                   </h3>
 
-                  <p className="mt-1 text-xs font-bold text-emerald-600">
+                  <p className="mt-0.5 text-xs font-bold text-emerald-600">
                     {buyer.category}
                   </p>
 
@@ -146,32 +163,40 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
           </div>
         </div>
 
-        {/* Certifications & Compliance Section */}
+        {/* Authentic Factory Certificates Section (From Slide 3 of PPT) */}
         <div className="bg-gradient-to-br from-stone-900 via-emerald-950 to-stone-900 rounded-3xl p-8 sm:p-12 text-white shadow-2xl space-y-8">
           <div className="text-center space-y-2">
-            <span className="text-xs font-bold uppercase tracking-widest text-emerald-400">COMPLIANCE & ETHICS</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-emerald-400 flex items-center justify-center gap-1.5">
+              <Award className="h-4 w-4" />
+              OFFICIAL COMPLIANCE
+            </span>
             <h2 className="font-serif text-2xl sm:text-4xl font-bold">
-              Factory Certifications & Standards
+              Factory Certificates & Compliance
             </h2>
             <p className="text-stone-300 text-xs sm:text-sm max-w-xl mx-auto">
-              Our factory operates under strict international social compliance, fair trade principles, and quality management standards.
+              Authentic factory certificates and compliance documents extracted from Golden Fiber Crafts Ltd. corporate portfolio.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {certifications.map((cert, idx) => (
-              <div key={idx} className="rounded-2xl bg-white/10 p-6 backdrop-blur-md border border-white/15 hover:bg-white/15 transition-all">
-                <div className="h-10 w-10 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center font-bold mb-3 border border-emerald-500/30">
-                  <ShieldCheck className="h-5 w-5" />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {certificateImages.map((cert, idx) => (
+              <div key={idx} className="group rounded-2xl bg-white p-4 text-stone-900 shadow-xl border border-emerald-500/30 hover:scale-105 transition-all">
+                <div className="h-44 w-full overflow-hidden rounded-xl bg-stone-100 flex items-center justify-center p-2">
+                  <img
+                    src={cert.image}
+                    alt={cert.title}
+                    className="h-full w-full object-contain"
+                  />
                 </div>
-                <h3 className="font-serif text-lg font-bold text-white">{cert.name}</h3>
-                <p className="mt-2 text-xs text-stone-300 leading-relaxed font-light">{cert.desc}</p>
+                <h3 className="mt-3 font-serif text-xs font-bold text-stone-900 text-center line-clamp-2">
+                  {cert.title}
+                </h3>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Global Export Reach & Regions */}
+        {/* Global Export Reach */}
         <GlobalClients />
 
         {/* Call to Action */}
