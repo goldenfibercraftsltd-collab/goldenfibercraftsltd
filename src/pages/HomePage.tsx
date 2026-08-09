@@ -1,5 +1,5 @@
 import React from 'react';
-import { Hero } from '../components/Hero';
+import { HeroBannerCarousel } from '../components/HeroBannerCarousel';
 import { Features } from '../components/Features';
 import { ProductCategories } from '../components/ProductCategories';
 import { TopProductsShowcase } from '../components/TopProductsShowcase';
@@ -23,11 +23,6 @@ export const HomePage: React.FC<HomePageProps> = ({
 }) => {
   const navigate = useNavigate();
 
-  const handleExploreProducts = () => {
-    navigate('/products');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   const handleSelectCategory = (catId: string) => {
     navigate(`/products?category=${catId}`);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -35,21 +30,31 @@ export const HomePage: React.FC<HomePageProps> = ({
 
   return (
     <div className="space-y-12 pb-16">
-      <Hero
-        onOpenQuoteModal={() => onOpenQuoteModal()}
-        onExploreProducts={handleExploreProducts}
-      />
+      {/* 1. Header Auto 5-Second Banner Carousel */}
+      <HeroBannerCarousel onOpenQuoteModal={() => onOpenQuoteModal()} />
+
+      {/* 2. Key Corporate Highlights */}
       <Features onOpenModal={onOpenInfoModal} />
+
+      {/* 3. Product Categories Breakdown */}
       <ProductCategories
         products={PRODUCTS}
         onSelectCategory={handleSelectCategory}
       />
+
+      {/* 4. Top 10 Showcase */}
       <TopProductsShowcase
         products={PRODUCTS}
         onSelectProduct={onSelectProduct}
       />
+
+      {/* 5. Production Facilities */}
       <ProductionFacilities />
+
+      {/* 6. Sustainability & Compliance */}
       <Sustainability />
+
+      {/* 7. Global Clients */}
       <GlobalClients />
     </div>
   );
