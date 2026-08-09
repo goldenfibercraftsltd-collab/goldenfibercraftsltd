@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 140" fill="none">
+  <!-- Icon Mark -->
+  <g transform="translate(10, 10)">
+    <!-- Outer Leaf/G Arc -->
+    <path d="M 45 85 C 22 85, 10 65, 10 45 C 10 22, 28 10, 52 10 C 65 10, 75 16, 82 25 C 75 32, 65 35, 54 35 C 38 35, 26 44, 26 56 C 26 70, 38 75, 55 75 C 64 75, 74 72, 82 64 L 82 76 C 72 82, 59 85, 45 85 Z" fill="#15803d"/>
+    <path d="M 38 52 L 68 52 L 68 62 L 38 62 Z" fill="#15803d"/>
+
+    <!-- Main Green Leaf -->
+    <path d="M 52 92 C 48 75, 54 52, 68 35 C 80 18, 95 6, 98 4 C 94 22, 88 42, 70 60 C 58 72, 53 86, 52 92 Z" fill="#16a34a"/>
+    <!-- Leaf Inner Highlight -->
+    <path d="M 66 48 C 78 34, 90 18, 94 12 C 86 26, 72 48, 60 62 C 60 58, 62 52, 66 48 Z" fill="#ffffff" opacity="0.85"/>
+  </g>
+
+  <!-- Divider Line -->
+  <line x1="120" y1="15" x2="120" y2="115" stroke="#15803d" stroke-width="2" opacity="0.4"/>
+
+  <!-- Logo Text -->
+  <g transform="translate(135, 20)">
+    <text x="0" y="42" font-family="Times New Roman, Playfair Display, serif" font-weight="700" font-size="34" letter-spacing="1.5" fill="#14532d">GOLDEN FIBER</text>
+    
+    <!-- Subtitle with side lines -->
+    <line x1="0" y1="72" x2="45" y2="72" stroke="#15803d" stroke-width="1.5"/>
+    <text x="55" y="77" font-family="Arial, sans-serif" font-weight="600" font-size="14" letter-spacing="4" fill="#15803d">CRAFTS LTD.</text>
+    <line x1="225" y1="72" x2="270" y2="72" stroke="#15803d" stroke-width="1.5"/>
+  </g>
+</svg>

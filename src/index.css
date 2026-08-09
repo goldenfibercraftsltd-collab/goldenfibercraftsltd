@@ -5,42 +5,52 @@
 @layer base {
   html {
     font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
   }
 }
 
-/* Custom TrimsArt-inspired styles */
-.hero-gradient {
-  background: linear-gradient(115deg, #2e1005 0%, #581c0c 45%, #1f0802 100%);
-}
-
-.hero-type {
-  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-@keyframes fadeInUp {
+/* GPU-accelerated smooth animations */
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translate3d(0, 8px, 0);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out forwards;
+  will-change: opacity, transform;
+}
+
+/* Custom TrimsArt-inspired luxury gradients */
+.hero-gradient {
+  background: linear-gradient(135deg, #092e1a 0%, #14532d 45%, #052e16 100%);
+}
+
 .glass-card {
-  background: rgba(255, 255, 255, 0.07);
-  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .glass-card-dark {
-  background: rgba(28, 25, 23, 0.85);
-  backdrop-filter: blur(12px);
+  background: rgba(20, 83, 45, 0.85);
+  backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Hide scrollbar for clean carousel */
+/* Hide scrollbar for carousel */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
