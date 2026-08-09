@@ -4,6 +4,7 @@ import {
   Menu, X, Search, ShoppingBag, ChevronDown, Mail, Phone,
   Package, Tag, Scissors, Layers, ShieldCheck, Leaf, Sparkles
 } from 'lucide-react';
+import { TAGLINE } from '../data/products';
 
 interface HeaderProps {
   onOpenQuoteModal: () => void;
@@ -26,6 +27,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
     { id: 'planters', label: 'Planters & Pots', icon: Leaf },
     { id: 'bags', label: 'Jute Bags & Packaging', icon: ShoppingBag },
     { id: 'decor', label: 'Home Decor & Mats', icon: Sparkles },
+    { id: 'bamboo', label: 'Bamboo Crafts', icon: Leaf },
   ];
 
   const navItems = [
@@ -69,7 +71,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
   return (
     <header className="sticky top-0 z-50 w-full bg-white shadow-md font-sans">
       
-      {/* 1. Dark Teal Top Bar (Matching Screenshot: Currency, Language & 24/7 Support) */}
+      {/* 1. Dark Teal Top Bar (Currency, Language & 24/7 Support) */}
       <div className="bg-[#093843] text-white text-[11px] py-1.5 px-4 border-b border-teal-900/60">
         <div className="mx-auto max-w-7xl flex items-center justify-between gap-4">
           
@@ -80,6 +82,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
             </span>
             <span className="cursor-pointer hover:text-white flex items-center gap-1 font-semibold">
               Language <ChevronDown className="h-3 w-3" />
+            </span>
+            <span className="hidden sm:inline text-amber-300 font-serif italic text-xs border-l border-teal-800 pl-3">
+              "{TAGLINE}"
             </span>
           </div>
 
@@ -94,7 +99,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
         </div>
       </div>
 
-      {/* 2. Main Row: Logo, Search Bar, Cart/Quote (Matching Screenshot Layout) */}
+      {/* 2. Main Row: Logo, Search Bar, Cart/Quote */}
       <div className="mx-auto max-w-7xl px-4 py-3 sm:py-4">
         <div className="flex items-center justify-between gap-4 lg:gap-8">
           
@@ -107,8 +112,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               <span className="font-serif text-lg sm:text-2xl font-extrabold tracking-tight text-lime-800 leading-tight group-hover:text-emerald-700 transition-colors">
                 Golden Fiber Crafts Ltd.
               </span>
-              <span className="text-[10px] sm:text-xs text-stone-500 font-bold uppercase tracking-widest">
-                Natural Fiber & Garment Accessories
+              <span className="text-[10px] sm:text-xs text-stone-600 font-serif italic tracking-wide">
+                "{TAGLINE}"
               </span>
             </div>
           </Link>
@@ -118,7 +123,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
             <form onSubmit={handleSearchSubmit} className="flex w-full rounded-md border-2 border-[#65a30d] overflow-hidden shadow-xs">
               <input
                 type="text"
-                placeholder="Search Entire Catalog Here..."
+                placeholder="Search Item Code or Product Name (e.g. GFC-SB-030)..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full px-4 py-2 text-xs sm:text-sm text-stone-800 focus:outline-none placeholder-stone-400"
@@ -168,7 +173,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
           <form onSubmit={handleSearchSubmit} className="flex w-full rounded-md border-2 border-[#65a30d] overflow-hidden shadow-xs">
             <input
               type="text"
-              placeholder="Search..."
+              placeholder="Search Code or Product Name..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full px-3 py-1.5 text-xs text-stone-800 focus:outline-none placeholder-stone-400"
@@ -185,7 +190,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
         {/* Announcement Ticker Text */}
         <div className="mt-2 text-[11px] font-bold text-red-600 tracking-wide text-center">
           <span>
-            Golden Fiber Crafts Ltd. offers quality products, competitive prices & on-time delivery.
+            Golden Fiber Crafts Ltd. offers quality products, competitive prices & on-time delivery worldwide.
           </span>
         </div>
 
@@ -195,7 +200,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
       <div className="bg-[#65a30d] text-white shadow-inner">
         <div className="mx-auto max-w-7xl px-4 flex items-center justify-between relative">
           
-          {/* Dark Teal "SHOP BY CATEGORY ˅" Box (Exact match to screenshot) */}
+          {/* Dark Teal "SHOP BY CATEGORY ˅" Box */}
           <div className="relative">
             <button
               onClick={() => setCategoryDropdownOpen(!categoryDropdownOpen)}
@@ -209,8 +214,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
             {/* Category Dropdown Content */}
             {categoryDropdownOpen && (
               <div className="absolute left-0 top-full z-50 w-72 sm:w-80 bg-white rounded-b-2xl shadow-2xl border border-stone-200 py-2 animate-fadeIn text-stone-800">
-                <div className="px-4 py-2 border-b border-stone-100 bg-[#093843] text-white">
-                  <span className="text-[11px] font-bold uppercase tracking-wider">Golden Fiber Crafts Categories</span>
+                <div className="px-4 py-2 border-b border-stone-100 bg-[#093843] text-white flex items-center justify-between">
+                  <span className="text-[11px] font-bold uppercase tracking-wider">Golden Fiber Categories</span>
+                  <span className="text-[10px] italic text-amber-300 font-serif">PPT Verified</span>
                 </div>
                 <div className="max-h-96 overflow-y-auto">
                   {categories.map((cat) => {
