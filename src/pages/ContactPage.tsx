@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, MessageSquare, Clock, Globe, CheckCircle2 } from 'lucide-react';
 
 interface ContactPageProps {
-  onOpenQuoteModal: () => void;
+  onOpenQuoteModal?: () => void;
 }
 
 export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuoteModal }) => {
@@ -65,8 +65,8 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuoteModal }) =>
                   </div>
                   <div>
                     <h4 className="font-bold text-stone-900">Email Address</h4>
-                    <a href="mailto:info@goldenfibercrafts.com" className="text-xs text-emerald-700 font-semibold hover:underline">
-                      info@goldenfibercrafts.com
+                    <a href="mailto:goldenfibercraftsltd@gmail.com" className="text-xs text-emerald-700 font-semibold hover:underline">
+                      goldenfibercraftsltd@gmail.com
                     </a>
                   </div>
                 </div>
@@ -77,8 +77,8 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuoteModal }) =>
                   </div>
                   <div>
                     <h4 className="font-bold text-stone-900">WhatsApp / Call Direct</h4>
-                    <a href="https://wa.me/8801831806948" target="_blank" rel="noreferrer" className="text-xs text-emerald-700 font-semibold hover:underline">
-                      +880-1831-806948
+                    <a href="https://wa.me/8801617778488?text=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%20I%20would%20like%20to%20know%20more%20about%20your%20handicraft%20products%20and%20export%20details." target="_blank" rel="noreferrer" className="text-xs text-emerald-700 font-semibold hover:underline">
+                      +880-1617-778488
                     </a>
                   </div>
                 </div>
