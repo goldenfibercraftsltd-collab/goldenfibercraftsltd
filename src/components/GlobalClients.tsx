@@ -104,7 +104,7 @@ export const GlobalClients: React.FC = () => {
             </p>
           </div>
           <a
-            href="mailto:info@goldenfibercrafts.com?subject=Inquiry%20from%20Website%20-%20Private%20Label"
+            href="mailto:goldenfibercraftsltd@gmail.com?subject=Inquiry%20from%20Website%20-%20Private%20Label"
             className="shrink-0 inline-flex items-center gap-2 rounded-xl bg-amber-500 px-6 py-3 text-xs sm:text-sm font-bold text-stone-950 hover:bg-amber-400 transition-all shadow-lg"
           >
             Partner With Us <ArrowUpRight className="h-4 w-4" />
