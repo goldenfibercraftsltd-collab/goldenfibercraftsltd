@@ -28,11 +28,11 @@ export const FloatingContact: React.FC<FloatingContactProps> = ({ onOpenQuoteMod
     <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3">
       {/* WhatsApp Quick Link */}
       <a
-        href="https://wa.me/8801831806948 text=Hello%20Golden%20Fiber%20Crafts,%20I%20am%20interested%20in%20your%20handicraft%20products."
+        href="https://wa.me/8801617778488?text=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%20I%20would%20like%20to%20know%20more%20about%20your%20handicraft%20products%20and%20export%20details."
         target="_blank"
         rel="noopener noreferrer"
-        title="Chat on WhatsApp"
-        className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-600 text-white shadow-xl hover:bg-emerald-500 hover:scale-110 transition-all active:scale-95 border-2 border-white"
+        title="Chat on WhatsApp (+8801617778488)"
+        className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl hover:bg-[#20bd5a] hover:scale-110 transition-all active:scale-95 border-2 border-white"
       >
         <Phone className="h-6 w-6" />
       </a>
