@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import {
   Menu, X, Search, ShoppingBag, ChevronDown, Mail, Phone,
-  Package, Tag, Scissors, Layers, ShieldCheck, Leaf, Sparkles
+  Package, Tag, Scissors, Layers, ShieldCheck, Leaf, Sparkles, ChevronRight
 } from 'lucide-react';
-import { TAGLINE } from '../data/products';
+import { TAGLINE, CATEGORIES } from '../data/products';
 import { useCart } from '../context/CartContext';
 
 interface HeaderProps {
@@ -15,23 +15,16 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
   const { cart, totalCartItemsCount } = useCart();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [categoryDropdownOpen, setCategoryDropdownOpen] = useState(false);
+  const [activeCategoryHover, setActiveCategoryHover] = useState<string | null>(CATEGORIES[0]?.id || 'jute');
   const [searchQuery, setSearchQuery] = useState('');
 
   const navigate = useNavigate();
   const location = useLocation();
 
-  const categories = [
-    { id: 'baskets', label: 'Storage & Laundry Baskets', icon: Package },
-    { id: 'planters', label: 'Planters & Pots', icon: Leaf },
-    { id: 'bags', label: 'Jute Bags & Packaging', icon: ShoppingBag },
-    { id: 'decor', label: 'Home Decor & Mats', icon: Sparkles },
-    { id: 'bamboo', label: 'Bamboo Crafts', icon: Leaf },
-  ];
-
   const navItems = [
     { path: '/', label: 'HOME' },
     { path: '/about', label: 'ABOUT' },
-    { path: '/products', label: 'PRODUCTS' },
+    { path: '/materials', label: 'MATERIALS INFO' },
     { path: '/infrastructure', label: 'INFRASTRUCTURE' },
     { path: '/sustainability', label: 'SUSTAINABILITY' },
     { path: '/quality', label: 'QUALITY' },
@@ -48,10 +41,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
     }
   };
 
-  const handleCategorySelect = (catId: string) => {
+  const handleCategorySelect = (catId: string, subCatId?: string) => {
     setCategoryDropdownOpen(false);
     setMobileMenuOpen(false);
-    navigate(`/products?category=${catId}`);
+    if (subCatId) {
+      navigate(`/products?category=${catId}&subCategory=${subCatId}`);
+    } else {
+      navigate(`/products?category=${catId}`);
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -90,7 +87,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
           <div className="flex items-center gap-2">
             <span className="h-3 w-3 rounded-full bg-red-600 inline-block shrink-0 animate-ping" />
             <span className="font-bold text-xs tracking-wide">
-              24/7 Export Service: <a href="tel:+8801831806948" className="hover:underline text-amber-300 font-extrabold">+880-1831-806948</a>
+              24/7 Export Service: <a href="https://wa.me/8801617778488?text=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%20I%20would%20like%20to%20know%20more%20about%20your%20handicraft%20products%20and%20export%20details." target="_blank" rel="noopener noreferrer" className="hover:underline text-amber-300 font-extrabold">+880-1617-778488</a>
             </span>
           </div>
 
@@ -135,24 +132,39 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
             </form>
           </div>
 
-          {/* Cart / Quote Bag Badge & Mobile Menu */}
-          <div className="flex items-center gap-3 sm:gap-4 shrink-0">
-            <Link
-              to="/cart"
-              title="View B2B Shopping Cart"
-              className="flex items-center gap-2 group p-1.5 sm:px-3 sm:py-2 rounded-xl hover:bg-stone-50 transition-colors"
+          {/* Quick Action Controls: WhatsApp, Email/Outlook & Request Quote */}
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            {/* 1. WhatsApp Icon Button */}
+            <a
+              href="https://wa.me/8801617778488?text=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%20I%20would%20like%20to%20know%20more%20about%20your%20handicraft%20products%20and%20export%20details."
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Chat on WhatsApp (+8801617778488)"
+              className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 shrink-0"
             >
-              <div className="relative">
-                <ShoppingBag className="h-7 w-7 text-[#65a30d] group-hover:scale-110 transition-transform" />
-                <span className="absolute -top-1 -right-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-red-600 text-[10px] font-bold text-white shadow-sm">
-                  {cart.length}
-                </span>
-              </div>
-              <div className="hidden sm:flex flex-col text-left">
-                <span className="text-[11px] font-bold text-stone-500 uppercase leading-none">CART</span>
-                <span className="text-xs font-extrabold text-stone-900">{cart.length} Items</span>
-              </div>
-            </Link>
+              <svg className="h-5 w-5 sm:h-6 sm:w-6 fill-current" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.017 4.014-1.052zm12.355-6.529c-.073-.122-.268-.195-.561-.341-.293-.146-1.733-.855-2.002-.953-.269-.098-.464-.146-.659.146-.195.293-.756.953-.927 1.148-.171.195-.341.22-.635.073-1.066-.53-2.316-1.325-3.235-2.144-.716-.638-1.201-1.427-1.341-1.672-.14-.244-.015-.377.132-.524.133-.132.293-.341.44-.512.146-.171.195-.293.293-.488.098-.195.049-.366-.024-.512-.073-.146-.659-1.586-.903-2.172-.238-.57-.48-.492-.659-.501-.171-.008-.366-.01-.561-.01-.195 0-.512.073-.78.366-.269.293-1.025 1.001-1.025 2.441 0 1.44 1.05 2.83 1.196 3.025.146.195 2.067 3.158 5.009 4.428.7.303 1.247.484 1.673.62.703.224 1.343.193 1.849.117.564-.085 1.733-.708 1.977-1.392.244-.684.244-1.27.171-1.392z" />
+              </svg>
+            </a>
+
+            {/* 2. Outlook / Email Icon Button */}
+            <a
+              href="mailto:goldenfibercraftsltd@gmail.com?subject=Inquiry%20to%20Golden%20Fiber%20Crafts%20Ltd.&body=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%0A%0AI%20am%20interested%20in%20learning%20more%20about%20your%20handicraft%20products%20and%20export%20details."
+              title="Send Email (goldenfibercraftsltd@gmail.com)"
+              className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-lg bg-[#0078D4] hover:bg-[#0067b8] text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 shrink-0"
+            >
+              <svg className="h-5 w-5 sm:h-6 sm:w-6 fill-current" viewBox="0 0 24 24">
+                <path d="M1 5.5A1.5 1.5 0 0 1 2.5 4h9A1.5 1.5 0 0 1 13 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 1 18.5v-13zm2.5.5v12h7V6h-7zm2 2h3v2.5h-3V8zm0 3.5h3V14h-3v-2.5zM14 6.5l8.5-2.5v16L14 17.5v-11zm2 2.2v6.6l4.5 1.3V7.4L16 8.7z" />
+              </svg>
+            </a>
+
+            {/* 3. Request Quote Pill Button */}
+            <button
+              onClick={onOpenQuoteModal}
+              className="flex items-center justify-center gap-1.5 rounded-full bg-[#0088FF] hover:bg-[#0077ee] text-white px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-extrabold shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 shrink-0"
+            >
+              <span>Request Quote</span>
+            </button>
 
             {/* Mobile Hamburger Toggle */}
             <button
@@ -209,30 +221,77 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               <ChevronDown className={`h-4 w-4 text-white transition-transform duration-300 ${categoryDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
 
-            {/* Category Dropdown Content */}
+            {/* Category Dropdown Content - Flyout Mega Menu */}
             {categoryDropdownOpen && (
-              <div className="absolute left-0 top-full z-50 w-72 sm:w-80 bg-white rounded-b-2xl shadow-2xl border border-stone-200 py-2 animate-fadeIn text-stone-800">
-                <div className="px-4 py-2 border-b border-stone-100 bg-[#093843] text-white flex items-center justify-between">
-                  <span className="text-[11px] font-bold uppercase tracking-wider">Golden Fiber Categories</span>
-                  <span className="text-[10px] italic text-amber-300 font-serif">PPT Verified</span>
-                </div>
-                <div className="max-h-96 overflow-y-auto">
-                  {categories.map((cat) => {
-                    const Icon = cat.icon;
+              <div className="absolute left-0 top-full z-50 flex w-[550px] bg-white rounded-b-2xl shadow-2xl border border-stone-200 overflow-hidden animate-fadeIn text-stone-800">
+                
+                {/* Left Column: 12 Main Categories */}
+                <div className="w-56 bg-stone-50 border-r border-stone-200 py-2 max-h-[420px] overflow-y-auto">
+                  <div className="px-4 py-2 border-b border-stone-200/80 bg-[#093843] text-white flex items-center justify-between">
+                    <span className="text-[11px] font-bold uppercase tracking-wider">All Categories</span>
+                    <span className="text-[10px] text-amber-300 font-serif">12</span>
+                  </div>
+                  {CATEGORIES.map((cat) => {
+                    const isHovered = activeCategoryHover === cat.id;
                     return (
-                      <button
+                      <div
                         key={cat.id}
+                        onMouseEnter={() => setActiveCategoryHover(cat.id)}
                         onClick={() => handleCategorySelect(cat.id)}
-                        className="w-full flex items-center gap-3 px-4 py-2.5 text-xs font-bold text-stone-700 hover:bg-lime-50 hover:text-lime-900 transition-colors border-b border-stone-100/60 last:border-0 text-left"
+                        className={`w-full flex items-center justify-between px-4 py-2.5 text-xs font-bold transition-colors cursor-pointer border-b border-stone-100 last:border-0 ${
+                          isHovered ? 'bg-[#65a30d] text-white font-extrabold' : 'text-stone-700 hover:bg-lime-100 hover:text-lime-900'
+                        }`}
                       >
-                        <div className="h-7 w-7 rounded-lg bg-lime-100 text-lime-800 flex items-center justify-center shrink-0">
-                          <Icon className="h-4 w-4" />
-                        </div>
-                        <span className="flex-1 truncate">{cat.label}</span>
-                      </button>
+                        <span className="truncate">{cat.name}</span>
+                        <ChevronRight className={`h-3.5 w-3.5 ${isHovered ? 'text-white' : 'text-stone-400'}`} />
+                      </div>
                     );
                   })}
                 </div>
+
+                {/* Right Column: Subcategories for Hovered Category */}
+                <div className="flex-1 p-4 bg-white max-h-[420px] overflow-y-auto">
+                  {(() => {
+                    const currentCat = CATEGORIES.find(c => c.id === activeCategoryHover) || CATEGORIES[0];
+                    return (
+                      <div>
+                        <div className="pb-3 mb-3 border-b border-stone-100 flex items-center justify-between">
+                          <div>
+                            <h4 className="font-serif text-sm font-extrabold text-[#093843]">
+                              {currentCat.name}
+                            </h4>
+                            <p className="text-[11px] text-stone-500 font-light line-clamp-1">
+                              {currentCat.description}
+                            </p>
+                          </div>
+                          <button
+                            onClick={() => handleCategorySelect(currentCat.id)}
+                            className="text-[11px] font-bold text-[#65a30d] hover:underline shrink-0"
+                          >
+                            View All ➔
+                          </button>
+                        </div>
+
+                        <div className="space-y-1">
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-stone-400">Subcategories</span>
+                          <div className="grid grid-cols-1 gap-1 pt-1">
+                            {currentCat.subcategories.map((sub) => (
+                              <button
+                                key={sub.id}
+                                onClick={() => handleCategorySelect(currentCat.id, sub.id)}
+                                className="w-full flex items-center justify-between px-3 py-2 text-xs font-semibold rounded-lg text-stone-700 hover:bg-lime-50 hover:text-lime-900 transition-colors text-left group"
+                              >
+                                <span>{sub.name}</span>
+                                <span className="text-[10px] text-stone-400 group-hover:text-lime-700 font-normal">Explore</span>
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })()}
+                </div>
+
               </div>
             )}
           </div>
@@ -267,24 +326,38 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
 
       {/* 4. Mobile Navigation Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-stone-900 text-white px-4 pb-6 pt-3 shadow-2xl animate-fadeIn border-t border-stone-800">
+        <div className="lg:hidden bg-stone-900 text-white px-4 pb-6 pt-3 shadow-2xl animate-fadeIn border-t border-stone-800 max-h-[85vh] overflow-y-auto">
           
           {/* Shop By Category in Mobile Drawer */}
           <div className="mb-4 bg-[#093843] rounded-xl overflow-hidden border border-teal-700">
-            <div className="px-4 py-2.5 bg-[#062931] text-amber-300 font-extrabold text-xs uppercase flex items-center gap-2">
-              <Menu className="h-4 w-4" />
-              SHOP BY CATEGORY
+            <div className="px-4 py-2.5 bg-[#062931] text-amber-300 font-extrabold text-xs uppercase flex items-center justify-between">
+              <span className="flex items-center gap-2">
+                <Menu className="h-4 w-4" />
+                SHOP BY CATEGORY (12)
+              </span>
             </div>
-            <div className="divide-y divide-teal-800/60">
-              {categories.map((cat) => (
-                <button
-                  key={cat.id}
-                  onClick={() => handleCategorySelect(cat.id)}
-                  className="w-full flex items-center justify-between px-4 py-2 text-xs font-semibold text-stone-200 hover:bg-[#062931] text-left"
-                >
-                  <span>{cat.label}</span>
-                  <span className="text-lime-400 font-bold">➔</span>
-                </button>
+            <div className="divide-y divide-teal-800/60 max-h-72 overflow-y-auto">
+              {CATEGORIES.map((cat) => (
+                <div key={cat.id} className="p-2.5 bg-[#07333d]">
+                  <div
+                    onClick={() => handleCategorySelect(cat.id)}
+                    className="flex items-center justify-between text-xs font-bold text-white cursor-pointer hover:text-amber-300"
+                  >
+                    <span>{cat.name}</span>
+                    <span className="text-[10px] bg-lime-700 px-2 py-0.5 rounded text-white font-mono">View All</span>
+                  </div>
+                  <div className="mt-2 flex flex-wrap gap-1.5 pl-2">
+                    {cat.subcategories.map((sub) => (
+                      <button
+                        key={sub.id}
+                        onClick={() => handleCategorySelect(cat.id, sub.id)}
+                        className="text-[11px] bg-teal-900/80 hover:bg-lime-700 text-stone-200 hover:text-white px-2 py-1 rounded transition-colors"
+                      >
+                        {sub.name}
+                      </button>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </div>
