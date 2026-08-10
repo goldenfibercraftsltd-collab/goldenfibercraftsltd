@@ -65,13 +65,18 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/products" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5">
-                  <span className="text-[#65a30d]">➔</span> PPT Product Catalog
+                <Link to="/materials" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                  <span className="text-[#65a30d]">➔</span> Materials Info
                 </Link>
               </li>
               <li>
                 <Link to="/infrastructure" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5">
                   <span className="text-[#65a30d]">➔</span> Factory Facilities
+                </Link>
+              </li>
+              <li>
+                <Link to="/sustainability" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                  <span className="text-[#65a30d]">➔</span> Sustainability
                 </Link>
               </li>
               <li>
@@ -93,12 +98,12 @@ export const Footer: React.FC = () => {
               Product Categories
             </h4>
             <ul className="space-y-2 text-xs font-semibold">
-              <li><Link to="/products?category=baskets" onClick={scrollToTop} className="hover:text-amber-300 transition-colors">Storage & Laundry Baskets</Link></li>
-              <li><Link to="/products?category=planters" onClick={scrollToTop} className="hover:text-amber-300 transition-colors">Planters & Pots</Link></li>
-              <li><Link to="/products?category=bags" onClick={scrollToTop} className="hover:text-amber-300 transition-colors">Jute Bags & Packaging</Link></li>
-              <li><Link to="/products?category=decor" onClick={scrollToTop} className="hover:text-amber-300 transition-colors">Home Decor & Mats</Link></li>
-              <li><Link to="/products?category=bamboo" onClick={scrollToTop} className="hover:text-amber-300 transition-colors">Bamboo Crafts</Link></li>
-              <li><Link to="/products?category=labels" onClick={scrollToTop} className="hover:text-amber-300 transition-colors">Garment Woven Labels & Hangtags</Link></li>
+              <li><Link to="/products?category=jute" onClick={scrollToTop} className="hover:text-amber-300 transition-colors">Jute Handicrafts</Link></li>
+              <li><Link to="/products?category=rugs" onClick={scrollToTop} className="hover:text-amber-300 transition-colors">Jhuta & Jute Rugs</Link></li>
+              <li><Link to="/products?category=seagrass" onClick={scrollToTop} className="hover:text-amber-300 transition-colors">Seagrass Baskets & Mats</Link></li>
+              <li><Link to="/products?category=rattan" onClick={scrollToTop} className="hover:text-amber-300 transition-colors">Rattan Furniture & Mirrors</Link></li>
+              <li><Link to="/products?category=bamboo" onClick={scrollToTop} className="hover:text-amber-300 transition-colors">Bamboo Baskets & Crafts</Link></li>
+              <li><Link to="/products?category=water-hyacinth" onClick={scrollToTop} className="hover:text-amber-300 transition-colors">Water Hyacinth Baskets</Link></li>
             </ul>
           </div>
 
@@ -114,11 +119,11 @@ export const Footer: React.FC = () => {
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="h-4 w-4 text-[#65a30d] shrink-0" />
-                <a href="tel:+8801831806948" className="hover:underline text-amber-300 font-bold">+880-1831-806948</a>
+                <a href="https://wa.me/8801617778488?text=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%20I%20would%20like%20to%20know%20more%20about%20your%20handicraft%20products%20and%20export%20details." target="_blank" rel="noopener noreferrer" className="hover:underline text-amber-300 font-bold">+880-1617-778488</a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="h-4 w-4 text-[#65a30d] shrink-0" />
-                <a href="mailto:info@goldenfibercrafts.com" className="hover:underline">info@goldenfibercrafts.com</a>
+                <a href="mailto:goldenfibercraftsltd@gmail.com" className="hover:underline">goldenfibercraftsltd@gmail.com</a>
               </div>
             </div>
           </div>
