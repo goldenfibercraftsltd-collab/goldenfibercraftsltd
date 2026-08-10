@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AdminLayout } from '../../components/admin/AdminLayout';
-import { Save, CheckCircle2, Phone, Mail, MapPin, Tag, Cloud } from 'lucide-react';
+import { Save, CheckCircle2, Phone, Mail, MapPin, Tag, Cloud, MessageSquare } from 'lucide-react';
 
 export const AdminSettings: React.FC = () => {
   const [saving, setSaving] = useState(false);
@@ -9,11 +9,26 @@ export const AdminSettings: React.FC = () => {
   const [settings, setSettings] = useState({
     site_name: 'Golden Fiber Crafts Ltd.',
     tagline: 'Nature Woven into Every Creation.',
-    phone: '+880-1831-806948',
+    phone: '+880-1617-778488',
+    whatsapp: '01617778488',
     email: 'goldenfibercraftsltd@gmail.com',
     address: 'Factory: Dhulivita, Dhamrai, Dhaka | HQ: House-12, Road-04, Sector-01, Uttara, Dhaka-1230, Bangladesh',
     cloudinary_cloud_name: 'o7zryqib',
   });
+
+  useEffect(() => {
+    fetch('/api/settings')
+      .then(res => res.json())
+      .then(data => {
+        if (data.success && data.settings) {
+          setSettings(prev => ({
+            ...prev,
+            ...data.settings
+          }));
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -79,6 +94,16 @@ export const AdminSettings: React.FC = () => {
                 type="text"
                 value={settings.phone}
                 onChange={(e) => setSettings(prev => ({ ...prev, phone: e.target.value }))}
+                className="w-full px-4 py-2.5 bg-slate-950 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs font-bold text-white outline-none"
+              />
+            </div>
+
+            <div className="space-y-1.5">
+              <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider">Official WhatsApp Number</label>
+              <input
+                type="text"
+                value={settings.whatsapp}
+                onChange={(e) => setSettings(prev => ({ ...prev, whatsapp: e.target.value }))}
                 className="w-full px-4 py-2.5 bg-slate-950 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs font-bold text-white outline-none"
               />
             </div>
