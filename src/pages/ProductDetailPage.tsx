@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { CATEGORIES, PRODUCTS, ProductItem } from '../data/products';
+import { CATEGORIES, ProductItem } from '../data/products';
+import { getAllActiveProducts } from '../utils/productStore';
 import { ImageMagnifier } from '../components/ImageMagnifier';
 import { useCart, CartItem } from '../context/CartContext';
 import { ArrowLeft, CheckCircle2, ShoppingBag, ShieldCheck, Phone, Home, Sparkles, ChevronRight, AlertTriangle, Check, Layers, FileText, Info } from 'lucide-react';
@@ -14,12 +15,21 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
   const navigate = useNavigate();
   const { addToCart } = useCart();
 
+  const allActiveProducts = useMemo(() => getAllActiveProducts(), []);
+
   // Find product by slug or id
-  const product: ProductItem = PRODUCTS.find((p) => p.slug === productSlug || p.id === productSlug) || PRODUCTS[0];
-  const currentCategory = CATEGORIES.find((c) => c.slug === product.categorySlug || c.id === product.category) || CATEGORIES[0];
+  const product: ProductItem =
+    allActiveProducts.find((p) => p.slug === productSlug || p.id === productSlug || p.code === productSlug) ||
+    allActiveProducts[0];
+
+  const currentCategory =
+    CATEGORIES.find((c) => c.slug === product.categorySlug || c.id === product.category || c.id === product.categorySlug) ||
+    CATEGORIES[0];
 
   // Get products ONLY in the same category
-  const categoryProducts = PRODUCTS.filter((p) => p.categorySlug === currentCategory.slug || p.category === currentCategory.id);
+  const categoryProducts = allActiveProducts.filter(
+    (p) => p.categorySlug === currentCategory.slug || p.category === currentCategory.id || p.categorySlug === currentCategory.id
+  );
 
   // Specs & Carton/CBM defaults based on product or BDCreation spec standards
   const setPerCarton = product.setPerCarton || 2;
