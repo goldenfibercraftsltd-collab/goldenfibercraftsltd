@@ -147,14 +147,33 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               </svg>
             </a>
 
-            {/* 2. Outlook / Email Icon Button */}
+            {/* 2. Gmail / Email Icon Button */}
             <a
               href="mailto:goldenfibercraftsltd@gmail.com?subject=Inquiry%20to%20Golden%20Fiber%20Crafts%20Ltd.&body=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%0A%0AI%20am%20interested%20in%20learning%20more%20about%20your%20handicraft%20products%20and%20export%20details."
-              title="Send Email (goldenfibercraftsltd@gmail.com)"
-              className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-lg bg-[#0078D4] hover:bg-[#0067b8] text-white shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 shrink-0"
+              title="Send Email via Gmail (goldenfibercraftsltd@gmail.com)"
+              className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-white hover:bg-red-50 border border-stone-200 shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 shrink-0"
             >
-              <svg className="h-5 w-5 sm:h-6 sm:w-6 fill-current" viewBox="0 0 24 24">
-                <path d="M1 5.5A1.5 1.5 0 0 1 2.5 4h9A1.5 1.5 0 0 1 13 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 1 18.5v-13zm2.5.5v12h7V6h-7zm2 2h3v2.5h-3V8zm0 3.5h3V14h-3v-2.5zM14 6.5l8.5-2.5v16L14 17.5v-11zm2 2.2v6.6l4.5 1.3V7.4L16 8.7z" />
+              <svg className="h-5 w-5 sm:h-5.5 sm:w-5.5" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M2 6.5V17.5C2 18.6 2.9 19.5 4 19.5H6.5V10.8L2 7.4V6.5Z"
+                  fill="#4285F4"
+                />
+                <path
+                  d="M22 6.5V17.5C22 18.6 21.1 19.5 20 19.5H17.5V10.8L22 7.4V6.5Z"
+                  fill="#34A853"
+                />
+                <path
+                  d="M17.5 5.5L12 9.6L6.5 5.5H4C2.9 5.5 2 6.4 2 7.5V8.5L12 16L22 8.5V7.5C22 6.4 21.1 5.5 20 5.5H17.5Z"
+                  fill="#EA4335"
+                />
+                <path
+                  d="M2 6.5C2 5.9 2.3 5.5 2.8 5.2L6.5 8V10.8L2 7.4V6.5Z"
+                  fill="#FBBC04"
+                />
+                <path
+                  d="M22 6.5C22 5.9 21.7 5.5 21.2 5.2L17.5 8V10.8L22 7.4V6.5Z"
+                  fill="#FBBC04"
+                />
               </svg>
             </a>
 
@@ -208,7 +227,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
 
       {/* 3. Green Primary Navigation Bar + Dark Teal "SHOP BY CATEGORY ˅" Box */}
       <div className="bg-[#65a30d] text-white shadow-inner">
-        <div className="mx-auto max-w-7xl px-4 flex items-center justify-between relative">
+        <div className="mx-auto max-w-7xl px-4 flex items-center gap-2 lg:gap-4 relative">
           
           {/* Dark Teal "SHOP BY CATEGORY ˅" Box */}
           <div className="relative">
@@ -314,12 +333,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               );
             })}
           </nav>
-
-          {/* Quick Info Badge */}
-          <div className="hidden lg:flex items-center gap-2 text-xs font-bold text-white">
-            <span className="h-2 w-2 rounded-full bg-amber-300 animate-ping" />
-            <span>Certified Sustainable Exports</span>
-          </div>
 
         </div>
       </div>
