@@ -10,6 +10,36 @@
 
 let observerInstance: IntersectionObserver | null = null;
 
+const REVEAL_SELECTORS = [
+  '.reveal',
+  '.reveal-up',
+  '.reveal-left',
+  '.reveal-right',
+  '.reveal-scale',
+  '.reveal-mask',
+  '.card-slide-mid',
+  '.card-slide-left',
+  '.card-slide-right',
+  '.card-slide-far-left',
+  '.card-slide-far-right',
+  '[data-reveal]'
+].join(', ');
+
+const NOT_REVEALED_SELECTORS = [
+  '.reveal:not(.revealed)',
+  '.reveal-up:not(.revealed)',
+  '.reveal-left:not(.revealed)',
+  '.reveal-right:not(.revealed)',
+  '.reveal-scale:not(.revealed)',
+  '.reveal-mask:not(.revealed)',
+  '.card-slide-mid:not(.revealed)',
+  '.card-slide-left:not(.revealed)',
+  '.card-slide-right:not(.revealed)',
+  '.card-slide-far-left:not(.revealed)',
+  '.card-slide-far-right:not(.revealed)',
+  '[data-reveal]:not(.revealed)'
+].join(', ');
+
 function getObserver(): IntersectionObserver | null {
   if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
     return null;
@@ -27,7 +57,7 @@ function getObserver(): IntersectionObserver | null {
         });
       },
       {
-        threshold: 0.08,
+        threshold: 0.06,
         rootMargin: '0px 0px -20px 0px'
       }
     );
@@ -42,9 +72,7 @@ export function initScrollReveal(): () => void {
   // Check if reduced motion is requested
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (prefersReducedMotion) {
-    document.querySelectorAll(
-      '.reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-scale, .reveal-mask, [data-reveal]'
-    ).forEach((el) => {
+    document.querySelectorAll(REVEAL_SELECTORS).forEach((el) => {
       el.classList.add('revealed');
     });
     return () => {};
@@ -53,18 +81,14 @@ export function initScrollReveal(): () => void {
   const observer = getObserver();
   if (!observer) {
     // Fallback if IntersectionObserver is not supported
-    document.querySelectorAll(
-      '.reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-scale, .reveal-mask, [data-reveal]'
-    ).forEach((el) => {
+    document.querySelectorAll(REVEAL_SELECTORS).forEach((el) => {
       el.classList.add('revealed');
     });
     return () => {};
   }
 
   const observeElements = () => {
-    const elements = document.querySelectorAll(
-      '.reveal:not(.revealed), .reveal-up:not(.revealed), .reveal-left:not(.revealed), .reveal-right:not(.revealed), .reveal-scale:not(.revealed), .reveal-mask:not(.revealed), [data-reveal]:not(.revealed)'
-    );
+    const elements = document.querySelectorAll(NOT_REVEALED_SELECTORS);
 
     elements.forEach((el) => {
       observer.observe(el);
@@ -74,10 +98,12 @@ export function initScrollReveal(): () => void {
   // Immediate observation
   observeElements();
 
-  // Short debounced second pass for dynamically rendered items
-  const timer = setTimeout(observeElements, 100);
+  // Short debounced passes for dynamically rendered items
+  const timer1 = setTimeout(observeElements, 100);
+  const timer2 = setTimeout(observeElements, 400);
 
   return () => {
-    clearTimeout(timer);
+    clearTimeout(timer1);
+    clearTimeout(timer2);
   };
 }

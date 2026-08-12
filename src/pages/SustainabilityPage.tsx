@@ -182,9 +182,9 @@ export const SustainabilityPage: React.FC = () => {
             </p>
           </div>
 
-          {/* 4 Impact Metric Badges with Staggered Entrance */}
+          {/* 4 Impact Metric Badges with Middle-Outward Card Slide */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto pt-4">
-            <div className="reveal-up stagger-1 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-emerald-200/80 shadow-xs">
+            <div className="card-slide-far-left stagger-2 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-emerald-200/80 shadow-xs">
               <div className="h-9 w-9 rounded-xl bg-emerald-100 text-emerald-900 flex items-center justify-center font-bold mb-2">
                 <Sprout className="h-5 w-5" />
               </div>
@@ -192,7 +192,7 @@ export const SustainabilityPage: React.FC = () => {
               <p className="text-[11px] text-stone-500">Plant-based raw fibers</p>
             </div>
 
-            <div className="reveal-up stagger-2 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-emerald-200/80 shadow-xs">
+            <div className="card-slide-left stagger-1 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-emerald-200/80 shadow-xs">
               <div className="h-9 w-9 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center font-bold mb-2">
                 <Users className="h-5 w-5" />
               </div>
@@ -200,7 +200,7 @@ export const SustainabilityPage: React.FC = () => {
               <p className="text-[11px] text-stone-500">Ethical fair-trade wages</p>
             </div>
 
-            <div className="reveal-up stagger-3 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-emerald-200/80 shadow-xs">
+            <div className="card-slide-right stagger-1 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-emerald-200/80 shadow-xs">
               <div className="h-9 w-9 rounded-xl bg-teal-100 text-teal-900 flex items-center justify-center font-bold mb-2">
                 <Recycle className="h-5 w-5" />
               </div>
@@ -208,7 +208,7 @@ export const SustainabilityPage: React.FC = () => {
               <p className="text-[11px] text-stone-500">100% Biodegradable</p>
             </div>
 
-            <div className="reveal-up stagger-4 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-emerald-200/80 shadow-xs">
+            <div className="card-slide-far-right stagger-2 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-emerald-200/80 shadow-xs">
               <div className="h-9 w-9 rounded-xl bg-blue-100 text-blue-900 flex items-center justify-center font-bold mb-2">
                 <Globe2 className="h-5 w-5" />
               </div>
@@ -348,7 +348,7 @@ export const SustainabilityPage: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            <div className="reveal-scale stagger-1 hover-lift bg-white rounded-3xl p-6 border border-[#d8e8da] shadow-xs space-y-3">
+            <div className="card-slide-far-left stagger-2 hover-lift bg-white rounded-3xl p-6 border border-[#d8e8da] shadow-xs space-y-3">
               <div className="h-10 w-10 rounded-xl bg-rose-100 text-rose-800 flex items-center justify-center font-bold text-xs font-mono">
                 SDG 5
               </div>
@@ -358,7 +358,7 @@ export const SustainabilityPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="reveal-scale stagger-2 hover-lift bg-white rounded-3xl p-6 border border-[#d8e8da] shadow-xs space-y-3">
+            <div className="card-slide-left stagger-1 hover-lift bg-white rounded-3xl p-6 border border-[#d8e8da] shadow-xs space-y-3">
               <div className="h-10 w-10 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center font-bold text-xs font-mono">
                 SDG 8
               </div>
@@ -368,7 +368,7 @@ export const SustainabilityPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="reveal-scale stagger-3 hover-lift bg-white rounded-3xl p-6 border border-[#d8e8da] shadow-xs space-y-3">
+            <div className="card-slide-right stagger-1 hover-lift bg-white rounded-3xl p-6 border border-[#d8e8da] shadow-xs space-y-3">
               <div className="h-10 w-10 rounded-xl bg-teal-100 text-teal-900 flex items-center justify-center font-bold text-xs font-mono">
                 SDG 12
               </div>
@@ -378,7 +378,7 @@ export const SustainabilityPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="reveal-scale stagger-4 hover-lift bg-white rounded-3xl p-6 border border-[#d8e8da] shadow-xs space-y-3">
+            <div className="card-slide-far-right stagger-2 hover-lift bg-white rounded-3xl p-6 border border-[#d8e8da] shadow-xs space-y-3">
               <div className="h-10 w-10 rounded-xl bg-emerald-100 text-emerald-900 flex items-center justify-center font-bold text-xs font-mono">
                 SDG 13
               </div>

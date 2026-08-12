@@ -254,15 +254,21 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
           )}
         </div>
 
-        {/* Product Cards Grid with Staggered Scroll Reveal */}
+        {/* Product Cards Grid with Middle-Outward Card Slide */}
         {filteredProducts.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {filteredProducts.map((product, idx) => {
-              const staggerClass = `stagger-${(idx % 8) + 1}`;
+              const col = idx % 4;
+              const slideAnim = 
+                col === 0 ? 'card-slide-far-left stagger-3' :
+                col === 1 ? 'card-slide-left stagger-1' :
+                col === 2 ? 'card-slide-right stagger-1' :
+                'card-slide-far-right stagger-3';
+
               return (
                 <div
                   key={product.id}
-                  className={`reveal-up ${staggerClass} hover-lift group flex flex-col justify-between rounded-2xl bg-white p-4 shadow-xs border border-stone-200 hover:shadow-xl hover:border-[#65a30d] transition-all duration-300`}
+                  className={`${slideAnim} hover-lift group flex flex-col justify-between rounded-2xl bg-white p-4 shadow-xs border border-stone-200 hover:shadow-xl hover:border-[#65a30d] transition-all duration-300`}
                 >
                   <div>
                     {/* Photo Container */}

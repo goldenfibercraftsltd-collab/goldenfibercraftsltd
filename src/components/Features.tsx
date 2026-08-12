@@ -11,25 +11,29 @@ export const Features: React.FC<FeaturesProps> = ({ onOpenModal }) => {
       icon: Globe,
       title: 'GLOBAL CLIENTS',
       description: 'Trusted by leading retail brands, wholesalers, and buying houses across Europe, Americas, Australia, and Asia.',
-      detail: 'Golden Fiber Crafts Ltd. exports premium sustainable natural fiber crafts to over 20+ countries, complying with strict international eco-compliance standards.'
+      detail: 'Golden Fiber Crafts Ltd. exports premium sustainable natural fiber crafts to over 20+ countries, complying with strict international eco-compliance standards.',
+      slideAnim: 'card-slide-far-left stagger-2'
     },
     {
       icon: Mail,
       title: 'MESSAGE FROM MD',
       description: 'We are committed to quality, ethical artisan empowerment, and long-term transparent partnerships with every buyer.',
-      detail: 'Our mission is to bridge traditional Bangladeshi craftsmanship with contemporary global design, delivering top quality while maintaining sustainable rural livelihoods.'
+      detail: 'Our mission is to bridge traditional Bangladeshi craftsmanship with contemporary global design, delivering top quality while maintaining sustainable rural livelihoods.',
+      slideAnim: 'card-slide-left stagger-1'
     },
     {
       icon: BarChart3,
       title: 'COMPANY PROFILE',
       description: 'A 1-stop eco solution — baskets, planters, jute bags, placemats, and bamboo crafts under one manufacturing umbrella.',
-      detail: 'Equipped with dedicated artisan clusters, quality inspection units, and eco-friendly dye houses, we guarantee high capacity with zero compromise on quality.'
+      detail: 'Equipped with dedicated artisan clusters, quality inspection units, and eco-friendly dye houses, we guarantee high capacity with zero compromise on quality.',
+      slideAnim: 'card-slide-right stagger-1'
     },
     {
       icon: Rocket,
       title: 'VISION & MISSION',
       description: 'To be Bangladesh’s premier sustainable crafts exporter — driven by innovation, artisan dignity, and customer success.',
-      detail: 'We strive to innovate in natural fiber weaving, reduce carbon footprint, and provide customizable OEM/ODM production for global markets.'
+      detail: 'We strive to innovate in natural fiber weaving, reduce carbon footprint, and provide customizable OEM/ODM production for global markets.',
+      slideAnim: 'card-slide-far-right stagger-2'
     }
   ];
 
@@ -46,15 +50,14 @@ export const Features: React.FC<FeaturesProps> = ({ onOpenModal }) => {
           <div className="mx-auto mt-3 h-0.5 w-16 rounded-full bg-amber-600" />
         </div>
 
-        {/* 4 Cards Grid with Staggered Entrance */}
+        {/* 4 Cards Grid with Middle-Outward Glide Entrance */}
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((item, idx) => {
             const Icon = item.icon;
-            const staggerClass = `stagger-${idx + 1}`;
             return (
               <div 
                 key={idx}
-                className={`reveal-up ${staggerClass} hover-lift group relative flex flex-col justify-between rounded-2xl bg-white p-6 shadow-md hover:shadow-xl border border-amber-900/10`}
+                className={`${item.slideAnim} hover-lift group relative flex flex-col justify-between rounded-2xl bg-white p-6 shadow-md hover:shadow-xl border border-amber-900/10`}
               >
                 <div>
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-100 text-amber-800 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300 shadow-sm">

@@ -83,6 +83,14 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
     { title: 'OEKO-TEX & Fair Trade Compliance', image: '/certificates/cert4.png' }
   ];
 
+  const getCardSlideClass = (idx: number) => {
+    const col = idx % 4;
+    if (col === 0) return 'card-slide-far-left stagger-3';
+    if (col === 1) return 'card-slide-left stagger-1';
+    if (col === 2) return 'card-slide-right stagger-1';
+    return 'card-slide-far-right stagger-3';
+  };
+
   return (
     <div className="bg-amber-50/20 py-10 space-y-16 animate-fadeIn font-sans">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
@@ -103,7 +111,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
           </div>
         </div>
 
-        {/* Real Buyers Grid with Staggered Reveals */}
+        {/* Real Buyers Grid with Middle-Outward Card Slide */}
         <div className="space-y-6 bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-stone-200/80">
           <div className="text-center space-y-2 reveal-up">
             <span className="text-xs font-bold uppercase tracking-widest text-emerald-700">AUTHENTIC CLIENT PORTFOLIO</span>
@@ -118,11 +126,11 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-6">
             {officialBuyers.map((buyer, idx) => {
-              const staggerClass = `stagger-${(idx % 8) + 1}`;
+              const slideAnim = getCardSlideClass(idx);
               return (
                 <div
                   key={idx}
-                  className={`reveal-up ${staggerClass} hover-lift group flex flex-col justify-between rounded-2xl bg-stone-50/80 p-6 border border-stone-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-2xl transition-all duration-300`}
+                  className={`${slideAnim} hover-lift group flex flex-col justify-between rounded-2xl bg-stone-50/80 p-6 border border-stone-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-2xl transition-all duration-300`}
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2">
@@ -166,9 +174,9 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
           </div>
         </div>
 
-        {/* Authentic Factory Certificates Section with reveal-scale */}
-        <div className="reveal-scale bg-gradient-to-br from-stone-900 via-emerald-950 to-stone-900 rounded-3xl p-8 sm:p-12 text-white shadow-2xl space-y-8">
-          <div className="text-center space-y-2">
+        {/* Authentic Factory Certificates Section with Middle-Outward Card Slide */}
+        <div className="bg-gradient-to-br from-stone-900 via-emerald-950 to-stone-900 rounded-3xl p-8 sm:p-12 text-white shadow-2xl space-y-8">
+          <div className="text-center space-y-2 reveal-up">
             <span className="text-xs font-bold uppercase tracking-widest text-emerald-400 flex items-center justify-center gap-1.5">
               <Award className="h-4 w-4" />
               OFFICIAL COMPLIANCE
@@ -183,9 +191,9 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {certificateImages.map((cert, idx) => {
-              const staggerClass = `stagger-${idx + 1}`;
+              const slideAnim = getCardSlideClass(idx);
               return (
-                <div key={idx} className={`reveal-up ${staggerClass} hover-lift group rounded-2xl bg-white p-4 text-stone-900 shadow-xl border border-emerald-500/30`}>
+                <div key={idx} className={`${slideAnim} hover-lift group rounded-2xl bg-white p-4 text-stone-900 shadow-xl border border-emerald-500/30`}>
                   <div className="h-44 w-full overflow-hidden rounded-xl bg-stone-100 flex items-center justify-center p-2">
                     <img
                       src={cert.image}

@@ -4,32 +4,36 @@ import { AnimatedCounter } from './AnimatedCounter';
 
 export const GlobalClients: React.FC = () => {
   const stats = [
-    { label: 'Export Destinations', target: 20, suffix: '+ Countries', icon: Globe },
-    { label: 'Monthly Craft Capacity', target: 50000, suffix: '+ Pcs', icon: Ship },
-    { label: 'OEM Custom Designs', target: 100, suffix: '+ Developed', icon: Award },
-    { label: 'Artisan Community', target: 500, suffix: '+ Skilled Craftsmen', icon: Users },
+    { label: 'Export Destinations', target: 20, suffix: '+ Countries', icon: Globe, slideAnim: 'card-slide-far-left stagger-2' },
+    { label: 'Monthly Craft Capacity', target: 50000, suffix: '+ Pcs', icon: Ship, slideAnim: 'card-slide-left stagger-1' },
+    { label: 'OEM Custom Designs', target: 100, suffix: '+ Developed', icon: Award, slideAnim: 'card-slide-right stagger-1' },
+    { label: 'Artisan Community', target: 500, suffix: '+ Skilled Craftsmen', icon: Users, slideAnim: 'card-slide-far-right stagger-2' },
   ];
 
   const regions = [
     {
       name: 'North America',
       countries: 'USA, Canada',
-      focus: 'Storage Baskets, Laundry Hampers, Boho Wall Decor'
+      focus: 'Storage Baskets, Laundry Hampers, Boho Wall Decor',
+      slideAnim: 'card-slide-far-left stagger-2'
     },
     {
       name: 'Europe',
       countries: 'Germany, Netherlands, France, UK, Scandinavia',
-      focus: 'Plant Pots, Jute Shopping Bags, Seagrass Placemats'
+      focus: 'Plant Pots, Jute Shopping Bags, Seagrass Placemats',
+      slideAnim: 'card-slide-left stagger-1'
     },
     {
       name: 'Australia & New Zealand',
       countries: 'Australia, NZ',
-      focus: 'Natural Fiber Home Decor, Braided Rugs'
+      focus: 'Natural Fiber Home Decor, Braided Rugs',
+      slideAnim: 'card-slide-right stagger-1'
     },
     {
       name: 'Asia-Pacific & Middle East',
       countries: 'Japan, UAE, Saudi Arabia, Singapore',
-      focus: 'Eco Promotional Bags, Bamboo Utility Crafts'
+      focus: 'Eco Promotional Bags, Bamboo Utility Crafts',
+      slideAnim: 'card-slide-far-right stagger-2'
     }
   ];
 
@@ -49,17 +53,16 @@ export const GlobalClients: React.FC = () => {
           <div className="mx-auto mt-3 h-0.5 w-16 rounded-full bg-amber-600" />
         </div>
 
-        {/* Stats Row with Animated Counter */}
+        {/* Stats Row with Animated Counter and Middle-Outward Card Slide */}
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((item, idx) => {
             const Icon = item.icon;
-            const staggerClass = `stagger-${idx + 1}`;
             return (
               <div
                 key={idx}
-                className={`reveal-up ${staggerClass} hover-lift-sm flex items-center gap-4 rounded-2xl bg-amber-50/50 p-6 border border-amber-900/10 shadow-sm`}
+                className={`${item.slideAnim} hover-lift-sm flex items-center gap-4 rounded-2xl bg-amber-50/50 p-6 border border-amber-900/10 shadow-xs`}
               >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-amber-700 text-white shadow">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-amber-700 text-white shadow-xs">
                   <Icon className="h-6 w-6" />
                 </div>
                 <div>
@@ -73,18 +76,17 @@ export const GlobalClients: React.FC = () => {
           })}
         </div>
 
-        {/* Export Destinations Grid with Staggered Entrance */}
+        {/* Export Destinations Grid with Middle-Outward Card Slide */}
         <div className="mt-12">
           <h3 className="font-serif text-xl font-bold text-stone-900 text-center sm:text-left mb-6 reveal-up">
             Export Regions & Core Product Lines
           </h3>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {regions.map((region, index) => {
-              const staggerClass = `stagger-${index + 1}`;
               return (
                 <div
                   key={index}
-                  className={`reveal-up ${staggerClass} hover-lift-sm rounded-2xl bg-white p-6 border border-amber-900/10 shadow-sm hover:shadow-md transition-all`}
+                  className={`${region.slideAnim} hover-lift-sm rounded-2xl bg-white p-6 border border-amber-900/10 shadow-xs hover:shadow-md transition-all`}
                 >
                   <div className="text-xs font-bold text-amber-700 uppercase tracking-widest">Region</div>
                   <h4 className="mt-1 font-serif text-lg font-bold text-stone-900">{region.name}</h4>

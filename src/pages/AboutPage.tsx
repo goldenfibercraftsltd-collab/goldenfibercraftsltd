@@ -95,27 +95,27 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
           </div>
         </div>
 
-        {/* Core Stats with Animated Counters */}
+        {/* Core Stats with Animated Counters & Middle-Outward Slide */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
-          <div className="reveal-up stagger-1 hover-lift-sm rounded-2xl bg-white p-6 shadow-md border border-stone-100">
+          <div className="card-slide-far-left stagger-2 hover-lift-sm rounded-2xl bg-white p-6 shadow-md border border-stone-100">
             <p className="font-serif text-3xl sm:text-4xl font-extrabold text-emerald-700">
               <AnimatedCounter target={15} suffix="+" />
             </p>
             <p className="mt-1 text-xs text-stone-600 font-medium uppercase">Years Experience</p>
           </div>
-          <div className="reveal-up stagger-2 hover-lift-sm rounded-2xl bg-white p-6 shadow-md border border-stone-100">
+          <div className="card-slide-left stagger-1 hover-lift-sm rounded-2xl bg-white p-6 shadow-md border border-stone-100">
             <p className="font-serif text-3xl sm:text-4xl font-extrabold text-emerald-700">
               <AnimatedCounter target={35} suffix="+" />
             </p>
             <p className="mt-1 text-xs text-stone-600 font-medium uppercase">Export Destinations</p>
           </div>
-          <div className="reveal-up stagger-3 hover-lift-sm rounded-2xl bg-white p-6 shadow-md border border-stone-100">
+          <div className="card-slide-right stagger-1 hover-lift-sm rounded-2xl bg-white p-6 shadow-md border border-stone-100">
             <p className="font-serif text-3xl sm:text-4xl font-extrabold text-emerald-700">
               <AnimatedCounter target={5} suffix="M+" />
             </p>
             <p className="mt-1 text-xs text-stone-600 font-medium uppercase">Annual Unit Capacity</p>
           </div>
-          <div className="reveal-up stagger-4 hover-lift-sm rounded-2xl bg-white p-6 shadow-md border border-stone-100">
+          <div className="card-slide-far-right stagger-2 hover-lift-sm rounded-2xl bg-white p-6 shadow-md border border-stone-100">
             <p className="font-serif text-3xl sm:text-4xl font-extrabold text-emerald-700">
               <AnimatedCounter target={100} suffix="%" />
             </p>

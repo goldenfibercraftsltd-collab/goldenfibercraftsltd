@@ -184,9 +184,9 @@ export const QualityControlPage: React.FC = () => {
             </p>
           </div>
 
-          {/* 4 Trust Metrics with Staggered Entrance */}
+          {/* 4 Trust Metrics with Middle-Outward Card Slide */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto pt-4">
-            <div className="reveal-up stagger-1 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-[#e8ded1] shadow-xs">
+            <div className="card-slide-far-left stagger-2 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-[#e8ded1] shadow-xs">
               <div className="h-9 w-9 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center font-bold mb-2">
                 <BadgeCheck className="h-5 w-5" />
               </div>
@@ -194,7 +194,7 @@ export const QualityControlPage: React.FC = () => {
               <p className="text-[11px] text-stone-500">Zero-defect sampling</p>
             </div>
 
-            <div className="reveal-up stagger-2 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-[#e8ded1] shadow-xs">
+            <div className="card-slide-left stagger-1 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-[#e8ded1] shadow-xs">
               <div className="h-9 w-9 rounded-xl bg-emerald-100 text-emerald-900 flex items-center justify-center font-bold mb-2">
                 <ThermometerSnowflake className="h-5 w-5" />
               </div>
@@ -202,7 +202,7 @@ export const QualityControlPage: React.FC = () => {
               <p className="text-[11px] text-stone-500">100% mold-free guarantee</p>
             </div>
 
-            <div className="reveal-up stagger-3 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-[#e8ded1] shadow-xs">
+            <div className="card-slide-right stagger-1 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-[#e8ded1] shadow-xs">
               <div className="h-9 w-9 rounded-xl bg-teal-100 text-teal-900 flex items-center justify-center font-bold mb-2">
                 <FileCheck className="h-5 w-5" />
               </div>
@@ -210,7 +210,7 @@ export const QualityControlPage: React.FC = () => {
               <p className="text-[11px] text-stone-500">Official phytosanitary cert</p>
             </div>
 
-            <div className="reveal-up stagger-4 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-[#e8ded1] shadow-xs">
+            <div className="card-slide-far-right stagger-2 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-[#e8ded1] shadow-xs">
               <div className="h-9 w-9 rounded-xl bg-blue-100 text-blue-900 flex items-center justify-center font-bold mb-2">
                 <Award className="h-5 w-5" />
               </div>
@@ -350,7 +350,7 @@ export const QualityControlPage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             
-            <div className="reveal-scale stagger-1 hover-lift bg-white rounded-3xl p-6 sm:p-8 border border-[#e8ded1] shadow-xs space-y-3">
+            <div className="card-slide-left stagger-2 hover-lift bg-white rounded-3xl p-6 sm:p-8 border border-[#e8ded1] shadow-xs space-y-3">
               <div className="h-10 w-10 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center font-bold">
                 <Scale className="h-5 w-5" />
               </div>
@@ -364,7 +364,7 @@ export const QualityControlPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="reveal-scale stagger-2 hover-lift bg-white rounded-3xl p-6 sm:p-8 border border-[#e8ded1] shadow-xs space-y-3">
+            <div className="card-slide-mid stagger-1 hover-lift bg-white rounded-3xl p-6 sm:p-8 border border-[#e8ded1] shadow-xs space-y-3">
               <div className="h-10 w-10 rounded-xl bg-emerald-100 text-emerald-900 flex items-center justify-center font-bold">
                 <ShieldCheck className="h-5 w-5" />
               </div>
@@ -378,7 +378,7 @@ export const QualityControlPage: React.FC = () => {
               </ul>
             </div>
 
-            <div className="reveal-scale stagger-3 hover-lift bg-white rounded-3xl p-6 sm:p-8 border border-[#e8ded1] shadow-xs space-y-3">
+            <div className="card-slide-right stagger-2 hover-lift bg-white rounded-3xl p-6 sm:p-8 border border-[#e8ded1] shadow-xs space-y-3">
               <div className="h-10 w-10 rounded-xl bg-teal-100 text-teal-900 flex items-center justify-center font-bold">
                 <Package className="h-5 w-5" />
               </div>

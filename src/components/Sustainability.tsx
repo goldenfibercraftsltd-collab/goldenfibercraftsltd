@@ -6,22 +6,26 @@ export const Sustainability: React.FC = () => {
     {
       icon: Leaf,
       title: '100% Renewable Fibers',
-      description: 'We harvest golden jute, wild seagrass, kaisa grass, and bamboo — naturally rapidly renewable, zero-plastic materials that leave zero synthetic waste.'
+      description: 'We harvest golden jute, wild seagrass, kaisa grass, and bamboo — naturally rapidly renewable, zero-plastic materials that leave zero synthetic waste.',
+      slideAnim: 'card-slide-far-left stagger-2'
     },
     {
       icon: HeartHandshake,
       title: 'Artisan Empowerment',
-      description: 'Over 80% of our weaving workforce comprises skilled rural female artisans in Bangladesh, providing fair trade wages, healthcare, and financial independence.'
+      description: 'Over 80% of our weaving workforce comprises skilled rural female artisans in Bangladesh, providing fair trade wages, healthcare, and financial independence.',
+      slideAnim: 'card-slide-left stagger-1'
     },
     {
       icon: Sun,
       title: 'Eco-Friendly Dyeing',
-      description: 'All color treatments utilize azo-free, heavy-metal-free, and non-toxic vegetable dyes that ensure safe indoor use and child-safe play storage.'
+      description: 'All color treatments utilize azo-free, heavy-metal-free, and non-toxic vegetable dyes that ensure safe indoor use and child-safe play storage.',
+      slideAnim: 'card-slide-right stagger-1'
     },
     {
       icon: Recycle,
       title: 'Biodegradable & Zero Waste',
-      description: 'From raw fiber processing to production off-cuts, 100% of organic waste is recycled or composted into bio-mulch for local agricultural farms.'
+      description: 'From raw fiber processing to production off-cuts, 100% of organic waste is recycled or composted into bio-mulch for local agricultural farms.',
+      slideAnim: 'card-slide-far-right stagger-2'
     }
   ];
 
@@ -47,20 +51,19 @@ export const Sustainability: React.FC = () => {
           <div className="mx-auto mt-4 h-0.5 w-20 rounded-full bg-amber-500" />
         </div>
 
-        {/* 4 Pillars Grid with Staggered Entrance */}
+        {/* 4 Pillars Grid with Middle-Outward Glide Entrance */}
         <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {pillars.map((pillar, idx) => {
             const Icon = pillar.icon;
-            const staggerClass = `stagger-${idx + 1}`;
             return (
               <div
                 key={idx}
-                className={`reveal-scale ${staggerClass} hover-lift group relative rounded-2xl border border-amber-800/40 bg-stone-900/80 p-6 backdrop-blur-md transition-all`}
+                className={`${pillar.slideAnim} hover-lift group relative rounded-2xl border border-amber-800/40 bg-stone-900/80 p-6 backdrop-blur-md transition-all`}
               >
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 text-stone-950 shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <Icon className="h-7 w-7" />
                 </div>
-                <h3 className="mt-6 font-serif text-lg font-bold text-white group-hover:text-amber-400 transition-colors">
+                <h3 className="mt-6 font-serif text-lg font-bold tracking-wide text-amber-100 group-hover:text-amber-400 transition-colors">
                   {pillar.title}
                 </h3>
                 <p className="mt-3 text-xs sm:text-sm text-stone-300 leading-relaxed font-light">
@@ -71,20 +74,24 @@ export const Sustainability: React.FC = () => {
           })}
         </div>
 
-        {/* Highlight Banner with reveal-up */}
-        <div className="reveal-up mt-14 overflow-hidden rounded-3xl border border-amber-700/30 bg-gradient-to-r from-amber-900/60 via-amber-950 to-stone-900 p-8 text-center sm:p-10 shadow-2xl backdrop-blur-lg">
-          <div className="mx-auto max-w-3xl">
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-amber-300">
-              Transforming Lives Through Artisanal Heritage
-            </h3>
-            <p className="mt-3 text-xs sm:text-sm text-amber-100/90 leading-relaxed font-light">
-              By choosing Golden Fiber Crafts Ltd, international buyers support sustainable rural livelihoods across Bangladesh, preserving generation-old weaving techniques while adopting green supply chains.
-            </p>
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-6 text-xs font-semibold text-emerald-400">
-              <span className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4" /> 100% Fair Trade Practices</span>
-              <span className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4" /> Zero Harmful Chemicals</span>
-              <span className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4" /> Ethical Supply Chain</span>
+        {/* Bottom Sustainability Statement Bar */}
+        <div className="reveal-up mt-12 rounded-2xl border border-amber-800/30 bg-stone-900/50 p-6 sm:p-8 backdrop-blur-sm">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+            <div className="flex items-center gap-4">
+              <div className="h-12 w-12 rounded-xl bg-emerald-900/80 text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/30">
+                <ShieldCheck className="h-6 w-6" />
+              </div>
+              <div>
+                <h4 className="font-serif text-base font-bold text-white">Ethical, Fair Trade & Audited</h4>
+                <p className="text-xs text-stone-400 font-light">Complying with BSCI, Sedex, and Fair Trade certified environmental manufacturing standards.</p>
+              </div>
             </div>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 px-6 py-3 text-xs font-bold uppercase tracking-wider text-stone-950 shadow-lg hover:from-amber-400 hover:to-amber-500 transition-all btn-interactive shrink-0"
+            >
+              <span>Partner With Us</span>
+            </a>
           </div>
         </div>
 

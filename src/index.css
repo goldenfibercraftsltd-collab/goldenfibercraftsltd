@@ -17,20 +17,25 @@
 }
 
 /* ==========================================================================
-   Modern, Ultra-Lightweight, GPU-Accelerated Scroll Reveal System
+   Smooth, Slow, GPU-Accelerated Scroll Reveal & Middle-Outward Card System
    ========================================================================== */
 
-/* Base reveal elements - initially hidden via transform and opacity */
+/* Base reveal elements - slow, graceful, and smooth 1000ms duration */
 .reveal,
 .reveal-up,
 .reveal-left,
 .reveal-right,
 .reveal-scale,
-.reveal-mask {
+.reveal-mask,
+.card-slide-mid,
+.card-slide-left,
+.card-slide-right,
+.card-slide-far-left,
+.card-slide-far-right {
   opacity: 0;
   will-change: opacity, transform;
   transition-property: opacity, transform, clip-path;
-  transition-duration: 550ms;
+  transition-duration: 1000ms; /* Slow & smooth luxury animation */
   transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -39,28 +44,59 @@
 /* Variant: Reveal Up (Natural slide upward) */
 .reveal,
 .reveal-up {
-  transform: translate3d(0, 24px, 0);
+  transform: translate3d(0, 32px, 0);
 }
 
 /* Variant: Reveal Left (Slide in from left) */
 .reveal-left {
-  transform: translate3d(-24px, 0, 0);
+  transform: translate3d(-35px, 0, 0);
 }
 
 /* Variant: Reveal Right (Slide in from right) */
 .reveal-right {
-  transform: translate3d(24px, 0, 0);
+  transform: translate3d(35px, 0, 0);
 }
 
-/* Variant: Reveal Scale (Subtle scale from 0.96 to 1) */
+/* Variant: Reveal Scale (Subtle scale from 0.94 to 1) */
 .reveal-scale {
-  transform: scale3d(0.96, 0.96, 1);
+  transform: scale3d(0.94, 0.94, 1);
 }
 
 /* Variant: Text Mask Reveal for Headings */
 .reveal-mask {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  transform: translate3d(0, 16px, 0);
+  transform: translate3d(0, 20px, 0);
+}
+
+/* --------------------------------------------------------------------------
+   Specialized Middle-Outward Card Expansion System:
+   Middle/center cards anchor first, while left and right cards smoothly
+   slide outward from the center to their respective sides.
+   -------------------------------------------------------------------------- */
+
+/* Center card: reveals smoothly in the middle with subtle scale lift */
+.card-slide-mid {
+  transform: translate3d(0, 35px, 0) scale3d(0.94, 0.94, 1);
+}
+
+/* Left card: starts shifted towards center (to the right), slides OUT to the left */
+.card-slide-left {
+  transform: translate3d(60px, 15px, 0) scale3d(0.95, 0.95, 1);
+}
+
+/* Far Left card: starts shifted further towards center, slides FAR OUT to the left */
+.card-slide-far-left {
+  transform: translate3d(110px, 20px, 0) scale3d(0.92, 0.92, 1);
+}
+
+/* Right card: starts shifted towards center (to the left), slides OUT to the right */
+.card-slide-right {
+  transform: translate3d(-60px, 15px, 0) scale3d(0.95, 0.95, 1);
+}
+
+/* Far Right card: starts shifted further towards center, slides FAR OUT to the right */
+.card-slide-far-right {
+  transform: translate3d(-110px, 20px, 0) scale3d(0.92, 0.92, 1);
 }
 
 /* Active Revealed State: Triggered only once when element enters viewport */
@@ -71,49 +107,49 @@
 }
 
 /* --------------------------------------------------------------------------
-   Subtle Stagger Delays (50ms - 400ms) - Ultra-fast, no waiting
+   Graceful Stagger Delays (60ms - 700ms) - Clearly visible progressive pacing
    -------------------------------------------------------------------------- */
-.stagger-1 { transition-delay: 40ms; }
-.stagger-2 { transition-delay: 80ms; }
-.stagger-3 { transition-delay: 120ms; }
-.stagger-4 { transition-delay: 160ms; }
-.stagger-5 { transition-delay: 200ms; }
-.stagger-6 { transition-delay: 240ms; }
-.stagger-7 { transition-delay: 280ms; }
-.stagger-8 { transition-delay: 320ms; }
+.stagger-1 { transition-delay: 60ms; }
+.stagger-2 { transition-delay: 150ms; }
+.stagger-3 { transition-delay: 240ms; }
+.stagger-4 { transition-delay: 330ms; }
+.stagger-5 { transition-delay: 420ms; }
+.stagger-6 { transition-delay: 510ms; }
+.stagger-7 { transition-delay: 600ms; }
+.stagger-8 { transition-delay: 690ms; }
 
 /* --------------------------------------------------------------------------
    Premium Micro-Interactions (Cards, Buttons, Images)
    -------------------------------------------------------------------------- */
 .hover-lift {
-  transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 250ms ease, border-color 250ms ease;
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 300ms ease, border-color 300ms ease;
   will-change: transform, box-shadow;
 }
 @media (hover: hover) and (pointer: fine) {
   .hover-lift:hover {
-    transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -6px, 0);
   }
 }
 
 .hover-lift-sm {
-  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 200ms ease;
+  transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 250ms ease;
 }
 @media (hover: hover) and (pointer: fine) {
   .hover-lift-sm:hover {
-    transform: translate3d(0, -2.5px, 0);
+    transform: translate3d(0, -3px, 0);
   }
 }
 
 .btn-interactive {
-  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), background-color 200ms ease, box-shadow 200ms ease;
+  transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1), background-color 250ms ease, box-shadow 250ms ease;
   will-change: transform;
 }
 @media (hover: hover) and (pointer: fine) {
   .btn-interactive:hover {
-    transform: translate3d(0, -1.5px, 0);
+    transform: translate3d(0, -2px, 0);
   }
   .btn-interactive:hover .btn-arrow {
-    transform: translate3d(4px, 0, 0);
+    transform: translate3d(5px, 0, 0);
   }
 }
 .btn-interactive:active {
@@ -121,7 +157,7 @@
 }
 
 .btn-arrow {
-  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Image Slow Zoom on Container Hover */
@@ -129,113 +165,54 @@
   overflow: hidden;
 }
 .img-zoom-container img {
-  transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 800ms cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform;
 }
 @media (hover: hover) and (pointer: fine) {
   .img-zoom-container:hover img {
-    transform: scale3d(1.04, 1.04, 1);
+    transform: scale3d(1.05, 1.05, 1);
   }
-}
-
-/* Pulse Glow Effect for High-Value Badges */
-@keyframes subtlePulse {
-  0%, 100% { opacity: 1; transform: scale3d(1, 1, 1); }
-  50% { opacity: 0.85; transform: scale3d(1.02, 1.02, 1); }
-}
-.animate-pulse-subtle {
-  animation: subtlePulse 3s ease-in-out infinite;
-}
-
-/* Legacy Keyframe fade-in (GPU-friendly) */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 10px, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 0.4s ease-out forwards;
-  will-change: opacity, transform;
-}
-
-/* Gradients */
-.hero-gradient {
-  background: linear-gradient(135deg, #092e1a 0%, #14532d 45%, #052e16 100%);
-}
-
-.glass-card {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.glass-card-dark {
-  background: rgba(20, 83, 45, 0.85);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Hide scrollbar for carousel */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 /* --------------------------------------------------------------------------
-   Mobile Performance Tuning: Reduced distance for 60fps budget phones
+   Mobile Tuning: Smooth on small screens
    -------------------------------------------------------------------------- */
-@media (max-width: 768px) {
-  .reveal,
-  .reveal-up {
-    transform: translate3d(0, 14px, 0);
-    transition-duration: 450ms;
+@media (max-width: 640px) {
+  .card-slide-left,
+  .card-slide-right,
+  .card-slide-far-left,
+  .card-slide-far-right {
+    transform: translate3d(0, 26px, 0) scale3d(0.96, 0.96, 1);
   }
-  .reveal-left {
-    transform: translate3d(-14px, 0, 0);
-    transition-duration: 450ms;
-  }
+  .reveal-left,
   .reveal-right {
-    transform: translate3d(14px, 0, 0);
-    transition-duration: 450ms;
+    transform: translate3d(0, 24px, 0);
   }
 }
 
 /* --------------------------------------------------------------------------
-   Reduced Motion Accessibility (Zero Movement when User Requests)
+   Accessibility: Reduced Motion Preference
    -------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
   .reveal,
   .reveal-up,
   .reveal-left,
   .reveal-right,
   .reveal-scale,
-  .reveal-mask {
+  .reveal-mask,
+  .card-slide-mid,
+  .card-slide-left,
+  .card-slide-right,
+  .card-slide-far-left,
+  .card-slide-far-right,
+  .hover-lift,
+  .hover-lift-sm,
+  .btn-interactive,
+  .img-zoom-container img {
     opacity: 1 !important;
     transform: none !important;
     clip-path: none !important;
     transition: none !important;
-  }
-  .hover-lift:hover,
-  .hover-lift-sm:hover,
-  .btn-interactive:hover,
-  .img-zoom-container:hover img {
-    transform: none !important;
+    animation: none !important;
   }
 }

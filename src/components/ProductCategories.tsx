@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { CATEGORIES, PRODUCTS } from '../data/products';
+import { CATEGORIES } from '../data/products';
 import { ArrowRight, Package, Leaf, ShoppingBag, Sparkles, Trees } from 'lucide-react';
 
 interface ProductCategoriesProps {
@@ -22,6 +22,14 @@ export const ProductCategories: React.FC<ProductCategoriesProps> = () => {
     }
   };
 
+  const getCardSlideClass = (idx: number) => {
+    const col = idx % 4;
+    if (col === 0) return 'card-slide-far-left stagger-3';
+    if (col === 1) return 'card-slide-left stagger-1';
+    if (col === 2) return 'card-slide-right stagger-1';
+    return 'card-slide-far-right stagger-3';
+  };
+
   return (
     <section className="py-12 bg-white font-sans border-y border-stone-200/80">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8">
@@ -39,16 +47,17 @@ export const ProductCategories: React.FC<ProductCategoriesProps> = () => {
           <div className="mx-auto h-1 w-16 rounded-full bg-emerald-600 mt-2" />
         </div>
 
+        {/* 4-Column Grid with Middle-Outward Card Slide */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {CATEGORIES.map((cat, idx) => {
             const IconComponent = getCategoryIcon(cat.iconName);
-            const staggerClass = `stagger-${(idx % 8) + 1}`;
+            const slideAnim = getCardSlideClass(idx);
 
             return (
               <div
                 key={cat.id}
                 onClick={() => navigate(`/products?category=${cat.id}`)}
-                className={`reveal-up ${staggerClass} hover-lift group cursor-pointer rounded-2xl bg-stone-50 p-6 border border-stone-200/80 hover:bg-white hover:border-[#65a30d] hover:shadow-2xl transition-all duration-300 flex flex-col justify-between`}
+                className={`${slideAnim} hover-lift group cursor-pointer rounded-2xl bg-stone-50 p-6 border border-stone-200/80 hover:bg-white hover:border-[#65a30d] hover:shadow-2xl transition-all duration-300 flex flex-col justify-between`}
               >
                 <div className="space-y-4">
                   <div className="h-12 w-12 rounded-xl bg-lime-100 text-lime-900 flex items-center justify-center group-hover:bg-[#65a30d] group-hover:text-white transition-colors shadow-xs">
