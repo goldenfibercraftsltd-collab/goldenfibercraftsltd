@@ -110,3 +110,95 @@ export function getAllActiveProducts(): ProductItem[] {
 
   return Array.from(combinedMap.values());
 }
+
+// ----------------------------------------------------
+// Category Management Store
+// ----------------------------------------------------
+const CUSTOM_CAT_KEY = 'gfcl_custom_categories';
+const DELETED_CAT_KEY = 'gfcl_deleted_categories';
+
+export function getDeletedCategoryIds(): string[] {
+  try {
+    const raw = localStorage.getItem(DELETED_CAT_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
+
+export function markCategoryDeletedLocally(idOrSlug: string) {
+  try {
+    const deleted = getDeletedCategoryIds();
+    if (!deleted.includes(String(idOrSlug))) {
+      deleted.push(String(idOrSlug));
+      localStorage.setItem(DELETED_CAT_KEY, JSON.stringify(deleted));
+    }
+    const customs = getCustomCategories();
+    const filtered = customs.filter(c => String(c.id) !== String(idOrSlug) && c.slug !== idOrSlug);
+    localStorage.setItem(CUSTOM_CAT_KEY, JSON.stringify(filtered));
+  } catch (e) {
+    console.error('Error saving deleted category ID', e);
+  }
+}
+
+export function getCustomCategories(): any[] {
+  try {
+    const raw = localStorage.getItem(CUSTOM_CAT_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
+
+export function saveCategoryLocally(catData: any) {
+  try {
+    const customs = getCustomCategories();
+    const existingIdx = customs.findIndex(
+      c => String(c.id) === String(catData.id) || c.slug === catData.slug
+    );
+
+    const formatted = {
+      id: catData.id || catData.slug || `cat_${Date.now()}`,
+      slug: (catData.slug || catData.name || '').toLowerCase().trim().replace(/[^a-z0-9]+/g, '-'),
+      name: catData.name,
+      description: catData.description || '',
+      iconName: catData.icon || catData.iconName || 'Package',
+      icon: catData.icon || catData.iconName || 'Package',
+      display_order: catData.display_order ?? 0,
+      subcategories: Array.isArray(catData.subcategories) ? catData.subcategories : []
+    };
+
+    if (existingIdx >= 0) {
+      customs[existingIdx] = { ...customs[existingIdx], ...formatted };
+    } else {
+      customs.push(formatted);
+    }
+
+    localStorage.setItem(CUSTOM_CAT_KEY, JSON.stringify(customs));
+  } catch (e) {
+    console.error('Error saving custom category', e);
+  }
+}
+
+export function getAllActiveCategories(): any[] {
+  const deleted = getDeletedCategoryIds();
+  const customs = getCustomCategories();
+
+  // Filter static CATEGORIES
+  const map = new Map<string, any>();
+  CATEGORIES.forEach(c => {
+    if (!deleted.includes(String(c.id)) && !deleted.includes(c.slug)) {
+      map.set(c.slug, { ...c, icon: c.iconName });
+    }
+  });
+
+  // Apply customs
+  customs.forEach(c => {
+    if (!deleted.includes(String(c.id)) && !deleted.includes(c.slug)) {
+      map.set(c.slug, c);
+    }
+  });
+
+  return Array.from(map.values()).sort((a, b) => (a.display_order || 0) - (b.display_order || 0));
+}
+
