@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import {
-  Menu, X, Search, ShoppingCart, ChevronDown, ChevronRight,
+  Menu, X, Search, ChevronDown, ChevronRight,
   Phone, Mail, MessageCircle
 } from 'lucide-react';
 import { CATEGORIES } from '../data/products';
-import { useCart } from '../context/CartContext';
 
 interface HeaderProps {
   onOpenQuoteModal: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
-  const { totalCartItemsCount } = useCart();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [categoryDropdownOpen, setCategoryDropdownOpen] = useState(false);
   const [activeCategoryHover, setActiveCategoryHover] = useState<string | null>(CATEGORIES[0]?.id || 'jute');
@@ -68,21 +66,21 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
   return (
     <header className="relative z-40 w-full bg-white shadow-md font-sans">
       
-      {/* 1. Main Header Row: Logo, Search Bar, Quick Actions */}
-      <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 py-2.5 sm:py-3.5">
+      {/* 1. Main Header Row: Large Official Logo, Search Bar, Quick Actions */}
+      <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 py-2 sm:py-3">
         <div className="flex items-center justify-between gap-3 sm:gap-6 lg:gap-8">
           
-          {/* Logo - Standalone Official Logo Image */}
+          {/* Official Company Logo - Prominent & Crisp with Transparent Background */}
           <Link
             to="/"
             onClick={handleNavClick}
-            className="shrink-0 flex items-center transition-transform duration-300 hover:scale-[1.02]"
+            className="shrink-0 flex items-center transition-transform duration-300 hover:scale-[1.02] py-1"
             title="Golden Fiber Crafts Ltd. - Home"
           >
             <img
               src="/logo.png"
               alt="Golden Fiber Crafts Ltd."
-              className="h-12 sm:h-16 md:h-20 w-auto object-contain"
+              className="h-16 sm:h-20 md:h-24 w-auto object-contain"
             />
           </Link>
 
@@ -106,15 +104,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
             </form>
           </div>
 
-          {/* Action Controls: WhatsApp, Email, Cart, Request Quote, Hamburger */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          {/* Action Controls: WhatsApp, Email & Request Quote (Cart Option Removed) */}
+          <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
             {/* WhatsApp Direct Chat */}
             <a
               href="https://wa.me/8801617778488?text=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%20I%20would%20like%20to%20know%20more%20about%20your%20handicraft%20products%20and%20export%20details."
               target="_blank"
               rel="noopener noreferrer"
               title="Chat on WhatsApp (+8801617778488)"
-              className="hidden sm:flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-sm hover:shadow transition-all duration-200 hover:scale-105"
+              className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-sm hover:shadow transition-all duration-200 hover:scale-105"
             >
               <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
                 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.017 4.014-1.052zm12.355-6.529c-.073-.122-.268-.195-.561-.341-.293-.146-1.733-.855-2.002-.953-.269-.098-.464-.146-.659.146-.195.293-.756.953-.927 1.148-.171.195-.341.22-.635.073-1.066-.53-2.316-1.325-3.235-2.144-.716-.638-1.201-1.427-1.341-1.672-.14-.244-.015-.377.132-.524.133-.132.293-.341.44-.512.146-.171.195-.293.293-.488.098-.195.049-.366-.024-.512-.073-.146-.659-1.586-.903-2.172-.238-.57-.48-.492-.659-.501-.171-.008-.366-.01-.561-.01-.195 0-.512.073-.78.366-.269.293-1.025 1.001-1.025 2.441 0 1.44 1.05 2.83 1.196 3.025.146.195 2.067 3.158 5.009 4.428.7.303 1.247.484 1.673.62.703.224 1.343.193 1.849.117.564-.085 1.733-.708 1.977-1.392.244-.684.244-1.27.171-1.392z" />
@@ -130,31 +128,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-red-600" />
             </a>
 
-            {/* Cart / Inquiry Bag Button (BD Creation Style) */}
-            <Link
-              to="/cart"
-              onClick={handleNavClick}
-              className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-lg hover:bg-stone-100 transition-colors"
-              title="View Inquiry Cart"
-            >
-              <div className="relative">
-                <ShoppingCart className="h-6 w-6 text-[#65a30d]" />
-                {totalCartItemsCount > 0 && (
-                  <span className="absolute -top-1.5 -right-2 h-4 min-w-4 px-1 rounded-full bg-red-600 text-white text-[10px] font-bold flex items-center justify-center shadow-xs">
-                    {totalCartItemsCount}
-                  </span>
-                )}
-              </div>
-              <div className="hidden xl:flex flex-col text-left">
-                <span className="text-[11px] text-stone-500 font-semibold leading-none">Cart</span>
-                <span className="text-xs font-bold text-stone-800 font-mono">{totalCartItemsCount} items</span>
-              </div>
-            </Link>
-
             {/* Request Quote Button */}
             <button
               onClick={onOpenQuoteModal}
-              className="flex items-center justify-center gap-1 rounded-full bg-[#0088FF] hover:bg-[#0077ee] text-white px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm font-extrabold shadow-sm hover:shadow transition-all duration-200 hover:scale-[1.03]"
+              className="flex items-center justify-center gap-1 rounded-full bg-[#0088FF] hover:bg-[#0077ee] text-white px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-extrabold shadow-sm hover:shadow transition-all duration-200 hover:scale-[1.03]"
             >
               <span>Request Quote</span>
             </button>
@@ -172,7 +149,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
         </div>
 
         {/* Search Bar on Mobile */}
-        <div className="mt-2.5 md:hidden">
+        <div className="mt-2 md:hidden">
           <form onSubmit={handleSearchSubmit} className="flex w-full rounded border-2 border-[#65a30d] overflow-hidden shadow-xs">
             <input
               type="text"
@@ -303,20 +280,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
                 );
               })}
             </nav>
-          </div>
-
-          {/* Export Service Hotline / Direct Contact on Right */}
-          <div className="hidden xl:flex items-center gap-2 text-white text-xs font-bold py-1">
-            <span className="h-2.5 w-2.5 rounded-full bg-red-500 animate-ping inline-block" />
-            <span className="text-lime-100">Direct Export Desk:</span>
-            <a
-              href="https://wa.me/8801617778488"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-amber-300 hover:underline font-mono font-extrabold"
-            >
-              +880-1617-778488
-            </a>
           </div>
 
         </div>
