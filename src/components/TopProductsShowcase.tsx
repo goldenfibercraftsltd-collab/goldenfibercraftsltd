@@ -3,8 +3,8 @@ import { ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 import { Product } from '../types/product';
 
 interface TopProductsShowcaseProps {
-  products: Product[];
-  onSelectProduct: (product: Product) => void;
+  products: any[];
+  onSelectProduct: (product: any) => void;
 }
 
 export const TopProductsShowcase: React.FC<TopProductsShowcaseProps> = ({ products, onSelectProduct }) => {
@@ -33,7 +33,7 @@ export const TopProductsShowcase: React.FC<TopProductsShowcaseProps> = ({ produc
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-amber-800/40 pb-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-amber-800/40 pb-6 reveal-up">
           <div>
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.3em] text-amber-400">
               <Sparkles className="h-4 w-4" />
@@ -51,14 +51,14 @@ export const TopProductsShowcase: React.FC<TopProductsShowcaseProps> = ({ produc
           <div className="flex items-center gap-3">
             <button
               onClick={() => scroll('left')}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-amber-700/50 bg-amber-950/60 text-amber-300 hover:bg-amber-800 hover:text-white transition-all active:scale-95"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-amber-700/50 bg-amber-950/60 text-amber-300 hover:bg-amber-800 hover:text-white transition-all btn-interactive"
               aria-label="Scroll left"
             >
               <ChevronLeft className="h-6 w-6" />
             </button>
             <button
               onClick={() => scroll('right')}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-amber-700/50 bg-amber-950/60 text-amber-300 hover:bg-amber-800 hover:text-white transition-all active:scale-95"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-amber-700/50 bg-amber-950/60 text-amber-300 hover:bg-amber-800 hover:text-white transition-all btn-interactive"
               aria-label="Scroll right"
             >
               <ChevronRight className="h-6 w-6" />
@@ -69,22 +69,22 @@ export const TopProductsShowcase: React.FC<TopProductsShowcaseProps> = ({ produc
         {/* Horizontal Carousel */}
         <div
           ref={scrollRef}
-          className="no-scrollbar mt-10 flex gap-6 overflow-x-auto pb-8 pt-4 scroll-smooth snap-x snap-mandatory"
+          className="no-scrollbar mt-10 flex gap-6 overflow-x-auto pb-8 pt-4 scroll-smooth snap-x snap-mandatory reveal-up stagger-2"
         >
-          {topProducts.map((product) => (
+          {topProducts.map((product, idx) => (
             <div
               key={product.id}
               onClick={() => onSelectProduct(product)}
-              className="group relative shrink-0 snap-center cursor-pointer transition-all duration-500 hover:-translate-y-2"
+              className={`group relative shrink-0 snap-center cursor-pointer transition-all duration-300 hover-lift`}
               style={{ width: '280px' }}
             >
-              <div className="relative overflow-hidden rounded-2xl border border-amber-700/30 bg-stone-900 shadow-xl ring-1 ring-white/10" style={{ height: '360px' }}>
+              <div className="relative overflow-hidden rounded-2xl border border-amber-700/30 bg-stone-900 shadow-xl ring-1 ring-white/10 img-zoom-container" style={{ height: '360px' }}>
                 
                 {/* Product Image */}
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+                  className="h-full w-full object-cover transition-transform duration-700 opacity-90 group-hover:opacity-100"
                   loading="lazy"
                 />
 

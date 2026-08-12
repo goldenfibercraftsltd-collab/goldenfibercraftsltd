@@ -149,7 +149,7 @@ export const SustainabilityPage: React.FC = () => {
       )}
 
       {/* ---------------------------------------------------- */}
-      {/* 1. Hero Header */}
+      {/* 1. Hero Header with reveal-up */}
       {/* ---------------------------------------------------- */}
       <section className="relative overflow-hidden bg-gradient-to-b from-[#eef6f0] via-[#f7fbf8] to-[#fcfbf9] pt-12 pb-20 border-b border-stone-200/80">
         <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-200/20 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
@@ -157,13 +157,13 @@ export const SustainabilityPage: React.FC = () => {
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8 relative z-10">
           
-          <nav className="flex items-center gap-2 text-xs font-semibold text-stone-500">
+          <nav className="reveal-up flex items-center gap-2 text-xs font-semibold text-stone-500">
             <Link to="/" className="hover:text-emerald-800 transition-colors">Home</Link>
             <span>/</span>
             <span className="text-stone-900 font-bold">Sustainability</span>
           </nav>
 
-          <div className="text-center max-w-3xl mx-auto space-y-4">
+          <div className="text-center max-w-3xl mx-auto space-y-4 reveal-up">
             <div className="inline-flex items-center gap-2 rounded-full bg-emerald-100 border border-emerald-300/80 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-emerald-950 shadow-xs">
               <Leaf className="h-4 w-4 text-emerald-700" />
               <span>Planet First • People Always</span>
@@ -182,9 +182,9 @@ export const SustainabilityPage: React.FC = () => {
             </p>
           </div>
 
-          {/* 4 Impact Metric Badges */}
+          {/* 4 Impact Metric Badges with Staggered Entrance */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto pt-4">
-            <div className="p-4 rounded-2xl bg-white/80 border border-emerald-200/80 shadow-xs hover:shadow-md transition-shadow">
+            <div className="reveal-up stagger-1 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-emerald-200/80 shadow-xs">
               <div className="h-9 w-9 rounded-xl bg-emerald-100 text-emerald-900 flex items-center justify-center font-bold mb-2">
                 <Sprout className="h-5 w-5" />
               </div>
@@ -192,7 +192,7 @@ export const SustainabilityPage: React.FC = () => {
               <p className="text-[11px] text-stone-500">Plant-based raw fibers</p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-white/80 border border-emerald-200/80 shadow-xs hover:shadow-md transition-shadow">
+            <div className="reveal-up stagger-2 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-emerald-200/80 shadow-xs">
               <div className="h-9 w-9 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center font-bold mb-2">
                 <Users className="h-5 w-5" />
               </div>
@@ -200,7 +200,7 @@ export const SustainabilityPage: React.FC = () => {
               <p className="text-[11px] text-stone-500">Ethical fair-trade wages</p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-white/80 border border-emerald-200/80 shadow-xs hover:shadow-md transition-shadow">
+            <div className="reveal-up stagger-3 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-emerald-200/80 shadow-xs">
               <div className="h-9 w-9 rounded-xl bg-teal-100 text-teal-900 flex items-center justify-center font-bold mb-2">
                 <Recycle className="h-5 w-5" />
               </div>
@@ -208,7 +208,7 @@ export const SustainabilityPage: React.FC = () => {
               <p className="text-[11px] text-stone-500">100% Biodegradable</p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-white/80 border border-emerald-200/80 shadow-xs hover:shadow-md transition-shadow">
+            <div className="reveal-up stagger-4 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-emerald-200/80 shadow-xs">
               <div className="h-9 w-9 rounded-xl bg-blue-100 text-blue-900 flex items-center justify-center font-bold mb-2">
                 <Globe2 className="h-5 w-5" />
               </div>
@@ -235,8 +235,8 @@ export const SustainabilityPage: React.FC = () => {
                 }`}
               >
                 {/* Visual Image Column */}
-                <div className="w-full lg:w-1/2">
-                  <div className="relative group rounded-3xl overflow-hidden bg-[#edf4ee] border border-[#d6e5d8] shadow-xl hover:shadow-2xl transition-all duration-500">
+                <div className={`w-full lg:w-1/2 ${isEven ? 'reveal-right' : 'reveal-left'}`}>
+                  <div className="relative group rounded-3xl overflow-hidden bg-[#edf4ee] border border-[#d6e5d8] shadow-xl hover:shadow-2xl transition-all duration-500 img-zoom-container">
                     
                     <div className="absolute top-4 left-4 z-20 bg-emerald-950/85 backdrop-blur-md text-emerald-300 font-mono text-xs font-extrabold px-3.5 py-1.5 rounded-xl border border-emerald-500/30 shadow-md">
                       PILLAR {section.number} • {section.badge}
@@ -254,7 +254,7 @@ export const SustainabilityPage: React.FC = () => {
 
                     <button
                       onClick={() => setSelectedImage(section.image)}
-                      className="absolute bottom-4 right-4 z-20 flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-stone-950/80 hover:bg-emerald-700 text-white text-xs font-bold backdrop-blur-md border border-white/20 shadow-lg transition-all duration-200 hover:scale-105"
+                      className="absolute bottom-4 right-4 z-20 flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-stone-950/80 hover:bg-emerald-700 text-white text-xs font-bold backdrop-blur-md border border-white/20 shadow-lg transition-all duration-200 hover:scale-105 btn-interactive"
                     >
                       <Maximize2 className="h-3.5 w-3.5" />
                       <span>View Photo</span>
@@ -277,7 +277,7 @@ export const SustainabilityPage: React.FC = () => {
                 </div>
 
                 {/* Content & Impact Points Column */}
-                <div className="w-full lg:w-1/2 space-y-6">
+                <div className={`w-full lg:w-1/2 space-y-6 ${isEven ? 'reveal-left' : 'reveal-right'}`}>
                   
                   <div className="space-y-2">
                     <span className="text-xs font-extrabold uppercase tracking-widest text-emerald-800 flex items-center gap-1.5">
@@ -299,22 +299,25 @@ export const SustainabilityPage: React.FC = () => {
                     {section.description}
                   </p>
 
-                  {/* Impact Points Checklist */}
+                  {/* Impact Points Checklist with Staggered Entrance */}
                   <div className="space-y-2.5 pt-2">
                     <h4 className="text-xs font-extrabold uppercase tracking-wider text-stone-400">
                       Measurable Sustainability Impact:
                     </h4>
-                    {section.impactPoints.map((item, idx2) => (
-                      <div
-                        key={idx2}
-                        className="flex items-start gap-3 p-3 rounded-xl bg-white border border-[#d6e5d8] shadow-xs"
-                      >
-                        <div className="h-5 w-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 mt-0.5">
-                          <CheckCircle2 className="h-3.5 w-3.5" />
+                    {section.impactPoints.map((item, idx2) => {
+                      const pStagger = `stagger-${idx2 + 1}`;
+                      return (
+                        <div
+                          key={idx2}
+                          className={`reveal-up ${pStagger} hover-lift-sm flex items-start gap-3 p-3 rounded-xl bg-white border border-[#d6e5d8] shadow-xs`}
+                        >
+                          <div className="h-5 w-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 mt-0.5">
+                            <CheckCircle2 className="h-3.5 w-3.5" />
+                          </div>
+                          <span className="text-xs font-semibold text-stone-800">{item}</span>
                         </div>
-                        <span className="text-xs font-semibold text-stone-800">{item}</span>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
 
                 </div>
@@ -330,14 +333,14 @@ export const SustainabilityPage: React.FC = () => {
       <section className="bg-gradient-to-b from-[#eef6f0] to-[#fcfbf9] py-16 border-y border-stone-200/80">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
           
-          <div className="text-center max-w-2xl mx-auto space-y-3">
+          <div className="text-center max-w-2xl mx-auto space-y-3 reveal-up">
             <span className="text-xs font-bold uppercase tracking-widest text-emerald-800">
               GLOBAL ALIGNMENT
             </span>
             <h2 className="font-serif text-2xl sm:text-4xl font-extrabold text-stone-900">
               Contributing to the UN Sustainable Development Goals
             </h2>
-            <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
+            <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-light">
               Our business model actively aligns with international sustainable targets to foster inclusive economic development and ecological preservation.
             </p>
             <div className="mx-auto h-1 w-16 rounded-full bg-emerald-700" />
@@ -345,7 +348,7 @@ export const SustainabilityPage: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
-            <div className="bg-white rounded-3xl p-6 border border-[#d8e8da] shadow-sm hover:shadow-xl transition-all space-y-3">
+            <div className="reveal-scale stagger-1 hover-lift bg-white rounded-3xl p-6 border border-[#d8e8da] shadow-xs space-y-3">
               <div className="h-10 w-10 rounded-xl bg-rose-100 text-rose-800 flex items-center justify-center font-bold text-xs font-mono">
                 SDG 5
               </div>
@@ -355,7 +358,7 @@ export const SustainabilityPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="bg-white rounded-3xl p-6 border border-[#d8e8da] shadow-sm hover:shadow-xl transition-all space-y-3">
+            <div className="reveal-scale stagger-2 hover-lift bg-white rounded-3xl p-6 border border-[#d8e8da] shadow-xs space-y-3">
               <div className="h-10 w-10 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center font-bold text-xs font-mono">
                 SDG 8
               </div>
@@ -365,7 +368,7 @@ export const SustainabilityPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="bg-white rounded-3xl p-6 border border-[#d8e8da] shadow-sm hover:shadow-xl transition-all space-y-3">
+            <div className="reveal-scale stagger-3 hover-lift bg-white rounded-3xl p-6 border border-[#d8e8da] shadow-xs space-y-3">
               <div className="h-10 w-10 rounded-xl bg-teal-100 text-teal-900 flex items-center justify-center font-bold text-xs font-mono">
                 SDG 12
               </div>
@@ -375,7 +378,7 @@ export const SustainabilityPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="bg-white rounded-3xl p-6 border border-[#d8e8da] shadow-sm hover:shadow-xl transition-all space-y-3">
+            <div className="reveal-scale stagger-4 hover-lift bg-white rounded-3xl p-6 border border-[#d8e8da] shadow-xs space-y-3">
               <div className="h-10 w-10 rounded-xl bg-emerald-100 text-emerald-900 flex items-center justify-center font-bold text-xs font-mono">
                 SDG 13
               </div>
@@ -391,11 +394,11 @@ export const SustainabilityPage: React.FC = () => {
       </section>
 
       {/* ---------------------------------------------------- */}
-      {/* 4. Call to Action */}
+      {/* 4. Call to Action with reveal-up */}
       {/* ---------------------------------------------------- */}
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#1b4332] via-[#2d6a4f] to-[#081c15] p-8 sm:p-14 text-white shadow-2xl space-y-6 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-8">
+          <div className="reveal-up relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#1b4332] via-[#2d6a4f] to-[#081c15] p-8 sm:p-14 text-white shadow-2xl space-y-6 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-8">
             <div className="relative z-10 max-w-2xl space-y-3">
               <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/20 px-3.5 py-1 text-xs font-extrabold uppercase tracking-widest text-emerald-300 backdrop-blur-md border border-emerald-500/30">
                 <Leaf className="h-3.5 w-3.5 text-emerald-400" />
@@ -412,15 +415,15 @@ export const SustainabilityPage: React.FC = () => {
             <div className="relative z-10 flex flex-col sm:flex-row items-center gap-3 shrink-0">
               <button
                 onClick={() => navigate('/products')}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-amber-400 hover:bg-amber-300 text-stone-950 px-7 py-3.5 text-xs font-extrabold uppercase tracking-wider shadow-xl transition-all duration-200 hover:scale-105 active:scale-95"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-amber-400 hover:bg-amber-300 text-stone-950 px-7 py-3.5 text-xs font-extrabold uppercase tracking-wider shadow-xl transition-all duration-200 btn-interactive"
               >
                 <span>Browse Eco Products</span>
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-4 w-4 btn-arrow" />
               </button>
 
               <button
                 onClick={() => navigate('/contact')}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-white/10 hover:bg-white/20 text-white px-6 py-3.5 text-xs font-bold backdrop-blur-md border border-white/20 transition-all duration-200 hover:scale-105"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-white/10 hover:bg-white/20 text-white px-6 py-3.5 text-xs font-bold backdrop-blur-md border border-white/20 transition-all duration-200 btn-interactive"
               >
                 <span>Partner with Us</span>
               </button>

@@ -37,8 +37,8 @@ export const Features: React.FC<FeaturesProps> = ({ onOpenModal }) => {
     <section id="about" className="bg-amber-100/40 py-16 transition-all duration-300">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
-        {/* Section Heading */}
-        <div className="text-center">
+        {/* Section Heading with subtle reveal */}
+        <div className="text-center reveal-up">
           <span className="text-xs font-bold uppercase tracking-[0.25em] text-amber-700">About Us</span>
           <h2 className="mt-2 font-serif text-2xl sm:text-3xl font-light tracking-[0.2em] text-stone-900 uppercase">
             GOLDEN FIBER CRAFTS LTD.
@@ -46,14 +46,15 @@ export const Features: React.FC<FeaturesProps> = ({ onOpenModal }) => {
           <div className="mx-auto mt-3 h-0.5 w-16 rounded-full bg-amber-600" />
         </div>
 
-        {/* 4 Cards Grid */}
+        {/* 4 Cards Grid with Staggered Entrance */}
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((item, idx) => {
             const Icon = item.icon;
+            const staggerClass = `stagger-${idx + 1}`;
             return (
               <div 
                 key={idx}
-                className="group relative flex flex-col justify-between rounded-2xl bg-white p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 border border-amber-900/10"
+                className={`reveal-up ${staggerClass} hover-lift group relative flex flex-col justify-between rounded-2xl bg-white p-6 shadow-md hover:shadow-xl border border-amber-900/10`}
               >
                 <div>
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-100 text-amber-800 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300 shadow-sm">
@@ -69,9 +70,10 @@ export const Features: React.FC<FeaturesProps> = ({ onOpenModal }) => {
 
                 <button
                   onClick={() => onOpenModal(item.title, item.detail)}
-                  className="mt-5 inline-flex items-center gap-1 text-xs font-semibold text-amber-700 hover:text-amber-900 group-hover:translate-x-1 transition-all"
+                  className="mt-5 inline-flex items-center gap-1 text-xs font-semibold text-amber-700 hover:text-amber-900 btn-interactive"
                 >
-                  Read more <ChevronRight className="h-3.5 w-3.5" />
+                  <span>Read more</span>
+                  <ChevronRight className="h-3.5 w-3.5 btn-arrow" />
                 </button>
               </div>
             );

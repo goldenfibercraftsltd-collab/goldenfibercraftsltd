@@ -1,18 +1,19 @@
 import React from 'react';
 import { Award, CheckCircle2, Factory, Leaf, Users, ShieldCheck, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { AnimatedCounter } from '../components/AnimatedCounter';
 
 interface AboutPageProps {
-  onOpenQuoteModal: () => void;
+  onOpenQuoteModal?: () => void;
 }
 
 export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
   return (
-    <div className="bg-amber-50/20 py-12 lg:py-20 animate-fadeIn">
+    <div className="bg-amber-50/20 py-12 lg:py-20 animate-fadeIn font-sans">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
         
-        {/* Page Banner Header */}
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-950 via-stone-900 to-emerald-950 p-8 sm:p-12 text-white shadow-2xl">
+        {/* Page Banner Header with reveal-up */}
+        <div className="reveal-up relative overflow-hidden rounded-3xl bg-gradient-to-r from-amber-950 via-stone-900 to-emerald-950 p-8 sm:p-12 text-white shadow-2xl">
           <div className="relative z-10 max-w-3xl space-y-4">
             <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/20 px-3.5 py-1 text-xs font-bold text-emerald-300 backdrop-blur-md border border-emerald-500/30">
               <Leaf className="h-3.5 w-3.5" />
@@ -32,7 +33,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
 
         {/* Company Profile & Vision */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+          <div className="reveal-left space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-800">
               <Factory className="h-3.5 w-3.5" />
               Who We Are
@@ -44,14 +45,14 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
               Founded with a mission to promote Bangladesh's rich golden fiber heritage globally, Golden Fiber Crafts Ltd. stands as a pioneer in sustainable manufacturing. From handwoven natural baskets to OEKO-TEX certified garment labels and trims, we bridge traditional craftsmanship with modern industrial technology.
             </p>
             <div className="grid sm:grid-cols-2 gap-4 pt-4">
-              <div className="flex items-start gap-3 rounded-2xl bg-white p-4 shadow-sm border border-stone-200/60">
+              <div className="hover-lift-sm flex items-start gap-3 rounded-2xl bg-white p-4 shadow-sm border border-stone-200/60">
                 <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-bold text-stone-900 text-sm">100% Eco-Friendly</h4>
                   <p className="text-xs text-stone-500">Biodegradable natural fibers & non-toxic dyes.</p>
                 </div>
               </div>
-              <div className="flex items-start gap-3 rounded-2xl bg-white p-4 shadow-sm border border-stone-200/60">
+              <div className="hover-lift-sm flex items-start gap-3 rounded-2xl bg-white p-4 shadow-sm border border-stone-200/60">
                 <ShieldCheck className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-bold text-stone-900 text-sm">Global Compliance</h4>
@@ -61,11 +62,11 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
             </div>
           </div>
 
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+          <div className="reveal-right relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white img-zoom-container">
             <img
               src="/products/image1.jpeg"
               alt="Golden Fiber Crafts Facility"
-              className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700"
+              className="w-full h-[400px] object-cover transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent flex items-end p-8 text-white">
               <div>
@@ -76,8 +77,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
           </div>
         </div>
 
-        {/* Managing Director Message */}
-        <div className="rounded-3xl bg-gradient-to-br from-amber-900/10 via-white to-emerald-900/10 p-8 sm:p-12 border border-amber-900/15 shadow-xl">
+        {/* Managing Director Message with reveal-scale */}
+        <div className="reveal-scale rounded-3xl bg-gradient-to-br from-amber-900/10 via-white to-emerald-900/10 p-8 sm:p-12 border border-amber-900/15 shadow-xl">
           <div className="max-w-4xl mx-auto space-y-6">
             <div className="flex items-center gap-3">
               <div className="h-12 w-12 rounded-full bg-emerald-700 text-white flex items-center justify-center font-bold text-lg shadow-md">
@@ -94,45 +95,53 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
           </div>
         </div>
 
-        {/* Core Stats */}
+        {/* Core Stats with Animated Counters */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
-          <div className="rounded-2xl bg-white p-6 shadow-md border border-stone-100">
-            <p className="font-serif text-3xl sm:text-4xl font-extrabold text-emerald-700">15+</p>
+          <div className="reveal-up stagger-1 hover-lift-sm rounded-2xl bg-white p-6 shadow-md border border-stone-100">
+            <p className="font-serif text-3xl sm:text-4xl font-extrabold text-emerald-700">
+              <AnimatedCounter target={15} suffix="+" />
+            </p>
             <p className="mt-1 text-xs text-stone-600 font-medium uppercase">Years Experience</p>
           </div>
-          <div className="rounded-2xl bg-white p-6 shadow-md border border-stone-100">
-            <p className="font-serif text-3xl sm:text-4xl font-extrabold text-emerald-700">35+</p>
+          <div className="reveal-up stagger-2 hover-lift-sm rounded-2xl bg-white p-6 shadow-md border border-stone-100">
+            <p className="font-serif text-3xl sm:text-4xl font-extrabold text-emerald-700">
+              <AnimatedCounter target={35} suffix="+" />
+            </p>
             <p className="mt-1 text-xs text-stone-600 font-medium uppercase">Export Destinations</p>
           </div>
-          <div className="rounded-2xl bg-white p-6 shadow-md border border-stone-100">
-            <p className="font-serif text-3xl sm:text-4xl font-extrabold text-emerald-700">5M+</p>
+          <div className="reveal-up stagger-3 hover-lift-sm rounded-2xl bg-white p-6 shadow-md border border-stone-100">
+            <p className="font-serif text-3xl sm:text-4xl font-extrabold text-emerald-700">
+              <AnimatedCounter target={5} suffix="M+" />
+            </p>
             <p className="mt-1 text-xs text-stone-600 font-medium uppercase">Annual Unit Capacity</p>
           </div>
-          <div className="rounded-2xl bg-white p-6 shadow-md border border-stone-100">
-            <p className="font-serif text-3xl sm:text-4xl font-extrabold text-emerald-700">100%</p>
+          <div className="reveal-up stagger-4 hover-lift-sm rounded-2xl bg-white p-6 shadow-md border border-stone-100">
+            <p className="font-serif text-3xl sm:text-4xl font-extrabold text-emerald-700">
+              <AnimatedCounter target={100} suffix="%" />
+            </p>
             <p className="mt-1 text-xs text-stone-600 font-medium uppercase">Quality Guarantee</p>
           </div>
         </div>
 
-        {/* CTA Banner */}
-        <div className="text-center bg-stone-900 rounded-3xl p-8 sm:p-12 text-white space-y-6">
+        {/* CTA Banner with reveal-up */}
+        <div className="reveal-up text-center bg-stone-900 rounded-3xl p-8 sm:p-12 text-white space-y-6 shadow-2xl">
           <h2 className="font-serif text-2xl sm:text-4xl font-bold">Partner With a Proven Leader</h2>
-          <p className="text-stone-300 text-sm max-w-2xl mx-auto">
+          <p className="text-stone-300 text-sm max-w-2xl mx-auto font-light">
             Whether you need custom apparel trims or eco-friendly handcrafted lifestyle products, our team is ready to support your supply chain.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <button
               onClick={onOpenQuoteModal}
-              className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-6 py-3 text-sm font-bold text-white shadow-lg hover:bg-emerald-500 transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-6 py-3 text-sm font-bold text-white shadow-lg hover:bg-emerald-500 transition-all btn-interactive"
             >
-              Request Quote
-              <ArrowRight className="h-4 w-4" />
+              <span>Request Quote</span>
+              <ArrowRight className="h-4 w-4 btn-arrow" />
             </button>
             <Link
               to="/products"
-              className="inline-flex items-center gap-2 rounded-full bg-stone-800 px-6 py-3 text-sm font-bold text-stone-200 hover:bg-stone-700 transition-all"
+              className="inline-flex items-center gap-2 rounded-full bg-stone-800 px-6 py-3 text-sm font-bold text-stone-200 hover:bg-stone-700 transition-all btn-interactive"
             >
-              Explore Products
+              <span>Explore Products</span>
             </Link>
           </div>
         </div>

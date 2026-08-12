@@ -59,40 +59,40 @@ export const RAW_MATERIALS: MaterialItem[] = [
     categorySlug: 'rattan'
   },
   {
-    id: 'palm-fiber',
-    name: 'Palm Fiber',
-    scientificName: 'Arecaceae',
-    description: 'Scientific name of Palm Fiber (Arecaceae). This material can be used to prepare different types of baskets i.e. Storage, Table mat, Planter, Coaster etc.',
-    rawImages: ['/materials/orig_palm-1.jpg', '/materials/orig_palm-2.jpg'],
-    sampleImages: ['/materials/orig_PTF-01.jpg', '/materials/orig_PTF-02.jpg'],
-    categorySlug: 'palm-fiber'
-  },
-  {
     id: 'bamboo',
     name: 'Bamboo',
     scientificName: 'Bambusa Vulgaris',
-    description: 'Scientific name of Bamboo (Bambusa Vulgaris). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Pet basket, Planter, Tray, Stool, Furniture etc.',
+    description: 'Scientific name of Bamboo (Bambusa Vulgaris). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Table mat, Planter, Tray, Coaster, Hanging basket, Stool, Furniture etc.',
     rawImages: ['/materials/orig_bamboo-1.jpg', '/materials/orig_bamboo-2.jpg'],
     sampleImages: ['/materials/orig_BDB-01.jpg', '/materials/orig_BDB-06.jpg'],
     categorySlug: 'bamboo'
   },
   {
-    id: 'banana-fiber',
-    name: 'Banana Fiber',
-    scientificName: 'Musa Sepientum',
-    description: 'Scientific name of Banana Fiber (Musa Sepientum). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Floor mat, Table mat, Planter, Coaster, Pouf etc.',
-    rawImages: ['/materials/orig_banana-1.jpg', '/materials/orig_banana-2.jpg'],
-    sampleImages: ['/materials/orig_BAN-01.jpg', '/materials/orig_BAN-04.jpg'],
-    categorySlug: 'banana-fiber'
+    id: 'palm-fiber',
+    name: 'Palm Fiber',
+    scientificName: 'Borassus Flabellifer',
+    description: 'Scientific name of Palm Fiber (Borassus Flabellifer). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Table mat, Coaster etc.',
+    rawImages: ['/materials/orig_palm-1.jpg', '/materials/orig_palm-2.jpg'],
+    sampleImages: ['/materials/orig_BSL-01.jpg', '/materials/orig_BSL-02.jpg'],
+    categorySlug: 'palm-fiber'
   },
   {
     id: 'corn-husk',
     name: 'Corn Husk',
-    scientificName: 'Corn Leaf (Maize)',
-    description: 'Scientific name of Corn Leaf (Maize). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Floor mat, Table mat, Planter, Coaster, Pouf etc.',
+    scientificName: 'Zea Mays',
+    description: 'Scientific name of Corn Husk (Zea Mays). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Floor mat, Table mat, Planter, Coaster etc.',
     rawImages: ['/materials/orig_corn-1.jpg', '/materials/orig_corn-2.jpg'],
-    sampleImages: ['/materials/orig_BSL-01.jpg', '/materials/orig_BSL-02.jpg'],
+    sampleImages: ['/materials/orig_PTF-01.jpg', '/materials/orig_PTF-02.jpg'],
     categorySlug: 'corn-husk'
+  },
+  {
+    id: 'banana-fiber',
+    name: 'Banana Fiber',
+    scientificName: 'Musa Acuminata',
+    description: 'Scientific name of Banana Fiber (Musa Acuminata). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Floor mat, Table mat, Planter, Coaster, Pouf etc.',
+    rawImages: ['/materials/orig_banana-1.jpg', '/materials/orig_banana-2.jpg'],
+    sampleImages: ['/materials/orig_BAN-01.jpg', '/materials/orig_BAN-04.jpg'],
+    categorySlug: 'banana-fiber'
   },
   {
     id: 'pineapple-fiber',
@@ -129,10 +129,10 @@ export const MaterialsPage: React.FC = () => {
   });
 
   return (
-    <div className="min-h-screen bg-white text-stone-900 font-sans pb-20">
+    <div className="min-h-screen bg-white text-stone-900 font-sans pb-20 animate-fadeIn">
       
-      {/* 1. Breadcrumbs Header (BD Creation Style) */}
-      <div className="border-b border-stone-200 bg-stone-50/50">
+      {/* 1. Breadcrumbs Header */}
+      <div className="border-b border-stone-200 bg-stone-50/50 reveal-up">
         <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8 flex items-center justify-between text-xs text-stone-600">
           <div className="flex items-center gap-1.5">
             <Link to="/" className="hover:text-[#65a30d] font-medium">Home</Link>
@@ -148,7 +148,7 @@ export const MaterialsPage: React.FC = () => {
               placeholder="Search material..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-8 pr-7 py-1 text-xs rounded border border-stone-300 bg-white focus:outline-none focus:border-[#65a30d]"
+              className="w-full pl-8 pr-7 py-1 text-xs rounded border border-stone-300 bg-white focus:outline-hidden focus:border-[#65a30d] transition-colors"
             />
             {searchQuery && (
               <button
@@ -162,135 +162,127 @@ export const MaterialsPage: React.FC = () => {
         </div>
       </div>
 
-      {/* 2. Materials Information Table (Exact BD Creation Layout with Original HD Images) */}
+      {/* 2. Materials Information Table */}
       <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 mt-4 sm:mt-6">
         
         {/* Table Header (Desktop) */}
-        <div className="hidden lg:grid grid-cols-12 bg-white border-b-2 border-stone-200 text-sm font-bold text-stone-900 pb-3 px-2">
+        <div className="hidden lg:grid grid-cols-12 bg-white border-b-2 border-stone-200 text-sm font-bold text-stone-900 pb-3 px-2 reveal-up">
           <div className="col-span-3 font-extrabold text-stone-900">Raw Material Images</div>
           <div className="col-span-6 px-4 font-extrabold text-stone-900">Raw Material and Product Description</div>
           <div className="col-span-3 text-right font-extrabold text-stone-900 pr-2">Sample Product Images</div>
         </div>
 
-        {/* Table Content */}
+        {/* Table Content with Staggered Entrance */}
         <div className="divide-y divide-stone-200">
-          {filteredMaterials.map((mat) => (
-            <div
-              key={mat.id}
-              className="py-4 sm:py-5 px-1 sm:px-2 hover:bg-stone-50/60 transition-colors"
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
-                
-                {/* Column 1: Raw Material Images (2 side-by-side) */}
-                <div className="lg:col-span-3">
-                  <span className="lg:hidden block text-xs font-bold text-stone-800 mb-2">
-                    Raw Material Images:
-                  </span>
-                  <div className="flex items-center gap-2 sm:gap-3">
-                    {mat.rawImages.map((imgSrc, i) => (
-                      <div
-                        key={i}
-                        onClick={() => setPreviewImage({ src: imgSrc, title: `${mat.name} - Raw Material Image ${i + 1}` })}
-                        className="w-1/2 aspect-square max-w-[130px] rounded overflow-hidden bg-stone-100 border border-stone-200 cursor-pointer hover:opacity-90 transition-opacity shadow-2xs flex items-center justify-center"
-                      >
-                        <img
-                          src={imgSrc}
-                          alt={`${mat.name} Raw Material`}
-                          className="h-full w-full object-cover"
-                          loading="lazy"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Column 2: Raw Material and Product Description */}
-                <div className="lg:col-span-6 px-0 lg:px-4 space-y-1.5">
-                  <span className="lg:hidden block text-xs font-bold text-stone-800">
-                    Raw Material & Description:
-                  </span>
-                  <p className="text-xs sm:text-[13px] text-stone-800 leading-relaxed">
-                    <span className="font-bold text-stone-900">{mat.name}: </span>
-                    <span>{mat.description.replace(`${mat.name}: `, '')}</span>
-                  </p>
-                  <div className="pt-1">
-                    <Link
-                      to={`/products?category=${mat.categorySlug}`}
-                      className="text-xs font-bold text-[#65a30d] hover:underline"
-                    >
-                      Browse {mat.name} products ➔
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Column 3: Sample Product Images (2 side-by-side) */}
-                <div className="lg:col-span-3">
-                  <span className="lg:hidden block text-xs font-bold text-stone-800 mb-2">
-                    Sample Product Images:
-                  </span>
-                  <div className="flex items-center justify-start lg:justify-end gap-2 sm:gap-3">
-                    {mat.sampleImages.map((imgSrc, i) => (
-                      <div
-                        key={i}
-                        onClick={() => setPreviewImage({ src: imgSrc, title: `${mat.name} - Sample Product ${i + 1}` })}
-                        className="w-1/2 aspect-square max-w-[130px] rounded overflow-hidden bg-white border border-stone-200 cursor-pointer hover:opacity-90 transition-opacity shadow-2xs flex items-center justify-center p-1"
-                      >
-                        <img
-                          src={imgSrc}
-                          alt={`${mat.name} Sample Product`}
-                          className="max-h-full max-w-full object-contain"
-                          loading="lazy"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          ))}
-
-          {filteredMaterials.length === 0 && (
-            <div className="py-12 text-center text-stone-500">
-              <p className="text-sm font-semibold">No materials found matching "{searchQuery}".</p>
-              <button
-                onClick={() => setSearchQuery('')}
-                className="mt-3 text-xs font-bold text-[#65a30d] hover:underline"
+          {filteredMaterials.map((mat, idx) => {
+            const staggerClass = `stagger-${(idx % 8) + 1}`;
+            return (
+              <div
+                key={mat.id}
+                className={`reveal-up ${staggerClass} py-4 sm:py-5 px-1 sm:px-2 hover:bg-stone-50/60 transition-colors`}
               >
-                Clear Search
-              </button>
-            </div>
-          )}
-        </div>
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
+                  
+                  {/* Column 1: Raw Material Images */}
+                  <div className="lg:col-span-3">
+                    <span className="lg:hidden block text-xs font-bold text-stone-800 mb-2">
+                      Raw Material Images:
+                    </span>
+                    <div className="flex items-center gap-2 sm:gap-3">
+                      {mat.rawImages.map((imgSrc, i) => (
+                        <div
+                          key={i}
+                          onClick={() => setPreviewImage({ src: imgSrc, title: `${mat.name} - Raw Material Image ${i + 1}` })}
+                          className="w-1/2 aspect-square max-w-[130px] rounded overflow-hidden bg-stone-100 border border-stone-200 cursor-pointer hover:opacity-90 transition-all shadow-2xs flex items-center justify-center img-zoom-container hover-lift-sm"
+                        >
+                          <img
+                            src={imgSrc}
+                            alt={`${mat.name} Raw Material`}
+                            className="h-full w-full object-cover"
+                            loading="lazy"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
 
+                  {/* Column 2: Raw Material and Product Description */}
+                  <div className="lg:col-span-6 px-0 lg:px-4 space-y-1.5">
+                    <span className="lg:hidden block text-xs font-bold text-stone-800">
+                      Raw Material & Description:
+                    </span>
+                    <p className="text-xs sm:text-[13px] text-stone-800 leading-relaxed">
+                      <span className="font-bold text-stone-900">{mat.name}: </span>
+                      <span>{mat.description.replace(`${mat.name}: `, '')}</span>
+                    </p>
+                    <div className="pt-1">
+                      <Link
+                        to={`/products?category=${mat.categorySlug}`}
+                        className="text-xs font-bold text-[#65a30d] hover:underline inline-flex items-center gap-1 btn-interactive"
+                      >
+                        <span>Browse {mat.name} products</span>
+                        <span className="btn-arrow">➔</span>
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Column 3: Sample Product Images */}
+                  <div className="lg:col-span-3">
+                    <span className="lg:hidden block text-xs font-bold text-stone-800 mb-2">
+                      Sample Product Images:
+                    </span>
+                    <div className="flex items-center justify-start lg:justify-end gap-2 sm:gap-3">
+                      {mat.sampleImages.map((imgSrc, i) => (
+                        <div
+                          key={i}
+                          onClick={() => setPreviewImage({ src: imgSrc, title: `${mat.name} - Sample Product Image ${i + 1}` })}
+                          className="w-1/2 aspect-square max-w-[130px] rounded overflow-hidden bg-stone-100 border border-stone-200 cursor-pointer hover:opacity-90 transition-all shadow-2xs flex items-center justify-center img-zoom-container hover-lift-sm"
+                        >
+                          <img
+                            src={imgSrc}
+                            alt={`${mat.name} Sample Product`}
+                            className="h-full w-full object-cover"
+                            loading="lazy"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
 
-      {/* Lightbox Image Preview Modal */}
+      {/* 3. HD Image Lightbox Modal */}
       {previewImage && (
         <div
           onClick={() => setPreviewImage(null)}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 animate-fadeIn"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-stone-950/85 backdrop-blur-xs animate-fadeIn cursor-pointer"
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-2xl w-full bg-white rounded-xl overflow-hidden shadow-2xl p-4 space-y-3"
+            className="relative max-w-4xl max-h-[90vh] bg-white rounded-2xl overflow-hidden shadow-2xl p-4 flex flex-col items-center"
           >
-            <div className="flex items-center justify-between border-b border-stone-200 pb-2">
-              <h3 className="font-serif text-sm font-bold text-stone-800">
+            <div className="w-full flex items-center justify-between pb-3 border-b border-stone-200 mb-3">
+              <h3 className="font-serif text-sm sm:text-base font-bold text-stone-900">
                 {previewImage.title}
               </h3>
               <button
                 onClick={() => setPreviewImage(null)}
-                className="p-1 rounded text-stone-500 hover:bg-stone-100 hover:text-stone-900"
+                className="p-1.5 rounded-full hover:bg-stone-100 text-stone-600 transition-colors"
               >
                 <X className="h-5 w-5" />
               </button>
             </div>
-            <div className="aspect-square max-h-[75vh] w-full bg-stone-50 rounded overflow-hidden flex items-center justify-center border border-stone-100">
+            
+            <div className="max-h-[75vh] overflow-hidden rounded-lg bg-stone-50 flex items-center justify-center">
               <img
                 src={previewImage.src}
                 alt={previewImage.title}
-                className="max-h-full max-w-full object-contain"
+                className="max-h-[72vh] max-w-full object-contain"
               />
             </div>
           </div>

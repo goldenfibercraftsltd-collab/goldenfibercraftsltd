@@ -6,7 +6,7 @@ export const ProductionFacilities: React.FC = () => {
     <section id="infrastructure" className="py-20 bg-white border-y border-amber-900/10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center">
+        <div className="text-center reveal-up">
           <span className="text-xs font-bold uppercase tracking-[0.25em] text-amber-700">Infrastructure</span>
           <h2 className="mt-2 font-serif text-2xl sm:text-3xl font-light tracking-[0.2em] text-stone-900 uppercase">
             PRODUCTION FACILITIES
@@ -16,12 +16,12 @@ export const ProductionFacilities: React.FC = () => {
 
         <div className="mt-12 grid items-center gap-12 lg:grid-cols-2">
           
-          {/* Main Facility Image from PPTX */}
-          <div className="relative group overflow-hidden rounded-2xl shadow-2xl border border-amber-900/10 bg-amber-950">
+          {/* Main Facility Image from PPTX with reveal-left */}
+          <div className="reveal-left relative group overflow-hidden rounded-2xl shadow-2xl border border-amber-900/10 bg-amber-950 img-zoom-container">
             <img
               src="/products/image10.png"
               alt="Golden Fiber Crafts Production Facility"
-              className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              className="aspect-[4/3] w-full object-cover transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent flex items-end p-6">
               <div>
@@ -31,10 +31,10 @@ export const ProductionFacilities: React.FC = () => {
             </div>
           </div>
 
-          {/* Infrastructure Divisions List */}
+          {/* Infrastructure Divisions List with staggered reveal-right */}
           <div className="space-y-8">
             
-            <div className="flex gap-4 p-4 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-900/10">
+            <div className="reveal-right stagger-1 hover-lift-sm flex gap-4 p-4 rounded-xl hover:bg-amber-50/60 transition-all border border-transparent hover:border-amber-900/10">
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-800 shadow-inner">
                 <Sparkles className="h-7 w-7" />
               </div>
@@ -48,7 +48,7 @@ export const ProductionFacilities: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex gap-4 p-4 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-900/10">
+            <div className="reveal-right stagger-2 hover-lift-sm flex gap-4 p-4 rounded-xl hover:bg-amber-50/60 transition-all border border-transparent hover:border-amber-900/10">
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-800 shadow-inner">
                 <Layers className="h-7 w-7" />
               </div>
@@ -62,7 +62,7 @@ export const ProductionFacilities: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex gap-4 p-4 rounded-xl hover:bg-amber-50/60 transition-colors border border-transparent hover:border-amber-900/10">
+            <div className="reveal-right stagger-3 hover-lift-sm flex gap-4 p-4 rounded-xl hover:bg-amber-50/60 transition-all border border-transparent hover:border-amber-900/10">
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-800 shadow-inner">
                 <Package className="h-7 w-7" />
               </div>

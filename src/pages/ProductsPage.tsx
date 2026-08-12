@@ -103,8 +103,8 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
   return (
     <div className="bg-[#f8fafc] min-h-screen pb-20 font-sans animate-fadeIn">
       
-      {/* 1. Breadcrumbs Header */}
-      <div className="bg-white border-b border-stone-200">
+      {/* 1. Breadcrumbs Header with reveal-up */}
+      <div className="bg-white border-b border-stone-200 reveal-up">
         <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8 flex items-center justify-between text-xs text-stone-600">
           <div className="flex items-center gap-1.5">
             <Link to="/" className="hover:text-[#65a30d] font-medium">Home</Link>
@@ -129,8 +129,8 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
         </div>
       </div>
 
-      {/* 2. Main Filter Control Header */}
-      <div className="bg-white border-b border-stone-200 shadow-xs">
+      {/* 2. Main Filter Control Header with reveal-up */}
+      <div className="bg-white border-b border-stone-200 shadow-xs reveal-up">
         <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6 lg:px-8 space-y-4">
           
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -151,7 +151,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
                 placeholder="Search Item Code or Name (e.g. GFC-SB-030)..."
                 value={searchQuery}
                 onChange={handleSearchChange}
-                className="w-full pl-10 pr-9 py-2 text-xs rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-none focus:border-[#65a30d] focus:ring-2 focus:ring-[#65a30d]/20 transition-all"
+                className="w-full pl-10 pr-9 py-2 text-xs rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-hidden focus:border-[#65a30d] focus:ring-2 focus:ring-[#65a30d]/20 transition-all"
               />
               {searchQuery && (
                 <button
@@ -175,7 +175,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
             <div className="flex items-center gap-1.5 overflow-x-auto pb-1 pt-1 scrollbar-none">
               <button
                 onClick={() => handleCategoryChange('all')}
-                className="px-3.5 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap transition-all bg-[#65a30d] text-white shadow-xs"
+                className="px-3.5 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap transition-all bg-[#65a30d] text-white shadow-xs btn-interactive"
               >
                 All Categories ({allProducts.length})
               </button>
@@ -185,7 +185,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
                   <button
                     key={cat.id}
                     onClick={() => handleCategoryChange(cat.id)}
-                    className="px-3.5 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap transition-all bg-stone-100 text-stone-700 hover:bg-stone-200 border border-stone-200/80"
+                    className="px-3.5 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap transition-all bg-stone-100 text-stone-700 hover:bg-stone-200 border border-stone-200/80 hover-lift-sm"
                   >
                     {cat.name} ({count})
                   </button>
@@ -202,7 +202,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
                 onClick={() => handleSubCategoryChange('')}
                 className={`px-3 py-1 rounded-md text-[11px] font-bold transition-all ${
                   !selectedSubCategory
-                    ? 'bg-[#093843] text-white'
+                    ? 'bg-[#093843] text-white shadow-xs'
                     : 'bg-stone-100 text-stone-600 hover:bg-stone-200'
                 }`}
               >
@@ -216,7 +216,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
                     onClick={() => handleSubCategoryChange(sub.id)}
                     className={`px-3 py-1 rounded-md text-[11px] font-bold transition-all ${
                       isSubActive
-                        ? 'bg-[#093843] text-white'
+                        ? 'bg-[#093843] text-white shadow-xs'
                         : 'bg-stone-100 text-stone-600 hover:bg-stone-200'
                     }`}
                   >
@@ -254,72 +254,75 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
           )}
         </div>
 
-        {/* Product Cards Grid */}
+        {/* Product Cards Grid with Staggered Scroll Reveal */}
         {filteredProducts.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {filteredProducts.map((product) => (
-              <div
-                key={product.id}
-                className="group flex flex-col justify-between rounded-2xl bg-white p-4 shadow-sm border border-stone-200 hover:shadow-xl hover:border-[#65a30d] transition-all duration-300"
-              >
-                <div>
-                  {/* Photo Container */}
-                  <div
-                    onClick={() => navigate(`/products/${product.slug}`)}
-                    className="relative aspect-square w-full overflow-hidden rounded-xl bg-stone-50 flex items-center justify-center p-3 cursor-pointer border border-stone-100"
-                  >
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
-                      loading="lazy"
-                    />
-                    {/* Item Code Badge */}
-                    <span className="absolute top-2.5 right-2.5 bg-[#093843] text-white text-[10px] font-extrabold px-2 py-0.5 rounded-md shadow-xs">
-                      {product.code || product.id}
-                    </span>
-                  </div>
-
-                  {/* Product Details */}
-                  <div className="mt-3.5 space-y-1">
-                    <span className="text-[10px] font-bold text-[#65a30d] uppercase tracking-wider">
-                      {product.categoryName || product.category}
-                    </span>
-                    <h3
+            {filteredProducts.map((product, idx) => {
+              const staggerClass = `stagger-${(idx % 8) + 1}`;
+              return (
+                <div
+                  key={product.id}
+                  className={`reveal-up ${staggerClass} hover-lift group flex flex-col justify-between rounded-2xl bg-white p-4 shadow-xs border border-stone-200 hover:shadow-xl hover:border-[#65a30d] transition-all duration-300`}
+                >
+                  <div>
+                    {/* Photo Container */}
+                    <div
                       onClick={() => navigate(`/products/${product.slug}`)}
-                      className="font-serif text-sm font-bold text-stone-900 group-hover:text-[#65a30d] transition-colors line-clamp-2 cursor-pointer"
+                      className="relative aspect-square w-full overflow-hidden rounded-xl bg-stone-50 flex items-center justify-center p-3 cursor-pointer border border-stone-100 img-zoom-container"
                     >
-                      {product.name}
-                    </h3>
-                    <p className="text-[11px] text-stone-500 font-light line-clamp-2">
-                      {product.description}
-                    </p>
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="max-h-full max-w-full object-contain transition-transform duration-500"
+                        loading="lazy"
+                      />
+                      {/* Item Code Badge */}
+                      <span className="absolute top-2.5 right-2.5 bg-[#093843] text-white text-[10px] font-extrabold px-2 py-0.5 rounded-md shadow-xs">
+                        {product.code || product.id}
+                      </span>
+                    </div>
+
+                    {/* Product Details */}
+                    <div className="mt-3.5 space-y-1">
+                      <span className="text-[10px] font-bold text-[#65a30d] uppercase tracking-wider">
+                        {product.categoryName || product.category}
+                      </span>
+                      <h3
+                        onClick={() => navigate(`/products/${product.slug}`)}
+                        className="font-serif text-sm font-bold text-stone-900 group-hover:text-[#65a30d] transition-colors line-clamp-2 cursor-pointer"
+                      >
+                        {product.name}
+                      </h3>
+                      <p className="text-[11px] text-stone-500 font-light line-clamp-2">
+                        {product.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Card Footer: View Details + Request RFQ */}
+                  <div className="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between gap-2">
+                    <button
+                      onClick={() => navigate(`/products/${product.slug}`)}
+                      className="text-xs font-bold text-stone-700 hover:text-[#65a30d] flex items-center gap-1 transition-colors btn-interactive"
+                    >
+                      <span>Details</span>
+                      <ArrowRight className="h-3.5 w-3.5 btn-arrow" />
+                    </button>
+
+                    <button
+                      onClick={() => onOpenQuoteModal(product.code || product.id)}
+                      className="flex items-center gap-1 rounded-lg bg-[#0088FF] hover:bg-[#0077ee] text-white px-2.5 py-1.5 text-[11px] font-bold shadow-xs hover:shadow-md transition-all active:scale-95 btn-interactive"
+                    >
+                      <MessageSquare className="h-3 w-3" />
+                      <span>Quote</span>
+                    </button>
                   </div>
                 </div>
-
-                {/* Card Footer: View Details + Request RFQ */}
-                <div className="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between gap-2">
-                  <button
-                    onClick={() => navigate(`/products/${product.slug}`)}
-                    className="text-xs font-bold text-stone-700 hover:text-[#65a30d] flex items-center gap-1 transition-colors"
-                  >
-                    <span>Details</span>
-                    <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
-                  </button>
-
-                  <button
-                    onClick={() => onOpenQuoteModal(product.code || product.id)}
-                    className="flex items-center gap-1 rounded-lg bg-[#0088FF] hover:bg-[#0077ee] text-white px-2.5 py-1.5 text-[11px] font-bold shadow-xs hover:shadow-md transition-all active:scale-95"
-                  >
-                    <MessageSquare className="h-3 w-3" />
-                    <span>Quote</span>
-                  </button>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         ) : (
-          <div className="bg-white rounded-2xl border border-stone-200 p-12 text-center space-y-4">
+          <div className="bg-white rounded-2xl border border-stone-200 p-12 text-center space-y-4 reveal-scale">
             <div className="h-14 w-14 rounded-full bg-stone-100 text-stone-400 flex items-center justify-center mx-auto">
               <Filter className="h-6 w-6" />
             </div>
@@ -333,7 +336,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
             </div>
             <button
               onClick={clearFilters}
-              className="inline-block rounded-xl bg-[#65a30d] text-white px-5 py-2 text-xs font-bold hover:bg-[#4d7c0f] transition-colors shadow-xs"
+              className="inline-block rounded-xl bg-[#65a30d] text-white px-5 py-2 text-xs font-bold hover:bg-[#4d7c0f] transition-colors shadow-xs btn-interactive"
             >
               Show All Products
             </button>

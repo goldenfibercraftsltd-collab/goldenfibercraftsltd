@@ -11,8 +11,8 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-stone-950 text-stone-300 font-sans border-t-4 border-[#65a30d]">
       
-      {/* 1. Tagline & Brand Hero Bar */}
-      <div className="bg-gradient-to-r from-[#093843] via-emerald-950 to-[#093843] py-8 px-4 border-b border-teal-900/60">
+      {/* 1. Tagline & Brand Hero Bar with reveal-up */}
+      <div className="bg-gradient-to-r from-[#093843] via-emerald-950 to-[#093843] py-8 px-4 border-b border-teal-900/60 reveal-up">
         <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-xl bg-lime-600 flex items-center justify-center text-white font-serif font-extrabold text-xl shadow-lg">
@@ -30,12 +30,12 @@ export const Footer: React.FC = () => {
         </div>
       </div>
 
-      {/* 2. Main Footer Grid */}
+      {/* 2. Main Footer Grid with Staggered Entrance */}
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
           {/* Col 1: About */}
-          <div className="space-y-4">
+          <div className="space-y-4 reveal-up stagger-1">
             <h4 className="font-serif text-lg font-bold text-white uppercase tracking-wider border-b border-stone-800 pb-2">
               Corporate Heritage
             </h4>
@@ -49,43 +49,43 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Col 2: Quick Links */}
-          <div className="space-y-4">
+          <div className="space-y-4 reveal-up stagger-2">
             <h4 className="font-serif text-lg font-bold text-white uppercase tracking-wider border-b border-stone-800 pb-2">
               Quick Navigation
             </h4>
             <ul className="space-y-2 text-xs font-semibold">
               <li>
-                <Link to="/" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                <Link to="/" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5 hover-lift-sm">
                   <span className="text-[#65a30d]">➔</span> Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                <Link to="/about" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5 hover-lift-sm">
                   <span className="text-[#65a30d]">➔</span> Corporate Profile
                 </Link>
               </li>
               <li>
-                <Link to="/materials" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                <Link to="/materials" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5 hover-lift-sm">
                   <span className="text-[#65a30d]">➔</span> Materials Info
                 </Link>
               </li>
               <li>
-                <Link to="/infrastructure" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                <Link to="/infrastructure" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5 hover-lift-sm">
                   <span className="text-[#65a30d]">➔</span> Factory Facilities
                 </Link>
               </li>
               <li>
-                <Link to="/sustainability" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                <Link to="/sustainability" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5 hover-lift-sm">
                   <span className="text-[#65a30d]">➔</span> Sustainability
                 </Link>
               </li>
               <li>
-                <Link to="/clients" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                <Link to="/clients" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5 hover-lift-sm">
                   <span className="text-[#65a30d]">➔</span> Buyers & Certificates
                 </Link>
               </li>
               <li>
-                <Link to="/contact" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                <Link to="/contact" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5 hover-lift-sm">
                   <span className="text-[#65a30d]">➔</span> Contact Export Office
                 </Link>
               </li>
@@ -93,22 +93,22 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Col 3: Product Categories */}
-          <div className="space-y-4">
+          <div className="space-y-4 reveal-up stagger-3">
             <h4 className="font-serif text-lg font-bold text-white uppercase tracking-wider border-b border-stone-800 pb-2">
               Product Categories
             </h4>
             <ul className="space-y-2 text-xs font-semibold">
-              <li><Link to="/products?category=jute" onClick={scrollToTop} className="hover:text-amber-300 transition-colors">Jute Handicrafts</Link></li>
-              <li><Link to="/products?category=rugs" onClick={scrollToTop} className="hover:text-amber-300 transition-colors">Jhuta & Jute Rugs</Link></li>
-              <li><Link to="/products?category=seagrass" onClick={scrollToTop} className="hover:text-amber-300 transition-colors">Seagrass Baskets & Mats</Link></li>
-              <li><Link to="/products?category=rattan" onClick={scrollToTop} className="hover:text-amber-300 transition-colors">Rattan Furniture & Mirrors</Link></li>
-              <li><Link to="/products?category=bamboo" onClick={scrollToTop} className="hover:text-amber-300 transition-colors">Bamboo Baskets & Crafts</Link></li>
-              <li><Link to="/products?category=water-hyacinth" onClick={scrollToTop} className="hover:text-amber-300 transition-colors">Water Hyacinth Baskets</Link></li>
+              <li><Link to="/products?category=jute" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block hover-lift-sm">Jute Handicrafts</Link></li>
+              <li><Link to="/products?category=rugs" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block hover-lift-sm">Jhuta & Jute Rugs</Link></li>
+              <li><Link to="/products?category=seagrass" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block hover-lift-sm">Seagrass Baskets & Mats</Link></li>
+              <li><Link to="/products?category=rattan" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block hover-lift-sm">Rattan Furniture & Mirrors</Link></li>
+              <li><Link to="/products?category=bamboo" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block hover-lift-sm">Bamboo Baskets & Crafts</Link></li>
+              <li><Link to="/products?category=water-hyacinth" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block hover-lift-sm">Water Hyacinth Baskets</Link></li>
             </ul>
           </div>
 
           {/* Col 4: Contact & Factory HQ */}
-          <div className="space-y-4">
+          <div className="space-y-4 reveal-up stagger-4">
             <h4 className="font-serif text-lg font-bold text-white uppercase tracking-wider border-b border-stone-800 pb-2">
               Factory Contact
             </h4>
@@ -131,16 +131,17 @@ export const Footer: React.FC = () => {
         </div>
       </div>
 
-      {/* 3. Bottom Copyright Strip */}
-      <div className="bg-stone-900 py-4 px-4 text-center text-xs text-stone-500 border-t border-stone-800">
+      {/* 3. Bottom Copyright Strip with reveal-up */}
+      <div className="bg-stone-900 py-4 px-4 text-center text-xs text-stone-500 border-t border-stone-800 reveal-up">
         <div className="mx-auto max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-2">
           <span>© {new Date().getFullYear()} Golden Fiber Crafts Ltd. All rights reserved.</span>
           <span className="text-stone-400 font-serif italic">"{TAGLINE}"</span>
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-1 text-emerald-400 hover:text-emerald-300 font-bold uppercase text-[11px]"
+            className="flex items-center gap-1.5 text-stone-400 hover:text-amber-300 transition-colors btn-interactive"
           >
-            Back to Top <ArrowUp className="h-3.5 w-3.5" />
+            <span>Back to Top</span>
+            <ArrowUp className="h-3.5 w-3.5" />
           </button>
         </div>
       </div>

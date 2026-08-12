@@ -13,6 +13,7 @@ import { SustainabilityPage } from './pages/SustainabilityPage';
 import { QualityControlPage } from './pages/QualityControlPage';
 import { ClientsPage } from './pages/ClientsPage';
 import { ContactPage } from './pages/ContactPage';
+import { MaterialsPage } from './pages/MaterialsPage';
 import { QuoteModal } from './components/QuoteModal';
 import { InfoModal } from './components/InfoModal';
 
@@ -32,9 +33,17 @@ import { AdminBanners } from './pages/admin/AdminBanners';
 import { AdminInquiries } from './pages/admin/AdminInquiries';
 import { AdminSettings } from './pages/admin/AdminSettings';
 
+import { initScrollReveal } from './utils/scrollReveal';
+
 export const AppContent: React.FC = () => {
   const location = useLocation();
   const isAdminRoute = location.pathname.startsWith('/admin');
+
+  // Trigger high-performance scroll reveal on route change
+  React.useEffect(() => {
+    const cleanup = initScrollReveal();
+    return cleanup;
+  }, [location.pathname]);
 
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);
   const [selectedProductCode, setSelectedProductCode] = useState<string | undefined>(undefined);
@@ -104,6 +113,8 @@ export const AppContent: React.FC = () => {
             element={<ProductDetailPage onOpenQuoteModal={handleOpenQuoteModal} />}
           />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/materials" element={<MaterialsPage />} />
+          <Route path="/handicrafts-material" element={<MaterialsPage />} />
           <Route path="/infrastructure" element={<InfrastructurePage />} />
           <Route path="/sustainability" element={<SustainabilityPage />} />
           <Route path="/quality" element={<QualityControlPage />} />

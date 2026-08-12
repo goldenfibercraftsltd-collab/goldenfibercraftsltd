@@ -33,7 +33,7 @@ export const Sustainability: React.FC = () => {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center max-w-3xl mx-auto">
+        <div className="text-center max-w-3xl mx-auto reveal-up">
           <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-950/60 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-emerald-400 backdrop-blur-md">
             <Leaf className="h-3.5 w-3.5" />
             Eco Commitment
@@ -47,14 +47,15 @@ export const Sustainability: React.FC = () => {
           <div className="mx-auto mt-4 h-0.5 w-20 rounded-full bg-amber-500" />
         </div>
 
-        {/* 4 Pillars Grid */}
+        {/* 4 Pillars Grid with Staggered Entrance */}
         <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {pillars.map((pillar, idx) => {
             const Icon = pillar.icon;
+            const staggerClass = `stagger-${idx + 1}`;
             return (
               <div
                 key={idx}
-                className="group relative rounded-2xl border border-amber-800/40 bg-stone-900/80 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-950/60"
+                className={`reveal-scale ${staggerClass} hover-lift group relative rounded-2xl border border-amber-800/40 bg-stone-900/80 p-6 backdrop-blur-md transition-all`}
               >
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 text-stone-950 shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <Icon className="h-7 w-7" />
@@ -70,8 +71,8 @@ export const Sustainability: React.FC = () => {
           })}
         </div>
 
-        {/* Highlight Banner */}
-        <div className="mt-14 overflow-hidden rounded-3xl border border-amber-700/30 bg-gradient-to-r from-amber-900/60 via-amber-950 to-stone-900 p-8 text-center sm:p-10 shadow-2xl backdrop-blur-lg">
+        {/* Highlight Banner with reveal-up */}
+        <div className="reveal-up mt-14 overflow-hidden rounded-3xl border border-amber-700/30 bg-gradient-to-r from-amber-900/60 via-amber-950 to-stone-900 p-8 text-center sm:p-10 shadow-2xl backdrop-blur-lg">
           <div className="mx-auto max-w-3xl">
             <h3 className="font-serif text-2xl sm:text-3xl font-bold text-amber-300">
               Transforming Lives Through Artisanal Heritage

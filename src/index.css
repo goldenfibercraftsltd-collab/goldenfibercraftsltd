@@ -16,11 +16,142 @@
   }
 }
 
-/* GPU-accelerated smooth animations */
+/* ==========================================================================
+   Modern, Ultra-Lightweight, GPU-Accelerated Scroll Reveal System
+   ========================================================================== */
+
+/* Base reveal elements - initially hidden via transform and opacity */
+.reveal,
+.reveal-up,
+.reveal-left,
+.reveal-right,
+.reveal-scale,
+.reveal-mask {
+  opacity: 0;
+  will-change: opacity, transform;
+  transition-property: opacity, transform, clip-path;
+  transition-duration: 550ms;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Variant: Reveal Up (Natural slide upward) */
+.reveal,
+.reveal-up {
+  transform: translate3d(0, 24px, 0);
+}
+
+/* Variant: Reveal Left (Slide in from left) */
+.reveal-left {
+  transform: translate3d(-24px, 0, 0);
+}
+
+/* Variant: Reveal Right (Slide in from right) */
+.reveal-right {
+  transform: translate3d(24px, 0, 0);
+}
+
+/* Variant: Reveal Scale (Subtle scale from 0.96 to 1) */
+.reveal-scale {
+  transform: scale3d(0.96, 0.96, 1);
+}
+
+/* Variant: Text Mask Reveal for Headings */
+.reveal-mask {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transform: translate3d(0, 16px, 0);
+}
+
+/* Active Revealed State: Triggered only once when element enters viewport */
+.revealed {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1) !important;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
+}
+
+/* --------------------------------------------------------------------------
+   Subtle Stagger Delays (50ms - 400ms) - Ultra-fast, no waiting
+   -------------------------------------------------------------------------- */
+.stagger-1 { transition-delay: 40ms; }
+.stagger-2 { transition-delay: 80ms; }
+.stagger-3 { transition-delay: 120ms; }
+.stagger-4 { transition-delay: 160ms; }
+.stagger-5 { transition-delay: 200ms; }
+.stagger-6 { transition-delay: 240ms; }
+.stagger-7 { transition-delay: 280ms; }
+.stagger-8 { transition-delay: 320ms; }
+
+/* --------------------------------------------------------------------------
+   Premium Micro-Interactions (Cards, Buttons, Images)
+   -------------------------------------------------------------------------- */
+.hover-lift {
+  transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 250ms ease, border-color 250ms ease;
+  will-change: transform, box-shadow;
+}
+@media (hover: hover) and (pointer: fine) {
+  .hover-lift:hover {
+    transform: translate3d(0, -5px, 0);
+  }
+}
+
+.hover-lift-sm {
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 200ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .hover-lift-sm:hover {
+    transform: translate3d(0, -2.5px, 0);
+  }
+}
+
+.btn-interactive {
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), background-color 200ms ease, box-shadow 200ms ease;
+  will-change: transform;
+}
+@media (hover: hover) and (pointer: fine) {
+  .btn-interactive:hover {
+    transform: translate3d(0, -1.5px, 0);
+  }
+  .btn-interactive:hover .btn-arrow {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+.btn-interactive:active {
+  transform: scale3d(0.98, 0.98, 1);
+}
+
+.btn-arrow {
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Image Slow Zoom on Container Hover */
+.img-zoom-container {
+  overflow: hidden;
+}
+.img-zoom-container img {
+  transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+@media (hover: hover) and (pointer: fine) {
+  .img-zoom-container:hover img {
+    transform: scale3d(1.04, 1.04, 1);
+  }
+}
+
+/* Pulse Glow Effect for High-Value Badges */
+@keyframes subtlePulse {
+  0%, 100% { opacity: 1; transform: scale3d(1, 1, 1); }
+  50% { opacity: 0.85; transform: scale3d(1.02, 1.02, 1); }
+}
+.animate-pulse-subtle {
+  animation: subtlePulse 3s ease-in-out infinite;
+}
+
+/* Legacy Keyframe fade-in (GPU-friendly) */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translate3d(0, 8px, 0);
+    transform: translate3d(0, 10px, 0);
   }
   to {
     opacity: 1;
@@ -33,7 +164,7 @@
   will-change: opacity, transform;
 }
 
-/* Custom TrimsArt-inspired luxury gradients */
+/* Gradients */
 .hero-gradient {
   background: linear-gradient(135deg, #092e1a 0%, #14532d 45%, #052e16 100%);
 }
@@ -57,4 +188,54 @@
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Performance Tuning: Reduced distance for 60fps budget phones
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .reveal,
+  .reveal-up {
+    transform: translate3d(0, 14px, 0);
+    transition-duration: 450ms;
+  }
+  .reveal-left {
+    transform: translate3d(-14px, 0, 0);
+    transition-duration: 450ms;
+  }
+  .reveal-right {
+    transform: translate3d(14px, 0, 0);
+    transition-duration: 450ms;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Reduced Motion Accessibility (Zero Movement when User Requests)
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal,
+  .reveal-up,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .reveal-mask {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    transition: none !important;
+  }
+  .hover-lift:hover,
+  .hover-lift-sm:hover,
+  .btn-interactive:hover,
+  .img-zoom-container:hover img {
+    transform: none !important;
+  }
 }

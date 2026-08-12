@@ -96,8 +96,8 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
     <div className="bg-stone-50 min-h-screen py-4 sm:py-10 font-sans animate-fadeIn">
       <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 space-y-6">
         
-        {/* Top Breadcrumb */}
-        <nav className="flex items-center gap-2 text-xs font-semibold text-stone-500 overflow-x-auto pb-1">
+        {/* Top Breadcrumb with reveal-up */}
+        <nav className="reveal-up flex items-center gap-2 text-xs font-semibold text-stone-500 overflow-x-auto pb-1">
           <Link to="/" className="hover:text-emerald-700 flex items-center gap-1 shrink-0">
             <Home className="h-3.5 w-3.5" /> Home
           </Link>
@@ -109,22 +109,22 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
           <span className="text-stone-900 font-bold truncate">{product.name}</span>
         </nav>
 
-        {/* Back Button */}
-        <div className="flex items-center justify-between">
+        {/* Back Button with reveal-up */}
+        <div className="reveal-up flex items-center justify-between">
           <Link
             to={`/categories/${currentCategory.slug}`}
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-900 bg-emerald-50 hover:bg-emerald-100 px-3.5 py-2 rounded-xl border border-emerald-200/80 transition-all"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-900 bg-emerald-50 hover:bg-emerald-100 px-3.5 py-2 rounded-xl border border-emerald-200/80 transition-all btn-interactive"
           >
             <ArrowLeft className="h-4 w-4" />
             Back to {currentCategory.name} ({categoryProducts.length} Items)
           </Link>
         </div>
 
-        {/* Main 2-Column Detail Layout: Mobile Optimized Order */}
+        {/* Main 2-Column Detail Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 sm:gap-8 items-start">
           
           {/* MAIN CONTENT AREA FIRST ON MOBILE (order-1 lg:order-2) */}
-          <div className="order-1 lg:order-2 lg:col-span-3 bg-white rounded-3xl p-4 sm:p-10 shadow-sm border border-stone-200/90 space-y-6 sm:space-y-8">
+          <div className="reveal-up order-1 lg:order-2 lg:col-span-3 bg-white rounded-3xl p-4 sm:p-10 shadow-xs border border-stone-200/90 space-y-6 sm:space-y-8">
             
             {/* Title Header */}
             <div className="space-y-2 border-b border-stone-100 pb-4 sm:pb-5">
@@ -147,7 +147,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
                 <ImageMagnifier src={selectedImage} alt={product.name} zoomLevel={2.5} />
               </div>
 
-              {/* Multi-Angle Gallery Thumbnails matching Screenshot 2 */}
+              {/* Multi-Angle Gallery Thumbnails */}
               {allImages.length > 0 && (
                 <div className="space-y-2.5 pt-2">
                   <div className="flex items-center justify-between">
@@ -165,7 +165,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
                         <button
                           key={idx}
                           onClick={() => setSelectedImage(img)}
-                          className={`relative h-16 sm:h-24 rounded-xl sm:rounded-2xl overflow-hidden border-2 p-1 transition-all bg-white shrink-0 shadow-xs cursor-pointer ${
+                          className={`relative h-16 sm:h-24 rounded-xl sm:rounded-2xl overflow-hidden border-2 p-1 transition-all bg-white shrink-0 shadow-xs cursor-pointer hover-lift-sm ${
                             isSelected
                               ? 'border-emerald-600 ring-2 ring-emerald-500/50 scale-[1.02] bg-emerald-50/20'
                               : 'border-stone-200 hover:border-emerald-400 opacity-85 hover:opacity-100'
@@ -192,7 +192,6 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
               </h3>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2.5 text-xs text-stone-800 font-medium">
-                
                 <div className="flex items-center justify-between py-1 border-b border-stone-100">
                   <span className="font-bold text-stone-600">Art No:</span>
                   <span className="font-bold text-emerald-800 font-mono text-sm">{product.id}</span>
@@ -237,14 +236,12 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
                   <span className="font-bold text-stone-600">G.W/CTN (KG):</span>
                   <span className="font-bold text-stone-900 font-mono">{gwPerCtn}</span>
                 </div>
-
               </div>
 
               {/* DYNAMIC CARTON & CBM/WEIGHT CALCULATOR FORM */}
               <div className="bg-stone-50 p-4 sm:p-6 rounded-2xl border border-stone-200 space-y-4 mt-6">
                 
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
-                  
                   <div className="space-y-1">
                     <label className="block text-[10px] sm:text-xs font-bold text-stone-700 uppercase tracking-wider">Total N.W (KG)</label>
                     <input
@@ -284,7 +281,6 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
                       className="w-full px-3 py-2.5 bg-white border border-stone-300 rounded-xl text-xs font-bold text-stone-900 font-mono"
                     />
                   </div>
-
                 </div>
 
                 {/* Order Quantity Input & Add To Cart Row */}
@@ -297,14 +293,14 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
                       step={setPerCarton}
                       value={orderQty}
                       onChange={(e) => setOrderQty(Math.max(1, Number(e.target.value)))}
-                      className="w-full px-4 py-3 bg-white border-2 border-emerald-600 focus:border-emerald-700 rounded-xl text-sm font-extrabold text-emerald-950 font-mono outline-none shadow-xs"
+                      className="w-full px-4 py-3 bg-white border-2 border-emerald-600 focus:border-emerald-700 rounded-xl text-sm font-extrabold text-emerald-950 font-mono outline-hidden shadow-xs transition-colors"
                     />
                   </div>
 
                   <div className="w-full sm:flex-1 sm:pt-5">
                     <button
                       onClick={handleAddToCart}
-                      className="w-full py-3.5 px-8 rounded-xl bg-[#65a30d] hover:bg-[#4d7c0f] text-white font-extrabold text-sm tracking-wide shadow-lg transition-transform hover:scale-[1.01] flex items-center justify-center gap-2 cursor-pointer"
+                      className="w-full py-3.5 px-8 rounded-xl bg-[#65a30d] hover:bg-[#4d7c0f] text-white font-extrabold text-sm tracking-wide shadow-lg transition-transform hover:scale-[1.01] active:scale-95 flex items-center justify-center gap-2 cursor-pointer btn-interactive"
                     >
                       {addedSuccess ? (
                         <>
@@ -332,7 +328,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
 
             </div>
 
-            {/* UNIQUE RICH PRODUCT DESCRIPTION & CRAFTSMANSHIP DETAILS */}
+            {/* CRAFTSMANSHIP & DETAILS 4 BOXES */}
             <div className="space-y-6 pt-6 sm:pt-8 border-t border-stone-200">
               <div className="flex items-center gap-2">
                 <Sparkles className="h-5 w-5 text-amber-500" />
@@ -343,7 +339,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 {/* Box 1: Product Overview */}
-                <div className="bg-stone-50 p-5 sm:p-6 rounded-2xl border border-stone-200/80 space-y-2 sm:space-y-3 hover:border-emerald-200 transition-colors">
+                <div className="hover-lift-sm bg-stone-50 p-5 sm:p-6 rounded-2xl border border-stone-200/80 space-y-2 sm:space-y-3 hover:border-emerald-200 transition-all">
                   <div className="flex items-center gap-2 text-emerald-800 font-extrabold text-xs uppercase tracking-wider">
                     <FileText className="h-4 w-4 text-emerald-600" />
                     <span>Product Overview & Design</span>
@@ -354,7 +350,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
                 </div>
 
                 {/* Box 2: Artisanal Craftsmanship */}
-                <div className="bg-stone-50 p-5 sm:p-6 rounded-2xl border border-stone-200/80 space-y-2 sm:space-y-3 hover:border-amber-200 transition-colors">
+                <div className="hover-lift-sm bg-stone-50 p-5 sm:p-6 rounded-2xl border border-stone-200/80 space-y-2 sm:space-y-3 hover:border-amber-200 transition-all">
                   <div className="flex items-center gap-2 text-amber-800 font-extrabold text-xs uppercase tracking-wider">
                     <Sparkles className="h-4 w-4 text-amber-600" />
                     <span>Artisanal Craftsmanship</span>
@@ -365,7 +361,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
                 </div>
 
                 {/* Box 3: Export & Quality Control */}
-                <div className="bg-stone-50 p-5 sm:p-6 rounded-2xl border border-stone-200/80 space-y-2 sm:space-y-3 hover:border-blue-200 transition-colors">
+                <div className="hover-lift-sm bg-stone-50 p-5 sm:p-6 rounded-2xl border border-stone-200/80 space-y-2 sm:space-y-3 hover:border-blue-200 transition-all">
                   <div className="flex items-center gap-2 text-blue-800 font-extrabold text-xs uppercase tracking-wider">
                     <ShieldCheck className="h-4 w-4 text-blue-600" />
                     <span>Export Standards & Quality Control</span>
@@ -376,7 +372,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
                 </div>
 
                 {/* Box 4: Care Instructions */}
-                <div className="bg-stone-50 p-5 sm:p-6 rounded-2xl border border-stone-200/80 space-y-2 sm:space-y-3 hover:border-purple-200 transition-colors">
+                <div className="hover-lift-sm bg-stone-50 p-5 sm:p-6 rounded-2xl border border-stone-200/80 space-y-2 sm:space-y-3 hover:border-purple-200 transition-all">
                   <div className="flex items-center gap-2 text-purple-800 font-extrabold text-xs uppercase tracking-wider">
                     <CheckCircle2 className="h-4 w-4 text-purple-600" />
                     <span>Care & Maintenance</span>
@@ -396,7 +392,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
               </div>
               <button
                 onClick={() => onOpenQuoteModal(product.id)}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-stone-900 hover:bg-stone-800 text-white px-7 py-3.5 rounded-xl font-extrabold text-xs uppercase tracking-wider transition-all shadow-md cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-stone-900 hover:bg-stone-800 text-white px-7 py-3.5 rounded-xl font-extrabold text-xs uppercase tracking-wider transition-all shadow-md cursor-pointer btn-interactive"
               >
                 <Phone className="h-4 w-4 text-amber-400" />
                 Direct OEM Phone Inquiry
@@ -406,7 +402,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
           </div>
 
           {/* LEFT SIDEBAR SECOND ON MOBILE (order-2 lg:order-1) */}
-          <div className="order-2 lg:order-1 lg:col-span-1 bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-stone-200/90 space-y-4 sticky top-6">
+          <div className="reveal-left order-2 lg:order-1 lg:col-span-1 bg-white rounded-2xl p-4 sm:p-5 shadow-xs border border-stone-200/90 space-y-4 sticky top-6">
             <div className="border-b border-stone-100 pb-3">
               <div className="flex items-center justify-between">
                 <span className="text-[10px] uppercase tracking-wider font-extrabold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md">
@@ -427,7 +423,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
                   <Link
                     key={catProd.id}
                     to={`/products/${catProd.slug}`}
-                    className={`p-2.5 rounded-xl transition-all text-left flex items-center gap-3 border ${
+                    className={`p-2.5 rounded-xl transition-all text-left flex items-center gap-3 border hover-lift-sm ${
                       isActive
                         ? 'bg-emerald-800 text-white border-emerald-800 shadow-md transform scale-[1.01]'
                         : 'bg-stone-50 text-stone-800 border-stone-100 hover:bg-emerald-50 hover:border-emerald-200 hover:text-emerald-950'
