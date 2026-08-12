@@ -78,9 +78,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
             title="Golden Fiber Crafts Ltd. - Home"
           >
             <img
-              src="/logo.png"
+              src="/logo.svg"
               alt="Golden Fiber Crafts Ltd."
-              className="h-16 sm:h-20 md:h-24 w-auto object-contain"
+              className="h-20 sm:h-24 md:h-28 w-auto object-contain"
             />
           </Link>
 
