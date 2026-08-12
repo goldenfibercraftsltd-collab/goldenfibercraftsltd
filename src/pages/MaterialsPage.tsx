@@ -18,8 +18,8 @@ export const RAW_MATERIALS: MaterialItem[] = [
     name: 'Seagrass',
     scientificName: 'Cyperus Malaccensis',
     description: 'Scientific name of Seagrass (Cyperus Malaccensis). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Floor mat, Table mat, Pet basket, Planter, Tray, Coaster, Pouf etc.',
-    rawImages: ['/materials/seagrass_plant.png', '/materials/seagrass_fiber.png'],
-    sampleImages: ['/materials/seagrass_sample1.png', '/materials/seagrass_sample2.png'],
+    rawImages: ['/materials/orig_sea-1.jpg', '/materials/orig_sea-2.jpg'],
+    sampleImages: ['/materials/orig_BDH-01.jpg', '/materials/orig_BDH-10.jpg'],
     categorySlug: 'seagrass'
   },
   {
@@ -27,8 +27,8 @@ export const RAW_MATERIALS: MaterialItem[] = [
     name: 'Kans Grass',
     scientificName: 'Saccharum Spontaneum',
     description: 'Scientific name of Kans Grass (Saccharum Spontaneum). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Table mat, Planter, Tray, Coaster etc.',
-    rawImages: ['/materials/kans_grass_plant.png', '/materials/kans_grass_fiber.png'],
-    sampleImages: ['/materials/kans_grass_sample1.png', '/materials/kans_grass_sample2.png'],
+    rawImages: ['/materials/orig_kans-1.jpg', '/materials/orig_kans-2.jpg'],
+    sampleImages: ['/materials/orig_SCP-02.jpg', '/materials/orig_SCP-05.png'],
     categorySlug: 'kans-grass'
   },
   {
@@ -36,8 +36,8 @@ export const RAW_MATERIALS: MaterialItem[] = [
     name: 'Date Leaf',
     scientificName: 'Phoenix Dactylifera',
     description: 'Scientific name of Date Leaf (Phoenix Dactylifera). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Table mat, Planter, Tray, Coaster etc.',
-    rawImages: ['/materials/date_leaf_plant.png', '/materials/date_leaf_fiber.png'],
-    sampleImages: ['/materials/date_leaf_sample1.png', '/materials/date_leaf_sample2.png'],
+    rawImages: ['/materials/orig_date-1.jpg', '/materials/orig_date-2.jpg'],
+    sampleImages: ['/materials/orig_BDD-03.jpg', '/materials/orig_BDD-31.jpg'],
     categorySlug: 'date-leaf'
   },
   {
@@ -45,8 +45,8 @@ export const RAW_MATERIALS: MaterialItem[] = [
     name: 'Jute',
     scientificName: 'Corchorus Olitorius',
     description: 'Scientific name of Jute (Corchorus Olitorius). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Floor mat, Table mat, Planter, Coaster, Pouf etc.',
-    rawImages: ['/materials/jute_plant.png', '/materials/jute_fiber.png'],
-    sampleImages: ['/materials/jute_sample1.png', '/materials/jute_sample2.png'],
+    rawImages: ['/materials/orig_Jute-1.jpg', '/materials/orig_jute-2.jpg'],
+    sampleImages: ['/materials/orig_BJB-04.jpg', '/materials/orig_BJB-32.jpg'],
     categorySlug: 'jute'
   },
   {
@@ -54,8 +54,8 @@ export const RAW_MATERIALS: MaterialItem[] = [
     name: 'Rattan',
     scientificName: 'Calamus Tenuis',
     description: 'Scientific name of Rattan (Calamus Tenuis). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Table mat, Pet basket, Planter, Tray, Coaster, Stool, Furniture etc.',
-    rawImages: ['/materials/rattan_plant.png', '/materials/rattan_fiber.png'],
-    sampleImages: ['/materials/rattan_sample1.png', '/materials/rattan_sample2.png'],
+    rawImages: ['/materials/orig_rattan-1.jpg', '/materials/orig_rattan-2.jpg'],
+    sampleImages: ['/materials/orig_BDC-02.jpg', '/materials/orig_BDC-06.jpg'],
     categorySlug: 'rattan'
   },
   {
@@ -63,8 +63,8 @@ export const RAW_MATERIALS: MaterialItem[] = [
     name: 'Palm Fiber',
     scientificName: 'Arecaceae',
     description: 'Scientific name of Palm Fiber (Arecaceae). This material can be used to prepare different types of baskets i.e. Storage, Table mat, Planter, Coaster etc.',
-    rawImages: ['/materials/palm_fiber_plant.png', '/materials/palm_fiber_fiber.png'],
-    sampleImages: ['/materials/palm_fiber_sample1.png', '/materials/palm_fiber_sample2.png'],
+    rawImages: ['/materials/orig_palm-1.jpg', '/materials/orig_palm-2.jpg'],
+    sampleImages: ['/materials/orig_PTF-01.jpg', '/materials/orig_PTF-02.jpg'],
     categorySlug: 'palm-fiber'
   },
   {
@@ -72,8 +72,8 @@ export const RAW_MATERIALS: MaterialItem[] = [
     name: 'Bamboo',
     scientificName: 'Bambusa Vulgaris',
     description: 'Scientific name of Bamboo (Bambusa Vulgaris). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Pet basket, Planter, Tray, Stool, Furniture etc.',
-    rawImages: ['/materials/bamboo_plant.png', '/materials/bamboo_fiber.png'],
-    sampleImages: ['/materials/bamboo_sample1.png', '/materials/bamboo_sample2.png'],
+    rawImages: ['/materials/orig_bamboo-1.jpg', '/materials/orig_bamboo-2.jpg'],
+    sampleImages: ['/materials/orig_BDB-01.jpg', '/materials/orig_BDB-06.jpg'],
     categorySlug: 'bamboo'
   },
   {
@@ -81,8 +81,8 @@ export const RAW_MATERIALS: MaterialItem[] = [
     name: 'Banana Fiber',
     scientificName: 'Musa Sepientum',
     description: 'Scientific name of Banana Fiber (Musa Sepientum). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Floor mat, Table mat, Planter, Coaster, Pouf etc.',
-    rawImages: ['/materials/banana_fiber_plant.png', '/materials/banana_fiber_fiber.png'],
-    sampleImages: ['/materials/banana_fiber_sample1.png', '/materials/banana_fiber_sample2.png'],
+    rawImages: ['/materials/orig_banana-1.jpg', '/materials/orig_banana-2.jpg'],
+    sampleImages: ['/materials/orig_BAN-01.jpg', '/materials/orig_BAN-04.jpg'],
     categorySlug: 'banana-fiber'
   },
   {
@@ -90,8 +90,8 @@ export const RAW_MATERIALS: MaterialItem[] = [
     name: 'Corn Husk',
     scientificName: 'Corn Leaf (Maize)',
     description: 'Scientific name of Corn Leaf (Maize). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Floor mat, Table mat, Planter, Coaster, Pouf etc.',
-    rawImages: ['/materials/corn_husk_plant.png', '/materials/corn_husk_fiber.png'],
-    sampleImages: ['/materials/corn_husk_sample1.png', '/materials/corn_husk_sample2.png'],
+    rawImages: ['/materials/orig_corn-1.jpg', '/materials/orig_corn-2.jpg'],
+    sampleImages: ['/materials/orig_BSL-01.jpg', '/materials/orig_BSL-02.jpg'],
     categorySlug: 'corn-husk'
   },
   {
@@ -99,8 +99,8 @@ export const RAW_MATERIALS: MaterialItem[] = [
     name: 'Pineapple Fiber',
     scientificName: 'Ananas Somosus',
     description: 'Scientific name of Pineapple Fiber (Ananas Somosus). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Floor mat, Table mat, Planter, Coaster, Pouf etc.',
-    rawImages: ['/materials/pineapple_fiber_plant.png', '/materials/pineapple_fiber_fiber.png'],
-    sampleImages: ['/materials/pineapple_fiber_sample1.png', '/materials/pineapple_fiber_sample2.png'],
+    rawImages: ['/materials/orig_Pineapple-1.jpg', '/materials/orig_pineapple-2.png'],
+    sampleImages: ['/materials/orig_BPA-01.jpg', '/materials/orig_BPA-02.jpg'],
     categorySlug: 'pineapple-fiber'
   },
   {
@@ -108,8 +108,8 @@ export const RAW_MATERIALS: MaterialItem[] = [
     name: 'Water-Hyacinth',
     scientificName: 'Eicssornia Crassipes',
     description: 'Scientific name of Water-hyacinth (Eicssornia Crassipes). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Table mat, Planter, Pet basket, Coaster etc.',
-    rawImages: ['/materials/water_hyacinth_plant.png', '/materials/water_hyacinth_fiber.png'],
-    sampleImages: ['/materials/water_hyacinth_sample1.png', '/materials/water_hyacinth_sample2.png'],
+    rawImages: ['/materials/orig_water-hyacinth-1.jpg', '/materials/orig_water-hyacinth-2.jpg'],
+    sampleImages: ['/materials/orig_BWH-01.jpg', '/materials/orig_BWH-02.jpg'],
     categorySlug: 'water-hyacinth'
   }
 ];
@@ -162,7 +162,7 @@ export const MaterialsPage: React.FC = () => {
         </div>
       </div>
 
-      {/* 2. Materials Information Table (Exact BD Creation Layout) */}
+      {/* 2. Materials Information Table (Exact BD Creation Layout with Original HD Images) */}
       <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 mt-4 sm:mt-6">
         
         {/* Table Header (Desktop) */}
@@ -273,7 +273,7 @@ export const MaterialsPage: React.FC = () => {
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-xl w-full bg-white rounded-xl overflow-hidden shadow-2xl p-4 space-y-3"
+            className="relative max-w-2xl w-full bg-white rounded-xl overflow-hidden shadow-2xl p-4 space-y-3"
           >
             <div className="flex items-center justify-between border-b border-stone-200 pb-2">
               <h3 className="font-serif text-sm font-bold text-stone-800">
@@ -286,7 +286,7 @@ export const MaterialsPage: React.FC = () => {
                 <X className="h-5 w-5" />
               </button>
             </div>
-            <div className="aspect-square max-h-[70vh] w-full bg-stone-50 rounded overflow-hidden flex items-center justify-center border border-stone-100">
+            <div className="aspect-square max-h-[75vh] w-full bg-stone-50 rounded overflow-hidden flex items-center justify-center border border-stone-100">
               <img
                 src={previewImage.src}
                 alt={previewImage.title}
