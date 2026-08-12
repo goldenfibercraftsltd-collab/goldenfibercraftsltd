@@ -170,40 +170,33 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
             </div>
           </div>
 
-          {/* Category Filter Pills (Horizontal scrollable on mobile) */}
-          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 pt-1 scrollbar-none">
-            <button
-              onClick={() => handleCategoryChange('all')}
-              className={`px-3.5 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap transition-all ${
-                selectedCategory === 'all'
-                  ? 'bg-[#65a30d] text-white shadow-xs'
-                  : 'bg-stone-100 text-stone-700 hover:bg-stone-200 border border-stone-200/80'
-              }`}
-            >
-              All Categories ({allProducts.length})
-            </button>
-            {CATEGORIES.map((cat) => {
-              const isActive = selectedCategory === cat.id || selectedCategory === cat.slug;
-              const count = allProducts.filter(p => p.category === cat.id || p.categorySlug === cat.slug).length;
-              return (
-                <button
-                  key={cat.id}
-                  onClick={() => handleCategoryChange(cat.id)}
-                  className={`px-3.5 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap transition-all ${
-                    isActive
-                      ? 'bg-[#65a30d] text-white shadow-xs'
-                      : 'bg-stone-100 text-stone-700 hover:bg-stone-200 border border-stone-200/80'
-                  }`}
-                >
-                  {cat.name} ({count})
-                </button>
-              );
-            })}
-          </div>
+          {/* Category Filter Pills (Only shown when viewing 'All Categories') */}
+          {selectedCategory === 'all' && (
+            <div className="flex items-center gap-1.5 overflow-x-auto pb-1 pt-1 scrollbar-none">
+              <button
+                onClick={() => handleCategoryChange('all')}
+                className="px-3.5 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap transition-all bg-[#65a30d] text-white shadow-xs"
+              >
+                All Categories ({allProducts.length})
+              </button>
+              {CATEGORIES.map((cat) => {
+                const count = allProducts.filter(p => p.category === cat.id || p.categorySlug === cat.slug).length;
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => handleCategoryChange(cat.id)}
+                    className="px-3.5 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap transition-all bg-stone-100 text-stone-700 hover:bg-stone-200 border border-stone-200/80"
+                  >
+                    {cat.name} ({count})
+                  </button>
+                );
+              })}
+            </div>
+          )}
 
           {/* SubCategory Filter Pills (If category has subcategories) */}
           {currentCategoryObj && currentCategoryObj.subcategories && currentCategoryObj.subcategories.length > 0 && (
-            <div className="pt-2 border-t border-stone-100 flex flex-wrap items-center gap-1.5">
+            <div className="pt-1 flex flex-wrap items-center gap-1.5">
               <span className="text-[11px] font-bold text-stone-400 uppercase tracking-wider mr-1">Subcategory:</span>
               <button
                 onClick={() => handleSubCategoryChange('')}
