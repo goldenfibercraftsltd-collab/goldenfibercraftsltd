@@ -196,7 +196,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
                   <div className="w-56 bg-stone-50 border-r border-stone-200 py-2 max-h-[420px] overflow-y-auto">
                     <div className="px-4 py-2 border-b border-stone-200/80 bg-[#093843] text-white flex items-center justify-between">
                       <span className="text-[11px] font-bold uppercase tracking-wider">All Categories</span>
-                      <span className="text-[10px] text-amber-300 font-mono font-bold">12</span>
+                      <span className="text-[10px] text-amber-300 font-mono font-bold">{CATEGORIES.length}</span>
                     </div>
                     {CATEGORIES.map((cat) => {
                       const isHovered = activeCategoryHover === cat.id;
