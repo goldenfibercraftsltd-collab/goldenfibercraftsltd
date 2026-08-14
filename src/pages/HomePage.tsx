@@ -3,12 +3,10 @@ import { HeroBannerCarousel } from '../components/HeroBannerCarousel';
 import { Features } from '../components/Features';
 import { ProductCategories } from '../components/ProductCategories';
 import { ProductShowcase } from '../components/ProductShowcase';
-import { TopProductsShowcase } from '../components/TopProductsShowcase';
 import { ProductionFacilities } from '../components/ProductionFacilities';
 import { GlobalClients } from '../components/GlobalClients';
 import { Sustainability } from '../components/Sustainability';
 import { PRODUCTS } from '../data/products';
-import { Product } from '../types/product';
 import { useNavigate } from 'react-router-dom';
 
 interface HomePageProps {
@@ -43,26 +41,20 @@ export const HomePage: React.FC<HomePageProps> = ({
         onSelectCategory={handleSelectCategory}
       />
 
-      {/* 4. Interactive Filterable Product Showcase (Matching Reference Design) */}
+      {/* 4. Clean 1:1 Interactive Filterable Product Showcase */}
       <ProductShowcase
         products={PRODUCTS}
         onSelectProduct={onSelectProduct}
         onOpenQuoteModal={onOpenQuoteModal}
       />
 
-      {/* 5. Top 10 Showcase */}
-      <TopProductsShowcase
-        products={PRODUCTS}
-        onSelectProduct={onSelectProduct}
-      />
-
-      {/* 6. Production Facilities */}
+      {/* 5. Production Facilities */}
       <ProductionFacilities />
 
-      {/* 7. Sustainability & Compliance */}
+      {/* 6. Sustainability & Compliance */}
       <Sustainability />
 
-      {/* 8. Global Clients */}
+      {/* 7. Global Clients */}
       <GlobalClients />
     </div>
   );
