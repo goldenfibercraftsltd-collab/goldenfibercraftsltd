@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CATEGORIES } from '../data/products';
 import { ArrowRight, Package, Leaf, ShoppingBag, Sparkles, Trees } from 'lucide-react';
+import { ScrollTypingText } from './ScrollTypingText';
 
 interface ProductCategoriesProps {
   products?: any[];
@@ -38,9 +39,12 @@ export const ProductCategories: React.FC<ProductCategoriesProps> = () => {
           <span className="text-xs font-bold uppercase tracking-widest text-emerald-700">
             OUR PPT PRODUCT CATEGORIES
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-stone-900">
-            Explore Golden Fiber Crafts
-          </h2>
+          <ScrollTypingText
+            as="h2"
+            text="Explore Golden Fiber Crafts"
+            className="font-serif text-3xl sm:text-4xl font-extrabold text-stone-900"
+            speed={35}
+          />
           <p className="text-stone-500 text-xs sm:text-sm font-light">
             Crafted from 100% natural Bangladesh jute, seagrass, water hyacinth, Kaisa grass, and bamboo.
           </p>

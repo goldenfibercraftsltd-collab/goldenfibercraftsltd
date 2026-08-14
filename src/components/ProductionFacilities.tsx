@@ -1,5 +1,6 @@
 import React from 'react';
 import { Sparkles, Layers, Package } from 'lucide-react';
+import { ScrollTypingText } from './ScrollTypingText';
 
 export const ProductionFacilities: React.FC = () => {
   return (
@@ -8,9 +9,14 @@ export const ProductionFacilities: React.FC = () => {
         
         <div className="text-center reveal-up">
           <span className="text-xs font-bold uppercase tracking-[0.25em] text-amber-700">Infrastructure</span>
-          <h2 className="mt-2 font-serif text-2xl sm:text-3xl font-light tracking-[0.2em] text-stone-900 uppercase">
-            PRODUCTION FACILITIES
-          </h2>
+          <div className="mt-2">
+            <ScrollTypingText
+              as="h2"
+              text="PRODUCTION FACILITIES"
+              className="font-serif text-2xl sm:text-3xl font-light tracking-[0.2em] text-stone-900 uppercase"
+              speed={40}
+            />
+          </div>
           <div className="mx-auto mt-3 h-0.5 w-16 rounded-full bg-amber-600" />
         </div>
 

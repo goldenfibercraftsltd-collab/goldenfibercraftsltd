@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { AnimatedCounter } from '../components/AnimatedCounter';
+import { ScrollTypingText } from '../components/ScrollTypingText';
 
 interface AboutPageProps {
   onOpenQuoteModal?: () => void;
@@ -39,9 +40,12 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
               <Leaf className="h-3.5 w-3.5" />
               Corporate Heritage & Excellence
             </span>
-            <h1 className="font-serif text-3xl sm:text-5xl font-extrabold tracking-tight">
-              About Golden Fiber Crafts Ltd.
-            </h1>
+            <ScrollTypingText
+              as="h1"
+              text="About Golden Fiber Crafts Ltd."
+              className="font-serif text-3xl sm:text-5xl font-extrabold tracking-tight text-white"
+              speed={35}
+            />
             <p className="text-stone-300 text-sm sm:text-base leading-relaxed">
               Bangladesh’s premier manufacturer and exporter of eco-friendly jute, seagrass, kaisa grass handicrafts, storage baskets, planters, and natural home decor.
             </p>
@@ -58,9 +62,12 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
               <Factory className="h-3.5 w-3.5" />
               Who We Are
             </div>
-            <h2 className="font-serif text-2xl sm:text-4xl font-bold text-stone-900 leading-tight">
-              Weaving Sustainability & Global Quality Standards
-            </h2>
+            <ScrollTypingText
+              as="h2"
+              text="Weaving Sustainability & Global Quality Standards"
+              className="font-serif text-2xl sm:text-4xl font-bold text-stone-900 leading-tight"
+              speed={30}
+            />
             <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
               Founded with a mission to promote Bangladesh's rich golden fiber heritage globally, Golden Fiber Crafts Ltd. stands as a pioneer in sustainable manufacturing. From handwoven natural baskets to certified eco-friendly home decor, we bridge traditional craftsmanship with modern export standards.
             </p>
@@ -408,7 +415,12 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
 
         {/* 8. CTA Banner */}
         <div className="reveal-up text-center bg-stone-900 rounded-3xl p-8 sm:p-12 text-white space-y-6 shadow-2xl">
-          <h2 className="font-serif text-2xl sm:text-4xl font-bold">Partner With a Proven Leader</h2>
+          <ScrollTypingText
+            as="h2"
+            text="Partner With a Proven Leader"
+            className="font-serif text-2xl sm:text-4xl font-bold text-white"
+            speed={35}
+          />
           <p className="text-stone-300 text-sm max-w-2xl mx-auto font-light">
             Whether you need custom basket designs or eco-friendly handcrafted lifestyle products, our team is ready to support your supply chain.
           </p>

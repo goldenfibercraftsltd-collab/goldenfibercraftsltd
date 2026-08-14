@@ -1,6 +1,7 @@
 import React from 'react';
 import { GlobalClients } from '../components/GlobalClients';
 import { HeartHandshake, ArrowRight, Award } from 'lucide-react';
+import { ScrollTypingText } from '../components/ScrollTypingText';
 
 interface ClientsPageProps {
   onOpenQuoteModal: () => void;
@@ -46,9 +47,12 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
               <HeartHandshake className="h-3.5 w-3.5" />
               Official GFCL Corporate Presentation Data
             </span>
-            <h1 className="font-serif text-3xl sm:text-5xl font-extrabold tracking-tight">
-              Buyers We Work With
-            </h1>
+            <ScrollTypingText
+              as="h1"
+              text="Buyers We Work With"
+              className="font-serif text-3xl sm:text-5xl font-extrabold tracking-tight text-white"
+              speed={35}
+            />
             <p className="text-stone-300 text-sm sm:text-base leading-relaxed font-light">
               Golden Fiber Crafts Ltd. is a trusted manufacturing & export partner for world-renowned fair trade organizations, ethical global retailers, and international home decor importers.
             </p>
@@ -59,9 +63,12 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
         <div className="space-y-6 bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-stone-200/80">
           <div className="text-center space-y-2 reveal-up">
             <span className="text-xs font-bold uppercase tracking-widest text-emerald-700">AUTHENTIC CLIENT PORTFOLIO</span>
-            <h2 className="font-serif text-2xl sm:text-4xl font-extrabold text-stone-900">
-              Our Official Buyers
-            </h2>
+            <ScrollTypingText
+              as="h2"
+              text="Our Official Buyers"
+              className="font-serif text-2xl sm:text-4xl font-extrabold text-stone-900"
+              speed={35}
+            />
             <p className="text-stone-500 text-xs sm:text-sm max-w-xl mx-auto font-light">
               Real brand partners featured in the Golden Fiber Crafts Ltd. corporate portfolio.
             </p>
@@ -96,9 +103,12 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
               <Award className="h-4 w-4" />
               OFFICIAL COMPLIANCE
             </span>
-            <h2 className="font-serif text-2xl sm:text-4xl font-bold">
-              Factory Certificates & Compliance
-            </h2>
+            <ScrollTypingText
+              as="h2"
+              text="Factory Certificates & Compliance"
+              className="font-serif text-2xl sm:text-4xl font-bold text-white"
+              speed={35}
+            />
             <p className="text-stone-300 text-xs sm:text-sm max-w-xl mx-auto font-light">
               Authentic factory certificates and compliance documents extracted from Golden Fiber Crafts Ltd. corporate portfolio.
             </p>

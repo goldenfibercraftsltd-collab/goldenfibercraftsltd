@@ -1,6 +1,7 @@
 import React from 'react';
 import { Globe, Ship, Award, Users, CheckCircle2 } from 'lucide-react';
 import { AnimatedCounter } from './AnimatedCounter';
+import { ScrollTypingText } from './ScrollTypingText';
 
 export const GlobalClients: React.FC = () => {
   const stats = [
@@ -44,9 +45,14 @@ export const GlobalClients: React.FC = () => {
         {/* Header with reveal-up */}
         <div className="text-center reveal-up">
           <span className="text-xs font-bold uppercase tracking-[0.25em] text-amber-700">Worldwide Footprint</span>
-          <h2 className="mt-2 font-serif text-3xl sm:text-4xl font-light tracking-[0.2em] text-stone-900 uppercase">
-            GLOBAL CLIENTS & EXPORT REACH
-          </h2>
+          <div className="mt-2">
+            <ScrollTypingText
+              as="h2"
+              text="GLOBAL CLIENTS & EXPORT REACH"
+              className="font-serif text-3xl sm:text-4xl font-light tracking-[0.2em] text-stone-900 uppercase"
+              speed={35}
+            />
+          </div>
           <p className="mt-2 text-xs sm:text-sm text-stone-600 max-w-2xl mx-auto">
             Supplying major retail chains, boutique home brands, and wholesale importers across key global markets.
           </p>

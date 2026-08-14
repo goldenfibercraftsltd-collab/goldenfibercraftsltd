@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ProductItem } from '../data/products';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { ScrollTypingText } from './ScrollTypingText';
 
 interface ProductShowcaseProps {
   products: ProductItem[];
@@ -42,9 +43,12 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
         
         {/* 1. Header with classic Serif typography matching reference */}
         <div className="text-center max-w-3xl mx-auto space-y-2.5 reveal-up">
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-stone-900 uppercase">
-            PRODUCT SHOWCASE
-          </h2>
+          <ScrollTypingText
+            as="h2"
+            text="PRODUCT SHOWCASE"
+            className="font-serif text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-stone-900 uppercase"
+            speed={40}
+          />
           <p className="text-stone-500 text-xs sm:text-sm font-light leading-relaxed">
             Filter by category and explore our full range of eco-friendly jute, seagrass, and natural handicraft collections.
           </p>

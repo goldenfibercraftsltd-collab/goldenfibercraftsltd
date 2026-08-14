@@ -20,6 +20,7 @@ import {
   Scale,
   BadgeCheck
 } from 'lucide-react';
+import { ScrollTypingText } from '../components/ScrollTypingText';
 
 interface QualitySection {
   id: string;
@@ -171,9 +172,12 @@ export const QualityControlPage: React.FC = () => {
               <span>International Export Grade Guarantee</span>
             </div>
 
-            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-stone-900 tracking-tight leading-[1.15]">
-              Quality Assurance & Standards
-            </h1>
+            <ScrollTypingText
+              as="h1"
+              text="Quality Assurance & Standards"
+              className="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-stone-900 tracking-tight leading-[1.15]"
+              speed={40}
+            />
 
             <p className="font-serif text-lg sm:text-xl text-[#7c5335] italic font-medium">
               Where ancestral artisan mastery meets modern export quality control.
@@ -339,9 +343,12 @@ export const QualityControlPage: React.FC = () => {
             <span className="text-xs font-bold uppercase tracking-widest text-emerald-800">
               AUDIT MATRIX & SPECIFICATIONS
             </span>
-            <h2 className="font-serif text-2xl sm:text-4xl font-extrabold text-stone-900">
-              Comprehensive Quality Control Checklist
-            </h2>
+            <ScrollTypingText
+              as="h2"
+              text="Comprehensive Quality Control Checklist"
+              className="font-serif text-2xl sm:text-4xl font-extrabold text-stone-900"
+              speed={35}
+            />
             <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-light">
               Every production lot is audited by certified internal inspectors before external SGS/Intertek audits or shipping container loading.
             </p>
@@ -408,9 +415,12 @@ export const QualityControlPage: React.FC = () => {
                 <Award className="h-3.5 w-3.5 text-emerald-400" />
                 Guaranteed Quality & Reliability
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
-                Order Certified Export Handicrafts
-              </h2>
+              <ScrollTypingText
+                as="h2"
+                text="Order Certified Export Handicrafts"
+                className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white"
+                speed={35}
+              />
               <p className="text-stone-200 text-xs sm:text-sm leading-relaxed font-light">
                 Request physical master samples, inspection certificates, or custom OEM production quotes for your brand today.
               </p>

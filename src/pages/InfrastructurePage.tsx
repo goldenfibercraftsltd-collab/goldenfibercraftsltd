@@ -15,6 +15,7 @@ import {
   Maximize2,
   X
 } from 'lucide-react';
+import { ScrollTypingText } from '../components/ScrollTypingText';
 
 interface InfrastructurePageProps {
   onSelectProduct?: (product: any) => void;
@@ -252,9 +253,12 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
               <span>Authentic Handmade Production</span>
             </div>
 
-            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-stone-900 tracking-tight leading-[1.15]">
-              Infrastructure & Craftsmanship
-            </h1>
+            <ScrollTypingText
+              as="h1"
+              text="Infrastructure & Craftsmanship"
+              className="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-stone-900 tracking-tight leading-[1.15]"
+              speed={40}
+            />
 
             <p className="font-serif text-lg sm:text-xl text-[#7c5335] italic font-medium">
               Where natural materials meet skilled hands.
@@ -536,9 +540,12 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
                 <Sparkles className="h-3.5 w-3.5 text-emerald-400" />
                 Handcrafted in Bangladesh
               </span>
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
-                Crafted by Hand. Made with Nature.
-              </h2>
+              <ScrollTypingText
+                as="h2"
+                text="Crafted by Hand. Made with Nature."
+                className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white"
+                speed={35}
+              />
               <p className="text-stone-200 text-xs sm:text-sm leading-relaxed font-light">
                 Partner with Golden Fiber Crafts Ltd. for custom OEM handicraft manufacturing, bespoke sizing, private labeling, and sustainable container export shipments worldwide.
               </p>

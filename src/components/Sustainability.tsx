@@ -1,5 +1,6 @@
 import React from 'react';
 import { Leaf, HeartHandshake, ShieldCheck, Sun, Recycle } from 'lucide-react';
+import { ScrollTypingText } from './ScrollTypingText';
 
 export const Sustainability: React.FC = () => {
   const pillars = [
@@ -42,9 +43,14 @@ export const Sustainability: React.FC = () => {
             <Leaf className="h-3.5 w-3.5" />
             Eco Commitment
           </div>
-          <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-5xl font-light tracking-wide text-white uppercase">
-            SUSTAINABILITY & SOCIAL IMPACT
-          </h2>
+          <div className="mt-4">
+            <ScrollTypingText
+              as="h2"
+              text="SUSTAINABILITY & SOCIAL IMPACT"
+              className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light tracking-wide text-white uppercase"
+              speed={35}
+            />
+          </div>
           <p className="mt-4 text-sm sm:text-base text-amber-200/80 leading-relaxed font-light">
             Empowering Bangladeshi rural communities while supplying global retail markets with 100% biodegradable natural fiber products.
           </p>
