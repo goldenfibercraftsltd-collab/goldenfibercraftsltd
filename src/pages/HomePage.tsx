@@ -2,6 +2,7 @@ import React from 'react';
 import { HeroBannerCarousel } from '../components/HeroBannerCarousel';
 import { Features } from '../components/Features';
 import { ProductCategories } from '../components/ProductCategories';
+import { ProductShowcase } from '../components/ProductShowcase';
 import { TopProductsShowcase } from '../components/TopProductsShowcase';
 import { ProductionFacilities } from '../components/ProductionFacilities';
 import { GlobalClients } from '../components/GlobalClients';
@@ -12,7 +13,7 @@ import { useNavigate } from 'react-router-dom';
 
 interface HomePageProps {
   onOpenQuoteModal: (productCode?: string) => void;
-  onSelectProduct: (product: Product) => void;
+  onSelectProduct: (product: any) => void;
   onOpenInfoModal: (title: string, content: string) => void;
 }
 
@@ -30,7 +31,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
   return (
     <div className="space-y-12 pb-16">
-      {/* 1. Header Auto 5-Second Banner Carousel */}
+      {/* 1. Header Auto 3-Second Banner Carousel */}
       <HeroBannerCarousel onOpenQuoteModal={() => onOpenQuoteModal()} />
 
       {/* 2. Key Corporate Highlights */}
@@ -42,19 +43,26 @@ export const HomePage: React.FC<HomePageProps> = ({
         onSelectCategory={handleSelectCategory}
       />
 
-      {/* 4. Top 10 Showcase */}
+      {/* 4. Interactive Filterable Product Showcase (Matching Reference Design) */}
+      <ProductShowcase
+        products={PRODUCTS}
+        onSelectProduct={onSelectProduct}
+        onOpenQuoteModal={onOpenQuoteModal}
+      />
+
+      {/* 5. Top 10 Showcase */}
       <TopProductsShowcase
         products={PRODUCTS}
         onSelectProduct={onSelectProduct}
       />
 
-      {/* 5. Production Facilities */}
+      {/* 6. Production Facilities */}
       <ProductionFacilities />
 
-      {/* 6. Sustainability & Compliance */}
+      {/* 7. Sustainability & Compliance */}
       <Sustainability />
 
-      {/* 7. Global Clients */}
+      {/* 8. Global Clients */}
       <GlobalClients />
     </div>
   );
