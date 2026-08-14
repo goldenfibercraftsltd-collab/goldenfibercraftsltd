@@ -19,12 +19,12 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
     { name: 'Traidcraft', logo: '/clients/traidcraft.png' }
   ];
 
-  // Authentic Certificate Images Extracted Directly from GFCL Product PPT
+  // Authentic Certificate Images Extracted Directly from GFCL Product PPT (Slide 3: CERTIFICATE)
   const certificateImages = [
-    { title: 'Factory Registration & Export License', image: '/certificates/cert1.png' },
-    { title: 'BSCI Social Compliance Certification', image: '/certificates/cert2.png' },
-    { title: 'Sedex SMETA Audit & Ethics Standard', image: '/certificates/cert3.png' },
-    { title: 'OEKO-TEX & Fair Trade Compliance', image: '/certificates/cert4.png' }
+    { title: 'ISO 14001 Environmental Management', image: '/certificates/cert1.png' },
+    { title: 'ISO 9001:2015 Quality Management', image: '/certificates/cert2.png' },
+    { title: 'BSCI Social Compliance Initiative', image: '/certificates/cert3.png' },
+    { title: 'OEKO-TEX® Standard 100 Certification', image: '/certificates/cert4.png' }
   ];
 
   const getCardSlideClass = (idx: number) => {
