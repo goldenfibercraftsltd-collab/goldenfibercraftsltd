@@ -20,7 +20,7 @@
    Ultra-Smooth, 1500ms Slow GPU-Accelerated Scroll Reveal & Card Slide System
    ========================================================================== */
 
-/* Base reveal elements - 1500ms slow, graceful, ultra-smooth luxury duration */
+/* Base reveal elements - Snappy, 650ms GPU-Accelerated Scroll Reveal */
 .reveal,
 .reveal-up,
 .reveal-left,
@@ -35,68 +35,66 @@
   opacity: 0;
   will-change: opacity, transform;
   transition-property: opacity, transform, clip-path;
-  transition-duration: 1500ms; /* 1.5s slow & smooth premium animation */
+  transition-duration: 650ms; /* Doubled speed from 1500ms to 650ms */
   transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
-/* Variant: Reveal Up (Natural slow slide upward) */
+/* Variant: Reveal Up (Natural slide upward) */
 .reveal,
 .reveal-up {
-  transform: translate3d(0, 36px, 0);
+  transform: translate3d(0, 28px, 0);
 }
 
 /* Variant: Reveal Left (Slide in from left) */
 .reveal-left {
-  transform: translate3d(-40px, 0, 0);
+  transform: translate3d(-30px, 0, 0);
 }
 
 /* Variant: Reveal Right (Slide in from right) */
 .reveal-right {
-  transform: translate3d(40px, 0, 0);
+  transform: translate3d(30px, 0, 0);
 }
 
-/* Variant: Reveal Scale (Subtle scale from 0.93 to 1) */
+/* Variant: Reveal Scale (Subtle scale from 0.95 to 1) */
 .reveal-scale {
-  transform: scale3d(0.93, 0.93, 1);
+  transform: scale3d(0.95, 0.95, 1);
 }
 
 /* Variant: Text Mask Reveal for Headings */
 .reveal-mask {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  transform: translate3d(0, 24px, 0);
+  transform: translate3d(0, 18px, 0);
 }
 
 /* --------------------------------------------------------------------------
-   Specialized Middle-Outward Card Expansion System (1500ms):
-   Middle/center cards anchor first, while left and right cards smoothly &
-   slowly glide outward from the center to their respective sides.
+   Specialized Middle-Outward Card Expansion System (650ms):
    -------------------------------------------------------------------------- */
 
 /* Center card: reveals smoothly in the middle with subtle scale lift */
 .card-slide-mid {
-  transform: translate3d(0, 40px, 0) scale3d(0.93, 0.93, 1);
+  transform: translate3d(0, 28px, 0) scale3d(0.95, 0.95, 1);
 }
 
-/* Left card: starts shifted towards center (to the right), slides OUT to the left */
+/* Left card: starts shifted towards center, slides OUT to the left */
 .card-slide-left {
-  transform: translate3d(70px, 18px, 0) scale3d(0.94, 0.94, 1);
+  transform: translate3d(45px, 12px, 0) scale3d(0.96, 0.96, 1);
 }
 
 /* Far Left card: starts shifted further towards center, slides FAR OUT to the left */
 .card-slide-far-left {
-  transform: translate3d(130px, 24px, 0) scale3d(0.91, 0.91, 1);
+  transform: translate3d(85px, 16px, 0) scale3d(0.94, 0.94, 1);
 }
 
-/* Right card: starts shifted towards center (to the left), slides OUT to the right */
+/* Right card: starts shifted towards center, slides OUT to the right */
 .card-slide-right {
-  transform: translate3d(-70px, 18px, 0) scale3d(0.94, 0.94, 1);
+  transform: translate3d(-45px, 12px, 0) scale3d(0.96, 0.96, 1);
 }
 
 /* Far Right card: starts shifted further towards center, slides FAR OUT to the right */
 .card-slide-far-right {
-  transform: translate3d(-130px, 24px, 0) scale3d(0.91, 0.91, 1);
+  transform: translate3d(-85px, 16px, 0) scale3d(0.94, 0.94, 1);
 }
 
 /* Active Revealed State: Triggered only once when element enters viewport */
@@ -107,22 +105,22 @@
 }
 
 /* --------------------------------------------------------------------------
-   Graceful Stagger Delays (90ms - 1060ms) - Slow & clear progressive cadence
+   Fast & Snappy Stagger Delays (45ms - 450ms) - 2x speed
    -------------------------------------------------------------------------- */
-.stagger-1 { transition-delay: 90ms; }
-.stagger-2 { transition-delay: 220ms; }
-.stagger-3 { transition-delay: 360ms; }
-.stagger-4 { transition-delay: 500ms; }
-.stagger-5 { transition-delay: 640ms; }
-.stagger-6 { transition-delay: 780ms; }
-.stagger-7 { transition-delay: 920ms; }
-.stagger-8 { transition-delay: 1060ms; }
+.stagger-1 { transition-delay: 45ms; }
+.stagger-2 { transition-delay: 100ms; }
+.stagger-3 { transition-delay: 160ms; }
+.stagger-4 { transition-delay: 220ms; }
+.stagger-5 { transition-delay: 280ms; }
+.stagger-6 { transition-delay: 340ms; }
+.stagger-7 { transition-delay: 400ms; }
+.stagger-8 { transition-delay: 460ms; }
 
 /* --------------------------------------------------------------------------
-   Premium Micro-Interactions (Cards, Buttons, Images)
+   Premium Micro-Interactions (Cards, Buttons, Images) - 2x Speed
    -------------------------------------------------------------------------- */
 .hover-lift {
-  transition: transform 350ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 350ms ease, border-color 350ms ease;
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 180ms ease, border-color 180ms ease;
   will-change: transform, box-shadow;
 }
 @media (hover: hover) and (pointer: fine) {
@@ -132,7 +130,7 @@
 }
 
 .hover-lift-sm {
-  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 300ms ease;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 150ms ease;
 }
 @media (hover: hover) and (pointer: fine) {
   .hover-lift-sm:hover {
@@ -141,7 +139,7 @@
 }
 
 .btn-interactive {
-  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), background-color 300ms ease, box-shadow 300ms ease;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1), background-color 150ms ease, box-shadow 150ms ease;
   will-change: transform;
 }
 @media (hover: hover) and (pointer: fine) {
@@ -157,15 +155,15 @@
 }
 
 .btn-arrow {
-  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Image Slow Zoom on Container Hover */
+/* Image Fast Zoom on Container Hover */
 .img-zoom-container {
   overflow: hidden;
 }
 .img-zoom-container img {
-  transition: transform 1000ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 450ms cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform;
 }
 @media (hover: hover) and (pointer: fine) {
@@ -182,11 +180,11 @@
   .card-slide-right,
   .card-slide-far-left,
   .card-slide-far-right {
-    transform: translate3d(0, 28px, 0) scale3d(0.95, 0.95, 1);
+    transform: translate3d(0, 20px, 0) scale3d(0.96, 0.96, 1);
   }
   .reveal-left,
   .reveal-right {
-    transform: translate3d(0, 26px, 0);
+    transform: translate3d(0, 18px, 0);
   }
 }
 
@@ -214,7 +212,7 @@
   }
 }
 
-/* Marquee Animation for Moving Certifications Ticker */
+/* Marquee Animation for Moving Certifications Ticker - Smooth, Gentle & Readable Speed */
 @keyframes marquee {
   0% {
     transform: translateX(0%);
@@ -227,7 +225,7 @@
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 25s linear infinite;
+  animation: marquee 38s linear infinite;
 }
 
 .animate-marquee:hover {

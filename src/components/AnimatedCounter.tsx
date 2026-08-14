@@ -12,7 +12,7 @@ export const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   target,
   prefix = '',
   suffix = '',
-  duration = 1100,
+  duration = 500,
   className = ''
 }) => {
   const [count, setCount] = useState(0);

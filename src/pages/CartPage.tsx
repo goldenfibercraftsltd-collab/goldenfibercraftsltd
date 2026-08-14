@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { useUserAuth } from '../context/UserAuthContext';
-import { Trash2, Home, User, LogIn, Lock, CheckCircle2, AlertCircle, ShoppingBag, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Trash2, Home, User, LogIn, Lock, CheckCircle2, AlertCircle, ShoppingBag, ArrowRight, ShieldCheck, Mail, Scale, Package } from 'lucide-react';
 
 export const CartPage: React.FC = () => {
-  const { cart, removeFromCart, updateQuantity, clearCart, totalCartonsCount, totalCbmSum, totalGwSum, totalCartItemsCount } = useCart();
+  const { cart, removeFromCart, updateQuantity, clearCart, totalCartonsCount, totalCbmSum, totalNwSum, totalGwSum, totalCartItemsCount } = useCart();
   const { buyer, loginBuyer, isLoggedIn } = useUserAuth();
   const navigate = useNavigate();
 
@@ -94,6 +94,7 @@ export const CartPage: React.FC = () => {
           items: cart,
           total_cartons: totalCartonsCount,
           total_cbm: totalCbmSum,
+          total_nw: totalNwSum,
           total_gw: totalGwSum,
         }),
       });
@@ -121,7 +122,7 @@ export const CartPage: React.FC = () => {
           </div>
           <h1 className="font-serif text-3xl font-extrabold text-stone-900">B2B Order Inquiry Received!</h1>
           <p className="text-stone-600 text-sm leading-relaxed max-w-lg mx-auto">
-            Thank you, <strong className="text-stone-900">{buyer?.name}</strong>. Your export cart order has been successfully registered in our system. Our sales engineering team will contact you shortly via email/phone regarding cartoon packaging & FOB export scheduling.
+            Thank you, <strong className="text-stone-900">{buyer?.name}</strong> (<span className="font-mono text-emerald-700 font-bold">{buyer?.email}</span>). Your export cart order has been successfully registered in our system. Our sales engineering team will contact you shortly via email/phone regarding carton packaging & FOB export scheduling.
           </p>
           <div className="pt-4 flex justify-center gap-4">
             <Link to="/products" className="px-6 py-3 rounded-xl bg-[#65a30d] hover:bg-[#4d7c0f] text-white font-extrabold text-xs uppercase tracking-wider">
@@ -146,9 +147,31 @@ export const CartPage: React.FC = () => {
           <span className="text-stone-900 font-bold">Cart</span>
         </nav>
 
-        <h1 className="font-serif text-3xl font-extrabold text-stone-900 tracking-tight">
-          Shopping Cart
-        </h1>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <h1 className="font-serif text-3xl font-extrabold text-stone-900 tracking-tight">
+            Shopping Cart
+          </h1>
+
+          {cart.length > 0 && (
+            <div className="flex flex-wrap items-center gap-3 text-xs font-bold font-mono">
+              <span className="bg-white border border-stone-200 px-3 py-1.5 rounded-xl shadow-xs text-stone-700">
+                Total Pcs: <strong className="text-stone-900">{totalCartItemsCount}</strong>
+              </span>
+              <span className="bg-white border border-stone-200 px-3 py-1.5 rounded-xl shadow-xs text-stone-700">
+                Cartons: <strong className="text-emerald-700">{totalCartonsCount}</strong>
+              </span>
+              <span className="bg-white border border-stone-200 px-3 py-1.5 rounded-xl shadow-xs text-stone-700">
+                CBM: <strong className="text-stone-900">{totalCbmSum}</strong>
+              </span>
+              <span className="bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-xl shadow-xs text-emerald-900">
+                N.W: <strong>{totalNwSum.toFixed(2)} KG</strong>
+              </span>
+              <span className="bg-emerald-700 text-white px-3 py-1.5 rounded-xl shadow-xs">
+                G.W: <strong>{totalGwSum.toFixed(2)} KG</strong>
+              </span>
+            </div>
+          )}
+        </div>
 
         {cart.length === 0 ? (
           <div className="bg-white rounded-3xl p-12 text-center border border-stone-200 shadow-sm space-y-4">
@@ -171,6 +194,7 @@ export const CartPage: React.FC = () => {
                       <th className="px-4 py-4 text-center w-12">#</th>
                       <th className="px-4 py-4">IMAGE</th>
                       <th className="px-4 py-4">ARTICAL NO</th>
+                      <th className="px-4 py-4">TOTAL N.W(KG)</th>
                       <th className="px-4 py-4">TOTAL G.W(KG)</th>
                       <th className="px-4 py-4">TOTAL CARTON</th>
                       <th className="px-4 py-4">TOTAL CBM</th>
@@ -185,7 +209,7 @@ export const CartPage: React.FC = () => {
                         <td className="px-4 py-4 text-center">
                           <button
                             onClick={() => removeFromCart(item.id)}
-                            className="text-stone-400 hover:text-rose-600 transition-colors p-1"
+                            className="text-stone-400 hover:text-rose-600 transition-colors p-1 cursor-pointer"
                             title="Remove item"
                           >
                             <Trash2 className="h-4 w-4" />
@@ -205,6 +229,11 @@ export const CartPage: React.FC = () => {
                             {item.artNo}
                           </Link>
                           <span className="text-[11px] text-stone-500 font-normal">{item.name}</span>
+                        </td>
+
+                        {/* Total NW */}
+                        <td className="px-4 py-4 font-bold text-stone-900 font-mono text-xs">
+                          {(item.totalNw || 0).toFixed(2)}
                         </td>
 
                         {/* Total GW */}
@@ -252,7 +281,7 @@ export const CartPage: React.FC = () => {
                     <span>Returning customer?</span>
                     <button
                       onClick={() => { setShowLoginForm(!showLoginForm); setShowRegisterForm(false); }}
-                      className="text-rose-700 hover:underline font-bold"
+                      className="text-rose-700 hover:underline font-bold cursor-pointer"
                     >
                       Click here to login
                     </button>
@@ -265,17 +294,17 @@ export const CartPage: React.FC = () => {
                     <h3 className="font-serif text-sm font-extrabold text-stone-900 uppercase">Buyer Sign In</h3>
                     <div className="space-y-3">
                       <div>
-                        <label className="block text-xs font-bold text-stone-700">Your Email Address</label>
+                        <label className="block text-xs font-bold text-stone-700">Your Email Address *</label>
                         <input
                           type="email"
                           required
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           placeholder="buyer@company.com"
-                          className="w-full px-3 py-2 border border-stone-300 rounded-lg text-xs outline-none focus:border-emerald-600"
+                          className="w-full px-3.5 py-2.5 border border-stone-300 rounded-xl text-xs font-semibold outline-none focus:border-emerald-600 bg-stone-50 focus:bg-white"
                         />
                       </div>
-                      <button type="submit" className="w-full py-2.5 rounded-lg bg-stone-900 text-white font-bold text-xs">
+                      <button type="submit" className="w-full py-3 rounded-xl bg-stone-900 hover:bg-stone-800 text-white font-extrabold text-xs uppercase tracking-wider cursor-pointer">
                         Sign In & Continue
                       </button>
                     </div>
@@ -346,16 +375,17 @@ export const CartPage: React.FC = () => {
                       </div>
                     </div>
 
-                    <button type="submit" className="w-full py-2.5 rounded-lg bg-[#65a30d] hover:bg-[#4d7c0f] text-white font-extrabold text-xs uppercase tracking-wider">
+                    <button type="submit" className="w-full py-2.5 rounded-lg bg-[#65a30d] hover:bg-[#4d7c0f] text-white font-extrabold text-xs uppercase tracking-wider cursor-pointer">
                       Save & Register Account
                     </button>
                   </form>
                 )}
 
                 {isLoggedIn && (
-                  <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-xs font-semibold text-emerald-950 flex items-center justify-between">
-                    <div>
-                      <span>Logged in as: <strong className="font-bold">{buyer?.name}</strong> ({buyer?.email})</span>
+                  <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-xs font-semibold text-emerald-950 flex items-center justify-between shadow-xs">
+                    <div className="flex items-center gap-2">
+                      <Mail className="h-4 w-4 text-emerald-700" />
+                      <span>Logged in Buyer: <strong className="font-bold text-stone-900">{buyer?.name}</strong> (<span className="font-mono font-bold text-emerald-800">{buyer?.email}</span>)</span>
                     </div>
                   </div>
                 )}
@@ -378,7 +408,7 @@ export const CartPage: React.FC = () => {
                     <button
                       onClick={handleSubmitOrder}
                       disabled={submitting}
-                      className="w-full py-4 rounded-xl bg-[#65a30d] hover:bg-[#4d7c0f] text-white font-extrabold text-sm uppercase tracking-wider shadow-lg flex items-center justify-center gap-2"
+                      className="w-full py-4 rounded-xl bg-[#65a30d] hover:bg-[#4d7c0f] text-white font-extrabold text-sm uppercase tracking-wider shadow-lg flex items-center justify-center gap-2 cursor-pointer"
                     >
                       <span>Submit B2B Export Order Inquiry</span>
                       <ArrowRight className="h-4 w-4" />
@@ -401,3 +431,5 @@ export const CartPage: React.FC = () => {
     </div>
   );
 };
+
+export default CartPage;

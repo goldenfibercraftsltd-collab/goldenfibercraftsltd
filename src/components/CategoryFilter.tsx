@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Search, Filter, ArrowUpRight } from 'lucide-react';
 import { Product } from '../types/product';
+import { CATEGORIES } from '../data/products';
 
 interface CategoryFilterProps {
   products: Product[];
@@ -43,14 +44,7 @@ export const CategoryFilter: React.FC<CategoryFilterProps> = ({
 
   const categories = [
     { id: 'all', label: 'All Products' },
-    { id: 'labels', label: 'All types of Label' },
-    { id: 'tags', label: 'Hangtag & Additional Tag' },
-    { id: 'tapes', label: 'Twill tape, Satin & Elastic' },
-    { id: 'security', label: 'Security & Alarm Tags' },
-    { id: 'baskets', label: 'Storage & Laundry Baskets' },
-    { id: 'planters', label: 'Planters & Pots' },
-    { id: 'bags', label: 'Jute Bags & Packaging' },
-    { id: 'decor', label: 'Home Decor & Mats' },
+    ...CATEGORIES.map(c => ({ id: c.id, label: c.name }))
   ];
 
   const filteredProducts = products.filter((product) => {

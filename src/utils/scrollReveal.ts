@@ -99,8 +99,8 @@ export function initScrollReveal(): () => void {
   observeElements();
 
   // Short debounced passes for dynamically rendered items
-  const timer1 = setTimeout(observeElements, 100);
-  const timer2 = setTimeout(observeElements, 400);
+  const timer1 = setTimeout(observeElements, 40);
+  const timer2 = setTimeout(observeElements, 150);
 
   return () => {
     clearTimeout(timer1);

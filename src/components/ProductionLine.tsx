@@ -3,8 +3,8 @@ import { Maximize2 } from 'lucide-react';
 import { Product } from '../types/product';
 
 interface ProductionLineProps {
-  products: Product[];
-  onSelectProduct: (product: Product) => void;
+  products: any[];
+  onSelectProduct?: (product: any) => void;
 }
 
 export const ProductionLine: React.FC<ProductionLineProps> = ({ products, onSelectProduct }) => {
@@ -31,7 +31,7 @@ export const ProductionLine: React.FC<ProductionLineProps> = ({ products, onSele
           {gridProducts.map((product) => (
             <button
               key={product.id}
-              onClick={() => onSelectProduct(product)}
+              onClick={() => onSelectProduct && onSelectProduct(product)}
               className="group relative block overflow-hidden rounded-xl border border-amber-900/10 focus:outline-none focus:ring-2 focus:ring-amber-500 shadow-md bg-stone-900"
               aria-label={`View ${product.name}`}
             >
