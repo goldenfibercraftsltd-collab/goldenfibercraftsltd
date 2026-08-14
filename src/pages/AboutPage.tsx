@@ -18,11 +18,13 @@ import {
   TrendingUp,
   Search,
   Settings,
-  Mail
+  Mail,
+  Quote
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { AnimatedCounter } from '../components/AnimatedCounter';
 import { ScrollTypingText } from '../components/ScrollTypingText';
+import { WhyChooseUsHub } from '../components/WhyChooseUsHub';
 
 interface AboutPageProps {
   onOpenQuoteModal?: () => void;
@@ -252,136 +254,49 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
         </div>
 
         {/* 5. "Why Choose Us" Interactive Diagram & Features Badges */}
-        <div className="reveal-up rounded-3xl bg-gradient-to-b from-white via-sky-50/30 to-white p-8 sm:p-12 shadow-xl border border-stone-200/80">
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <h3 className="font-serif text-3xl sm:text-4xl font-bold text-stone-900">
-              Why <span className="text-sky-600">Choose Us</span>
-            </h3>
-            <p className="mt-2 text-xs sm:text-sm text-stone-500">
-              Delivering exceptional manufacturing, prompt global shipping, and certified compliance.
-            </p>
-          </div>
-
-          {/* Radial / Connecting Feature Grid */}
-          <div className="max-w-4xl mx-auto py-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-              
-              {/* Left Column Items */}
-              <div className="space-y-6">
-                <div className="hover-lift-sm flex items-center gap-4 rounded-2xl bg-white p-4 shadow-md border border-stone-100">
-                  <div className="h-12 w-12 rounded-xl bg-purple-600 text-white flex items-center justify-center shrink-0 shadow-md">
-                    <Sparkles className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-stone-900 text-sm">One-stop solution provider</h4>
-                    <p className="text-xs text-stone-500">From fiber sourcing to finished export packaging</p>
-                  </div>
-                </div>
-
-                <div className="hover-lift-sm flex items-center gap-4 rounded-2xl bg-white p-4 shadow-md border border-stone-100">
-                  <div className="h-12 w-12 rounded-xl bg-blue-600 text-white flex items-center justify-center shrink-0 shadow-md">
-                    <Truck className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-stone-900 text-sm">Fast delivery system</h4>
-                    <p className="text-xs text-stone-500">On-time scheduled worldwide cargo dispatch</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Center Hub */}
-              <div className="text-center flex flex-col items-center justify-center p-6 rounded-3xl bg-white shadow-xl border-2 border-sky-200 ring-8 ring-sky-50 my-4 md:my-0">
-                <div className="h-16 w-16 rounded-full bg-emerald-600 text-white flex items-center justify-center shadow-lg mb-3">
-                  <Award className="h-8 w-8" />
-                </div>
-                <h4 className="font-serif text-xl font-bold text-stone-900">Why</h4>
-                <p className="font-serif text-2xl font-extrabold text-sky-600">Choose Us</p>
-                <div className="mt-4 flex items-center gap-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-                  <CheckCircle2 className="h-3.5 w-3.5" />
-                  <span>Trusted Global Partner</span>
-                </div>
-              </div>
-
-              {/* Right Column Items */}
-              <div className="space-y-6">
-                <div className="hover-lift-sm flex items-center gap-4 rounded-2xl bg-white p-4 shadow-md border border-stone-100">
-                  <div className="h-12 w-12 rounded-xl bg-amber-500 text-white flex items-center justify-center shrink-0 shadow-md">
-                    <DollarSign className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-stone-900 text-sm">Competitive pricing</h4>
-                    <p className="text-xs text-stone-500">Direct factory rates with high profit margins for buyers</p>
-                  </div>
-                </div>
-
-                <div className="hover-lift-sm flex items-center gap-4 rounded-2xl bg-white p-4 shadow-md border border-stone-100">
-                  <div className="h-12 w-12 rounded-xl bg-amber-600 text-white flex items-center justify-center shrink-0 shadow-md">
-                    <Award className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-stone-900 text-sm">Export-ready production</h4>
-                    <p className="text-xs text-stone-500">Compliant with US, EU, and global standards</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            {/* Bottom Centered Item: Flexible MOQ */}
-            <div className="mt-6 max-w-sm mx-auto">
-              <div className="hover-lift-sm flex items-center justify-center gap-4 rounded-2xl bg-white p-4 shadow-md border border-stone-100 text-center">
-                <div className="h-12 w-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-md">
-                  <Layers className="h-6 w-6" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-bold text-stone-900 text-sm">Flexible MOQ</h4>
-                  <p className="text-xs text-stone-500">Custom orders tailored to brand requirements</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Bottom Badges Strip (Innovation, Quality First, Integrity & Transparency, Customer Satisfaction, Sustainability & On-Time Delivery) */}
-            <div className="mt-10 pt-8 border-t border-stone-200/80 flex flex-wrap items-center justify-center gap-3">
-              <div className="flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold text-stone-800 shadow-sm border border-stone-200">
-                <Zap className="h-4 w-4 text-sky-600" />
-                <span>Innovation</span>
-              </div>
-              <div className="flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold text-stone-800 shadow-sm border border-stone-200">
-                <Mail className="h-4 w-4 text-blue-600" />
-                <span>Quality First</span>
-              </div>
-              <div className="flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold text-stone-800 shadow-sm border border-stone-200">
-                <TrendingUp className="h-4 w-4 text-sky-500" />
-                <span>Integrity & Transparency</span>
-              </div>
-              <div className="flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold text-stone-800 shadow-sm border border-stone-200">
-                <Search className="h-4 w-4 text-sky-600" />
-                <span>Customer Satisfaction</span>
-              </div>
-              <div className="flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold text-stone-800 shadow-sm border border-stone-200">
-                <Settings className="h-4 w-4 text-blue-600" />
-                <span>Sustainability & On-Time Delivery</span>
-              </div>
-            </div>
-
-          </div>
+        <div className="reveal-up">
+          <WhyChooseUsHub />
         </div>
 
         {/* 6. Managing Director Message */}
-        <div className="reveal-scale rounded-3xl bg-gradient-to-br from-amber-900/10 via-white to-emerald-900/10 p-8 sm:p-12 border border-amber-900/15 shadow-xl">
-          <div className="max-w-4xl mx-auto space-y-6">
-            <div className="flex items-center gap-3">
-              <div className="h-12 w-12 rounded-full bg-emerald-700 text-white flex items-center justify-center font-bold text-lg shadow-md">
-                MD
+        <div className="reveal-scale rounded-3xl bg-gradient-to-br from-stone-50 via-white to-emerald-50/40 p-6 sm:p-10 md:p-12 border border-emerald-900/15 shadow-xl relative overflow-hidden">
+          {/* Subtle watermark background icon */}
+          <div className="absolute -right-6 -bottom-6 text-emerald-900/5 pointer-events-none">
+            <Quote className="h-48 w-48 rotate-12" />
+          </div>
+
+          <div className="relative z-10 max-w-4xl mx-auto flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
+            {/* MD Photo Avatar */}
+            <div className="relative shrink-0">
+              <div className="h-32 w-32 sm:h-40 sm:w-40 rounded-2xl overflow-hidden shadow-xl border-2 border-white ring-4 ring-emerald-600/20 bg-stone-100">
+                <img
+                  src="/about/managing_director.png"
+                  alt="Managing Director - Golden Fiber Crafts Ltd."
+                  className="h-full w-full object-cover object-top"
+                />
               </div>
-              <div>
-                <h3 className="font-serif text-xl font-bold text-stone-900">Managing Director's Message</h3>
-                <p className="text-xs text-stone-500 font-semibold">Golden Fiber Crafts Ltd.</p>
+              <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-emerald-700 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-0.5 rounded-full shadow-md whitespace-nowrap">
+                Managing Director
               </div>
             </div>
-            <blockquote className="italic text-stone-700 text-base sm:text-lg leading-relaxed font-serif border-l-4 border-emerald-600 pl-6 py-2">
-              "Our commitment is rooted in two core principles: uncompromised product quality and total environmental responsibility. As global fashion and home decor markets shift towards sustainable supply chains, Golden Fiber Crafts Ltd. provides world-class retail brands with certified eco-friendly solutions produced with dignity, passion, and precision."
-            </blockquote>
+
+            {/* Content & Quote */}
+            <div className="space-y-4 text-center sm:text-left flex-1">
+              <div>
+                <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100/70 border border-emerald-200 mb-1.5">
+                  <ShieldCheck className="h-3 w-3" />
+                  Leadership & Vision
+                </span>
+                <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-stone-900 leading-snug">
+                  Managing Director's Message
+                </h3>
+                <p className="text-xs text-stone-500 font-semibold">Golden Fiber Crafts Ltd.</p>
+              </div>
+
+              <blockquote className="italic text-stone-700 text-sm sm:text-base md:text-lg leading-relaxed font-serif border-l-0 sm:border-l-4 sm:border-emerald-600 sm:pl-5 py-1">
+                "Our commitment is rooted in two core principles: uncompromised product quality and total environmental responsibility. As global fashion and home decor markets shift towards sustainable supply chains, Golden Fiber Crafts Ltd. provides world-class retail brands with certified eco-friendly solutions produced with dignity, passion, and precision."
+              </blockquote>
+            </div>
           </div>
         </div>
 
