@@ -15,6 +15,7 @@ import { ClientsPage } from './pages/ClientsPage';
 import { ContactPage } from './pages/ContactPage';
 import { MaterialsPage } from './pages/MaterialsPage';
 import { QuoteModal } from './components/QuoteModal';
+import { CertificatesTicker } from './components/CertificatesTicker';
 
 import { InfoModal } from './components/InfoModal';
 
@@ -124,6 +125,9 @@ export const AppContent: React.FC = () => {
         </Routes>
 
       </main>
+
+      {/* Moving Certifications Marquee Ticker right before Footer */}
+      <CertificatesTicker />
 
       {/* Global Footer */}
       <Footer />
