@@ -91,8 +91,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
 
           <div className="reveal-right relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white img-zoom-container">
             <img
-              src="/products/image1.jpeg"
-              alt="Golden Fiber Crafts Facility"
+              src="/about/about_artisans_workforce.jpg"
+              alt="Golden Fiber Crafts Rural Artisan Workforce"
               className="w-full h-[400px] object-cover transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/20 to-transparent flex items-end p-8 text-white">
