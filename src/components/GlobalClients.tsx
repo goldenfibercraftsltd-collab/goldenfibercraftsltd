@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, Ship, Award, Users, ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import { Globe, Ship, Award, Users, CheckCircle2 } from 'lucide-react';
 import { AnimatedCounter } from './AnimatedCounter';
 
 export const GlobalClients: React.FC = () => {
@@ -101,27 +101,9 @@ export const GlobalClients: React.FC = () => {
           </div>
         </div>
 
-        {/* B2B Services Callout with reveal-scale */}
-        <div className="reveal-scale mt-12 rounded-3xl bg-gradient-to-br from-amber-900 to-amber-950 p-8 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <span className="text-xs font-bold text-amber-400 uppercase tracking-widest">B2B Merchandising</span>
-            <h4 className="mt-1 font-serif text-2xl font-bold text-white">
-              Private Labeling, Custom Branding & OEM Production
-            </h4>
-            <p className="mt-2 text-xs sm:text-sm text-amber-100/80 max-w-2xl font-light">
-              We offer full customization for size specs, leather/cotton handle accents, color combinations, barcode hangtags, and inner poly packaging according to buyer brand guidelines.
-            </p>
-          </div>
-          <a
-            href="mailto:goldenfibercraftsltd@gmail.com?subject=Inquiry%20from%20Website%20-%20Private%20Label"
-            className="shrink-0 inline-flex items-center gap-2 rounded-xl bg-amber-500 px-6 py-3 text-xs sm:text-sm font-bold text-stone-950 hover:bg-amber-400 transition-all shadow-lg btn-interactive"
-          >
-            <span>Partner With Us</span>
-            <ArrowUpRight className="h-4 w-4 btn-arrow" />
-          </a>
-        </div>
-
       </div>
     </section>
   );
 };
+
+export default GlobalClients;

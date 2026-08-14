@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { CATEGORIES, ProductItem } from '../data/products';
 import { getAllActiveProducts } from '../utils/productStore';
 import { ImageMagnifier } from '../components/ImageMagnifier';
 import { useCart, CartItem } from '../context/CartContext';
-import { ArrowLeft, CheckCircle2, ShoppingBag, ShieldCheck, Phone, Home, Sparkles, ChevronRight, AlertTriangle, Check, Layers, FileText, Info } from 'lucide-react';
+import { Check, AlertTriangle, ChevronLeft, ChevronRight, Home, ArrowLeft } from 'lucide-react';
 
 interface ProductDetailPageProps {
-  onOpenQuoteModal: (productCode?: string) => void;
+  onOpenQuoteModal?: (productCode?: string) => void;
 }
 
 export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuoteModal }) => {
@@ -17,7 +17,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
 
   const allActiveProducts = useMemo(() => getAllActiveProducts(), []);
 
-  // Find product by slug or id
+  // Find product by slug or id or code
   const product: ProductItem =
     allActiveProducts.find((p) => p.slug === productSlug || p.id === productSlug || p.code === productSlug) ||
     allActiveProducts[0];
@@ -26,47 +26,44 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
     CATEGORIES.find((c) => c.slug === product.categorySlug || c.id === product.category || c.id === product.categorySlug) ||
     CATEGORIES[0];
 
-  // Get products ONLY in the same category
-  const categoryProducts = allActiveProducts.filter(
-    (p) => p.categorySlug === currentCategory.slug || p.category === currentCategory.id || p.categorySlug === currentCategory.id
-  );
-
-  // Specs & Carton/CBM defaults based on product or BDCreation spec standards
-  const setPerCarton = product.setPerCarton || 2;
-  const cbmPerCarton = product.cbmPerCarton || 0.06;
+  // Specs & Carton/CBM defaults based on product data
+  const setPerCarton = product.setPerCarton || 1;
+  const cbmPerCarton = product.cbmPerCarton || 0.074;
   const nwPerCtn = product.nwPerCtn || 3;
   const gwPerCtn = product.gwPerCtn || 4;
   const unit = product.unit || 'S/3';
+  const material = product.material || 'Jute';
+  const color = product.color || 'Multicolor';
 
   // Calculator states
-  const [orderQty, setOrderQty] = useState<number>(setPerCarton * 10); // default 20 pcs
+  const [orderQty, setOrderQty] = useState<number>(setPerCarton);
+  const [receivedQty, setReceivedQty] = useState<string>('');
   const [addedSuccess, setAddedSuccess] = useState(false);
-
-  // Selected gallery image
   const [selectedImage, setSelectedImage] = useState<string>(product.image);
 
+  // Reset when product changes
   useEffect(() => {
     setSelectedImage(product.image);
-    setOrderQty(setPerCarton * 10);
+    setOrderQty(setPerCarton);
+    setReceivedQty('');
     setAddedSuccess(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [productSlug, product, setPerCarton]);
 
   // Dynamic calculations
-  const totalCartons = Math.ceil(orderQty / setPerCarton);
-  const totalCbm = Number((totalCartons * cbmPerCarton).toFixed(3));
-  const totalNw = Number((totalCartons * nwPerCtn).toFixed(2));
-  const totalGw = Number((totalCartons * gwPerCtn).toFixed(2));
+  const totalCartons = Math.max(1, Math.ceil(orderQty / setPerCarton));
+  const totalCbm = (totalCartons * cbmPerCarton).toFixed(3);
+  const totalGw = (totalCartons * gwPerCtn).toString();
 
   const handleAddToCart = () => {
     const cartItem: CartItem = {
       id: product.id,
       name: product.name,
       image: selectedImage || product.image,
-      artNo: product.id,
+      artNo: product.code || product.id,
       categoryName: product.categoryName,
-      material: product.material || 'Natural Fiber',
-      color: product.color || 'Multicolor',
+      material,
+      color,
       unit,
       cbmPerCarton,
       setPerCarton,
@@ -74,9 +71,9 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
       gwPerCtn,
       orderQty,
       totalCartons,
-      totalCbm,
-      totalNw,
-      totalGw,
+      totalCbm: Number(totalCbm),
+      totalNw: Number((totalCartons * nwPerCtn).toFixed(2)),
+      totalGw: Number(totalGw),
     };
 
     addToCart(cartItem);
@@ -84,385 +81,331 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
     setTimeout(() => setAddedSuccess(false), 3000);
   };
 
-  // Combine images (main image + distinct gallery images)
-  const allImages = Array.from(
-    new Set([
-      product.image,
-      ...(product.galleryImages || []).filter((img) => img !== product.image)
-    ])
-  );
+  // Build 15 Related Products (same category first, filled with other catalog items)
+  const fifteenRelatedProducts = useMemo(() => {
+    const sameCat = allActiveProducts.filter(p => p.id !== product.id && (p.categorySlug === product.categorySlug || p.category === product.category));
+    const otherCats = allActiveProducts.filter(p => p.id !== product.id && p.categorySlug !== product.categorySlug && p.category !== product.category);
+    const combined = [...sameCat, ...otherCats];
+    return combined.slice(0, 15);
+  }, [allActiveProducts, product]);
+
+  // 3-Second Auto Sliding Logic for 15 Related Products
+  const [sliderIndex, setSliderIndex] = useState<number>(0);
+  const sliderRef = useRef<HTMLDivElement>(null);
+  const isHoveredRef = useRef<boolean>(false);
+
+  const itemsPerView = 6; // Display 6 items at once on wide screens
+  const maxSlideIndex = Math.max(0, fifteenRelatedProducts.length - itemsPerView);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!isHoveredRef.current && fifteenRelatedProducts.length > 0) {
+        setSliderIndex((prev) => (prev >= maxSlideIndex ? 0 : prev + 1));
+      }
+    }, 3000); // Exactly 3 seconds sliding
+
+    return () => clearInterval(interval);
+  }, [maxSlideIndex, fifteenRelatedProducts.length]);
+
+  // Scroll to active index
+  useEffect(() => {
+    if (sliderRef.current) {
+      const container = sliderRef.current;
+      const scrollWidth = container.scrollWidth - container.clientWidth;
+      if (scrollWidth > 0 && maxSlideIndex > 0) {
+        const targetScroll = (sliderIndex / maxSlideIndex) * scrollWidth;
+        container.scrollTo({ left: targetScroll, behavior: 'smooth' });
+      }
+    }
+  }, [sliderIndex, maxSlideIndex]);
 
   return (
-    <div className="bg-stone-50 min-h-screen py-4 sm:py-10 font-sans animate-fadeIn">
-      <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 space-y-6">
+    <div className="bg-white min-h-screen py-6 sm:py-10 font-sans animate-fadeIn">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
         
-        {/* Top Breadcrumb with reveal-up */}
-        <nav className="reveal-up flex items-center gap-2 text-xs font-semibold text-stone-500 overflow-x-auto pb-1">
-          <Link to="/" className="hover:text-emerald-700 flex items-center gap-1 shrink-0">
+        {/* Top Breadcrumb navigation */}
+        <nav className="flex items-center gap-2 text-xs font-medium text-stone-500 pb-2 border-b border-stone-100">
+          <Link to="/" className="hover:text-emerald-700 flex items-center gap-1">
             <Home className="h-3.5 w-3.5" /> Home
           </Link>
-          <span className="shrink-0">/</span>
-          <Link to="/products" className="hover:text-emerald-700 shrink-0">Products</Link>
-          <span className="shrink-0">/</span>
-          <Link to={`/categories/${currentCategory.slug}`} className="hover:text-emerald-700 shrink-0">{currentCategory.name}</Link>
-          <span className="shrink-0">/</span>
-          <span className="text-stone-900 font-bold truncate">{product.name}</span>
+          <span>/</span>
+          <Link to="/products" className="hover:text-emerald-700">Products</Link>
+          <span>/</span>
+          <Link to={`/products?category=${currentCategory.id || currentCategory.slug}`} className="hover:text-emerald-700">
+            {currentCategory.name}
+          </Link>
+          <span>/</span>
+          <span className="text-stone-900 font-semibold truncate">{product.code || product.id}</span>
         </nav>
 
-        {/* Back Button with reveal-up */}
-        <div className="reveal-up flex items-center justify-between">
-          <Link
-            to={`/categories/${currentCategory.slug}`}
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-900 bg-emerald-50 hover:bg-emerald-100 px-3.5 py-2 rounded-xl border border-emerald-200/80 transition-all btn-interactive"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Back to {currentCategory.name} ({categoryProducts.length} Items)
-          </Link>
-        </div>
-
-        {/* Main 2-Column Detail Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 sm:gap-8 items-start">
+        {/* TOP SECTION: Single Product Specifications & Calculator (Exact match to User Image 1) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start bg-white p-4 sm:p-8 rounded-2xl">
           
-          {/* MAIN CONTENT AREA FIRST ON MOBILE (order-1 lg:order-2) */}
-          <div className="reveal-up order-1 lg:order-2 lg:col-span-3 bg-white rounded-3xl p-4 sm:p-10 shadow-xs border border-stone-200/90 space-y-6 sm:space-y-8">
+          {/* Left Column: Product Image with Zoom & Gallery */}
+          <div className="lg:col-span-5 flex flex-col items-center justify-center">
+            <div className="w-full max-w-[460px] h-[360px] sm:h-[420px] flex items-center justify-center p-4 bg-white rounded-2xl">
+              <ImageMagnifier src={selectedImage} alt={product.name} zoomLevel={2.2} />
+            </div>
+
+            {/* Gallery Thumbnails if available */}
+            {product.galleryImages && product.galleryImages.length > 1 && (
+              <div className="flex items-center gap-2 mt-4 overflow-x-auto pb-2 max-w-full">
+                {product.galleryImages.map((img, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setSelectedImage(img)}
+                    className={`h-16 w-16 p-1 rounded-lg border-2 bg-white shrink-0 transition-all cursor-pointer ${
+                      selectedImage === img ? 'border-emerald-600 ring-2 ring-emerald-500/40' : 'border-stone-200 hover:border-stone-300'
+                    }`}
+                  >
+                    <img src={img} alt="Thumb" className="h-full w-full object-contain" />
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Right Column: Exact Specification Rows & Calculation Inputs (Image 1) */}
+          <div className="lg:col-span-7 space-y-3 text-stone-800 text-sm">
             
-            {/* Title Header */}
-            <div className="space-y-2 border-b border-stone-100 pb-4 sm:pb-5">
-              <div className="flex flex-wrap items-center gap-2">
-                <span className="bg-emerald-700 text-white text-[11px] sm:text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-xs">
-                  ART NO: {product.id}
+            {/* Table / Key-Value Spec Grid */}
+            <div className="space-y-2.5">
+              
+              {/* Art No */}
+              <div className="grid grid-cols-12 items-center py-1">
+                <span className="col-span-4 text-stone-700 font-medium">Art No:</span>
+                <span className="col-span-8 font-semibold text-stone-900">{product.code || product.id}</span>
+              </div>
+
+              {/* Description */}
+              <div className="grid grid-cols-12 items-center py-1">
+                <span className="col-span-4 text-stone-700 font-medium">Description:</span>
+                <span className="col-span-8 font-medium text-stone-900">{product.name}</span>
+              </div>
+
+              {/* Material */}
+              <div className="grid grid-cols-12 items-center py-1">
+                <span className="col-span-4 text-stone-700 font-medium">Material:</span>
+                <span className="col-span-8 font-medium text-stone-900">{material}</span>
+              </div>
+
+              {/* Color */}
+              <div className="grid grid-cols-12 items-center py-1">
+                <span className="col-span-4 text-stone-700 font-medium">Color:</span>
+                <span className="col-span-8 font-medium text-stone-900">{color}</span>
+              </div>
+
+              {/* Unit */}
+              <div className="grid grid-cols-12 items-center py-1">
+                <span className="col-span-4 text-stone-700 font-medium">Unit:</span>
+                <span className="col-span-8 font-medium text-stone-900">{unit}</span>
+              </div>
+
+              {/* CBM/Carton */}
+              <div className="grid grid-cols-12 items-center py-1">
+                <span className="col-span-4 text-stone-700 font-medium">CBM/Carton:</span>
+                <span className="col-span-8 font-medium text-stone-900 font-mono">{cbmPerCarton}</span>
+              </div>
+
+              {/* Set/Carton */}
+              <div className="grid grid-cols-12 items-center py-1">
+                <span className="col-span-4 text-stone-700 font-medium">Set/Carton:</span>
+                <span className="col-span-8 font-medium text-stone-900 font-mono">{setPerCarton}</span>
+              </div>
+
+              {/* N.W/CTN(KG) */}
+              <div className="grid grid-cols-12 items-center py-1">
+                <span className="col-span-4 text-stone-700 font-medium">N.W/CTN(KG):</span>
+                <span className="col-span-8 font-medium text-stone-900 font-mono">{nwPerCtn}</span>
+              </div>
+
+              {/* G.W/CTN(KG) */}
+              <div className="grid grid-cols-12 items-center py-1">
+                <span className="col-span-4 text-stone-700 font-medium">G.W/CTN(KG):</span>
+                <span className="col-span-8 font-medium text-stone-900 font-mono">{gwPerCtn}</span>
+              </div>
+
+              {/* Total G.W(KG) Box */}
+              <div className="grid grid-cols-12 items-center py-1">
+                <span className="col-span-4 text-stone-700 font-medium">Total G.W(KG):</span>
+                <div className="col-span-8">
+                  <input
+                    type="text"
+                    readOnly
+                    value={totalGw}
+                    className="w-48 px-3 py-1.5 bg-white border border-stone-400 rounded-sm text-sm text-stone-900 font-mono"
+                  />
+                </div>
+              </div>
+
+              {/* Total Carton Box */}
+              <div className="grid grid-cols-12 items-center py-1">
+                <span className="col-span-4 text-stone-700 font-medium">Total Carton:</span>
+                <div className="col-span-8">
+                  <input
+                    type="text"
+                    readOnly
+                    value={totalCartons}
+                    className="w-48 px-3 py-1.5 bg-white border border-stone-400 rounded-sm text-sm text-stone-900 font-mono"
+                  />
+                </div>
+              </div>
+
+              {/* Total CBM Box */}
+              <div className="grid grid-cols-12 items-center py-1">
+                <span className="col-span-4 text-stone-700 font-medium">Total CBM:</span>
+                <div className="col-span-8">
+                  <input
+                    type="text"
+                    readOnly
+                    value={totalCbm}
+                    className="w-48 px-3 py-1.5 bg-white border border-stone-400 rounded-sm text-sm text-stone-900 font-mono"
+                  />
+                </div>
+              </div>
+
+              {/* Received Qty Box */}
+              <div className="grid grid-cols-12 items-center py-1.5">
+                <span className="col-span-4 font-bold text-[#65a30d]">Received Qty:</span>
+                <div className="col-span-8">
+                  <input
+                    type="text"
+                    value={receivedQty}
+                    onChange={(e) => setReceivedQty(e.target.value)}
+                    className="w-48 px-3 py-1.5 bg-white border-2 border-[#65a30d] rounded-sm text-sm text-stone-900 font-mono outline-hidden"
+                    placeholder=""
+                  />
+                </div>
+              </div>
+
+              {/* Order Qty + Add To Cart Row */}
+              <div className="grid grid-cols-12 items-center py-2">
+                <span className="col-span-4 font-bold text-stone-900">Order Qty</span>
+                <div className="col-span-8 flex items-center gap-3">
+                  <input
+                    type="number"
+                    min={setPerCarton}
+                    step={setPerCarton}
+                    value={orderQty}
+                    onChange={(e) => setOrderQty(Math.max(1, Number(e.target.value)))}
+                    className="w-44 px-3 py-2 bg-white border-2 border-[#65a30d] rounded-sm text-sm font-bold text-stone-900 font-mono outline-hidden"
+                  />
+                  <button
+                    onClick={handleAddToCart}
+                    className="px-6 py-2 rounded-sm border-2 border-[#65a30d] text-[#65a30d] hover:bg-[#65a30d] hover:text-white font-bold text-sm transition-all duration-200 cursor-pointer flex items-center gap-1.5 shadow-2xs"
+                  >
+                    {addedSuccess ? (
+                      <>
+                        <Check className="h-4 w-4" /> Added
+                      </>
+                    ) : (
+                      '+ Add To Cart'
+                    )}
+                  </button>
+                </div>
+              </div>
+
+              {/* Green Alert Notification Box (Exact match to Image 1) */}
+              <div className="mt-4 p-3 rounded-md bg-[#dcfce7] border border-[#86efac] text-[#14532d] text-xs flex items-center gap-2">
+                <AlertTriangle className="h-4 w-4 text-[#166534] shrink-0" />
+                <span>
+                  There will be {setPerCarton} products in 1 cartoon. So you must give {setPerCarton} times the product of the cartoon.
                 </span>
-                <span className="bg-stone-100 text-stone-700 text-[11px] sm:text-xs font-bold px-3 py-1 rounded-full border border-stone-200">
-                  Category: {product.categoryName}
-                </span>
-              </div>
-              <h1 className="font-serif text-xl sm:text-4xl font-extrabold text-stone-900 tracking-tight">
-                {product.name}
-              </h1>
-            </div>
-
-            {/* PRODUCT PHOTO WITH RESPONSIVE LENS MAGNIFIER */}
-            <div className="space-y-4">
-              <div className="h-[340px] sm:h-[480px] lg:h-[540px] w-full">
-                <ImageMagnifier src={selectedImage} alt={product.name} zoomLevel={2.5} />
               </div>
 
-              {/* Multi-Angle Gallery Thumbnails */}
-              {allImages.length > 0 && (
-                <div className="space-y-2.5 pt-2">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[11px] sm:text-xs font-extrabold text-stone-800 uppercase tracking-wider flex items-center gap-1.5">
-                      <Layers className="h-4 w-4 text-emerald-600" />
-                      Product Gallery & High-Res Views ({allImages.length} Photos)
-                    </span>
-                    <span className="text-[10px] sm:text-[11px] font-semibold text-emerald-700">Click photo to change</span>
-                  </div>
-
-                  <div className="grid grid-cols-4 sm:grid-cols-5 gap-2 sm:gap-3">
-                    {allImages.map((img, idx) => {
-                      const isSelected = selectedImage === img;
-                      return (
-                        <button
-                          key={idx}
-                          onClick={() => setSelectedImage(img)}
-                          className={`relative h-16 sm:h-24 rounded-xl sm:rounded-2xl overflow-hidden border-2 p-1 transition-all bg-white shrink-0 shadow-xs cursor-pointer hover-lift-sm ${
-                            isSelected
-                              ? 'border-emerald-600 ring-2 ring-emerald-500/50 scale-[1.02] bg-emerald-50/20'
-                              : 'border-stone-200 hover:border-emerald-400 opacity-85 hover:opacity-100'
-                          }`}
-                        >
-                          <img src={img} alt={`${product.name} Angle ${idx + 1}`} className="h-full w-full object-contain filter drop-shadow-xs" />
-                          {isSelected && (
-                            <div className="absolute top-1 right-1 bg-emerald-600 text-white rounded-full p-0.5 shadow-sm">
-                              <Check className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
-                            </div>
-                          )}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* B2B EXPORT SPECIFICATIONS TABLE */}
-            <div className="space-y-4 pt-4 sm:pt-6 border-t border-stone-200">
-              <h3 className="font-serif text-base sm:text-lg font-extrabold text-stone-900 border-b border-stone-100 pb-2">
-                Export Technical & Carton Specifications
-              </h3>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2.5 text-xs text-stone-800 font-medium">
-                <div className="flex items-center justify-between py-1 border-b border-stone-100">
-                  <span className="font-bold text-stone-600">Art No:</span>
-                  <span className="font-bold text-emerald-800 font-mono text-sm">{product.id}</span>
-                </div>
-
-                <div className="flex items-center justify-between py-1 border-b border-stone-100">
-                  <span className="font-bold text-stone-600">Description:</span>
-                  <span className="font-semibold text-stone-900 truncate max-w-xs">{product.name}</span>
-                </div>
-
-                <div className="flex items-center justify-between py-1 border-b border-stone-100">
-                  <span className="font-bold text-stone-600">Material:</span>
-                  <span className="font-semibold text-stone-900">{product.material || 'Natural Jute & Fiber'}</span>
-                </div>
-
-                <div className="flex items-center justify-between py-1 border-b border-stone-100">
-                  <span className="font-bold text-stone-600">Color:</span>
-                  <span className="font-semibold text-stone-900">{product.color || 'Multicolor / Natural'}</span>
-                </div>
-
-                <div className="flex items-center justify-between py-1 border-b border-stone-100">
-                  <span className="font-bold text-stone-600">Unit:</span>
-                  <span className="font-bold text-stone-900">{unit}</span>
-                </div>
-
-                <div className="flex items-center justify-between py-1 border-b border-stone-100">
-                  <span className="font-bold text-stone-600">CBM/Carton:</span>
-                  <span className="font-bold text-stone-900 font-mono">{cbmPerCarton}</span>
-                </div>
-
-                <div className="flex items-center justify-between py-1 border-b border-stone-100">
-                  <span className="font-bold text-stone-600">Set/Carton:</span>
-                  <span className="font-bold text-emerald-700 font-mono">{setPerCarton}</span>
-                </div>
-
-                <div className="flex items-center justify-between py-1 border-b border-stone-100">
-                  <span className="font-bold text-stone-600">N.W/CTN (KG):</span>
-                  <span className="font-bold text-stone-900 font-mono">{nwPerCtn}</span>
-                </div>
-
-                <div className="flex items-center justify-between py-1 border-b border-stone-100">
-                  <span className="font-bold text-stone-600">G.W/CTN (KG):</span>
-                  <span className="font-bold text-stone-900 font-mono">{gwPerCtn}</span>
-                </div>
-              </div>
-
-              {/* DYNAMIC CARTON & CBM/WEIGHT CALCULATOR FORM */}
-              <div className="bg-stone-50 p-4 sm:p-6 rounded-2xl border border-stone-200 space-y-4 mt-6">
-                
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
-                  <div className="space-y-1">
-                    <label className="block text-[10px] sm:text-xs font-bold text-stone-700 uppercase tracking-wider">Total N.W (KG)</label>
-                    <input
-                      type="text"
-                      readOnly
-                      value={totalNw.toFixed(2)}
-                      className="w-full px-3 py-2.5 bg-white border border-stone-300 rounded-xl text-xs font-bold text-stone-900 font-mono"
-                    />
-                  </div>
-
-                  <div className="space-y-1">
-                    <label className="block text-[10px] sm:text-xs font-bold text-stone-700 uppercase tracking-wider">Total G.W (KG)</label>
-                    <input
-                      type="text"
-                      readOnly
-                      value={totalGw.toFixed(2)}
-                      className="w-full px-3 py-2.5 bg-white border border-stone-300 rounded-xl text-xs font-bold text-stone-900 font-mono"
-                    />
-                  </div>
-
-                  <div className="space-y-1">
-                    <label className="block text-[10px] sm:text-xs font-bold text-stone-700 uppercase tracking-wider">Total Carton</label>
-                    <input
-                      type="text"
-                      readOnly
-                      value={totalCartons}
-                      className="w-full px-3 py-2.5 bg-white border border-stone-300 rounded-xl text-xs font-bold text-emerald-800 font-mono"
-                    />
-                  </div>
-
-                  <div className="space-y-1">
-                    <label className="block text-[10px] sm:text-xs font-bold text-stone-700 uppercase tracking-wider">Total CBM</label>
-                    <input
-                      type="text"
-                      readOnly
-                      value={totalCbm.toFixed(3)}
-                      className="w-full px-3 py-2.5 bg-white border border-stone-300 rounded-xl text-xs font-bold text-stone-900 font-mono"
-                    />
-                  </div>
-                </div>
-
-                {/* Order Quantity Input & Add To Cart Row */}
-                <div className="flex flex-col sm:flex-row items-center gap-4 pt-1">
-                  <div className="w-full sm:w-48 space-y-1">
-                    <label className="block text-xs font-bold text-stone-900 uppercase tracking-wider">Order Qty (Pcs)</label>
-                    <input
-                      type="number"
-                      min={setPerCarton}
-                      step={setPerCarton}
-                      value={orderQty}
-                      onChange={(e) => setOrderQty(Math.max(1, Number(e.target.value)))}
-                      className="w-full px-4 py-3 bg-white border-2 border-emerald-600 focus:border-emerald-700 rounded-xl text-sm font-extrabold text-emerald-950 font-mono outline-hidden shadow-xs transition-colors"
-                    />
-                  </div>
-
-                  <div className="w-full sm:flex-1 sm:pt-5">
-                    <button
-                      onClick={handleAddToCart}
-                      className="w-full py-3.5 px-8 rounded-xl bg-[#65a30d] hover:bg-[#4d7c0f] text-white font-extrabold text-sm tracking-wide shadow-lg transition-transform hover:scale-[1.01] active:scale-95 flex items-center justify-center gap-2 cursor-pointer btn-interactive"
-                    >
-                      {addedSuccess ? (
-                        <>
-                          <Check className="h-5 w-5" />
-                          <span>Added to Cart Successfully!</span>
-                        </>
-                      ) : (
-                        <>
-                          <span>+ Add To Cart</span>
-                        </>
-                      )}
-                    </button>
-                  </div>
-                </div>
-
-                {/* Carton Alert Message */}
-                <div className="p-3.5 rounded-xl bg-emerald-100/80 border border-emerald-300 text-emerald-950 text-xs font-semibold flex items-start gap-2.5">
-                  <AlertTriangle className="h-4 w-4 text-emerald-700 shrink-0 mt-0.5" />
-                  <div>
-                    <span>There will be <strong>{setPerCarton} products in 1 cartoon</strong>. So you must give <strong>{setPerCarton} times</strong> the product of the cartoon.</span>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-
-            {/* CRAFTSMANSHIP & DETAILS 4 BOXES */}
-            <div className="space-y-6 pt-6 sm:pt-8 border-t border-stone-200">
-              <div className="flex items-center gap-2">
-                <Sparkles className="h-5 w-5 text-amber-500" />
-                <h2 className="font-serif text-lg sm:text-2xl font-extrabold text-stone-900 tracking-tight">
-                  Detailed Product Craftsmanship & B2B Overview
-                </h2>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                {/* Box 1: Product Overview */}
-                <div className="hover-lift-sm bg-stone-50 p-5 sm:p-6 rounded-2xl border border-stone-200/80 space-y-2 sm:space-y-3 hover:border-emerald-200 transition-all">
-                  <div className="flex items-center gap-2 text-emerald-800 font-extrabold text-xs uppercase tracking-wider">
-                    <FileText className="h-4 w-4 text-emerald-600" />
-                    <span>Product Overview & Design</span>
-                  </div>
-                  <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
-                    {product.longDescription?.overview || product.description}
-                  </p>
-                </div>
-
-                {/* Box 2: Artisanal Craftsmanship */}
-                <div className="hover-lift-sm bg-stone-50 p-5 sm:p-6 rounded-2xl border border-stone-200/80 space-y-2 sm:space-y-3 hover:border-amber-200 transition-all">
-                  <div className="flex items-center gap-2 text-amber-800 font-extrabold text-xs uppercase tracking-wider">
-                    <Sparkles className="h-4 w-4 text-amber-600" />
-                    <span>Artisanal Craftsmanship</span>
-                  </div>
-                  <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
-                    {product.longDescription?.craftsmanship || 'Handcrafted by skilled traditional artisans in Bangladesh using sustainable natural fibers harvested from coastal and river communities.'}
-                  </p>
-                </div>
-
-                {/* Box 3: Export & Quality Control */}
-                <div className="hover-lift-sm bg-stone-50 p-5 sm:p-6 rounded-2xl border border-stone-200/80 space-y-2 sm:space-y-3 hover:border-blue-200 transition-all">
-                  <div className="flex items-center gap-2 text-blue-800 font-extrabold text-xs uppercase tracking-wider">
-                    <ShieldCheck className="h-4 w-4 text-blue-600" />
-                    <span>Export Standards & Quality Control</span>
-                  </div>
-                  <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
-                    {product.longDescription?.exportDetails || 'Strictly quality controlled for moisture content (<12%), fumigation treatment, mold protection, and 5-ply export master box packing.'}
-                  </p>
-                </div>
-
-                {/* Box 4: Care Instructions */}
-                <div className="hover-lift-sm bg-stone-50 p-5 sm:p-6 rounded-2xl border border-stone-200/80 space-y-2 sm:space-y-3 hover:border-purple-200 transition-all">
-                  <div className="flex items-center gap-2 text-purple-800 font-extrabold text-xs uppercase tracking-wider">
-                    <CheckCircle2 className="h-4 w-4 text-purple-600" />
-                    <span>Care & Maintenance</span>
-                  </div>
-                  <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal">
-                    {product.longDescription?.careInstructions || 'Spot clean with dry soft brush or slightly damp cloth. Avoid prolonged water soaking. Keep in dry, well-ventilated indoor spaces.'}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Action Quote Button for Direct Inquiry */}
-            <div className="pt-6 border-t border-stone-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div className="flex items-center gap-2 text-xs font-bold text-stone-600">
-                <ShieldCheck className="h-4 w-4 text-emerald-600 shrink-0" />
-                <span>Fair Trade Certified • 100% Sustainable Packaging</span>
-              </div>
-              <button
-                onClick={() => onOpenQuoteModal(product.id)}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-stone-900 hover:bg-stone-800 text-white px-7 py-3.5 rounded-xl font-extrabold text-xs uppercase tracking-wider transition-all shadow-md cursor-pointer btn-interactive"
-              >
-                <Phone className="h-4 w-4 text-amber-400" />
-                Direct OEM Phone Inquiry
-              </button>
             </div>
 
           </div>
 
-          {/* LEFT SIDEBAR SECOND ON MOBILE (order-2 lg:order-1) */}
-          <div className="reveal-left order-2 lg:order-1 lg:col-span-1 bg-white rounded-2xl p-4 sm:p-5 shadow-xs border border-stone-200/90 space-y-4 sticky top-6">
-            <div className="border-b border-stone-100 pb-3">
-              <div className="flex items-center justify-between">
-                <span className="text-[10px] uppercase tracking-wider font-extrabold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md">
-                  Category Items
-                </span>
-                <span className="text-xs font-extrabold text-stone-600">{categoryProducts.length} Products</span>
-              </div>
-              <h3 className="font-serif text-base font-extrabold text-stone-900 mt-1 tracking-tight">
-                {currentCategory.name}
-              </h3>
-            </div>
+        </div>
 
-            {/* List of Same Category Products */}
-            <div className="flex flex-col gap-2 max-h-[480px] sm:max-h-[540px] overflow-y-auto pr-1 custom-scrollbar">
-              {categoryProducts.map((catProd) => {
-                const isActive = catProd.id === product.id;
+        {/* BOTTOM SECTION: RELATED PRODUCTS AUTO-SLIDING CAROUSEL (Exact match to User Image 2) */}
+        <div 
+          className="pt-8 border-t border-stone-200 space-y-6"
+          onMouseEnter={() => { isHoveredRef.current = true; }}
+          onMouseLeave={() => { isHoveredRef.current = false; }}
+        >
+          
+          {/* Header: RELATED PRODUCTS with Green Underline */}
+          <div className="text-center">
+            <h2 className="font-sans text-lg sm:text-xl font-bold uppercase tracking-wider text-stone-900">
+              RELATED PRODUCTS
+            </h2>
+            <div className="mx-auto mt-2 h-0.5 w-28 bg-[#65a30d]" />
+          </div>
+
+          {/* 15 Products Auto-Sliding Row */}
+          <div className="relative overflow-hidden group">
+            
+            {/* Scroll Container */}
+            <div
+              ref={sliderRef}
+              className="flex items-center gap-0 overflow-x-auto no-scrollbar scroll-smooth py-4"
+            >
+              {fifteenRelatedProducts.map((relProd, idx) => {
                 return (
-                  <Link
-                    key={catProd.id}
-                    to={`/products/${catProd.slug}`}
-                    className={`p-2.5 rounded-xl transition-all text-left flex items-center gap-3 border hover-lift-sm ${
-                      isActive
-                        ? 'bg-emerald-800 text-white border-emerald-800 shadow-md transform scale-[1.01]'
-                        : 'bg-stone-50 text-stone-800 border-stone-100 hover:bg-emerald-50 hover:border-emerald-200 hover:text-emerald-950'
-                    }`}
+                  <div
+                    key={relProd.id || idx}
+                    onClick={() => {
+                      navigate(`/products/${relProd.slug || relProd.id}`);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className="shrink-0 w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 px-4 py-2 text-center cursor-pointer border-r border-stone-200 last:border-r-0 hover:bg-stone-50/80 transition-all duration-300 group/card"
                   >
-                    <div className={`h-12 w-12 rounded-lg shrink-0 overflow-hidden border p-0.5 flex items-center justify-center ${
-                      isActive ? 'bg-white/10 border-white/30' : 'bg-white border-stone-200'
-                    }`}>
-                      <img src={catProd.image} alt={catProd.name} className="h-full w-full object-contain filter drop-shadow-xs" />
+                    {/* Clean Product Image */}
+                    <div className="h-32 sm:h-36 w-full flex items-center justify-center p-2">
+                      <img
+                        src={relProd.image}
+                        alt={relProd.name}
+                        className="h-full w-full object-contain group-hover/card:scale-108 transition-transform duration-300"
+                        loading="lazy"
+                      />
                     </div>
 
-                    <div className="flex flex-col min-w-0 flex-1">
-                      <span className={`text-[10px] font-extrabold uppercase tracking-wider ${isActive ? 'text-amber-300' : 'text-emerald-700'}`}>
-                        {catProd.id}
-                      </span>
-                      <span className="text-xs font-bold truncate leading-tight mt-0.5">{catProd.name}</span>
+                    {/* Art No in bold Green (Image 2) */}
+                    <div className="mt-3 text-xs sm:text-sm font-bold text-[#65a30d] group-hover/card:text-[#4d7c0f] transition-colors">
+                      Art No: {relProd.code || relProd.id}
                     </div>
-
-                    <ChevronRight className={`h-4 w-4 shrink-0 ${isActive ? 'text-white' : 'text-stone-400'}`} />
-                  </Link>
+                  </div>
                 );
               })}
             </div>
 
-            <div className="pt-2 border-t border-stone-100">
-              <div className="p-3.5 rounded-xl bg-amber-50 border border-amber-200/80 text-amber-950 space-y-2">
-                <div className="flex items-center gap-1.5 text-amber-900">
-                  <Sparkles className="h-4 w-4 text-amber-600" />
-                  <span className="text-[11px] font-extrabold uppercase tracking-wider block">OEM & Export Inquiry</span>
-                </div>
-                <p className="text-[11px] text-stone-600 font-normal leading-relaxed">
-                  Request custom specs or wholesale factory prices directly.
-                </p>
-                <div className="pt-1 text-xs font-extrabold flex items-center gap-1.5 text-amber-900">
-                  <Phone className="h-3.5 w-3.5 text-amber-700" />
-                  <a href="https://wa.me/8801617778488?text=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%20I%20would%20like%20to%20know%20more%20about%20your%20handicraft%20products%20and%20export%20details." target="_blank" rel="noopener noreferrer" className="hover:underline">+880-1617-778488</a>
-                </div>
-              </div>
-            </div>
+            {/* Left & Right Controls (Visible on hover) */}
+            <button
+              onClick={() => setSliderIndex((prev) => Math.max(0, prev - 1))}
+              className="absolute left-1 top-1/2 -translate-y-1/2 h-9 w-9 rounded-full bg-white/90 shadow-md border border-stone-200 text-stone-700 hover:bg-white hover:text-emerald-700 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 cursor-pointer"
+              aria-label="Previous"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <button
+              onClick={() => setSliderIndex((prev) => (prev >= maxSlideIndex ? 0 : prev + 1))}
+              className="absolute right-1 top-1/2 -translate-y-1/2 h-9 w-9 rounded-full bg-white/90 shadow-md border border-stone-200 text-stone-700 hover:bg-white hover:text-emerald-700 flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 cursor-pointer"
+              aria-label="Next"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
+
+          </div>
+
+          {/* Dot Pagination Indicator (15 Dots, exactly like Image 2) */}
+          <div className="flex items-center justify-center gap-1.5 pt-2">
+            {fifteenRelatedProducts.map((_, dotIdx) => {
+              const isActive = dotIdx === sliderIndex || (dotIdx === Math.min(sliderIndex, fifteenRelatedProducts.length - 1));
+              return (
+                <button
+                  key={dotIdx}
+                  onClick={() => setSliderIndex(Math.min(dotIdx, maxSlideIndex))}
+                  className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                    isActive
+                      ? 'w-4 bg-[#65a30d]'
+                      : 'w-2.5 bg-stone-300 hover:bg-stone-400'
+                  }`}
+                  aria-label={`Slide ${dotIdx + 1}`}
+                />
+              );
+            })}
           </div>
 
         </div>
