@@ -14,8 +14,6 @@ import { QualityControlPage } from './pages/QualityControlPage';
 import { ClientsPage } from './pages/ClientsPage';
 import { ContactPage } from './pages/ContactPage';
 import { MaterialsPage } from './pages/MaterialsPage';
-import { ProxyStorePage } from './pages/ProxyStorePage';
-import { UserProfilePage } from './pages/UserProfilePage';
 import { QuoteModal } from './components/QuoteModal';
 
 import { InfoModal } from './components/InfoModal';
@@ -123,10 +121,6 @@ export const AppContent: React.FC = () => {
           <Route path="/quality" element={<QualityControlPage />} />
           <Route path="/clients" element={<ClientsPage onOpenQuoteModal={() => handleOpenQuoteModal()} />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/proxy" element={<ProxyStorePage />} />
-          <Route path="/buy-proxy" element={<ProxyStorePage />} />
-          <Route path="/profile" element={<UserProfilePage />} />
-          <Route path="/my-proxies" element={<UserProfilePage />} />
         </Routes>
 
       </main>

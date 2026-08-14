@@ -31,6 +31,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
     { path: '/contact', label: 'CONTACT' },
   ];
 
+
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
