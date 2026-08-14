@@ -27,7 +27,7 @@ export const Footer: React.FC = () => {
           </div>
           <div className="flex items-center gap-3 text-xs font-bold text-emerald-200">
             <ShieldCheck className="h-5 w-5 text-amber-400 shrink-0" />
-            <span>Fair Trade • BSCI • Sedex • OEKO-TEX Standard 100 Certified Manufacturer</span>
+            <span>FSC® Certified • Responsible Forestry • OEKO-TEX® Standard 100 • GCL International</span>
           </div>
         </div>
       </div>
