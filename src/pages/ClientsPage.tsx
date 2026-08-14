@@ -1,78 +1,22 @@
 import React from 'react';
 import { GlobalClients } from '../components/GlobalClients';
-import { HeartHandshake, ShieldCheck, ArrowRight, CheckCircle2, Award } from 'lucide-react';
+import { HeartHandshake, ArrowRight, Award } from 'lucide-react';
 
 interface ClientsPageProps {
   onOpenQuoteModal: () => void;
 }
 
 export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) => {
-  // Authentic Client Logos Extracted Directly from GFCL Product PPT
+  // Authentic Client Logos Extracted Directly from GFCL Corporate Presentation
   const officialBuyers = [
-    {
-      name: 'Aarong',
-      logo: '/clients/aarong.png',
-      origin: 'Bangladesh',
-      category: 'Ethical Lifestyle & Craft Giant',
-      description: 'Bangladesh’s iconic fair trade retail chain empowering thousands of rural artisans.',
-      badge: 'Premier Partner'
-    },
-    {
-      name: 'Det Gamle Apotek',
-      logo: '/clients/det_gamle_apotek.png',
-      origin: 'Denmark / Scandinavia',
-      category: 'Scandinavia Home Decor',
-      description: 'Renowned Nordic home decor, seasonal accents, and handcrafted basket importer.',
-      badge: 'European Buyer'
-    },
-    {
-      name: 'Ten Thousand Villages',
-      logo: '/clients/ten_thousand_villages.png',
-      origin: 'USA & Canada',
-      category: 'Fair Trade Pioneer',
-      description: 'One of the world’s largest fair trade organizations bringing ethical crafts to North America.',
-      badge: 'North America Buyer'
-    },
-    {
-      name: 'The Body Shop',
-      logo: '/clients/the_body_shop.png',
-      origin: 'United Kingdom / Global',
-      category: 'Global Ethical Beauty & Gifts',
-      description: 'World-famous eco-ethical beauty brand sourcing natural jute bags and artisanal gift packaging.',
-      badge: 'Global Brand'
-    },
-    {
-      name: 'Bozy',
-      logo: '/clients/bozy.png',
-      origin: 'Europe / International',
-      category: 'Eco & Sustainable Living',
-      description: 'Sustainable lifestyle brand specializing in natural seagrass and jute home accessories.',
-      badge: 'Eco Living'
-    },
-    {
-      name: 'Le Reve',
-      logo: '/clients/le_reve.png',
-      origin: 'International Fashion',
-      category: 'Apparel & Lifestyle Chain',
-      description: 'Leading apparel and lifestyle retail chain sourcing eco-friendly accessories and trims.',
-      badge: 'Lifestyle Retail'
-    },
-    {
-      name: 'Dekker Decoration',
-      logo: '/clients/dekker_decoration.png',
-      origin: 'Netherlands / Europe',
-      category: 'Floral & Home Decor Importer',
-      description: 'Major European wholesale distributor of natural fiber planters, pots, and decor products.',
-      badge: 'Wholesale Importer'
-    },
-    {
-      name: 'Traidcraft',
-      logo: '/clients/traidcraft.png',
-      origin: 'United Kingdom',
-      category: 'Fair Trade & Ethical Commerce',
-      description: 'Pioneering UK fair trade company fighting poverty through sustainable international trade.',
-      badge: 'Fair Trade UK'
-    }
+    { name: 'Aarong', logo: '/clients/aarong.png' },
+    { name: 'Det Gamle Apotek', logo: '/clients/det_gamle_apotek.png' },
+    { name: 'Ten Thousand Villages', logo: '/clients/ten_thousand_villages.png' },
+    { name: 'The Body Shop', logo: '/clients/the_body_shop.png' },
+    { name: 'Bozy', logo: '/clients/bozy.png' },
+    { name: 'Le Reve', logo: '/clients/le_reve.png' },
+    { name: 'Dekker Decoration', logo: '/clients/dekker_decoration.png' },
+    { name: 'Traidcraft', logo: '/clients/traidcraft.png' }
   ];
 
   // Authentic Certificate Images Extracted Directly from GFCL Product PPT
@@ -111,7 +55,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
           </div>
         </div>
 
-        {/* Real Buyers Grid with Middle-Outward Card Slide */}
+        {/* Real Buyers Grid - Authentic Brand Logos Only */}
         <div className="space-y-6 bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-stone-200/80">
           <div className="text-center space-y-2 reveal-up">
             <span className="text-xs font-bold uppercase tracking-widest text-emerald-700">AUTHENTIC CLIENT PORTFOLIO</span>
@@ -124,50 +68,21 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
             <div className="mx-auto h-1 w-16 rounded-full bg-emerald-600 mt-2" />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 pt-6">
             {officialBuyers.map((buyer, idx) => {
               const slideAnim = getCardSlideClass(idx);
               return (
                 <div
                   key={idx}
-                  className={`${slideAnim} hover-lift group flex flex-col justify-between rounded-2xl bg-stone-50/80 p-6 border border-stone-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-2xl transition-all duration-300`}
+                  className={`${slideAnim} hover-lift group relative flex items-center justify-center rounded-2xl bg-stone-50/70 p-6 sm:p-8 border border-stone-200/80 hover:bg-white hover:border-emerald-500 hover:shadow-xl transition-all duration-300 h-36 sm:h-44`}
+                  title={buyer.name}
                 >
-                  <div>
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="rounded-full bg-emerald-100 px-2.5 py-0.5 text-[10px] font-bold text-emerald-800 uppercase tracking-wider">
-                        {buyer.badge}
-                      </span>
-                      <span className="text-[10px] font-semibold text-stone-400">
-                        {buyer.origin}
-                      </span>
-                    </div>
-
-                    {/* Real Logo Image Container */}
-                    <div className="my-4 h-20 w-full flex items-center justify-center p-3 rounded-xl bg-white border border-stone-200/60 shadow-xs group-hover:scale-105 transition-transform">
-                      <img
-                        src={buyer.logo}
-                        alt={buyer.name}
-                        className="max-h-full max-w-full object-contain filter drop-shadow-xs"
-                      />
-                    </div>
-
-                    <h3 className="font-serif text-lg font-bold text-stone-900 group-hover:text-emerald-700 transition-colors">
-                      {buyer.name}
-                    </h3>
-
-                    <p className="mt-0.5 text-xs font-bold text-emerald-600">
-                      {buyer.category}
-                    </p>
-
-                    <p className="mt-2 text-xs text-stone-500 leading-relaxed font-light">
-                      {buyer.description}
-                    </p>
-                  </div>
-
-                  <div className="mt-4 pt-3 border-t border-stone-200/60 flex items-center gap-1.5 text-[11px] font-semibold text-emerald-700">
-                    <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
-                    Verified Active Export Partner
-                  </div>
+                  <img
+                    src={buyer.logo}
+                    alt={buyer.name}
+                    className="max-h-20 sm:max-h-24 max-w-[85%] w-auto object-contain filter group-hover:scale-110 transition-transform duration-300 drop-shadow-xs"
+                    loading="lazy"
+                  />
                 </div>
               );
             })}
