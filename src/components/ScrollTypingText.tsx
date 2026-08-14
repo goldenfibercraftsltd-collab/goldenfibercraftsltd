@@ -50,7 +50,7 @@ export const ScrollTypingText: React.FC<ScrollTypingTextProps> = ({
   useEffect(() => {
     if (!hasStarted) return;
 
-    let timeoutId: NodeJS.Timeout;
+    let timeoutId: ReturnType<typeof setTimeout>;
     let index = 0;
 
     const startTyping = () => {
