@@ -40,10 +40,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
               Corporate Heritage & Excellence
             </span>
             <h1 className="font-serif text-3xl sm:text-5xl font-extrabold tracking-tight">
-              About Golden Fiber Crafts Ltd. <span className="text-emerald-300 text-2xl sm:text-3xl block sm:inline font-normal">| Trims Art</span>
+              About Golden Fiber Crafts Ltd.
             </h1>
             <p className="text-stone-300 text-sm sm:text-base leading-relaxed">
-              Bangladesh’s premier manufacturer and exporter of eco-friendly jute, seagrass, kaisa grass handicrafts, and high-precision garment accessories & trims.
+              Bangladesh’s premier manufacturer and exporter of eco-friendly jute, seagrass, kaisa grass handicrafts, storage baskets, planters, and natural home decor.
             </p>
           </div>
           <div className="absolute -right-12 -bottom-12 opacity-10 pointer-events-none">
@@ -62,7 +62,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
               Weaving Sustainability & Global Quality Standards
             </h2>
             <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
-              Founded with a mission to promote Bangladesh's rich golden fiber heritage globally, Golden Fiber Crafts Ltd. stands as a pioneer in sustainable manufacturing. From handwoven natural baskets to OEKO-TEX certified garment labels and trims, we bridge traditional craftsmanship with modern industrial technology.
+              Founded with a mission to promote Bangladesh's rich golden fiber heritage globally, Golden Fiber Crafts Ltd. stands as a pioneer in sustainable manufacturing. From handwoven natural baskets to certified eco-friendly home decor, we bridge traditional craftsmanship with modern export standards.
             </p>
             <div className="grid sm:grid-cols-2 gap-4 pt-4">
               <div className="hover-lift-sm flex items-start gap-3 rounded-2xl bg-white p-4 shadow-sm border border-stone-200/60">
@@ -120,7 +120,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
               </div>
               <div className="p-6 flex-1 flex items-center justify-center bg-white text-center">
                 <p className="text-sm text-stone-700 leading-relaxed font-light">
-                  Trims Art Bangladesh Limited promises to give you something special to ensure customer satisfaction.
+                  Golden Fiber Crafts Ltd. promises to deliver premium natural handicrafts and exceed customer satisfaction.
                 </p>
               </div>
             </div>
@@ -369,7 +369,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
               </div>
               <div>
                 <h3 className="font-serif text-xl font-bold text-stone-900">Managing Director's Message</h3>
-                <p className="text-xs text-stone-500 font-semibold">Golden Fiber Crafts Ltd. | Trims Art</p>
+                <p className="text-xs text-stone-500 font-semibold">Golden Fiber Crafts Ltd.</p>
               </div>
             </div>
             <blockquote className="italic text-stone-700 text-base sm:text-lg leading-relaxed font-serif border-l-4 border-emerald-600 pl-6 py-2">
@@ -410,7 +410,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
         <div className="reveal-up text-center bg-stone-900 rounded-3xl p-8 sm:p-12 text-white space-y-6 shadow-2xl">
           <h2 className="font-serif text-2xl sm:text-4xl font-bold">Partner With a Proven Leader</h2>
           <p className="text-stone-300 text-sm max-w-2xl mx-auto font-light">
-            Whether you need custom apparel trims or eco-friendly handcrafted lifestyle products, our team is ready to support your supply chain.
+            Whether you need custom basket designs or eco-friendly handcrafted lifestyle products, our team is ready to support your supply chain.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <button

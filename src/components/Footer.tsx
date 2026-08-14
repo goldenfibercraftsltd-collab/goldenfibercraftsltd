@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
             </div>
             <div>
               <h3 className="font-serif text-xl sm:text-2xl font-extrabold text-white">
-                Trims Art <span className="text-emerald-300 font-sans text-sm font-normal">| Golden Fiber Crafts Ltd.</span>
+                Golden Fiber Crafts Ltd.
               </h3>
               <p className="text-amber-300 font-serif italic text-xs sm:text-sm">"{TAGLINE}"</p>
             </div>
@@ -46,7 +46,7 @@ export const Footer: React.FC = () => {
               />
             </div>
             <p className="text-xs text-emerald-100/90 leading-relaxed font-light">
-              One-stop sourcing for premium garments trims, labels, packaging, and eco-friendly handicrafts & accessories from Bangladesh.
+              Manufacturer and exporter of eco-friendly jute, seagrass, kaisa grass handicrafts, storage baskets, planters, and natural lifestyle goods from Bangladesh.
             </p>
             <div className="pt-2 text-xs font-semibold text-amber-300 flex items-center gap-1.5">
               <HeartHandshake className="h-4 w-4" />
@@ -62,32 +62,32 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2 text-xs font-medium text-emerald-100">
               <li>
                 <Link to="/products?category=jute" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block hover-lift-sm">
-                  Labels
-                </Link>
-              </li>
-              <li>
-                <Link to="/products?category=rugs" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block hover-lift-sm">
-                  Tapes, Elastic & Fastening
+                  Jute Crafts & Baskets
                 </Link>
               </li>
               <li>
                 <Link to="/products?category=seagrass" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block hover-lift-sm">
-                  Security & Tagging
+                  Seagrass & Planters
+                </Link>
+              </li>
+              <li>
+                <Link to="/products?category=rugs" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block hover-lift-sm">
+                  Natural Fiber Rugs
                 </Link>
               </li>
               <li>
                 <Link to="/products?category=rattan" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block hover-lift-sm">
-                  Buttons & Accessories
+                  Rattan & Cane Decor
                 </Link>
               </li>
               <li>
                 <Link to="/products?category=bamboo" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block hover-lift-sm">
-                  Packaging Materials
+                  Bamboo & Utility Crafts
                 </Link>
               </li>
               <li>
                 <Link to="/products?category=recycle-fabric" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block hover-lift-sm">
-                  Fabrics & Interlining
+                  Recycle Fabric Items
                 </Link>
               </li>
             </ul>
@@ -107,6 +107,16 @@ export const Footer: React.FC = () => {
               <li>
                 <Link to="/about" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5 hover-lift-sm">
                   <span className="text-emerald-400">➔</span> About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/products" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5 hover-lift-sm">
+                  <span className="text-emerald-400">➔</span> Products
+                </Link>
+              </li>
+              <li>
+                <Link to="/clients" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5 hover-lift-sm">
+                  <span className="text-emerald-400">➔</span> Clients & Buyers
                 </Link>
               </li>
               <li>
@@ -135,31 +145,23 @@ export const Footer: React.FC = () => {
             <div className="space-y-2.5 text-xs text-emerald-100">
               <div className="flex items-center gap-2.5">
                 <Mail className="h-4 w-4 text-amber-400 shrink-0" />
-                <a href="mailto:info@trimsart.com.bd" className="hover:underline text-amber-200 font-medium">info@trimsart.com.bd</a>
+                <a href="mailto:goldenfibercraftsltd@gmail.com" className="hover:underline text-amber-200 font-medium">goldenfibercraftsltd@gmail.com</a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="h-4 w-4 text-amber-400 shrink-0" />
-                <a href="tel:+8801831806948" className="hover:underline text-amber-200 font-medium">+8801831806948</a>
+                <a href="https://wa.me/8801617778488?text=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%20I%20would%20like%20to%20know%20more%20about%20your%20handicraft%20products%20and%20export%20details." target="_blank" rel="noreferrer" className="hover:underline text-amber-200 font-medium">+880-1617-778488</a>
               </div>
               <div className="flex items-center gap-2.5">
                 <MessageCircle className="h-4 w-4 text-emerald-300 shrink-0" />
-                <a href="https://wa.me/8801831806948" target="_blank" rel="noopener noreferrer" className="hover:underline text-emerald-200 font-medium">WhatsApp: +8801831806948</a>
+                <a href="https://wa.me/8801617778488?text=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%20I%20would%20like%20to%20know%20more%20about%20your%20handicraft%20products%20and%20export%20details." target="_blank" rel="noopener noreferrer" className="hover:underline text-emerald-200 font-medium">WhatsApp: +880-1617-778488</a>
               </div>
               <div className="flex items-start gap-2.5 pt-1">
                 <MapPin className="h-4 w-4 text-amber-400 shrink-0 mt-0.5" />
-                <span>Mawna, Sreepur, Gazipur</span>
-              </div>
-              <div className="flex items-start gap-2.5">
-                <MapPin className="h-4 w-4 text-amber-400 shrink-0 mt-0.5" />
-                <span>Factory (Unit-1): House #06, Road #09, Sector #11, Uttara, Dhaka-1230</span>
-              </div>
-              <div className="flex items-start gap-2.5">
-                <MapPin className="h-4 w-4 text-amber-400 shrink-0 mt-0.5" />
-                <span>Factory (Unit-2): Obda Road, Bormi, Sreepur, Gazipur-1740, Mawna, Sreepur, Gazipur</span>
+                <span>Dhaka Industrial Zone, Bangladesh</span>
               </div>
               <div className="flex items-center gap-2.5 pt-1">
                 <Globe className="h-4 w-4 text-amber-400 shrink-0" />
-                <a href="http://www.trimsart.com.bd" target="_blank" rel="noopener noreferrer" className="hover:underline text-amber-200 font-medium">www.trimsart.com.bd</a>
+                <a href="https://goldenfibercraftsltd.pages.dev" target="_blank" rel="noopener noreferrer" className="hover:underline text-amber-200 font-medium">goldenfibercraftsltd.pages.dev</a>
               </div>
             </div>
           </div>
@@ -170,7 +172,7 @@ export const Footer: React.FC = () => {
       {/* 3. Bottom Copyright Strip */}
       <div className="bg-[#032e23] py-4 px-4 text-center text-xs text-emerald-300/80 border-t border-emerald-900/80 reveal-up">
         <div className="mx-auto max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span>© {new Date().getFullYear()} Trims Art | Golden Fiber Crafts Ltd. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Golden Fiber Crafts Ltd. All rights reserved.</span>
           <span className="text-emerald-200 font-serif italic">"{TAGLINE}"</span>
           <button
             onClick={scrollToTop}

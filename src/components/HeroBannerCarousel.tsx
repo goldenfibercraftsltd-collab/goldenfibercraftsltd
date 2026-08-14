@@ -31,7 +31,7 @@ const DEFAULT_BANNERS: BannerItem[] = [
   {
     id: 2,
     image_url: '/banners/banner2.png',
-    title: 'Export Quality Garment Trims & Care Labels',
+    title: 'Handwoven Seagrass & Natural Baskets',
     category_slug: 'seagrass',
     category_name: 'Seagrass',
     show_category_badge: false,
@@ -64,12 +64,12 @@ export const HeroBannerCarousel: React.FC<HeroBannerCarouselProps> = () => {
       .catch(() => {});
   }, []);
 
-  // Auto-rotate slide every 5.5 seconds
+  // Auto-rotate slide every 3 seconds
   useEffect(() => {
     if (banners.length <= 1) return;
     const timer = setInterval(() => {
       setCurrentSlide(prev => (prev + 1) % banners.length);
-    }, 5500);
+    }, 3000);
     return () => clearInterval(timer);
   }, [banners.length]);
 
@@ -104,7 +104,7 @@ export const HeroBannerCarousel: React.FC<HeroBannerCarouselProps> = () => {
                   }
                 }
               }}
-              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out cursor-pointer ${
+              className={`absolute inset-0 transition-opacity duration-500 ease-in-out cursor-pointer ${
                 isActive ? 'opacity-100 z-10 pointer-events-auto' : 'opacity-0 z-0 pointer-events-none'
               }`}
             >
@@ -113,7 +113,7 @@ export const HeroBannerCarousel: React.FC<HeroBannerCarouselProps> = () => {
                 <img
                   src={banner.image_url}
                   alt={banner.title || banner.category_name || 'Golden Fiber Crafts Banner'}
-                  className={`h-full w-full object-cover transition-transform duration-[7000ms] ease-out ${
+                  className={`h-full w-full object-cover transition-transform duration-[3500ms] ease-out ${
                     isActive ? 'scale-105' : 'scale-100'
                   }`}
                 />

@@ -43,7 +43,7 @@ interface ToastMessage {
 
 const PRESET_BANNERS = [
   { label: 'Jute & Seagrass Handcrafts', url: '/banners/banner1.png' },
-  { label: 'Garment Trims & Labels', url: '/banners/banner2.png' },
+  { label: 'Seagrass & Natural Baskets', url: '/banners/banner2.png' },
   { label: 'Factory & Global Export', url: '/banners/banner3.png' },
 ];
 
@@ -120,7 +120,7 @@ export const AdminBanners: React.FC = () => {
       } else {
         setBanners([
           { id: 1, title: 'Handcrafted Jute & Seagrass Collection', image_url: '/banners/banner1.png', link_url: '/products?category=jute', display_order: 1, is_active: 1, category_slug: 'jute', category_name: 'Jute', show_category_badge: 0 },
-          { id: 2, title: 'Export Quality Garment Trims & Care Labels', image_url: '/banners/banner2.png', link_url: '/products?category=seagrass', display_order: 2, is_active: 1, category_slug: 'seagrass', category_name: 'Seagrass', show_category_badge: 0 },
+          { id: 2, title: 'Handwoven Seagrass & Natural Baskets', image_url: '/banners/banner2.png', link_url: '/products?category=seagrass', display_order: 2, is_active: 1, category_slug: 'seagrass', category_name: 'Seagrass', show_category_badge: 0 },
           { id: 3, title: 'Worldwide Sustainable Manufacturing', image_url: '/banners/banner3.png', link_url: '/products', display_order: 3, is_active: 1, category_slug: 'recycle-fabric', category_name: 'Recycle Fabric', show_category_badge: 0 },
         ]);
       }
