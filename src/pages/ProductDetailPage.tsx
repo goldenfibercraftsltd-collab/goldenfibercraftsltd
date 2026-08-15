@@ -6,6 +6,40 @@ import { ImageMagnifier } from '../components/ImageMagnifier';
 import { useCart, CartItem } from '../context/CartContext';
 import { Check, AlertTriangle, ChevronLeft, ChevronRight, Home, ArrowLeft } from 'lucide-react';
 
+export const PRODUCT_SEO_TITLES: Record<string, string> = {
+  'GFC-KB-005': 'Wholesale Kaisa Grass Basket Bowl Exporter Storage Kans Grass Basket Manufacturer Handwoven Natural Basket Supplier - Golden Fiber Crafts Ltd',
+  'GFC-SB-015': 'Wholesale Seagrass Basket Exporter Storage Rectangular Seagrass Basket Manufacturer Handwoven Natural Fiber Basket Supplier - Golden Fiber Crafts Ltd',
+  'GFC-SB-025': 'Wholesale Seagrass Storage Basket Exporter Cotton Rope Handle Basket Manufacturer Eco-Friendly Home Decor Supplier - Golden Fiber Crafts Ltd',
+  'GFC-SB-017': 'Wholesale Seagrass Laundry Basket Exporter Tall Storage Hamper Manufacturer Breathable Natural Weave Basket Supplier - Golden Fiber Crafts Ltd',
+  'GFC-SP-0029': 'Wholesale Seagrass Planters Exporter Waterproof Lined Plant Pot Manufacturer Indoor Outdoor Garden Basket Supplier - Golden Fiber Crafts Ltd',
+  'GFC-SB-030': 'Wholesale Jute Basket Exporter Storage Jute Basket Manufacturer Colorful Jute Basket Supplier - Golden Fiber Crafts Ltd',
+  'GFC-SB-011': 'Wholesale Jute Shopping Bag Exporter Custom Printed Jute Bag Manufacturer Heavy Duty Golden Jute Tote Supplier - Golden Fiber Crafts Ltd',
+  'GFC-TB-012': 'Wholesale Jute Tote Bag Exporter Daily Reusable Jute Bag Manufacturer Artisan Golden Fiber Tote Supplier - Golden Fiber Crafts Ltd',
+  'GFC-PB-008': 'Wholesale Promotional Jute Bag Exporter Corporate Event Gift Bag Manufacturer Custom Printed Jute Bag Supplier - Golden Fiber Crafts Ltd',
+  'GFC-WB-007': 'Wholesale Jute Wine Bag Exporter Bottle Packaging Jute Bag Manufacturer Luxury Cane Handle Jute Bag Supplier - Golden Fiber Crafts Ltd',
+  'GFC-TM-004': 'Wholesale Jute Table Mat Exporter Dining Table Placemat Manufacturer Braided Jute & Cotton Tableware Supplier - Golden Fiber Crafts Ltd',
+  'GFC-PH-008': 'Wholesale Macrame Plant Hanger Exporter Hanging Jute Plant Holder Manufacturer Hand-Knotted Bohemian Decor Supplier - Golden Fiber Crafts Ltd',
+  'GFC-SB-024': 'Wholesale Water Hyacinth Basket Exporter Round Storage Hamper Manufacturer Hand-Braided Natural Fiber Basket Supplier - Golden Fiber Crafts Ltd',
+  'GFC-PS-009': 'Wholesale Rattan Placemat Set Exporter Dining Table Mat Manufacturer Handcrafted Cane & Jute Tableware Supplier - Golden Fiber Crafts Ltd',
+  'GFC-FM-017': 'Wholesale Jute Floor Rug Exporter Braided Living Room Area Mat Manufacturer Handwoven Golden Jute Carpet Supplier - Golden Fiber Crafts Ltd',
+  'GFC-BP-007': 'Wholesale Bamboo Crafts Exporter Eco-Friendly Bamboo Products Manufacturer Handcrafted Bamboo Tableware Supplier - Golden Fiber Crafts Ltd',
+  'GFC-WB-009': 'Wholesale Cotton Rope Hamper Exporter Laundry Storage Woven Basket Manufacturer Soft Coiled Cotton Basket Supplier - Golden Fiber Crafts Ltd',
+};
+
+export function getProductSeoTitle(product: ProductItem): string {
+  const code = (product.code || product.id || '').toUpperCase();
+  if (PRODUCT_SEO_TITLES[code]) {
+    return PRODUCT_SEO_TITLES[code];
+  }
+
+  // Dynamic Generator for any custom or new products
+  const mat = product.material ? product.material.split(',')[0].trim() : (product.categoryName || 'Natural Fiber');
+  const name = product.name || 'Handicraft Item';
+  const sub = product.subCategory ? product.subCategory.replace(/-/g, ' ') : 'Handicrafts';
+  
+  return `Wholesale ${mat} ${name} Exporter Storage ${mat} ${sub} Manufacturer Handwoven Eco-Friendly Supplier - Golden Fiber Crafts Ltd`;
+}
+
 interface ProductDetailPageProps {
   onOpenQuoteModal?: (productCode?: string) => void;
 }
@@ -41,6 +75,8 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
   const [addedSuccess, setAddedSuccess] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string>(product.image);
 
+  const seoTitle = useMemo(() => getProductSeoTitle(product), [product]);
+
   // Reset when product changes
   useEffect(() => {
     setSelectedImage(product.image);
@@ -48,7 +84,10 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
     setReceivedQty('');
     setAddedSuccess(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [productSlug, product, setPerCarton]);
+
+    // Dynamic document title for SEO
+    document.title = `${seoTitle}`;
+  }, [productSlug, product, setPerCarton, seoTitle]);
 
   // Dynamic calculations
   const totalCartons = Math.max(1, Math.ceil(orderQty / setPerCarton));
@@ -121,7 +160,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
 
   return (
     <div className="bg-white min-h-screen py-6 sm:py-10 font-sans animate-fadeIn">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8">
         
         {/* Top Breadcrumb navigation */}
         <nav className="flex items-center gap-2 text-xs font-medium text-stone-500 pb-2 border-b border-stone-100">
@@ -137,6 +176,13 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
           <span>/</span>
           <span className="text-stone-900 font-semibold truncate">{product.code || product.id}</span>
         </nav>
+
+        {/* Product SEO B2B Heading 1 (Placed exactly above product details as marked) */}
+        <div className="py-2.5 px-3 sm:px-4 bg-gradient-to-r from-stone-50 via-lime-50/20 to-stone-50 rounded-xl border border-stone-200/70 shadow-2xs">
+          <h1 className="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-[#093843] leading-relaxed tracking-tight">
+            {seoTitle}
+          </h1>
+        </div>
 
         {/* TOP SECTION: Single Product Specifications & Calculator (Exact match to User Image 1) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start bg-white p-4 sm:p-8 rounded-2xl">
