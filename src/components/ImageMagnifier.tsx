@@ -141,11 +141,11 @@ export const ImageMagnifier: React.FC<ImageMagnifierProps> = ({
             </div>
 
             {/* Footer Badge & Instructions */}
-            <div className="w-full pt-2 flex items-center justify-between text-[11px] font-bold text-stone-500">
+            <div className="w-full pt-2 flex items-center justify-between text-[11px] font-bold text-stone-900">
               <span>Golden Fiber Crafts Ltd. • Export Quality Photo</span>
               <button
                 onClick={() => setLightboxOpen(false)}
-                className="text-emerald-700 hover:underline font-extrabold"
+                className="text-emerald-800 hover:underline font-black"
               >
                 Press Esc or Close
               </button>

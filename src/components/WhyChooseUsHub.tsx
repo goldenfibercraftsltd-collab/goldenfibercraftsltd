@@ -108,14 +108,14 @@ export const WhyChooseUsHub: React.FC = () => {
 
       {/* Header */}
       <div className="relative text-center max-w-2xl mx-auto mb-6 sm:mb-12">
-        <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider text-sky-700 bg-sky-100/70 border border-sky-200 mb-3">
+        <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider text-sky-950 bg-sky-100 border border-sky-300 mb-3">
           <ShieldCheck className="h-3.5 w-3.5" />
           Our Core Strengths
         </span>
-        <h3 className="font-serif text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight">
+        <h3 className="font-serif text-3xl sm:text-4xl font-extrabold text-black tracking-tight">
           Why <span className="text-blue-600">Choose Us</span>
         </h3>
-        <p className="mt-2.5 text-xs sm:text-sm text-stone-500 max-w-lg mx-auto">
+        <p className="mt-2.5 text-xs sm:text-sm text-stone-900 font-medium max-w-lg mx-auto">
           Delivering exceptional handcrafted manufacturing, prompt global shipping, and certified compliance.
         </p>
       </div>

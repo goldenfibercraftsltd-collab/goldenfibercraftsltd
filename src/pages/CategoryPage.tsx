@@ -33,30 +33,30 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onOpenQuoteModal }) 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8">
         
         {/* Breadcrumb with reveal-up */}
-        <nav className="reveal-up flex items-center gap-2 text-xs font-semibold text-stone-500">
-          <Link to="/" className="hover:text-emerald-700 flex items-center gap-1">
+        <nav className="reveal-up flex items-center gap-2 text-xs font-bold text-stone-800">
+          <Link to="/" className="hover:text-emerald-700 flex items-center gap-1 text-stone-800">
             <Home className="h-3.5 w-3.5" /> Home
           </Link>
           <span>/</span>
-          <Link to="/products" className="hover:text-emerald-700">Products</Link>
+          <Link to="/products" className="hover:text-emerald-700 text-stone-800">Products</Link>
           <span>/</span>
-          <span className="text-stone-900 font-bold">{category.name}</span>
+          <span className="text-black font-extrabold">{category.name}</span>
         </nav>
 
         {/* Category Header Hero with reveal-up */}
         <div className="reveal-up bg-white rounded-3xl p-8 sm:p-12 shadow-xs border border-stone-200/80 space-y-4">
           <div className="flex items-center gap-4">
-            <div className="h-14 w-14 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center shadow-xs shrink-0">
+            <div className="h-14 w-14 rounded-2xl bg-amber-100 text-amber-950 flex items-center justify-center shadow-xs shrink-0">
               <IconComponent className="h-8 w-8" />
             </div>
             <div>
-              <h1 className="font-serif text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight">
+              <h1 className="font-serif text-3xl sm:text-4xl font-extrabold text-black tracking-tight">
                 {category.name}
               </h1>
-              <p className="text-xs sm:text-sm text-stone-500 mt-1 font-light max-w-2xl">
+              <p className="text-xs sm:text-sm text-stone-900 mt-1 font-medium max-w-2xl">
                 {category.description}
               </p>
-              <span className="inline-block mt-2 text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/60">
+              <span className="inline-block mt-2 text-xs font-black text-emerald-900 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-300">
                 {categoryProducts.length} Products Available
               </span>
             </div>
@@ -93,10 +93,10 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onOpenQuoteModal }) 
                   </div>
 
                   {/* Title */}
-                  <h3 className="mt-4 font-serif text-sm font-bold text-stone-900 group-hover:text-emerald-700 transition-colors line-clamp-2">
+                  <h3 className="mt-4 font-serif text-sm font-extrabold text-black group-hover:text-emerald-700 transition-colors line-clamp-2">
                     {product.name}
                   </h3>
-                  <p className="mt-1 text-[11px] text-stone-500 font-light line-clamp-2">
+                  <p className="mt-1 text-xs text-stone-900 font-medium line-clamp-2">
                     {product.description}
                   </p>
                 </div>

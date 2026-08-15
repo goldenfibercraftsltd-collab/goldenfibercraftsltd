@@ -56,33 +56,33 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({ isOpen, onClose, initial
         ) : (
           <div>
             <div className="text-center sm:text-left">
-              <span className="text-xs font-bold uppercase tracking-widest text-amber-700">Request For Quotation</span>
-              <h2 className="mt-1 font-serif text-2xl font-bold text-stone-900">Get Factory Direct Quote</h2>
-              <p className="mt-1 text-xs text-stone-500">Fill in your specifications and order volume for instant FOB pricing.</p>
+              <span className="text-xs font-black uppercase tracking-widest text-amber-900">Request For Quotation</span>
+              <h2 className="mt-1 font-serif text-2xl font-extrabold text-black">Get Factory Direct Quote</h2>
+              <p className="mt-1 text-xs text-stone-900 font-medium">Fill in your specifications and order volume for instant FOB pricing.</p>
             </div>
 
             <form onSubmit={handleSubmit} className="mt-6 space-y-4">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-stone-700">Full Name *</label>
+                  <label className="block text-xs font-bold text-stone-950">Full Name *</label>
                   <input
                     type="text"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="mt-1 w-full rounded-xl border border-stone-200 p-2.5 text-xs text-stone-800 focus:border-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-500/20"
+                    className="mt-1 w-full rounded-xl border border-stone-300 p-2.5 text-xs text-black font-medium focus:border-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-500/20"
                     placeholder="Your Name"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-stone-700">Work Email *</label>
+                  <label className="block text-xs font-bold text-stone-950">Work Email *</label>
                   <input
                     type="email"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="mt-1 w-full rounded-xl border border-stone-200 p-2.5 text-xs text-stone-800 focus:border-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-500/20"
+                    className="mt-1 w-full rounded-xl border border-stone-300 p-2.5 text-xs text-black font-medium focus:border-amber-600 focus:outline-none focus:ring-2 focus:ring-amber-500/20"
                     placeholder="name@company.com"
                   />
                 </div>

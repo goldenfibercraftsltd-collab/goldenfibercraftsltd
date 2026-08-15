@@ -139,34 +139,34 @@ export const CartPage: React.FC = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-6">
         
         {/* Breadcrumb matching Screenshot 3 & 4 */}
-        <nav className="flex items-center gap-2 text-xs font-semibold text-stone-500">
-          <Link to="/" className="hover:text-emerald-700 flex items-center gap-1">
+        <nav className="flex items-center gap-2 text-xs font-bold text-stone-800">
+          <Link to="/" className="hover:text-emerald-700 flex items-center gap-1 text-stone-800">
             <Home className="h-3.5 w-3.5" /> Home
           </Link>
           <span>/</span>
-          <span className="text-stone-900 font-bold">Cart</span>
+          <span className="text-black font-extrabold">Cart</span>
         </nav>
 
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <h1 className="font-serif text-3xl font-extrabold text-stone-900 tracking-tight">
+          <h1 className="font-serif text-3xl font-extrabold text-black tracking-tight">
             Shopping Cart
           </h1>
 
           {cart.length > 0 && (
-            <div className="flex flex-wrap items-center gap-3 text-xs font-bold font-mono">
-              <span className="bg-white border border-stone-200 px-3 py-1.5 rounded-xl shadow-xs text-stone-700">
-                Total Pcs: <strong className="text-stone-900">{totalCartItemsCount}</strong>
+            <div className="flex flex-wrap items-center gap-3 text-xs font-black font-mono">
+              <span className="bg-white border border-stone-300 px-3 py-1.5 rounded-xl shadow-xs text-black">
+                Total Pcs: <strong className="text-black">{totalCartItemsCount}</strong>
               </span>
-              <span className="bg-white border border-stone-200 px-3 py-1.5 rounded-xl shadow-xs text-stone-700">
-                Cartons: <strong className="text-emerald-700">{totalCartonsCount}</strong>
+              <span className="bg-white border border-stone-300 px-3 py-1.5 rounded-xl shadow-xs text-black">
+                Cartons: <strong className="text-emerald-800">{totalCartonsCount}</strong>
               </span>
-              <span className="bg-white border border-stone-200 px-3 py-1.5 rounded-xl shadow-xs text-stone-700">
-                CBM: <strong className="text-stone-900">{totalCbmSum}</strong>
+              <span className="bg-white border border-stone-300 px-3 py-1.5 rounded-xl shadow-xs text-black">
+                CBM: <strong className="text-black">{totalCbmSum}</strong>
               </span>
-              <span className="bg-emerald-50 border border-emerald-200 px-3 py-1.5 rounded-xl shadow-xs text-emerald-900">
+              <span className="bg-emerald-50 border border-emerald-300 px-3 py-1.5 rounded-xl shadow-xs text-emerald-950">
                 N.W: <strong>{totalNwSum.toFixed(2)} KG</strong>
               </span>
-              <span className="bg-emerald-700 text-white px-3 py-1.5 rounded-xl shadow-xs">
+              <span className="bg-emerald-800 text-white px-3 py-1.5 rounded-xl shadow-xs">
                 G.W: <strong>{totalGwSum.toFixed(2)} KG</strong>
               </span>
             </div>
@@ -175,9 +175,9 @@ export const CartPage: React.FC = () => {
 
         {cart.length === 0 ? (
           <div className="bg-white rounded-3xl p-12 text-center border border-stone-200 shadow-sm space-y-4">
-            <ShoppingBag className="h-12 w-12 text-stone-400 mx-auto" />
-            <h3 className="font-serif text-lg font-bold text-stone-900">Your Cart is Currently Empty</h3>
-            <p className="text-stone-500 text-xs max-w-md mx-auto">Browse our PPT products, enter cartoon quantities, and add items to your export cart.</p>
+            <ShoppingBag className="h-12 w-12 text-stone-700 mx-auto" />
+            <h3 className="font-serif text-lg font-extrabold text-black">Your Cart is Currently Empty</h3>
+            <p className="text-stone-900 text-xs sm:text-sm font-medium max-w-md mx-auto">Browse our PPT products, enter cartoon quantities, and add items to your export cart.</p>
             <Link to="/products" className="inline-block px-6 py-3 rounded-xl bg-[#65a30d] hover:bg-[#4d7c0f] text-white font-extrabold text-xs uppercase tracking-wider">
               Explore Export Products
             </Link>
@@ -188,8 +188,8 @@ export const CartPage: React.FC = () => {
             {/* CART TABLE MATCHING SCREENSHOT 3 & 4 */}
             <div className="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-xs">
               <div className="overflow-x-auto">
-                <table className="w-full text-left text-xs font-semibold text-stone-700">
-                  <thead className="bg-stone-50/80 text-stone-600 font-serif font-extrabold uppercase border-b border-stone-200 text-[11px]">
+                <table className="w-full text-left text-xs font-bold text-stone-900">
+                  <thead className="bg-stone-100 text-black font-serif font-black uppercase border-b border-stone-300 text-[11px]">
                     <tr>
                       <th className="px-4 py-4 text-center w-12">#</th>
                       <th className="px-4 py-4">IMAGE</th>
@@ -209,7 +209,7 @@ export const CartPage: React.FC = () => {
                         <td className="px-4 py-4 text-center">
                           <button
                             onClick={() => removeFromCart(item.id)}
-                            className="text-stone-400 hover:text-rose-600 transition-colors p-1 cursor-pointer"
+                            className="text-stone-600 hover:text-rose-600 transition-colors p-1 cursor-pointer"
                             title="Remove item"
                           >
                             <Trash2 className="h-4 w-4" />
@@ -225,10 +225,10 @@ export const CartPage: React.FC = () => {
 
                         {/* Artical No (Green bold text matching screenshot) */}
                         <td className="px-4 py-4">
-                          <Link to={`/products/${item.id}`} className="font-extrabold text-[#65a30d] hover:underline text-sm font-mono block">
+                          <Link to={`/products/${item.id}`} className="font-black text-[#65a30d] hover:underline text-sm font-mono block">
                             {item.artNo}
                           </Link>
-                          <span className="text-[11px] text-stone-500 font-normal">{item.name}</span>
+                          <span className="text-[11px] text-stone-900 font-medium">{item.name}</span>
                         </td>
 
                         {/* Total NW */}
@@ -393,17 +393,17 @@ export const CartPage: React.FC = () => {
 
               {/* RIGHT BOX: Info Notice & Submit Button */}
               <div className="space-y-4">
-                <div className="p-4 rounded-xl bg-stone-50 border border-stone-200 text-xs font-medium text-stone-700 space-y-2">
-                  <div className="flex items-center gap-2 font-bold text-stone-900">
+                <div className="p-4 rounded-xl bg-stone-50 border border-stone-200 text-xs font-medium text-stone-950 space-y-2">
+                  <div className="flex items-center gap-2 font-extrabold text-black">
                     <ShieldCheck className="h-4 w-4 text-[#65a30d]" />
                     <span>If you want to know payment system? Please contact.</span>
                   </div>
-                  <p className="text-[11px] text-stone-500 font-normal">
+                  <p className="text-xs text-stone-900 font-medium">
                     We process B2B wholesale export orders via Letter of Credit (L/C) or Telegraphic Transfer (T/T). Direct online card payments are disabled.
                   </p>
                 </div>
 
-                <div className="p-4 rounded-xl bg-stone-50 border border-stone-200 text-xs font-bold text-stone-700">
+                <div className="p-4 rounded-xl bg-stone-50 border border-stone-200 text-xs font-bold text-stone-900">
                   {isLoggedIn ? (
                     <button
                       onClick={handleSubmitOrder}
@@ -414,7 +414,7 @@ export const CartPage: React.FC = () => {
                       <ArrowRight className="h-4 w-4" />
                     </button>
                   ) : (
-                    <div className="flex items-center gap-2 text-stone-600">
+                    <div className="flex items-center gap-2 text-stone-900 font-bold">
                       <Lock className="h-4 w-4 text-amber-600" />
                       <span>Please login or register on the left to checkout.</span>
                     </div>

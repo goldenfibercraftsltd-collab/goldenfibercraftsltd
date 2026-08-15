@@ -24,7 +24,7 @@ const FscLogo: React.FC = () => (
 const ForestryLogo: React.FC = () => (
   <div className="flex items-center gap-2 shrink-0">
     <div className="flex flex-col items-center">
-      <span className="text-[7.5px] font-bold text-stone-500 uppercase tracking-tight -mb-0.5">The mark of responsible forestry</span>
+      <span className="text-[7.5px] font-bold text-stone-900 uppercase tracking-tight -mb-0.5">The mark of responsible forestry</span>
       <div className="flex items-center gap-1 px-1.5 py-0.5 rounded-full border border-emerald-600/50 bg-emerald-50/60 shadow-2xs">
         <svg className="h-7 w-7 shrink-0" viewBox="0 0 40 40" fill="none">
           <circle cx="20" cy="20" r="18" stroke="#16a34a" strokeWidth="2.2" fill="#f0fdf4" />
@@ -114,10 +114,10 @@ export const CertificatesTicker: React.FC = () => {
 
               {/* Title & Sub */}
               <div className="text-left">
-                <span className="block font-serif text-sm sm:text-base font-bold text-stone-900 tracking-tight">
+                <span className="block font-serif text-sm sm:text-base font-extrabold text-black tracking-tight">
                   {item.name}
                 </span>
-                <span className="block text-[10.5px] sm:text-[11px] font-semibold text-stone-500 uppercase tracking-wider">
+                <span className="block text-[10.5px] sm:text-[11px] font-bold text-stone-900 uppercase tracking-wider">
                   {item.sub}
                 </span>
               </div>

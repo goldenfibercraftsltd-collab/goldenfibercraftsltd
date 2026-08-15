@@ -137,10 +137,10 @@ export const CategoryFilter: React.FC<CategoryFilterProps> = ({
                     {product.name}
                   </h3>
 
-                  <div className="mt-3 space-y-1 text-xs text-stone-600 border-t border-stone-100 pt-3">
-                    <p><span className="font-bold text-stone-800">Specs:</span> {product.specification}</p>
-                    <p><span className="font-bold text-stone-800">Materials:</span> {product.materials}</p>
-                    <p><span className="font-bold text-stone-800">MOQ:</span> {product.moq}</p>
+                  <div className="mt-3 space-y-1 text-xs text-stone-950 border-t border-stone-100 pt-3 font-medium">
+                    <p><span className="font-bold text-black">Specs:</span> {product.specification}</p>
+                    <p><span className="font-bold text-black">Materials:</span> {product.materials}</p>
+                    <p><span className="font-bold text-black">MOQ:</span> {product.moq}</p>
                   </div>
                 </div>
               </div>
@@ -163,8 +163,8 @@ export const CategoryFilter: React.FC<CategoryFilterProps> = ({
         {filteredProducts.length === 0 && (
           <div className="mt-12 text-center py-12 rounded-2xl bg-white border border-dashed border-stone-300">
             <Filter className="mx-auto h-8 w-8 text-stone-400" />
-            <h3 className="mt-2 font-serif text-lg font-bold text-stone-800">No products found</h3>
-            <p className="mt-1 text-xs text-stone-500">Try adjusting your search query or category filter.</p>
+            <h3 className="mt-2 font-serif text-lg font-bold text-black">No products found</h3>
+            <p className="mt-1 text-xs text-stone-900 font-medium">Try adjusting your search query or category filter.</p>
           </div>
         )}
 

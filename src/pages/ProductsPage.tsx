@@ -333,10 +333,10 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
               <Filter className="h-6 w-6" />
             </div>
             <div>
-              <h3 className="font-serif text-base font-bold text-stone-900">
+              <h3 className="font-serif text-base font-extrabold text-black">
                 No products found
               </h3>
-              <p className="text-xs text-stone-500 mt-1">
+              <p className="text-xs text-stone-900 font-medium mt-1">
                 No items match your current filter or search criteria.
               </p>
             </div>
