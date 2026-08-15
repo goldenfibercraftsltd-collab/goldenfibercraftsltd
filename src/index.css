@@ -235,19 +235,19 @@
 /* Mega Menu & Subcategory Dropdown Animations */
 @keyframes subFadeIn {
   0% {
-    opacity: 0;
-    transform: translateY(8px) scale(0.99);
+    opacity: 0.2;
+    transform: translateY(3px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 }
 
 @keyframes megaMenuIn {
   0% {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(6px);
   }
   100% {
     opacity: 1;
@@ -256,11 +256,11 @@
 }
 
 .animate-subFadeIn {
-  animation: subFadeIn 240ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: subFadeIn 320ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .animate-megaMenuIn {
-  animation: megaMenuIn 200ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: megaMenuIn 260ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Slim modern scrollbar */

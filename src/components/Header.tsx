@@ -272,51 +272,31 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
                   </div>
 
                   {/* Right Column: Subcategories for Hovered Category */}
-                  <div className="flex-1 p-4 bg-gradient-to-br from-white via-stone-50/40 to-lime-50/20 max-h-[440px] overflow-y-auto scrollbar-thin flex flex-col justify-between">
+                  <div className="flex-1 p-4 bg-stone-50/40 overflow-y-auto scrollbar-thin">
                     {(() => {
                       const currentCat = CATEGORIES.find(c => c.id === activeCategoryHover) || CATEGORIES[0];
                       return (
-                        <div key={currentCat.id} className="animate-subFadeIn space-y-3">
-                          
-                          {/* Subcategories Grid with Modern Interactive Cards */}
-                          <div className="grid grid-cols-2 gap-2">
+                        <div key={currentCat.id} className="animate-subFadeIn">
+                          {/* Subcategories Grid with Clean Interactive Cards */}
+                          <div className="grid grid-cols-2 gap-2.5">
                             {currentCat.subcategories.map((sub) => (
                               <button
                                 key={sub.id}
                                 onClick={() => handleCategorySelect(currentCat.id, sub.id)}
-                                className="group flex items-center justify-between p-2.5 rounded-xl bg-white border border-stone-200/80 hover:border-lime-400 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 text-left cursor-pointer"
+                                className="group flex items-center justify-between p-2.5 rounded-xl bg-white border border-stone-200/90 hover:border-lime-500 hover:bg-lime-50/60 hover:shadow-xs transition-all duration-200 text-left cursor-pointer"
                               >
                                 <div className="flex items-center gap-2.5 min-w-0">
-                                  <div className="w-7 h-7 rounded-lg bg-lime-50 border border-lime-100 flex items-center justify-center text-[#65a30d] group-hover:bg-[#65a30d] group-hover:text-white transition-all duration-200 shrink-0 shadow-2xs">
+                                  <div className="w-7 h-7 rounded-lg bg-lime-50 border border-lime-200/60 flex items-center justify-center text-[#65a30d] group-hover:bg-[#65a30d] group-hover:text-white transition-colors duration-200 shrink-0 shadow-2xs">
                                     {getSubcategoryIcon(sub.id)}
                                   </div>
-                                  <div className="truncate">
-                                    <span className="text-xs font-bold text-stone-800 group-hover:text-lime-900 transition-colors block truncate">
-                                      {sub.name}
-                                    </span>
-                                  </div>
+                                  <span className="text-xs font-bold text-stone-800 group-hover:text-lime-900 transition-colors truncate">
+                                    {sub.name}
+                                  </span>
                                 </div>
-                                <ArrowRight className="h-3.5 w-3.5 text-stone-300 group-hover:text-[#65a30d] group-hover:translate-x-0.5 transition-all duration-200 shrink-0" />
+                                <ChevronRight className="h-3.5 w-3.5 text-stone-300 group-hover:text-[#65a30d] group-hover:translate-x-0.5 transition-all duration-200 shrink-0" />
                               </button>
                             ))}
                           </div>
-
-                          {/* Bottom Quick Action Bar */}
-                          <div className="pt-2">
-                            <button
-                              onClick={() => handleCategorySelect(currentCat.id)}
-                              className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-lime-50/70 hover:bg-lime-100/80 border border-lime-200/80 hover:border-lime-300 text-stone-800 transition-all duration-200 text-xs font-bold group cursor-pointer shadow-2xs"
-                            >
-                              <span className="flex items-center gap-1.5 text-[#093843] group-hover:text-lime-950 font-semibold">
-                                <Sparkles className="h-3.5 w-3.5 text-amber-500" />
-                                All <span className="text-[#65a30d] font-extrabold">{currentCat.name}</span> Products
-                              </span>
-                              <span className="flex items-center gap-1 text-[11px] font-extrabold text-[#65a30d] group-hover:translate-x-1 transition-transform">
-                                Explore <ArrowRight className="h-3 w-3" />
-                              </span>
-                            </button>
-                          </div>
-
                         </div>
                       );
                     })()}
