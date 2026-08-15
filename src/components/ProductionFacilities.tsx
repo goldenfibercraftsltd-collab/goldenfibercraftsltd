@@ -8,16 +8,16 @@ export const ProductionFacilities: React.FC = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         <div className="text-center reveal-up">
-          <span className="text-xs font-bold uppercase tracking-[0.25em] text-amber-700">Infrastructure</span>
+          <span className="text-xs font-black uppercase tracking-[0.25em] text-amber-900">Infrastructure</span>
           <div className="mt-2">
             <ScrollTypingText
               as="h2"
               text="PRODUCTION FACILITIES"
-              className="font-serif text-2xl sm:text-3xl font-light tracking-[0.2em] text-stone-900 uppercase"
+              className="font-serif text-2xl sm:text-3xl font-extrabold tracking-[0.2em] text-black uppercase"
               speed={40}
             />
           </div>
-          <div className="mx-auto mt-3 h-0.5 w-16 rounded-full bg-amber-600" />
+          <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-amber-600" />
         </div>
 
         <div className="mt-12 grid items-center gap-12 lg:grid-cols-2">
@@ -41,42 +41,42 @@ export const ProductionFacilities: React.FC = () => {
           <div className="space-y-8">
             
             <div className="reveal-right stagger-1 hover-lift-sm flex gap-4 p-4 rounded-xl hover:bg-amber-50/60 transition-all border border-transparent hover:border-amber-900/10">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-800 shadow-inner">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-950 shadow-inner">
                 <Sparkles className="h-7 w-7" />
               </div>
               <div>
-                <h3 className="text-sm font-bold tracking-wider text-amber-900 uppercase">
+                <h3 className="text-sm font-extrabold tracking-wider text-black uppercase">
                   BASKETS & CONTAINER WEAVING DIVISION
                 </h3>
-                <p className="mt-1 text-sm text-stone-600 leading-relaxed font-light">
+                <p className="mt-1 text-sm text-stone-950 leading-relaxed font-medium">
                   Handcrafted Kaisa grass, Seagrass, Water Hyacinth, Rattan and Cotton rope baskets woven with reinforced internal structure to international apparel and home standards.
                 </p>
               </div>
             </div>
 
             <div className="reveal-right stagger-2 hover-lift-sm flex gap-4 p-4 rounded-xl hover:bg-amber-50/60 transition-all border border-transparent hover:border-amber-900/10">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-800 shadow-inner">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-950 shadow-inner">
                 <Layers className="h-7 w-7" />
               </div>
               <div>
-                <h3 className="text-sm font-bold tracking-wider text-amber-900 uppercase">
+                <h3 className="text-sm font-extrabold tracking-wider text-black uppercase">
                   PLANTERS & HOME DECOR DIVISION
                 </h3>
-                <p className="mt-1 text-sm text-stone-600 leading-relaxed font-light">
+                <p className="mt-1 text-sm text-stone-950 leading-relaxed font-medium">
                   Indoor planter pot covers, hanging macrame holders, braided jute floor area rugs, placemats, and bohemian wall hanging decor units.
                 </p>
               </div>
             </div>
 
             <div className="reveal-right stagger-3 hover-lift-sm flex gap-4 p-4 rounded-xl hover:bg-amber-50/60 transition-all border border-transparent hover:border-amber-900/10">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-800 shadow-inner">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-950 shadow-inner">
                 <Package className="h-7 w-7" />
               </div>
               <div>
-                <h3 className="text-sm font-bold tracking-wider text-amber-900 uppercase">
+                <h3 className="text-sm font-extrabold tracking-wider text-black uppercase">
                   ECO BAGS & PACKAGING DIVISION
                 </h3>
-                <p className="mt-1 text-sm text-stone-600 leading-relaxed font-light">
+                <p className="mt-1 text-sm text-stone-950 leading-relaxed font-medium">
                   Custom golden jute shopping bags, fashion totes, promotional giveaway bags, wine bags, and corporate gift bags with high quality screen printing.
                 </p>
               </div>

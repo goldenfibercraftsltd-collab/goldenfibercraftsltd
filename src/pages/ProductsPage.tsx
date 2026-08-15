@@ -105,25 +105,25 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
       
       {/* 1. Breadcrumbs Header with reveal-up */}
       <div className="bg-white border-b border-stone-200 reveal-up">
-        <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8 flex items-center justify-between text-xs text-stone-600">
+        <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8 flex items-center justify-between text-xs text-stone-900 font-bold">
           <div className="flex items-center gap-1.5">
-            <Link to="/" className="hover:text-[#65a30d] font-medium">Home</Link>
-            <ChevronRight className="h-3 w-3 text-stone-400" />
-            <Link to="/products" onClick={clearFilters} className="hover:text-[#65a30d]">Products</Link>
+            <Link to="/" className="hover:text-[#65a30d] font-bold text-stone-800">Home</Link>
+            <ChevronRight className="h-3.5 w-3.5 text-stone-600 font-bold" />
+            <Link to="/products" onClick={clearFilters} className="hover:text-[#65a30d] text-stone-800">Products</Link>
             {currentCategoryObj && (
               <>
-                <ChevronRight className="h-3 w-3 text-stone-400" />
-                <span className="text-stone-900 font-bold">{currentCategoryObj.name}</span>
+                <ChevronRight className="h-3.5 w-3.5 text-stone-600 font-bold" />
+                <span className="text-black font-extrabold">{currentCategoryObj.name}</span>
               </>
             )}
             {selectedSubCategory && (
               <>
-                <ChevronRight className="h-3 w-3 text-stone-400" />
-                <span className="text-emerald-700 font-bold uppercase">{selectedSubCategory}</span>
+                <ChevronRight className="h-3.5 w-3.5 text-stone-600 font-bold" />
+                <span className="text-emerald-900 font-extrabold uppercase">{selectedSubCategory}</span>
               </>
             )}
           </div>
-          <span className="text-[11px] text-stone-500 hidden sm:inline">
+          <span className="text-xs text-stone-900 font-bold hidden sm:inline">
             Showing {filteredProducts.length} export products
           </span>
         </div>
@@ -135,23 +135,23 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
           
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
-              <h1 className="font-serif text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
+              <h1 className="font-serif text-2xl sm:text-3xl font-extrabold text-black tracking-tight">
                 {currentCategoryObj ? currentCategoryObj.name : 'All Export Products'}
               </h1>
-              <p className="text-xs sm:text-sm text-stone-500 mt-0.5">
+              <p className="text-xs sm:text-sm text-stone-900 font-medium mt-0.5">
                 {currentCategoryObj?.description || 'Browse our complete catalog of 100% natural, eco-friendly handicraft items.'}
               </p>
             </div>
 
             {/* Search Box */}
             <div className="relative w-full md:w-80">
-              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-stone-400" />
+              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-stone-700" />
               <input
                 type="text"
                 placeholder="Search Item Code or Name (e.g. GFC-SB-030)..."
                 value={searchQuery}
                 onChange={handleSearchChange}
-                className="w-full pl-10 pr-9 py-2 text-xs rounded-xl border border-stone-300 bg-stone-50 focus:bg-white focus:outline-hidden focus:border-[#65a30d] focus:ring-2 focus:ring-[#65a30d]/20 transition-all"
+                className="w-full pl-10 pr-9 py-2 text-xs rounded-xl border border-stone-400 bg-white text-black font-medium focus:outline-hidden focus:border-[#65a30d] focus:ring-2 focus:ring-[#65a30d]/20 transition-all"
               />
               {searchQuery && (
                 <button
@@ -162,7 +162,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
                     if (selectedSubCategory) newParams.subCategory = selectedSubCategory;
                     setSearchParams(newParams);
                   }}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-600"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-stone-600 hover:text-black"
                 >
                   <X className="h-3.5 w-3.5" />
                 </button>
@@ -175,7 +175,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
             <div className="flex items-center gap-1.5 overflow-x-auto pb-1 pt-1 scrollbar-none">
               <button
                 onClick={() => handleCategoryChange('all')}
-                className="px-3.5 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap transition-all bg-[#65a30d] text-white shadow-xs btn-interactive"
+                className="px-3.5 py-1.5 rounded-lg text-xs font-black whitespace-nowrap transition-all bg-[#65a30d] text-white shadow-xs btn-interactive"
               >
                 All Categories ({allProducts.length})
               </button>
@@ -185,7 +185,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
                   <button
                     key={cat.id}
                     onClick={() => handleCategoryChange(cat.id)}
-                    className="px-3.5 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap transition-all bg-stone-100 text-stone-700 hover:bg-stone-200 border border-stone-200/80 hover-lift-sm"
+                    className="px-3.5 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap transition-all bg-stone-100 text-stone-950 hover:bg-stone-200 border border-stone-300 hover-lift-sm"
                   >
                     {cat.name} ({count})
                   </button>
@@ -197,13 +197,13 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
           {/* SubCategory Filter Pills (If category has subcategories) */}
           {currentCategoryObj && currentCategoryObj.subcategories && currentCategoryObj.subcategories.length > 0 && (
             <div className="pt-1 flex flex-wrap items-center gap-1.5">
-              <span className="text-[11px] font-bold text-stone-400 uppercase tracking-wider mr-1">Subcategory:</span>
+              <span className="text-xs font-black text-black uppercase tracking-wider mr-1">Subcategory:</span>
               <button
                 onClick={() => handleSubCategoryChange('')}
-                className={`px-3 py-1 rounded-md text-[11px] font-bold transition-all ${
+                className={`px-3 py-1 rounded-md text-xs font-extrabold transition-all ${
                   !selectedSubCategory
                     ? 'bg-[#093843] text-white shadow-xs'
-                    : 'bg-stone-100 text-stone-600 hover:bg-stone-200'
+                    : 'bg-stone-100 text-stone-950 hover:bg-stone-200 border border-stone-300'
                 }`}
               >
                 All {currentCategoryObj.name}
@@ -214,10 +214,10 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
                   <button
                     key={sub.id}
                     onClick={() => handleSubCategoryChange(sub.id)}
-                    className={`px-3 py-1 rounded-md text-[11px] font-bold transition-all ${
+                    className={`px-3 py-1 rounded-md text-xs font-extrabold transition-all ${
                       isSubActive
                         ? 'bg-[#093843] text-white shadow-xs'
-                        : 'bg-stone-100 text-stone-600 hover:bg-stone-200'
+                        : 'bg-stone-100 text-stone-950 hover:bg-stone-200 border border-stone-300'
                     }`}
                   >
                     {sub.name}
@@ -234,11 +234,11 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-8">
         
         {/* Results Counter & Clear Filter */}
-        <div className="flex items-center justify-between mb-4 text-xs text-stone-600">
+        <div className="flex items-center justify-between mb-4 text-xs text-stone-950 font-bold">
           <div>
-            Showing <span className="font-bold text-stone-900">{filteredProducts.length}</span> products
+            Showing <span className="font-black text-black">{filteredProducts.length}</span> products
             {(selectedCategory !== 'all' || selectedSubCategory || searchQuery) && (
-              <span className="ml-2 text-stone-400">
+              <span className="ml-2 text-stone-700 font-bold">
                 (Filtered)
               </span>
             )}
@@ -246,7 +246,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
           {(selectedCategory !== 'all' || selectedSubCategory || searchQuery) && (
             <button
               onClick={clearFilters}
-              className="text-xs font-bold text-red-600 hover:underline flex items-center gap-1"
+              className="text-xs font-black text-red-600 hover:underline flex items-center gap-1"
             >
               <X className="h-3.5 w-3.5" />
               Reset Filters
@@ -290,16 +290,16 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
 
                     {/* Product Details */}
                     <div className="mt-3.5 space-y-1">
-                      <span className="text-[10px] font-bold text-[#65a30d] uppercase tracking-wider">
+                      <span className="text-[10px] font-black text-[#65a30d] uppercase tracking-wider">
                         {product.categoryName || product.category}
                       </span>
                       <h3
                         onClick={() => navigate(`/products/${product.slug}`)}
-                        className="font-serif text-sm font-bold text-stone-900 group-hover:text-[#65a30d] transition-colors line-clamp-2 cursor-pointer"
+                        className="font-serif text-sm font-extrabold text-black group-hover:text-[#65a30d] transition-colors line-clamp-2 cursor-pointer"
                       >
                         {product.name}
                       </h3>
-                      <p className="text-[11px] text-stone-500 font-light line-clamp-2">
+                      <p className="text-xs text-stone-900 font-medium line-clamp-2">
                         {product.description}
                       </p>
                     </div>

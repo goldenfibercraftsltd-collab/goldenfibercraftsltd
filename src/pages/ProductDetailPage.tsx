@@ -163,23 +163,23 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8">
         
         {/* Top Breadcrumb navigation */}
-        <nav className="flex items-center gap-2 text-xs font-medium text-stone-500 pb-2 border-b border-stone-100">
-          <Link to="/" className="hover:text-emerald-700 flex items-center gap-1">
+        <nav className="flex items-center gap-2 text-xs font-bold text-stone-800 pb-2 border-b border-stone-100">
+          <Link to="/" className="hover:text-emerald-700 flex items-center gap-1 text-stone-800">
             <Home className="h-3.5 w-3.5" /> Home
           </Link>
           <span>/</span>
-          <Link to="/products" className="hover:text-emerald-700">Products</Link>
+          <Link to="/products" className="hover:text-emerald-700 text-stone-800">Products</Link>
           <span>/</span>
-          <Link to={`/products?category=${currentCategory.id || currentCategory.slug}`} className="hover:text-emerald-700">
+          <Link to={`/products?category=${currentCategory.id || currentCategory.slug}`} className="hover:text-emerald-700 text-stone-800">
             {currentCategory.name}
           </Link>
           <span>/</span>
-          <span className="text-stone-900 font-semibold truncate">{product.code || product.id}</span>
+          <span className="text-black font-extrabold truncate">{product.code || product.id}</span>
         </nav>
 
         {/* Product SEO B2B Heading 1 (Placed exactly above product details as marked) */}
         <div className="py-2.5 px-3 sm:px-4 bg-gradient-to-r from-stone-50 via-lime-50/20 to-stone-50 rounded-xl border border-stone-200/70 shadow-2xs">
-          <h1 className="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-[#093843] leading-relaxed tracking-tight">
+          <h1 className="text-xs sm:text-sm md:text-base lg:text-lg font-black text-black leading-relaxed tracking-tight">
             {seoTitle}
           </h1>
         </div>
@@ -212,100 +212,100 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
           </div>
 
           {/* Right Column: Exact Specification Rows & Calculation Inputs (Image 1) */}
-          <div className="lg:col-span-7 space-y-3 text-stone-800 text-sm">
+          <div className="lg:col-span-7 space-y-3 text-black text-sm">
             
             {/* Table / Key-Value Spec Grid */}
             <div className="space-y-2.5">
               
               {/* Art No */}
               <div className="grid grid-cols-12 items-center py-1">
-                <span className="col-span-4 text-stone-700 font-medium">Art No:</span>
-                <span className="col-span-8 font-semibold text-stone-900">{product.code || product.id}</span>
+                <span className="col-span-4 text-black font-bold">Art No:</span>
+                <span className="col-span-8 font-black text-black">{product.code || product.id}</span>
               </div>
 
               {/* Description */}
               <div className="grid grid-cols-12 items-center py-1">
-                <span className="col-span-4 text-stone-700 font-medium">Description:</span>
-                <span className="col-span-8 font-medium text-stone-900">{product.name}</span>
+                <span className="col-span-4 text-black font-bold">Description:</span>
+                <span className="col-span-8 font-bold text-black">{product.name}</span>
               </div>
 
               {/* Material */}
               <div className="grid grid-cols-12 items-center py-1">
-                <span className="col-span-4 text-stone-700 font-medium">Material:</span>
-                <span className="col-span-8 font-medium text-stone-900">{material}</span>
+                <span className="col-span-4 text-black font-bold">Material:</span>
+                <span className="col-span-8 font-bold text-black">{material}</span>
               </div>
 
               {/* Color */}
               <div className="grid grid-cols-12 items-center py-1">
-                <span className="col-span-4 text-stone-700 font-medium">Color:</span>
-                <span className="col-span-8 font-medium text-stone-900">{color}</span>
+                <span className="col-span-4 text-black font-bold">Color:</span>
+                <span className="col-span-8 font-bold text-black">{color}</span>
               </div>
 
               {/* Unit */}
               <div className="grid grid-cols-12 items-center py-1">
-                <span className="col-span-4 text-stone-700 font-medium">Unit:</span>
-                <span className="col-span-8 font-medium text-stone-900">{unit}</span>
+                <span className="col-span-4 text-black font-bold">Unit:</span>
+                <span className="col-span-8 font-bold text-black">{unit}</span>
               </div>
 
               {/* CBM/Carton */}
               <div className="grid grid-cols-12 items-center py-1">
-                <span className="col-span-4 text-stone-700 font-medium">CBM/Carton:</span>
-                <span className="col-span-8 font-medium text-stone-900 font-mono">{cbmPerCarton}</span>
+                <span className="col-span-4 text-black font-bold">CBM/Carton:</span>
+                <span className="col-span-8 font-extrabold text-black font-mono">{cbmPerCarton}</span>
               </div>
 
               {/* Set/Carton */}
               <div className="grid grid-cols-12 items-center py-1">
-                <span className="col-span-4 text-stone-700 font-medium">Set/Carton:</span>
-                <span className="col-span-8 font-medium text-stone-900 font-mono">{setPerCarton}</span>
+                <span className="col-span-4 text-black font-bold">Set/Carton:</span>
+                <span className="col-span-8 font-extrabold text-black font-mono">{setPerCarton}</span>
               </div>
 
               {/* N.W/CTN(KG) */}
               <div className="grid grid-cols-12 items-center py-1">
-                <span className="col-span-4 text-stone-700 font-medium">N.W/CTN(KG):</span>
-                <span className="col-span-8 font-medium text-stone-900 font-mono">{nwPerCtn}</span>
+                <span className="col-span-4 text-black font-bold">N.W/CTN(KG):</span>
+                <span className="col-span-8 font-extrabold text-black font-mono">{nwPerCtn}</span>
               </div>
 
               {/* G.W/CTN(KG) */}
               <div className="grid grid-cols-12 items-center py-1">
-                <span className="col-span-4 text-stone-700 font-medium">G.W/CTN(KG):</span>
-                <span className="col-span-8 font-medium text-stone-900 font-mono">{gwPerCtn}</span>
+                <span className="col-span-4 text-black font-bold">G.W/CTN(KG):</span>
+                <span className="col-span-8 font-extrabold text-black font-mono">{gwPerCtn}</span>
               </div>
 
               {/* Total G.W(KG) Box */}
               <div className="grid grid-cols-12 items-center py-1">
-                <span className="col-span-4 text-stone-700 font-medium">Total G.W(KG):</span>
+                <span className="col-span-4 text-black font-bold">Total G.W(KG):</span>
                 <div className="col-span-8">
                   <input
                     type="text"
                     readOnly
                     value={totalGw}
-                    className="w-48 px-3 py-1.5 bg-white border border-stone-400 rounded-sm text-sm text-stone-900 font-mono"
+                    className="w-48 px-3 py-1.5 bg-white border border-stone-400 rounded-sm text-sm text-black font-bold font-mono"
                   />
                 </div>
               </div>
 
               {/* Total Carton Box */}
               <div className="grid grid-cols-12 items-center py-1">
-                <span className="col-span-4 text-stone-700 font-medium">Total Carton:</span>
+                <span className="col-span-4 text-black font-bold">Total Carton:</span>
                 <div className="col-span-8">
                   <input
                     type="text"
                     readOnly
                     value={totalCartons}
-                    className="w-48 px-3 py-1.5 bg-white border border-stone-400 rounded-sm text-sm text-stone-900 font-mono"
+                    className="w-48 px-3 py-1.5 bg-white border border-stone-400 rounded-sm text-sm text-black font-bold font-mono"
                   />
                 </div>
               </div>
 
               {/* Total CBM Box */}
               <div className="grid grid-cols-12 items-center py-1">
-                <span className="col-span-4 text-stone-700 font-medium">Total CBM:</span>
+                <span className="col-span-4 text-black font-bold">Total CBM:</span>
                 <div className="col-span-8">
                   <input
                     type="text"
                     readOnly
                     value={totalCbm}
-                    className="w-48 px-3 py-1.5 bg-white border border-stone-400 rounded-sm text-sm text-stone-900 font-mono"
+                    className="w-48 px-3 py-1.5 bg-white border border-stone-400 rounded-sm text-sm text-black font-bold font-mono"
                   />
                 </div>
               </div>

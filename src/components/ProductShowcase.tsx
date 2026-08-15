@@ -46,13 +46,13 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
           <ScrollTypingText
             as="h2"
             text="PRODUCT SHOWCASE"
-            className="font-serif text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-stone-900 uppercase"
+            className="font-serif text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-black uppercase"
             speed={40}
           />
-          <p className="text-stone-500 text-xs sm:text-sm font-light leading-relaxed">
+          <p className="text-stone-900 text-xs sm:text-sm font-medium leading-relaxed">
             Filter by category and explore our full range of eco-friendly jute, seagrass, and natural handicraft collections.
           </p>
-          <div className="mx-auto h-0.5 w-16 bg-[#65a30d] mt-2" />
+          <div className="mx-auto h-1 w-16 bg-[#65a30d] mt-2" />
         </div>
 
         {/* 2. Category Filter Pills */}
@@ -63,10 +63,10 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
               <button
                 key={tab.id}
                 onClick={() => setSelectedCategory(tab.id)}
-                className={`px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 cursor-pointer ${
+                className={`px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
                   isActive
                     ? 'bg-[#0284c7] text-white shadow-sm ring-2 ring-[#0284c7]/30 scale-105'
-                    : 'bg-white text-stone-700 border border-stone-200 hover:bg-stone-50 hover:border-stone-300'
+                    : 'bg-white text-stone-950 border border-stone-300 hover:bg-stone-50 hover:border-stone-400'
                 }`}
               >
                 {tab.label}
@@ -98,7 +98,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
                   />
 
                   {/* Clean Subtle Art No Badge */}
-                  <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-stone-700 text-[10.5px] font-mono font-semibold px-2 py-0.5 rounded-md border border-stone-200/70 shadow-2xs">
+                  <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-black text-[10.5px] font-mono font-bold px-2 py-0.5 rounded-md border border-stone-300 shadow-2xs">
                     {product.code || product.id}
                   </div>
                 </div>
@@ -106,10 +106,10 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
                 {/* Content Area: Category Label & Product Name */}
                 <div className="p-5 border-t border-stone-100 bg-white flex flex-col justify-between flex-1">
                   <div>
-                    <span className="block text-[10px] sm:text-[10.5px] font-bold uppercase tracking-wider text-stone-400">
+                    <span className="block text-[10px] sm:text-[10.5px] font-black uppercase tracking-wider text-emerald-900">
                       {product.categoryName ? `ALL TYPES OF ${product.categoryName.toUpperCase()}` : 'HANDICRAFTS'}
                     </span>
-                    <h3 className="mt-1 font-sans text-sm sm:text-base font-semibold text-stone-800 group-hover:text-[#0284c7] transition-colors line-clamp-1">
+                    <h3 className="mt-1 font-sans text-sm sm:text-base font-extrabold text-black group-hover:text-[#0284c7] transition-colors line-clamp-1">
                       {product.name}
                     </h3>
                   </div>

@@ -43,11 +43,11 @@ export const Features: React.FC<FeaturesProps> = ({ onOpenModal }) => {
         
         {/* Section Heading with subtle reveal */}
         <div className="text-center reveal-up">
-          <span className="text-xs font-bold uppercase tracking-[0.25em] text-amber-700">About Us</span>
-          <h2 className="mt-2 font-serif text-2xl sm:text-3xl font-light tracking-[0.2em] text-stone-900 uppercase">
+          <span className="text-xs font-black uppercase tracking-[0.25em] text-amber-900">About Us</span>
+          <h2 className="mt-2 font-serif text-2xl sm:text-3xl font-extrabold tracking-[0.2em] text-black uppercase">
             GOLDEN FIBER CRAFTS LTD.
           </h2>
-          <div className="mx-auto mt-3 h-0.5 w-16 rounded-full bg-amber-600" />
+          <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-amber-600" />
         </div>
 
         {/* 4 Cards Grid with Middle-Outward Glide Entrance */}
@@ -60,20 +60,20 @@ export const Features: React.FC<FeaturesProps> = ({ onOpenModal }) => {
                 className={`${item.slideAnim} hover-lift group relative flex flex-col justify-between rounded-2xl bg-white p-6 shadow-md hover:shadow-xl border border-amber-900/10`}
               >
                 <div>
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-100 text-amber-800 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300 shadow-sm">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-100 text-amber-950 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300 shadow-sm">
                     <Icon className="h-6 w-6" />
                   </div>
-                  <h3 className="mt-5 text-sm font-bold tracking-wider text-stone-900 uppercase">
+                  <h3 className="mt-5 text-sm font-extrabold tracking-wider text-black uppercase">
                     {item.title}
                   </h3>
-                  <p className="mt-2 text-sm text-stone-600 leading-relaxed font-light">
+                  <p className="mt-2 text-sm text-stone-950 leading-relaxed font-medium">
                     {item.description}
                   </p>
                 </div>
 
                 <button
                   onClick={() => onOpenModal(item.title, item.detail)}
-                  className="mt-5 inline-flex items-center gap-1 text-xs font-semibold text-amber-700 hover:text-amber-900 btn-interactive"
+                  className="mt-5 inline-flex items-center gap-1 text-xs font-extrabold text-amber-900 hover:text-amber-950 btn-interactive"
                 >
                   <span>Read more</span>
                   <ChevronRight className="h-3.5 w-3.5 btn-arrow" />

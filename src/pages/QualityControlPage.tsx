@@ -160,66 +160,66 @@ export const QualityControlPage: React.FC = () => {
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8 relative z-10">
           
-          <nav className="reveal-up flex items-center gap-2 text-xs font-semibold text-stone-500">
+          <nav className="reveal-up flex items-center gap-2 text-xs font-bold text-stone-800">
             <Link to="/" className="hover:text-emerald-800 transition-colors">Home</Link>
             <span>/</span>
-            <span className="text-stone-900 font-bold">Quality Assurance</span>
+            <span className="text-black font-extrabold">Quality Assurance</span>
           </nav>
 
           <div className="text-center max-w-3xl mx-auto space-y-4 reveal-up">
-            <div className="inline-flex items-center gap-2 rounded-full bg-amber-100 border border-amber-300/80 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-amber-950 shadow-xs">
-              <ShieldCheck className="h-4 w-4 text-amber-700" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-amber-100 border border-amber-300/80 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-black shadow-xs">
+              <ShieldCheck className="h-4 w-4 text-amber-800" />
               <span>International Export Grade Guarantee</span>
             </div>
 
             <ScrollTypingText
               as="h1"
               text="Quality Assurance & Standards"
-              className="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-stone-900 tracking-tight leading-[1.15]"
+              className="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-black tracking-tight leading-[1.15]"
               speed={40}
             />
 
-            <p className="font-serif text-lg sm:text-xl text-[#7c5335] italic font-medium">
+            <p className="font-serif text-lg sm:text-xl text-black italic font-bold">
               Where ancestral artisan mastery meets modern export quality control.
             </p>
 
-            <p className="text-sm sm:text-base text-stone-600 leading-relaxed font-normal max-w-2xl mx-auto pt-1">
+            <p className="text-sm sm:text-base text-stone-900 leading-relaxed font-medium max-w-2xl mx-auto pt-1">
               At Golden Fiber Crafts Ltd, every handcrafted item is created by highly experienced traditional artisans and inspected under strict international AQL 2.5 compliance standards before global shipment.
             </p>
           </div>
 
           {/* 4 Trust Metrics with Middle-Outward Card Slide */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto pt-4">
-            <div className="card-slide-far-left stagger-2 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-[#e8ded1] shadow-xs">
-              <div className="h-9 w-9 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center font-bold mb-2">
+            <div className="card-slide-far-left stagger-2 hover-lift-sm p-4 rounded-2xl bg-white/90 border border-[#e8ded1] shadow-xs">
+              <div className="h-9 w-9 rounded-xl bg-amber-100 text-amber-950 flex items-center justify-center font-bold mb-2">
                 <BadgeCheck className="h-5 w-5" />
               </div>
-              <h4 className="font-serif text-sm font-extrabold text-stone-900">AQL 2.5 Standard</h4>
-              <p className="text-[11px] text-stone-500">Zero-defect sampling</p>
+              <h4 className="font-serif text-sm font-extrabold text-black">AQL 2.5 Standard</h4>
+              <p className="text-xs text-stone-900 font-semibold">Zero-defect sampling</p>
             </div>
 
-            <div className="card-slide-left stagger-1 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-[#e8ded1] shadow-xs">
-              <div className="h-9 w-9 rounded-xl bg-emerald-100 text-emerald-900 flex items-center justify-center font-bold mb-2">
+            <div className="card-slide-left stagger-1 hover-lift-sm p-4 rounded-2xl bg-white/90 border border-[#e8ded1] shadow-xs">
+              <div className="h-9 w-9 rounded-xl bg-emerald-100 text-emerald-950 flex items-center justify-center font-bold mb-2">
                 <ThermometerSnowflake className="h-5 w-5" />
               </div>
-              <h4 className="font-serif text-sm font-extrabold text-stone-900">Moisture &lt;12%</h4>
-              <p className="text-[11px] text-stone-500">100% mold-free guarantee</p>
+              <h4 className="font-serif text-sm font-extrabold text-black">Moisture &lt;12%</h4>
+              <p className="text-xs text-stone-900 font-semibold">100% mold-free guarantee</p>
             </div>
 
-            <div className="card-slide-right stagger-1 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-[#e8ded1] shadow-xs">
-              <div className="h-9 w-9 rounded-xl bg-teal-100 text-teal-900 flex items-center justify-center font-bold mb-2">
+            <div className="card-slide-right stagger-1 hover-lift-sm p-4 rounded-2xl bg-white/90 border border-[#e8ded1] shadow-xs">
+              <div className="h-9 w-9 rounded-xl bg-teal-100 text-teal-950 flex items-center justify-center font-bold mb-2">
                 <FileCheck className="h-5 w-5" />
               </div>
-              <h4 className="font-serif text-sm font-extrabold text-stone-900">Fumigation Passed</h4>
-              <p className="text-[11px] text-stone-500">Official phytosanitary cert</p>
+              <h4 className="font-serif text-sm font-extrabold text-black">Fumigation Passed</h4>
+              <p className="text-xs text-stone-900 font-semibold">Official phytosanitary cert</p>
             </div>
 
-            <div className="card-slide-far-right stagger-2 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-[#e8ded1] shadow-xs">
-              <div className="h-9 w-9 rounded-xl bg-blue-100 text-blue-900 flex items-center justify-center font-bold mb-2">
+            <div className="card-slide-far-right stagger-2 hover-lift-sm p-4 rounded-2xl bg-white/90 border border-[#e8ded1] shadow-xs">
+              <div className="h-9 w-9 rounded-xl bg-blue-100 text-blue-950 flex items-center justify-center font-bold mb-2">
                 <Award className="h-5 w-5" />
               </div>
-              <h4 className="font-serif text-sm font-extrabold text-stone-900">BSCI &amp; Sedex</h4>
-              <p className="text-[11px] text-stone-500">Ethical audit verified</p>
+              <h4 className="font-serif text-sm font-extrabold text-black">BSCI &amp; Sedex</h4>
+              <p className="text-xs text-stone-900 font-semibold">Ethical audit verified</p>
             </div>
           </div>
 
@@ -286,28 +286,28 @@ export const QualityControlPage: React.FC = () => {
                 <div className={`w-full lg:w-1/2 space-y-6 ${isEven ? 'reveal-left' : 'reveal-right'}`}>
                   
                   <div className="space-y-2">
-                    <span className="text-xs font-extrabold uppercase tracking-widest text-[#8c5836] flex items-center gap-1.5">
+                    <span className="text-xs font-extrabold uppercase tracking-widest text-black flex items-center gap-1.5">
                       <ShieldCheck className="h-4 w-4 text-emerald-700" />
                       <span>GUARANTEED EXPORT PROTOCOL</span>
                     </span>
-                    <h2 className="font-serif text-2xl sm:text-4xl font-extrabold text-stone-900 tracking-tight leading-tight">
+                    <h2 className="font-serif text-2xl sm:text-4xl font-extrabold text-black tracking-tight leading-tight">
                       {section.title}
                     </h2>
                   </div>
 
-                  <div className="relative pl-4 border-l-4 border-[#8c5836] bg-[#f7f2ea] p-4 rounded-r-2xl border-y border-r border-[#e8ded1]">
-                    <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-serif italic">
+                  <div className="relative pl-4 border-l-4 border-emerald-700 bg-[#f7f2ea] p-4 rounded-r-2xl border-y border-r border-[#e8ded1]">
+                    <p className="text-sm sm:text-base text-black leading-relaxed font-serif font-bold italic">
                       "{section.quote}"
                     </p>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-light">
+                  <p className="text-sm sm:text-base text-stone-900 leading-relaxed font-medium">
                     {section.description}
                   </p>
 
                   {/* Guaranteed Points Checklist with Staggered Entrance */}
                   <div className="space-y-2.5 pt-2">
-                    <h4 className="text-xs font-extrabold uppercase tracking-wider text-stone-400">
+                    <h4 className="text-xs font-black uppercase tracking-wider text-black">
                       Export Quality Guarantee Points:
                     </h4>
                     {section.guarantees.map((item, idx2) => {
@@ -320,7 +320,7 @@ export const QualityControlPage: React.FC = () => {
                           <div className="h-5 w-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 mt-0.5">
                             <Check className="h-3.5 w-3.5 stroke-[3]" />
                           </div>
-                          <span className="text-xs font-semibold text-stone-800">{item}</span>
+                          <span className="text-xs font-bold text-black">{item}</span>
                         </div>
                       );
                     })}
@@ -340,62 +340,62 @@ export const QualityControlPage: React.FC = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-2xl mx-auto space-y-3 reveal-up">
-            <span className="text-xs font-bold uppercase tracking-widest text-emerald-800">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-emerald-900">
               AUDIT MATRIX & SPECIFICATIONS
             </span>
             <ScrollTypingText
               as="h2"
               text="Comprehensive Quality Control Checklist"
-              className="font-serif text-2xl sm:text-4xl font-extrabold text-stone-900"
+              className="font-serif text-2xl sm:text-4xl font-extrabold text-black"
               speed={35}
             />
-            <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-light">
+            <p className="text-sm text-stone-900 leading-relaxed font-medium">
               Every production lot is audited by certified internal inspectors before external SGS/Intertek audits or shipping container loading.
             </p>
-            <div className="mx-auto h-1 w-16 rounded-full bg-[#8c5836]" />
+            <div className="mx-auto h-1.5 w-16 rounded-full bg-emerald-700" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             
             <div className="card-slide-left stagger-2 hover-lift bg-white rounded-3xl p-6 sm:p-8 border border-[#e8ded1] shadow-xs space-y-3">
-              <div className="h-10 w-10 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center font-bold">
+              <div className="h-10 w-10 rounded-xl bg-amber-100 text-amber-950 flex items-center justify-center font-bold">
                 <Scale className="h-5 w-5" />
               </div>
-              <h3 className="font-serif text-base font-bold text-stone-900">1. Dimension & Shape Testing</h3>
-              <p className="text-xs text-stone-600 leading-relaxed font-light">
+              <h3 className="font-serif text-base font-extrabold text-black">1. Dimension & Shape Testing</h3>
+              <p className="text-xs text-stone-900 leading-relaxed font-medium">
                 Calibrated against master approved samples. Height, diameter, taper angles, and nestable stack tolerance checked.
               </p>
-              <ul className="space-y-1.5 pt-2 text-[11px] text-stone-700 font-medium">
-                <li className="flex items-center gap-1.5 text-emerald-700">✓ Within ±1.5% deviation</li>
-                <li className="flex items-center gap-1.5 text-emerald-700">✓ S/2, S/3, S/4 nesting verified</li>
+              <ul className="space-y-1.5 pt-2 text-xs text-black font-semibold">
+                <li className="flex items-center gap-1.5 text-emerald-900 font-bold">✓ Within ±1.5% deviation</li>
+                <li className="flex items-center gap-1.5 text-emerald-900 font-bold">✓ S/2, S/3, S/4 nesting verified</li>
               </ul>
             </div>
 
             <div className="card-slide-mid stagger-1 hover-lift bg-white rounded-3xl p-6 sm:p-8 border border-[#e8ded1] shadow-xs space-y-3">
-              <div className="h-10 w-10 rounded-xl bg-emerald-100 text-emerald-900 flex items-center justify-center font-bold">
+              <div className="h-10 w-10 rounded-xl bg-emerald-100 text-emerald-950 flex items-center justify-center font-bold">
                 <ShieldCheck className="h-5 w-5" />
               </div>
-              <h3 className="font-serif text-base font-bold text-stone-900">2. Strength & Safety Testing</h3>
-              <p className="text-xs text-stone-600 leading-relaxed font-light">
+              <h3 className="font-serif text-base font-extrabold text-black">2. Strength & Safety Testing</h3>
+              <p className="text-xs text-stone-900 leading-relaxed font-medium">
                 Handles and frames undergo static pull testing up to 20kg. Chemical testing ensures non-heavy metal eco pigments.
               </p>
-              <ul className="space-y-1.5 pt-2 text-[11px] text-stone-700 font-medium">
-                <li className="flex items-center gap-1.5 text-emerald-700">✓ Static handle pull &gt;20kg</li>
-                <li className="flex items-center gap-1.5 text-emerald-700">✓ OEKO-TEX color dye safe</li>
+              <ul className="space-y-1.5 pt-2 text-xs text-black font-semibold">
+                <li className="flex items-center gap-1.5 text-emerald-900 font-bold">✓ Static handle pull &gt;20kg</li>
+                <li className="flex items-center gap-1.5 text-emerald-900 font-bold">✓ OEKO-TEX color dye safe</li>
               </ul>
             </div>
 
             <div className="card-slide-right stagger-2 hover-lift bg-white rounded-3xl p-6 sm:p-8 border border-[#e8ded1] shadow-xs space-y-3">
-              <div className="h-10 w-10 rounded-xl bg-teal-100 text-teal-900 flex items-center justify-center font-bold">
+              <div className="h-10 w-10 rounded-xl bg-teal-100 text-teal-950 flex items-center justify-center font-bold">
                 <Package className="h-5 w-5" />
               </div>
-              <h3 className="font-serif text-base font-bold text-stone-900">3. Transit & Packaging Audit</h3>
-              <p className="text-xs text-stone-600 leading-relaxed font-light">
+              <h3 className="font-serif text-base font-extrabold text-black">3. Transit & Packaging Audit</h3>
+              <p className="text-xs text-stone-900 leading-relaxed font-medium">
                 Finished master boxes undergo ISTA 1A drop testing, moisture absorbent placement, and 100% scannable barcode verification.
               </p>
-              <ul className="space-y-1.5 pt-2 text-[11px] text-stone-700 font-medium">
-                <li className="flex items-center gap-1.5 text-emerald-700">✓ 5-Ply export cartons standard</li>
-                <li className="flex items-center gap-1.5 text-emerald-700">✓ Pre-shipment report with photos</li>
+              <ul className="space-y-1.5 pt-2 text-xs text-black font-semibold">
+                <li className="flex items-center gap-1.5 text-emerald-900 font-bold">✓ 5-Ply export cartons standard</li>
+                <li className="flex items-center gap-1.5 text-emerald-900 font-bold">✓ Pre-shipment report with photos</li>
               </ul>
             </div>
 

@@ -241,73 +241,73 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8 relative z-10">
           
           {/* Breadcrumb Navigation */}
-          <nav className="reveal-up flex items-center gap-2 text-xs font-semibold text-stone-500">
+          <nav className="reveal-up flex items-center gap-2 text-xs font-bold text-stone-800">
             <Link to="/" className="hover:text-emerald-800 transition-colors">Home</Link>
             <span>/</span>
-            <span className="text-stone-900 font-bold">Infrastructure & Craftsmanship</span>
+            <span className="text-black font-extrabold">Infrastructure & Craftsmanship</span>
           </nav>
 
           <div className="text-center max-w-3xl mx-auto space-y-4 reveal-up">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#e8ded1] border border-[#d6c7b5] px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-[#6d4c2b] shadow-xs">
-              <Sparkles className="h-3.5 w-3.5 text-[#8c5836]" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-[#e8ded1] border border-[#d6c7b5] px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-black shadow-xs">
+              <Sparkles className="h-3.5 w-3.5 text-amber-800" />
               <span>Authentic Handmade Production</span>
             </div>
 
             <ScrollTypingText
               as="h1"
               text="Infrastructure & Craftsmanship"
-              className="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-stone-900 tracking-tight leading-[1.15]"
+              className="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-black tracking-tight leading-[1.15]"
               speed={40}
             />
 
-            <p className="font-serif text-lg sm:text-xl text-[#7c5335] italic font-medium">
+            <p className="font-serif text-lg sm:text-xl text-black italic font-bold">
               Where natural materials meet skilled hands.
             </p>
 
-            <p className="text-sm sm:text-base text-stone-600 leading-relaxed font-normal max-w-2xl mx-auto pt-1">
+            <p className="text-sm sm:text-base text-stone-900 leading-relaxed font-medium max-w-2xl mx-auto pt-1">
               Our products are created through a combination of natural materials, traditional craftsmanship and careful attention to detail. Explore how our skilled artisans transform simple natural fibres into beautiful handmade products.
             </p>
           </div>
 
           {/* Trust Value Badges Grid with Middle-Outward Card Slide */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto pt-4">
-            <div className="card-slide-far-left stagger-2 hover-lift-sm flex items-center gap-3 p-4 rounded-2xl bg-white/80 backdrop-blur-xs border border-[#e8ded1] shadow-xs">
-              <div className="h-10 w-10 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center shrink-0">
+            <div className="card-slide-far-left stagger-2 hover-lift-sm flex items-center gap-3 p-4 rounded-2xl bg-white/90 backdrop-blur-xs border border-[#e8ded1] shadow-xs">
+              <div className="h-10 w-10 rounded-xl bg-amber-100 text-amber-950 flex items-center justify-center shrink-0">
                 <Users className="h-5 w-5" />
               </div>
               <div>
-                <h4 className="font-serif text-sm font-extrabold text-stone-900">500+ Artisans</h4>
-                <p className="text-[11px] text-stone-500">Skilled rural women</p>
+                <h4 className="font-serif text-sm font-extrabold text-black">500+ Artisans</h4>
+                <p className="text-xs text-stone-900 font-semibold">Skilled rural women</p>
               </div>
             </div>
 
-            <div className="card-slide-left stagger-1 hover-lift-sm flex items-center gap-3 p-4 rounded-2xl bg-white/80 backdrop-blur-xs border border-[#e8ded1] shadow-xs">
-              <div className="h-10 w-10 rounded-xl bg-emerald-100 text-emerald-900 flex items-center justify-center shrink-0">
+            <div className="card-slide-left stagger-1 hover-lift-sm flex items-center gap-3 p-4 rounded-2xl bg-white/90 backdrop-blur-xs border border-[#e8ded1] shadow-xs">
+              <div className="h-10 w-10 rounded-xl bg-emerald-100 text-emerald-950 flex items-center justify-center shrink-0">
                 <Leaf className="h-5 w-5" />
               </div>
               <div>
-                <h4 className="font-serif text-sm font-extrabold text-stone-900">100% Natural</h4>
-                <p className="text-[11px] text-stone-500">Plant-based fibres</p>
+                <h4 className="font-serif text-sm font-extrabold text-black">100% Natural</h4>
+                <p className="text-xs text-stone-900 font-semibold">Plant-based fibres</p>
               </div>
             </div>
 
-            <div className="card-slide-right stagger-1 hover-lift-sm flex items-center gap-3 p-4 rounded-2xl bg-white/80 backdrop-blur-xs border border-[#e8ded1] shadow-xs">
-              <div className="h-10 w-10 rounded-xl bg-teal-100 text-teal-900 flex items-center justify-center shrink-0">
+            <div className="card-slide-right stagger-1 hover-lift-sm flex items-center gap-3 p-4 rounded-2xl bg-white/90 backdrop-blur-xs border border-[#e8ded1] shadow-xs">
+              <div className="h-10 w-10 rounded-xl bg-teal-100 text-teal-950 flex items-center justify-center shrink-0">
                 <ShieldCheck className="h-5 w-5" />
               </div>
               <div>
-                <h4 className="font-serif text-sm font-extrabold text-stone-900">Fair Trade & Audit</h4>
-                <p className="text-[11px] text-stone-500">BSCI & Sedex verified</p>
+                <h4 className="font-serif text-sm font-extrabold text-black">Fair Trade & Audit</h4>
+                <p className="text-xs text-stone-900 font-semibold">BSCI & Sedex verified</p>
               </div>
             </div>
 
-            <div className="card-slide-far-right stagger-2 hover-lift-sm flex items-center gap-3 p-4 rounded-2xl bg-white/80 backdrop-blur-xs border border-[#e8ded1] shadow-xs">
-              <div className="h-10 w-10 rounded-xl bg-stone-100 text-stone-900 flex items-center justify-center shrink-0">
+            <div className="card-slide-far-right stagger-2 hover-lift-sm flex items-center gap-3 p-4 rounded-2xl bg-white/90 backdrop-blur-xs border border-[#e8ded1] shadow-xs">
+              <div className="h-10 w-10 rounded-xl bg-stone-100 text-stone-950 flex items-center justify-center shrink-0">
                 <Package className="h-5 w-5" />
               </div>
               <div>
-                <h4 className="font-serif text-sm font-extrabold text-stone-900">Global Export</h4>
-                <p className="text-[11px] text-stone-500">35+ countries reached</p>
+                <h4 className="font-serif text-sm font-extrabold text-black">Global Export</h4>
+                <p className="text-xs text-stone-900 font-semibold">35+ countries reached</p>
               </div>
             </div>
           </div>
@@ -385,24 +385,24 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
                   
                   {/* Category Tagline */}
                   <div className="space-y-2">
-                    <span className="text-xs font-bold uppercase tracking-widest text-[#8c5836]">
+                    <span className="text-xs font-extrabold uppercase tracking-widest text-black">
                       {section.tagline}
                     </span>
-                    <h2 className="font-serif text-2xl sm:text-4xl font-extrabold text-stone-900 tracking-tight leading-tight">
+                    <h2 className="font-serif text-2xl sm:text-4xl font-extrabold text-black tracking-tight leading-tight">
                       {section.productTitle}
                     </h2>
                   </div>
 
                   {/* Core Description Quote */}
-                  <div className="relative pl-4 border-l-4 border-[#8c5836] bg-[#f7f2ea] p-4 rounded-r-2xl border-y border-r border-[#e8ded1]">
-                    <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-serif italic">
+                  <div className="relative pl-4 border-l-4 border-emerald-700 bg-[#f7f2ea] p-4 rounded-r-2xl border-y border-r border-[#e8ded1]">
+                    <p className="text-sm sm:text-base text-black leading-relaxed font-serif font-bold italic">
                       "{section.description}"
                     </p>
                   </div>
 
                   {/* Production Step-by-Step Flow */}
                   <div className="space-y-3 pt-2">
-                    <h3 className="text-xs font-extrabold uppercase tracking-wider text-stone-400 flex items-center gap-1.5">
+                    <h3 className="text-xs font-black uppercase tracking-wider text-black flex items-center gap-1.5">
                       <Layers className="h-3.5 w-3.5 text-emerald-700" />
                       <span>Handmade Production Process</span>
                     </h3>
@@ -415,14 +415,14 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
                             key={item.step}
                             className={`reveal-up ${stepStagger} hover-lift-sm group/step flex items-start gap-3.5 p-3 rounded-2xl bg-white border border-[#eae0d2] hover:border-emerald-600 hover:shadow-md transition-all duration-300`}
                           >
-                            <div className="h-7 w-7 rounded-xl bg-[#f0e8dc] group-hover/step:bg-emerald-700 text-[#6d4c2b] group-hover/step:text-white flex items-center justify-center text-xs font-mono font-extrabold shrink-0 transition-colors shadow-xs">
+                            <div className="h-7 w-7 rounded-xl bg-[#f0e8dc] group-hover/step:bg-emerald-700 text-stone-950 group-hover/step:text-white flex items-center justify-center text-xs font-mono font-extrabold shrink-0 transition-colors shadow-xs">
                               {item.step}
                             </div>
                             <div className="space-y-0.5 min-w-0">
-                              <h4 className="text-xs sm:text-sm font-bold text-stone-900 group-hover/step:text-emerald-800 transition-colors">
+                              <h4 className="text-xs sm:text-sm font-extrabold text-black group-hover/step:text-emerald-900 transition-colors">
                                 {item.title}
                               </h4>
-                              <p className="text-[11px] sm:text-xs text-stone-500 leading-relaxed font-light">
+                              <p className="text-xs text-stone-900 leading-relaxed font-medium">
                                 {item.description}
                               </p>
                             </div>
@@ -458,63 +458,63 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-2xl mx-auto space-y-3 reveal-up">
-            <span className="text-xs font-bold uppercase tracking-widest text-emerald-800">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-emerald-900">
               EXPORT ASSURANCE & CAPACITY
             </span>
-            <h2 className="font-serif text-2xl sm:text-4xl font-extrabold text-stone-900">
+            <h2 className="font-serif text-2xl sm:text-4xl font-extrabold text-black">
               International Export Standards
             </h2>
-            <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-light">
+            <p className="text-sm text-stone-900 leading-relaxed font-medium">
               Every shipment is produced under rigorous environmental compliance, pest-free certification, and strict moisture control parameters.
             </p>
-            <div className="mx-auto h-1 w-16 rounded-full bg-[#8c5836]" />
+            <div className="mx-auto h-1.5 w-16 rounded-full bg-emerald-700" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             
             <div className="card-slide-left stagger-2 hover-lift bg-white rounded-3xl p-6 sm:p-8 border border-[#e8ded1] shadow-xs space-y-4">
-              <div className="h-12 w-12 rounded-2xl bg-amber-100 text-amber-900 flex items-center justify-center shadow-xs">
+              <div className="h-12 w-12 rounded-2xl bg-amber-100 text-amber-950 flex items-center justify-center shadow-xs">
                 <Sun className="h-6 w-6" />
               </div>
-              <h3 className="font-serif text-lg font-bold text-stone-900">
+              <h3 className="font-serif text-lg font-extrabold text-black">
                 Moisture & Mold Protection
               </h3>
-              <p className="text-xs text-stone-600 leading-relaxed font-light">
+              <p className="text-xs text-stone-900 leading-relaxed font-medium">
                 All raw materials and finished handicrafts undergo controlled drying and digital hygrometer inspection ensuring moisture stays below 12%, guaranteed mold-free during maritime container voyages.
               </p>
-              <div className="pt-2 flex items-center gap-1.5 text-xs font-bold text-amber-800">
+              <div className="pt-2 flex items-center gap-1.5 text-xs font-bold text-amber-950">
                 <CheckCircle2 className="h-4 w-4" />
                 <span>Export Fumigation Certified</span>
               </div>
             </div>
 
             <div className="card-slide-mid stagger-1 hover-lift bg-white rounded-3xl p-6 sm:p-8 border border-[#e8ded1] shadow-xs space-y-4">
-              <div className="h-12 w-12 rounded-2xl bg-emerald-100 text-emerald-900 flex items-center justify-center shadow-xs">
+              <div className="h-12 w-12 rounded-2xl bg-emerald-100 text-emerald-950 flex items-center justify-center shadow-xs">
                 <Award className="h-6 w-6" />
               </div>
-              <h3 className="font-serif text-lg font-bold text-stone-900">
+              <h3 className="font-serif text-lg font-extrabold text-black">
                 Ethical & Fair Trade Workspaces
               </h3>
-              <p className="text-xs text-stone-600 leading-relaxed font-light">
+              <p className="text-xs text-stone-900 leading-relaxed font-medium">
                 Our cooperative production hubs across southern Bangladesh guarantee fair living wages, safe ergonomic ventilation, zero child labor, and continuous technical weaving masterclasses for rural women.
               </p>
-              <div className="pt-2 flex items-center gap-1.5 text-xs font-bold text-emerald-800">
+              <div className="pt-2 flex items-center gap-1.5 text-xs font-bold text-emerald-950">
                 <CheckCircle2 className="h-4 w-4" />
                 <span>BSCI & Sedex Audited</span>
               </div>
             </div>
 
             <div className="card-slide-right stagger-2 hover-lift bg-white rounded-3xl p-6 sm:p-8 border border-[#e8ded1] shadow-xs space-y-4">
-              <div className="h-12 w-12 rounded-2xl bg-teal-100 text-teal-900 flex items-center justify-center shadow-xs">
+              <div className="h-12 w-12 rounded-2xl bg-teal-100 text-teal-950 flex items-center justify-center shadow-xs">
                 <Package className="h-6 w-6" />
               </div>
-              <h3 className="font-serif text-lg font-bold text-stone-900">
+              <h3 className="font-serif text-lg font-extrabold text-black">
                 5-Ply Master Carton Packaging
               </h3>
-              <p className="text-xs text-stone-600 leading-relaxed font-light">
+              <p className="text-xs text-stone-900 leading-relaxed font-medium">
                 Nestable basket packaging, silica gel desiccants, heavy-duty 5-ply export master cartons, and shrink-wrapped palletization custom tailored for high container volume CBM efficiency.
               </p>
-              <div className="pt-2 flex items-center gap-1.5 text-xs font-bold text-teal-800">
+              <div className="pt-2 flex items-center gap-1.5 text-xs font-bold text-teal-950">
                 <CheckCircle2 className="h-4 w-4" />
                 <span>FCL & LCL Export Ready</span>
               </div>

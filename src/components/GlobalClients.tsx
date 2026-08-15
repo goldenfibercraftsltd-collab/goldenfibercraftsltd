@@ -44,19 +44,19 @@ export const GlobalClients: React.FC = () => {
         
         {/* Header with reveal-up */}
         <div className="text-center reveal-up">
-          <span className="text-xs font-bold uppercase tracking-[0.25em] text-amber-700">Worldwide Footprint</span>
+          <span className="text-xs font-black uppercase tracking-[0.25em] text-amber-900">Worldwide Footprint</span>
           <div className="mt-2">
             <ScrollTypingText
               as="h2"
               text="GLOBAL CLIENTS & EXPORT REACH"
-              className="font-serif text-3xl sm:text-4xl font-light tracking-[0.2em] text-stone-900 uppercase"
+              className="font-serif text-3xl sm:text-4xl font-extrabold tracking-[0.2em] text-black uppercase"
               speed={35}
             />
           </div>
-          <p className="mt-2 text-xs sm:text-sm text-stone-600 max-w-2xl mx-auto">
+          <p className="mt-2 text-xs sm:text-sm text-stone-900 font-medium max-w-2xl mx-auto">
             Supplying major retail chains, boutique home brands, and wholesale importers across key global markets.
           </p>
-          <div className="mx-auto mt-3 h-0.5 w-16 rounded-full bg-amber-600" />
+          <div className="mx-auto mt-3 h-1 w-16 rounded-full bg-amber-600" />
         </div>
 
         {/* Stats Row with Animated Counter and Middle-Outward Card Slide */}
@@ -72,10 +72,10 @@ export const GlobalClients: React.FC = () => {
                   <Icon className="h-6 w-6" />
                 </div>
                 <div>
-                  <div className="font-serif text-xl font-bold text-amber-950">
+                  <div className="font-serif text-xl font-extrabold text-black">
                     <AnimatedCounter target={item.target} suffix={item.suffix} />
                   </div>
-                  <div className="text-xs text-stone-500 font-medium">{item.label}</div>
+                  <div className="text-xs text-stone-900 font-bold">{item.label}</div>
                 </div>
               </div>
             );
@@ -84,7 +84,7 @@ export const GlobalClients: React.FC = () => {
 
         {/* Export Destinations Grid with Middle-Outward Card Slide */}
         <div className="mt-12">
-          <h3 className="font-serif text-xl font-bold text-stone-900 text-center sm:text-left mb-6 reveal-up">
+          <h3 className="font-serif text-xl font-extrabold text-black text-center sm:text-left mb-6 reveal-up">
             Export Regions & Core Product Lines
           </h3>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -94,12 +94,12 @@ export const GlobalClients: React.FC = () => {
                   key={index}
                   className={`${region.slideAnim} hover-lift-sm rounded-2xl bg-white p-6 border border-amber-900/10 shadow-xs hover:shadow-md transition-all`}
                 >
-                  <div className="text-xs font-bold text-amber-700 uppercase tracking-widest">Region</div>
-                  <h4 className="mt-1 font-serif text-lg font-bold text-stone-900">{region.name}</h4>
-                  <p className="mt-1 text-xs font-semibold text-stone-500">{region.countries}</p>
-                  <div className="mt-4 pt-3 border-t border-amber-900/5 text-xs text-stone-600">
-                    <span className="font-semibold text-stone-800">Key Offerings:</span>
-                    <p className="mt-0.5 text-stone-500">{region.focus}</p>
+                  <div className="text-xs font-black text-amber-900 uppercase tracking-widest">Region</div>
+                  <h4 className="mt-1 font-serif text-lg font-extrabold text-black">{region.name}</h4>
+                  <p className="mt-1 text-xs font-bold text-stone-900">{region.countries}</p>
+                  <div className="mt-4 pt-3 border-t border-amber-900/10 text-xs text-stone-950">
+                    <span className="font-extrabold text-black">Key Offerings:</span>
+                    <p className="mt-0.5 text-stone-950 font-medium">{region.focus}</p>
                   </div>
                 </div>
               );

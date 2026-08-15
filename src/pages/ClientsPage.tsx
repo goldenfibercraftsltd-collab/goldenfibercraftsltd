@@ -62,14 +62,14 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
         {/* Real Buyers Grid - Authentic Brand Logos Only */}
         <div className="space-y-6 bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-stone-200/80">
           <div className="text-center space-y-2 reveal-up">
-            <span className="text-xs font-bold uppercase tracking-widest text-emerald-700">AUTHENTIC CLIENT PORTFOLIO</span>
+            <span className="text-xs font-black uppercase tracking-widest text-emerald-900">AUTHENTIC CLIENT PORTFOLIO</span>
             <ScrollTypingText
               as="h2"
               text="Our Official Buyers"
-              className="font-serif text-2xl sm:text-4xl font-extrabold text-stone-900"
+              className="font-serif text-2xl sm:text-4xl font-extrabold text-black"
               speed={35}
             />
-            <p className="text-stone-500 text-xs sm:text-sm max-w-xl mx-auto font-light">
+            <p className="text-stone-900 text-xs sm:text-sm max-w-xl mx-auto font-medium">
               Real brand partners featured in the Golden Fiber Crafts Ltd. corporate portfolio.
             </p>
             <div className="mx-auto h-1 w-16 rounded-full bg-emerald-600 mt-2" />

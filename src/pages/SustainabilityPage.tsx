@@ -157,63 +157,63 @@ export const SustainabilityPage: React.FC = () => {
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8 relative z-10">
           
-          <nav className="reveal-up flex items-center gap-2 text-xs font-semibold text-stone-500">
+          <nav className="reveal-up flex items-center gap-2 text-xs font-bold text-stone-800">
             <Link to="/" className="hover:text-emerald-800 transition-colors">Home</Link>
             <span>/</span>
-            <span className="text-stone-900 font-bold">Sustainability</span>
+            <span className="text-black font-extrabold">Sustainability</span>
           </nav>
 
           <div className="text-center max-w-3xl mx-auto space-y-4 reveal-up">
-            <div className="inline-flex items-center gap-2 rounded-full bg-emerald-100 border border-emerald-300/80 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-emerald-950 shadow-xs">
-              <Leaf className="h-4 w-4 text-emerald-700" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-emerald-100 border border-emerald-300/80 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-black shadow-xs">
+              <Leaf className="h-4 w-4 text-emerald-800" />
               <span>Planet First • People Always</span>
             </div>
 
-            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-stone-900 tracking-tight leading-[1.15]">
+            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-black tracking-tight leading-[1.15]">
               Sustainability & Social Responsibility
             </h1>
 
-            <p className="font-serif text-lg sm:text-xl text-emerald-800 italic font-medium">
+            <p className="font-serif text-lg sm:text-xl text-black italic font-bold">
               Rooted in nature, crafted with dignity, committed to our planet.
             </p>
 
-            <p className="text-sm sm:text-base text-stone-600 leading-relaxed font-normal max-w-2xl mx-auto pt-1">
+            <p className="text-sm sm:text-base text-stone-900 leading-relaxed font-medium max-w-2xl mx-auto pt-1">
               At Golden Fiber Crafts Ltd, environmental stewardship is not an afterthought — it is the very foundation of our existence. Discover how our 100% natural, plastic-free handicrafts create positive ecological and social impact across Bangladesh.
             </p>
           </div>
 
           {/* 4 Impact Metric Badges with Middle-Outward Card Slide */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto pt-4">
-            <div className="card-slide-far-left stagger-2 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-emerald-200/80 shadow-xs">
-              <div className="h-9 w-9 rounded-xl bg-emerald-100 text-emerald-900 flex items-center justify-center font-bold mb-2">
+            <div className="card-slide-far-left stagger-2 hover-lift-sm p-4 rounded-2xl bg-white/90 border border-emerald-200/80 shadow-xs">
+              <div className="h-9 w-9 rounded-xl bg-emerald-100 text-emerald-950 flex items-center justify-center font-bold mb-2">
                 <Sprout className="h-5 w-5" />
               </div>
-              <h4 className="font-serif text-sm font-extrabold text-stone-900">100% Renewable</h4>
-              <p className="text-[11px] text-stone-500">Plant-based raw fibers</p>
+              <h4 className="font-serif text-sm font-extrabold text-black">100% Renewable</h4>
+              <p className="text-xs text-stone-900 font-semibold">Plant-based raw fibers</p>
             </div>
 
-            <div className="card-slide-left stagger-1 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-emerald-200/80 shadow-xs">
-              <div className="h-9 w-9 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center font-bold mb-2">
+            <div className="card-slide-left stagger-1 hover-lift-sm p-4 rounded-2xl bg-white/90 border border-emerald-200/80 shadow-xs">
+              <div className="h-9 w-9 rounded-xl bg-amber-100 text-amber-950 flex items-center justify-center font-bold mb-2">
                 <Users className="h-5 w-5" />
               </div>
-              <h4 className="font-serif text-sm font-extrabold text-stone-900">85%+ Women Artisans</h4>
-              <p className="text-[11px] text-stone-500">Ethical fair-trade wages</p>
+              <h4 className="font-serif text-sm font-extrabold text-black">85%+ Women Artisans</h4>
+              <p className="text-xs text-stone-900 font-semibold">Ethical fair-trade wages</p>
             </div>
 
-            <div className="card-slide-right stagger-1 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-emerald-200/80 shadow-xs">
-              <div className="h-9 w-9 rounded-xl bg-teal-100 text-teal-900 flex items-center justify-center font-bold mb-2">
+            <div className="card-slide-right stagger-1 hover-lift-sm p-4 rounded-2xl bg-white/90 border border-emerald-200/80 shadow-xs">
+              <div className="h-9 w-9 rounded-xl bg-teal-100 text-teal-950 flex items-center justify-center font-bold mb-2">
                 <Recycle className="h-5 w-5" />
               </div>
-              <h4 className="font-serif text-sm font-extrabold text-stone-900">Zero Plastic</h4>
-              <p className="text-[11px] text-stone-500">100% Biodegradable</p>
+              <h4 className="font-serif text-sm font-extrabold text-black">Zero Plastic</h4>
+              <p className="text-xs text-stone-900 font-semibold">100% Biodegradable</p>
             </div>
 
-            <div className="card-slide-far-right stagger-2 hover-lift-sm p-4 rounded-2xl bg-white/80 border border-emerald-200/80 shadow-xs">
-              <div className="h-9 w-9 rounded-xl bg-blue-100 text-blue-900 flex items-center justify-center font-bold mb-2">
+            <div className="card-slide-far-right stagger-2 hover-lift-sm p-4 rounded-2xl bg-white/90 border border-emerald-200/80 shadow-xs">
+              <div className="h-9 w-9 rounded-xl bg-blue-100 text-blue-950 flex items-center justify-center font-bold mb-2">
                 <Globe2 className="h-5 w-5" />
               </div>
-              <h4 className="font-serif text-sm font-extrabold text-stone-900">UN SDG Aligned</h4>
-              <p className="text-[11px] text-stone-500">Global climate action</p>
+              <h4 className="font-serif text-sm font-extrabold text-black">UN SDG Aligned</h4>
+              <p className="text-xs text-stone-900 font-semibold">Global climate action</p>
             </div>
           </div>
 
@@ -280,28 +280,28 @@ export const SustainabilityPage: React.FC = () => {
                 <div className={`w-full lg:w-1/2 space-y-6 ${isEven ? 'reveal-left' : 'reveal-right'}`}>
                   
                   <div className="space-y-2">
-                    <span className="text-xs font-extrabold uppercase tracking-widest text-emerald-800 flex items-center gap-1.5">
+                    <span className="text-xs font-extrabold uppercase tracking-widest text-black flex items-center gap-1.5">
                       <Leaf className="h-4 w-4 text-emerald-700" />
                       <span>PLANET &amp; COMMUNITY COMMITMENT</span>
                     </span>
-                    <h2 className="font-serif text-2xl sm:text-4xl font-extrabold text-stone-900 tracking-tight leading-tight">
+                    <h2 className="font-serif text-2xl sm:text-4xl font-extrabold text-black tracking-tight leading-tight">
                       {section.title}
                     </h2>
                   </div>
 
                   <div className="relative pl-4 border-l-4 border-emerald-700 bg-[#edf5ef] p-4 rounded-r-2xl border-y border-r border-[#d8e8da]">
-                    <p className="text-sm sm:text-base text-emerald-950 leading-relaxed font-serif italic">
+                    <p className="text-sm sm:text-base text-black leading-relaxed font-serif font-bold italic">
                       "{section.quote}"
                     </p>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-light">
+                  <p className="text-sm sm:text-base text-stone-900 leading-relaxed font-medium">
                     {section.description}
                   </p>
 
                   {/* Impact Points Checklist with Staggered Entrance */}
                   <div className="space-y-2.5 pt-2">
-                    <h4 className="text-xs font-extrabold uppercase tracking-wider text-stone-400">
+                    <h4 className="text-xs font-black uppercase tracking-wider text-black">
                       Measurable Sustainability Impact:
                     </h4>
                     {section.impactPoints.map((item, idx2) => {
@@ -314,7 +314,7 @@ export const SustainabilityPage: React.FC = () => {
                           <div className="h-5 w-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 mt-0.5">
                             <CheckCircle2 className="h-3.5 w-3.5" />
                           </div>
-                          <span className="text-xs font-semibold text-stone-800">{item}</span>
+                          <span className="text-xs font-bold text-black">{item}</span>
                         </div>
                       );
                     })}
@@ -334,56 +334,56 @@ export const SustainabilityPage: React.FC = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-2xl mx-auto space-y-3 reveal-up">
-            <span className="text-xs font-bold uppercase tracking-widest text-emerald-800">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-emerald-900">
               GLOBAL ALIGNMENT
             </span>
-            <h2 className="font-serif text-2xl sm:text-4xl font-extrabold text-stone-900">
+            <h2 className="font-serif text-2xl sm:text-4xl font-extrabold text-black">
               Contributing to the UN Sustainable Development Goals
             </h2>
-            <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-light">
+            <p className="text-sm text-stone-900 leading-relaxed font-medium">
               Our business model actively aligns with international sustainable targets to foster inclusive economic development and ecological preservation.
             </p>
-            <div className="mx-auto h-1 w-16 rounded-full bg-emerald-700" />
+            <div className="mx-auto h-1.5 w-16 rounded-full bg-emerald-700" />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
             <div className="card-slide-far-left stagger-2 hover-lift bg-white rounded-3xl p-6 border border-[#d8e8da] shadow-xs space-y-3">
-              <div className="h-10 w-10 rounded-xl bg-rose-100 text-rose-800 flex items-center justify-center font-bold text-xs font-mono">
+              <div className="h-10 w-10 rounded-xl bg-rose-100 text-rose-950 flex items-center justify-center font-bold text-xs font-mono">
                 SDG 5
               </div>
-              <h3 className="font-serif text-base font-bold text-stone-900">Gender Equality</h3>
-              <p className="text-xs text-stone-600 leading-relaxed font-light">
+              <h3 className="font-serif text-base font-extrabold text-black">Gender Equality</h3>
+              <p className="text-xs text-stone-900 leading-relaxed font-medium">
                 Providing hundreds of rural women with direct bank accounts, technical skills, and leadership roles in their villages.
               </p>
             </div>
 
             <div className="card-slide-left stagger-1 hover-lift bg-white rounded-3xl p-6 border border-[#d8e8da] shadow-xs space-y-3">
-              <div className="h-10 w-10 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center font-bold text-xs font-mono">
+              <div className="h-10 w-10 rounded-xl bg-amber-100 text-amber-950 flex items-center justify-center font-bold text-xs font-mono">
                 SDG 8
               </div>
-              <h3 className="font-serif text-base font-bold text-stone-900">Decent Work & Growth</h3>
-              <p className="text-xs text-stone-600 leading-relaxed font-light">
+              <h3 className="font-serif text-base font-extrabold text-black">Decent Work & Growth</h3>
+              <p className="text-xs text-stone-900 leading-relaxed font-medium">
                 Guaranteeing fair trade living wages, clean ergonomic workspaces, and zero child labor in our supply chains.
               </p>
             </div>
 
             <div className="card-slide-right stagger-1 hover-lift bg-white rounded-3xl p-6 border border-[#d8e8da] shadow-xs space-y-3">
-              <div className="h-10 w-10 rounded-xl bg-teal-100 text-teal-900 flex items-center justify-center font-bold text-xs font-mono">
+              <div className="h-10 w-10 rounded-xl bg-teal-100 text-teal-950 flex items-center justify-center font-bold text-xs font-mono">
                 SDG 12
               </div>
-              <h3 className="font-serif text-base font-bold text-stone-900">Responsible Consumption</h3>
-              <p className="text-xs text-stone-600 leading-relaxed font-light">
+              <h3 className="font-serif text-base font-extrabold text-black">Responsible Consumption</h3>
+              <p className="text-xs text-stone-900 leading-relaxed font-medium">
                 Manufacturing 100% biodegradable products that replace petroleum-based plastic bins and synthetic home furnishings.
               </p>
             </div>
 
             <div className="card-slide-far-right stagger-2 hover-lift bg-white rounded-3xl p-6 border border-[#d8e8da] shadow-xs space-y-3">
-              <div className="h-10 w-10 rounded-xl bg-emerald-100 text-emerald-900 flex items-center justify-center font-bold text-xs font-mono">
+              <div className="h-10 w-10 rounded-xl bg-emerald-100 text-emerald-950 flex items-center justify-center font-bold text-xs font-mono">
                 SDG 13
               </div>
-              <h3 className="font-serif text-base font-bold text-stone-900">Climate Action</h3>
-              <p className="text-xs text-stone-600 leading-relaxed font-light">
+              <h3 className="font-serif text-base font-extrabold text-black">Climate Action</h3>
+              <p className="text-xs text-stone-900 leading-relaxed font-medium">
                 Cultivating carbon-negative plant fibers that act as natural carbon sinks and solar drying with zero fossil fuel.
               </p>
             </div>

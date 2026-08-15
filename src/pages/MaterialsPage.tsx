@@ -132,28 +132,28 @@ export const MaterialsPage: React.FC = () => {
     <div className="min-h-screen bg-white text-stone-900 font-sans pb-20 animate-fadeIn">
       
       {/* 1. Breadcrumbs Header */}
-      <div className="border-b border-stone-200 bg-stone-50/50 reveal-up">
-        <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8 flex items-center justify-between text-xs text-stone-600">
+      <div className="border-b border-stone-200 bg-stone-50/80 reveal-up">
+        <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8 flex items-center justify-between text-xs text-stone-900 font-bold">
           <div className="flex items-center gap-1.5">
-            <Link to="/" className="hover:text-[#65a30d] font-medium">Home</Link>
-            <ChevronRight className="h-3 w-3 text-stone-400" />
-            <span className="text-stone-900 font-bold">Materials Information</span>
+            <Link to="/" className="hover:text-[#65a30d] font-bold text-stone-800">Home</Link>
+            <ChevronRight className="h-3.5 w-3.5 text-stone-600 font-bold" />
+            <span className="text-black font-extrabold">Materials Information</span>
           </div>
           
           {/* Quick Search */}
           <div className="relative w-48 sm:w-64">
-            <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-stone-400" />
+            <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-stone-700" />
             <input
               type="text"
               placeholder="Search material..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-8 pr-7 py-1 text-xs rounded border border-stone-300 bg-white focus:outline-hidden focus:border-[#65a30d] transition-colors"
+              className="w-full pl-8 pr-7 py-1 text-xs rounded border border-stone-400 bg-white text-black font-medium focus:outline-hidden focus:border-[#65a30d] transition-colors"
             />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                className="absolute right-2 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-600"
+                className="absolute right-2 top-1/2 -translate-y-1/2 text-stone-600 hover:text-black"
               >
                 <X className="h-3 w-3" />
               </button>
@@ -166,10 +166,10 @@ export const MaterialsPage: React.FC = () => {
       <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 mt-4 sm:mt-6">
         
         {/* Table Header (Desktop) */}
-        <div className="hidden lg:grid grid-cols-12 bg-white border-b-2 border-stone-200 text-sm font-bold text-stone-900 pb-3 px-2 reveal-up">
-          <div className="col-span-3 font-extrabold text-stone-900">Raw Material Images</div>
-          <div className="col-span-6 px-4 font-extrabold text-stone-900">Raw Material and Product Description</div>
-          <div className="col-span-3 text-right font-extrabold text-stone-900 pr-2">Sample Product Images</div>
+        <div className="hidden lg:grid grid-cols-12 bg-white border-b-2 border-stone-300 text-sm font-extrabold text-black pb-3 px-2 reveal-up">
+          <div className="col-span-3 font-black text-black">Raw Material Images</div>
+          <div className="col-span-6 px-4 font-black text-black">Raw Material and Product Description</div>
+          <div className="col-span-3 text-right font-black text-black pr-2">Sample Product Images</div>
         </div>
 
         {/* Table Content with Staggered Entrance */}
@@ -185,7 +185,7 @@ export const MaterialsPage: React.FC = () => {
                   
                   {/* Column 1: Raw Material Images */}
                   <div className="lg:col-span-3">
-                    <span className="lg:hidden block text-xs font-bold text-stone-800 mb-2">
+                    <span className="lg:hidden block text-xs font-bold text-black mb-2">
                       Raw Material Images:
                     </span>
                     <div className="flex items-center gap-2 sm:gap-3">
@@ -208,17 +208,17 @@ export const MaterialsPage: React.FC = () => {
 
                   {/* Column 2: Raw Material and Product Description */}
                   <div className="lg:col-span-6 px-0 lg:px-4 space-y-1.5">
-                    <span className="lg:hidden block text-xs font-bold text-stone-800">
+                    <span className="lg:hidden block text-xs font-bold text-black">
                       Raw Material & Description:
                     </span>
-                    <p className="text-xs sm:text-[13px] text-stone-800 leading-relaxed">
-                      <span className="font-bold text-stone-900">{mat.name}: </span>
+                    <p className="text-xs sm:text-[13px] text-black leading-relaxed font-medium">
+                      <span className="font-extrabold text-black">{mat.name}: </span>
                       <span>{mat.description.replace(`${mat.name}: `, '')}</span>
                     </p>
                     <div className="pt-1">
                       <Link
                         to={`/products?category=${mat.categorySlug}`}
-                        className="text-xs font-bold text-[#65a30d] hover:underline inline-flex items-center gap-1 btn-interactive"
+                        className="text-xs font-bold text-emerald-800 hover:underline inline-flex items-center gap-1 btn-interactive"
                       >
                         <span>Browse {mat.name} products</span>
                         <span className="btn-arrow">➔</span>

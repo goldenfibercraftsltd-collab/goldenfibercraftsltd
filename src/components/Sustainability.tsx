@@ -51,10 +51,10 @@ export const Sustainability: React.FC = () => {
               speed={35}
             />
           </div>
-          <p className="mt-4 text-sm sm:text-base text-amber-200/80 leading-relaxed font-light">
+          <p className="mt-4 text-sm sm:text-base text-amber-100 leading-relaxed font-medium">
             Empowering Bangladeshi rural communities while supplying global retail markets with 100% biodegradable natural fiber products.
           </p>
-          <div className="mx-auto mt-4 h-0.5 w-20 rounded-full bg-amber-500" />
+          <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-amber-500" />
         </div>
 
         {/* 4 Pillars Grid with Middle-Outward Glide Entrance */}
@@ -69,10 +69,10 @@ export const Sustainability: React.FC = () => {
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 text-stone-950 shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <Icon className="h-7 w-7" />
                 </div>
-                <h3 className="mt-6 font-serif text-lg font-bold tracking-wide text-amber-100 group-hover:text-amber-400 transition-colors">
+                <h3 className="mt-6 font-serif text-lg font-extrabold tracking-wide text-amber-100 group-hover:text-amber-400 transition-colors">
                   {pillar.title}
                 </h3>
-                <p className="mt-3 text-xs sm:text-sm text-stone-300 leading-relaxed font-light">
+                <p className="mt-3 text-xs sm:text-sm text-stone-100 leading-relaxed font-medium">
                   {pillar.description}
                 </p>
               </div>
@@ -88,8 +88,8 @@ export const Sustainability: React.FC = () => {
                 <ShieldCheck className="h-6 w-6" />
               </div>
               <div>
-                <h4 className="font-serif text-base font-bold text-white">Ethical, Fair Trade & Audited</h4>
-                <p className="text-xs text-stone-400 font-light">Complying with BSCI, Sedex, and Fair Trade certified environmental manufacturing standards.</p>
+                <h4 className="font-serif text-base font-extrabold text-white">Ethical, Fair Trade & Audited</h4>
+                <p className="text-xs text-stone-200 font-medium">Complying with BSCI, Sedex, and Fair Trade certified environmental manufacturing standards.</p>
               </div>
             </div>
             <a

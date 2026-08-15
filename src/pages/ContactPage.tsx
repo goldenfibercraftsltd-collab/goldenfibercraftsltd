@@ -48,48 +48,48 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuoteModal }) =>
             <div className="rounded-3xl bg-white p-8 shadow-xl border border-stone-200/80 space-y-6">
               <h2 className="font-serif text-2xl font-bold text-stone-900">Head Office & Factory</h2>
               
-              <div className="space-y-4 text-sm text-stone-600">
+              <div className="space-y-4 text-sm text-stone-950">
                 <div className="flex items-start gap-3 hover-lift-sm p-1 rounded-xl transition-all">
-                  <div className="h-10 w-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 shadow-xs">
+                  <div className="h-10 w-10 rounded-xl bg-emerald-100 text-emerald-950 flex items-center justify-center shrink-0 shadow-xs">
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-stone-900">Corporate Address</h4>
-                    <p className="text-xs text-stone-500">Dhaka Industrial Zone, Bangladesh</p>
+                    <h4 className="font-extrabold text-black">Corporate Address</h4>
+                    <p className="text-xs text-stone-900 font-semibold">Dhaka Industrial Zone, Bangladesh</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3 hover-lift-sm p-1 rounded-xl transition-all">
-                  <div className="h-10 w-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center shrink-0 shadow-xs">
+                  <div className="h-10 w-10 rounded-xl bg-amber-100 text-amber-950 flex items-center justify-center shrink-0 shadow-xs">
                     <Mail className="h-5 w-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-stone-900">Email Address</h4>
-                    <a href="mailto:goldenfibercraftsltd@gmail.com" className="text-xs text-emerald-700 font-semibold hover:underline">
+                    <h4 className="font-extrabold text-black">Email Address</h4>
+                    <a href="mailto:goldenfibercraftsltd@gmail.com" className="text-xs text-emerald-900 font-extrabold hover:underline">
                       goldenfibercraftsltd@gmail.com
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3 hover-lift-sm p-1 rounded-xl transition-all">
-                  <div className="h-10 w-10 rounded-xl bg-green-100 text-green-800 flex items-center justify-center shrink-0 shadow-xs">
+                  <div className="h-10 w-10 rounded-xl bg-green-100 text-green-950 flex items-center justify-center shrink-0 shadow-xs">
                     <Phone className="h-5 w-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-stone-900">WhatsApp / Call Direct</h4>
-                    <a href="https://wa.me/8801617778488?text=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%20I%20would%20like%20to%20know%20more%20about%20your%20handicraft%20products%20and%20export%20details." target="_blank" rel="noreferrer" className="text-xs text-emerald-700 font-semibold hover:underline">
+                    <h4 className="font-extrabold text-black">WhatsApp / Call Direct</h4>
+                    <a href="https://wa.me/8801617778488?text=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%20I%20would%20like%20to%20know%20more%20about%20your%20handicraft%20products%20and%20export%20details." target="_blank" rel="noreferrer" className="text-xs text-emerald-900 font-extrabold hover:underline">
                       +880-1617-778488
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3 hover-lift-sm p-1 rounded-xl transition-all">
-                  <div className="h-10 w-10 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center shrink-0 shadow-xs">
+                  <div className="h-10 w-10 rounded-xl bg-purple-100 text-purple-950 flex items-center justify-center shrink-0 shadow-xs">
                     <Clock className="h-5 w-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-stone-900">Working Hours</h4>
-                    <p className="text-xs text-stone-500">Saturday – Thursday: 9:00 AM – 7:00 PM (GMT+6)</p>
+                    <h4 className="font-extrabold text-black">Working Hours</h4>
+                    <p className="text-xs text-stone-900 font-semibold">Saturday – Thursday: 9:00 AM – 7:00 PM (GMT+6)</p>
                   </div>
                 </div>
               </div>

@@ -70,22 +70,22 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
               className="font-serif text-2xl sm:text-4xl font-bold text-stone-900 leading-tight"
               speed={30}
             />
-            <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
+            <p className="text-stone-900 text-sm sm:text-base leading-relaxed font-medium">
               Founded with a mission to promote Bangladesh's rich golden fiber heritage globally, Golden Fiber Crafts Ltd. stands as a pioneer in sustainable manufacturing. From handwoven natural baskets to certified eco-friendly home decor, we bridge traditional craftsmanship with modern export standards.
             </p>
             <div className="grid sm:grid-cols-2 gap-4 pt-4">
               <div className="hover-lift-sm flex items-start gap-3 rounded-2xl bg-white p-4 shadow-sm border border-stone-200/60">
                 <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-bold text-stone-900 text-sm">100% Eco-Friendly</h4>
-                  <p className="text-xs text-stone-500">Biodegradable natural fibers & non-toxic dyes.</p>
+                  <h4 className="font-extrabold text-black text-sm">100% Eco-Friendly</h4>
+                  <p className="text-xs text-stone-900 font-medium">Biodegradable natural fibers & non-toxic dyes.</p>
                 </div>
               </div>
               <div className="hover-lift-sm flex items-start gap-3 rounded-2xl bg-white p-4 shadow-sm border border-stone-200/60">
                 <ShieldCheck className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-bold text-stone-900 text-sm">Global Compliance</h4>
-                  <p className="text-xs text-stone-500">BSCI, Sedex & OEKO-TEX Standard 100.</p>
+                  <h4 className="font-extrabold text-black text-sm">Global Compliance</h4>
+                  <p className="text-xs text-stone-900 font-medium">BSCI, Sedex & OEKO-TEX Standard 100.</p>
                 </div>
               </div>
             </div>
@@ -109,10 +109,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
         {/* 3. 4 Highlight Value Cards (Customer Satisfaction, In Time Delivery, Competitive Price, Quality Product) */}
         <div className="reveal-up space-y-6">
           <div className="text-center">
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-stone-900">
+            <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-black">
               Our Core Commitments
             </h3>
-            <div className="mx-auto mt-2 h-0.5 w-16 rounded-full bg-emerald-600" />
+            <div className="mx-auto mt-2 h-1 w-16 rounded-full bg-emerald-600" />
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
@@ -128,7 +128,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
                 </h4>
               </div>
               <div className="p-6 flex-1 flex items-center justify-center bg-white text-center">
-                <p className="text-sm text-stone-700 leading-relaxed font-light">
+                <p className="text-sm text-black leading-relaxed font-medium">
                   Golden Fiber Crafts Ltd. promises to deliver premium natural handicrafts and exceed customer satisfaction.
                 </p>
               </div>
@@ -145,7 +145,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
                 </h4>
               </div>
               <div className="p-6 flex-1 flex items-center justify-center bg-white text-center">
-                <p className="text-sm text-stone-700 leading-relaxed font-light">
+                <p className="text-sm text-black leading-relaxed font-medium">
                   Our factory is like a friendly environment. Proper machine, worker, air and freshness — all are so good.
                 </p>
               </div>
@@ -162,7 +162,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
                 </h4>
               </div>
               <div className="p-6 flex-1 flex items-center justify-center bg-white text-center">
-                <p className="text-sm text-stone-700 leading-relaxed font-light">
+                <p className="text-sm text-black leading-relaxed font-medium">
                   After successfully delivering the product with good quality, we hope you will contact us again. That's why quality is our main pull.
                 </p>
               </div>
@@ -179,7 +179,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
                 </h4>
               </div>
               <div className="p-6 flex-1 flex items-center justify-center bg-white text-center">
-                <p className="text-sm text-stone-700 leading-relaxed font-light">
+                <p className="text-sm text-black leading-relaxed font-medium">
                   We offer top quality garments services. Our team has expert knowledge and skills required to ensure professional work for your next order.
                 </p>
               </div>
@@ -191,7 +191,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
         {/* 4. Technical Information Section */}
         <div className="reveal-up rounded-3xl bg-white p-8 sm:p-12 shadow-xl border border-stone-200/80">
           <div className="text-center max-w-2xl mx-auto mb-8">
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-stone-900 uppercase tracking-wide">
+            <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-black uppercase tracking-wide">
               Technical Information
             </h3>
             <div className="mx-auto mt-2 h-1 w-20 rounded-full bg-emerald-600" />
@@ -201,51 +201,51 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
             <table className="min-w-full divide-y divide-stone-200 text-left">
               <tbody className="divide-y divide-stone-100 bg-white">
                 <tr className="hover:bg-emerald-50/40 transition-colors">
-                  <td className="px-6 py-4 text-sm font-bold text-stone-900 w-1/3">
+                  <td className="px-6 py-4 text-sm font-bold text-black w-1/3">
                     Office Staff
                   </td>
-                  <td className="px-6 py-4 text-sm text-stone-700 font-medium">
-                    : <span className="font-semibold text-emerald-800">50</span>
+                  <td className="px-6 py-4 text-sm text-black font-semibold">
+                    : <span className="font-extrabold text-emerald-900">50</span>
                   </td>
                 </tr>
                 <tr className="hover:bg-emerald-50/40 transition-colors bg-stone-50/40">
-                  <td className="px-6 py-4 text-sm font-bold text-stone-900">
+                  <td className="px-6 py-4 text-sm font-bold text-black">
                     Artisans
                   </td>
-                  <td className="px-6 py-4 text-sm text-stone-700 font-medium">
-                    : <span className="font-semibold text-emerald-800">Approximate 50,000 pcs per month</span>
+                  <td className="px-6 py-4 text-sm text-black font-semibold">
+                    : <span className="font-extrabold text-emerald-900">Approximate 50,000 pcs per month</span>
                   </td>
                 </tr>
                 <tr className="hover:bg-emerald-50/40 transition-colors">
-                  <td className="px-6 py-4 text-sm font-bold text-stone-900">
+                  <td className="px-6 py-4 text-sm font-bold text-black">
                     Production Capacity / Month
                   </td>
-                  <td className="px-6 py-4 text-sm text-stone-700 font-medium">
-                    : <span className="font-semibold text-emerald-800">50 x 40’ HQ Containers</span>
+                  <td className="px-6 py-4 text-sm text-black font-semibold">
+                    : <span className="font-extrabold text-emerald-900">50 x 40’ HQ Containers</span>
                   </td>
                 </tr>
                 <tr className="hover:bg-emerald-50/40 transition-colors bg-stone-50/40">
-                  <td className="px-6 py-4 text-sm font-bold text-stone-900">
+                  <td className="px-6 py-4 text-sm font-bold text-black">
                     Production Lead Time
                   </td>
-                  <td className="px-6 py-4 text-sm text-stone-700 font-medium">
-                    : <span className="font-semibold text-emerald-800">70-90 days</span>
+                  <td className="px-6 py-4 text-sm text-black font-semibold">
+                    : <span className="font-extrabold text-emerald-900">70-90 days</span>
                   </td>
                 </tr>
                 <tr className="hover:bg-emerald-50/40 transition-colors">
-                  <td className="px-6 py-4 text-sm font-bold text-stone-900">
+                  <td className="px-6 py-4 text-sm font-bold text-black">
                     Payment Term
                   </td>
-                  <td className="px-6 py-4 text-sm text-stone-700 font-medium">
+                  <td className="px-6 py-4 text-sm text-black font-semibold">
                     : <span>L/C @ Sight or TT (30 % Deposit and 70% against copy of shipping documents)</span>
                   </td>
                 </tr>
                 <tr className="hover:bg-emerald-50/40 transition-colors bg-stone-50/40">
-                  <td className="px-6 py-4 text-sm font-bold text-stone-900">
+                  <td className="px-6 py-4 text-sm font-bold text-black">
                     Annual Turnover
                   </td>
-                  <td className="px-6 py-4 text-sm text-stone-700 font-medium">
-                    : <span className="font-bold text-emerald-700">5 million USD</span>
+                  <td className="px-6 py-4 text-sm text-black font-semibold">
+                    : <span className="font-extrabold text-emerald-900">5 million USD</span>
                   </td>
                 </tr>
               </tbody>
@@ -287,13 +287,13 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
                   <ShieldCheck className="h-3 w-3" />
                   Leadership & Vision
                 </span>
-                <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-stone-900 leading-snug">
+                <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-black leading-snug">
                   Managing Director's Message
                 </h3>
-                <p className="text-xs text-stone-500 font-semibold">Golden Fiber Crafts Ltd.</p>
+                <p className="text-xs text-stone-800 font-bold">Golden Fiber Crafts Ltd.</p>
               </div>
 
-              <blockquote className="italic text-stone-700 text-sm sm:text-base md:text-lg leading-relaxed font-serif border-l-0 sm:border-l-4 sm:border-emerald-600 sm:pl-5 py-1">
+              <blockquote className="italic text-black text-sm sm:text-base md:text-lg leading-relaxed font-serif font-medium border-l-0 sm:border-l-4 sm:border-emerald-600 sm:pl-5 py-1">
                 "Our commitment is rooted in two core principles: uncompromised product quality and total environmental responsibility. As global fashion and home decor markets shift towards sustainable supply chains, Golden Fiber Crafts Ltd. provides world-class retail brands with certified eco-friendly solutions produced with dignity, passion, and precision."
               </blockquote>
             </div>
@@ -306,25 +306,25 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
             <p className="font-serif text-3xl sm:text-4xl font-extrabold text-emerald-700">
               <AnimatedCounter target={15} suffix="+" />
             </p>
-            <p className="mt-1 text-xs text-stone-600 font-medium uppercase">Years Experience</p>
+            <p className="mt-1 text-xs text-black font-bold uppercase">Years Experience</p>
           </div>
           <div className="card-slide-left stagger-1 hover-lift-sm rounded-2xl bg-white p-6 shadow-md border border-stone-100">
             <p className="font-serif text-3xl sm:text-4xl font-extrabold text-emerald-700">
               <AnimatedCounter target={35} suffix="+" />
             </p>
-            <p className="mt-1 text-xs text-stone-600 font-medium uppercase">Export Destinations</p>
+            <p className="mt-1 text-xs text-black font-bold uppercase">Export Destinations</p>
           </div>
           <div className="card-slide-right stagger-1 hover-lift-sm rounded-2xl bg-white p-6 shadow-md border border-stone-100">
             <p className="font-serif text-3xl sm:text-4xl font-extrabold text-emerald-700">
               <AnimatedCounter target={5} suffix="M+" />
             </p>
-            <p className="mt-1 text-xs text-stone-600 font-medium uppercase">Annual Unit Capacity</p>
+            <p className="mt-1 text-xs text-black font-bold uppercase">Annual Unit Capacity</p>
           </div>
           <div className="card-slide-far-right stagger-2 hover-lift-sm rounded-2xl bg-white p-6 shadow-md border border-stone-100">
             <p className="font-serif text-3xl sm:text-4xl font-extrabold text-emerald-700">
               <AnimatedCounter target={100} suffix="%" />
             </p>
-            <p className="mt-1 text-xs text-stone-600 font-medium uppercase">Quality Guarantee</p>
+            <p className="mt-1 text-xs text-black font-bold uppercase">Quality Guarantee</p>
           </div>
         </div>
 
