@@ -232,4 +232,50 @@
   animation-play-state: paused;
 }
 
+/* Mega Menu & Subcategory Dropdown Animations */
+@keyframes subFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.99);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes megaMenuIn {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-subFadeIn {
+  animation: subFadeIn 240ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-megaMenuIn {
+  animation: megaMenuIn 200ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Slim modern scrollbar */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 5px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.03);
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(101, 163, 13, 0.3);
+  border-radius: 4px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(101, 163, 13, 0.6);
+}
+
 

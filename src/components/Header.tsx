@@ -2,15 +2,54 @@ import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import {
   Menu, X, Search, ChevronDown, ChevronRight,
-  Phone, Mail, MessageCircle
+  Phone, Mail, MessageCircle, ArrowRight, Sparkles,
+  ShoppingBag, Package, Leaf, Layers, Grid, Feather,
+  Compass, Flower2, TreeDeciduous, Tag
 } from 'lucide-react';
 import { CATEGORIES } from '../data/products';
+
+const getCategoryIcon = (catId: string) => {
+  switch (catId) {
+    case 'jute': return <Package className="h-3.5 w-3.5" />;
+    case 'seagrass': return <Leaf className="h-3.5 w-3.5" />;
+    case 'kans-grass': return <Feather className="h-3.5 w-3.5" />;
+    case 'date-leaf': return <TreeDeciduous className="h-3.5 w-3.5" />;
+    case 'rattan': return <Layers className="h-3.5 w-3.5" />;
+    case 'bamboo': return <Layers className="h-3.5 w-3.5" />;
+    case 'palm-fiber': return <Leaf className="h-3.5 w-3.5" />;
+    case 'water-hyacinth': return <Sparkles className="h-3.5 w-3.5" />;
+    case 'rugs': return <Grid className="h-3.5 w-3.5" />;
+    case 'recycle-fabric': return <ShoppingBag className="h-3.5 w-3.5" />;
+    default: return <Package className="h-3.5 w-3.5" />;
+  }
+};
+
+const getSubcategoryIcon = (subId: string) => {
+  switch (subId) {
+    case 'baskets': return <ShoppingBag className="h-3.5 w-3.5" />;
+    case 'bags': return <ShoppingBag className="h-3.5 w-3.5" />;
+    case 'planters': return <Flower2 className="h-3.5 w-3.5" />;
+    case 'floor-mats': return <Grid className="h-3.5 w-3.5" />;
+    case 'placemats': return <Compass className="h-3.5 w-3.5" />;
+    case 'poufs': return <Package className="h-3.5 w-3.5" />;
+    case 'macrames': return <Feather className="h-3.5 w-3.5" />;
+    case 'trays': return <Layers className="h-3.5 w-3.5" />;
+    case 'furnitures': return <Layers className="h-3.5 w-3.5" />;
+    case 'mirrors': return <Sparkles className="h-3.5 w-3.5" />;
+    case 'jute-rugs':
+    case 'jhuta-rugs':
+    case 'cotton-rugs':
+      return <Grid className="h-3.5 w-3.5" />;
+    default: return <Tag className="h-3.5 w-3.5" />;
+  }
+};
 
 interface HeaderProps {
   onOpenQuoteModal: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [categoryDropdownOpen, setCategoryDropdownOpen] = useState(false);
   const [activeCategoryHover, setActiveCategoryHover] = useState<string | null>(CATEGORIES[0]?.id || 'jute');
@@ -190,71 +229,94 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               {/* Category Dropdown Mega Menu (Desktop) */}
               {categoryDropdownOpen && (
                 <div
-                  className="absolute left-0 top-full z-50 flex w-[580px] bg-white rounded-b-xl shadow-2xl border border-stone-200 overflow-hidden text-stone-800 animate-fadeIn"
+                  className="absolute left-0 top-full z-50 flex w-[640px] bg-white rounded-b-2xl shadow-[0_20px_50px_rgba(0,0,0,0.22)] border border-stone-200/90 overflow-hidden text-stone-800 animate-megaMenuIn"
                   onMouseLeave={() => setCategoryDropdownOpen(false)}
                 >
-                  {/* Left Column: 12 Main Categories */}
-                  <div className="w-56 bg-stone-50 border-r border-stone-200 py-2 max-h-[420px] overflow-y-auto">
-                    <div className="px-4 py-2 border-b border-stone-200/80 bg-[#093843] text-white flex items-center justify-between">
-                      <span className="text-[11px] font-bold uppercase tracking-wider">All Categories</span>
-                      <span className="text-[10px] text-amber-300 font-mono font-bold">{CATEGORIES.length}</span>
+                  {/* Left Column: 10 Main Categories */}
+                  <div className="w-56 bg-stone-50/95 border-r border-stone-200/80 py-2 max-h-[440px] overflow-y-auto scrollbar-thin shrink-0">
+                    <div className="px-3.5 py-2.5 mb-1 border-b border-teal-800/30 bg-gradient-to-r from-[#093843] to-[#0d4a58] text-white flex items-center justify-between shadow-xs">
+                      <span className="text-[11px] font-extrabold uppercase tracking-wider flex items-center gap-1.5">
+                        <Layers className="h-3.5 w-3.5 text-amber-300" />
+                        All Categories
+                      </span>
+                      <span className="text-[10px] bg-amber-400 text-stone-900 font-extrabold px-1.5 py-0.5 rounded-full font-mono">
+                        {CATEGORIES.length}
+                      </span>
                     </div>
-                    {CATEGORIES.map((cat) => {
-                      const isHovered = activeCategoryHover === cat.id;
-                      return (
-                        <div
-                          key={cat.id}
-                          onMouseEnter={() => setActiveCategoryHover(cat.id)}
-                          onClick={() => handleCategorySelect(cat.id)}
-                          className={`w-full flex items-center justify-between px-4 py-2.5 text-xs font-bold transition-colors cursor-pointer border-b border-stone-100 last:border-0 ${
-                            isHovered ? 'bg-[#65a30d] text-white font-extrabold' : 'text-stone-700 hover:bg-lime-50 hover:text-lime-900'
-                          }`}
-                        >
-                          <span className="truncate">{cat.name}</span>
-                          <ChevronRight className={`h-3.5 w-3.5 ${isHovered ? 'text-white' : 'text-stone-400'}`} />
-                        </div>
-                      );
-                    })}
+
+                    <div className="space-y-0.5 px-1.5">
+                      {CATEGORIES.map((cat) => {
+                        const isHovered = activeCategoryHover === cat.id;
+                        return (
+                          <div
+                            key={cat.id}
+                            onMouseEnter={() => setActiveCategoryHover(cat.id)}
+                            onClick={() => handleCategorySelect(cat.id)}
+                            className={`group w-full flex items-center justify-between px-3 py-2 text-xs font-bold transition-all duration-200 cursor-pointer rounded-lg ${
+                              isHovered
+                                ? 'bg-gradient-to-r from-[#65a30d] to-[#52840a] text-white font-extrabold shadow-sm translate-x-0.5'
+                                : 'text-stone-700 hover:bg-lime-50 hover:text-lime-900'
+                            }`}
+                          >
+                            <div className="flex items-center gap-2 truncate">
+                              <span className={`transition-colors ${isHovered ? 'text-amber-200' : 'text-stone-400 group-hover:text-lime-600'}`}>
+                                {getCategoryIcon(cat.id)}
+                              </span>
+                              <span className="truncate">{cat.name}</span>
+                            </div>
+                            <ChevronRight className={`h-3.5 w-3.5 shrink-0 transition-transform duration-200 ${isHovered ? 'text-white translate-x-0.5' : 'text-stone-300 group-hover:text-lime-600'}`} />
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
 
                   {/* Right Column: Subcategories for Hovered Category */}
-                  <div className="flex-1 p-4 bg-white max-h-[420px] overflow-y-auto">
+                  <div className="flex-1 p-4 bg-gradient-to-br from-white via-stone-50/40 to-lime-50/20 max-h-[440px] overflow-y-auto scrollbar-thin flex flex-col justify-between">
                     {(() => {
                       const currentCat = CATEGORIES.find(c => c.id === activeCategoryHover) || CATEGORIES[0];
                       return (
-                        <div>
-                          <div className="pb-3 mb-3 border-b border-stone-100 flex items-center justify-between">
-                            <div>
-                              <h4 className="font-serif text-sm font-extrabold text-[#093843]">
-                                {currentCat.name}
-                              </h4>
-                              <p className="text-[11px] text-stone-500 font-light line-clamp-1">
-                                {currentCat.description}
-                              </p>
-                            </div>
+                        <div key={currentCat.id} className="animate-subFadeIn space-y-3">
+                          
+                          {/* Subcategories Grid with Modern Interactive Cards */}
+                          <div className="grid grid-cols-2 gap-2">
+                            {currentCat.subcategories.map((sub) => (
+                              <button
+                                key={sub.id}
+                                onClick={() => handleCategorySelect(currentCat.id, sub.id)}
+                                className="group flex items-center justify-between p-2.5 rounded-xl bg-white border border-stone-200/80 hover:border-lime-400 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 text-left cursor-pointer"
+                              >
+                                <div className="flex items-center gap-2.5 min-w-0">
+                                  <div className="w-7 h-7 rounded-lg bg-lime-50 border border-lime-100 flex items-center justify-center text-[#65a30d] group-hover:bg-[#65a30d] group-hover:text-white transition-all duration-200 shrink-0 shadow-2xs">
+                                    {getSubcategoryIcon(sub.id)}
+                                  </div>
+                                  <div className="truncate">
+                                    <span className="text-xs font-bold text-stone-800 group-hover:text-lime-900 transition-colors block truncate">
+                                      {sub.name}
+                                    </span>
+                                  </div>
+                                </div>
+                                <ArrowRight className="h-3.5 w-3.5 text-stone-300 group-hover:text-[#65a30d] group-hover:translate-x-0.5 transition-all duration-200 shrink-0" />
+                              </button>
+                            ))}
+                          </div>
+
+                          {/* Bottom Quick Action Bar */}
+                          <div className="pt-2">
                             <button
                               onClick={() => handleCategorySelect(currentCat.id)}
-                              className="text-[11px] font-bold text-[#65a30d] hover:underline shrink-0"
+                              className="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-lime-50/70 hover:bg-lime-100/80 border border-lime-200/80 hover:border-lime-300 text-stone-800 transition-all duration-200 text-xs font-bold group cursor-pointer shadow-2xs"
                             >
-                              View All ➔
+                              <span className="flex items-center gap-1.5 text-[#093843] group-hover:text-lime-950 font-semibold">
+                                <Sparkles className="h-3.5 w-3.5 text-amber-500" />
+                                All <span className="text-[#65a30d] font-extrabold">{currentCat.name}</span> Products
+                              </span>
+                              <span className="flex items-center gap-1 text-[11px] font-extrabold text-[#65a30d] group-hover:translate-x-1 transition-transform">
+                                Explore <ArrowRight className="h-3 w-3" />
+                              </span>
                             </button>
                           </div>
 
-                          <div className="space-y-1">
-                            <span className="text-[10px] font-bold uppercase tracking-wider text-stone-400">Subcategories</span>
-                            <div className="grid grid-cols-1 gap-1 pt-1">
-                              {currentCat.subcategories.map((sub) => (
-                                <button
-                                  key={sub.id}
-                                  onClick={() => handleCategorySelect(currentCat.id, sub.id)}
-                                  className="w-full flex items-center justify-between px-3 py-2 text-xs font-semibold rounded text-stone-700 hover:bg-lime-50 hover:text-lime-900 transition-colors text-left group"
-                                >
-                                  <span>{sub.name}</span>
-                                  <span className="text-[10px] text-stone-400 group-hover:text-lime-700 font-normal">Explore</span>
-                                </button>
-                              ))}
-                            </div>
-                          </div>
                         </div>
                       );
                     })()}
@@ -312,14 +374,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
           </div>
 
           {/* Shop By Category in Mobile Drawer */}
-          <div className="mb-4 bg-[#093843] rounded-xl overflow-hidden border border-teal-700">
+          <div className="mb-4 bg-[#093843] rounded-xl overflow-hidden border border-teal-700/80 shadow-md">
             <button
               onClick={() => setMobileCategoryOpen(!mobileCategoryOpen)}
               className="w-full px-4 py-3 bg-[#062931] text-amber-300 font-extrabold text-xs uppercase flex items-center justify-between focus:outline-none"
             >
               <span className="flex items-center gap-2">
                 <Menu className="h-4 w-4" />
-                SHOP BY CATEGORY (12)
+                SHOP BY CATEGORY ({CATEGORIES.length})
               </span>
               <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${mobileCategoryOpen ? 'rotate-180' : ''}`} />
             </button>
@@ -327,22 +389,25 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
             {mobileCategoryOpen && (
               <div className="divide-y divide-teal-800/60 max-h-72 overflow-y-auto animate-fadeIn">
                 {CATEGORIES.map((cat) => (
-                  <div key={cat.id} className="p-2.5 bg-[#07333d]">
+                  <div key={cat.id} className="p-3 bg-[#07333d]">
                     <div
                       onClick={() => handleCategorySelect(cat.id)}
                       className="flex items-center justify-between text-xs font-bold text-white cursor-pointer hover:text-amber-300 py-1"
                     >
-                      <span>{cat.name}</span>
-                      <span className="text-[10px] bg-lime-700 px-2 py-0.5 rounded text-white font-mono">View All</span>
+                      <span className="flex items-center gap-1.5">
+                        <span className="text-amber-300">{getCategoryIcon(cat.id)}</span>
+                        {cat.name}
+                      </span>
+                      <span className="text-[10px] bg-lime-600 hover:bg-lime-500 px-2.5 py-0.5 rounded-full text-white font-semibold">All Items</span>
                     </div>
-                    <div className="mt-1.5 flex flex-wrap gap-1.5 pl-2">
+                    <div className="mt-2 flex flex-wrap gap-1.5 pl-1">
                       {cat.subcategories.map((sub) => (
                         <button
                           key={sub.id}
                           onClick={() => handleCategorySelect(cat.id, sub.id)}
-                          className="text-[11px] bg-teal-900/90 hover:bg-lime-700 text-stone-200 hover:text-white px-2 py-1 rounded transition-colors"
+                          className="flex items-center gap-1 text-[11px] bg-teal-950/80 hover:bg-[#65a30d] text-stone-200 hover:text-white px-2.5 py-1 rounded-lg border border-teal-700/50 transition-colors"
                         >
-                          {sub.name}
+                          <span>{sub.name}</span>
                         </button>
                       ))}
                     </div>
