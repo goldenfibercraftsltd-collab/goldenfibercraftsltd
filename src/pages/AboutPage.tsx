@@ -38,10 +38,6 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
         {/* 1. Page Banner Header */}
         <div className="reveal-up relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-950 via-stone-900 to-emerald-900 p-8 sm:p-12 text-white shadow-2xl border border-emerald-800/40">
           <div className="relative z-10 max-w-3xl space-y-4">
-            <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/20 px-3.5 py-1 text-xs font-bold text-emerald-300 backdrop-blur-md border border-emerald-500/30">
-              <Leaf className="h-3.5 w-3.5" />
-              Corporate Heritage & Excellence
-            </span>
             <ScrollTypingText
               as="h1"
               text="About Golden Fiber Crafts Ltd."
@@ -57,13 +53,9 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
           </div>
         </div>
 
-        {/* 2. Company Profile & Vision (Who We Are) */}
+        {/* 2. Company Profile & Vision */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="reveal-left space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-800">
-              <Factory className="h-3.5 w-3.5" />
-              Who We Are
-            </div>
             <ScrollTypingText
               as="h2"
               text="Weaving Sustainability & Global Quality Standards"
@@ -194,58 +186,58 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
             <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-black uppercase tracking-wide">
               Technical Information
             </h3>
-            <div className="mx-auto mt-2 h-1 w-20 rounded-full bg-emerald-600" />
+            <div className="mx-auto mt-2 h-1 w-20 rounded-full bg-black" />
           </div>
 
           <div className="max-w-4xl mx-auto overflow-hidden rounded-2xl border border-stone-200">
             <table className="min-w-full divide-y divide-stone-200 text-left">
               <tbody className="divide-y divide-stone-100 bg-white">
-                <tr className="hover:bg-emerald-50/40 transition-colors">
+                <tr className="hover:bg-stone-50 transition-colors">
                   <td className="px-6 py-4 text-sm font-bold text-black w-1/3">
                     Office Staff
                   </td>
-                  <td className="px-6 py-4 text-sm text-black font-semibold">
-                    : <span className="font-extrabold text-emerald-900">50</span>
+                  <td className="px-6 py-4 text-sm text-black font-bold">
+                    : <span className="font-extrabold text-black">50</span>
                   </td>
                 </tr>
-                <tr className="hover:bg-emerald-50/40 transition-colors bg-stone-50/40">
+                <tr className="hover:bg-stone-50 transition-colors bg-stone-50/40">
                   <td className="px-6 py-4 text-sm font-bold text-black">
                     Artisans
                   </td>
-                  <td className="px-6 py-4 text-sm text-black font-semibold">
-                    : <span className="font-extrabold text-emerald-900">Approximate 50,000 pcs per month</span>
+                  <td className="px-6 py-4 text-sm text-black font-bold">
+                    : <span className="font-extrabold text-black">Approximate 30,000 (Directly and Indirectly)</span>
                   </td>
                 </tr>
-                <tr className="hover:bg-emerald-50/40 transition-colors">
+                <tr className="hover:bg-stone-50 transition-colors">
                   <td className="px-6 py-4 text-sm font-bold text-black">
                     Production Capacity / Month
                   </td>
-                  <td className="px-6 py-4 text-sm text-black font-semibold">
-                    : <span className="font-extrabold text-emerald-900">50 x 40’ HQ Containers</span>
+                  <td className="px-6 py-4 text-sm text-black font-bold">
+                    : <span className="font-extrabold text-black">50 × 40’ HQ Containers</span>
                   </td>
                 </tr>
-                <tr className="hover:bg-emerald-50/40 transition-colors bg-stone-50/40">
+                <tr className="hover:bg-stone-50 transition-colors bg-stone-50/40">
                   <td className="px-6 py-4 text-sm font-bold text-black">
                     Production Lead Time
                   </td>
-                  <td className="px-6 py-4 text-sm text-black font-semibold">
-                    : <span className="font-extrabold text-emerald-900">70-90 days</span>
+                  <td className="px-6 py-4 text-sm text-black font-bold">
+                    : <span className="font-extrabold text-black">70-90 days</span>
                   </td>
                 </tr>
-                <tr className="hover:bg-emerald-50/40 transition-colors">
+                <tr className="hover:bg-stone-50 transition-colors">
                   <td className="px-6 py-4 text-sm font-bold text-black">
                     Payment Term
                   </td>
-                  <td className="px-6 py-4 text-sm text-black font-semibold">
-                    : <span>L/C @ Sight or TT (30 % Deposit and 70% against copy of shipping documents)</span>
+                  <td className="px-6 py-4 text-sm text-black font-bold">
+                    : <span className="font-extrabold text-black">L/C at Sight or TT (30 % Deposit and 70% against copy of shipping documents)</span>
                   </td>
                 </tr>
-                <tr className="hover:bg-emerald-50/40 transition-colors bg-stone-50/40">
+                <tr className="hover:bg-stone-50 transition-colors bg-stone-50/40">
                   <td className="px-6 py-4 text-sm font-bold text-black">
                     Annual Turnover
                   </td>
-                  <td className="px-6 py-4 text-sm text-black font-semibold">
-                    : <span className="font-extrabold text-emerald-900">5 million USD</span>
+                  <td className="px-6 py-4 text-sm text-black font-bold">
+                    : <span className="font-extrabold text-black">5 million USD</span>
                   </td>
                 </tr>
               </tbody>
@@ -325,34 +317,6 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
               <AnimatedCounter target={100} suffix="%" />
             </p>
             <p className="mt-1 text-xs text-black font-bold uppercase">Quality Guarantee</p>
-          </div>
-        </div>
-
-        {/* 8. CTA Banner */}
-        <div className="reveal-up text-center bg-stone-900 rounded-3xl p-8 sm:p-12 text-white space-y-6 shadow-2xl">
-          <ScrollTypingText
-            as="h2"
-            text="Partner With a Proven Leader"
-            className="font-serif text-2xl sm:text-4xl font-bold text-white"
-            speed={35}
-          />
-          <p className="text-stone-300 text-sm max-w-2xl mx-auto font-light">
-            Whether you need custom basket designs or eco-friendly handcrafted lifestyle products, our team is ready to support your supply chain.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <button
-              onClick={onOpenQuoteModal}
-              className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-6 py-3 text-sm font-bold text-white shadow-lg hover:bg-emerald-500 transition-all btn-interactive"
-            >
-              <span>Request Quote</span>
-              <ArrowRight className="h-4 w-4 btn-arrow" />
-            </button>
-            <Link
-              to="/products"
-              className="inline-flex items-center gap-2 rounded-full bg-stone-800 px-6 py-3 text-sm font-bold text-stone-200 hover:bg-stone-700 transition-all btn-interactive"
-            >
-              <span>Explore Products</span>
-            </Link>
           </div>
         </div>
 
