@@ -158,8 +158,47 @@ const CRAFT_SECTIONS: CraftSection[] = [
     ]
   },
   {
-    id: 'jute-floor-mats',
+    id: 'bamboo-crafts',
     number: '04',
+    productTitle: 'Handcrafted Natural Bamboo Products',
+    tagline: 'Sustainable Bamboo • Master Hand Carving • Eco Utility & Decor',
+    description:
+      'Seasoned natural bamboo culms are split, finely planed, and handwoven into durable utility baskets, trays, tableware, and minimalist home decor pieces.',
+    image: '/infrastructure/bamboo_crafts.jpg',
+    imageAlt: 'Skilled Bangladeshi craftsman artisan splitting and hand-weaving natural bamboo strips in workshop',
+    highlights: ['100% Mature Bengal Bamboo', 'Chemical-Free Cure', 'Ultra-Durable & Lightweight'],
+    categorySlug: 'bamboo',
+    process: [
+      {
+        step: '1',
+        title: 'Mature Bamboo Harvesting',
+        description: 'Selecting seasoned 3-5 year old natural bamboo culms from sustainable rural Bengal plantations.'
+      },
+      {
+        step: '2',
+        title: 'Natural Water Curing',
+        description: 'Eco-friendly water curing and solar drying to naturally prevent pests and mold growth.'
+      },
+      {
+        step: '3',
+        title: 'Precision Hand Splitting',
+        description: 'Artisans hand-split canes into calibrated, ultra-flexible weaving strips and structural framing.'
+      },
+      {
+        step: '4',
+        title: 'Hand Interlacing & Assembly',
+        description: 'Weaving dense twill, lattice, and ribbed geometric patterns over reinforced bamboo borders.'
+      },
+      {
+        step: '5',
+        title: 'Smooth Sanding & Inspection',
+        description: 'Fine edge sanding, organic plant oil polishing, and rigorous moisture verification.'
+      }
+    ]
+  },
+  {
+    id: 'jute-floor-mats',
+    number: '05',
     productTitle: 'Handmade Jute Floor Mats',
     tagline: 'Natural Jute Fibre • Traditional Loom • Artisanal Weaving',
     description:
@@ -198,7 +237,7 @@ const CRAFT_SECTIONS: CraftSection[] = [
   },
   {
     id: 'jute-rugs',
-    number: '05',
+    number: '06',
     productTitle: 'Handmade Jute Rugs',
     tagline: 'Handcrafted • Natural Materials • Eco-Friendly',
     description:
@@ -237,7 +276,7 @@ const CRAFT_SECTIONS: CraftSection[] = [
   },
   {
     id: 'seagrass-baskets',
-    number: '06',
+    number: '07',
     productTitle: 'Handwoven Seagrass Baskets',
     tagline: 'Natural Seagrass • Handmade • Sustainable',
     description:
@@ -276,7 +315,7 @@ const CRAFT_SECTIONS: CraftSection[] = [
   },
   {
     id: 'date-leaf-placemats',
-    number: '07',
+    number: '08',
     productTitle: 'Handmade Date Leaf Placemats',
     tagline: 'Natural Fibre • Traditional Craft • Handmade',
     description:
@@ -510,6 +549,49 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
               Every shipment is produced under rigorous environmental compliance, pest-free certification, and strict moisture control parameters.
             </p>
             <div className="mx-auto h-1.5 w-16 rounded-full bg-emerald-700" />
+          </div>
+
+          {/* Trust Value Badges Grid (Moved to Marked Section) */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto pt-2">
+            <div className="card-slide-far-left stagger-2 hover-lift-sm flex items-center gap-3 p-4 rounded-2xl bg-white/95 backdrop-blur-xs border border-[#e8ded1] shadow-xs">
+              <div className="h-10 w-10 rounded-xl bg-amber-100 text-amber-950 flex items-center justify-center shrink-0">
+                <Users className="h-5 w-5" />
+              </div>
+              <div>
+                <h4 className="font-serif text-sm font-extrabold text-black">500+ Artisans</h4>
+                <p className="text-xs text-stone-900 font-semibold">Skilled rural women</p>
+              </div>
+            </div>
+
+            <div className="card-slide-left stagger-1 hover-lift-sm flex items-center gap-3 p-4 rounded-2xl bg-white/90 backdrop-blur-xs border border-[#e8ded1] shadow-xs">
+              <div className="h-10 w-10 rounded-xl bg-emerald-100 text-emerald-950 flex items-center justify-center shrink-0">
+                <Leaf className="h-5 w-5" />
+              </div>
+              <div>
+                <h4 className="font-serif text-sm font-extrabold text-black">100% Natural</h4>
+                <p className="text-xs text-stone-900 font-semibold">Plant-based fibres</p>
+              </div>
+            </div>
+
+            <div className="card-slide-right stagger-1 hover-lift-sm flex items-center gap-3 p-4 rounded-2xl bg-white/90 backdrop-blur-xs border border-[#e8ded1] shadow-xs">
+              <div className="h-10 w-10 rounded-xl bg-teal-100 text-teal-950 flex items-center justify-center shrink-0">
+                <ShieldCheck className="h-5 w-5" />
+              </div>
+              <div>
+                <h4 className="font-serif text-sm font-extrabold text-black">Fair Trade & Audit</h4>
+                <p className="text-xs text-stone-900 font-semibold">BSCI & Sedex verified</p>
+              </div>
+            </div>
+
+            <div className="card-slide-far-right stagger-2 hover-lift-sm flex items-center gap-3 p-4 rounded-2xl bg-white/90 backdrop-blur-xs border border-[#e8ded1] shadow-xs">
+              <div className="h-10 w-10 rounded-xl bg-stone-100 text-stone-950 flex items-center justify-center shrink-0">
+                <Package className="h-5 w-5" />
+              </div>
+              <div>
+                <h4 className="font-serif text-sm font-extrabold text-black">Global Export</h4>
+                <p className="text-xs text-stone-900 font-semibold">35+ countries reached</p>
+              </div>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
