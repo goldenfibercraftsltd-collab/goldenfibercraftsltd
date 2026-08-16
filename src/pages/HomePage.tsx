@@ -2,6 +2,7 @@ import React from 'react';
 import { HeroBannerCarousel } from '../components/HeroBannerCarousel';
 import { ProductShowcase } from '../components/ProductShowcase';
 import { GlobalClients } from '../components/GlobalClients';
+import { HomeCertificates } from '../components/HomeCertificates';
 import { PRODUCTS } from '../data/products';
 
 interface HomePageProps {
@@ -28,6 +29,10 @@ export const HomePage: React.FC<HomePageProps> = ({
 
       {/* 3. Global Clients */}
       <GlobalClients />
+
+      {/* 4. Factory Certificates & Compliance (Authentic PPT Slide) */}
+      <HomeCertificates />
     </div>
   );
 };
+

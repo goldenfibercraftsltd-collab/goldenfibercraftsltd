@@ -41,8 +41,125 @@ interface CraftSection {
 
 const CRAFT_SECTIONS: CraftSection[] = [
   {
-    id: 'jute-floor-mats',
+    id: 'jute-bags',
     number: '01',
+    productTitle: 'Handcrafted Eco Jute Bags',
+    tagline: '100% Golden Jute • Eco Shopping & Totes • Artisanal Stitching',
+    description:
+      'Premium golden jute fibres are precision-tailored, reinforced and hand-stitched by skilled artisans into durable eco-friendly shopping bags, fashion totes, and promotional carriers.',
+    image: '/infrastructure/jute_bags.jpg',
+    imageAlt: 'Skilled Bangladeshi woman artisan stitching natural golden jute tote bags with cotton rope handles in workshop',
+    highlights: ['A-Grade Golden Jute', 'Reinforced Padded Handles', 'Water-Resistant Coating'],
+    categorySlug: 'jute',
+    process: [
+      {
+        step: '1',
+        title: 'Jute Fabric Selection',
+        description: 'Sourcing dense, tightly woven A-grade natural burlap and laminated golden jute canvas.'
+      },
+      {
+        step: '2',
+        title: 'Precision Pattern Cutting',
+        description: 'Manual pattern cutting aligned to international retail and OEM specifications.'
+      },
+      {
+        step: '3',
+        title: 'Eco Screen Printing',
+        description: 'Applying AZO-free non-toxic vegetable dyes with sharp multi-color screen printing.'
+      },
+      {
+        step: '4',
+        title: 'Heavy-Duty Stitching',
+        description: 'Artisan tailors assemble bag bodies with reinforced cross-box handle stitching for heavy loads.'
+      },
+      {
+        step: '5',
+        title: 'Tensile Load & Quality Check',
+        description: 'Strict handle tensile testing up to 20kg, thread trimming, and moisture-controlled packaging.'
+      }
+    ]
+  },
+  {
+    id: 'storage-baskets',
+    number: '02',
+    productTitle: 'Handwoven Natural Baskets',
+    tagline: 'Kaisa Grass & Seagrass • Handwoven Coils • Sustainable Storage',
+    description:
+      'Artisans expertly coil and braid kaisa wild grass, seagrass, and jute into rigid, decorative, and heavy-duty laundry and storage baskets.',
+    image: '/infrastructure/storage_baskets.jpg',
+    imageAlt: 'Bangladeshi rural woman artisan handweaving coiled natural kaisa grass and seagrass storage basket',
+    highlights: ['Natural Kaisa & Seagrass', 'Cotton Cord Wrapped Trim', 'Reinforced Load Handles'],
+    categorySlug: 'seagrass',
+    process: [
+      {
+        step: '1',
+        title: 'Wild Grass Harvesting',
+        description: 'Collecting mature wild kaisa grass and coastal seagrass from regional riverine wetlands.'
+      },
+      {
+        step: '2',
+        title: 'Sun-Curing & Braiding',
+        description: 'Open-air sun curing followed by hand-braiding into uniform, high-flexibility structural cords.'
+      },
+      {
+        step: '3',
+        title: 'Spiral Coil Weaving',
+        description: 'Artisans hand-bind dense spiral coils tightly using natural cotton cord wrapping.'
+      },
+      {
+        step: '4',
+        title: 'Handle & Lid Integration',
+        description: 'Seamlessly weaving integrated sturdy side handles and custom-fitting flat or dome lids.'
+      },
+      {
+        step: '5',
+        title: 'Calibrated Finishing',
+        description: 'Shape alignment, fiber singeing, strict mold-prevention treatment, and nested stack packing.'
+      }
+    ]
+  },
+  {
+    id: 'planters-decor',
+    number: '03',
+    productTitle: 'Handcrafted Planters & Pot Covers',
+    tagline: 'Seagrass & Jute • Indoor Plant Decor • Waterproof Lining',
+    description:
+      'Handcrafted natural fiber planter baskets and hanging macrame pot holders designed to elevate contemporary indoor greenery while ensuring plant health.',
+    image: '/infrastructure/planters.jpg',
+    imageAlt: 'Artisan hand-weaving natural seagrass indoor planter basket pot cover in workshop',
+    highlights: ['Waterproof Internal Liner', 'Multi-Size Nestable Sets', 'Boho Organic Aesthetic'],
+    categorySlug: 'seagrass',
+    process: [
+      {
+        step: '1',
+        title: 'Fiber & Cord Selection',
+        description: 'Selecting flexible, moisture-resistant seagrass and unbleached cotton macrame cord.'
+      },
+      {
+        step: '2',
+        title: 'Hand Coiling on Molds',
+        description: 'Artisans weave cylindrical and tapered pot basket bodies on calibrated circular molds.'
+      },
+      {
+        step: '3',
+        title: 'Waterproof Liner Fitting',
+        description: 'Seamless insertion of protective clear PVC liners to prevent water seepage and soil staining.'
+      },
+      {
+        step: '4',
+        title: 'Macrame Hanger Crafting',
+        description: 'Intricate hand-knotting of reinforced macrame hanging cradles with solid wooden rings.'
+      },
+      {
+        step: '5',
+        title: 'Stability & Export Packaging',
+        description: 'Load weight stability check, dimensional tolerance verification, and master carton nesting.'
+      }
+    ]
+  },
+  {
+    id: 'jute-floor-mats',
+    number: '04',
     productTitle: 'Handmade Jute Floor Mats',
     tagline: 'Natural Jute Fibre • Traditional Loom • Artisanal Weaving',
     description:
@@ -81,7 +198,7 @@ const CRAFT_SECTIONS: CraftSection[] = [
   },
   {
     id: 'jute-rugs',
-    number: '02',
+    number: '05',
     productTitle: 'Handmade Jute Rugs',
     tagline: 'Handcrafted • Natural Materials • Eco-Friendly',
     description:
@@ -120,7 +237,7 @@ const CRAFT_SECTIONS: CraftSection[] = [
   },
   {
     id: 'seagrass-baskets',
-    number: '03',
+    number: '06',
     productTitle: 'Handwoven Seagrass Baskets',
     tagline: 'Natural Seagrass • Handmade • Sustainable',
     description:
@@ -159,7 +276,7 @@ const CRAFT_SECTIONS: CraftSection[] = [
   },
   {
     id: 'date-leaf-placemats',
-    number: '04',
+    number: '07',
     productTitle: 'Handmade Date Leaf Placemats',
     tagline: 'Natural Fibre • Traditional Craft • Handmade',
     description:
