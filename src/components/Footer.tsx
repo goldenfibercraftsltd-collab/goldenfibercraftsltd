@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Globe, ArrowUp, MessageCircle, ShieldCheck, HeartHandshake, Leaf } from 'lucide-react';
+import { Mail, Phone, MapPin, Globe, ArrowUp, MessageCircle, HeartHandshake } from 'lucide-react';
 import { TAGLINE } from '../data/products';
 
 export const Footer: React.FC = () => {
@@ -10,27 +10,7 @@ export const Footer: React.FC = () => {
 
   return (
     <footer className="bg-[#064e3b] text-emerald-100 font-sans border-t-4 border-emerald-500 shadow-2xl">
-      
-      {/* 1. Brand Hero Top Bar */}
-      <div className="bg-[#043e2f] py-6 px-4 border-b border-emerald-800/80 reveal-up">
-        <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
-          <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-xl bg-emerald-600 flex items-center justify-center text-white font-serif font-extrabold text-xl shadow-lg border border-emerald-400/30">
-              <Leaf className="h-6 w-6 text-emerald-100" />
-            </div>
-            <div>
-              <h3 className="font-serif text-xl sm:text-2xl font-extrabold text-white">
-                Golden Fiber Crafts Ltd.
-              </h3>
-              <p className="text-amber-300 font-serif italic text-xs sm:text-sm">"{TAGLINE}"</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-3 text-xs font-bold text-emerald-200">
-            <ShieldCheck className="h-5 w-5 text-amber-400 shrink-0" />
-            <span>FSC® Certified • Responsible Forestry • OEKO-TEX® Standard 100 • GCL International</span>
-          </div>
-        </div>
-      </div>
+      {/* Main Footer Content Grid */}
 
       {/* 2. Main Footer Content Grid */}
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
