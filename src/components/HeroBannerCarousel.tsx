@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight, Sparkles, Tag, ArrowRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Tag, ArrowRight } from 'lucide-react';
 
 interface BannerItem {
   id: number | string;
@@ -51,7 +51,13 @@ const DEFAULT_BANNERS: BannerItem[] = [
 export const HeroBannerCarousel: React.FC<HeroBannerCarouselProps> = () => {
   const [banners, setBanners] = useState<BannerItem[]>(DEFAULT_BANNERS);
   const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [isPaused, setIsPaused] = useState<boolean>(false);
   const navigate = useNavigate();
+
+  // Touch & Swipe gesture state
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+  const isDragging = useRef<boolean>(false);
 
   useEffect(() => {
     fetch('/api/banners')
@@ -64,30 +70,80 @@ export const HeroBannerCarousel: React.FC<HeroBannerCarouselProps> = () => {
       .catch(() => {});
   }, []);
 
-  // Auto-rotate slide every 3 seconds
-  useEffect(() => {
-    if (banners.length <= 1) return;
-    const timer = setInterval(() => {
-      setCurrentSlide(prev => (prev + 1) % banners.length);
-    }, 3000);
-    return () => clearInterval(timer);
-  }, [banners.length]);
-
-  const prevSlide = (e?: React.MouseEvent) => {
-    if (e) e.stopPropagation();
-    setCurrentSlide(prev => (prev === 0 ? banners.length - 1 : prev - 1));
-  };
-
-  const nextSlide = (e?: React.MouseEvent) => {
+  const nextSlide = useCallback((e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
     setCurrentSlide(prev => (prev + 1) % banners.length);
+  }, [banners.length]);
+
+  const prevSlide = useCallback((e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
+    setCurrentSlide(prev => (prev === 0 ? banners.length - 1 : prev - 1));
+  }, [banners.length]);
+
+  // Smooth Auto-Slide every 4.5 seconds (paused when user hovers or interacts)
+  useEffect(() => {
+    if (banners.length <= 1 || isPaused) return;
+    const timer = setInterval(() => {
+      nextSlide();
+    }, 4500);
+    return () => clearInterval(timer);
+  }, [banners.length, isPaused, nextSlide]);
+
+  // Touch Swipe Handlers
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+    touchEndX.current = null;
+    isDragging.current = false;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+    if (touchStartX.current !== null && Math.abs(touchStartX.current - e.targetTouches[0].clientX) > 10) {
+      isDragging.current = true;
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX.current !== null && touchEndX.current !== null) {
+      const distance = touchStartX.current - touchEndX.current;
+      if (distance > 45) {
+        nextSlide();
+      } else if (distance < -45) {
+        prevSlide();
+      }
+    }
+    touchStartX.current = null;
+    touchEndX.current = null;
+    setTimeout(() => {
+      isDragging.current = false;
+    }, 50);
+  };
+
+  const handleBannerClick = (banner: BannerItem) => {
+    if (isDragging.current) return;
+    if (banner.link_url) {
+      if (banner.link_url.startsWith('http')) {
+        window.open(banner.link_url, '_blank');
+      } else {
+        navigate(banner.link_url);
+      }
+    }
   };
 
   return (
-    <div className="relative w-full overflow-hidden bg-stone-950 font-sans select-none">
-      
-      {/* Slides Container - Responsive Height */}
-      <div className="relative h-[320px] sm:h-[440px] md:h-[500px] lg:h-[580px] w-full">
+    <div
+      className="relative w-full overflow-hidden bg-stone-950 font-sans select-none"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
+      {/* Sliding Track - Slow & Ultra Smooth GPU Accelerated Transition */}
+      <div
+        className="flex w-full h-[320px] sm:h-[440px] md:h-[500px] lg:h-[580px] transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] will-change-transform"
+        style={{ transform: `translate3d(-${currentSlide * 100}%, 0, 0)` }}
+      >
         {banners.map((banner, idx) => {
           const isActive = idx === currentSlide;
           const showBadge = Boolean(banner.show_category_badge && (banner.category_name || banner.category_slug));
@@ -95,33 +151,26 @@ export const HeroBannerCarousel: React.FC<HeroBannerCarouselProps> = () => {
           return (
             <div
               key={banner.id || idx}
-              onClick={() => {
-                if (banner.link_url) {
-                  if (banner.link_url.startsWith('http')) {
-                    window.open(banner.link_url, '_blank');
-                  } else {
-                    navigate(banner.link_url);
-                  }
-                }
-              }}
-              className={`absolute inset-0 transition-opacity duration-500 ease-in-out cursor-pointer ${
-                isActive ? 'opacity-100 z-10 pointer-events-auto' : 'opacity-0 z-0 pointer-events-none'
-              }`}
+              onClick={() => handleBannerClick(banner)}
+              className="relative h-full w-full flex-shrink-0 cursor-pointer overflow-hidden bg-stone-900"
             >
-              {/* Clean Crisp Full Banner Image (No Heavy Text Overlays) */}
-              <div className="absolute inset-0 bg-stone-900">
-                <img
-                  src={banner.image_url}
-                  alt={banner.title || banner.category_name || 'Golden Fiber Crafts Banner'}
-                  className={`h-full w-full object-cover transition-transform duration-[3500ms] ease-out ${
-                    isActive ? 'scale-105' : 'scale-100'
-                  }`}
-                />
-              </div>
+              {/* Crisp High-Res Banner Image with Subtle Active Zoom */}
+              <img
+                src={banner.image_url}
+                alt={banner.title || banner.category_name || 'Golden Fiber Crafts Banner'}
+                className={`h-full w-full object-cover transition-transform duration-[4000ms] ease-out select-none pointer-events-none ${
+                  isActive ? 'scale-105' : 'scale-100'
+                }`}
+                loading={idx === 0 ? 'eager' : 'lazy'}
+                draggable={false}
+              />
 
-              {/* Optional Small Category Badge on Top-Left (Only if Admin explicitly enables it) */}
+              {/* Ambient lighting subtle top/bottom gradients for contrast */}
+              <div className="absolute inset-0 bg-gradient-to-t from-stone-950/40 via-transparent to-stone-950/20 pointer-events-none" />
+
+              {/* Optional Category Badge on Top-Left */}
               {showBadge && (
-                <div className="absolute top-6 left-6 sm:top-8 sm:left-8 z-30 animate-fadeIn">
+                <div className="absolute top-6 left-6 sm:top-8 sm:left-8 z-20">
                   <Link
                     to={`/products?category=${banner.category_slug || ''}`}
                     onClick={e => e.stopPropagation()}
@@ -133,7 +182,6 @@ export const HeroBannerCarousel: React.FC<HeroBannerCarouselProps> = () => {
                   </Link>
                 </div>
               )}
-
             </div>
           );
         })}
@@ -145,24 +193,24 @@ export const HeroBannerCarousel: React.FC<HeroBannerCarouselProps> = () => {
           <button
             onClick={prevSlide}
             aria-label="Previous slide"
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-30 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-stone-900/50 hover:bg-emerald-600 text-white backdrop-blur-md border border-white/20 shadow-xl transition-all duration-200 hover:scale-110"
+            className="group absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-30 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-stone-900/60 hover:bg-emerald-600 text-white backdrop-blur-md border border-white/20 shadow-xl transition-all duration-300 hover:scale-110 active:scale-95"
           >
-            <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
+            <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6 transition-transform duration-200 group-hover:-translate-x-0.5" />
           </button>
 
           <button
             onClick={nextSlide}
             aria-label="Next slide"
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-30 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-stone-900/50 hover:bg-emerald-600 text-white backdrop-blur-md border border-white/20 shadow-xl transition-all duration-200 hover:scale-110"
+            className="group absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-30 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-stone-900/60 hover:bg-emerald-600 text-white backdrop-blur-md border border-white/20 shadow-xl transition-all duration-300 hover:scale-110 active:scale-95"
           >
-            <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
+            <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 transition-transform duration-200 group-hover:translate-x-0.5" />
           </button>
         </>
       )}
 
-      {/* Indicator Dots Bar */}
+      {/* Bottom Indicator Dots Pill */}
       {banners.length > 1 && (
-        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2 px-3 py-1.5 rounded-full bg-stone-900/60 backdrop-blur-md border border-white/10 shadow-lg">
+        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-900/70 backdrop-blur-md border border-white/15 shadow-xl">
           {banners.map((_, idx) => (
             <button
               key={idx}
@@ -171,14 +219,15 @@ export const HeroBannerCarousel: React.FC<HeroBannerCarouselProps> = () => {
                 setCurrentSlide(idx);
               }}
               aria-label={`Go to slide ${idx + 1}`}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                idx === currentSlide ? 'w-8 bg-emerald-400' : 'w-2 bg-white/40 hover:bg-white/70'
+              className={`h-2.5 rounded-full transition-all duration-500 ${
+                idx === currentSlide
+                  ? 'w-8 bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.7)]'
+                  : 'w-2.5 bg-white/40 hover:bg-white/70'
               }`}
             />
           ))}
         </div>
       )}
-
     </div>
   );
 };
