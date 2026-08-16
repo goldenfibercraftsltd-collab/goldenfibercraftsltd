@@ -230,95 +230,20 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
       )}
 
       {/* ---------------------------------------------------- */}
-      {/* 1. Hero Section (Warm, Natural & Earthy) */}
+      {/* 1. Breadcrumb Navigation & Header */}
       {/* ---------------------------------------------------- */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#f5eee6] via-[#faf6f0] to-[#fcfbf9] pt-12 pb-20 border-b border-stone-200/80">
-        
-        {/* Subtle Decorative Background Pattern Elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#e2d5c3]/30 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-emerald-100/40 rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none" />
-
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8 relative z-10">
-          
-          {/* Breadcrumb Navigation */}
-          <nav className="reveal-up flex items-center gap-2 text-xs font-bold text-stone-800">
-            <Link to="/" className="hover:text-emerald-800 transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-black font-extrabold">Infrastructure & Craftsmanship</span>
-          </nav>
-
-          <div className="text-center max-w-3xl mx-auto space-y-4 reveal-up">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#e8ded1] border border-[#d6c7b5] px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-black shadow-xs">
-              <Sparkles className="h-3.5 w-3.5 text-amber-800" />
-              <span>Authentic Handmade Production</span>
-            </div>
-
-            <ScrollTypingText
-              as="h1"
-              text="Infrastructure & Craftsmanship"
-              className="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-black tracking-tight leading-[1.15]"
-              speed={40}
-            />
-
-            <p className="font-serif text-lg sm:text-xl text-black italic font-bold">
-              Where natural materials meet skilled hands.
-            </p>
-
-            <p className="text-sm sm:text-base text-stone-900 leading-relaxed font-medium max-w-2xl mx-auto pt-1">
-              Our products are created through a combination of natural materials, traditional craftsmanship and careful attention to detail. Explore how our skilled artisans transform simple natural fibres into beautiful handmade products.
-            </p>
-          </div>
-
-          {/* Trust Value Badges Grid with Middle-Outward Card Slide */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto pt-4">
-            <div className="card-slide-far-left stagger-2 hover-lift-sm flex items-center gap-3 p-4 rounded-2xl bg-white/90 backdrop-blur-xs border border-[#e8ded1] shadow-xs">
-              <div className="h-10 w-10 rounded-xl bg-amber-100 text-amber-950 flex items-center justify-center shrink-0">
-                <Users className="h-5 w-5" />
-              </div>
-              <div>
-                <h4 className="font-serif text-sm font-extrabold text-black">500+ Artisans</h4>
-                <p className="text-xs text-stone-900 font-semibold">Skilled rural women</p>
-              </div>
-            </div>
-
-            <div className="card-slide-left stagger-1 hover-lift-sm flex items-center gap-3 p-4 rounded-2xl bg-white/90 backdrop-blur-xs border border-[#e8ded1] shadow-xs">
-              <div className="h-10 w-10 rounded-xl bg-emerald-100 text-emerald-950 flex items-center justify-center shrink-0">
-                <Leaf className="h-5 w-5" />
-              </div>
-              <div>
-                <h4 className="font-serif text-sm font-extrabold text-black">100% Natural</h4>
-                <p className="text-xs text-stone-900 font-semibold">Plant-based fibres</p>
-              </div>
-            </div>
-
-            <div className="card-slide-right stagger-1 hover-lift-sm flex items-center gap-3 p-4 rounded-2xl bg-white/90 backdrop-blur-xs border border-[#e8ded1] shadow-xs">
-              <div className="h-10 w-10 rounded-xl bg-teal-100 text-teal-950 flex items-center justify-center shrink-0">
-                <ShieldCheck className="h-5 w-5" />
-              </div>
-              <div>
-                <h4 className="font-serif text-sm font-extrabold text-black">Fair Trade & Audit</h4>
-                <p className="text-xs text-stone-900 font-semibold">BSCI & Sedex verified</p>
-              </div>
-            </div>
-
-            <div className="card-slide-far-right stagger-2 hover-lift-sm flex items-center gap-3 p-4 rounded-2xl bg-white/90 backdrop-blur-xs border border-[#e8ded1] shadow-xs">
-              <div className="h-10 w-10 rounded-xl bg-stone-100 text-stone-950 flex items-center justify-center shrink-0">
-                <Package className="h-5 w-5" />
-              </div>
-              <div>
-                <h4 className="font-serif text-sm font-extrabold text-black">Global Export</h4>
-                <p className="text-xs text-stone-900 font-semibold">35+ countries reached</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-6 pb-2">
+        <nav className="reveal-up flex items-center gap-2 text-xs font-bold text-stone-800">
+          <Link to="/" className="hover:text-emerald-800 transition-colors">Home</Link>
+          <span>/</span>
+          <span className="text-black font-extrabold">Infrastructure & Craftsmanship</span>
+        </nav>
+      </div>
 
       {/* ---------------------------------------------------- */}
       {/* 2. Four Alternating Craftsmanship & Product Sections */}
       {/* ---------------------------------------------------- */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24 space-y-24 sm:space-y-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-8 sm:space-y-12">
         {CRAFT_SECTIONS.map((section, idx) => {
           const isEven = idx % 2 === 1;
 
@@ -326,17 +251,17 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
             <section
               key={section.id}
               id={section.id}
-              className="scroll-mt-24"
+              className="scroll-mt-20 pb-8 border-b border-stone-200/70 last:border-b-0 last:pb-0"
             >
               <div
-                className={`flex flex-col gap-10 lg:gap-16 items-center ${
+                className={`flex flex-col gap-6 lg:gap-10 items-center ${
                   isEven ? 'lg:flex-row-reverse' : 'lg:flex-row'
                 }`}
               >
                 
                 {/* Visual Image Column with Directional Reveal */}
                 <div className={`w-full lg:w-1/2 ${isEven ? 'reveal-right' : 'reveal-left'}`}>
-                  <div className="relative group rounded-3xl overflow-hidden bg-[#f0e8dc] border border-[#e4d6c4] shadow-xl hover:shadow-2xl transition-all duration-500 img-zoom-container">
+                  <div className="relative group rounded-3xl overflow-hidden bg-[#f0e8dc] border border-[#e4d6c4] shadow-lg hover:shadow-xl transition-all duration-500 img-zoom-container">
                     
                     {/* Number Stamp */}
                     <div className="absolute top-4 left-4 z-20 bg-stone-950/75 backdrop-blur-md text-amber-300 font-mono text-xs font-extrabold px-3 py-1 rounded-xl border border-white/20 shadow-md">
@@ -344,7 +269,7 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
                     </div>
 
                     {/* Image Container with Subtle Hover Zoom */}
-                    <div className="relative h-[340px] sm:h-[420px] lg:h-[460px] w-full overflow-hidden">
+                    <div className="relative h-[300px] sm:h-[380px] lg:h-[420px] w-full overflow-hidden">
                       <img
                         src={section.image}
                         alt={section.imageAlt}
@@ -381,41 +306,41 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
                 </div>
 
                 {/* Text & Production Process Column */}
-                <div className={`w-full lg:w-1/2 space-y-6 ${isEven ? 'reveal-left' : 'reveal-right'}`}>
+                <div className={`w-full lg:w-1/2 space-y-4 ${isEven ? 'reveal-left' : 'reveal-right'}`}>
                   
                   {/* Category Tagline */}
-                  <div className="space-y-2">
+                  <div className="space-y-1">
                     <span className="text-xs font-extrabold uppercase tracking-widest text-black">
                       {section.tagline}
                     </span>
-                    <h2 className="font-serif text-2xl sm:text-4xl font-extrabold text-black tracking-tight leading-tight">
+                    <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight">
                       {section.productTitle}
                     </h2>
                   </div>
 
                   {/* Core Description Quote */}
-                  <div className="relative pl-4 border-l-4 border-emerald-700 bg-[#f7f2ea] p-4 rounded-r-2xl border-y border-r border-[#e8ded1]">
+                  <div className="relative pl-3.5 border-l-4 border-emerald-700 bg-[#f7f2ea] p-3 rounded-r-2xl border-y border-r border-[#e8ded1]">
                     <p className="text-sm sm:text-base text-black leading-relaxed font-serif font-bold italic">
                       "{section.description}"
                     </p>
                   </div>
 
                   {/* Production Step-by-Step Flow */}
-                  <div className="space-y-3 pt-2">
+                  <div className="space-y-2 pt-1">
                     <h3 className="text-xs font-black uppercase tracking-wider text-black flex items-center gap-1.5">
                       <Layers className="h-3.5 w-3.5 text-emerald-700" />
                       <span>Handmade Production Process</span>
                     </h3>
 
-                    <div className="space-y-2.5">
+                    <div className="space-y-2">
                       {section.process.map((item, pIdx) => {
                         const stepStagger = `stagger-${pIdx + 1}`;
                         return (
                           <div
                             key={item.step}
-                            className={`reveal-up ${stepStagger} hover-lift-sm group/step flex items-start gap-3.5 p-3 rounded-2xl bg-white border border-[#eae0d2] hover:border-emerald-600 hover:shadow-md transition-all duration-300`}
+                            className={`reveal-up ${stepStagger} hover-lift-sm group/step flex items-start gap-3 p-2.5 rounded-2xl bg-white border border-[#eae0d2] hover:border-emerald-600 hover:shadow-md transition-all duration-300`}
                           >
-                            <div className="h-7 w-7 rounded-xl bg-[#f0e8dc] group-hover/step:bg-emerald-700 text-stone-950 group-hover/step:text-white flex items-center justify-center text-xs font-mono font-extrabold shrink-0 transition-colors shadow-xs">
+                            <div className="h-6 w-6 rounded-xl bg-[#f0e8dc] group-hover/step:bg-emerald-700 text-stone-950 group-hover/step:text-white flex items-center justify-center text-xs font-mono font-extrabold shrink-0 transition-colors shadow-xs">
                               {item.step}
                             </div>
                             <div className="space-y-0.5 min-w-0">
@@ -433,10 +358,10 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
                   </div>
 
                   {/* Quick Action Button for Category */}
-                  <div className="pt-3 flex items-center gap-3">
+                  <div className="pt-2 flex items-center gap-3">
                     <button
                       onClick={() => navigate(`/products?category=${section.categorySlug}`)}
-                      className="inline-flex items-center gap-2 rounded-xl bg-stone-900 hover:bg-emerald-700 text-white px-5 py-2.5 text-xs font-extrabold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-200 btn-interactive"
+                      className="inline-flex items-center gap-2 rounded-xl bg-stone-900 hover:bg-emerald-700 text-white px-5 py-2 text-xs font-extrabold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-200 btn-interactive"
                     >
                       <span>Explore {section.productTitle}</span>
                       <ArrowRight className="h-3.5 w-3.5 btn-arrow" />
@@ -454,14 +379,14 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
       {/* ---------------------------------------------------- */}
       {/* 3. Facility Quality & Compliance Infrastructure */}
       {/* ---------------------------------------------------- */}
-      <section className="bg-gradient-to-b from-[#f5eee6] to-[#fcfbf9] py-16 border-y border-stone-200/80">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+      <section className="bg-gradient-to-b from-[#f5eee6] to-[#fcfbf9] py-10 sm:py-12 border-y border-stone-200/80">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8">
           
-          <div className="text-center max-w-2xl mx-auto space-y-3 reveal-up">
+          <div className="text-center max-w-2xl mx-auto space-y-2 reveal-up">
             <span className="text-xs font-extrabold uppercase tracking-widest text-emerald-900">
               EXPORT ASSURANCE & CAPACITY
             </span>
-            <h2 className="font-serif text-2xl sm:text-4xl font-extrabold text-black">
+            <h2 className="font-serif text-2xl sm:text-3xl font-extrabold text-black">
               International Export Standards
             </h2>
             <p className="text-sm text-stone-900 leading-relaxed font-medium">
@@ -470,51 +395,51 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
             <div className="mx-auto h-1.5 w-16 rounded-full bg-emerald-700" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             
-            <div className="card-slide-left stagger-2 hover-lift bg-white rounded-3xl p-6 sm:p-8 border border-[#e8ded1] shadow-xs space-y-4">
-              <div className="h-12 w-12 rounded-2xl bg-amber-100 text-amber-950 flex items-center justify-center shadow-xs">
-                <Sun className="h-6 w-6" />
+            <div className="card-slide-left stagger-2 hover-lift bg-white rounded-3xl p-5 sm:p-6 border border-[#e8ded1] shadow-xs space-y-3">
+              <div className="h-11 w-11 rounded-2xl bg-amber-100 text-amber-950 flex items-center justify-center shadow-xs">
+                <Sun className="h-5 w-5" />
               </div>
-              <h3 className="font-serif text-lg font-extrabold text-black">
+              <h3 className="font-serif text-base font-extrabold text-black">
                 Moisture & Mold Protection
               </h3>
               <p className="text-xs text-stone-900 leading-relaxed font-medium">
                 All raw materials and finished handicrafts undergo controlled drying and digital hygrometer inspection ensuring moisture stays below 12%, guaranteed mold-free during maritime container voyages.
               </p>
-              <div className="pt-2 flex items-center gap-1.5 text-xs font-bold text-amber-950">
+              <div className="pt-1 flex items-center gap-1.5 text-xs font-bold text-amber-950">
                 <CheckCircle2 className="h-4 w-4" />
                 <span>Export Fumigation Certified</span>
               </div>
             </div>
 
-            <div className="card-slide-mid stagger-1 hover-lift bg-white rounded-3xl p-6 sm:p-8 border border-[#e8ded1] shadow-xs space-y-4">
-              <div className="h-12 w-12 rounded-2xl bg-emerald-100 text-emerald-950 flex items-center justify-center shadow-xs">
-                <Award className="h-6 w-6" />
+            <div className="card-slide-mid stagger-1 hover-lift bg-white rounded-3xl p-5 sm:p-6 border border-[#e8ded1] shadow-xs space-y-3">
+              <div className="h-11 w-11 rounded-2xl bg-emerald-100 text-emerald-950 flex items-center justify-center shadow-xs">
+                <Award className="h-5 w-5" />
               </div>
-              <h3 className="font-serif text-lg font-extrabold text-black">
+              <h3 className="font-serif text-base font-extrabold text-black">
                 Ethical & Fair Trade Workspaces
               </h3>
               <p className="text-xs text-stone-900 leading-relaxed font-medium">
                 Our cooperative production hubs across southern Bangladesh guarantee fair living wages, safe ergonomic ventilation, zero child labor, and continuous technical weaving masterclasses for rural women.
               </p>
-              <div className="pt-2 flex items-center gap-1.5 text-xs font-bold text-emerald-950">
+              <div className="pt-1 flex items-center gap-1.5 text-xs font-bold text-emerald-950">
                 <CheckCircle2 className="h-4 w-4" />
                 <span>BSCI & Sedex Audited</span>
               </div>
             </div>
 
-            <div className="card-slide-right stagger-2 hover-lift bg-white rounded-3xl p-6 sm:p-8 border border-[#e8ded1] shadow-xs space-y-4">
-              <div className="h-12 w-12 rounded-2xl bg-teal-100 text-teal-950 flex items-center justify-center shadow-xs">
-                <Package className="h-6 w-6" />
+            <div className="card-slide-right stagger-2 hover-lift bg-white rounded-3xl p-5 sm:p-6 border border-[#e8ded1] shadow-xs space-y-3">
+              <div className="h-11 w-11 rounded-2xl bg-teal-100 text-teal-950 flex items-center justify-center shadow-xs">
+                <Package className="h-5 w-5" />
               </div>
-              <h3 className="font-serif text-lg font-extrabold text-black">
+              <h3 className="font-serif text-base font-extrabold text-black">
                 5-Ply Master Carton Packaging
               </h3>
               <p className="text-xs text-stone-900 leading-relaxed font-medium">
                 Nestable basket packaging, silica gel desiccants, heavy-duty 5-ply export master cartons, and shrink-wrapped palletization custom tailored for high container volume CBM efficiency.
               </p>
-              <div className="pt-2 flex items-center gap-1.5 text-xs font-bold text-teal-950">
+              <div className="pt-1 flex items-center gap-1.5 text-xs font-bold text-teal-950">
                 <CheckCircle2 className="h-4 w-4" />
                 <span>FCL & LCL Export Ready</span>
               </div>
@@ -528,22 +453,22 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
       {/* ---------------------------------------------------- */}
       {/* 4. Elegant Call-To-Action (CTA) */}
       {/* ---------------------------------------------------- */}
-      <section className="py-16 sm:py-20">
+      <section className="py-8 sm:py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="reveal-up relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#1b4332] via-[#2d6a4f] to-[#081c15] p-8 sm:p-14 text-white shadow-2xl space-y-6 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-8">
+          <div className="reveal-up relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#1b4332] via-[#2d6a4f] to-[#081c15] p-6 sm:p-10 text-white shadow-xl space-y-4 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
             
             {/* Background Glow */}
             <div className="absolute top-0 right-0 w-80 h-80 bg-amber-400/10 rounded-full blur-3xl pointer-events-none" />
 
-            <div className="relative z-10 max-w-2xl space-y-3">
-              <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/20 px-3.5 py-1 text-xs font-extrabold uppercase tracking-widest text-emerald-300 backdrop-blur-md border border-emerald-500/30">
+            <div className="relative z-10 max-w-2xl space-y-2">
+              <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/20 px-3 py-0.5 text-xs font-extrabold uppercase tracking-widest text-emerald-300 backdrop-blur-md border border-emerald-500/30">
                 <Sparkles className="h-3.5 w-3.5 text-emerald-400" />
                 Handcrafted in Bangladesh
               </span>
               <ScrollTypingText
                 as="h2"
                 text="Crafted by Hand. Made with Nature."
-                className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white"
+                className="font-serif text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white"
                 speed={35}
               />
               <p className="text-stone-200 text-xs sm:text-sm leading-relaxed font-light">
@@ -554,7 +479,7 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
             <div className="relative z-10 flex flex-col sm:flex-row items-center gap-3 shrink-0">
               <button
                 onClick={() => navigate('/products')}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-amber-400 hover:bg-amber-300 text-stone-950 px-7 py-3.5 text-xs font-extrabold uppercase tracking-wider shadow-xl transition-all duration-200 btn-interactive"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-amber-400 hover:bg-amber-300 text-stone-950 px-6 py-3 text-xs font-extrabold uppercase tracking-wider shadow-xl transition-all duration-200 btn-interactive"
               >
                 <span>Explore Our Products</span>
                 <ArrowRight className="h-4 w-4 btn-arrow" />
@@ -563,7 +488,7 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
               {onOpenQuoteModal && (
                 <button
                   onClick={onOpenQuoteModal}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-white/10 hover:bg-white/20 text-white px-6 py-3.5 text-xs font-bold backdrop-blur-md border border-white/20 transition-all duration-200 btn-interactive"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-white/10 hover:bg-white/20 text-white px-5 py-3 text-xs font-bold backdrop-blur-md border border-white/20 transition-all duration-200 btn-interactive"
                 >
                   <span>Request Wholesale Quote</span>
                 </button>
