@@ -312,13 +312,13 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
 
               {/* Received Qty Box */}
               <div className="grid grid-cols-12 items-center py-1.5">
-                <span className="col-span-4 font-bold text-[#65a30d]">Received Qty:</span>
+                <span className="col-span-4 font-bold text-[#166534]">Received Qty:</span>
                 <div className="col-span-8">
                   <input
                     type="text"
                     value={receivedQty}
                     onChange={(e) => setReceivedQty(e.target.value)}
-                    className="w-48 px-3 py-1.5 bg-white border-2 border-[#65a30d] rounded-sm text-sm text-stone-900 font-mono outline-hidden"
+                    className="w-48 px-3 py-1.5 bg-white border-2 border-[#166534] rounded-sm text-sm text-stone-900 font-mono outline-hidden"
                     placeholder=""
                   />
                 </div>
@@ -334,11 +334,11 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
                     step={setPerCarton}
                     value={orderQty}
                     onChange={(e) => setOrderQty(Math.max(1, Number(e.target.value)))}
-                    className="w-44 px-3 py-2 bg-white border-2 border-[#65a30d] rounded-sm text-sm font-bold text-stone-900 font-mono outline-hidden"
+                    className="w-44 px-3 py-2 bg-white border-2 border-[#166534] rounded-sm text-sm font-bold text-stone-900 font-mono outline-hidden"
                   />
                   <button
                     onClick={handleAddToCart}
-                    className="px-6 py-2 rounded-sm border-2 border-[#65a30d] text-[#65a30d] hover:bg-[#65a30d] hover:text-white font-bold text-sm transition-all duration-200 cursor-pointer flex items-center gap-1.5 shadow-2xs"
+                    className="px-6 py-2 rounded-sm border-2 border-[#166534] text-[#166534] hover:bg-[#166534] hover:text-white font-bold text-sm transition-all duration-200 cursor-pointer flex items-center gap-1.5 shadow-2xs"
                   >
                     {addedSuccess ? (
                       <>
@@ -377,7 +377,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
             <h2 className="font-sans text-lg sm:text-xl font-bold uppercase tracking-wider text-stone-900">
               RELATED PRODUCTS
             </h2>
-            <div className="mx-auto mt-2 h-0.5 w-28 bg-[#65a30d]" />
+            <div className="mx-auto mt-2 h-0.5 w-28 bg-[#166534]" />
           </div>
 
           {/* 15 Products Auto-Sliding Row */}
@@ -409,7 +409,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
                     </div>
 
                     {/* Art No in bold Green (Image 2) */}
-                    <div className="mt-3 text-xs sm:text-sm font-bold text-[#65a30d] group-hover/card:text-[#4d7c0f] transition-colors">
+                    <div className="mt-3 text-xs sm:text-sm font-bold text-[#166534] group-hover/card:text-[#14532d] transition-colors">
                       Art No: {relProd.code || relProd.id}
                     </div>
                   </div>
@@ -445,7 +445,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
                   onClick={() => setSliderIndex(Math.min(dotIdx, maxSlideIndex))}
                   className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
                     isActive
-                      ? 'w-4 bg-[#65a30d]'
+                      ? 'w-4 bg-[#166534]'
                       : 'w-2.5 bg-stone-300 hover:bg-stone-400'
                   }`}
                   aria-label={`Slide ${dotIdx + 1}`}

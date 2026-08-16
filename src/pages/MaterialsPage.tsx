@@ -135,7 +135,7 @@ export const MaterialsPage: React.FC = () => {
       <div className="border-b border-stone-200 bg-stone-50/80 reveal-up">
         <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8 flex items-center justify-between text-xs text-stone-900 font-bold">
           <div className="flex items-center gap-1.5">
-            <Link to="/" className="hover:text-[#65a30d] font-bold text-stone-800">Home</Link>
+            <Link to="/" className="hover:text-[#166534] font-bold text-stone-800">Home</Link>
             <ChevronRight className="h-3.5 w-3.5 text-stone-600 font-bold" />
             <span className="text-black font-extrabold">Materials Information</span>
           </div>
@@ -148,7 +148,7 @@ export const MaterialsPage: React.FC = () => {
               placeholder="Search material..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-8 pr-7 py-1 text-xs rounded border border-stone-400 bg-white text-black font-medium focus:outline-hidden focus:border-[#65a30d] transition-colors"
+              className="w-full pl-8 pr-7 py-1 text-xs rounded border border-stone-400 bg-white text-black font-medium focus:outline-hidden focus:border-[#166534] transition-colors"
             />
             {searchQuery && (
               <button

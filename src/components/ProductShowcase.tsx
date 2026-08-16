@@ -52,7 +52,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
           <p className="text-stone-900 text-xs sm:text-sm font-medium leading-relaxed">
             Filter by category and explore our full range of eco-friendly jute, seagrass, and natural handicraft collections.
           </p>
-          <div className="mx-auto h-1 w-16 bg-[#65a30d] mt-2" />
+          <div className="mx-auto h-1 w-16 bg-[#166534] mt-2 rounded-full" />
         </div>
 
         {/* 2. Category Filter Pills */}

@@ -64,7 +64,7 @@ export const ImageMagnifier: React.FC<ImageMagnifierProps> = ({
 
         {/* Hover Hint Badge */}
         <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-stone-200 shadow-sm flex items-center gap-1.5 text-[11px] font-extrabold text-stone-700 pointer-events-none group-hover:opacity-0 transition-opacity z-10">
-          <ZoomIn className="h-3.5 w-3.5 text-[#65a30d]" /> Hover to Magnify Ultra-High Res Texture
+          <ZoomIn className="h-3.5 w-3.5 text-[#166534]" /> Hover to Magnify Ultra-High Res Texture
         </div>
 
         {/* Click for Lightbox Button */}
@@ -73,7 +73,7 @@ export const ImageMagnifier: React.FC<ImageMagnifierProps> = ({
             e.stopPropagation();
             setLightboxOpen(true);
           }}
-          className="absolute bottom-4 right-4 bg-[#65a30d] hover:bg-[#4d7c0f] text-white p-3 rounded-2xl shadow-md transition-all hover:scale-105 z-20 flex items-center gap-1.5 text-xs font-bold cursor-pointer"
+          className="absolute bottom-4 right-4 bg-[#166534] hover:bg-[#14532d] text-white p-3 rounded-2xl shadow-md transition-all hover:scale-105 z-20 flex items-center gap-1.5 text-xs font-bold cursor-pointer"
           title="Open Fullscreen High-Res Photo View"
         >
           <Maximize2 className="h-4 w-4" />
@@ -91,7 +91,7 @@ export const ImageMagnifier: React.FC<ImageMagnifierProps> = ({
               top: `${xy.y - magnifierSize / 2}px`,
               left: `${xy.x - magnifierSize / 2}px`,
               opacity: 1,
-              border: '4px solid #65a30d',
+              border: '4px solid #166534',
               borderRadius: '50%',
               backgroundColor: 'white',
               backgroundImage: `url('${src}')`,

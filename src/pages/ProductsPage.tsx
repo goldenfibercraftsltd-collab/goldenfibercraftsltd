@@ -107,9 +107,9 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
       <div className="bg-white border-b border-stone-200 reveal-up">
         <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8 flex items-center justify-between text-xs text-stone-900 font-bold">
           <div className="flex items-center gap-1.5">
-            <Link to="/" className="hover:text-[#65a30d] font-bold text-stone-800">Home</Link>
+            <Link to="/" className="hover:text-[#166534] font-bold text-stone-800">Home</Link>
             <ChevronRight className="h-3.5 w-3.5 text-stone-600 font-bold" />
-            <Link to="/products" onClick={clearFilters} className="hover:text-[#65a30d] text-stone-800">Products</Link>
+            <Link to="/products" onClick={clearFilters} className="hover:text-[#166534] text-stone-800">Products</Link>
             {currentCategoryObj && (
               <>
                 <ChevronRight className="h-3.5 w-3.5 text-stone-600 font-bold" />
@@ -151,7 +151,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
                 placeholder="Search Item Code or Name (e.g. GFC-SB-030)..."
                 value={searchQuery}
                 onChange={handleSearchChange}
-                className="w-full pl-10 pr-9 py-2 text-xs rounded-xl border border-stone-400 bg-white text-black font-medium focus:outline-hidden focus:border-[#65a30d] focus:ring-2 focus:ring-[#65a30d]/20 transition-all"
+                className="w-full pl-10 pr-9 py-2 text-xs rounded-xl border border-stone-400 bg-white text-black font-medium focus:outline-hidden focus:border-[#166534] focus:ring-2 focus:ring-[#166534]/20 transition-all"
               />
               {searchQuery && (
                 <button
@@ -175,7 +175,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
             <div className="flex items-center gap-1.5 overflow-x-auto pb-1 pt-1 scrollbar-none">
               <button
                 onClick={() => handleCategoryChange('all')}
-                className="px-3.5 py-1.5 rounded-lg text-xs font-black whitespace-nowrap transition-all bg-[#65a30d] text-white shadow-xs btn-interactive"
+                className="px-3.5 py-1.5 rounded-lg text-xs font-black whitespace-nowrap transition-all bg-[#166534] text-white shadow-xs btn-interactive"
               >
                 All Categories ({allProducts.length})
               </button>
@@ -268,7 +268,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
               return (
                 <div
                   key={product.id}
-                  className={`${slideAnim} hover-lift group flex flex-col justify-between rounded-2xl bg-white p-4 shadow-xs border border-stone-200 hover:shadow-xl hover:border-[#65a30d] transition-all duration-300`}
+                  className={`${slideAnim} hover-lift group flex flex-col justify-between rounded-2xl bg-white p-4 shadow-xs border border-stone-200 hover:shadow-xl hover:border-[#166534] transition-all duration-300`}
                 >
                   <div>
                     {/* Photo Container */}
@@ -290,12 +290,12 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
 
                     {/* Product Details */}
                     <div className="mt-3.5 space-y-1">
-                      <span className="text-[10px] font-black text-[#65a30d] uppercase tracking-wider">
+                      <span className="text-[10px] font-black text-[#166534] uppercase tracking-wider">
                         {product.categoryName || product.category}
                       </span>
                       <h3
                         onClick={() => navigate(`/products/${product.slug}`)}
-                        className="font-serif text-sm font-extrabold text-black group-hover:text-[#65a30d] transition-colors line-clamp-2 cursor-pointer"
+                        className="font-serif text-sm font-extrabold text-black group-hover:text-[#166534] transition-colors line-clamp-2 cursor-pointer"
                       >
                         {product.name}
                       </h3>
@@ -309,7 +309,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
                   <div className="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between gap-2">
                     <button
                       onClick={() => navigate(`/products/${product.slug}`)}
-                      className="text-xs font-bold text-stone-700 hover:text-[#65a30d] flex items-center gap-1 transition-colors btn-interactive"
+                      className="text-xs font-bold text-stone-700 hover:text-[#166534] flex items-center gap-1 transition-colors btn-interactive"
                     >
                       <span>Details</span>
                       <ArrowRight className="h-3.5 w-3.5 btn-arrow" />
@@ -342,7 +342,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
             </div>
             <button
               onClick={clearFilters}
-              className="inline-block rounded-xl bg-[#65a30d] text-white px-5 py-2 text-xs font-bold hover:bg-[#4d7c0f] transition-colors shadow-xs btn-interactive"
+              className="inline-block rounded-xl bg-[#166534] text-white px-5 py-2 text-xs font-bold hover:bg-[#14532d] transition-colors shadow-xs btn-interactive"
             >
               Show All Products
             </button>

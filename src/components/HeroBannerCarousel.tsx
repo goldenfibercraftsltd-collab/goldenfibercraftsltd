@@ -50,7 +50,9 @@ const DEFAULT_BANNERS: BannerItem[] = [
 
 export const HeroBannerCarousel: React.FC<HeroBannerCarouselProps> = () => {
   const [banners, setBanners] = useState<BannerItem[]>(DEFAULT_BANNERS);
-  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  // Infinite track uses currentIndex starting at 1 (representing banners[0])
+  const [currentIndex, setCurrentIndex] = useState<number>(1);
+  const [isTransitioning, setIsTransitioning] = useState<boolean>(true);
   const [isPaused, setIsPaused] = useState<boolean>(false);
   const navigate = useNavigate();
 
@@ -70,17 +72,28 @@ export const HeroBannerCarousel: React.FC<HeroBannerCarouselProps> = () => {
       .catch(() => {});
   }, []);
 
+  // Build extended slides for seamless infinite loop: [lastClone, ...banners, firstClone]
+  const extendedSlides: BannerItem[] = banners.length > 1
+    ? [banners[banners.length - 1], ...banners, banners[0]]
+    : banners;
+
+  const totalExtended = extendedSlides.length;
+
   const nextSlide = useCallback((e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
-    setCurrentSlide(prev => (prev + 1) % banners.length);
+    if (banners.length <= 1) return;
+    setIsTransitioning(true);
+    setCurrentIndex(prev => prev + 1);
   }, [banners.length]);
 
   const prevSlide = useCallback((e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
-    setCurrentSlide(prev => (prev === 0 ? banners.length - 1 : prev - 1));
+    if (banners.length <= 1) return;
+    setIsTransitioning(true);
+    setCurrentIndex(prev => prev - 1);
   }, [banners.length]);
 
-  // Smooth Auto-Slide every 4.5 seconds (paused when user hovers or interacts)
+  // Smooth Auto-Slide every 4.5 seconds (always continuously sliding leftward)
   useEffect(() => {
     if (banners.length <= 1 || isPaused) return;
     const timer = setInterval(() => {
@@ -88,6 +101,21 @@ export const HeroBannerCarousel: React.FC<HeroBannerCarouselProps> = () => {
     }, 4500);
     return () => clearInterval(timer);
   }, [banners.length, isPaused, nextSlide]);
+
+  // Seamless Infinite Loop Reset on Transition End
+  const handleTransitionEnd = () => {
+    if (banners.length <= 1) return;
+
+    if (currentIndex >= totalExtended - 1) {
+      // Reached the clone of the first slide at the far right -> silently jump to real first slide (index 1)
+      setIsTransitioning(false);
+      setCurrentIndex(1);
+    } else if (currentIndex <= 0) {
+      // Reached the clone of the last slide at the far left -> silently jump to real last slide
+      setIsTransitioning(false);
+      setCurrentIndex(banners.length);
+    }
+  };
 
   // Touch Swipe Handlers
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -130,6 +158,11 @@ export const HeroBannerCarousel: React.FC<HeroBannerCarouselProps> = () => {
     }
   };
 
+  // Compute active real index (0 to banners.length - 1) for indicators
+  const activeRealIndex = banners.length > 0
+    ? (currentIndex - 1 + banners.length) % banners.length
+    : 0;
+
   return (
     <div
       className="relative w-full overflow-hidden bg-stone-950 font-sans select-none"
@@ -139,18 +172,28 @@ export const HeroBannerCarousel: React.FC<HeroBannerCarouselProps> = () => {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Sliding Track - Slow & Ultra Smooth GPU Accelerated Transition */}
+      {/* Sliding Track - Continuous Infinite Leftward Slide */}
       <div
-        className="flex w-full h-[320px] sm:h-[440px] md:h-[500px] lg:h-[580px] transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] will-change-transform"
-        style={{ transform: `translate3d(-${currentSlide * 100}%, 0, 0)` }}
+        onTransitionEnd={handleTransitionEnd}
+        className={`flex w-full h-[320px] sm:h-[440px] md:h-[500px] lg:h-[580px] will-change-transform ${
+          isTransitioning
+            ? 'transition-transform duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)]'
+            : 'transition-none'
+        }`}
+        style={{
+          transform: banners.length > 1
+            ? `translate3d(-${currentIndex * 100}%, 0, 0)`
+            : 'translate3d(0, 0, 0)'
+        }}
       >
-        {banners.map((banner, idx) => {
-          const isActive = idx === currentSlide;
+        {extendedSlides.map((banner, idx) => {
+          // Check if this slide in extended track corresponds to current view
+          const isCurrentInView = idx === currentIndex;
           const showBadge = Boolean(banner.show_category_badge && (banner.category_name || banner.category_slug));
 
           return (
             <div
-              key={banner.id || idx}
+              key={`slide-${banner.id || idx}-${idx}`}
               onClick={() => handleBannerClick(banner)}
               className="relative h-full w-full flex-shrink-0 cursor-pointer overflow-hidden bg-stone-900"
             >
@@ -159,9 +202,9 @@ export const HeroBannerCarousel: React.FC<HeroBannerCarouselProps> = () => {
                 src={banner.image_url}
                 alt={banner.title || banner.category_name || 'Golden Fiber Crafts Banner'}
                 className={`h-full w-full object-cover transition-transform duration-[4000ms] ease-out select-none pointer-events-none ${
-                  isActive ? 'scale-105' : 'scale-100'
+                  isCurrentInView ? 'scale-105' : 'scale-100'
                 }`}
-                loading={idx === 0 ? 'eager' : 'lazy'}
+                loading={idx <= 2 ? 'eager' : 'lazy'}
                 draggable={false}
               />
 
@@ -193,7 +236,7 @@ export const HeroBannerCarousel: React.FC<HeroBannerCarouselProps> = () => {
           <button
             onClick={prevSlide}
             aria-label="Previous slide"
-            className="group absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-30 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-stone-900/60 hover:bg-emerald-600 text-white backdrop-blur-md border border-white/20 shadow-xl transition-all duration-300 hover:scale-110 active:scale-95"
+            className="group absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-30 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-stone-900/60 hover:bg-emerald-600 text-white backdrop-blur-md border border-white/20 shadow-xl transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer"
           >
             <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6 transition-transform duration-200 group-hover:-translate-x-0.5" />
           </button>
@@ -201,7 +244,7 @@ export const HeroBannerCarousel: React.FC<HeroBannerCarouselProps> = () => {
           <button
             onClick={nextSlide}
             aria-label="Next slide"
-            className="group absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-30 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-stone-900/60 hover:bg-emerald-600 text-white backdrop-blur-md border border-white/20 shadow-xl transition-all duration-300 hover:scale-110 active:scale-95"
+            className="group absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-30 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-stone-900/60 hover:bg-emerald-600 text-white backdrop-blur-md border border-white/20 shadow-xl transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer"
           >
             <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 transition-transform duration-200 group-hover:translate-x-0.5" />
           </button>
@@ -216,11 +259,12 @@ export const HeroBannerCarousel: React.FC<HeroBannerCarouselProps> = () => {
               key={idx}
               onClick={e => {
                 e.stopPropagation();
-                setCurrentSlide(idx);
+                setIsTransitioning(true);
+                setCurrentIndex(idx + 1);
               }}
               aria-label={`Go to slide ${idx + 1}`}
-              className={`h-2.5 rounded-full transition-all duration-500 ${
-                idx === currentSlide
+              className={`h-2.5 rounded-full transition-all duration-500 cursor-pointer ${
+                idx === activeRealIndex
                   ? 'w-8 bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.7)]'
                   : 'w-2.5 bg-white/40 hover:bg-white/70'
               }`}
