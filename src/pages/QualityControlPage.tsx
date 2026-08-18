@@ -18,7 +18,10 @@ import {
   ThermometerSnowflake,
   Sun,
   Scale,
-  BadgeCheck
+  BadgeCheck,
+  Leaf,
+  Users,
+  HeartHandshake
 } from 'lucide-react';
 import { ScrollTypingText } from '../components/ScrollTypingText';
 
@@ -332,6 +335,169 @@ export const QualityControlPage: React.FC = () => {
           );
         })}
       </div>
+
+      {/* ---------------------------------------------------- */}
+      {/* 2.5 Quality Assurance & PDCA Framework (PDF Page 16) */}
+      {/* ---------------------------------------------------- */}
+      <section className="bg-white py-12 sm:py-16 border-y border-stone-200/80">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+          
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
+            <div className="space-y-5 reveal-left">
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider text-emerald-950 bg-emerald-100 border border-emerald-300">
+                <ShieldCheck className="h-3.5 w-3.5 text-emerald-800" />
+                <span>SYSTEMATIC QUALITY ASSURANCE</span>
+              </span>
+              <ScrollTypingText
+                as="h2"
+                text="Embedded Quality Throughout Production"
+                className="font-serif text-2xl sm:text-4xl font-extrabold text-stone-900 leading-tight"
+                speed={30}
+              />
+              <p className="text-stone-800 text-sm sm:text-base leading-relaxed font-normal">
+                At <strong>Golden Fiber Crafts Ltd.</strong>, quality is embedded throughout our entire production process. From raw-material selection to final shipment, our quality team applies systematic controls to ensure consistency, workmanship, product integrity, and compliance with agreed customer specifications.
+              </p>
+              <p className="text-stone-800 text-sm leading-relaxed font-normal">
+                Our quality assurance approach combines preventive controls, in-process monitoring, final inspection, and shipment verification. This enables us to identify potential issues at an early stage, maintain consistent production quality, and deliver products that meet customer expectations.
+              </p>
+              
+              <div className="grid sm:grid-cols-2 gap-3 pt-2">
+                {[
+                  'Raw Material Inspection',
+                  'In-Process Quality Checks',
+                  'Final Product Inspection',
+                  'Packing Verification',
+                  'Pre-Shipment Inspection'
+                ].map((qcItem, i) => (
+                  <div key={i} className="flex items-center gap-2 p-2.5 bg-stone-50 rounded-xl border border-stone-200 text-xs font-bold text-stone-900">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0" />
+                    <span>{qcItem}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="reveal-right flex items-center justify-center p-6 bg-stone-50 rounded-3xl border border-stone-200 shadow-md">
+              <div className="relative max-w-md w-full">
+                <img
+                  src="/quality/pdca_cycle.png"
+                  alt="Quality Assurance PDCA Cycle - Plan Do Check Act"
+                  className="w-full h-auto object-contain filter drop-shadow-md"
+                />
+                <p className="text-center text-xs font-bold text-stone-700 mt-4 uppercase tracking-wider">
+                  Plan • Do • Check • Act (Continuous Quality Cycle)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* 7-Stage Quality Control Process (Pages 17-18) */}
+          <div className="space-y-8 pt-6 border-t border-stone-100">
+            <div className="text-center max-w-3xl mx-auto space-y-2">
+              <span className="text-xs font-black uppercase tracking-widest text-emerald-900">
+                OFFICIAL 7-STAGE PIPELINE
+              </span>
+              <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-black">
+                Comprehensive Quality Control Process
+              </h3>
+              <p className="text-xs sm:text-sm text-stone-700 font-medium">
+                At Golden Fiber Crafts Ltd., quality is built into every stage of production—from raw material selection to final shipment.
+              </p>
+              <div className="mx-auto h-1 w-16 rounded-full bg-emerald-600 mt-2" />
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {[
+                {
+                  step: '01',
+                  title: 'Raw Material Inspection',
+                  points: ['Selection of premium quality natural materials', 'Check for color, strength, moisture, cleanliness and defects', 'Supplier evaluation and approval']
+                },
+                {
+                  step: '02',
+                  title: 'Production Quality Control',
+                  points: ['Artisans follow standardized production guidelines', 'In-process inspection at every stage', 'Monitoring of workmanship, dimensions & structural integrity']
+                },
+                {
+                  step: '03',
+                  title: 'Finishing Inspection',
+                  points: ['Verify size and dimensions against spec sheets', 'Check color, appearance and smooth finishing', 'Strong stitching and secure handles', 'No loose fibers or sharp edges & proper labeling']
+                },
+                {
+                  step: '04',
+                  title: 'Functional Testing',
+                  points: ['Load-bearing capacity testing', 'Handle tensile strength test', 'Stitch durability & shape retention', 'Moisture resistance & overall usability']
+                },
+                {
+                  step: '05',
+                  title: 'Packaging Quality Control',
+                  points: ['Clean and moisture-protected packaging materials', 'Individual inspection before packing', 'Barcode, labels and shipping marks verified', 'Export cartons checked for strength and sealing']
+                },
+                {
+                  step: '06',
+                  title: 'Final Quality Audit',
+                  points: ['Compliance with purchase order specifications', 'Quantity verification & random AQL sampling', 'Packaging integrity check', 'Export documentation accuracy']
+                },
+                {
+                  step: '07',
+                  title: 'Approved for Shipment',
+                  points: ['All international quality standards met', 'Products approved for container loading', 'Safe and on-time delivery to global customers']
+                },
+                {
+                  step: '08',
+                  title: 'Customer Satisfaction',
+                  points: ['Dedicated customer support desk', 'Continuous quality feedback loop', 'Repeat program reliability & trust']
+                }
+              ].map((stage, idx) => (
+                <div key={idx} className="bg-stone-50 rounded-2xl p-5 border border-stone-200 shadow-sm hover-lift space-y-3 flex flex-col justify-between">
+                  <div className="space-y-2">
+                    <span className="inline-block text-sm font-serif font-black text-emerald-800 bg-emerald-100 px-3 py-1 rounded-lg">
+                      STAGE {stage.step}
+                    </span>
+                    <h4 className="font-serif text-sm font-bold text-stone-900 leading-snug">{stage.title}</h4>
+                    <ul className="space-y-1.5 text-[11px] text-stone-700 font-medium">
+                      {stage.points.map((pt, pIdx) => (
+                        <li key={pIdx} className="flex items-start gap-1.5">
+                          <Check className="h-3.5 w-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                          <span>{pt}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* 5 Pillars of Quality & Customer Satisfaction */}
+            <div className="rounded-3xl bg-gradient-to-r from-emerald-950 via-stone-900 to-emerald-950 p-6 sm:p-8 text-white shadow-xl space-y-4 text-center">
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-300">
+                OUR COMMITMENT TO EXCELLENCE IN EVERY HANDCRAFTED PRODUCT
+              </span>
+              <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 pt-2">
+                {[
+                  { title: 'Sustainable Materials', icon: Leaf },
+                  { title: 'Skilled Artisans', icon: Users },
+                  { title: 'Consistent Quality', icon: Award },
+                  { title: 'Eco-Friendly Production', icon: Sparkles },
+                  { title: 'Customer Trust', icon: HeartHandshake }
+                ].map((pillar, pIdx) => {
+                  const IconC = pillar.icon;
+                  return (
+                    <div key={pIdx} className="p-3 bg-white/10 rounded-2xl border border-white/10 space-y-1.5 flex flex-col items-center justify-center">
+                      <div className="h-9 w-9 rounded-full bg-emerald-500/30 text-emerald-300 flex items-center justify-center">
+                        <IconC className="h-4 w-4" />
+                      </div>
+                      <h4 className="text-xs font-bold text-white">{pillar.title}</h4>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
 
       {/* ---------------------------------------------------- */}
       {/* 3. AQL 2.5 Inspection & Compliance Matrix */}

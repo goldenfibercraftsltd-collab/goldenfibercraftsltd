@@ -116,9 +116,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
             title="Golden Fiber Crafts Ltd. - Home"
           >
             <img
-              src="/logo.png"
+              src="/logo-header.svg"
               alt="Golden Fiber Crafts Ltd."
-              className="h-16 sm:h-20 md:h-24 w-auto object-contain"
+              className="h-14 sm:h-[4.5rem] md:h-20 w-auto object-contain"
             />
           </Link>
 
@@ -154,10 +154,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
           <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
             {/* WhatsApp Direct Chat */}
             <a
-              href="https://wa.me/8801617778488?text=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%20I%20would%20like%20to%20know%20more%20about%20your%20handicraft%20products%20and%20export%20details."
+              href="https://wa.me/8801916183583?text=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%20I%20would%20like%20to%20know%20more%20about%20your%20handicraft%20products%20and%20export%20details."
               target="_blank"
               rel="noopener noreferrer"
-              title="Chat on WhatsApp (+8801617778488)"
+              title="Chat on WhatsApp (+8801916-183583)"
               className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-sm hover:shadow transition-all duration-200 hover:scale-105"
             >
               <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
@@ -167,8 +167,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
 
             {/* Email Direct Inquiry */}
             <a
-              href="mailto:goldenfibercraftsltd@gmail.com?subject=Product%20Inquiry%20to%20Golden%20Fiber%20Crafts%20Ltd."
-              title="Email goldenfibercraftsltd@gmail.com"
+              href="mailto:info@goldenfibercrafts.com?subject=Product%20Inquiry%20to%20Golden%20Fiber%20Crafts%20Ltd."
+              title="Email info@goldenfibercrafts.com"
               className="hidden sm:flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-stone-100 hover:bg-stone-200 text-stone-700 shadow-sm hover:shadow transition-all duration-200 hover:scale-105"
             >
               <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-red-600" />
@@ -345,9 +345,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
         <div className="lg:hidden bg-stone-900 text-white px-4 pb-6 pt-3 shadow-2xl animate-fadeIn border-t border-stone-800 max-h-[85vh] overflow-y-auto">
           
           {/* Quick Contact Bar in Mobile Drawer */}
-          <div className="mb-4 p-3 bg-stone-800 rounded-xl flex items-center justify-around border border-stone-700 text-xs font-semibold">
+          <div className="flex items-center justify-around py-3 px-4 bg-stone-900 rounded-xl mb-4 text-xs font-semibold">
             <a
-              href="https://wa.me/8801617778488"
+              href="https://wa.me/8801916183583"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300"
@@ -357,7 +357,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
             </a>
             <span className="text-stone-600">|</span>
             <a
-              href="tel:+8801617778488"
+              href="tel:+8801916183583"
               className="flex items-center gap-1.5 text-amber-300 hover:text-amber-200"
             >
               <Phone className="h-4 w-4" />

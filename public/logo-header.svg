@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 130" fill="none">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&amp;display=swap');
+      .brand-title {
+        font-family: 'Cinzel', 'Playfair Display', 'Times New Roman', serif;
+        font-weight: 700;
+        font-size: 42px;
+        letter-spacing: 3px;
+        fill: #15803d;
+      }
+      .brand-sub {
+        font-family: 'Cinzel', 'Playfair Display', 'Times New Roman', serif;
+        font-weight: 700;
+        font-size: 28px;
+        letter-spacing: 5px;
+        fill: #15803d;
+      }
+    </style>
+  </defs>
+
+  <!-- GF Emblem / Leaf Icon - tightly placed at left -->
+  <g transform="translate(-65, -15) scale(0.38)">
+    <!-- Outer G Contour (Forest Green) -->
+    <path d="M 230 115 C 205 75, 160 62, 115 88 C 65 118, 52 188, 70 248 C 88 308, 145 355, 205 352 C 242 350, 275 328, 292 295 L 235 295 C 220 310, 195 318, 172 312 C 132 302, 108 262, 102 225 C 96 182, 112 135, 148 118 C 172 106, 202 110, 218 128 L 248 102 C 242 96, 235 90, 228 85 Z" fill="#15803d" />
+    
+    <!-- G Inner Horizontal Crossbar -->
+    <path d="M 165 240 L 215 240 L 215 268 L 165 268 Z" fill="#15803d" />
+
+    <!-- Main Leaf & F Stem (Vibrant Green) -->
+    <path d="M 232 352 C 225 295, 240 215, 282 145 C 322 78, 388 32, 442 20 C 432 90, 408 172, 335 242 C 288 288, 248 335, 232 352 Z" fill="#16a34a" />
+    
+    <!-- Leaf Inner White Void / Slit -->
+    <path d="M 295 188 C 348 128, 402 65, 422 42 C 390 98, 325 188, 275 248 C 270 230, 280 205, 295 188 Z" fill="#ffffff" />
+
+    <!-- F Crossbar Branch (Forest Green) -->
+    <path d="M 252 262 C 295 262, 348 240, 380 216 C 348 248, 295 280, 242 284 Z" fill="#15803d" />
+  </g>
+
+  <!-- Typography - right side, vertically centered -->
+  <!-- "GOLDEN FIBER" -->
+  <text x="155" y="58" class="brand-title">GOLDEN FIBER</text>
+  
+  <!-- "CRAFTS LTD" - 20% smaller than before -->
+  <text x="225" y="100" class="brand-sub">CRAFTS LTD</text>
+</svg>

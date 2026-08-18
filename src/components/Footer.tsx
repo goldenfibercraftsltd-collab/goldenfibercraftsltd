@@ -120,28 +120,40 @@ export const Footer: React.FC = () => {
           {/* Col 4: Contact With Us */}
           <div className="space-y-4 reveal-up stagger-4">
             <h4 className="font-serif text-base font-bold text-white uppercase tracking-wider border-b border-emerald-700/60 pb-2">
-              Contact With Us
+              Contact & Locations
             </h4>
             <div className="space-y-2.5 text-xs text-emerald-100">
               <div className="flex items-center gap-2.5">
                 <Mail className="h-4 w-4 text-amber-400 shrink-0" />
-                <a href="mailto:goldenfibercraftsltd@gmail.com" className="hover:underline text-amber-200 font-medium">goldenfibercraftsltd@gmail.com</a>
+                <a href="mailto:info@goldenfibercrafts.com" className="hover:underline text-amber-200 font-medium">info@goldenfibercrafts.com</a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="h-4 w-4 text-amber-400 shrink-0" />
-                <a href="https://wa.me/8801617778488?text=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%20I%20would%20like%20to%20know%20more%20about%20your%20handicraft%20products%20and%20export%20details." target="_blank" rel="noreferrer" className="hover:underline text-amber-200 font-medium">+880-1617-778488</a>
+                <a href="tel:+8801916183583" className="hover:underline text-amber-200 font-medium">+8801916-183583 (MD)</a>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <Phone className="h-4 w-4 text-amber-400 shrink-0" />
+                <a href="tel:+8801721994082" className="hover:underline text-amber-200 font-medium">+8801721-994082 (Senior Director)</a>
               </div>
               <div className="flex items-center gap-2.5">
                 <MessageCircle className="h-4 w-4 text-emerald-300 shrink-0" />
-                <a href="https://wa.me/8801617778488?text=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%20I%20would%20like%20to%20know%20more%20about%20your%20handicraft%20products%20and%20export%20details." target="_blank" rel="noopener noreferrer" className="hover:underline text-emerald-200 font-medium">WhatsApp: +880-1617-778488</a>
+                <a href="https://wa.me/8801916183583?text=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%20I%20would%20like%20to%20know%20more%20about%20your%20handicraft%20products%20and%20export%20details." target="_blank" rel="noopener noreferrer" className="hover:underline text-emerald-200 font-medium">WhatsApp: +8801916-183583</a>
               </div>
               <div className="flex items-start gap-2.5 pt-1">
                 <MapPin className="h-4 w-4 text-amber-400 shrink-0 mt-0.5" />
-                <span>Dhaka Industrial Zone, Bangladesh</span>
+                <span className="text-[11px] leading-snug">
+                  <strong className="text-white">Corporate Office:</strong> House# 78, Road# 16, Sector# 11, Uttara, Dhaka, Bangladesh
+                </span>
+              </div>
+              <div className="flex items-start gap-2.5 pt-0.5">
+                <MapPin className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                <span className="text-[11px] leading-snug">
+                  <strong className="text-white">Factories:</strong> Unit 1 (Salna, Gazipur) & Unit 2 (Nilganj, Kishoreganj)
+                </span>
               </div>
               <div className="flex items-center gap-2.5 pt-1">
                 <Globe className="h-4 w-4 text-amber-400 shrink-0" />
-                <a href="https://goldenfibercraftsltd.pages.dev" target="_blank" rel="noopener noreferrer" className="hover:underline text-amber-200 font-medium">goldenfibercraftsltd.pages.dev</a>
+                <a href="https://www.goldenfibercrafts.com" target="_blank" rel="noopener noreferrer" className="hover:underline text-amber-200 font-medium">www.goldenfibercrafts.com</a>
               </div>
             </div>
           </div>

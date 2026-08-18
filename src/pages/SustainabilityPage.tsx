@@ -328,6 +328,141 @@ export const SustainabilityPage: React.FC = () => {
       </div>
 
       {/* ---------------------------------------------------- */}
+      {/* 2.5 Environmental & Social Responsibility (PDF Page 21 & 22) */}
+      {/* ---------------------------------------------------- */}
+      <section className="bg-white py-12 sm:py-16 border-y border-stone-200/80">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+          
+          <div className="text-center max-w-3xl mx-auto space-y-2 reveal-up">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider text-emerald-950 bg-emerald-100 border border-emerald-300">
+              <Leaf className="h-3.5 w-3.5 text-emerald-800" />
+              <span>Holistic Sustainability Framework</span>
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-black">
+              Sustainability & Social Responsibility
+            </h2>
+            <p className="text-stone-800 text-sm sm:text-base leading-relaxed font-normal">
+              At Golden Fiber Crafts Ltd., sustainability is an integral part of how we develop products, manage our operations, and build long-term relationships. We are committed to creating high-quality handcrafted products that combine natural materials, responsible practices, skilled craftsmanship, and thoughtful design.
+            </p>
+            <div className="mx-auto h-1 w-16 rounded-full bg-emerald-600 mt-2" />
+          </div>
+
+          {/* Environmental Responsibility vs Social Responsibility 2-Col Grid */}
+          <div className="grid md:grid-cols-2 gap-8 reveal-up">
+            
+            {/* Environmental Responsibility Card */}
+            <div className="rounded-3xl bg-gradient-to-br from-emerald-950 via-stone-900 to-emerald-950 p-7 sm:p-8 text-white shadow-xl space-y-5 border border-emerald-500/30 flex flex-col justify-between">
+              <div className="space-y-4">
+                <div className="h-12 w-12 rounded-2xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center border border-emerald-400/30">
+                  <Leaf className="h-6 w-6" />
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-amber-300">Environmental Responsibility</h3>
+                <ul className="space-y-2.5 text-xs sm:text-sm text-stone-200 font-light">
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span>Use of renewable and biodegradable natural fibers such as jute, seagrass, water hyacinth, cotton, cane, and bamboo.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span>Promotion of environmentally friendly production processes with minimal waste.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span>Preference for recyclable and plastic-free packaging materials.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span>Efficient use of natural resources to reduce environmental impact.</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span>Continuous efforts to minimize carbon footprint throughout our operations.</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="pt-4 border-t border-emerald-800/60 text-xs text-emerald-300 font-serif italic">
+                Protecting our planet with every handcrafted creation.
+              </div>
+            </div>
+
+            {/* Social Responsibility Card */}
+            <div className="rounded-3xl bg-stone-50 p-7 sm:p-8 border border-stone-200 shadow-xl space-y-5 flex flex-col justify-between">
+              <div className="space-y-4">
+                <div className="h-12 w-12 rounded-2xl bg-amber-100 text-amber-900 flex items-center justify-center">
+                  <HeartHandshake className="h-6 w-6" />
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-stone-900">Social Responsibility</h3>
+                <p className="text-xs text-stone-700 leading-relaxed font-normal">
+                  Our commitment to sustainability extends beyond the environment. We value the skills, knowledge, and craftsmanship of local artisans and communities that contribute to our products.
+                </p>
+                <div className="space-y-2 pt-1">
+                  <h4 className="text-xs font-black uppercase tracking-wider text-black">We aim to support:</h4>
+                  <ul className="space-y-2 text-xs text-stone-800 font-medium">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span>Local craftsmanship and artisan skills development</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span>Responsible employment & fair living wages</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span>Community-based economic opportunities for rural mothers</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span>Preservation of traditional Bengali handicraft techniques</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span>Safe and respectful working environments</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span>Long-term sustainable development within our supply chain</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="pt-4 border-t border-stone-200 text-xs text-emerald-800 font-serif font-bold">
+                Better Materials. Responsible Production. Empowered Communities. Sustainable Growth.
+              </div>
+            </div>
+
+          </div>
+
+          {/* 4 Pillars of Sustainable Growth Ribbon (Page 22 & 23) */}
+          <div className="rounded-3xl bg-gradient-to-r from-emerald-950 via-stone-900 to-emerald-950 p-6 sm:p-10 text-white shadow-xl space-y-6 text-center reveal-up">
+            <div className="space-y-1">
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-300">
+                OUR SUSTAINABILITY COMMITMENT
+              </span>
+              <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">
+                "GOOD FOR NATURE • GOOD FOR PEOPLE • GOOD FOR THE FUTURE"
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 pt-2 text-left">
+              {[
+                { title: 'SUSTAINABLE MATERIALS', desc: 'We use natural, renewable, and eco-friendly fibers.' },
+                { title: 'ETHICAL PRODUCTION', desc: 'Our products are made responsibly with fair labor practices.' },
+                { title: 'QUALITY CRAFTSMANSHIP', desc: 'Each product is crafted with care ensuring durability and excellence.' },
+                { title: 'RECYCLABLE & BIODEGRADABLE', desc: 'Our designs are recyclable and biodegradable for a greener tomorrow.' },
+                { title: 'ECO-FRIENDLY PACKAGING', desc: 'We use sustainable packaging to reduce waste and protect our planet.' }
+              ].map((pil, idx) => (
+                <div key={idx} className="p-4 bg-white/10 backdrop-blur-xs rounded-2xl border border-white/10 space-y-1.5 flex flex-col justify-between">
+                  <h4 className="text-xs font-bold text-amber-300 leading-snug">{pil.title}</h4>
+                  <p className="text-[11px] text-stone-200 font-light leading-relaxed">{pil.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ---------------------------------------------------- */}
       {/* 3. UN Sustainable Development Goals (SDG) Alignment */}
       {/* ---------------------------------------------------- */}
       <section className="bg-gradient-to-b from-[#eef6f0] to-[#fcfbf9] py-16 border-y border-stone-200/80">

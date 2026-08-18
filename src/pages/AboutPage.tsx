@@ -19,12 +19,19 @@ import {
   Search,
   Settings,
   Mail,
-  Quote
+  Quote,
+  Eye,
+  Target,
+  HeartHandshake,
+  Globe2,
+  Boxes,
+  Phone
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { AnimatedCounter } from '../components/AnimatedCounter';
 import { ScrollTypingText } from '../components/ScrollTypingText';
 import { WhyChooseUsHub } from '../components/WhyChooseUsHub';
+import { TAGLINE, SUB_TAGLINE, KEY_LEADERSHIP, TECHNICAL_INFORMATION } from '../data/products';
 
 interface AboutPageProps {
   onOpenQuoteModal?: () => void;
@@ -32,20 +39,27 @@ interface AboutPageProps {
 
 export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
   return (
-    <div className="bg-amber-50/20 py-12 lg:py-20 animate-fadeIn font-sans">
+    <div className="bg-amber-50/20 py-12 lg:py-20 animate-fadeIn font-sans space-y-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
         
         {/* 1. Page Banner Header */}
         <div className="reveal-up relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-950 via-stone-900 to-emerald-900 p-8 sm:p-12 text-white shadow-2xl border border-emerald-800/40">
           <div className="relative z-10 max-w-3xl space-y-4">
+            <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/20 px-3.5 py-1 text-xs font-bold text-emerald-300 backdrop-blur-md border border-emerald-500/30">
+              <Sparkles className="h-3.5 w-3.5" />
+              Official Company Profile
+            </span>
             <ScrollTypingText
               as="h1"
               text="About Golden Fiber Crafts Ltd."
               className="font-serif text-3xl sm:text-5xl font-extrabold tracking-tight text-white"
               speed={35}
             />
-            <p className="text-stone-300 text-sm sm:text-base leading-relaxed">
-              Bangladesh’s premier manufacturer and exporter of eco-friendly jute, seagrass, kaisa grass handicrafts, storage baskets, planters, and natural home decor.
+            <p className="text-emerald-200 font-serif italic text-base sm:text-lg">
+              "{TAGLINE}"
+            </p>
+            <p className="text-stone-300 text-xs sm:text-sm leading-relaxed font-light">
+              {SUB_TAGLINE} — Bangladesh’s premier manufacturer and exporter of eco-friendly jute, seagrass, kaisa grass handicrafts, storage baskets, planters, and sustainable lifestyle goods.
             </p>
           </div>
           <div className="absolute -right-12 -bottom-12 opacity-10 pointer-events-none">
@@ -53,31 +67,41 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
           </div>
         </div>
 
-        {/* 2. Company Profile & Vision */}
+        {/* 2. Company History & Overview (Page 2 of Corporate Profile) */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="reveal-left space-y-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-amber-100 text-amber-950 px-3.5 py-1 text-xs font-black uppercase tracking-wider">
+              <Leaf className="h-3.5 w-3.5 text-amber-800" />
+              Company History & Overview
+            </div>
             <ScrollTypingText
               as="h2"
-              text="Weaving Sustainability & Global Quality Standards"
+              text="Showcasing Bangladesh's Natural Fibers to the Global Marketplace"
               className="font-serif text-2xl sm:text-4xl font-bold text-stone-900 leading-tight"
               speed={30}
             />
-            <p className="text-stone-900 text-sm sm:text-base leading-relaxed font-medium">
-              Founded with a mission to promote Bangladesh's rich golden fiber heritage globally, Golden Fiber Crafts Ltd. stands as a pioneer in sustainable manufacturing. From handwoven natural baskets to certified eco-friendly home decor, we bridge traditional craftsmanship with modern export standards.
+            <p className="text-stone-800 text-sm sm:text-base leading-relaxed font-normal">
+              <strong>Golden Fiber Crafts Ltd.</strong> was established with a vision to showcase the beauty, versatility, and sustainability of Bangladesh's natural fibers to the global marketplace. Inspired by the country's rich tradition of handicrafts and its reputation as the home of the world's finest jute—known as the <em>"Golden Fiber"</em>—the company was founded to create a high-quality diverse range of eco-friendly products, including jute bags, home décor, storage solutions, gift items, and handcrafted accessories.
             </p>
-            <div className="grid sm:grid-cols-2 gap-4 pt-4">
+            <p className="text-stone-800 text-sm sm:text-base leading-relaxed font-normal">
+              Over the years, we have continuously invested in product innovation, quality management, and sustainable manufacturing practices. Our commitment to excellence has enabled us to build strong relationships with customers across <strong>Europe, North America, Australia, Japan,</strong> and other international markets.
+            </p>
+            <p className="text-stone-800 text-sm leading-relaxed font-normal">
+              Today, Golden Fiber Crafts Ltd. is recognized as a reliable manufacturer and exporter of eco-friendly handicrafts and natural fiber products. Guided by our core values of quality, integrity, innovation, and sustainability, we remain dedicated to promoting environmentally responsible products while supporting local artisans and contributing to Bangladesh's growing handicraft industry.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4 pt-2">
               <div className="hover-lift-sm flex items-start gap-3 rounded-2xl bg-white p-4 shadow-sm border border-stone-200/60">
                 <CheckCircle2 className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-extrabold text-black text-sm">100% Eco-Friendly</h4>
-                  <p className="text-xs text-stone-900 font-medium">Biodegradable natural fibers & non-toxic dyes.</p>
+                  <p className="text-xs text-stone-700 font-medium">Biodegradable natural fibers & plastic-free materials.</p>
                 </div>
               </div>
               <div className="hover-lift-sm flex items-start gap-3 rounded-2xl bg-white p-4 shadow-sm border border-stone-200/60">
                 <ShieldCheck className="h-5 w-5 text-emerald-600 shrink-0 mt-0.5" />
                 <div>
-                  <h4 className="font-extrabold text-black text-sm">Global Compliance</h4>
-                  <p className="text-xs text-stone-900 font-medium">BSCI, Sedex & OEKO-TEX Standard 100.</p>
+                  <h4 className="font-extrabold text-black text-sm">International Compliance</h4>
+                  <p className="text-xs text-stone-700 font-medium">BSCI, ISO 14001, ISO 9001:2015 & OEKO-TEX.</p>
                 </div>
               </div>
             </div>
@@ -85,108 +109,190 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
 
           <div className="reveal-right relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white img-zoom-container">
             <img
-              src="/about/about_artisans_workforce.jpg"
-              alt="Golden Fiber Crafts Rural Artisan Workforce"
-              className="w-full h-[400px] object-cover transition-transform duration-700"
+              src="/about/authentic_artisans_circle.png"
+              alt="Golden Fiber Crafts Rural Artisan Workforce Handweaving"
+              className="w-full h-[450px] object-cover transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/20 to-transparent flex items-end p-8 text-white">
+            <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/20 to-transparent flex items-end p-8 text-white">
               <div>
-                <p className="text-xs uppercase tracking-widest text-emerald-400 font-bold">Empowerment & Craftsmanship</p>
-                <h3 className="font-serif text-xl sm:text-2xl font-bold">Over 1,200 Artisans & Skilled Workforce</h3>
+                <p className="text-xs uppercase tracking-widest text-emerald-400 font-bold">Empowerment & Heritage Craft</p>
+                <h3 className="font-serif text-xl sm:text-2xl font-bold">Over 15,000 Skilled Artisans Workforce</h3>
+                <p className="text-xs text-stone-300 mt-1 font-light">
+                  Decentralized rural artisan clusters across Bangladesh creating authentic woven handicrafts.
+                </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* 3. 4 Highlight Value Cards (Customer Satisfaction, In Time Delivery, Competitive Price, Quality Product) */}
-        <div className="reveal-up space-y-6">
-          <div className="text-center">
-            <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-black">
-              Our Core Commitments
-            </h3>
-            <div className="mx-auto mt-2 h-1 w-16 rounded-full bg-emerald-600" />
+        {/* 3. Our Vision, Our Mission & 6 Core Values (Page 4 of Profile) */}
+        <div className="space-y-8 bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-stone-200/80 reveal-up">
+          <div className="text-center max-w-3xl mx-auto space-y-2">
+            <span className="text-xs font-black uppercase tracking-widest text-emerald-900">OUR GUIDING PRINCIPLES</span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-black">
+              Vision, Mission & Core Values
+            </h2>
+            <div className="mx-auto h-1 w-16 rounded-full bg-emerald-600 mt-2" />
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
-            
-            {/* Card 1: Customer Satisfaction */}
-            <div className="rounded-2xl bg-white overflow-hidden shadow-lg border border-stone-200/80 hover-lift-sm flex flex-col transition-all">
-              <div className="bg-[#881337] p-6 text-white text-center relative">
-                <div className="mx-auto -mt-10 mb-3 h-14 w-14 rounded-full bg-[#881337] border-4 border-white flex items-center justify-center shadow-md">
-                  <MessageSquare className="h-6 w-6 text-white" />
+          <div className="grid md:grid-cols-2 gap-8 pt-4">
+            {/* Vision Card */}
+            <div className="rounded-2xl bg-gradient-to-br from-emerald-900 via-emerald-950 to-stone-900 p-7 text-white shadow-lg space-y-4 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="h-12 w-12 rounded-2xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center border border-emerald-400/30 shadow-xs">
+                  <Eye className="h-6 w-6" />
                 </div>
-                <h4 className="font-bold text-base uppercase tracking-wider">
-                  Customer Satisfaction
-                </h4>
-              </div>
-              <div className="p-6 flex-1 flex items-center justify-center bg-white text-center">
-                <p className="text-sm text-black leading-relaxed font-medium">
-                  Golden Fiber Crafts Ltd. promises to deliver premium natural handicrafts and exceed customer satisfaction.
+                <h3 className="font-serif text-2xl font-bold text-amber-300">Our Vision</h3>
+                <p className="text-stone-200 text-sm sm:text-base leading-relaxed font-light">
+                  "To become a globally trusted leader in sustainable jute, natural fiber, and handicraft products, transforming Bangladesh's rich natural resources and traditional craftsmanship into innovative, high-quality solutions for a greener world."
                 </p>
+              </div>
+              <div className="pt-4 border-t border-emerald-800/60 flex items-center gap-2 text-xs text-emerald-300 font-semibold">
+                <Sparkles className="h-4 w-4" />
+                <span>Transforming Natural Resources into Global Quality</span>
               </div>
             </div>
 
-            {/* Card 2: In Time Delivery */}
-            <div className="rounded-2xl bg-white overflow-hidden shadow-lg border border-stone-200/80 hover-lift-sm flex flex-col transition-all">
-              <div className="bg-[#ea580c] p-6 text-white text-center relative">
-                <div className="mx-auto -mt-10 mb-3 h-14 w-14 rounded-full bg-[#ea580c] border-4 border-white flex items-center justify-center shadow-md">
-                  <Clock className="h-6 w-6 text-white" />
-                </div>
-                <h4 className="font-bold text-base uppercase tracking-wider">
-                  In Time Delivery
-                </h4>
+            {/* Mission Card */}
+            <div className="rounded-2xl bg-stone-50 p-7 border border-stone-200/80 shadow-md space-y-4">
+              <div className="h-12 w-12 rounded-2xl bg-amber-100 text-amber-900 flex items-center justify-center shadow-xs">
+                <Target className="h-6 w-6" />
               </div>
-              <div className="p-6 flex-1 flex items-center justify-center bg-white text-center">
-                <p className="text-sm text-black leading-relaxed font-medium">
-                  Our factory is like a friendly environment. Proper machine, worker, air and freshness — all are so good.
-                </p>
-              </div>
+              <h3 className="font-serif text-2xl font-bold text-stone-900">Our Mission</h3>
+              <ul className="space-y-2.5 text-xs sm:text-sm text-stone-800 font-medium">
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span>Promote sustainable living through eco-friendly products</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span>Manufacture premium-quality jute and handicraft items</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span>Support local artisans and skilled craftsmen</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span>Build long-term partnerships with customers worldwide</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span>Contribute to reducing plastic pollution through natural fiber alternatives</span>
+                </li>
+              </ul>
             </div>
+          </div>
 
-            {/* Card 3: Competitive Price */}
-            <div className="rounded-2xl bg-white overflow-hidden shadow-lg border border-stone-200/80 hover-lift-sm flex flex-col transition-all">
-              <div className="bg-[#d97706] p-6 text-white text-center relative">
-                <div className="mx-auto -mt-10 mb-3 h-14 w-14 rounded-full bg-[#d97706] border-4 border-white flex items-center justify-center shadow-md">
-                  <Mail className="h-6 w-6 text-white" />
+          {/* 6 Core Values Grid */}
+          <div className="pt-6 border-t border-stone-100 space-y-4">
+            <h3 className="font-serif text-xl font-bold text-stone-900 text-center">Our 6 Core Values</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+              {[
+                { title: 'Sustainability', desc: '100% renewable & plastic-free fibers', color: 'bg-emerald-50 text-emerald-800 border-emerald-200' },
+                { title: 'Quality Excellence', desc: 'Zero defect export precision', color: 'bg-amber-50 text-amber-900 border-amber-200' },
+                { title: 'Safety Commitment', desc: 'Safe & dignified workspaces', color: 'bg-teal-50 text-teal-800 border-teal-200' },
+                { title: 'Innovation', desc: 'Contemporary designs for global buyers', color: 'bg-blue-50 text-blue-800 border-blue-200' },
+                { title: 'Customer Focus', desc: 'Flexible MOQ & timely delivery', color: 'bg-indigo-50 text-indigo-800 border-indigo-200' },
+                { title: 'Social Responsibility', desc: 'Artisan welfare & fair trade wages', color: 'bg-purple-50 text-purple-800 border-purple-200' },
+              ].map((val, idx) => (
+                <div key={idx} className={`rounded-xl p-4 border ${val.color} text-center space-y-1 hover-lift-sm transition-all`}>
+                  <h4 className="font-bold text-xs sm:text-sm">{val.title}</h4>
+                  <p className="text-[11px] opacity-85 leading-snug">{val.desc}</p>
                 </div>
-                <h4 className="font-bold text-base uppercase tracking-wider">
-                  Competitive Price
-                </h4>
-              </div>
-              <div className="p-6 flex-1 flex items-center justify-center bg-white text-center">
-                <p className="text-sm text-black leading-relaxed font-medium">
-                  After successfully delivering the product with good quality, we hope you will contact us again. That's why quality is our main pull.
-                </p>
-              </div>
+              ))}
             </div>
-
-            {/* Card 4: Quality Product */}
-            <div className="rounded-2xl bg-white overflow-hidden shadow-lg border border-stone-200/80 hover-lift-sm flex flex-col transition-all">
-              <div className="bg-[#dc2626] p-6 text-white text-center relative">
-                <div className="mx-auto -mt-10 mb-3 h-14 w-14 rounded-full bg-[#dc2626] border-4 border-white flex items-center justify-center shadow-md">
-                  <Star className="h-6 w-6 text-white" />
-                </div>
-                <h4 className="font-bold text-base uppercase tracking-wider">
-                  Quality Product
-                </h4>
-              </div>
-              <div className="p-6 flex-1 flex items-center justify-center bg-white text-center">
-                <p className="text-sm text-black leading-relaxed font-medium">
-                  We offer top quality garments services. Our team has expert knowledge and skills required to ensure professional work for your next order.
-                </p>
-              </div>
-            </div>
-
           </div>
         </div>
 
-        {/* 4. Technical Information Section */}
+        {/* 4. Leadership Messages: Both MD & Senior Director (Page 3 of Corporate Profile) */}
+        <div className="space-y-8 reveal-up">
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            <span className="text-xs font-black uppercase tracking-widest text-emerald-900">EXECUTIVE LEADERSHIP</span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-black">
+              Messages From Our Leadership
+            </h2>
+            <div className="mx-auto h-1 w-16 rounded-full bg-emerald-600 mt-2" />
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Managing Director Card */}
+            <div className="rounded-3xl bg-gradient-to-br from-emerald-950 via-stone-900 to-stone-950 p-6 sm:p-8 text-white shadow-xl border border-emerald-700/40 relative overflow-hidden flex flex-col justify-between">
+              <div className="space-y-4 relative z-10">
+                <div className="flex items-center gap-4">
+                  <img
+                    src="/about/md_safiqul_islam.png"
+                    alt={KEY_LEADERSHIP.managingDirector.name}
+                    className="h-20 w-20 sm:h-24 sm:w-24 rounded-2xl object-cover border-2 border-amber-400/80 shadow-lg shrink-0"
+                  />
+                  <div>
+                    <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider text-amber-300 bg-amber-500/20 border border-amber-400/30 mb-1">
+                      {KEY_LEADERSHIP.managingDirector.title}
+                    </span>
+                    <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">
+                      {KEY_LEADERSHIP.managingDirector.name}
+                    </h3>
+                    <p className="text-xs text-stone-300">Message From Managing Director</p>
+                    <a href="tel:+8801916183583" className="text-xs text-emerald-400 hover:underline inline-flex items-center gap-1 mt-1 font-semibold">
+                      <Phone className="h-3 w-3" /> +8801916-183583
+                    </a>
+                  </div>
+                </div>
+
+                <blockquote className="text-stone-200 text-xs sm:text-sm leading-relaxed font-light italic border-l-2 border-amber-400 pl-4 py-1">
+                  "{KEY_LEADERSHIP.managingDirector.message}"
+                </blockquote>
+              </div>
+              <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] text-emerald-300">
+                <span>Golden Fiber Crafts Ltd.</span>
+                <span className="font-serif italic font-bold text-amber-300">Sustainable Excellence</span>
+              </div>
+            </div>
+
+            {/* Senior Director Card */}
+            <div className="rounded-3xl bg-gradient-to-br from-stone-900 via-emerald-950 to-stone-950 p-6 sm:p-8 text-white shadow-xl border border-emerald-700/40 relative overflow-hidden flex flex-col justify-between">
+              <div className="space-y-4 relative z-10">
+                <div className="flex items-center gap-4">
+                  <img
+                    src="/about/md_nazrul_islam_uzzal.png"
+                    alt={KEY_LEADERSHIP.seniorDirector.name}
+                    className="h-20 w-20 sm:h-24 sm:w-24 rounded-2xl object-cover border-2 border-emerald-400/80 shadow-lg shrink-0"
+                  />
+                  <div>
+                    <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider text-emerald-300 bg-emerald-500/20 border border-emerald-400/30 mb-1">
+                      {KEY_LEADERSHIP.seniorDirector.title}
+                    </span>
+                    <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">
+                      {KEY_LEADERSHIP.seniorDirector.name}
+                    </h3>
+                    <p className="text-xs text-stone-300">Message From Senior Director</p>
+                    <a href="tel:+8801721994082" className="text-xs text-emerald-400 hover:underline inline-flex items-center gap-1 mt-1 font-semibold">
+                      <Phone className="h-3 w-3" /> +8801721-994082
+                    </a>
+                  </div>
+                </div>
+
+                <blockquote className="text-stone-200 text-xs sm:text-sm leading-relaxed font-light italic border-l-2 border-emerald-400 pl-4 py-1">
+                  "{KEY_LEADERSHIP.seniorDirector.message}"
+                </blockquote>
+              </div>
+              <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] text-emerald-300">
+                <span>Golden Fiber Crafts Ltd.</span>
+                <span className="font-serif italic font-bold text-amber-300">Empowering Artisans</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 5. Technical Information Section (Page 12 of Profile) */}
         <div className="reveal-up rounded-3xl bg-white p-8 sm:p-12 shadow-xl border border-stone-200/80">
-          <div className="text-center max-w-2xl mx-auto mb-8">
+          <div className="text-center max-w-2xl mx-auto mb-8 space-y-2">
+            <span className="text-xs font-black uppercase tracking-widest text-emerald-900">OPERATIONAL CAPACITIES</span>
             <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-black uppercase tracking-wide">
               Technical Information
             </h3>
-            <div className="mx-auto mt-2 h-1 w-20 rounded-full bg-black" />
+            <p className="text-xs text-stone-700 font-medium">Official factory metrics and export capacity specifications.</p>
+            <div className="mx-auto h-1 w-20 rounded-full bg-black" />
           </div>
 
           <div className="max-w-4xl mx-auto overflow-hidden rounded-2xl border border-stone-200">
@@ -197,7 +303,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
                     Office Staff
                   </td>
                   <td className="px-6 py-4 text-sm text-black font-bold">
-                    : <span className="font-extrabold text-black">50</span>
+                    : <span className="font-extrabold text-black">{TECHNICAL_INFORMATION.officeStaff}</span>
                   </td>
                 </tr>
                 <tr className="hover:bg-stone-50 transition-colors bg-stone-50/40">
@@ -205,7 +311,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
                     Artisans
                   </td>
                   <td className="px-6 py-4 text-sm text-black font-bold">
-                    : <span className="font-extrabold text-black">Approximate 30,000 (Directly and Indirectly)</span>
+                    : <span className="font-extrabold text-black">{TECHNICAL_INFORMATION.artisans}</span>
                   </td>
                 </tr>
                 <tr className="hover:bg-stone-50 transition-colors">
@@ -213,7 +319,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
                     Production Capacity / Month
                   </td>
                   <td className="px-6 py-4 text-sm text-black font-bold">
-                    : <span className="font-extrabold text-black">50 × 40’ HQ Containers</span>
+                    : <span className="font-extrabold text-black">{TECHNICAL_INFORMATION.productionCapacityMonth}</span>
                   </td>
                 </tr>
                 <tr className="hover:bg-stone-50 transition-colors bg-stone-50/40">
@@ -221,7 +327,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
                     Production Lead Time
                   </td>
                   <td className="px-6 py-4 text-sm text-black font-bold">
-                    : <span className="font-extrabold text-black">70-90 days</span>
+                    : <span className="font-extrabold text-black">{TECHNICAL_INFORMATION.productionLeadTime}</span>
                   </td>
                 </tr>
                 <tr className="hover:bg-stone-50 transition-colors">
@@ -229,7 +335,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
                     Payment Term
                   </td>
                   <td className="px-6 py-4 text-sm text-black font-bold">
-                    : <span className="font-extrabold text-black">L/C at Sight or TT (30 % Deposit and 70% against copy of shipping documents)</span>
+                    : <span className="font-extrabold text-black">{TECHNICAL_INFORMATION.paymentTerms}</span>
                   </td>
                 </tr>
                 <tr className="hover:bg-stone-50 transition-colors bg-stone-50/40">
@@ -237,7 +343,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
                     Annual Turnover
                   </td>
                   <td className="px-6 py-4 text-sm text-black font-bold">
-                    : <span className="font-extrabold text-black">5 million USD</span>
+                    : <span className="font-extrabold text-black">{TECHNICAL_INFORMATION.annualTurnover}</span>
                   </td>
                 </tr>
               </tbody>
@@ -245,78 +351,74 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
           </div>
         </div>
 
-        {/* 5. "Why Choose Us" Interactive Diagram & Features Badges */}
+        {/* 6. "Why Choose Us" Hub (Page 5 of Corporate Profile) */}
         <div className="reveal-up">
           <WhyChooseUsHub />
         </div>
 
-        {/* 6. Managing Director Message */}
-        <div className="reveal-scale rounded-3xl bg-gradient-to-br from-stone-50 via-white to-emerald-50/40 p-6 sm:p-10 md:p-12 border border-emerald-900/15 shadow-xl relative overflow-hidden">
-          {/* Subtle watermark background icon */}
-          <div className="absolute -right-6 -bottom-6 text-emerald-900/5 pointer-events-none">
-            <Quote className="h-48 w-48 rotate-12" />
+        {/* 7. Future Goals & Expansion Plan (Page 20 of Corporate Profile) */}
+        <div className="reveal-up rounded-3xl bg-gradient-to-br from-stone-900 via-emerald-950 to-stone-900 p-8 sm:p-12 text-white shadow-2xl border border-emerald-500/30 space-y-8">
+          <div className="text-center max-w-3xl mx-auto space-y-2">
+            <span className="text-xs font-bold uppercase tracking-widest text-emerald-400 flex items-center justify-center gap-1.5">
+              <TrendingUp className="h-4 w-4" />
+              LONG-TERM VISION
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
+              Future Goals & Expansion Plan
+            </h2>
+            <p className="text-stone-300 text-xs sm:text-sm font-light leading-relaxed">
+              At Golden Fiber Crafts Ltd., we are focused on sustainable growth, global expansion, and continuous innovation. Our long-term vision is to strengthen our position as a trusted global manufacturer and exporter of eco-friendly handicrafts and natural-fiber products.
+            </p>
           </div>
 
-          <div className="relative z-10 max-w-4xl mx-auto flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
-            {/* MD Photo Avatar */}
-            <div className="relative shrink-0">
-              <div className="h-32 w-32 sm:h-40 sm:w-40 rounded-2xl overflow-hidden shadow-xl border-2 border-white ring-4 ring-emerald-600/20 bg-stone-100">
-                <img
-                  src="/about/managing_director.png"
-                  alt="Managing Director - Golden Fiber Crafts Ltd."
-                  className="h-full w-full object-cover object-top"
-                />
-              </div>
-              <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-emerald-700 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-0.5 rounded-full shadow-md whitespace-nowrap">
-                Managing Director
-              </div>
-            </div>
-
-            {/* Content & Quote */}
-            <div className="space-y-4 text-center sm:text-left flex-1">
-              <div>
-                <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100/70 border border-emerald-200 mb-1.5">
-                  <ShieldCheck className="h-3 w-3" />
-                  Leadership & Vision
-                </span>
-                <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-black leading-snug">
-                  Managing Director's Message
-                </h3>
-                <p className="text-xs text-stone-800 font-bold">Golden Fiber Crafts Ltd.</p>
-              </div>
-
-              <blockquote className="italic text-black text-sm sm:text-base md:text-lg leading-relaxed font-serif font-medium border-l-0 sm:border-l-4 sm:border-emerald-600 sm:pl-5 py-1">
-                "Our commitment is rooted in two core principles: uncompromised product quality and total environmental responsibility. As global fashion and home decor markets shift towards sustainable supply chains, Golden Fiber Crafts Ltd. provides world-class retail brands with certified eco-friendly solutions produced with dignity, passion, and precision."
-              </blockquote>
-            </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4 pt-4">
+            {[
+              { title: 'Global Expansion', icon: Globe2 },
+              { title: 'Capacity Growth', icon: Boxes },
+              { title: 'Product Diversification', icon: Layers },
+              { title: 'Faster Delivery', icon: Truck },
+              { title: 'Cost Optimization', icon: DollarSign },
+              { title: 'Sustainable Practices', icon: Leaf },
+              { title: 'Strategic Partnerships', icon: HeartHandshake },
+            ].map((goal, idx) => {
+              const IconComp = goal.icon;
+              return (
+                <div key={idx} className="bg-white/10 backdrop-blur-xs rounded-2xl p-4 text-center space-y-2 border border-white/10 hover:bg-white/15 transition-all flex flex-col items-center justify-center">
+                  <div className="h-10 w-10 rounded-full bg-emerald-500/30 text-emerald-300 flex items-center justify-center">
+                    <IconComp className="h-5 w-5" />
+                  </div>
+                  <h4 className="font-bold text-xs text-white leading-tight">{goal.title}</h4>
+                </div>
+              );
+            })}
           </div>
         </div>
 
-        {/* 7. Core Stats with Animated Counters */}
+        {/* 8. Core Stats with Animated Counters */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
           <div className="card-slide-far-left stagger-2 hover-lift-sm rounded-2xl bg-white p-6 shadow-md border border-stone-100">
             <p className="font-serif text-3xl sm:text-4xl font-extrabold text-emerald-700">
-              <AnimatedCounter target={15} suffix="+" />
+              <AnimatedCounter target={15} suffix="K+" />
             </p>
-            <p className="mt-1 text-xs text-black font-bold uppercase">Years Experience</p>
+            <p className="mt-1 text-xs text-black font-bold uppercase">Skilled Artisans</p>
           </div>
           <div className="card-slide-left stagger-1 hover-lift-sm rounded-2xl bg-white p-6 shadow-md border border-stone-100">
             <p className="font-serif text-3xl sm:text-4xl font-extrabold text-emerald-700">
-              <AnimatedCounter target={35} suffix="+" />
+              <AnimatedCounter target={50} suffix=" HQ" />
             </p>
-            <p className="mt-1 text-xs text-black font-bold uppercase">Export Destinations</p>
+            <p className="mt-1 text-xs text-black font-bold uppercase">Monthly Containers</p>
           </div>
           <div className="card-slide-right stagger-1 hover-lift-sm rounded-2xl bg-white p-6 shadow-md border border-stone-100">
             <p className="font-serif text-3xl sm:text-4xl font-extrabold text-emerald-700">
-              <AnimatedCounter target={5} suffix="M+" />
+              <AnimatedCounter target={5} suffix="M USD" />
             </p>
-            <p className="mt-1 text-xs text-black font-bold uppercase">Annual Unit Capacity</p>
+            <p className="mt-1 text-xs text-black font-bold uppercase">Annual Turnover</p>
           </div>
           <div className="card-slide-far-right stagger-2 hover-lift-sm rounded-2xl bg-white p-6 shadow-md border border-stone-100">
             <p className="font-serif text-3xl sm:text-4xl font-extrabold text-emerald-700">
               <AnimatedCounter target={100} suffix="%" />
             </p>
-            <p className="mt-1 text-xs text-black font-bold uppercase">Quality Guarantee</p>
+            <p className="mt-1 text-xs text-black font-bold uppercase">Eco & Compliant</p>
           </div>
         </div>
 
@@ -324,3 +426,4 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
     </div>
   );
 };
+

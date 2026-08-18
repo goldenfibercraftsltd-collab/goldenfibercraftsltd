@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, MessageSquare, Clock, Globe, CheckCircle2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageSquare, Clock, Globe, CheckCircle2, ShieldCheck } from 'lucide-react';
 
 interface ContactPageProps {
   onOpenQuoteModal?: () => void;
@@ -45,51 +45,128 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuoteModal }) =>
           {/* Contact Cards with reveal-left */}
           <div className="lg:col-span-5 space-y-6 reveal-left">
             
-            <div className="rounded-3xl bg-white p-8 shadow-xl border border-stone-200/80 space-y-6">
-              <h2 className="font-serif text-2xl font-bold text-stone-900">Head Office & Factory</h2>
+            {/* Executive Leadership Direct Contacts */}
+            <div className="rounded-3xl bg-gradient-to-br from-stone-900 via-emerald-950 to-stone-900 p-6 sm:p-7 text-white shadow-xl border border-emerald-500/30 space-y-5">
+              <div className="flex items-center gap-2 text-amber-400 font-bold text-xs uppercase tracking-wider">
+                <ShieldCheck className="h-4 w-4" />
+                <span>Executive Management Contacts</span>
+              </div>
+              
+              <div className="space-y-4">
+                {/* Managing Director */}
+                <div className="flex items-start gap-3.5 bg-white/10 backdrop-blur-xs p-3.5 rounded-2xl border border-white/10 hover:bg-white/15 transition-all">
+                  <img
+                    src="/about/md_safiqul_islam.png"
+                    alt="Md. Safiqul Islam - CEO & Managing Director"
+                    className="h-12 w-12 rounded-xl object-cover border border-amber-400/50 shrink-0"
+                  />
+                  <div className="flex-1 min-w-0">
+                    <h4 className="text-sm font-bold text-white leading-tight">Md. Safiqul Islam</h4>
+                    <p className="text-[11px] text-amber-300 font-medium">CEO & Managing Director</p>
+                    <div className="mt-1.5 flex flex-wrap gap-3 text-xs">
+                      <a href="tel:+8801916183583" className="text-emerald-300 hover:text-white flex items-center gap-1 font-semibold">
+                        <Phone className="h-3.5 w-3.5" /> +8801916-183583
+                      </a>
+                      <a href="https://wa.me/8801916183583" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline">
+                        WhatsApp
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Senior Director */}
+                <div className="flex items-start gap-3.5 bg-white/10 backdrop-blur-xs p-3.5 rounded-2xl border border-white/10 hover:bg-white/15 transition-all">
+                  <img
+                    src="/about/md_nazrul_islam_uzzal.png"
+                    alt="Md. Nazrul Islam Uzzal - Senior Director & GM"
+                    className="h-12 w-12 rounded-xl object-cover border border-amber-400/50 shrink-0"
+                  />
+                  <div className="flex-1 min-w-0">
+                    <h4 className="text-sm font-bold text-white leading-tight">Md. Nazrul Islam Uzzal</h4>
+                    <p className="text-[11px] text-amber-300 font-medium">Senior Director & General Manager</p>
+                    <div className="mt-1.5 flex flex-wrap gap-3 text-xs">
+                      <a href="tel:+8801721994082" className="text-emerald-300 hover:text-white flex items-center gap-1 font-semibold">
+                        <Phone className="h-3.5 w-3.5" /> +8801721-994082
+                      </a>
+                      <a href="https://wa.me/8801721994082" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline">
+                        WhatsApp
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Head Office & Factory Units */}
+            <div className="rounded-3xl bg-white p-7 shadow-xl border border-stone-200/80 space-y-5">
+              <h2 className="font-serif text-2xl font-bold text-stone-900">Head Office & Factories</h2>
               
               <div className="space-y-4 text-sm text-stone-950">
+                {/* Corporate Address */}
                 <div className="flex items-start gap-3 hover-lift-sm p-1 rounded-xl transition-all">
                   <div className="h-10 w-10 rounded-xl bg-emerald-100 text-emerald-950 flex items-center justify-center shrink-0 shadow-xs">
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
-                    <h4 className="font-extrabold text-black">Corporate Address</h4>
-                    <p className="text-xs text-stone-900 font-semibold">Dhaka Industrial Zone, Bangladesh</p>
+                    <h4 className="font-extrabold text-black text-xs uppercase tracking-wider">Corporate Office</h4>
+                    <p className="text-xs text-stone-800 font-medium leading-relaxed">
+                      House# 78, Road# 16, Sector# 11, Uttara, Dhaka, Bangladesh
+                    </p>
                   </div>
                 </div>
 
+                {/* Factory Unit 1 */}
                 <div className="flex items-start gap-3 hover-lift-sm p-1 rounded-xl transition-all">
                   <div className="h-10 w-10 rounded-xl bg-amber-100 text-amber-950 flex items-center justify-center shrink-0 shadow-xs">
+                    <MapPin className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-extrabold text-black text-xs uppercase tracking-wider">Factory Unit 1</h4>
+                    <p className="text-xs text-stone-800 font-medium leading-relaxed">
+                      Paler para, Akter market (Beside UTAH Garments), Salna, Gazipur, Bangladesh
+                    </p>
+                  </div>
+                </div>
+
+                {/* Factory Unit 2 */}
+                <div className="flex items-start gap-3 hover-lift-sm p-1 rounded-xl transition-all">
+                  <div className="h-10 w-10 rounded-xl bg-teal-100 text-teal-950 flex items-center justify-center shrink-0 shadow-xs">
+                    <MapPin className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-extrabold text-black text-xs uppercase tracking-wider">Factory Unit 2</h4>
+                    <p className="text-xs text-stone-800 font-medium leading-relaxed">
+                      Kacharipara, Milonganj Bazar, Nilganj, Kishoreganj, Bangladesh
+                    </p>
+                  </div>
+                </div>
+
+                {/* Email Address */}
+                <div className="flex items-start gap-3 hover-lift-sm p-1 rounded-xl transition-all">
+                  <div className="h-10 w-10 rounded-xl bg-blue-100 text-blue-950 flex items-center justify-center shrink-0 shadow-xs">
                     <Mail className="h-5 w-5" />
                   </div>
                   <div>
-                    <h4 className="font-extrabold text-black">Email Address</h4>
-                    <a href="mailto:goldenfibercraftsltd@gmail.com" className="text-xs text-emerald-900 font-extrabold hover:underline">
-                      goldenfibercraftsltd@gmail.com
-                    </a>
+                    <h4 className="font-extrabold text-black text-xs uppercase tracking-wider">Official Email</h4>
+                    <div className="space-y-0.5">
+                      <a href="mailto:info@goldenfibercrafts.com" className="block text-xs text-emerald-900 font-extrabold hover:underline">
+                        info@goldenfibercrafts.com
+                      </a>
+                      <a href="mailto:goldenfibercraftsltd@gmail.com" className="block text-[11px] text-stone-600 hover:underline">
+                        goldenfibercraftsltd@gmail.com
+                      </a>
+                    </div>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 hover-lift-sm p-1 rounded-xl transition-all">
-                  <div className="h-10 w-10 rounded-xl bg-green-100 text-green-950 flex items-center justify-center shrink-0 shadow-xs">
-                    <Phone className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h4 className="font-extrabold text-black">WhatsApp / Call Direct</h4>
-                    <a href="https://wa.me/8801617778488?text=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%20I%20would%20like%20to%20know%20more%20about%20your%20handicraft%20products%20and%20export%20details." target="_blank" rel="noreferrer" className="text-xs text-emerald-900 font-extrabold hover:underline">
-                      +880-1617-778488
-                    </a>
-                  </div>
-                </div>
-
+                {/* Working Hours */}
                 <div className="flex items-start gap-3 hover-lift-sm p-1 rounded-xl transition-all">
                   <div className="h-10 w-10 rounded-xl bg-purple-100 text-purple-950 flex items-center justify-center shrink-0 shadow-xs">
                     <Clock className="h-5 w-5" />
                   </div>
                   <div>
-                    <h4 className="font-extrabold text-black">Working Hours</h4>
-                    <p className="text-xs text-stone-900 font-semibold">Saturday – Thursday: 9:00 AM – 7:00 PM (GMT+6)</p>
+                    <h4 className="font-extrabold text-black text-xs uppercase tracking-wider">Working Hours</h4>
+                    <p className="text-xs text-stone-800 font-medium">Saturday – Thursday: 9:00 AM – 7:00 PM (GMT+6)</p>
                   </div>
                 </div>
               </div>
@@ -97,7 +174,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuoteModal }) =>
               <div className="pt-4 border-t border-stone-100">
                 <button
                   onClick={onOpenQuoteModal}
-                  className="w-full rounded-2xl bg-emerald-700 py-3.5 text-xs font-bold text-white shadow-lg hover:bg-emerald-600 transition-all btn-interactive"
+                  className="w-full rounded-2xl bg-emerald-700 py-3.5 text-xs font-bold text-white shadow-lg hover:bg-emerald-600 transition-all btn-interactive cursor-pointer"
                 >
                   Open Fast Quote Request Modal
                 </button>
@@ -107,10 +184,10 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuoteModal }) =>
             <div className="rounded-3xl bg-emerald-950 p-6 text-white space-y-3 shadow-xl">
               <div className="flex items-center gap-2 text-emerald-400 font-bold text-xs uppercase tracking-wider">
                 <Globe className="h-4 w-4" />
-                Worldwide Export Ready
+                Worldwide Export Terms
               </div>
               <p className="text-xs text-stone-300 leading-relaxed font-light">
-                We accept FOB, CIF, DDP shipping terms with L/C, T/T payment terms for global buyers.
+                We accept FOB Chittagong Port, CIF, CFR, and DDP terms with LC at Sight or TT (30% Advance, 70% against Shipping docs).
               </p>
             </div>
 
