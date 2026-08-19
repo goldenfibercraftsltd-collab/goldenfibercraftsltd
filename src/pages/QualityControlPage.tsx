@@ -4,26 +4,17 @@ import {
   ShieldCheck,
   CheckCircle2,
   Award,
-  Clock,
-  FileCheck,
-  Sparkles,
-  Search,
   Maximize2,
   X,
   ArrowRight,
   Package,
-  Layers,
   Check,
-  AlertCircle,
-  ThermometerSnowflake,
-  Sun,
   Scale,
-  BadgeCheck,
   Leaf,
   Users,
-  HeartHandshake
+  HeartHandshake,
+  Sparkles
 } from 'lucide-react';
-import { ScrollTypingText } from '../components/ScrollTypingText';
 
 interface QualitySection {
   id: string;
@@ -130,7 +121,7 @@ export const QualityControlPage: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <div className="bg-[#fcfbf9] text-stone-800 font-sans min-h-screen animate-fadeIn">
+    <div className="bg-[#fcfbf9] text-stone-900 font-sans min-h-screen pb-24 animate-fadeIn space-y-12 sm:space-y-16">
       
       {/* Lightbox / Zoom Modal */}
       {selectedImage && (
@@ -154,52 +145,93 @@ export const QualityControlPage: React.FC = () => {
         </div>
       )}
 
-      {/* ---------------------------------------------------- */}
-      {/* 1. Clean Breadcrumb */}
-      {/* ---------------------------------------------------- */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
-        <nav className="reveal-up flex items-center gap-2 text-xs font-bold text-stone-800">
-          <Link to="/" className="hover:text-emerald-800 transition-colors">Home</Link>
-          <span>/</span>
-          <span className="text-black font-extrabold">Quality Assurance</span>
-        </nav>
+      {/* 1. Hero Page Banner */}
+      <div className="relative overflow-hidden bg-gradient-to-r from-[#064e3b] via-[#065f46] to-[#047857] text-white">
+        <div 
+          className="absolute inset-0 opacity-[0.06] pointer-events-none" 
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E")`,
+          }} 
+        />
+        
+        <div className="relative mx-auto max-w-7xl px-4 py-12 sm:py-16 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+          <div className="max-w-3xl space-y-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm text-xs font-black uppercase tracking-widest text-emerald-200 border border-white/20">
+              <ShieldCheck className="h-3.5 w-3.5 text-emerald-300" />
+              Quality Assurance & Compliance
+            </div>
+            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
+              International Export Quality Control
+            </h1>
+            <p className="text-emerald-100/90 text-sm sm:text-base leading-relaxed font-medium">
+              From raw fiber selection to final container loading, our stringent 4-stage inspection protocol ensures 100% defect-free, mold-resistant, compliant natural handicraft export.
+            </p>
+            <div className="flex items-center gap-2 pt-1">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
+                <Sparkles className="h-3 w-3 text-amber-300" /> AQL 2.5 Standard
+              </span>
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
+                Moisture: 8% - 12%
+              </span>
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
+                100% Fumigated
+              </span>
+            </div>
+          </div>
+
+          <div className="hidden md:flex items-center justify-center shrink-0">
+            <div className="relative group">
+              <div className="absolute -inset-4 rounded-full bg-emerald-400/20 blur-xl group-hover:bg-emerald-400/35 transition-all duration-500"></div>
+              <div className="relative h-28 w-28 sm:h-32 sm:w-32 rounded-3xl bg-white/10 backdrop-blur-md border border-white/25 p-3.5 shadow-2xl flex items-center justify-center hover:scale-105 transition-transform duration-500">
+                <img
+                  src="/logo-icon.png"
+                  alt="Golden Fiber Crafts Ltd."
+                  className="h-full w-full object-contain filter drop-shadow-md brightness-110"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Large Decorative Watermark in Background */}
+        <div className="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
+          <img src="/logo-icon.png" alt="Watermark" className="h-64 w-64 lg:h-80 lg:w-80 object-contain filter invert" />
+        </div>
       </div>
 
-      {/* ---------------------------------------------------- */}
       {/* 2. Four Alternating Quality Pillar Sections */}
-      {/* ---------------------------------------------------- */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24 space-y-24 sm:space-y-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-24">
         {QUALITY_SECTIONS.map((section, idx) => {
           const isEven = idx % 2 === 1;
 
           return (
             <section key={section.id} id={section.id} className="scroll-mt-24">
               <div
-                className={`flex flex-col gap-10 lg:gap-16 items-start ${
+                className={`flex flex-col gap-10 lg:gap-14 items-start ${
                   isEven ? 'lg:flex-row-reverse' : 'lg:flex-row'
                 }`}
               >
                 {/* Visual Image Column */}
-                <div className={`w-full lg:w-1/2 ${isEven ? 'reveal-right' : 'reveal-left'}`}>
-                  <div className="relative group rounded-3xl overflow-hidden bg-[#f0e8dc] border border-[#e4d6c4] shadow-xl hover:shadow-2xl transition-all duration-500 img-zoom-container">
+                <div className="w-full lg:w-1/2">
+                  <div className="relative group rounded-3xl overflow-hidden bg-stone-100 border border-stone-200 shadow-md hover:shadow-xl transition-all duration-500">
                     
-                    <div className="absolute top-4 left-4 z-20 bg-stone-950/80 backdrop-blur-md text-amber-300 font-mono text-xs font-extrabold px-3.5 py-1.5 rounded-xl border border-white/20 shadow-md">
+                    <div className="absolute top-4 left-4 z-20 bg-stone-950/85 backdrop-blur-md text-amber-300 font-mono text-xs font-black px-3.5 py-1.5 rounded-xl border border-white/20 shadow-md">
                       STAGE {section.number} • {section.badge}
                     </div>
 
-                    <div className="relative h-[340px] sm:h-[420px] lg:h-[460px] w-full overflow-hidden">
+                    <div className="relative h-[340px] sm:h-[400px] lg:h-[440px] w-full overflow-hidden">
                       <img
                         src={section.image}
                         alt={section.imageAlt}
                         loading="lazy"
                         className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950/50 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-stone-950/60 via-transparent to-transparent opacity-70 group-hover:opacity-40 transition-opacity" />
                     </div>
 
                     <button
                       onClick={() => setSelectedImage(section.image)}
-                      className="absolute bottom-4 right-4 z-20 flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-stone-950/80 hover:bg-emerald-700 text-white text-xs font-bold backdrop-blur-md border border-white/20 shadow-lg transition-all duration-200 hover:scale-105 btn-interactive"
+                      className="absolute bottom-4 right-4 z-20 flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-stone-950/85 hover:bg-emerald-700 text-white text-xs font-bold backdrop-blur-md border border-white/20 shadow-lg transition-all duration-200 cursor-pointer"
                     >
                       <Maximize2 className="h-3.5 w-3.5" />
                       <span>View Inspection Photo</span>
@@ -222,47 +254,44 @@ export const QualityControlPage: React.FC = () => {
                 </div>
 
                 {/* Content & Quality Checklist Column */}
-                <div className={`w-full lg:w-1/2 space-y-6 ${isEven ? 'reveal-left' : 'reveal-right'}`}>
+                <div className="w-full lg:w-1/2 space-y-5">
                   
-                  <div className="space-y-2">
-                    <span className="text-xs font-extrabold uppercase tracking-widest text-black flex items-center gap-1.5">
+                  <div className="space-y-1.5">
+                    <span className="text-xs font-black uppercase tracking-widest text-emerald-800 flex items-center gap-1.5">
                       <ShieldCheck className="h-4 w-4 text-emerald-700" />
                       <span>GUARANTEED EXPORT PROTOCOL</span>
                     </span>
-                    <h2 className="font-serif text-2xl sm:text-4xl font-extrabold text-black tracking-tight leading-tight">
+                    <h2 className="font-serif text-2xl sm:text-3xl font-extrabold text-stone-950 tracking-tight leading-tight">
                       {section.title}
                     </h2>
                   </div>
 
-                  <div className="relative pl-4 border-l-4 border-emerald-700 bg-[#f7f2ea] p-4 rounded-r-2xl border-y border-r border-[#e8ded1]">
-                    <p className="text-sm sm:text-base text-black leading-relaxed font-serif font-bold italic">
+                  <div className="relative pl-4 border-l-4 border-emerald-700 bg-emerald-50/40 p-4 rounded-r-2xl border border-emerald-100">
+                    <p className="text-sm sm:text-base text-stone-900 leading-relaxed font-serif font-bold italic">
                       "{section.quote}"
                     </p>
                   </div>
 
-                  <p className="text-sm sm:text-base text-stone-900 leading-relaxed font-medium">
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-medium">
                     {section.description}
                   </p>
 
-                  {/* Guaranteed Points Checklist with Staggered Entrance */}
+                  {/* Guaranteed Points Checklist */}
                   <div className="space-y-2.5 pt-2">
-                    <h4 className="text-xs font-black uppercase tracking-wider text-black">
+                    <h4 className="text-xs font-black uppercase tracking-wider text-stone-900">
                       Export Quality Guarantee Points:
                     </h4>
-                    {section.guarantees.map((item, idx2) => {
-                      const gStagger = `stagger-${idx2 + 1}`;
-                      return (
-                        <div
-                          key={idx2}
-                          className={`reveal-up ${gStagger} hover-lift-sm flex items-start gap-3 p-3 rounded-xl bg-white border border-[#eae0d2] shadow-xs`}
-                        >
-                          <div className="h-5 w-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 mt-0.5">
-                            <Check className="h-3.5 w-3.5 stroke-[3]" />
-                          </div>
-                          <span className="text-xs font-bold text-black">{item}</span>
+                    {section.guarantees.map((item, idx2) => (
+                      <div
+                        key={idx2}
+                        className="flex items-start gap-3 p-3 rounded-xl bg-white border border-stone-200/80 shadow-xs hover:border-emerald-300 transition-colors"
+                      >
+                        <div className="h-5 w-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 mt-0.5">
+                          <Check className="h-3.5 w-3.5 stroke-[3]" />
                         </div>
-                      );
-                    })}
+                        <span className="text-xs font-bold text-stone-900">{item}</span>
+                      </div>
+                    ))}
                   </div>
 
                 </div>
@@ -272,28 +301,23 @@ export const QualityControlPage: React.FC = () => {
         })}
       </div>
 
-      {/* ---------------------------------------------------- */}
-      {/* 2.5 Quality Assurance & PDCA Framework (PDF Page 16) */}
-      {/* ---------------------------------------------------- */}
-      <section className="bg-white py-12 sm:py-16 border-y border-stone-200/80">
+      {/* 3. Quality Assurance & PDCA Framework (PDF Page 16) */}
+      <section className="bg-white py-14 sm:py-20 border-y border-stone-200/80">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="grid lg:grid-cols-2 gap-10 items-center">
-            <div className="space-y-5 reveal-left">
+            <div className="space-y-5">
               <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider text-emerald-950 bg-emerald-100 border border-emerald-300">
                 <ShieldCheck className="h-3.5 w-3.5 text-emerald-800" />
                 <span>SYSTEMATIC QUALITY ASSURANCE</span>
               </span>
-              <ScrollTypingText
-                as="h2"
-                text="Embedded Quality Throughout Production"
-                className="font-serif text-2xl sm:text-4xl font-extrabold text-stone-900 leading-tight"
-                speed={30}
-              />
-              <p className="text-stone-800 text-sm sm:text-base leading-relaxed font-normal">
-                At <strong>Golden Fiber Crafts Ltd.</strong>, quality is embedded throughout our entire production process. From raw-material selection to final shipment, our quality team applies systematic controls to ensure consistency, workmanship, product integrity, and compliance with agreed customer specifications.
+              <h2 className="font-serif text-2xl sm:text-4xl font-extrabold text-stone-950 leading-tight">
+                Embedded Quality Throughout Production
+              </h2>
+              <p className="text-stone-700 text-sm sm:text-base leading-relaxed font-medium">
+                At <strong className="text-stone-950">Golden Fiber Crafts Ltd.</strong>, quality is embedded throughout our entire production process. From raw-material selection to final shipment, our quality team applies systematic controls to ensure consistency, workmanship, product integrity, and compliance with agreed customer specifications.
               </p>
-              <p className="text-stone-800 text-sm leading-relaxed font-normal">
+              <p className="text-stone-700 text-sm leading-relaxed font-medium">
                 Our quality assurance approach combines preventive controls, in-process monitoring, final inspection, and shipment verification. This enables us to identify potential issues at an early stage, maintain consistent production quality, and deliver products that meet customer expectations.
               </p>
               
@@ -313,14 +337,14 @@ export const QualityControlPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="reveal-right flex items-center justify-center p-6 bg-stone-50 rounded-3xl border border-stone-200 shadow-md">
+            <div className="flex items-center justify-center p-6 bg-stone-50 rounded-3xl border border-stone-200 shadow-sm">
               <div className="relative max-w-md w-full">
                 <img
                   src="/quality/pdca_cycle.png"
                   alt="Quality Assurance PDCA Cycle - Plan Do Check Act"
                   className="w-full h-auto object-contain filter drop-shadow-md"
                 />
-                <p className="text-center text-xs font-bold text-stone-700 mt-4 uppercase tracking-wider">
+                <p className="text-center text-xs font-bold text-stone-800 mt-4 uppercase tracking-wider">
                   Plan • Do • Check • Act (Continuous Quality Cycle)
                 </p>
               </div>
@@ -328,15 +352,15 @@ export const QualityControlPage: React.FC = () => {
           </div>
 
           {/* 7-Stage Quality Control Process (Pages 17-18) */}
-          <div className="space-y-8 pt-6 border-t border-stone-100">
+          <div className="space-y-8 pt-8 border-t border-stone-100">
             <div className="text-center max-w-3xl mx-auto space-y-2">
               <span className="text-xs font-black uppercase tracking-widest text-emerald-900">
                 OFFICIAL 7-STAGE PIPELINE
               </span>
-              <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-black">
+              <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-stone-950">
                 Comprehensive Quality Control Process
               </h3>
-              <p className="text-xs sm:text-sm text-stone-700 font-medium">
+              <p className="text-xs sm:text-sm text-stone-600 font-medium">
                 At Golden Fiber Crafts Ltd., quality is built into every stage of production—from raw material selection to final shipment.
               </p>
               <div className="mx-auto h-1 w-16 rounded-full bg-emerald-600 mt-2" />
@@ -385,13 +409,13 @@ export const QualityControlPage: React.FC = () => {
                   points: ['Dedicated customer support desk', 'Continuous quality feedback loop', 'Repeat program reliability & trust']
                 }
               ].map((stage, idx) => (
-                <div key={idx} className="bg-stone-50 rounded-2xl p-5 border border-stone-200 shadow-sm hover-lift space-y-3 flex flex-col justify-between">
+                <div key={idx} className="bg-stone-50 rounded-2xl p-5 border border-stone-200 shadow-xs space-y-3 flex flex-col justify-between hover:border-emerald-400 transition-colors">
                   <div className="space-y-2">
-                    <span className="inline-block text-sm font-serif font-black text-emerald-800 bg-emerald-100 px-3 py-1 rounded-lg">
+                    <span className="inline-block text-xs font-serif font-black text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded-lg">
                       STAGE {stage.step}
                     </span>
-                    <h4 className="font-serif text-sm font-bold text-stone-900 leading-snug">{stage.title}</h4>
-                    <ul className="space-y-1.5 text-[11px] text-stone-700 font-medium">
+                    <h4 className="font-serif text-sm font-black text-stone-900 leading-snug">{stage.title}</h4>
+                    <ul className="space-y-1.5 text-xs text-stone-700 font-semibold">
                       {stage.points.map((pt, pIdx) => (
                         <li key={pIdx} className="flex items-start gap-1.5">
                           <Check className="h-3.5 w-3.5 text-emerald-600 shrink-0 mt-0.5" />
@@ -435,172 +459,88 @@ export const QualityControlPage: React.FC = () => {
         </div>
       </section>
 
-      {/* ---------------------------------------------------- */}
-      {/* 3. AQL 2.5 Inspection & Compliance Matrix */}
-      {/* ---------------------------------------------------- */}
-      <section className="bg-gradient-to-b from-[#f5eee6] to-[#fcfbf9] py-16 border-y border-stone-200/80">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
-          
-          <div className="text-center max-w-2xl mx-auto space-y-3 reveal-up">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-emerald-900">
-              AUDIT MATRIX & SPECIFICATIONS
-            </span>
-            <ScrollTypingText
-              as="h2"
-              text="Comprehensive Quality Control Checklist"
-              className="font-serif text-2xl sm:text-4xl font-extrabold text-black"
-              speed={35}
-            />
-            <p className="text-sm text-stone-900 leading-relaxed font-medium">
-              Every production lot is audited by certified internal inspectors before external SGS/Intertek audits or shipping container loading.
+      {/* 4. AQL 2.5 Inspection & Compliance Matrix */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="text-center max-w-2xl mx-auto space-y-2">
+          <span className="text-xs font-black uppercase tracking-widest text-emerald-900">
+            AUDIT MATRIX & SPECIFICATIONS
+          </span>
+          <h2 className="font-serif text-2xl sm:text-4xl font-extrabold text-stone-950">
+            Comprehensive Quality Control Checklist
+          </h2>
+          <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-medium">
+            Every production lot is audited by certified internal inspectors before external SGS/Intertek audits or shipping container loading.
+          </p>
+          <div className="mx-auto h-1 w-16 rounded-full bg-emerald-700 mt-2" />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm space-y-3">
+            <div className="h-10 w-10 rounded-xl bg-amber-100 text-amber-950 flex items-center justify-center font-bold">
+              <Scale className="h-5 w-5" />
+            </div>
+            <h3 className="font-serif text-base font-extrabold text-stone-950">1. Dimension & Shape Testing</h3>
+            <p className="text-xs text-stone-600 leading-relaxed font-medium">
+              Calibrated against master approved samples. Height, diameter, taper angles, and nestable stack tolerance checked.
             </p>
-            <div className="mx-auto h-1.5 w-16 rounded-full bg-emerald-700" />
+            <ul className="space-y-1.5 pt-2 text-xs text-stone-900 font-bold">
+              <li className="flex items-center gap-1.5 text-emerald-800">✓ Within ±1.5% deviation</li>
+              <li className="flex items-center gap-1.5 text-emerald-800">✓ S/2, S/3, S/4 nesting verified</li>
+            </ul>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            
-            <div className="card-slide-left stagger-2 hover-lift bg-white rounded-3xl p-6 sm:p-8 border border-[#e8ded1] shadow-xs space-y-3">
-              <div className="h-10 w-10 rounded-xl bg-amber-100 text-amber-950 flex items-center justify-center font-bold">
-                <Scale className="h-5 w-5" />
-              </div>
-              <h3 className="font-serif text-base font-extrabold text-black">1. Dimension & Shape Testing</h3>
-              <p className="text-xs text-stone-900 leading-relaxed font-medium">
-                Calibrated against master approved samples. Height, diameter, taper angles, and nestable stack tolerance checked.
-              </p>
-              <ul className="space-y-1.5 pt-2 text-xs text-black font-semibold">
-                <li className="flex items-center gap-1.5 text-emerald-900 font-bold">✓ Within ±1.5% deviation</li>
-                <li className="flex items-center gap-1.5 text-emerald-900 font-bold">✓ S/2, S/3, S/4 nesting verified</li>
-              </ul>
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm space-y-3">
+            <div className="h-10 w-10 rounded-xl bg-emerald-100 text-emerald-950 flex items-center justify-center font-bold">
+              <ShieldCheck className="h-5 w-5" />
             </div>
-
-            <div className="card-slide-mid stagger-1 hover-lift bg-white rounded-3xl p-6 sm:p-8 border border-[#e8ded1] shadow-xs space-y-3">
-              <div className="h-10 w-10 rounded-xl bg-emerald-100 text-emerald-950 flex items-center justify-center font-bold">
-                <ShieldCheck className="h-5 w-5" />
-              </div>
-              <h3 className="font-serif text-base font-extrabold text-black">2. Strength & Safety Testing</h3>
-              <p className="text-xs text-stone-900 leading-relaxed font-medium">
-                Handles and frames undergo static pull testing up to 20kg. Chemical testing ensures non-heavy metal eco pigments.
-              </p>
-              <ul className="space-y-1.5 pt-2 text-xs text-black font-semibold">
-                <li className="flex items-center gap-1.5 text-emerald-900 font-bold">✓ Static handle pull &gt;20kg</li>
-                <li className="flex items-center gap-1.5 text-emerald-900 font-bold">✓ OEKO-TEX color dye safe</li>
-              </ul>
-            </div>
-
-            <div className="card-slide-right stagger-2 hover-lift bg-white rounded-3xl p-6 sm:p-8 border border-[#e8ded1] shadow-xs space-y-3">
-              <div className="h-10 w-10 rounded-xl bg-teal-100 text-teal-950 flex items-center justify-center font-bold">
-                <Package className="h-5 w-5" />
-              </div>
-              <h3 className="font-serif text-base font-extrabold text-black">3. Transit & Packaging Audit</h3>
-              <p className="text-xs text-stone-900 leading-relaxed font-medium">
-                Finished master boxes undergo ISTA 1A drop testing, moisture absorbent placement, and 100% scannable barcode verification.
-              </p>
-              <ul className="space-y-1.5 pt-2 text-xs text-black font-semibold">
-                <li className="flex items-center gap-1.5 text-emerald-900 font-bold">✓ 5-Ply export cartons standard</li>
-                <li className="flex items-center gap-1.5 text-emerald-900 font-bold">✓ Pre-shipment report with photos</li>
-              </ul>
-            </div>
-
+            <h3 className="font-serif text-base font-extrabold text-stone-950">2. Strength & Safety Testing</h3>
+            <p className="text-xs text-stone-600 leading-relaxed font-medium">
+              Handles and frames undergo static pull testing up to 20kg. Chemical testing ensures non-heavy metal eco pigments.
+            </p>
+            <ul className="space-y-1.5 pt-2 text-xs text-stone-900 font-bold">
+              <li className="flex items-center gap-1.5 text-emerald-800">✓ Static handle pull &gt;20kg</li>
+              <li className="flex items-center gap-1.5 text-emerald-800">✓ OEKO-TEX color dye safe</li>
+            </ul>
           </div>
 
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm space-y-3">
+            <div className="h-10 w-10 rounded-xl bg-teal-100 text-teal-950 flex items-center justify-center font-bold">
+              <Package className="h-5 w-5" />
+            </div>
+            <h3 className="font-serif text-base font-extrabold text-stone-950">3. Transit & Packaging Audit</h3>
+            <p className="text-xs text-stone-600 leading-relaxed font-medium">
+              Finished master boxes undergo ISTA 1A drop testing, moisture absorbent placement, and 100% scannable barcode verification.
+            </p>
+            <ul className="space-y-1.5 pt-2 text-xs text-stone-900 font-bold">
+              <li className="flex items-center gap-1.5 text-emerald-800">✓ 5-Ply export cartons standard</li>
+              <li className="flex items-center gap-1.5 text-emerald-800">✓ Pre-shipment report with photos</li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      {/* ---------------------------------------------------- */}
-      {/* Quality Standards & Trust Metrics (Before Footer) */}
-      {/* ---------------------------------------------------- */}
-      <section className="py-12 bg-white/70 border-t border-b border-[#e8ded1]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-8 space-y-2">
-            <div className="inline-flex items-center gap-2 rounded-full bg-amber-100 border border-amber-300/80 px-3.5 py-1 text-xs font-extrabold uppercase tracking-widest text-black shadow-xs">
-              <ShieldCheck className="h-4 w-4 text-amber-800" />
-              <span>Export Compliance & Verification</span>
-            </div>
-            <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-black">
-              International Quality Standards
-            </h3>
-            <p className="text-xs sm:text-sm text-stone-900 font-medium">
-              Every shipment is verified under strict international benchmarks before export from Bangladesh
+      {/* 5. Inspection Inquiry CTA */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="rounded-3xl bg-gradient-to-r from-emerald-950 via-stone-900 to-emerald-950 p-8 sm:p-12 text-white text-center space-y-6 shadow-xl border border-emerald-500/30">
+          <div className="max-w-2xl mx-auto space-y-3">
+            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-black">
+              Require Custom Quality Standards for Your Brand?
+            </h2>
+            <p className="text-xs sm:text-sm text-stone-200 font-medium">
+              We accommodate buyer-specified QA parameters, third-party lab inspections (SGS, TÜV, Intertek, Bureau Veritas), and customized master packaging barcodes.
             </p>
           </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-            <div className="card-slide-far-left stagger-2 hover-lift-sm p-4 rounded-2xl bg-white border border-[#e8ded1] shadow-xs">
-              <div className="h-9 w-9 rounded-xl bg-amber-100 text-amber-950 flex items-center justify-center font-bold mb-2">
-                <BadgeCheck className="h-5 w-5" />
-              </div>
-              <h4 className="font-serif text-sm font-extrabold text-black">AQL 2.5 Standard</h4>
-              <p className="text-xs text-stone-900 font-semibold">Zero-defect sampling</p>
-            </div>
-
-            <div className="card-slide-left stagger-1 hover-lift-sm p-4 rounded-2xl bg-white border border-[#e8ded1] shadow-xs">
-              <div className="h-9 w-9 rounded-xl bg-emerald-100 text-emerald-950 flex items-center justify-center font-bold mb-2">
-                <ThermometerSnowflake className="h-5 w-5" />
-              </div>
-              <h4 className="font-serif text-sm font-extrabold text-black">Moisture &lt;12%</h4>
-              <p className="text-xs text-stone-900 font-semibold">100% mold-free guarantee</p>
-            </div>
-
-            <div className="card-slide-right stagger-1 hover-lift-sm p-4 rounded-2xl bg-white border border-[#e8ded1] shadow-xs">
-              <div className="h-9 w-9 rounded-xl bg-teal-100 text-teal-950 flex items-center justify-center font-bold mb-2">
-                <FileCheck className="h-5 w-5" />
-              </div>
-              <h4 className="font-serif text-sm font-extrabold text-black">Fumigation Passed</h4>
-              <p className="text-xs text-stone-900 font-semibold">Official phytosanitary cert</p>
-            </div>
-
-            <div className="card-slide-far-right stagger-2 hover-lift-sm p-4 rounded-2xl bg-white border border-[#e8ded1] shadow-xs">
-              <div className="h-9 w-9 rounded-xl bg-blue-100 text-blue-950 flex items-center justify-center font-bold mb-2">
-                <Award className="h-5 w-5" />
-              </div>
-              <h4 className="font-serif text-sm font-extrabold text-black">BSCI &amp; Sedex</h4>
-              <p className="text-xs text-stone-900 font-semibold">Ethical audit verified</p>
-            </div>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <button
+              onClick={() => navigate('/contact')}
+              className="px-7 py-3.5 rounded-full bg-amber-400 hover:bg-amber-300 text-stone-950 font-black text-xs sm:text-sm shadow-md transition-all cursor-pointer flex items-center gap-2"
+            >
+              <span>Contact Quality Assurance Desk</span>
+              <ArrowRight className="h-4 w-4" />
+            </button>
           </div>
         </div>
-      </section>
-
-      {/* ---------------------------------------------------- */}
-      {/* 4. Call to Action with reveal-up */}
-      {/* ---------------------------------------------------- */}
-      <section className="py-16 sm:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="reveal-up relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#1b4332] via-[#2d6a4f] to-[#081c15] p-8 sm:p-14 text-white shadow-2xl space-y-6 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-8">
-            <div className="relative z-10 max-w-2xl space-y-3">
-              <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/20 px-3.5 py-1 text-xs font-extrabold uppercase tracking-widest text-emerald-300 backdrop-blur-md border border-emerald-500/30">
-                <Award className="h-3.5 w-3.5 text-emerald-400" />
-                Guaranteed Quality & Reliability
-              </span>
-              <ScrollTypingText
-                as="h2"
-                text="Order Certified Export Handicrafts"
-                className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white"
-                speed={35}
-              />
-              <p className="text-stone-100 text-xs sm:text-sm leading-relaxed font-medium">
-                Request physical master samples, inspection certificates, or custom OEM production quotes for your brand today.
-              </p>
-            </div>
-
-            <div className="relative z-10 flex flex-col sm:flex-row items-center gap-3 shrink-0">
-              <button
-                onClick={() => navigate('/products')}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-amber-400 hover:bg-amber-300 text-stone-950 px-7 py-3.5 text-xs font-extrabold uppercase tracking-wider shadow-xl transition-all duration-200 btn-interactive"
-              >
-                <span>Browse Products</span>
-                <ArrowRight className="h-4 w-4 btn-arrow" />
-              </button>
-
-              <button
-                onClick={() => navigate('/contact')}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-white/10 hover:bg-white/20 text-white px-6 py-3.5 text-xs font-bold backdrop-blur-md border border-white/20 transition-all duration-200 btn-interactive"
-              >
-                <span>Contact QA Team</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
 
     </div>
   );

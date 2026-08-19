@@ -183,26 +183,26 @@ export const MaterialsPage: React.FC = () => {
               </div>
             </div>
             
-            {/* Search */}
-            <div className="relative w-full md:w-72">
-              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-stone-400" />
-              <input
-                type="text"
-                placeholder="Search materials..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-9 py-2.5 text-sm rounded-xl border-0 bg-white/95 backdrop-blur-sm text-stone-800 font-medium focus:outline-hidden focus:ring-2 focus:ring-emerald-300 shadow-lg placeholder-stone-400 transition-all"
-              />
-              {searchQuery && (
-                <button
-                  onClick={() => setSearchQuery('')}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-stone-500 hover:text-stone-700 transition-colors"
-                >
-                  <X className="h-4 w-4" />
-                </button>
-              )}
+            {/* Right: Large Branded Emblem / Original Site Icon */}
+            <div className="flex items-center justify-center shrink-0">
+              <div className="relative group">
+                {/* Glow ring */}
+                <div className="absolute -inset-4 rounded-full bg-emerald-400/20 blur-xl group-hover:bg-emerald-400/35 transition-all duration-500"></div>
+                <div className="relative h-28 w-28 sm:h-32 sm:w-32 rounded-3xl bg-white/10 backdrop-blur-md border border-white/25 p-3.5 shadow-2xl flex items-center justify-center hover:scale-105 transition-transform duration-500">
+                  <img
+                    src="/logo-icon.png"
+                    alt="Golden Fiber Crafts Ltd."
+                    className="h-full w-full object-contain filter drop-shadow-md brightness-110"
+                  />
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+
+        {/* Large Decorative Watermark in Background */}
+        <div className="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
+          <img src="/logo-icon.png" alt="Watermark" className="h-64 w-64 lg:h-72 lg:w-72 object-contain filter invert" />
         </div>
       </div>
 

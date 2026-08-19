@@ -11,7 +11,7 @@ import {
   Layers
 } from 'lucide-react';
 import { PRODUCTS, CATEGORIES, ProductItem } from '../data/products';
-import { getAllProducts } from '../utils/productStore';
+import { getAllActiveProducts } from '../utils/productStore';
 
 interface ProductsPageProps {
   onOpenQuoteModal: (productCode?: string) => void;
@@ -32,7 +32,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
   const [allProducts, setAllProducts] = useState<ProductItem[]>(PRODUCTS);
 
   useEffect(() => {
-    const loaded = getAllProducts();
+    const loaded = getAllActiveProducts();
     if (loaded && loaded.length > 0) {
       setAllProducts(loaded);
     }

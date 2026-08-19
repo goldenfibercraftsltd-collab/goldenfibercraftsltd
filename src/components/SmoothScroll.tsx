@@ -21,21 +21,19 @@ export const SmoothScrollProvider: React.FC<{ children: React.ReactNode }> = ({ 
   const location = useLocation();
 
   useEffect(() => {
-    // Initialize Lenis with ultra-smooth momentum inertia
+    // Highly optimized, lightweight Lenis configuration (snappy & buttery smooth without lag)
     const lenis = new Lenis({
-      duration: 1.35, // Smooth inertia glide duration
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Luxurious exponential deceleration curve
+      duration: 0.8, // Reduced from 1.35s to snappy 0.8s to eliminate feeling of lag/sluggishness
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -8 * t)),
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,
-      wheelMultiplier: 0.95, // Balanced responsive wheel feel
-      touchMultiplier: 1.2,
+      wheelMultiplier: 1.0, // 1:1 responsive native feel
+      touchMultiplier: 1.0,
       infinite: false,
     });
 
     lenisRef.current = lenis;
-
-    // Attach to global window for accessibility if needed
     (window as any).__lenis = lenis;
 
     let animationFrameId: number;
@@ -59,15 +57,15 @@ export const SmoothScrollProvider: React.FC<{ children: React.ReactNode }> = ({ 
   useEffect(() => {
     if (lenisRef.current) {
       lenisRef.current.scrollTo(0, { immediate: true });
-    } else {
+    } else if (typeof window !== 'undefined') {
       window.scrollTo(0, 0);
     }
   }, [location.pathname]);
 
   const scrollToTop = () => {
     if (lenisRef.current) {
-      lenisRef.current.scrollTo(0, { duration: 1.2 });
-    } else {
+      lenisRef.current.scrollTo(0, { duration: 0.6 });
+    } else if (typeof window !== 'undefined') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
