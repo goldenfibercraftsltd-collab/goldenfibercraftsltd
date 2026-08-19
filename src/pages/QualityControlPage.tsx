@@ -175,7 +175,7 @@ export const QualityControlPage: React.FC = () => {
           return (
             <section key={section.id} id={section.id} className="scroll-mt-24">
               <div
-                className={`flex flex-col gap-10 lg:gap-16 items-center ${
+                className={`flex flex-col gap-10 lg:gap-16 items-start ${
                   isEven ? 'lg:flex-row-reverse' : 'lg:flex-row'
                 }`}
               >

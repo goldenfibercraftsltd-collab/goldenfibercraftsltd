@@ -412,22 +412,22 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
               className="scroll-mt-20 pb-8 border-b border-stone-200/70 last:border-b-0 last:pb-0"
             >
               <div
-                className={`flex flex-col gap-6 lg:gap-10 items-center ${
+                className={`flex flex-col gap-6 lg:gap-10 items-start ${
                   isEven ? 'lg:flex-row-reverse' : 'lg:flex-row'
                 }`}
               >
                 
-                {/* Visual Image Column with Directional Reveal */}
+                {/* Visual Image Column with Directional Reveal (Top-Aligned with Title) */}
                 <div className={`w-full lg:w-1/2 ${isEven ? 'reveal-right' : 'reveal-left'}`}>
-                  <div className="relative group rounded-3xl overflow-hidden bg-[#f0e8dc] border border-[#e4d6c4] shadow-lg hover:shadow-xl transition-all duration-500 img-zoom-container">
+                  <div className="relative group rounded-3xl overflow-hidden bg-[#f0e8dc] border border-[#e4d6c4] shadow-lg hover:shadow-2xl transition-all duration-500 img-zoom-container">
                     
                     {/* Number Stamp */}
-                    <div className="absolute top-4 left-4 z-20 bg-stone-950/75 backdrop-blur-md text-amber-300 font-mono text-xs font-extrabold px-3 py-1 rounded-xl border border-white/20 shadow-md">
+                    <div className="absolute top-4 left-4 z-20 bg-stone-950/80 backdrop-blur-md text-amber-300 font-mono text-xs font-extrabold px-3.5 py-1.5 rounded-xl border border-white/20 shadow-md">
                       SECTION {section.number}
                     </div>
 
-                    {/* Image Container with Subtle Hover Zoom */}
-                    <div className="relative h-[300px] sm:h-[380px] lg:h-[420px] w-full overflow-hidden">
+                    {/* Image Container with Top-Flush Alignment */}
+                    <div className="relative h-[320px] sm:h-[400px] lg:h-[460px] w-full overflow-hidden">
                       <img
                         src={section.image}
                         alt={section.imageAlt}
@@ -741,7 +741,7 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
           </div>
 
           {/* Supply Chain & Logistics (Page 19) */}
-          <div className="grid lg:grid-cols-2 gap-8 items-center bg-stone-50 rounded-3xl p-6 sm:p-10 border border-stone-200 shadow-lg">
+          <div className="grid lg:grid-cols-2 gap-8 items-start bg-stone-50 rounded-3xl p-6 sm:p-10 border border-stone-200 shadow-lg">
             <div className="space-y-4">
               <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider text-teal-900 bg-teal-100 border border-teal-300">
                 <Truck className="h-3.5 w-3.5 text-teal-800" />
