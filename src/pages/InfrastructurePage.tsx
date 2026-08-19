@@ -571,11 +571,11 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
                 />
               </div>
               <div className="p-5 space-y-1.5 flex-1">
-                <span className="text-[10px] font-extrabold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded">
+                <span className="text-xs font-black uppercase tracking-wider text-emerald-900 bg-emerald-100 px-2.5 py-0.5 rounded-md">
                   Fiber Processing Line
                 </span>
-                <h4 className="font-serif text-base font-bold text-stone-900">Modern Production Techniques</h4>
-                <p className="text-xs text-stone-600 leading-relaxed font-light">
+                <h4 className="font-serif text-base font-bold text-stone-950">Modern Production Techniques</h4>
+                <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-medium">
                   Combining skilled traditional craftsmanship with modern production machinery for consistent tensile and fiber uniformity.
                 </p>
               </div>
@@ -590,11 +590,11 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
                 />
               </div>
               <div className="p-5 space-y-1.5 flex-1">
-                <span className="text-[10px] font-extrabold uppercase tracking-wider text-amber-800 bg-amber-50 px-2 py-0.5 rounded">
+                <span className="text-xs font-black uppercase tracking-wider text-amber-900 bg-amber-100 px-2.5 py-0.5 rounded-md">
                   Calibrated Finishing
                 </span>
-                <h4 className="font-serif text-base font-bold text-stone-900">Bulk Export Capabilities</h4>
-                <p className="text-xs text-stone-600 leading-relaxed font-light">
+                <h4 className="font-serif text-base font-bold text-stone-950">Bulk Export Capabilities</h4>
+                <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-medium">
                   Flexible manufacturing designed to handle bulk container export orders, repeat programs, and bespoke buyer specifications.
                 </p>
               </div>
@@ -609,11 +609,11 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
                 />
               </div>
               <div className="p-5 space-y-1.5 flex-1">
-                <span className="text-[10px] font-extrabold uppercase tracking-wider text-teal-800 bg-teal-50 px-2 py-0.5 rounded">
+                <span className="text-xs font-black uppercase tracking-wider text-teal-900 bg-teal-100 px-2.5 py-0.5 rounded-md">
                   Moisture-Controlled Packing
                 </span>
-                <h4 className="font-serif text-base font-bold text-stone-900">Dedicated Packaging Warehouse</h4>
-                <p className="text-xs text-stone-600 leading-relaxed font-light">
+                <h4 className="font-serif text-base font-bold text-stone-950">Dedicated Packaging Warehouse</h4>
+                <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-medium">
                   Pre-shipment inspection, humidity control (&lt;12% moisture), barcode tagging, and export carton master loading.
                 </p>
               </div>
@@ -626,7 +626,7 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
               <h3 className="font-serif text-2xl sm:text-3xl font-bold text-amber-300">
                 Our Manufacturing Strength
               </h3>
-              <p className="text-xs sm:text-sm text-stone-200 font-light leading-relaxed">
+              <p className="text-xs sm:text-sm text-stone-100 font-medium leading-relaxed">
                 "We transform Bangladesh's natural fibers and traditional craftsmanship into thoughtfully designed products for the global market."
               </p>
             </div>
@@ -640,9 +640,9 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
                 { title: 'Responsible Manufacturing', desc: 'Ethical wages, safe workspaces, zero child labor' },
                 { title: 'On-Time Delivery', desc: 'Strict lead times with 50 HQ containers/month' },
               ].map((str, idx) => (
-                <div key={idx} className="bg-white/10 backdrop-blur-xs p-4 rounded-2xl border border-white/10 text-center space-y-1 hover:bg-white/15 transition-all">
+                <div key={idx} className="bg-white/15 backdrop-blur-xs p-4 rounded-2xl border border-white/15 text-center space-y-1 hover:bg-white/20 transition-all shadow-xs">
                   <h4 className="font-bold text-xs sm:text-sm text-amber-300">{str.title}</h4>
-                  <p className="text-[11px] text-stone-300 font-light leading-snug">{str.desc}</p>
+                  <p className="text-xs text-stone-100 font-medium leading-snug">{str.desc}</p>
                 </div>
               ))}
             </div>

@@ -283,14 +283,14 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
                         loading="lazy"
                       />
                       {/* Item Code Badge */}
-                      <span className="absolute top-2.5 right-2.5 bg-[#093843] text-white text-[10px] font-extrabold px-2 py-0.5 rounded-md shadow-xs">
+                      <span className="absolute top-2.5 right-2.5 bg-[#093843] text-white text-xs font-extrabold px-2.5 py-0.5 rounded-md shadow-sm">
                         {product.code || product.id}
                       </span>
                     </div>
 
                     {/* Product Details */}
                     <div className="mt-3.5 space-y-1">
-                      <span className="text-[10px] font-black text-[#166534] uppercase tracking-wider">
+                      <span className="text-xs font-black text-[#166534] uppercase tracking-wider">
                         {product.categoryName || product.category}
                       </span>
                       <h3
@@ -317,9 +317,9 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
 
                     <button
                       onClick={() => onOpenQuoteModal(product.code || product.id)}
-                      className="flex items-center gap-1 rounded-lg bg-[#0088FF] hover:bg-[#0077ee] text-white px-2.5 py-1.5 text-[11px] font-bold shadow-xs hover:shadow-md transition-all active:scale-95 btn-interactive"
+                      className="flex items-center gap-1.5 rounded-lg bg-[#0088FF] hover:bg-[#0077ee] text-white px-3 py-1.5 text-xs font-bold shadow-xs hover:shadow-md transition-all active:scale-95 btn-interactive"
                     >
-                      <MessageSquare className="h-3 w-3" />
+                      <MessageSquare className="h-3.5 w-3.5" />
                       <span>Quote</span>
                     </button>
                   </div>

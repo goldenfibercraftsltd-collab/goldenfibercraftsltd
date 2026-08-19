@@ -101,7 +101,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
               className="font-serif text-2xl sm:text-4xl font-bold text-white"
               speed={35}
             />
-            <p className="text-stone-300 text-xs sm:text-sm max-w-xl mx-auto font-light">
+            <p className="text-stone-100 text-xs sm:text-sm max-w-xl mx-auto font-medium">
               Authentic factory certificates and compliance documents extracted from Golden Fiber Crafts Ltd. corporate portfolio.
             </p>
           </div>
@@ -137,7 +137,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
         {/* Call to Action with reveal-up */}
         <div className="reveal-up text-center bg-gradient-to-r from-emerald-800 to-green-900 rounded-3xl p-8 sm:p-12 text-white space-y-4 shadow-xl">
           <h2 className="font-serif text-2xl sm:text-4xl font-bold">Partner With a Certified Fair Trade Manufacturer</h2>
-          <p className="text-stone-200 text-xs sm:text-sm max-w-xl mx-auto font-light">
+          <p className="text-stone-100 text-xs sm:text-sm max-w-xl mx-auto font-medium">
             Get instant competitive price quotes, custom sample prototyping, and full compliance documentation.
           </p>
           <button

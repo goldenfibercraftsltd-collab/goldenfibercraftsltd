@@ -87,7 +87,7 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onOpenQuoteModal }) 
                       alt={product.name}
                       className="max-h-full max-w-full object-contain transition-transform duration-500"
                     />
-                    <span className="absolute top-2.5 right-2.5 bg-stone-900/80 text-white text-[10px] font-bold px-2 py-0.5 rounded-md backdrop-blur-md">
+                    <span className="absolute top-2.5 right-2.5 bg-stone-900/90 text-white text-xs font-bold px-2 py-0.5 rounded-md backdrop-blur-md">
                       {product.id}
                     </span>
                   </div>
@@ -114,8 +114,8 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onOpenQuoteModal }) 
         {/* Request Custom Quote Banner with reveal-scale */}
         <div className="reveal-scale bg-gradient-to-r from-emerald-900 to-stone-900 rounded-3xl p-8 text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
           <div className="space-y-1 text-center sm:text-left">
-            <h3 className="font-serif text-xl font-bold">Need Custom Dimensions or OEM Private Labeling?</h3>
-            <p className="text-stone-300 text-xs font-light">We manufacture custom sizes, colors, and branding tags according to buyer specifications.</p>
+            <h3 className="font-serif text-xl font-bold text-amber-300">Need Custom Dimensions or OEM Private Labeling?</h3>
+            <p className="text-stone-100 text-xs sm:text-sm font-medium">We manufacture custom sizes, colors, and branding tags according to buyer specifications.</p>
           </div>
           <button
             onClick={onOpenQuoteModal}

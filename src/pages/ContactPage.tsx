@@ -182,7 +182,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuoteModal }) =>
                 <Globe className="h-4 w-4" />
                 Worldwide Export Terms
               </div>
-              <p className="text-xs text-stone-300 leading-relaxed font-light">
+              <p className="text-xs sm:text-sm text-stone-100 leading-relaxed font-medium">
                 We accept FOB Chittagong Port, CIF, CFR, and DDP terms with LC at Sight or TT (30% Advance, 70% against Shipping docs).
               </p>
             </div>
@@ -197,7 +197,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuoteModal }) =>
                   <CheckCircle2 className="h-8 w-8" />
                 </div>
                 <h3 className="font-serif text-2xl font-bold text-stone-900">Message Received!</h3>
-                <p className="text-stone-600 text-xs sm:text-sm max-w-md mx-auto font-light">
+                <p className="text-stone-800 text-xs sm:text-sm max-w-md mx-auto font-medium">
                   Thank you for reaching out to Golden Fiber Crafts Ltd. Our export team will contact you shortly.
                 </p>
                 <button

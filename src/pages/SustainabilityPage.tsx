@@ -296,7 +296,7 @@ export const SustainabilityPage: React.FC = () => {
                   <Leaf className="h-6 w-6" />
                 </div>
                 <h3 className="font-serif text-2xl font-bold text-amber-300">Environmental Responsibility</h3>
-                <ul className="space-y-2.5 text-xs sm:text-sm text-stone-200 font-light">
+                <ul className="space-y-2.5 text-xs sm:text-sm text-stone-100 font-medium">
                   <li className="flex items-start gap-2.5">
                     <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
                     <span>Use of renewable and biodegradable natural fibers such as jute, seagrass, water hyacinth, cotton, cane, and bamboo.</span>
@@ -390,9 +390,9 @@ export const SustainabilityPage: React.FC = () => {
                 { title: 'RECYCLABLE & BIODEGRADABLE', desc: 'Our designs are recyclable and biodegradable for a greener tomorrow.' },
                 { title: 'ECO-FRIENDLY PACKAGING', desc: 'We use sustainable packaging to reduce waste and protect our planet.' }
               ].map((pil, idx) => (
-                <div key={idx} className="p-4 bg-white/10 backdrop-blur-xs rounded-2xl border border-white/10 space-y-1.5 flex flex-col justify-between">
+                <div key={idx} className="p-4 bg-white/15 backdrop-blur-xs rounded-2xl border border-white/20 space-y-1.5 flex flex-col justify-between shadow-xs">
                   <h4 className="text-xs font-bold text-amber-300 leading-snug">{pil.title}</h4>
-                  <p className="text-[11px] text-stone-200 font-light leading-relaxed">{pil.desc}</p>
+                  <p className="text-xs text-stone-100 font-medium leading-relaxed">{pil.desc}</p>
                 </div>
               ))}
             </div>
@@ -535,7 +535,7 @@ export const SustainabilityPage: React.FC = () => {
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
                 Empower Artisans. Protect the Earth.
               </h2>
-              <p className="text-stone-200 text-xs sm:text-sm leading-relaxed font-light">
+              <p className="text-stone-100 text-xs sm:text-sm leading-relaxed font-medium">
                 Join international retail brands sourcing certified sustainable natural fiber handicrafts from Golden Fiber Crafts Ltd.
               </p>
             </div>

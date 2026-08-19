@@ -111,9 +111,9 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/20 to-transparent flex items-end p-8 text-white">
               <div>
-                <p className="text-xs uppercase tracking-widest text-emerald-400 font-bold">Empowerment & Heritage Craft</p>
+                <p className="text-xs uppercase tracking-widest text-emerald-400 font-extrabold">Empowerment & Heritage Craft</p>
                 <h3 className="font-serif text-xl sm:text-2xl font-bold">Over 15,000 Skilled Artisans Workforce</h3>
-                <p className="text-xs text-stone-300 mt-1 font-light">
+                <p className="text-sm text-stone-100 mt-1 font-medium">
                   Decentralized rural artisan clusters across Bangladesh creating authentic woven handicrafts.
                 </p>
               </div>
@@ -139,7 +139,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
                   <Eye className="h-6 w-6" />
                 </div>
                 <h3 className="font-serif text-2xl font-bold text-amber-300">Our Vision</h3>
-                <p className="text-stone-200 text-sm sm:text-base leading-relaxed font-light">
+                <p className="text-white text-sm sm:text-base leading-relaxed font-medium">
                   "To become a globally trusted leader in sustainable jute, natural fiber, and handicraft products, transforming Bangladesh's rich natural resources and traditional craftsmanship into innovative, high-quality solutions for a greener world."
                 </p>
               </div>
@@ -185,16 +185,16 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
             <h3 className="font-serif text-xl font-bold text-stone-900 text-center">Our 6 Core Values</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
               {[
-                { title: 'Sustainability', desc: '100% renewable & plastic-free fibers', color: 'bg-emerald-50 text-emerald-800 border-emerald-200' },
-                { title: 'Quality Excellence', desc: 'Zero defect export precision', color: 'bg-amber-50 text-amber-900 border-amber-200' },
-                { title: 'Safety Commitment', desc: 'Safe & dignified workspaces', color: 'bg-teal-50 text-teal-800 border-teal-200' },
-                { title: 'Innovation', desc: 'Contemporary designs for global buyers', color: 'bg-blue-50 text-blue-800 border-blue-200' },
-                { title: 'Customer Focus', desc: 'Flexible MOQ & timely delivery', color: 'bg-indigo-50 text-indigo-800 border-indigo-200' },
-                { title: 'Social Responsibility', desc: 'Artisan welfare & fair trade wages', color: 'bg-purple-50 text-purple-800 border-purple-200' },
+                { title: 'Sustainability', desc: '100% renewable & plastic-free fibers', color: 'bg-emerald-50 text-emerald-950 border-emerald-300' },
+                { title: 'Quality Excellence', desc: 'Zero defect export precision', color: 'bg-amber-50 text-amber-950 border-amber-300' },
+                { title: 'Safety Commitment', desc: 'Safe & dignified workspaces', color: 'bg-teal-50 text-teal-950 border-teal-300' },
+                { title: 'Innovation', desc: 'Contemporary designs for global buyers', color: 'bg-blue-50 text-blue-950 border-blue-300' },
+                { title: 'Customer Focus', desc: 'Flexible MOQ & timely delivery', color: 'bg-indigo-50 text-indigo-950 border-indigo-300' },
+                { title: 'Social Responsibility', desc: 'Artisan welfare & fair trade wages', color: 'bg-purple-50 text-purple-950 border-purple-300' },
               ].map((val, idx) => (
-                <div key={idx} className={`rounded-xl p-4 border ${val.color} text-center space-y-1 hover-lift-sm transition-all`}>
-                  <h4 className="font-bold text-xs sm:text-sm">{val.title}</h4>
-                  <p className="text-[11px] opacity-85 leading-snug">{val.desc}</p>
+                <div key={idx} className={`rounded-xl p-4 border ${val.color} text-center space-y-1 hover-lift-sm transition-all shadow-xs`}>
+                  <h4 className="font-black text-xs sm:text-sm">{val.title}</h4>
+                  <p className="text-xs font-semibold leading-snug">{val.desc}</p>
                 </div>
               ))}
             </div>
@@ -222,24 +222,24 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
                     className="h-20 w-20 sm:h-24 sm:w-24 rounded-2xl object-cover border-2 border-amber-400/80 shadow-lg shrink-0"
                   />
                   <div>
-                    <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider text-amber-300 bg-amber-500/20 border border-amber-400/30 mb-1">
+                    <span className="inline-block px-2.5 py-0.5 rounded-full text-xs font-extrabold uppercase tracking-wider text-amber-300 bg-amber-500/20 border border-amber-400/30 mb-1">
                       {KEY_LEADERSHIP.managingDirector.title}
                     </span>
                     <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">
                       {KEY_LEADERSHIP.managingDirector.name}
                     </h3>
-                    <p className="text-xs text-stone-300">Message From Managing Director</p>
-                    <a href="tel:+8801916183583" className="text-xs text-emerald-400 hover:underline inline-flex items-center gap-1 mt-1 font-semibold">
+                    <p className="text-xs text-stone-200 font-semibold">Message From Managing Director</p>
+                    <a href="tel:+8801916183583" className="text-xs text-emerald-300 hover:underline inline-flex items-center gap-1 mt-1 font-bold">
                       <Phone className="h-3 w-3" /> +8801916-183583
                     </a>
                   </div>
                 </div>
 
-                <blockquote className="text-stone-200 text-xs sm:text-sm leading-relaxed font-light italic border-l-2 border-amber-400 pl-4 py-1">
+                <blockquote className="text-stone-100 text-xs sm:text-sm leading-relaxed font-medium italic border-l-2 border-amber-400 pl-4 py-1">
                   "{KEY_LEADERSHIP.managingDirector.message}"
                 </blockquote>
               </div>
-              <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] text-emerald-300">
+              <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-emerald-300 font-bold">
                 <span>Golden Fiber Crafts Ltd.</span>
                 <span className="font-serif italic font-bold text-amber-300">Sustainable Excellence</span>
               </div>
@@ -255,24 +255,24 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
                     className="h-20 w-20 sm:h-24 sm:w-24 rounded-2xl object-cover border-2 border-emerald-400/80 shadow-lg shrink-0"
                   />
                   <div>
-                    <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider text-emerald-300 bg-emerald-500/20 border border-emerald-400/30 mb-1">
+                    <span className="inline-block px-2.5 py-0.5 rounded-full text-xs font-extrabold uppercase tracking-wider text-emerald-300 bg-emerald-500/20 border border-emerald-400/30 mb-1">
                       {KEY_LEADERSHIP.seniorDirector.title}
                     </span>
                     <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">
                       {KEY_LEADERSHIP.seniorDirector.name}
                     </h3>
-                    <p className="text-xs text-stone-300">Message From Senior Director</p>
-                    <a href="tel:+8801721994082" className="text-xs text-emerald-400 hover:underline inline-flex items-center gap-1 mt-1 font-semibold">
+                    <p className="text-xs text-stone-200 font-semibold">Message From Senior Director</p>
+                    <a href="tel:+8801721994082" className="text-xs text-emerald-300 hover:underline inline-flex items-center gap-1 mt-1 font-bold">
                       <Phone className="h-3 w-3" /> +8801721-994082
                     </a>
                   </div>
                 </div>
 
-                <blockquote className="text-stone-200 text-xs sm:text-sm leading-relaxed font-light italic border-l-2 border-emerald-400 pl-4 py-1">
+                <blockquote className="text-stone-100 text-xs sm:text-sm leading-relaxed font-medium italic border-l-2 border-emerald-400 pl-4 py-1">
                   "{KEY_LEADERSHIP.seniorDirector.message}"
                 </blockquote>
               </div>
-              <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] text-emerald-300">
+              <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-emerald-300 font-bold">
                 <span>Golden Fiber Crafts Ltd.</span>
                 <span className="font-serif italic font-bold text-amber-300">Empowering Artisans</span>
               </div>
@@ -358,7 +358,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
             <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
               Future Goals & Expansion Plan
             </h2>
-            <p className="text-stone-300 text-xs sm:text-sm font-light leading-relaxed">
+            <p className="text-stone-100 text-xs sm:text-sm font-medium leading-relaxed">
               At Golden Fiber Crafts Ltd., we are focused on sustainable growth, global expansion, and continuous innovation. Our long-term vision is to strengthen our position as a trusted global manufacturer and exporter of eco-friendly handicrafts and natural-fiber products.
             </p>
           </div>

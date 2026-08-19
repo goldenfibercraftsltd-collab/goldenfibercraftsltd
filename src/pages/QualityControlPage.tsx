@@ -577,7 +577,7 @@ export const QualityControlPage: React.FC = () => {
                 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white"
                 speed={35}
               />
-              <p className="text-stone-200 text-xs sm:text-sm leading-relaxed font-light">
+              <p className="text-stone-100 text-xs sm:text-sm leading-relaxed font-medium">
                 Request physical master samples, inspection certificates, or custom OEM production quotes for your brand today.
               </p>
             </div>
