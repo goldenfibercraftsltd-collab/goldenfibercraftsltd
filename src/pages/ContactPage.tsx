@@ -25,16 +25,12 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuoteModal }) =>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Page Banner with reveal-up */}
-        <div className="reveal-up relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-950 via-stone-900 to-amber-950 p-8 sm:p-12 text-white shadow-2xl">
-          <div className="relative z-10 max-w-3xl space-y-3">
-            <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/20 px-3.5 py-1 text-xs font-bold text-emerald-300 backdrop-blur-md border border-emerald-500/30">
-              <MessageSquare className="h-3.5 w-3.5" />
-              Direct Factory Inquiry
-            </span>
-            <h1 className="font-serif text-3xl sm:text-5xl font-extrabold tracking-tight">
+        <div className="reveal-up relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-950 via-stone-900 to-amber-950 p-6 sm:p-8 text-white shadow-xl">
+          <div className="relative z-10 max-w-3xl space-y-2.5">
+            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
               Contact Us & Request Sample
             </h1>
-            <p className="text-stone-300 text-sm sm:text-base leading-relaxed font-light">
+            <p className="text-stone-200 text-xs sm:text-sm leading-relaxed font-normal">
               Have a custom product requirement or price quotation inquiry? Our team responds within 1 business hour.
             </p>
           </div>

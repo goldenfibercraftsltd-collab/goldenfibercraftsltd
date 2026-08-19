@@ -39,27 +39,23 @@ interface AboutPageProps {
 
 export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
   return (
-    <div className="bg-amber-50/20 py-12 lg:py-20 animate-fadeIn font-sans space-y-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
+    <div className="bg-amber-50/20 py-8 lg:py-12 animate-fadeIn font-sans space-y-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* 1. Page Banner Header */}
-        <div className="reveal-up relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-950 via-stone-900 to-emerald-900 p-8 sm:p-12 text-white shadow-2xl border border-emerald-800/40">
-          <div className="relative z-10 max-w-3xl space-y-4">
-            <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/20 px-3.5 py-1 text-xs font-bold text-emerald-300 backdrop-blur-md border border-emerald-500/30">
-              <Sparkles className="h-3.5 w-3.5" />
-              Official Company Profile
-            </span>
+        <div className="reveal-up relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-950 via-stone-900 to-emerald-900 p-6 sm:p-8 text-white shadow-xl border border-emerald-800/40">
+          <div className="relative z-10 max-w-3xl space-y-3">
             <ScrollTypingText
               as="h1"
               text="About Golden Fiber Crafts Ltd."
-              className="font-serif text-3xl sm:text-5xl font-extrabold tracking-tight text-white"
+              className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white"
               speed={35}
             />
-            <p className="text-emerald-200 font-serif italic text-base sm:text-lg">
+            <p className="text-amber-300 font-serif italic text-sm sm:text-base">
               "{TAGLINE}"
             </p>
-            <p className="text-stone-300 text-xs sm:text-sm leading-relaxed font-light">
-              {SUB_TAGLINE} — Bangladesh’s premier manufacturer and exporter of eco-friendly jute, seagrass, kaisa grass handicrafts, storage baskets, planters, and sustainable lifestyle goods.
+            <p className="text-stone-200 text-xs sm:text-sm leading-relaxed font-normal">
+              Bangladesh’s premier manufacturer and exporter of eco-friendly jute, seagrass, kaisa grass handicrafts, storage baskets, planters, and natural home decor.
             </p>
           </div>
           <div className="absolute -right-12 -bottom-12 opacity-10 pointer-events-none">
