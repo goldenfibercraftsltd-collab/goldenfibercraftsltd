@@ -18,7 +18,7 @@ export const RAW_MATERIALS: MaterialItem[] = [
     name: 'Seagrass',
     scientificName: 'Cyperus Malaccensis',
     description: 'Scientific name of Seagrass (Cyperus Malaccensis). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Floor mat, Table mat, Pet basket, Planter, Tray, Coaster, Pouf etc.',
-    rawImages: ['/materials/orig_sea-1.jpg', '/materials/orig_sea-2.jpg'],
+    rawImages: ['/materials/seagrass_plant_new.jpg', '/materials/seagrass_fiber_new.jpg'],
     sampleImages: ['/materials/orig_BDH-01.jpg', '/materials/orig_BDH-10.jpg'],
     categorySlug: 'seagrass'
   },
