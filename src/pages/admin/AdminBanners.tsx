@@ -45,6 +45,8 @@ const PRESET_BANNERS = [
   { label: 'Jute & Seagrass Handcrafts', url: '/banners/banner1.png' },
   { label: 'Seagrass & Natural Baskets', url: '/banners/banner2.png' },
   { label: 'Factory & Global Export', url: '/banners/banner3.png' },
+  { label: 'Village Weavers & Artisanal Heritage', url: '/banners/banner4.png' },
+  { label: 'Eco-Living & Modern Natural Home Decor', url: '/banners/banner5.png' },
 ];
 
 export const AdminBanners: React.FC = () => {
@@ -122,6 +124,8 @@ export const AdminBanners: React.FC = () => {
           { id: 1, title: 'Handcrafted Jute & Seagrass Collection', image_url: '/banners/banner1.png', link_url: '/products?category=jute', display_order: 1, is_active: 1, category_slug: 'jute', category_name: 'Jute', show_category_badge: 0 },
           { id: 2, title: 'Handwoven Seagrass & Natural Baskets', image_url: '/banners/banner2.png', link_url: '/products?category=seagrass', display_order: 2, is_active: 1, category_slug: 'seagrass', category_name: 'Seagrass', show_category_badge: 0 },
           { id: 3, title: 'Worldwide Sustainable Manufacturing', image_url: '/banners/banner3.png', link_url: '/products', display_order: 3, is_active: 1, category_slug: 'recycle-fabric', category_name: 'Recycle Fabric', show_category_badge: 0 },
+          { id: 4, title: 'Village Weavers & Artisanal Heritage', image_url: '/banners/banner4.png', link_url: '/products?category=jute', display_order: 4, is_active: 1, category_slug: 'jute', category_name: 'Jute', show_category_badge: 0 },
+          { id: 5, title: 'Eco-Living & Modern Natural Home Decor', image_url: '/banners/banner5.png', link_url: '/products?category=rugs', display_order: 5, is_active: 1, category_slug: 'rugs', category_name: 'Rugs & Mats', show_category_badge: 0 },
         ]);
       }
     } catch {

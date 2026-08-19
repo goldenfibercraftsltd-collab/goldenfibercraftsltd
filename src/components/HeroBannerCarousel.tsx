@@ -45,6 +45,24 @@ const DEFAULT_BANNERS: BannerItem[] = [
     category_name: 'Recycle Fabric',
     show_category_badge: false,
     link_url: '/products'
+  },
+  {
+    id: 4,
+    image_url: '/banners/banner4.png',
+    title: 'Village Weavers & Artisanal Heritage',
+    category_slug: 'jute',
+    category_name: 'Jute',
+    show_category_badge: false,
+    link_url: '/products?category=jute'
+  },
+  {
+    id: 5,
+    image_url: '/banners/banner5.png',
+    title: 'Eco-Living & Modern Natural Home Decor',
+    category_slug: 'rugs',
+    category_name: 'Rugs & Mats',
+    show_category_badge: false,
+    link_url: '/products?category=rugs'
   }
 ];
 
