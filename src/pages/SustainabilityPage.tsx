@@ -182,41 +182,6 @@ export const SustainabilityPage: React.FC = () => {
             </p>
           </div>
 
-          {/* 4 Impact Metric Badges with Middle-Outward Card Slide */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto pt-4">
-            <div className="card-slide-far-left stagger-2 hover-lift-sm p-4 rounded-2xl bg-white/90 border border-emerald-200/80 shadow-xs">
-              <div className="h-9 w-9 rounded-xl bg-emerald-100 text-emerald-950 flex items-center justify-center font-bold mb-2">
-                <Sprout className="h-5 w-5" />
-              </div>
-              <h4 className="font-serif text-sm font-extrabold text-black">100% Renewable</h4>
-              <p className="text-xs text-stone-900 font-semibold">Plant-based raw fibers</p>
-            </div>
-
-            <div className="card-slide-left stagger-1 hover-lift-sm p-4 rounded-2xl bg-white/90 border border-emerald-200/80 shadow-xs">
-              <div className="h-9 w-9 rounded-xl bg-amber-100 text-amber-950 flex items-center justify-center font-bold mb-2">
-                <Users className="h-5 w-5" />
-              </div>
-              <h4 className="font-serif text-sm font-extrabold text-black">85%+ Women Artisans</h4>
-              <p className="text-xs text-stone-900 font-semibold">Ethical fair-trade wages</p>
-            </div>
-
-            <div className="card-slide-right stagger-1 hover-lift-sm p-4 rounded-2xl bg-white/90 border border-emerald-200/80 shadow-xs">
-              <div className="h-9 w-9 rounded-xl bg-teal-100 text-teal-950 flex items-center justify-center font-bold mb-2">
-                <Recycle className="h-5 w-5" />
-              </div>
-              <h4 className="font-serif text-sm font-extrabold text-black">Zero Plastic</h4>
-              <p className="text-xs text-stone-900 font-semibold">100% Biodegradable</p>
-            </div>
-
-            <div className="card-slide-far-right stagger-2 hover-lift-sm p-4 rounded-2xl bg-white/90 border border-emerald-200/80 shadow-xs">
-              <div className="h-9 w-9 rounded-xl bg-blue-100 text-blue-950 flex items-center justify-center font-bold mb-2">
-                <Globe2 className="h-5 w-5" />
-              </div>
-              <h4 className="font-serif text-sm font-extrabold text-black">UN SDG Aligned</h4>
-              <p className="text-xs text-stone-900 font-semibold">Global climate action</p>
-            </div>
-          </div>
-
         </div>
       </section>
 
@@ -525,6 +490,60 @@ export const SustainabilityPage: React.FC = () => {
 
           </div>
 
+        </div>
+      </section>
+
+      {/* ---------------------------------------------------- */}
+      {/* Sustainability Impact Metrics (Before Footer) */}
+      {/* ---------------------------------------------------- */}
+      <section className="py-12 bg-white/70 border-t border-b border-emerald-100">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-8 space-y-2">
+            <div className="inline-flex items-center gap-2 rounded-full bg-emerald-100 border border-emerald-300/80 px-3.5 py-1 text-xs font-extrabold uppercase tracking-widest text-black shadow-xs">
+              <Leaf className="h-4 w-4 text-emerald-800" />
+              <span>Measurable Impact Commitments</span>
+            </div>
+            <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-black">
+              Our Core Sustainability Commitments
+            </h3>
+            <p className="text-xs sm:text-sm text-stone-900 font-medium">
+              Creating measurable ecological and social impact across rural artisan communities in Bangladesh
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+            <div className="card-slide-far-left stagger-2 hover-lift-sm p-4 rounded-2xl bg-white border border-emerald-200/80 shadow-xs">
+              <div className="h-9 w-9 rounded-xl bg-emerald-100 text-emerald-950 flex items-center justify-center font-bold mb-2">
+                <Sprout className="h-5 w-5" />
+              </div>
+              <h4 className="font-serif text-sm font-extrabold text-black">100% Renewable</h4>
+              <p className="text-xs text-stone-900 font-semibold">Plant-based raw fibers</p>
+            </div>
+
+            <div className="card-slide-left stagger-1 hover-lift-sm p-4 rounded-2xl bg-white border border-emerald-200/80 shadow-xs">
+              <div className="h-9 w-9 rounded-xl bg-amber-100 text-amber-950 flex items-center justify-center font-bold mb-2">
+                <Users className="h-5 w-5" />
+              </div>
+              <h4 className="font-serif text-sm font-extrabold text-black">85%+ Women Artisans</h4>
+              <p className="text-xs text-stone-900 font-semibold">Ethical fair-trade wages</p>
+            </div>
+
+            <div className="card-slide-right stagger-1 hover-lift-sm p-4 rounded-2xl bg-white border border-emerald-200/80 shadow-xs">
+              <div className="h-9 w-9 rounded-xl bg-teal-100 text-teal-950 flex items-center justify-center font-bold mb-2">
+                <Recycle className="h-5 w-5" />
+              </div>
+              <h4 className="font-serif text-sm font-extrabold text-black">Zero Plastic</h4>
+              <p className="text-xs text-stone-900 font-semibold">100% Biodegradable</p>
+            </div>
+
+            <div className="card-slide-far-right stagger-2 hover-lift-sm p-4 rounded-2xl bg-white border border-emerald-200/80 shadow-xs">
+              <div className="h-9 w-9 rounded-xl bg-blue-100 text-blue-950 flex items-center justify-center font-bold mb-2">
+                <Globe2 className="h-5 w-5" />
+              </div>
+              <h4 className="font-serif text-sm font-extrabold text-black">UN SDG Aligned</h4>
+              <p className="text-xs text-stone-900 font-semibold">Global climate action</p>
+            </div>
+          </div>
         </div>
       </section>
 
