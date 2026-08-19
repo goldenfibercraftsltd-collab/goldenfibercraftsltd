@@ -21,7 +21,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuoteModal }) =>
   };
 
   return (
-    <div className="bg-[#fcfbf9] min-h-screen pb-24 font-sans text-stone-900 animate-fadeIn space-y-12 sm:space-y-16">
+    <div className="bg-[#fcfbf9] min-h-screen pb-12 font-sans text-stone-900 animate-fadeIn space-y-6 sm:space-y-8">
       
       {/* 1. Hero Page Banner */}
       <div className="relative overflow-hidden bg-gradient-to-r from-[#064e3b] via-[#065f46] to-[#047857] text-white">
@@ -32,24 +32,24 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuoteModal }) =>
           }} 
         />
         
-        <div className="relative mx-auto max-w-7xl px-4 py-12 sm:py-16 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-          <div className="max-w-3xl space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm text-xs font-black uppercase tracking-widest text-emerald-200 border border-white/20">
-              <MessageSquare className="h-3.5 w-3.5 text-emerald-300" />
+        <div className="relative mx-auto max-w-7xl px-4 py-6 sm:py-8 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="max-w-3xl space-y-2">
+            <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-black uppercase tracking-widest text-emerald-200 border border-white/20">
+              <MessageSquare className="h-3 w-3 text-emerald-300" />
               Global Export Inquiries
             </div>
-            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
+            <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-white">
               Contact Us & Request Sample
             </h1>
-            <p className="text-emerald-100/90 text-sm sm:text-base leading-relaxed font-medium">
+            <p className="text-white text-xs sm:text-sm leading-relaxed font-medium">
               Have a custom product requirement, OEM branding specification, or container volume price quotation inquiry? Our export desk responds within 1 business hour.
             </p>
           </div>
 
           <div className="hidden md:flex items-center justify-center shrink-0">
             <div className="relative group">
-              <div className="absolute -inset-4 rounded-full bg-emerald-400/20 blur-xl group-hover:bg-emerald-400/35 transition-all duration-500"></div>
-              <div className="relative h-28 w-28 sm:h-32 sm:w-32 rounded-3xl bg-white/10 backdrop-blur-md border border-white/25 p-3.5 shadow-2xl flex items-center justify-center hover:scale-105 transition-transform duration-500">
+              <div className="absolute -inset-3 rounded-full bg-emerald-400/20 blur-lg group-hover:bg-emerald-400/35 transition-all duration-500"></div>
+              <div className="relative h-20 w-20 sm:h-24 sm:w-24 rounded-2xl bg-white/10 backdrop-blur-md border border-white/25 p-2.5 shadow-xl flex items-center justify-center hover:scale-105 transition-transform duration-500">
                 <img
                   src="/logo-icon.png"
                   alt="Golden Fiber Crafts Ltd."
@@ -61,8 +61,8 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuoteModal }) =>
         </div>
 
         {/* Large Decorative Watermark in Background */}
-        <div className="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
-          <img src="/logo-icon.png" alt="Watermark" className="h-64 w-64 lg:h-80 lg:w-80 object-contain filter invert" />
+        <div className="absolute -right-8 -bottom-8 opacity-10 pointer-events-none">
+          <img src="/logo-icon.png" alt="Watermark" className="h-48 w-48 lg:h-60 lg:w-60 object-contain filter invert" />
         </div>
       </div>
 

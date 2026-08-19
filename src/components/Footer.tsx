@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Globe, ArrowUp, MessageCircle, HeartHandshake } from 'lucide-react';
+import { Mail, Phone, MapPin, Globe, ArrowUp, MessageCircle } from 'lucide-react';
 import { TAGLINE } from '../data/products';
 
 export const Footer: React.FC = () => {
@@ -9,17 +9,16 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-[#064e3b] text-emerald-100 font-sans border-t-4 border-emerald-500 shadow-2xl">
+    <footer className="bg-[#053d2e] text-white font-sans border-t-4 border-emerald-500 shadow-2xl">
+      
       {/* Main Footer Content Grid */}
-
-      {/* 2. Main Footer Content Grid */}
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 items-start">
           
           {/* Col 1: About / Branding */}
-          <div className="flex flex-col items-start reveal-up stagger-1">
+          <div className="lg:col-span-4 flex flex-col items-start space-y-3">
             <Link to="/" onClick={scrollToTop} className="block group">
-              <div className="bg-white rounded-2xl p-4 shadow-xl border border-emerald-400/30 overflow-hidden hover:scale-105 transition-transform duration-300 w-52 flex flex-col items-center justify-center text-center">
+              <div className="bg-white rounded-2xl p-4 shadow-xl border border-emerald-400/30 overflow-hidden hover:scale-105 transition-transform duration-300 w-56 flex flex-col items-center justify-center text-center">
                 {/* Official Green Leaf GF Emblem */}
                 <img
                   src="/logo-icon.png"
@@ -34,7 +33,7 @@ export const Footer: React.FC = () => {
                   </h3>
                   <div className="flex items-center justify-center gap-1.5 my-1">
                     <span className="h-[1px] w-4 bg-[#14532d]/40"></span>
-                    <span className="text-[10px] font-sans font-extrabold text-[#14532d] uppercase tracking-widest">
+                    <span className="text-[11px] font-sans font-black text-[#14532d] uppercase tracking-widest">
                       CRAFTS LTD.
                     </span>
                     <span className="h-[1px] w-4 bg-[#14532d]/40"></span>
@@ -42,48 +41,51 @@ export const Footer: React.FC = () => {
                 </div>
 
                 {/* Tagline Directly Underneath */}
-                <div className="mt-1.5 pt-1.5 border-t border-stone-200/80 w-full">
-                  <p className="text-[10px] sm:text-[11px] text-stone-700 font-serif italic text-center font-bold">
+                <div className="mt-1.5 pt-1.5 border-t border-stone-200 w-full">
+                  <p className="text-xs text-stone-800 font-serif italic text-center font-bold">
                     "{TAGLINE}"
                   </p>
                 </div>
               </div>
             </Link>
+            <p className="text-xs sm:text-sm text-emerald-100/90 font-medium leading-relaxed max-w-xs">
+              Bangladesh’s premier manufacturer & global exporter of sustainable, 100% natural fiber handicrafts.
+            </p>
           </div>
 
           {/* Col 2: Categories */}
-          <div className="space-y-4 reveal-up stagger-2">
-            <h4 className="font-serif text-base font-bold text-white uppercase tracking-wider border-b border-emerald-700/60 pb-2">
+          <div className="lg:col-span-2 space-y-3">
+            <h4 className="font-serif text-base font-black text-amber-300 uppercase tracking-wider border-b border-emerald-700/80 pb-1.5">
               Categories
             </h4>
-            <ul className="space-y-2 text-xs font-medium text-emerald-100">
+            <ul className="space-y-2 text-xs sm:text-sm font-bold text-white">
               <li>
-                <Link to="/products?category=jute" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block hover-lift-sm">
+                <Link to="/products?category=jute" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block">
                   Jute Crafts & Baskets
                 </Link>
               </li>
               <li>
-                <Link to="/products?category=seagrass" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block hover-lift-sm">
+                <Link to="/products?category=seagrass" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block">
                   Seagrass & Planters
                 </Link>
               </li>
               <li>
-                <Link to="/products?category=rugs" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block hover-lift-sm">
+                <Link to="/products?category=rugs" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block">
                   Natural Fiber Rugs
                 </Link>
               </li>
               <li>
-                <Link to="/products?category=rattan" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block hover-lift-sm">
+                <Link to="/products?category=rattan" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block">
                   Rattan & Cane Decor
                 </Link>
               </li>
               <li>
-                <Link to="/products?category=bamboo" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block hover-lift-sm">
+                <Link to="/products?category=bamboo" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block">
                   Bamboo & Utility Crafts
                 </Link>
               </li>
               <li>
-                <Link to="/products?category=recycle-fabric" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block hover-lift-sm">
+                <Link to="/products?category=recycle-fabric" onClick={scrollToTop} className="hover:text-amber-300 transition-colors block">
                   Recycle Fabric Items
                 </Link>
               </li>
@@ -91,86 +93,88 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Col 3: Quick Links */}
-          <div className="space-y-4 reveal-up stagger-3">
-            <h4 className="font-serif text-base font-bold text-white uppercase tracking-wider border-b border-emerald-700/60 pb-2">
+          <div className="lg:col-span-2 space-y-3">
+            <h4 className="font-serif text-base font-black text-amber-300 uppercase tracking-wider border-b border-emerald-700/80 pb-1.5">
               Quick Links
             </h4>
-            <ul className="space-y-2 text-xs font-medium text-emerald-100">
+            <ul className="space-y-2 text-xs sm:text-sm font-bold text-white">
               <li>
-                <Link to="/" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5 hover-lift-sm">
+                <Link to="/" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5">
                   <span className="text-emerald-400">➔</span> Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5 hover-lift-sm">
+                <Link to="/about" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5">
                   <span className="text-emerald-400">➔</span> About Us
                 </Link>
               </li>
               <li>
-                <Link to="/products" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5 hover-lift-sm">
-                  <span className="text-emerald-400">➔</span> Products
+                <Link to="/products" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                  <span className="text-emerald-400">➔</span> Products Catalog
                 </Link>
               </li>
               <li>
-                <Link to="/clients" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5 hover-lift-sm">
-                  <span className="text-emerald-400">➔</span> Clients & Buyers
+                <Link to="/clients" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                  <span className="text-emerald-400">➔</span> Clients & Certs
                 </Link>
               </li>
               <li>
-                <Link to="/sustainability" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5 hover-lift-sm">
+                <Link to="/sustainability" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5">
                   <span className="text-emerald-400">➔</span> Sustainability
                 </Link>
               </li>
               <li>
-                <Link to="/contact" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5 hover-lift-sm">
-                  <span className="text-emerald-400">➔</span> Contact
+                <Link to="/contact" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                  <span className="text-emerald-400">➔</span> Contact Desk
                 </Link>
               </li>
               <li>
-                <Link to="/materials" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5 hover-lift-sm">
+                <Link to="/materials" onClick={scrollToTop} className="hover:text-amber-300 transition-colors flex items-center gap-1.5">
                   <span className="text-emerald-400">➔</span> Materials Info
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Col 4: Contact With Us */}
-          <div className="space-y-4 reveal-up stagger-4">
-            <h4 className="font-serif text-base font-bold text-white uppercase tracking-wider border-b border-emerald-700/60 pb-2">
+          {/* Col 4: Contact & Locations */}
+          <div className="lg:col-span-4 space-y-3">
+            <h4 className="font-serif text-base font-black text-amber-300 uppercase tracking-wider border-b border-emerald-700/80 pb-1.5">
               Contact & Locations
             </h4>
-            <div className="space-y-2.5 text-xs text-emerald-100">
+            <div className="space-y-2.5 text-xs sm:text-sm text-white">
               <div className="flex items-center gap-2.5">
                 <Mail className="h-4 w-4 text-amber-400 shrink-0" />
-                <a href="mailto:info@goldenfibercrafts.com" className="hover:underline text-amber-200 font-medium">info@goldenfibercrafts.com</a>
+                <a href="mailto:info@goldenfibercrafts.com" className="hover:underline text-white font-bold">info@goldenfibercrafts.com</a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="h-4 w-4 text-amber-400 shrink-0" />
-                <a href="tel:+8801916183583" className="hover:underline text-amber-200 font-medium">+8801916-183583 (MD)</a>
+                <a href="tel:+8801916183583" className="hover:underline text-white font-bold">+8801916-183583 (MD)</a>
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="h-4 w-4 text-amber-400 shrink-0" />
-                <a href="tel:+8801721994082" className="hover:underline text-amber-200 font-medium">+8801721-994082 (Senior Director)</a>
+                <a href="tel:+8801721994082" className="hover:underline text-white font-bold">+8801721-994082 (Senior Director)</a>
               </div>
               <div className="flex items-center gap-2.5">
                 <MessageCircle className="h-4 w-4 text-emerald-300 shrink-0" />
-                <a href="https://wa.me/8801916183583?text=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%20I%20would%20like%20to%20know%20more%20about%20your%20handicraft%20products%20and%20export%20details." target="_blank" rel="noopener noreferrer" className="hover:underline text-emerald-200 font-medium">WhatsApp: +8801916-183583</a>
+                <a href="https://wa.me/8801916183583?text=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%20I%20would%20like%20to%20know%20more%20about%20your%20handicraft%20products%20and%20export%20details." target="_blank" rel="noopener noreferrer" className="hover:underline text-emerald-200 font-bold">WhatsApp: +8801916-183583</a>
               </div>
               <div className="flex items-start gap-2.5 pt-1">
                 <MapPin className="h-4 w-4 text-amber-400 shrink-0 mt-0.5" />
-                <span className="text-[11px] leading-snug">
-                  <strong className="text-white">Corporate Office:</strong> House# 78, Road# 16, Sector# 11, Uttara, Dhaka, Bangladesh
-                </span>
+                <div className="leading-snug">
+                  <strong className="text-amber-300 block text-xs uppercase tracking-wider font-black">Corporate Office:</strong>
+                  <span className="text-white font-medium text-xs sm:text-sm">House# 78, Road# 16, Sector# 11, Uttara, Dhaka, Bangladesh</span>
+                </div>
               </div>
               <div className="flex items-start gap-2.5 pt-0.5">
                 <MapPin className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
-                <span className="text-[11px] leading-snug">
-                  <strong className="text-white">Factories:</strong> Unit 1 (Salna, Gazipur) & Unit 2 (Nilganj, Kishoreganj)
-                </span>
+                <div className="leading-snug">
+                  <strong className="text-emerald-300 block text-xs uppercase tracking-wider font-black">Factories:</strong>
+                  <span className="text-white font-medium text-xs sm:text-sm">Unit 1 (Salna, Gazipur) & Unit 2 (Nilganj, Kishoreganj)</span>
+                </div>
               </div>
               <div className="flex items-center gap-2.5 pt-1">
                 <Globe className="h-4 w-4 text-amber-400 shrink-0" />
-                <a href="https://www.goldenfibercrafts.com" target="_blank" rel="noopener noreferrer" className="hover:underline text-amber-200 font-medium">www.goldenfibercrafts.com</a>
+                <a href="https://www.goldenfibercrafts.com" target="_blank" rel="noopener noreferrer" className="hover:underline text-amber-200 font-bold">www.goldenfibercrafts.com</a>
               </div>
             </div>
           </div>
@@ -178,14 +182,14 @@ export const Footer: React.FC = () => {
         </div>
       </div>
 
-      {/* 3. Bottom Copyright Strip */}
-      <div className="bg-[#032e23] py-4 px-4 text-center text-xs text-emerald-300/80 border-t border-emerald-900/80 reveal-up">
+      {/* Bottom Copyright Strip */}
+      <div className="bg-[#032e23] py-3.5 px-4 text-center text-xs sm:text-sm text-emerald-100 font-semibold border-t border-emerald-900/80">
         <div className="mx-auto max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-2">
           <span>© {new Date().getFullYear()} Golden Fiber Crafts Ltd. All rights reserved.</span>
-          <span className="text-emerald-200 font-serif italic">"{TAGLINE}"</span>
+          <span className="text-amber-300 font-serif italic">"{TAGLINE}"</span>
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-1.5 text-emerald-300 hover:text-white transition-colors btn-interactive"
+            className="flex items-center gap-1.5 text-white hover:text-amber-300 transition-colors font-bold cursor-pointer"
           >
             <span>Back to Top</span>
             <ArrowUp className="h-3.5 w-3.5" />
@@ -196,3 +200,5 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
+
+export default Footer;

@@ -621,17 +621,17 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
           </div>
 
           {/* 6 Manufacturing Strengths */}
-          <div className="rounded-3xl bg-emerald-950 p-8 sm:p-10 text-white shadow-xl space-y-6">
-            <div className="text-center max-w-2xl mx-auto space-y-2">
-              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-amber-300">
+          <div className="rounded-3xl bg-emerald-950 py-5 px-5 sm:py-6 sm:px-8 text-white shadow-xl space-y-4 border border-emerald-800/60">
+            <div className="text-center max-w-2xl mx-auto space-y-1">
+              <h3 className="font-serif text-xl sm:text-2xl lg:text-3xl font-black text-amber-300">
                 Our Manufacturing Strength
               </h3>
-              <p className="text-xs sm:text-sm text-stone-100 font-medium leading-relaxed">
+              <p className="text-xs sm:text-sm text-white font-medium leading-relaxed">
                 "We transform Bangladesh's natural fibers and traditional craftsmanship into thoughtfully designed products for the global market."
               </p>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 pt-2">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 pt-1">
               {[
                 { title: 'Craftsmanship', desc: 'Generation-old tactile handweaving excellence' },
                 { title: 'Consistent Quality', desc: 'Zero-defect tolerance and ISO standards' },
@@ -640,9 +640,9 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
                 { title: 'Responsible Manufacturing', desc: 'Ethical wages, safe workspaces, zero child labor' },
                 { title: 'On-Time Delivery', desc: 'Strict lead times with 50 HQ containers/month' },
               ].map((str, idx) => (
-                <div key={idx} className="bg-white/15 backdrop-blur-xs p-4 rounded-2xl border border-white/15 text-center space-y-1 hover:bg-white/20 transition-all shadow-xs">
-                  <h4 className="font-bold text-xs sm:text-sm text-amber-300">{str.title}</h4>
-                  <p className="text-xs text-stone-100 font-medium leading-snug">{str.desc}</p>
+                <div key={idx} className="bg-white/15 backdrop-blur-xs p-3 sm:p-3.5 rounded-2xl border border-white/20 text-center space-y-1 hover:bg-white/25 transition-all shadow-xs">
+                  <h4 className="font-black text-xs sm:text-sm text-amber-300">{str.title}</h4>
+                  <p className="text-xs text-white font-semibold leading-snug">{str.desc}</p>
                 </div>
               ))}
             </div>

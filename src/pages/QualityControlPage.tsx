@@ -121,7 +121,7 @@ export const QualityControlPage: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <div className="bg-[#fcfbf9] text-stone-900 font-sans min-h-screen pb-24 animate-fadeIn space-y-12 sm:space-y-16">
+    <div className="bg-[#fcfbf9] text-stone-900 font-sans min-h-screen pb-12 animate-fadeIn space-y-6 sm:space-y-8">
       
       {/* Lightbox / Zoom Modal */}
       {selectedImage && (
@@ -154,19 +154,19 @@ export const QualityControlPage: React.FC = () => {
           }} 
         />
         
-        <div className="relative mx-auto max-w-7xl px-4 py-12 sm:py-16 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-          <div className="max-w-3xl space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm text-xs font-black uppercase tracking-widest text-emerald-200 border border-white/20">
-              <ShieldCheck className="h-3.5 w-3.5 text-emerald-300" />
+        <div className="relative mx-auto max-w-7xl px-4 py-6 sm:py-8 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="max-w-3xl space-y-2">
+            <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-black uppercase tracking-widest text-emerald-200 border border-white/20">
+              <ShieldCheck className="h-3 w-3 text-emerald-300" />
               Quality Assurance & Compliance
             </div>
-            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
+            <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-white">
               International Export Quality Control
             </h1>
-            <p className="text-emerald-100/90 text-sm sm:text-base leading-relaxed font-medium">
+            <p className="text-white text-xs sm:text-sm leading-relaxed font-medium">
               From raw fiber selection to final container loading, our stringent 4-stage inspection protocol ensures 100% defect-free, mold-resistant, compliant natural handicraft export.
             </p>
-            <div className="flex items-center gap-2 pt-1">
+            <div className="flex items-center gap-2 pt-0.5">
               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
                 <Sparkles className="h-3 w-3 text-amber-300" /> AQL 2.5 Standard
               </span>
@@ -181,8 +181,8 @@ export const QualityControlPage: React.FC = () => {
 
           <div className="hidden md:flex items-center justify-center shrink-0">
             <div className="relative group">
-              <div className="absolute -inset-4 rounded-full bg-emerald-400/20 blur-xl group-hover:bg-emerald-400/35 transition-all duration-500"></div>
-              <div className="relative h-28 w-28 sm:h-32 sm:w-32 rounded-3xl bg-white/10 backdrop-blur-md border border-white/25 p-3.5 shadow-2xl flex items-center justify-center hover:scale-105 transition-transform duration-500">
+              <div className="absolute -inset-3 rounded-full bg-emerald-400/20 blur-lg group-hover:bg-emerald-400/35 transition-all duration-500"></div>
+              <div className="relative h-20 w-20 sm:h-24 sm:w-24 rounded-2xl bg-white/10 backdrop-blur-md border border-white/25 p-2.5 shadow-xl flex items-center justify-center hover:scale-105 transition-transform duration-500">
                 <img
                   src="/logo-icon.png"
                   alt="Golden Fiber Crafts Ltd."
@@ -194,13 +194,13 @@ export const QualityControlPage: React.FC = () => {
         </div>
 
         {/* Large Decorative Watermark in Background */}
-        <div className="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
-          <img src="/logo-icon.png" alt="Watermark" className="h-64 w-64 lg:h-80 lg:w-80 object-contain filter invert" />
+        <div className="absolute -right-8 -bottom-8 opacity-10 pointer-events-none">
+          <img src="/logo-icon.png" alt="Watermark" className="h-48 w-48 lg:h-60 lg:w-60 object-contain filter invert" />
         </div>
       </div>
 
       {/* 2. Four Alternating Quality Pillar Sections */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-14">
         {QUALITY_SECTIONS.map((section, idx) => {
           const isEven = idx % 2 === 1;
 
@@ -521,19 +521,19 @@ export const QualityControlPage: React.FC = () => {
 
       {/* 5. Inspection Inquiry CTA */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-gradient-to-r from-emerald-950 via-stone-900 to-emerald-950 p-8 sm:p-12 text-white text-center space-y-6 shadow-xl border border-emerald-500/30">
-          <div className="max-w-2xl mx-auto space-y-3">
-            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-black">
+        <div className="rounded-3xl bg-gradient-to-r from-emerald-950 via-stone-900 to-emerald-950 py-6 px-6 sm:py-8 sm:px-10 text-white text-center space-y-4 shadow-xl border border-emerald-500/30">
+          <div className="max-w-2xl mx-auto space-y-1.5">
+            <h2 className="font-serif text-xl sm:text-2xl lg:text-3xl font-black text-white">
               Require Custom Quality Standards for Your Brand?
             </h2>
-            <p className="text-xs sm:text-sm text-stone-200 font-medium">
+            <p className="text-xs sm:text-sm text-stone-100 font-medium">
               We accommodate buyer-specified QA parameters, third-party lab inspections (SGS, TÜV, Intertek, Bureau Veritas), and customized master packaging barcodes.
             </p>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-1">
             <button
               onClick={() => navigate('/contact')}
-              className="px-7 py-3.5 rounded-full bg-amber-400 hover:bg-amber-300 text-stone-950 font-black text-xs sm:text-sm shadow-md transition-all cursor-pointer flex items-center gap-2"
+              className="px-6 py-2.5 rounded-full bg-amber-400 hover:bg-amber-300 text-stone-950 font-black text-xs sm:text-sm shadow-md transition-all cursor-pointer flex items-center gap-2"
             >
               <span>Contact Quality Assurance Desk</span>
               <ArrowRight className="h-4 w-4" />

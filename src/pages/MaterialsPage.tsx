@@ -151,9 +151,9 @@ export const MaterialsPage: React.FC = () => {
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E")`,
         }} />
         
-        <div className="relative mx-auto max-w-7xl px-4 py-10 sm:py-14 sm:px-6 lg:px-8">
+        <div className="relative mx-auto max-w-7xl px-4 py-6 sm:py-8 sm:px-6 lg:px-8">
           {/* Breadcrumbs */}
-          <div className="flex items-center gap-1.5 text-emerald-200/80 text-xs font-medium mb-4">
+          <div className="flex items-center gap-1.5 text-emerald-200/90 text-xs font-medium mb-2.5">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <span className="text-white font-bold">Materials Information</span>
@@ -161,23 +161,23 @@ export const MaterialsPage: React.FC = () => {
           
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
-              <div className="flex items-center gap-3 mb-2">
+              <div className="flex items-center gap-2.5 mb-1.5">
                 <div className="p-2 rounded-xl bg-white/10 backdrop-blur-sm">
-                  <Leaf className="h-6 w-6 text-emerald-300" />
+                  <Leaf className="h-5 w-5 text-emerald-300" />
                 </div>
                 <h1 className="text-2xl sm:text-3xl font-serif font-black text-white tracking-tight">
                   Raw Materials & Fibers
                 </h1>
               </div>
-              <p className="text-emerald-100/90 text-sm sm:text-base font-medium max-w-xl leading-relaxed">
+              <p className="text-white text-xs sm:text-sm font-medium max-w-xl leading-relaxed">
                 Discover the authentic natural fibers sourced from the heart of Bangladesh — each material 
                 handcrafted into premium eco-friendly products for global export.
               </p>
-              <div className="flex items-center gap-2 mt-3">
-                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
+              <div className="flex items-center gap-2 mt-2.5">
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
                   <Sparkles className="h-3 w-3" /> {RAW_MATERIALS.length} Natural Materials
                 </span>
-                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
+                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
                   100% Eco-Friendly
                 </span>
               </div>
@@ -187,8 +187,8 @@ export const MaterialsPage: React.FC = () => {
             <div className="flex items-center justify-center shrink-0">
               <div className="relative group">
                 {/* Glow ring */}
-                <div className="absolute -inset-4 rounded-full bg-emerald-400/20 blur-xl group-hover:bg-emerald-400/35 transition-all duration-500"></div>
-                <div className="relative h-28 w-28 sm:h-32 sm:w-32 rounded-3xl bg-white/10 backdrop-blur-md border border-white/25 p-3.5 shadow-2xl flex items-center justify-center hover:scale-105 transition-transform duration-500">
+                <div className="absolute -inset-3 rounded-full bg-emerald-400/20 blur-lg group-hover:bg-emerald-400/35 transition-all duration-500"></div>
+                <div className="relative h-20 w-20 sm:h-24 sm:w-24 rounded-2xl bg-white/10 backdrop-blur-md border border-white/25 p-2.5 shadow-xl flex items-center justify-center hover:scale-105 transition-transform duration-500">
                   <img
                     src="/logo-icon.png"
                     alt="Golden Fiber Crafts Ltd."
@@ -226,123 +226,140 @@ export const MaterialsPage: React.FC = () => {
                   transition-all duration-500 ease-out overflow-hidden
                   ${isExpanded ? 'ring-2 ring-emerald-500/30 shadow-xl' : ''}
                 `}>
-
-                  <div className={`grid grid-cols-1 lg:grid-cols-11 ${isEven ? '' : 'lg:direction-rtl'}`}>
+                  <div className={`grid grid-cols-1 lg:grid-cols-12 items-stretch`}>
                     
-                    {/* Left/Right: Raw Material Images */}
-                    <div className={`lg:col-span-3 p-5 sm:p-6 ${isEven ? '' : 'lg:order-3'}`}>
-                      <div className="flex items-center gap-2.5 mb-4">
-                        <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-emerald-800 to-emerald-950 text-white text-xs font-black shadow-lg border-2 border-emerald-600/30 shrink-0">
-                          {String(idx + 1).padStart(2, '0')}
-                        </span>
-                        <p className="text-[11px] uppercase tracking-[0.15em] font-black text-stone-600">
-                          Raw Material
-                        </p>
-                      </div>
-                      <div className="grid grid-cols-2 gap-2.5">
-                        {mat.rawImages.map((imgSrc, i) => (
-                          <div
-                            key={i}
-                            onClick={() => setPreviewImage({ src: imgSrc, title: `${mat.name} — Raw Material` })}
-                            className="relative aspect-square rounded-xl overflow-hidden bg-stone-100 cursor-pointer group/img ring-1 ring-stone-200/80 hover:ring-emerald-400/60 transition-all duration-300 shadow-sm hover:shadow-xl"
-                          >
-                            <img
-                              src={imgSrc}
-                              alt={`${mat.name} Raw Material`}
-                              className="h-full w-full object-cover transition-transform duration-500 group-hover/img:scale-110"
-                              loading="lazy"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-3">
-                              <Eye className="h-5 w-5 text-white drop-shadow-lg" />
+                    {/* Left: Raw Material Images Showcase (Enlarged) */}
+                    <div className={`lg:col-span-3 p-5 sm:p-6 bg-stone-50/80 flex flex-col justify-between border-b lg:border-b-0 ${isEven ? 'lg:border-r border-stone-200' : 'lg:border-l border-stone-200 lg:order-3'}`}>
+                      <div>
+                        <div className="flex items-center gap-2 mb-3">
+                          <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-emerald-950 text-amber-300 text-xs font-black shadow-md border border-amber-400/30 shrink-0">
+                            {String(idx + 1).padStart(2, '0')}
+                          </span>
+                          <span className="text-xs uppercase tracking-widest font-black text-emerald-950">
+                            Raw Material Fiber
+                          </span>
+                        </div>
+                        <div className="grid grid-cols-2 gap-3">
+                          {mat.rawImages.map((imgSrc, i) => (
+                            <div
+                              key={i}
+                              onClick={() => setPreviewImage({ src: imgSrc, title: `${mat.name} — Raw Material` })}
+                              className="relative aspect-4/3 sm:aspect-square rounded-2xl overflow-hidden bg-stone-200 cursor-pointer group/img ring-1 ring-stone-300 hover:ring-emerald-600 transition-all duration-300 shadow-sm hover:shadow-xl"
+                            >
+                              <img
+                                src={imgSrc}
+                                alt={`${mat.name} Raw Material`}
+                                className="h-full w-full object-cover transition-transform duration-500 group-hover/img:scale-110"
+                                loading="lazy"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-2">
+                                <Eye className="h-5 w-5 text-white drop-shadow-md" />
+                              </div>
                             </div>
-                          </div>
-                        ))}
+                          ))}
+                        </div>
                       </div>
+                      <p className="text-[11px] font-black text-stone-800 mt-2.5 text-center uppercase tracking-wide">
+                        Natural Plantation & Fiber
+                      </p>
                     </div>
 
-                    {/* Center: Description & Info */}
-                    <div className={`lg:col-span-5 p-5 sm:p-7 flex flex-col justify-center border-x border-stone-100 ${isEven ? '' : 'lg:order-2'}`}>
-                      <div className="flex items-start gap-3 mb-3">
-                        <div>
-                          <h3 className="text-xl sm:text-2xl font-serif font-black text-stone-950 tracking-tight leading-tight">
+                    {/* Center: Bold, High-Contrast Description & Info */}
+                    <div className={`lg:col-span-5 p-6 sm:p-7 flex flex-col justify-between ${isEven ? '' : 'lg:order-2'}`}>
+                      <div className="space-y-3.5">
+                        <div className="border-b border-stone-200 pb-3">
+                          <h3 className="text-2xl sm:text-3xl font-serif font-black text-stone-950 tracking-tight leading-tight">
                             {mat.name}
                           </h3>
-                          <p className="text-sm font-bold text-emerald-700 italic mt-1">
+                          <p className="text-sm font-black text-emerald-800 italic mt-0.5">
                             {mat.scientificName}
                           </p>
                         </div>
-                      </div>
-                      
-                      <p className="text-sm sm:text-[15px] text-stone-700 leading-relaxed font-semibold mb-5">
-                        {mat.description}
-                      </p>
+                        
+                        <p className="text-sm sm:text-base text-stone-950 leading-relaxed font-semibold">
+                          {mat.description}
+                        </p>
 
-                      {/* Product Tags */}
-                      <div className="flex flex-wrap gap-2 mb-5">
-                        {mat.products.slice(0, isExpanded ? undefined : 6).map((product) => (
-                          <span
-                            key={product}
-                            className="inline-flex items-center px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-900 text-xs font-bold border border-emerald-200 hover:bg-emerald-100 transition-colors cursor-default"
-                          >
-                            {product}
-                          </span>
-                        ))}
-                        {!isExpanded && mat.products.length > 6 && (
-                          <button
-                            onClick={() => setActiveMaterial(mat.id)}
-                            className="inline-flex items-center px-3 py-1.5 rounded-lg bg-stone-100 text-stone-700 text-xs font-bold border border-stone-200 hover:bg-stone-200 transition-colors cursor-pointer"
-                          >
-                            +{mat.products.length - 6} more
-                          </button>
-                        )}
-                        {isExpanded && mat.products.length > 6 && (
-                          <button
-                            onClick={() => setActiveMaterial(null)}
-                            className="inline-flex items-center px-3 py-1.5 rounded-lg bg-stone-100 text-stone-600 text-xs font-bold border border-stone-200 hover:bg-stone-200 transition-colors cursor-pointer"
-                          >
-                            Show less
-                          </button>
-                        )}
+                        {/* Product Application Badges */}
+                        <div className="pt-1">
+                          <p className="text-xs font-black uppercase tracking-wider text-stone-900 mb-2">
+                            Product Applications:
+                          </p>
+                          <div className="flex flex-wrap gap-1.5">
+                            {mat.products.slice(0, isExpanded ? undefined : 8).map((product) => (
+                              <span
+                                key={product}
+                                className="inline-flex items-center px-3 py-1 rounded-lg bg-stone-100 text-stone-950 text-xs font-bold border border-stone-300 hover:bg-emerald-50 hover:text-emerald-950 hover:border-emerald-400 transition-colors cursor-default"
+                              >
+                                {product}
+                              </span>
+                            ))}
+                            {!isExpanded && mat.products.length > 8 && (
+                              <button
+                                onClick={() => setActiveMaterial(mat.id)}
+                                className="inline-flex items-center px-3 py-1 rounded-lg bg-emerald-100 text-emerald-950 text-xs font-black border border-emerald-300 hover:bg-emerald-200 transition-colors cursor-pointer"
+                              >
+                                +{mat.products.length - 8} more
+                              </button>
+                            )}
+                            {isExpanded && mat.products.length > 8 && (
+                              <button
+                                onClick={() => setActiveMaterial(null)}
+                                className="inline-flex items-center px-3 py-1 rounded-lg bg-stone-200 text-stone-900 text-xs font-bold border border-stone-300 hover:bg-stone-300 transition-colors cursor-pointer"
+                              >
+                                Show less
+                              </button>
+                            )}
+                          </div>
+                        </div>
                       </div>
 
                       {/* Browse Button */}
-                      <Link
-                        to={`/products?category=${mat.categorySlug}`}
-                        className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-700 via-emerald-800 to-emerald-900 hover:from-emerald-800 hover:to-emerald-950 text-white text-sm font-extrabold shadow-md hover:shadow-lg transition-all duration-300 w-fit group/btn"
-                      >
-                        <span>Browse {mat.name} Products</span>
-                        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
-                      </Link>
+                      <div className="pt-4">
+                        <Link
+                          to={`/products?category=${mat.categorySlug}`}
+                          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-900 hover:bg-emerald-800 text-white text-xs sm:text-sm font-black shadow-md hover:shadow-lg transition-all duration-200 w-fit group/btn border border-emerald-700 cursor-pointer"
+                        >
+                          <span>Browse {mat.name} Products</span>
+                          <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover/btn:translate-x-1" />
+                        </Link>
+                      </div>
                     </div>
 
-                    {/* Right/Left: Sample Product Images */}
-                    <div className={`lg:col-span-3 p-5 sm:p-6 bg-gradient-to-br from-amber-50/50 to-orange-50/30 ${isEven ? '' : 'lg:order-1'}`}>
-                      <div className="flex items-center gap-2 mb-4">
-                        <div className="w-1.5 h-5 rounded-full bg-amber-500"></div>
-                        <p className="text-[11px] uppercase tracking-[0.15em] font-black text-amber-800/80">
-                          Sample Products
-                        </p>
-                      </div>
-                      <div className="grid grid-cols-2 gap-2.5">
-                        {mat.sampleImages.map((imgSrc, i) => (
-                          <div
-                            key={i}
-                            onClick={() => setPreviewImage({ src: imgSrc, title: `${mat.name} — Sample Product` })}
-                            className="relative aspect-square rounded-xl overflow-hidden bg-white cursor-pointer group/img ring-1 ring-amber-200/80 hover:ring-amber-500/60 transition-all duration-300 shadow-sm hover:shadow-xl"
-                          >
-                            <img
-                              src={imgSrc}
-                              alt={`${mat.name} Sample Product`}
-                              className="h-full w-full object-cover transition-transform duration-500 group-hover/img:scale-110"
-                              loading="lazy"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-3">
-                              <Eye className="h-5 w-5 text-white drop-shadow-lg" />
+                    {/* Right: Sample Products Showcase (Enlarged) */}
+                    <div className={`lg:col-span-4 p-5 sm:p-6 bg-gradient-to-br from-amber-50/90 via-stone-50 to-amber-50/60 flex flex-col justify-between border-t lg:border-t-0 ${isEven ? 'lg:border-l border-stone-200' : 'lg:border-r border-stone-200 lg:order-1'}`}>
+                      <div>
+                        <div className="flex items-center gap-2 mb-3">
+                          <div className="w-2 h-5 rounded-full bg-amber-600"></div>
+                          <span className="text-xs uppercase tracking-widest font-black text-amber-950">
+                            Sample Products
+                          </span>
+                        </div>
+                        <div className="grid grid-cols-2 gap-3">
+                          {mat.sampleImages.map((imgSrc, i) => (
+                            <div
+                              key={i}
+                              onClick={() => setPreviewImage({ src: imgSrc, title: `${mat.name} — Sample Product` })}
+                              className="relative aspect-4/3 sm:aspect-square rounded-2xl overflow-hidden bg-white cursor-pointer group/img ring-1 ring-amber-300 hover:ring-amber-600 transition-all duration-300 shadow-sm hover:shadow-xl"
+                            >
+                              <img
+                                src={imgSrc}
+                                alt={`${mat.name} Sample Product`}
+                                className="h-full w-full object-cover transition-transform duration-500 group-hover/img:scale-110"
+                                loading="lazy"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-2">
+                                <Eye className="h-5 w-5 text-white drop-shadow-md" />
+                              </div>
                             </div>
-                          </div>
-                        ))}
+                          ))}
+                        </div>
                       </div>
+                      <p className="text-[11px] font-black text-amber-950 mt-2.5 text-center uppercase tracking-wide">
+                        Export Quality Finished Handicrafts
+                      </p>
                     </div>
+
                   </div>
                 </div>
               </div>

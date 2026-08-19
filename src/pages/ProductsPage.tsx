@@ -13,6 +13,20 @@ import {
 import { PRODUCTS, CATEGORIES, ProductItem } from '../data/products';
 import { getAllActiveProducts } from '../utils/productStore';
 
+const CATEGORY_BANNER_IMAGES: Record<string, string> = {
+  'jute': '/products/gfc_jfm_001.jpg',
+  'seagrass': '/products/gfc_sfm_001.jpg',
+  'kans-grass': '/products/gfc_kpm_001.jpg',
+  'date-leaf': '/materials/orig_date-1.jpg',
+  'rattan': '/materials/orig_rattan-1.jpg',
+  'bamboo': '/materials/orig_BWH-02.jpg',
+  'palm-fiber': '/materials/orig_palm-1.jpg',
+  'water-hyacinth': '/materials/orig_water-hyacinth-1.jpg',
+  'rugs': '/infrastructure/jute_rugs.png',
+  'recycle-fabric': '/products/gfc_bp_007.png',
+  'all': '/products/gfc_jfm_001.jpg',
+};
+
 interface ProductsPageProps {
   onOpenQuoteModal: (productCode?: string) => void;
 }
@@ -116,10 +130,17 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
     });
   }, [allProducts, selectedCategory, selectedSubCategory, searchQuery]);
 
+  // Determine active category banner image
+  const activeBannerImage = 
+    CATEGORY_BANNER_IMAGES[selectedCategory] ||
+    CATEGORY_BANNER_IMAGES[currentCategoryObj?.id || ''] ||
+    filteredProducts[0]?.image ||
+    '/products/gfc_jfm_001.jpg';
+
   return (
-    <div className="bg-[#fcfbf9] min-h-screen pb-24 font-sans text-stone-900">
+    <div className="bg-[#fcfbf9] min-h-screen pb-12 font-sans text-stone-900">
       
-      {/* 1. Premium Top Hero Banner */}
+      {/* 1. Premium Compact Hero Banner with Dynamic Category Craft Image */}
       <div className="relative overflow-hidden bg-gradient-to-r from-[#064e3b] via-[#065f46] to-[#047857] text-white">
         <div 
           className="absolute inset-0 opacity-[0.06] pointer-events-none" 
@@ -128,10 +149,10 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
           }} 
         />
         
-        <div className="relative mx-auto max-w-7xl px-4 py-8 sm:py-12 sm:px-6 lg:px-8">
+        <div className="relative mx-auto max-w-7xl px-4 py-3.5 sm:py-4.5 sm:px-6 lg:px-8">
           
           {/* Breadcrumbs */}
-          <div className="flex items-center gap-1.5 text-emerald-200/90 text-xs font-medium mb-3">
+          <div className="flex items-center gap-1.5 text-emerald-200/90 text-xs font-medium mb-1">
             <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="h-3 w-3" />
             <button onClick={clearFilters} className="hover:text-white transition-colors">Products</button>
@@ -149,39 +170,98 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
             )}
           </div>
           
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-            <div>
-              <div className="flex items-center gap-2.5 mb-1.5">
-                <span className="p-2 rounded-xl bg-white/10 backdrop-blur-sm">
-                  <Package className="h-5 w-5 text-emerald-300" />
+          <div className="flex items-center justify-between gap-4">
+            <div className="max-w-2xl">
+              <div className="flex items-center gap-2 mb-0.5">
+                <span className="p-1.5 rounded-lg bg-white/10 backdrop-blur-sm">
+                  <Package className="h-4 w-4 text-emerald-300" />
                 </span>
-                <h1 className="text-2xl sm:text-3xl font-serif font-black text-white tracking-tight">
+                <h1 className="text-xl sm:text-2xl lg:text-3xl font-serif font-black text-white tracking-tight">
                   {currentCategoryObj ? currentCategoryObj.name : 'Export Product Catalog'}
                 </h1>
               </div>
-              <p className="text-emerald-100/90 text-xs sm:text-sm font-medium max-w-2xl leading-relaxed">
+              <p className="text-white text-xs sm:text-sm font-medium leading-relaxed">
                 {currentCategoryObj?.description || 'Explore our complete international export collection of certified eco-friendly natural fiber handicrafts.'}
               </p>
-              
-              <div className="flex items-center gap-2 mt-3">
-                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
-                  <Sparkles className="h-3 w-3 text-amber-300" /> {filteredProducts.length} Items Listed
-                </span>
-                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
-                  100% Biodegradable
-                </span>
+            </div>
+
+            {/* Right: Real Category Craft Product Photo Showcase */}
+            <div className="flex items-center justify-center shrink-0">
+              <div className="relative group">
+                <div className="absolute -inset-2.5 rounded-2xl bg-amber-400/20 blur-md group-hover:bg-amber-400/35 transition-all duration-300"></div>
+                <div className="relative h-16 w-20 sm:h-20 sm:w-24 rounded-2xl bg-white/95 backdrop-blur-md border border-white/40 p-1.5 shadow-xl flex items-center justify-center hover:scale-105 transition-transform duration-300">
+                  <img
+                    src={activeBannerImage}
+                    alt="Category Craft Preview"
+                    className="h-full w-full object-contain filter drop-shadow-sm rounded-lg"
+                  />
+                  <span className="absolute -bottom-1 -right-1 px-1.5 py-0.2 rounded-md bg-emerald-950 text-[8px] sm:text-[9px] font-black text-amber-300 shadow-sm border border-white/20 uppercase tracking-widest">
+                    {currentCategoryObj ? currentCategoryObj.name : '100% ECO'}
+                  </span>
+                </div>
               </div>
             </div>
 
-            {/* Search Input */}
-            <div className="relative w-full md:w-80 shrink-0">
-              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-stone-400" />
+          </div>
+
+        </div>
+
+        {/* Dynamic Category Background Watermark */}
+        <div className="absolute -right-6 -bottom-6 opacity-15 pointer-events-none">
+          <img
+            src={activeBannerImage}
+            alt="Category Background"
+            className="h-40 w-40 lg:h-48 lg:w-48 object-cover rounded-full filter blur-xs"
+          />
+        </div>
+      </div>
+
+      {/* 2. Category & Subcategory Navigation Bar + Integrated Search */}
+      <div className="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-xs">
+        <div className="mx-auto max-w-7xl px-4 py-2.5 sm:px-6 lg:px-8 space-y-2">
+          
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            
+            {/* Main Category Tabs */}
+            <div className="flex items-center gap-1.5 overflow-x-auto pb-0.5 scrollbar-none flex-1">
+              <button
+                onClick={() => handleCategoryChange('all')}
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-black whitespace-nowrap transition-all duration-200 cursor-pointer ${
+                  selectedCategory === 'all'
+                    ? 'bg-emerald-800 text-white shadow-md'
+                    : 'bg-stone-100 text-stone-700 hover:bg-stone-200 hover:text-stone-900 border border-stone-200/80'
+                }`}
+              >
+                All Categories ({allProducts.length})
+              </button>
+              {CATEGORIES.map((cat) => {
+                const count = allProducts.filter(p => p.category === cat.id || p.categorySlug === cat.slug).length;
+                const isActive = selectedCategory === cat.id || selectedCategory === cat.slug;
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => handleCategoryChange(cat.id)}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all duration-200 cursor-pointer ${
+                      isActive
+                        ? 'bg-emerald-800 text-white shadow-md'
+                        : 'bg-stone-100 text-stone-700 hover:bg-stone-200 hover:text-stone-900 border border-stone-200/80'
+                    }`}
+                  >
+                    {cat.name} ({count})
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Compact Search Input */}
+            <div className="relative w-full sm:w-64 shrink-0">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-stone-400" />
               <input
                 type="text"
-                placeholder="Search Item Code or Name..."
+                placeholder="Search Item or Code..."
                 value={searchQuery}
                 onChange={handleSearchChange}
-                className="w-full pl-10 pr-9 py-2.5 text-xs sm:text-sm rounded-xl border-0 bg-white/95 backdrop-blur-sm text-stone-900 font-medium focus:outline-hidden focus:ring-2 focus:ring-amber-400 shadow-md placeholder-stone-400 transition-all"
+                className="w-full pl-8 pr-7 py-1.5 text-xs rounded-xl border border-stone-300 bg-stone-50 focus:bg-white text-stone-900 font-semibold focus:outline-hidden focus:ring-2 focus:ring-emerald-600/30 transition-all"
               />
               {searchQuery && (
                 <button
@@ -192,50 +272,13 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
                     if (selectedSubCategory) newParams.subCategory = selectedSubCategory;
                     setSearchParams(newParams);
                   }}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-stone-500 hover:text-stone-800 transition-colors"
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-700"
                 >
-                  <X className="h-4 w-4" />
+                  <X className="h-3.5 w-3.5" />
                 </button>
               )}
             </div>
-          </div>
 
-        </div>
-      </div>
-
-      {/* 2. Category & Subcategory Navigation Bar */}
-      <div className="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-xs">
-        <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8 space-y-2.5">
-          
-          {/* Main Category Tabs */}
-          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
-            <button
-              onClick={() => handleCategoryChange('all')}
-              className={`px-4 py-1.5 rounded-xl text-xs font-black whitespace-nowrap transition-all duration-200 cursor-pointer ${
-                selectedCategory === 'all'
-                  ? 'bg-emerald-800 text-white shadow-md'
-                  : 'bg-stone-100 text-stone-700 hover:bg-stone-200 hover:text-stone-900 border border-stone-200/80'
-              }`}
-            >
-              All Categories ({allProducts.length})
-            </button>
-            {CATEGORIES.map((cat) => {
-              const count = allProducts.filter(p => p.category === cat.id || p.categorySlug === cat.slug).length;
-              const isActive = selectedCategory === cat.id || selectedCategory === cat.slug;
-              return (
-                <button
-                  key={cat.id}
-                  onClick={() => handleCategoryChange(cat.id)}
-                  className={`px-3.5 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all duration-200 cursor-pointer ${
-                    isActive
-                      ? 'bg-emerald-800 text-white shadow-md'
-                      : 'bg-stone-100 text-stone-700 hover:bg-stone-200 hover:text-stone-900 border border-stone-200/80'
-                  }`}
-                >
-                  {cat.name} ({count})
-                </button>
-              );
-            })}
           </div>
 
           {/* Subcategory Pills (When Category is Selected) */}

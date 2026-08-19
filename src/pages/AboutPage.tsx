@@ -26,7 +26,7 @@ interface AboutPageProps {
 
 export const AboutPage: React.FC<AboutPageProps> = () => {
   return (
-    <div className="bg-[#fcfbf9] min-h-screen pb-24 font-sans text-stone-900 animate-fadeIn space-y-12 sm:space-y-16">
+    <div className="bg-[#fcfbf9] min-h-screen pb-12 font-sans text-stone-900 animate-fadeIn space-y-6 sm:space-y-8">
       
       {/* 1. Page Banner Header */}
       <div className="relative overflow-hidden bg-gradient-to-r from-[#064e3b] via-[#065f46] to-[#047857] text-white">
@@ -37,27 +37,27 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
           }} 
         />
         
-        <div className="relative mx-auto max-w-7xl px-4 py-12 sm:py-16 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-          <div className="max-w-3xl space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm text-xs font-black uppercase tracking-widest text-emerald-200 border border-white/20">
-              <Leaf className="h-3.5 w-3.5 text-emerald-300" />
+        <div className="relative mx-auto max-w-7xl px-4 py-6 sm:py-8 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="max-w-3xl space-y-2">
+            <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-black uppercase tracking-widest text-emerald-200 border border-white/20">
+              <Leaf className="h-3 w-3 text-emerald-300" />
               Corporate Profile & Heritage
             </div>
-            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
+            <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-white">
               About Golden Fiber Crafts Ltd.
             </h1>
-            <p className="text-amber-300 font-serif italic text-base sm:text-lg">
+            <p className="text-amber-300 font-serif italic text-sm sm:text-base font-bold">
               "{TAGLINE}"
             </p>
-            <p className="text-emerald-100/90 text-sm sm:text-base leading-relaxed font-medium">
+            <p className="text-white text-xs sm:text-sm leading-relaxed font-medium">
               Bangladesh’s premier manufacturer and exporter of eco-friendly jute, seagrass, kaisa grass handicrafts, storage baskets, planters, and sustainable home decor.
             </p>
           </div>
 
           <div className="hidden md:flex items-center justify-center shrink-0">
             <div className="relative group">
-              <div className="absolute -inset-4 rounded-full bg-emerald-400/20 blur-xl group-hover:bg-emerald-400/35 transition-all duration-500"></div>
-              <div className="relative h-28 w-28 sm:h-32 sm:w-32 rounded-3xl bg-white/10 backdrop-blur-md border border-white/25 p-3.5 shadow-2xl flex items-center justify-center hover:scale-105 transition-transform duration-500">
+              <div className="absolute -inset-3 rounded-full bg-emerald-400/20 blur-lg group-hover:bg-emerald-400/35 transition-all duration-500"></div>
+              <div className="relative h-20 w-20 sm:h-24 sm:w-24 rounded-2xl bg-white/10 backdrop-blur-md border border-white/25 p-2.5 shadow-xl flex items-center justify-center hover:scale-105 transition-transform duration-500">
                 <img
                   src="/logo-icon.png"
                   alt="Golden Fiber Crafts Ltd."
@@ -69,8 +69,8 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
         </div>
 
         {/* Watermark */}
-        <div className="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
-          <img src="/logo-icon.png" alt="Watermark" className="h-64 w-64 lg:h-80 lg:w-80 object-contain filter invert" />
+        <div className="absolute -right-8 -bottom-8 opacity-10 pointer-events-none">
+          <img src="/logo-icon.png" alt="Watermark" className="h-48 w-48 lg:h-60 lg:w-60 object-contain filter invert" />
         </div>
       </div>
 
@@ -366,17 +366,17 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
         </div>
 
         {/* 7. Future Goals & Expansion Plan (Page 20 of Corporate Profile) */}
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-stone-950 via-[#064e3b] to-stone-950 p-8 sm:p-12 text-white shadow-xl border border-emerald-500/30 space-y-6">
-          <div className="text-center max-w-3xl mx-auto space-y-2 relative z-10">
-            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-stone-950 via-[#064e3b] to-stone-950 py-5 px-5 sm:py-6 sm:px-8 text-white shadow-xl border border-emerald-500/30 space-y-4">
+          <div className="text-center max-w-3xl mx-auto space-y-1 relative z-10">
+            <h2 className="font-serif text-xl sm:text-2xl lg:text-3xl font-black text-white">
               Future Goals & Expansion Plan
             </h2>
             <p className="text-stone-100 text-xs sm:text-sm font-medium leading-relaxed">
-              At Golden Fiber Crafts Ltd., we are focused on sustainable growth, global expansion, and continuous innovation. Our long-term vision is to strengthen our position as a trusted global manufacturer and exporter of eco-friendly handicrafts and natural-fiber products.
+              At Golden Fiber Crafts Ltd., we are focused on sustainable growth, global expansion, and continuous innovation. Our long-term vision is to strengthen our position as a trusted global manufacturer and exporter of eco-friendly handicrafts.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4 pt-4 relative z-10">
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3 pt-2 relative z-10">
             {[
               { title: 'Global Expansion', icon: Globe2 },
               { title: 'Capacity Growth', icon: Boxes },
@@ -388,9 +388,9 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
             ].map((goal, idx) => {
               const IconComp = goal.icon;
               return (
-                <div key={idx} className="bg-white/10 backdrop-blur-xs rounded-2xl p-4 text-center space-y-2 border border-white/10 hover:bg-white/15 transition-all flex flex-col items-center justify-center">
-                  <div className="h-10 w-10 rounded-full bg-emerald-500/30 text-emerald-300 flex items-center justify-center">
-                    <IconComp className="h-5 w-5" />
+                <div key={idx} className="bg-white/10 backdrop-blur-xs rounded-2xl p-3 text-center space-y-1.5 border border-white/15 hover:bg-white/20 transition-all flex flex-col items-center justify-center">
+                  <div className="h-9 w-9 rounded-full bg-emerald-500/30 text-emerald-300 flex items-center justify-center">
+                    <IconComp className="h-4 w-4" />
                   </div>
                   <h4 className="font-bold text-xs text-white leading-tight">{goal.title}</h4>
                 </div>
