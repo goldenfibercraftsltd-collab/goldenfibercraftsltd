@@ -63,21 +63,14 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onOpenQuoteModal }) 
           </div>
         </div>
 
-        {/* Product Cards Grid with Middle-Outward Card Slide */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {categoryProducts.map((product, idx) => {
-            const col = idx % 4;
-            const slideAnim = 
-              col === 0 ? 'card-slide-far-left stagger-3' :
-              col === 1 ? 'card-slide-left stagger-1' :
-              col === 2 ? 'card-slide-right stagger-1' :
-              'card-slide-far-right stagger-3';
-
+        {/* Product Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-fadeIn">
+          {categoryProducts.map((product) => {
             return (
               <div
                 key={product.id}
                 onClick={() => navigate(`/products/${product.slug}`)}
-                className={`${slideAnim} hover-lift group cursor-pointer flex flex-col justify-between rounded-2xl bg-white p-4 shadow-xs border border-stone-200 hover:shadow-xl hover:border-emerald-500 transition-all duration-300`}
+                className="hover-lift group cursor-pointer flex flex-col justify-between rounded-2xl bg-white p-4 shadow-sm border border-stone-200 hover:shadow-xl hover:border-emerald-500 transition-all duration-300 animate-fadeIn"
               >
                 <div>
                   {/* Product Photo Container */}
