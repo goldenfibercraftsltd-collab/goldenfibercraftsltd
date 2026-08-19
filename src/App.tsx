@@ -34,6 +34,7 @@ import { AdminInquiries } from './pages/admin/AdminInquiries';
 import { AdminSettings } from './pages/admin/AdminSettings';
 
 import { initScrollReveal } from './utils/scrollReveal';
+import { SmoothScrollProvider } from './components/SmoothScroll';
 
 export const AppContent: React.FC = () => {
   const location = useLocation();
@@ -149,7 +150,9 @@ export const App: React.FC = () => {
   return (
     <UserAuthProvider>
       <CartProvider>
-        <AppContent />
+        <SmoothScrollProvider>
+          <AppContent />
+        </SmoothScrollProvider>
       </CartProvider>
     </UserAuthProvider>
   );

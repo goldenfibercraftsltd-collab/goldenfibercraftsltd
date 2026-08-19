@@ -103,22 +103,22 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
 
   return (
     <>
-      {/* 1. Main Header Row: Large Official Logo, Golden Search Bar with Tagline, Quick Actions (Scrolls away) */}
-      <header className="relative z-30 w-full bg-white font-sans border-b border-stone-200/50">
-        <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 py-2 sm:py-2.5">
+      {/* 1. Main Header Row: Prominent Official Logo, Centered Search Bar with Tagline, Quick Actions */}
+      <header className="relative z-30 w-full bg-white font-sans border-b border-stone-200/60 shadow-2xs">
+        <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 py-1.5 sm:py-2">
           <div className="flex items-center justify-between gap-3 sm:gap-6 lg:gap-8">
             
-            {/* Official Company Logo */}
+            {/* Official Company Logo (Clean, Crisp, Large & Unclipped) */}
             <Link
               to="/"
               onClick={handleNavClick}
-              className="shrink-0 flex items-center transition-transform duration-300 hover:scale-[1.02] py-0.5"
+              className="shrink-0 flex items-center transition-transform duration-300 hover:scale-[1.02] py-0"
               title="Golden Fiber Crafts Ltd. - Home"
             >
               <img
                 src="/logo.png"
                 alt="Golden Fiber Crafts Ltd."
-                className="h-12 sm:h-16 md:h-[4.5rem] w-auto object-contain"
+                className="h-11 sm:h-13 md:h-[3.75rem] lg:h-[4.25rem] w-auto object-contain max-w-[220px] sm:max-w-[270px] md:max-w-[320px] select-none"
               />
             </Link>
 

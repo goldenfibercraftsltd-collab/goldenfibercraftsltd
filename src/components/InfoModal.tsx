@@ -12,7 +12,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({ isOpen, onClose, title, co
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fadeIn font-sans">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fadeIn font-sans" data-lenis-prevent>
       <div className="relative w-full max-w-lg bg-white rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6 border border-stone-200">
         
         {/* Header */}
