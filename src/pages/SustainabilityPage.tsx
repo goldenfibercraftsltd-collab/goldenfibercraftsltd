@@ -149,41 +149,15 @@ export const SustainabilityPage: React.FC = () => {
       )}
 
       {/* ---------------------------------------------------- */}
-      {/* 1. Hero Header with reveal-up */}
+      {/* 1. Clean Breadcrumb */}
       {/* ---------------------------------------------------- */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#eef6f0] via-[#f7fbf8] to-[#fcfbf9] pt-12 pb-20 border-b border-stone-200/80">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-200/20 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-amber-200/20 rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none" />
-
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8 relative z-10">
-          
-          <nav className="reveal-up flex items-center gap-2 text-xs font-bold text-stone-800">
-            <Link to="/" className="hover:text-emerald-800 transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-black font-extrabold">Sustainability</span>
-          </nav>
-
-          <div className="text-center max-w-3xl mx-auto space-y-4 reveal-up">
-            <div className="inline-flex items-center gap-2 rounded-full bg-emerald-100 border border-emerald-300/80 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-black shadow-xs">
-              <Leaf className="h-4 w-4 text-emerald-800" />
-              <span>Planet First • People Always</span>
-            </div>
-
-            <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-black tracking-tight leading-[1.15]">
-              Sustainability & Social Responsibility
-            </h1>
-
-            <p className="font-serif text-lg sm:text-xl text-black italic font-bold">
-              Rooted in nature, crafted with dignity, committed to our planet.
-            </p>
-
-            <p className="text-sm sm:text-base text-stone-900 leading-relaxed font-medium max-w-2xl mx-auto pt-1">
-              At Golden Fiber Crafts Ltd, environmental stewardship is not an afterthought — it is the very foundation of our existence. Discover how our 100% natural, plastic-free handicrafts create positive ecological and social impact across Bangladesh.
-            </p>
-          </div>
-
-        </div>
-      </section>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
+        <nav className="reveal-up flex items-center gap-2 text-xs font-bold text-stone-800">
+          <Link to="/" className="hover:text-emerald-800 transition-colors">Home</Link>
+          <span>/</span>
+          <span className="text-black font-extrabold">Sustainability</span>
+        </nav>
+      </div>
 
       {/* ---------------------------------------------------- */}
       {/* 2. Four Alternating Sustainability Pillar Sections */}

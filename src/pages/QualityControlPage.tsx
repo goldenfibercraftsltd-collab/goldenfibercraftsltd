@@ -155,44 +155,15 @@ export const QualityControlPage: React.FC = () => {
       )}
 
       {/* ---------------------------------------------------- */}
-      {/* 1. Hero Header with reveal-up */}
+      {/* 1. Clean Breadcrumb */}
       {/* ---------------------------------------------------- */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#f5eee6] via-[#faf6f0] to-[#fcfbf9] pt-12 pb-20 border-b border-stone-200/80">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-amber-200/20 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-emerald-200/20 rounded-full blur-3xl -ml-20 -mb-20 pointer-events-none" />
-
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8 relative z-10">
-          
-          <nav className="reveal-up flex items-center gap-2 text-xs font-bold text-stone-800">
-            <Link to="/" className="hover:text-emerald-800 transition-colors">Home</Link>
-            <span>/</span>
-            <span className="text-black font-extrabold">Quality Assurance</span>
-          </nav>
-
-          <div className="text-center max-w-3xl mx-auto space-y-4 reveal-up">
-            <div className="inline-flex items-center gap-2 rounded-full bg-amber-100 border border-amber-300/80 px-4 py-1.5 text-xs font-extrabold uppercase tracking-widest text-black shadow-xs">
-              <ShieldCheck className="h-4 w-4 text-amber-800" />
-              <span>International Export Grade Guarantee</span>
-            </div>
-
-            <ScrollTypingText
-              as="h1"
-              text="Quality Assurance & Standards"
-              className="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-black tracking-tight leading-[1.15]"
-              speed={40}
-            />
-
-            <p className="font-serif text-lg sm:text-xl text-black italic font-bold">
-              Where ancestral artisan mastery meets modern export quality control.
-            </p>
-
-            <p className="text-sm sm:text-base text-stone-900 leading-relaxed font-medium max-w-2xl mx-auto pt-1">
-              At Golden Fiber Crafts Ltd, every handcrafted item is created by highly experienced traditional artisans and inspected under strict international AQL 2.5 compliance standards before global shipment.
-            </p>
-          </div>
-
-        </div>
-      </section>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
+        <nav className="reveal-up flex items-center gap-2 text-xs font-bold text-stone-800">
+          <Link to="/" className="hover:text-emerald-800 transition-colors">Home</Link>
+          <span>/</span>
+          <span className="text-black font-extrabold">Quality Assurance</span>
+        </nav>
+      </div>
 
       {/* ---------------------------------------------------- */}
       {/* 2. Four Alternating Quality Pillar Sections */}
