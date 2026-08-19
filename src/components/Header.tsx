@@ -122,8 +122,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               />
             </Link>
 
-            {/* Desktop Search Bar with Golden Search Button & Official Tagline */}
-            <div className="hidden md:flex flex-col flex-1 max-w-2xl mx-4 gap-1">
+            {/* Desktop Search Bar with Golden Search Button & Official Tagline (Centered) */}
+            <div className="hidden md:flex flex-col items-center flex-1 max-w-xl lg:max-w-2xl mx-auto gap-1 px-2">
               <form onSubmit={handleSearchSubmit} className="flex w-full rounded-md border-2 border-amber-500 overflow-hidden shadow-xs">
                 <input
                   type="text"
@@ -141,8 +141,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
                 </button>
               </form>
 
-              {/* Official Company Tagline directly under search bar */}
-              <div className="flex items-center justify-center sm:justify-start gap-1.5 text-xs font-serif italic text-stone-700 tracking-wide pl-1">
+              {/* Official Company Tagline directly centered under search bar */}
+              <div className="flex items-center justify-center gap-1.5 text-xs font-serif italic text-stone-700 tracking-wide text-center">
                 <Sparkles className="h-3.5 w-3.5 text-amber-600 shrink-0" />
                 <span className="font-bold text-[#14532d] text-xs sm:text-sm font-serif italic">"{TAGLINE}"</span>
               </div>
