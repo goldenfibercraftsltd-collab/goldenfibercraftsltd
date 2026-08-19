@@ -353,18 +353,18 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenQuoteModal }) => {
         </div>
 
         {/* 7. Future Goals & Expansion Plan (Page 20 of Corporate Profile) */}
-        <div className="reveal-up rounded-3xl bg-gradient-to-br from-stone-900 via-emerald-950 to-stone-900 p-8 sm:p-12 text-white shadow-2xl border border-emerald-500/30 space-y-8">
-          <div className="text-center max-w-3xl mx-auto space-y-2">
-            <span className="text-xs font-bold uppercase tracking-widest text-emerald-400 flex items-center justify-center gap-1.5">
-              <TrendingUp className="h-4 w-4" />
-              LONG-TERM VISION
-            </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white">
+        <div className="reveal-up relative overflow-hidden rounded-3xl bg-gradient-to-br from-stone-900 via-emerald-950 to-stone-900 p-6 sm:p-8 text-white shadow-2xl border border-emerald-500/30 space-y-6">
+          <div className="text-center max-w-3xl mx-auto space-y-2 relative z-10">
+            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
               Future Goals & Expansion Plan
             </h2>
             <p className="text-stone-300 text-xs sm:text-sm font-light leading-relaxed">
               At Golden Fiber Crafts Ltd., we are focused on sustainable growth, global expansion, and continuous innovation. Our long-term vision is to strengthen our position as a trusted global manufacturer and exporter of eco-friendly handicrafts and natural-fiber products.
             </p>
+          </div>
+
+          <div className="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
+            <img src="/logo-icon.png" alt="GF Icon" className="h-64 w-64 filter invert" />
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4 pt-4">

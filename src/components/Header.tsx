@@ -102,95 +102,92 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
   };
 
   return (
-    <header className="relative z-40 w-full bg-white font-sans">
-      
-      {/* 1. Main Header Row: Large Official Logo, Golden Search Bar with Tagline, Quick Actions */}
-      <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 py-2 sm:py-2.5">
-        <div className="flex items-center justify-between gap-3 sm:gap-6 lg:gap-8">
-          
-          {/* Official Company Logo */}
-          <Link
-            to="/"
-            onClick={handleNavClick}
-            className="shrink-0 flex items-center transition-transform duration-300 hover:scale-[1.02] py-0.5"
-            title="Golden Fiber Crafts Ltd. - Home"
-          >
-            <img
-              src="/logo.png"
-              alt="Golden Fiber Crafts Ltd."
-              className="h-12 sm:h-16 md:h-[4.5rem] w-auto object-contain"
-            />
-          </Link>
-
-          {/* Desktop Search Bar with Golden Search Button & Official Tagline */}
-          <div className="hidden md:flex flex-col flex-1 max-w-2xl mx-4 gap-1">
-            <form onSubmit={handleSearchSubmit} className="flex w-full rounded-md border-2 border-amber-500 overflow-hidden shadow-xs">
-              <input
-                type="text"
-                placeholder="Search Entire Here (e.g. GFC-SB-030, Planter, Bag)..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-2 text-sm text-stone-800 focus:outline-none placeholder-stone-400 font-medium bg-white"
+    <>
+      {/* 1. Main Header Row: Large Official Logo, Golden Search Bar with Tagline, Quick Actions (Scrolls away) */}
+      <header className="relative z-30 w-full bg-white font-sans border-b border-stone-200/50">
+        <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 py-2 sm:py-2.5">
+          <div className="flex items-center justify-between gap-3 sm:gap-6 lg:gap-8">
+            
+            {/* Official Company Logo */}
+            <Link
+              to="/"
+              onClick={handleNavClick}
+              className="shrink-0 flex items-center transition-transform duration-300 hover:scale-[1.02] py-0.5"
+              title="Golden Fiber Crafts Ltd. - Home"
+            >
+              <img
+                src="/logo.png"
+                alt="Golden Fiber Crafts Ltd."
+                className="h-12 sm:h-16 md:h-[4.5rem] w-auto object-contain"
               />
-              <button
-                type="submit"
-                className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-stone-950 px-7 py-2 text-sm font-black uppercase tracking-wider transition-all duration-200 shrink-0 flex items-center justify-center gap-1.5 cursor-pointer shadow-inner"
-              >
-                <Search className="h-4 w-4 text-stone-950 stroke-[2.5]" />
-                <span className="font-extrabold text-stone-950">Search</span>
-              </button>
-            </form>
+            </Link>
 
-            {/* Official Company Tagline & Description directly under search bar */}
-            <div className="flex items-center justify-center sm:justify-start gap-2 text-xs font-serif italic text-stone-700 tracking-wide pl-1">
-              <Sparkles className="h-3.5 w-3.5 text-amber-600 shrink-0" />
-              <span className="font-bold text-[#14532d]">"{TAGLINE}"</span>
-              <span className="text-stone-300">•</span>
-              <span className="text-[11px] font-sans font-bold text-stone-700 not-italic">
-                Bangladesh’s premier manufacturer and exporter of eco-friendly jute, seagrass, kaisa grass handicrafts, storage baskets, planters, and natural home decor.
-              </span>
+            {/* Desktop Search Bar with Golden Search Button & Official Tagline */}
+            <div className="hidden md:flex flex-col flex-1 max-w-2xl mx-4 gap-1">
+              <form onSubmit={handleSearchSubmit} className="flex w-full rounded-md border-2 border-amber-500 overflow-hidden shadow-xs">
+                <input
+                  type="text"
+                  placeholder="Search Entire Here (e.g. GFC-SB-030, Planter, Bag)..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full px-4 py-2 text-sm text-stone-800 focus:outline-none placeholder-stone-400 font-medium bg-white"
+                />
+                <button
+                  type="submit"
+                  className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-stone-950 px-7 py-2 text-sm font-black uppercase tracking-wider transition-all duration-200 shrink-0 flex items-center justify-center gap-1.5 cursor-pointer shadow-inner"
+                >
+                  <Search className="h-4 w-4 text-stone-950 stroke-[2.5]" />
+                  <span className="font-extrabold text-stone-950">Search</span>
+                </button>
+              </form>
+
+              {/* Official Company Tagline directly under search bar */}
+              <div className="flex items-center justify-center sm:justify-start gap-1.5 text-xs font-serif italic text-stone-700 tracking-wide pl-1">
+                <Sparkles className="h-3.5 w-3.5 text-amber-600 shrink-0" />
+                <span className="font-bold text-[#14532d] text-xs sm:text-sm font-serif italic">"{TAGLINE}"</span>
+              </div>
             </div>
-          </div>
 
-          {/* Action Controls: WhatsApp, Email & Request Quote */}
-          <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
-            {/* WhatsApp Direct Chat */}
-            <a
-              href="https://wa.me/8801916183583?text=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%20I%20would%20like%20to%20know%20more%20about%20your%20handicraft%20products%20and%20export%20details."
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Chat on WhatsApp (+8801916-183583)"
-              className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-sm hover:shadow transition-all duration-200 hover:scale-105"
-            >
-              <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
-                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.017 4.014-1.052zm12.355-6.529c-.073-.122-.268-.195-.561-.341-.293-.146-1.733-.855-2.002-.953-.269-.098-.464-.146-.659.146-.195.293-.756.953-.927 1.148-.171.195-.341.22-.635.073-1.066-.53-2.316-1.325-3.235-2.144-.716-.638-1.201-1.427-1.341-1.672-.14-.244-.015-.377.132-.524.133-.132.293-.341.44-.512.146-.171.195-.293.293-.488.098-.195.049-.366-.024-.512-.073-.146-.659-1.586-.903-2.172-.238-.57-.48-.492-.659-.501-.171-.008-.366-.01-.561-.01-.195 0-.512.073-.78.366-.269.293-1.025 1.001-1.025 2.441 0 1.44 1.05 2.83 1.196 3.025.146.195 2.067 3.158 5.009 4.428.7.303 1.247.484 1.673.62.703.224 1.343.193 1.849.117.564-.085 1.733-.708 1.977-1.392.244-.684.244-1.27.171-1.392z" />
-              </svg>
-            </a>
+            {/* Action Controls: WhatsApp & Request Quote */}
+            <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
+              {/* WhatsApp Direct Chat */}
+              <a
+                href="https://wa.me/8801916183583?text=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%20I%20would%20like%20to%20know%20more%20about%20your%20handicraft%20products%20and%20export%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Chat on WhatsApp (+8801916-183583)"
+                className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-sm hover:shadow transition-all duration-200 hover:scale-105"
+              >
+                <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.017 4.014-1.052zm12.355-6.529c-.073-.122-.268-.195-.561-.341-.293-.146-1.733-.855-2.002-.953-.269-.098-.464-.146-.659.146-.195.293-.756.953-.927 1.148-.171.195-.341.22-.635.073-1.066-.53-2.316-1.325-3.235-2.144-.716-.638-1.201-1.427-1.341-1.672-.14-.244-.015-.377.132-.524.133-.132.293-.341.44-.512.146-.171.195-.293.293-.488.098-.195.049-.366-.024-.512-.073-.146-.659-1.586-.903-2.172-.238-.57-.48-.492-.659-.501-.171-.008-.366-.01-.561-.01-.195 0-.512.073-.78.366-.269.293-1.025 1.001-1.025 2.441 0 1.44 1.05 2.83 1.196 3.025.146.195 2.067 3.158 5.009 4.428.7.303 1.247.484 1.673.62.703.224 1.343.193 1.849.117.564-.085 1.733-.708 1.977-1.392.244-.684.244-1.27.171-1.392z" />
+                </svg>
+              </a>
 
-            {/* Request Quote Button */}
-            <button
-              onClick={onOpenQuoteModal}
-              className="flex items-center justify-center gap-1 rounded-full bg-[#0088FF] hover:bg-[#0077ee] text-white px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-extrabold shadow-sm hover:shadow transition-all duration-200 hover:scale-[1.03] cursor-pointer"
-            >
-              <span>Request Quote</span>
-            </button>
+              {/* Request Quote Button */}
+              <button
+                onClick={onOpenQuoteModal}
+                className="flex items-center justify-center gap-1 rounded-full bg-[#0088FF] hover:bg-[#0077ee] text-white px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-extrabold shadow-sm hover:shadow transition-all duration-200 hover:scale-[1.03] cursor-pointer"
+              >
+                <span>Request Quote</span>
+              </button>
 
-            {/* Mobile Hamburger Menu Toggle */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg text-stone-800 hover:bg-stone-100 focus:outline-none transition-colors cursor-pointer"
-              aria-label="Toggle Navigation Menu"
-            >
-              {mobileMenuOpen ? <X className="h-6 w-6 text-red-600" /> : <Menu className="h-6 w-6 text-stone-800" />}
-            </button>
+              {/* Mobile Hamburger Menu Toggle */}
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="lg:hidden p-2 rounded-lg text-stone-800 hover:bg-stone-100 focus:outline-none transition-colors cursor-pointer"
+                aria-label="Toggle Navigation Menu"
+              >
+                {mobileMenuOpen ? <X className="h-6 w-6 text-red-600" /> : <Menu className="h-6 w-6 text-stone-800" />}
+              </button>
+            </div>
+
           </div>
 
         </div>
+      </header>
 
-      </div>
-
-      {/* 2. Sticky Deep Luxury Green Navigation Bar with Radiant Golden Buttons */}
-      <div className="sticky top-0 z-50 bg-[#14532d] text-white shadow-md border-t border-emerald-800/80">
+      {/* 2. Sticky Deep Luxury Green Navigation Bar (Fixed at top-0 across entire page scroll) */}
+      <nav className="sticky top-0 z-50 w-full bg-[#14532d] text-white shadow-lg border-t border-emerald-800/80">
         <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 flex items-center justify-between relative">
           
           <div className="flex items-center gap-1 sm:gap-2 w-full lg:w-auto">
@@ -307,7 +304,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
           </div>
 
         </div>
-      </div>
 
       {/* 3. Mobile Navigation Drawer */}
       {mobileMenuOpen && (
@@ -401,6 +397,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
         </div>
       )}
 
-    </header>
+      </nav>
+    </>
   );
 };

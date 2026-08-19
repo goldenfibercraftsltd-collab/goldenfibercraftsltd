@@ -93,12 +93,8 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
         </div>
 
         {/* Authentic Factory Certificates Section with Middle-Outward Card Slide */}
-        <div className="bg-gradient-to-br from-stone-900 via-emerald-950 to-stone-900 rounded-3xl p-8 sm:p-12 text-white shadow-2xl space-y-8">
-          <div className="text-center space-y-2 reveal-up">
-            <span className="text-xs font-bold uppercase tracking-widest text-emerald-400 flex items-center justify-center gap-1.5">
-              <Award className="h-4 w-4" />
-              OFFICIAL COMPLIANCE
-            </span>
+        <div className="relative overflow-hidden bg-gradient-to-br from-stone-900 via-emerald-950 to-stone-900 rounded-3xl p-6 sm:p-8 text-white shadow-2xl space-y-6 border border-emerald-500/20">
+          <div className="text-center space-y-2 reveal-up relative z-10">
             <ScrollTypingText
               as="h2"
               text="Factory Certificates & Compliance"
@@ -108,6 +104,10 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
             <p className="text-stone-300 text-xs sm:text-sm max-w-xl mx-auto font-light">
               Authentic factory certificates and compliance documents extracted from Golden Fiber Crafts Ltd. corporate portfolio.
             </p>
+          </div>
+
+          <div className="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
+            <img src="/logo-icon.png" alt="GF Icon" className="h-64 w-64 filter invert" />
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
