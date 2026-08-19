@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, ChevronRight, Eye, X } from 'lucide-react';
+import { Search, ChevronRight, Eye, X, Leaf, ArrowRight, Sparkles } from 'lucide-react';
 
 export interface MaterialItem {
   id: string;
@@ -10,6 +10,7 @@ export interface MaterialItem {
   rawImages: [string, string];
   sampleImages: [string, string];
   categorySlug: string;
+  products: string[];
 }
 
 export const RAW_MATERIALS: MaterialItem[] = [
@@ -17,106 +18,118 @@ export const RAW_MATERIALS: MaterialItem[] = [
     id: 'seagrass',
     name: 'Seagrass',
     scientificName: 'Cyperus Malaccensis',
-    description: 'Scientific name of Seagrass (Cyperus Malaccensis). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Floor mat, Table mat, Pet basket, Planter, Tray, Coaster, Pouf etc.',
+    description: 'This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Floor mat, Table mat, Pet basket, Planter, Tray, Coaster, Pouf etc.',
     rawImages: ['/materials/seagrass_plant_new.jpg', '/materials/seagrass_fiber_new.jpg'],
-    sampleImages: ['/materials/orig_BDH-01.jpg', '/materials/orig_BDH-10.jpg'],
-    categorySlug: 'seagrass'
+    sampleImages: ['/materials/preview_storage.jpg', '/materials/preview_planters.jpg'],
+    categorySlug: 'seagrass',
+    products: ['Storage', 'Laundry', 'Door mat', 'Floor mat', 'Table mat', 'Pet basket', 'Planter', 'Tray', 'Coaster', 'Pouf']
   },
   {
     id: 'kans-grass',
     name: 'Kans Grass',
     scientificName: 'Saccharum Spontaneum',
-    description: 'Scientific name of Kans Grass (Saccharum Spontaneum). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Table mat, Planter, Tray, Coaster etc.',
+    description: 'This material can be used to prepare different types of baskets i.e. Storage, Laundry, Table mat, Planter, Tray, Coaster etc.',
     rawImages: ['/materials/orig_kans-1.jpg', '/materials/orig_kans-2.jpg'],
     sampleImages: ['/materials/orig_SCP-02.jpg', '/materials/orig_SCP-05.png'],
-    categorySlug: 'kans-grass'
+    categorySlug: 'kans-grass',
+    products: ['Storage', 'Laundry', 'Table mat', 'Planter', 'Tray', 'Coaster']
   },
   {
     id: 'date-leaf',
     name: 'Date Leaf',
     scientificName: 'Phoenix Dactylifera',
-    description: 'Scientific name of Date Leaf (Phoenix Dactylifera). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Table mat, Planter, Tray, Coaster etc.',
+    description: 'This material can be used to prepare different types of baskets i.e. Storage, Laundry, Table mat, Planter, Tray, Coaster etc.',
     rawImages: ['/materials/orig_date-1.jpg', '/materials/orig_date-2.jpg'],
     sampleImages: ['/materials/orig_BDD-03.jpg', '/materials/orig_BDD-31.jpg'],
-    categorySlug: 'date-leaf'
+    categorySlug: 'date-leaf',
+    products: ['Storage', 'Laundry', 'Table mat', 'Planter', 'Tray', 'Coaster']
   },
   {
     id: 'jute',
     name: 'Jute',
     scientificName: 'Corchorus Olitorius',
-    description: 'Scientific name of Jute (Corchorus Olitorius). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Floor mat, Table mat, Planter, Coaster, Pouf etc.',
+    description: 'This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Floor mat, Table mat, Planter, Coaster, Pouf etc.',
     rawImages: ['/materials/orig_Jute-1.jpg', '/materials/orig_jute-2.jpg'],
     sampleImages: ['/materials/orig_BJB-04.jpg', '/materials/orig_BJB-32.jpg'],
-    categorySlug: 'jute'
+    categorySlug: 'jute',
+    products: ['Storage', 'Laundry', 'Door mat', 'Floor mat', 'Table mat', 'Planter', 'Coaster', 'Pouf']
   },
   {
     id: 'rattan',
     name: 'Rattan',
     scientificName: 'Calamus Tenuis',
-    description: 'Scientific name of Rattan (Calamus Tenuis). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Table mat, Pet basket, Planter, Tray, Coaster, Stool, Furniture etc.',
+    description: 'This material can be used to prepare different types of baskets i.e. Storage, Laundry, Table mat, Pet basket, Planter, Tray, Coaster, Stool, Furniture etc.',
     rawImages: ['/materials/orig_rattan-1.jpg', '/materials/orig_rattan-2.jpg'],
     sampleImages: ['/materials/orig_BDC-02.jpg', '/materials/orig_BDC-06.jpg'],
-    categorySlug: 'rattan'
+    categorySlug: 'rattan',
+    products: ['Storage', 'Laundry', 'Table mat', 'Pet basket', 'Planter', 'Tray', 'Coaster', 'Stool', 'Furniture']
   },
   {
     id: 'bamboo',
     name: 'Bamboo',
     scientificName: 'Bambusa Vulgaris',
-    description: 'Scientific name of Bamboo (Bambusa Vulgaris). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Table mat, Planter, Tray, Coaster, Hanging basket, Stool, Furniture etc.',
+    description: 'This material can be used to prepare different types of baskets i.e. Storage, Laundry, Table mat, Planter, Tray, Coaster, Hanging basket, Stool, Furniture etc.',
     rawImages: ['/materials/orig_bamboo-1.jpg', '/materials/orig_bamboo-2.jpg'],
     sampleImages: ['/materials/orig_BDB-01.jpg', '/materials/orig_BDB-06.jpg'],
-    categorySlug: 'bamboo'
+    categorySlug: 'bamboo',
+    products: ['Storage', 'Laundry', 'Table mat', 'Planter', 'Tray', 'Coaster', 'Hanging basket', 'Stool', 'Furniture']
   },
   {
     id: 'palm-fiber',
     name: 'Palm Fiber',
     scientificName: 'Borassus Flabellifer',
-    description: 'Scientific name of Palm Fiber (Borassus Flabellifer). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Table mat, Coaster etc.',
+    description: 'This material can be used to prepare different types of baskets i.e. Storage, Laundry, Table mat, Coaster etc.',
     rawImages: ['/materials/orig_palm-1.jpg', '/materials/orig_palm-2.jpg'],
     sampleImages: ['/materials/orig_BSL-01.jpg', '/materials/orig_BSL-02.jpg'],
-    categorySlug: 'palm-fiber'
+    categorySlug: 'palm-fiber',
+    products: ['Storage', 'Laundry', 'Table mat', 'Coaster']
   },
   {
     id: 'corn-husk',
     name: 'Corn Husk',
     scientificName: 'Zea Mays',
-    description: 'Scientific name of Corn Husk (Zea Mays). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Floor mat, Table mat, Planter, Coaster etc.',
+    description: 'This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Floor mat, Table mat, Planter, Coaster etc.',
     rawImages: ['/materials/orig_corn-1.jpg', '/materials/orig_corn-2.jpg'],
     sampleImages: ['/materials/orig_PTF-01.jpg', '/materials/orig_PTF-02.jpg'],
-    categorySlug: 'corn-husk'
+    categorySlug: 'corn-husk',
+    products: ['Storage', 'Laundry', 'Door mat', 'Floor mat', 'Table mat', 'Planter', 'Coaster']
   },
   {
     id: 'banana-fiber',
     name: 'Banana Fiber',
     scientificName: 'Musa Acuminata',
-    description: 'Scientific name of Banana Fiber (Musa Acuminata). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Floor mat, Table mat, Planter, Coaster, Pouf etc.',
+    description: 'This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Floor mat, Table mat, Planter, Coaster, Pouf etc.',
     rawImages: ['/materials/orig_banana-1.jpg', '/materials/orig_banana-2.jpg'],
     sampleImages: ['/materials/orig_BAN-01.jpg', '/materials/orig_BAN-04.jpg'],
-    categorySlug: 'banana-fiber'
+    categorySlug: 'banana-fiber',
+    products: ['Storage', 'Laundry', 'Door mat', 'Floor mat', 'Table mat', 'Planter', 'Coaster', 'Pouf']
   },
   {
     id: 'pineapple-fiber',
     name: 'Pineapple Fiber',
     scientificName: 'Ananas Somosus',
-    description: 'Scientific name of Pineapple Fiber (Ananas Somosus). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Floor mat, Table mat, Planter, Coaster, Pouf etc.',
+    description: 'This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Floor mat, Table mat, Planter, Coaster, Pouf etc.',
     rawImages: ['/materials/orig_Pineapple-1.jpg', '/materials/orig_pineapple-2.png'],
     sampleImages: ['/materials/orig_BPA-01.jpg', '/materials/orig_BPA-02.jpg'],
-    categorySlug: 'pineapple-fiber'
+    categorySlug: 'pineapple-fiber',
+    products: ['Storage', 'Laundry', 'Door mat', 'Floor mat', 'Table mat', 'Planter', 'Coaster', 'Pouf']
   },
   {
     id: 'water-hyacinth',
     name: 'Water-Hyacinth',
     scientificName: 'Eicssornia Crassipes',
-    description: 'Scientific name of Water-hyacinth (Eicssornia Crassipes). This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Table mat, Planter, Pet basket, Coaster etc.',
+    description: 'This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Table mat, Planter, Pet basket, Coaster etc.',
     rawImages: ['/materials/orig_water-hyacinth-1.jpg', '/materials/orig_water-hyacinth-2.jpg'],
     sampleImages: ['/materials/orig_BWH-01.jpg', '/materials/orig_BWH-02.jpg'],
-    categorySlug: 'water-hyacinth'
+    categorySlug: 'water-hyacinth',
+    products: ['Storage', 'Laundry', 'Door mat', 'Table mat', 'Planter', 'Pet basket', 'Coaster']
   }
 ];
 
 export const MaterialsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [previewImage, setPreviewImage] = useState<{ src: string; title: string } | null>(null);
+  const [activeMaterial, setActiveMaterial] = useState<string | null>(null);
 
   const filteredMaterials = RAW_MATERIALS.filter((mat) => {
     const q = searchQuery.toLowerCase().trim();
@@ -129,142 +142,240 @@ export const MaterialsPage: React.FC = () => {
   });
 
   return (
-    <div className="min-h-screen bg-white text-stone-900 font-sans pb-20 animate-fadeIn">
+    <div className="min-h-screen bg-gradient-to-b from-stone-50 via-white to-emerald-50/30 text-stone-900 font-sans pb-20 animate-fadeIn">
       
-      {/* 1. Breadcrumbs Header */}
-      <div className="border-b border-stone-200 bg-stone-50/80 reveal-up">
-        <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8 flex items-center justify-between text-xs text-stone-900 font-bold">
-          <div className="flex items-center gap-1.5">
-            <Link to="/" className="hover:text-[#166534] font-bold text-stone-800">Home</Link>
-            <ChevronRight className="h-3.5 w-3.5 text-stone-600 font-bold" />
-            <span className="text-black font-extrabold">Materials Information</span>
+      {/* 1. Premium Hero Banner */}
+      <div className="relative overflow-hidden bg-gradient-to-r from-[#064e3b] via-[#065f46] to-[#047857] reveal-up">
+        {/* Decorative Pattern */}
+        <div className="absolute inset-0 opacity-[0.06]" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E")`,
+        }} />
+        
+        <div className="relative mx-auto max-w-7xl px-4 py-10 sm:py-14 sm:px-6 lg:px-8">
+          {/* Breadcrumbs */}
+          <div className="flex items-center gap-1.5 text-emerald-200/80 text-xs font-medium mb-4">
+            <Link to="/" className="hover:text-white transition-colors">Home</Link>
+            <ChevronRight className="h-3 w-3" />
+            <span className="text-white font-bold">Materials Information</span>
           </div>
           
-          {/* Quick Search */}
-          <div className="relative w-48 sm:w-64">
-            <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-stone-700" />
-            <input
-              type="text"
-              placeholder="Search material..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-8 pr-7 py-1 text-xs rounded border border-stone-400 bg-white text-black font-medium focus:outline-hidden focus:border-[#166534] transition-colors"
-            />
-            {searchQuery && (
-              <button
-                onClick={() => setSearchQuery('')}
-                className="absolute right-2 top-1/2 -translate-y-1/2 text-stone-600 hover:text-black"
-              >
-                <X className="h-3 w-3" />
-              </button>
-            )}
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div>
+              <div className="flex items-center gap-3 mb-2">
+                <div className="p-2 rounded-xl bg-white/10 backdrop-blur-sm">
+                  <Leaf className="h-6 w-6 text-emerald-300" />
+                </div>
+                <h1 className="text-2xl sm:text-3xl font-serif font-black text-white tracking-tight">
+                  Raw Materials & Fibers
+                </h1>
+              </div>
+              <p className="text-emerald-100/90 text-sm sm:text-base font-medium max-w-xl leading-relaxed">
+                Discover the authentic natural fibers sourced from the heart of Bangladesh — each material 
+                handcrafted into premium eco-friendly products for global export.
+              </p>
+              <div className="flex items-center gap-2 mt-3">
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
+                  <Sparkles className="h-3 w-3" /> {RAW_MATERIALS.length} Natural Materials
+                </span>
+                <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
+                  100% Eco-Friendly
+                </span>
+              </div>
+            </div>
+            
+            {/* Search */}
+            <div className="relative w-full md:w-72">
+              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-stone-400" />
+              <input
+                type="text"
+                placeholder="Search materials..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-9 py-2.5 text-sm rounded-xl border-0 bg-white/95 backdrop-blur-sm text-stone-800 font-medium focus:outline-hidden focus:ring-2 focus:ring-emerald-300 shadow-lg placeholder-stone-400 transition-all"
+              />
+              {searchQuery && (
+                <button
+                  onClick={() => setSearchQuery('')}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-stone-500 hover:text-stone-700 transition-colors"
+                >
+                  <X className="h-4 w-4" />
+                </button>
+              )}
+            </div>
           </div>
         </div>
       </div>
 
-      {/* 2. Materials Information Table */}
-      <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 mt-4 sm:mt-6">
+      {/* 2. Materials Grid — Modern Card Layout */}
+      <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 mt-8 sm:mt-10">
         
-        {/* Table Header (Desktop) */}
-        <div className="hidden lg:grid grid-cols-12 bg-white border-b-2 border-stone-300 text-sm font-extrabold text-black pb-3 px-2 reveal-up">
-          <div className="col-span-3 font-black text-black">Raw Material Images</div>
-          <div className="col-span-6 px-4 font-black text-black">Raw Material and Product Description</div>
-          <div className="col-span-3 text-right font-black text-black pr-2">Sample Product Images</div>
-        </div>
-
-        {/* Table Content with Staggered Entrance */}
-        <div className="divide-y divide-stone-200">
+        <div className="space-y-6 sm:space-y-8">
           {filteredMaterials.map((mat, idx) => {
             const staggerClass = `stagger-${(idx % 8) + 1}`;
+            const isExpanded = activeMaterial === mat.id;
+            const isEven = idx % 2 === 0;
+            
             return (
               <div
                 key={mat.id}
-                className={`reveal-up ${staggerClass} py-4 sm:py-5 px-1 sm:px-2 hover:bg-stone-50/60 transition-colors`}
+                className={`reveal-up ${staggerClass} group`}
               >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
-                  
-                  {/* Column 1: Raw Material Images */}
-                  <div className="lg:col-span-3">
-                    <span className="lg:hidden block text-xs font-bold text-black mb-2">
-                      Raw Material Images:
-                    </span>
-                    <div className="flex items-center gap-2 sm:gap-3">
-                      {mat.rawImages.map((imgSrc, i) => (
-                        <div
-                          key={i}
-                          onClick={() => setPreviewImage({ src: imgSrc, title: `${mat.name} - Raw Material Image ${i + 1}` })}
-                          className="w-1/2 aspect-square max-w-[130px] rounded overflow-hidden bg-stone-100 border border-stone-200 cursor-pointer hover:opacity-90 transition-all shadow-2xs flex items-center justify-center img-zoom-container hover-lift-sm"
-                        >
-                          <img
-                            src={imgSrc}
-                            alt={`${mat.name} Raw Material`}
-                            className="h-full w-full object-cover"
-                            loading="lazy"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                <div className={`
+                  relative rounded-2xl border border-stone-200/80 bg-white 
+                  shadow-md hover:shadow-2xl hover:border-emerald-200/60
+                  transition-all duration-500 ease-out overflow-hidden
+                  ${isExpanded ? 'ring-2 ring-emerald-500/30 shadow-xl' : ''}
+                `}>
 
-                  {/* Column 2: Raw Material and Product Description */}
-                  <div className="lg:col-span-6 px-0 lg:px-4 space-y-1.5">
-                    <span className="lg:hidden block text-xs font-bold text-black">
-                      Raw Material & Description:
-                    </span>
-                    <p className="text-xs sm:text-[13px] text-black leading-relaxed font-medium">
-                      <span className="font-extrabold text-black">{mat.name}: </span>
-                      <span>{mat.description.replace(`${mat.name}: `, '')}</span>
-                    </p>
-                    <div className="pt-1">
+                  <div className={`grid grid-cols-1 lg:grid-cols-11 ${isEven ? '' : 'lg:direction-rtl'}`}>
+                    
+                    {/* Left/Right: Raw Material Images */}
+                    <div className={`lg:col-span-3 p-5 sm:p-6 ${isEven ? '' : 'lg:order-3'}`}>
+                      <div className="flex items-center gap-2.5 mb-4">
+                        <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-emerald-800 to-emerald-950 text-white text-xs font-black shadow-lg border-2 border-emerald-600/30 shrink-0">
+                          {String(idx + 1).padStart(2, '0')}
+                        </span>
+                        <p className="text-[11px] uppercase tracking-[0.15em] font-black text-stone-600">
+                          Raw Material
+                        </p>
+                      </div>
+                      <div className="grid grid-cols-2 gap-2.5">
+                        {mat.rawImages.map((imgSrc, i) => (
+                          <div
+                            key={i}
+                            onClick={() => setPreviewImage({ src: imgSrc, title: `${mat.name} — Raw Material` })}
+                            className="relative aspect-square rounded-xl overflow-hidden bg-stone-100 cursor-pointer group/img ring-1 ring-stone-200/80 hover:ring-emerald-400/60 transition-all duration-300 shadow-sm hover:shadow-xl"
+                          >
+                            <img
+                              src={imgSrc}
+                              alt={`${mat.name} Raw Material`}
+                              className="h-full w-full object-cover transition-transform duration-500 group-hover/img:scale-110"
+                              loading="lazy"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-3">
+                              <Eye className="h-5 w-5 text-white drop-shadow-lg" />
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Center: Description & Info */}
+                    <div className={`lg:col-span-5 p-5 sm:p-7 flex flex-col justify-center border-x border-stone-100 ${isEven ? '' : 'lg:order-2'}`}>
+                      <div className="flex items-start gap-3 mb-3">
+                        <div>
+                          <h3 className="text-xl sm:text-2xl font-serif font-black text-stone-950 tracking-tight leading-tight">
+                            {mat.name}
+                          </h3>
+                          <p className="text-sm font-bold text-emerald-700 italic mt-1">
+                            {mat.scientificName}
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <p className="text-sm sm:text-[15px] text-stone-700 leading-relaxed font-semibold mb-5">
+                        {mat.description}
+                      </p>
+
+                      {/* Product Tags */}
+                      <div className="flex flex-wrap gap-2 mb-5">
+                        {mat.products.slice(0, isExpanded ? undefined : 6).map((product) => (
+                          <span
+                            key={product}
+                            className="inline-flex items-center px-3 py-1.5 rounded-lg bg-emerald-50 text-emerald-900 text-xs font-bold border border-emerald-200 hover:bg-emerald-100 transition-colors cursor-default"
+                          >
+                            {product}
+                          </span>
+                        ))}
+                        {!isExpanded && mat.products.length > 6 && (
+                          <button
+                            onClick={() => setActiveMaterial(mat.id)}
+                            className="inline-flex items-center px-3 py-1.5 rounded-lg bg-stone-100 text-stone-700 text-xs font-bold border border-stone-200 hover:bg-stone-200 transition-colors cursor-pointer"
+                          >
+                            +{mat.products.length - 6} more
+                          </button>
+                        )}
+                        {isExpanded && mat.products.length > 6 && (
+                          <button
+                            onClick={() => setActiveMaterial(null)}
+                            className="inline-flex items-center px-3 py-1.5 rounded-lg bg-stone-100 text-stone-600 text-xs font-bold border border-stone-200 hover:bg-stone-200 transition-colors cursor-pointer"
+                          >
+                            Show less
+                          </button>
+                        )}
+                      </div>
+
+                      {/* Browse Button */}
                       <Link
                         to={`/products?category=${mat.categorySlug}`}
-                        className="text-xs font-bold text-emerald-800 hover:underline inline-flex items-center gap-1 btn-interactive"
+                        className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-700 via-emerald-800 to-emerald-900 hover:from-emerald-800 hover:to-emerald-950 text-white text-sm font-extrabold shadow-md hover:shadow-lg transition-all duration-300 w-fit group/btn"
                       >
-                        <span>Browse {mat.name} products</span>
-                        <span className="btn-arrow">➔</span>
+                        <span>Browse {mat.name} Products</span>
+                        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
                       </Link>
                     </div>
-                  </div>
 
-                  {/* Column 3: Sample Product Images */}
-                  <div className="lg:col-span-3">
-                    <span className="lg:hidden block text-xs font-bold text-stone-800 mb-2">
-                      Sample Product Images:
-                    </span>
-                    <div className="flex items-center justify-start lg:justify-end gap-2 sm:gap-3">
-                      {mat.sampleImages.map((imgSrc, i) => (
-                        <div
-                          key={i}
-                          onClick={() => setPreviewImage({ src: imgSrc, title: `${mat.name} - Sample Product Image ${i + 1}` })}
-                          className="w-1/2 aspect-square max-w-[130px] rounded overflow-hidden bg-stone-100 border border-stone-200 cursor-pointer hover:opacity-90 transition-all shadow-2xs flex items-center justify-center img-zoom-container hover-lift-sm"
-                        >
-                          <img
-                            src={imgSrc}
-                            alt={`${mat.name} Sample Product`}
-                            className="h-full w-full object-cover"
-                            loading="lazy"
-                          />
-                        </div>
-                      ))}
+                    {/* Right/Left: Sample Product Images */}
+                    <div className={`lg:col-span-3 p-5 sm:p-6 bg-gradient-to-br from-amber-50/50 to-orange-50/30 ${isEven ? '' : 'lg:order-1'}`}>
+                      <div className="flex items-center gap-2 mb-4">
+                        <div className="w-1.5 h-5 rounded-full bg-amber-500"></div>
+                        <p className="text-[11px] uppercase tracking-[0.15em] font-black text-amber-800/80">
+                          Sample Products
+                        </p>
+                      </div>
+                      <div className="grid grid-cols-2 gap-2.5">
+                        {mat.sampleImages.map((imgSrc, i) => (
+                          <div
+                            key={i}
+                            onClick={() => setPreviewImage({ src: imgSrc, title: `${mat.name} — Sample Product` })}
+                            className="relative aspect-square rounded-xl overflow-hidden bg-white cursor-pointer group/img ring-1 ring-amber-200/80 hover:ring-amber-500/60 transition-all duration-300 shadow-sm hover:shadow-xl"
+                          >
+                            <img
+                              src={imgSrc}
+                              alt={`${mat.name} Sample Product`}
+                              className="h-full w-full object-cover transition-transform duration-500 group-hover/img:scale-110"
+                              loading="lazy"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-3">
+                              <Eye className="h-5 w-5 text-white drop-shadow-lg" />
+                            </div>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
-
                 </div>
               </div>
             );
           })}
         </div>
+
+        {/* No Results */}
+        {filteredMaterials.length === 0 && (
+          <div className="text-center py-20">
+            <Search className="h-12 w-12 text-stone-300 mx-auto mb-4" />
+            <h3 className="text-lg font-serif font-bold text-stone-500">No materials found</h3>
+            <p className="text-sm text-stone-400 mt-1">Try searching with a different keyword.</p>
+            <button
+              onClick={() => setSearchQuery('')}
+              className="mt-4 px-4 py-2 rounded-lg bg-emerald-700 text-white text-xs font-bold hover:bg-emerald-800 transition-colors"
+            >
+              Clear Search
+            </button>
+          </div>
+        )}
       </div>
 
       {/* 3. HD Image Lightbox Modal */}
       {previewImage && (
         <div
           onClick={() => setPreviewImage(null)}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-stone-950/85 backdrop-blur-xs animate-fadeIn cursor-pointer"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-stone-950/90 backdrop-blur-sm animate-fadeIn cursor-pointer"
+          data-lenis-prevent
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            className="relative max-w-4xl max-h-[90vh] bg-white rounded-2xl overflow-hidden shadow-2xl p-4 flex flex-col items-center"
+            className="relative max-w-4xl max-h-[90vh] bg-white rounded-2xl overflow-hidden shadow-2xl p-4 sm:p-5 flex flex-col items-center"
           >
             <div className="w-full flex items-center justify-between pb-3 border-b border-stone-200 mb-3">
               <h3 className="font-serif text-sm sm:text-base font-bold text-stone-900">
@@ -272,13 +383,13 @@ export const MaterialsPage: React.FC = () => {
               </h3>
               <button
                 onClick={() => setPreviewImage(null)}
-                className="p-1.5 rounded-full hover:bg-stone-100 text-stone-600 transition-colors"
+                className="p-2 rounded-full hover:bg-stone-100 text-stone-500 hover:text-stone-800 transition-colors cursor-pointer"
               >
                 <X className="h-5 w-5" />
               </button>
             </div>
             
-            <div className="max-h-[75vh] overflow-hidden rounded-lg bg-stone-50 flex items-center justify-center">
+            <div className="max-h-[75vh] overflow-hidden rounded-xl bg-stone-50 flex items-center justify-center">
               <img
                 src={previewImage.src}
                 alt={previewImage.title}
