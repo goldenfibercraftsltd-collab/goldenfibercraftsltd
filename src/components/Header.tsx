@@ -239,7 +239,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               {/* Category Dropdown Mega Menu (Desktop) */}
               {categoryDropdownOpen && (
                 <div
-                  className="absolute left-0 top-full z-50 flex w-[640px] bg-white rounded-b-2xl shadow-[0_20px_50px_rgba(0,0,0,0.22)] border border-stone-200/90 overflow-hidden text-stone-800 animate-megaMenuIn"
+                  className="absolute left-0 top-full z-50 flex w-[500px] bg-white rounded-b-2xl shadow-[0_20px_50px_rgba(0,0,0,0.22)] border border-stone-200/90 overflow-hidden text-stone-800 animate-megaMenuIn"
                   onMouseLeave={() => setCategoryDropdownOpen(false)}
                 >
                   {/* Left Column: 10 Main Categories */}
@@ -281,14 +281,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
                     </div>
                   </div>
 
-                  {/* Right Column: Subcategories for Hovered Category */}
-                  <div className="flex-1 p-4 bg-stone-50/40 overflow-y-auto scrollbar-thin">
+                  {/* Right Column: Subcategories for Hovered Category (1 Column) */}
+                  <div className="flex-1 p-3.5 bg-stone-50/40 overflow-y-auto scrollbar-thin">
                     {(() => {
                       const currentCat = CATEGORIES.find(c => c.id === activeCategoryHover) || CATEGORIES[0];
                       return (
                         <div key={currentCat.id} className="animate-subFadeIn">
-                          {/* Subcategories Grid with Clean Interactive Cards */}
-                          <div className="grid grid-cols-2 gap-2.5">
+                          {/* Subcategories 1-Column List */}
+                          <div className="flex flex-col gap-2">
                             {currentCat.subcategories.map((sub) => (
                               <button
                                 key={sub.id}
