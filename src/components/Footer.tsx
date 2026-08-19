@@ -17,21 +17,16 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
           {/* Col 1: About / Branding */}
-          <div className="space-y-4 reveal-up stagger-1">
-            <div className="bg-white rounded-xl p-3 inline-block shadow-md">
-              <img
-                src="/logo.png"
-                alt="Golden Fiber Crafts Ltd."
-                className="h-12 w-auto object-contain"
-              />
-            </div>
-            <p className="text-xs text-emerald-100/90 leading-relaxed font-light">
-              Manufacturer and exporter of eco-friendly jute, seagrass, kaisa grass handicrafts, storage baskets, planters, and natural lifestyle goods from Bangladesh.
-            </p>
-            <div className="pt-2 text-xs font-semibold text-amber-300 flex items-center gap-1.5">
-              <HeartHandshake className="h-4 w-4" />
-              <span>Partnered with Global Retail Giants</span>
-            </div>
+          <div className="flex flex-col items-start reveal-up stagger-1">
+            <Link to="/" onClick={scrollToTop} className="block group">
+              <div className="bg-white rounded-2xl p-2.5 shadow-lg border border-emerald-400/30 overflow-hidden hover:scale-105 transition-transform duration-300 w-44 h-44 flex items-center justify-center">
+                <img
+                  src="/profile_assets/p1_img_p0_5.png"
+                  alt="Golden Fiber Crafts Ltd."
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </Link>
           </div>
 
           {/* Col 2: Categories */}
