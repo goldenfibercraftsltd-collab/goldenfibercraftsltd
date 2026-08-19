@@ -19,12 +19,34 @@ export const Footer: React.FC = () => {
           {/* Col 1: About / Branding */}
           <div className="flex flex-col items-start reveal-up stagger-1">
             <Link to="/" onClick={scrollToTop} className="block group">
-              <div className="bg-white rounded-2xl p-2.5 shadow-lg border border-emerald-400/30 overflow-hidden hover:scale-105 transition-transform duration-300 w-44 h-44 flex items-center justify-center">
+              <div className="bg-white rounded-2xl p-4 shadow-xl border border-emerald-400/30 overflow-hidden hover:scale-105 transition-transform duration-300 w-52 flex flex-col items-center justify-center text-center">
+                {/* Official Green Leaf GF Emblem */}
                 <img
-                  src="/profile_assets/p1_img_p0_5.png"
+                  src="/logo-icon.png"
                   alt="Golden Fiber Crafts Ltd."
-                  className="w-full h-full object-contain"
+                  className="h-16 w-auto object-contain"
                 />
+                
+                {/* Brand Typography */}
+                <div className="mt-2 text-center w-full">
+                  <h3 className="font-serif text-sm font-black text-[#14532d] tracking-wider uppercase leading-none">
+                    GOLDEN FIBER
+                  </h3>
+                  <div className="flex items-center justify-center gap-1.5 my-1">
+                    <span className="h-[1px] w-4 bg-[#14532d]/40"></span>
+                    <span className="text-[10px] font-sans font-extrabold text-[#14532d] uppercase tracking-widest">
+                      CRAFTS LTD.
+                    </span>
+                    <span className="h-[1px] w-4 bg-[#14532d]/40"></span>
+                  </div>
+                </div>
+
+                {/* Tagline Directly Underneath */}
+                <div className="mt-1.5 pt-1.5 border-t border-stone-200/80 w-full">
+                  <p className="text-[10px] sm:text-[11px] text-stone-700 font-serif italic text-center font-bold">
+                    "{TAGLINE}"
+                  </p>
+                </div>
               </div>
             </Link>
           </div>
