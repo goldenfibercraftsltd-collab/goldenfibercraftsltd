@@ -29,8 +29,8 @@ export const RAW_MATERIALS: MaterialItem[] = [
     name: 'Kans Grass',
     scientificName: 'Saccharum Spontaneum',
     description: 'This material can be used to prepare different types of baskets i.e. Storage, Laundry, Table mat, Planter, Tray, Coaster etc.',
-    rawImages: ['/materials/orig_kans-1.jpg', '/materials/orig_kans-2.jpg'],
-    sampleImages: ['/materials/orig_SCP-02.jpg', '/materials/orig_SCP-05.png'],
+    rawImages: ['/materials/kans_grass_plant_new.jpg', '/materials/kans_grass_fiber_new.jpg'],
+    sampleImages: ['/materials/kans_sample_bowls.jpg', '/materials/kans_sample_baskets.jpg'],
     categorySlug: 'kans-grass',
     products: ['Storage', 'Laundry', 'Table mat', 'Planter', 'Tray', 'Coaster']
   },
