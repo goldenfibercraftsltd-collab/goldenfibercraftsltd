@@ -39,8 +39,8 @@ export const RAW_MATERIALS: MaterialItem[] = [
     name: 'Date Leaf',
     scientificName: 'Phoenix Dactylifera',
     description: 'This material can be used to prepare different types of baskets i.e. Storage, Laundry, Table mat, Planter, Tray, Coaster etc.',
-    rawImages: ['/materials/orig_date-1.jpg', '/materials/orig_date-2.jpg'],
-    sampleImages: ['/materials/orig_BDD-03.jpg', '/materials/orig_BDD-31.jpg'],
+    rawImages: ['/materials/date_leaf_plant_new.jpg', '/materials/date_leaf_fiber_new.jpg'],
+    sampleImages: ['/materials/date_sample_trays.jpg', '/materials/date_sample_canisters.jpg'],
     categorySlug: 'date-leaf',
     products: ['Storage', 'Laundry', 'Table mat', 'Planter', 'Tray', 'Coaster']
   },
@@ -49,8 +49,8 @@ export const RAW_MATERIALS: MaterialItem[] = [
     name: 'Jute',
     scientificName: 'Corchorus Olitorius',
     description: 'This material can be used to prepare different types of baskets i.e. Storage, Laundry, Door mat, Floor mat, Table mat, Planter, Coaster, Pouf etc.',
-    rawImages: ['/materials/orig_Jute-1.jpg', '/materials/orig_jute-2.jpg'],
-    sampleImages: ['/materials/orig_BJB-04.jpg', '/materials/orig_BJB-32.jpg'],
+    rawImages: ['/materials/jute_plant_new.jpg', '/materials/jute_fiber_new.jpg'],
+    sampleImages: ['/materials/jute_sample_bowls.jpg', '/materials/jute_sample_baskets.jpg'],
     categorySlug: 'jute',
     products: ['Storage', 'Laundry', 'Door mat', 'Floor mat', 'Table mat', 'Planter', 'Coaster', 'Pouf']
   },
