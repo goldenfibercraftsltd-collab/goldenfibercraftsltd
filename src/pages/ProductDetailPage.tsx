@@ -51,14 +51,27 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
 
   const allActiveProducts = useMemo(() => getAllActiveProducts(), []);
 
-  // Find product by slug or id or code
-  const product: ProductItem =
-    allActiveProducts.find((p) => p.slug === productSlug || p.id === productSlug || p.code === productSlug) ||
-    allActiveProducts[0];
+  // Find product by slug or id or code (with case-insensitive fallback)
+  const product: ProductItem = useMemo(() => {
+    if (!productSlug) return allActiveProducts[0];
+    const cleanSlug = productSlug.toLowerCase().trim();
+    const found = allActiveProducts.find((p) => 
+      p.slug === productSlug || 
+      p.id === productSlug || 
+      p.code === productSlug ||
+      (p.slug && p.slug.toLowerCase() === cleanSlug) ||
+      (p.id && p.id.toLowerCase() === cleanSlug) ||
+      (p.code && p.code.toLowerCase() === cleanSlug)
+    );
+    return found || allActiveProducts[0];
+  }, [allActiveProducts, productSlug]);
 
-  const currentCategory =
-    CATEGORIES.find((c) => c.slug === product.categorySlug || c.id === product.category || c.id === product.categorySlug) ||
-    CATEGORIES[0];
+  const currentCategory = useMemo(() => {
+    return (
+      CATEGORIES.find((c) => c.slug === product.categorySlug || c.id === product.category || c.id === product.categorySlug) ||
+      CATEGORIES[0]
+    );
+  }, [product]);
 
   // Specs & Carton/CBM defaults based on product data
   const setPerCarton = product.setPerCarton || 1;

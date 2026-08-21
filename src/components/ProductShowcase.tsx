@@ -1,21 +1,28 @@
 import React, { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ProductItem } from '../data/products';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { getAllActiveProducts } from '../utils/productStore';
+import { ArrowRight } from 'lucide-react';
 import { ScrollTypingText } from './ScrollTypingText';
 
 interface ProductShowcaseProps {
-  products: ProductItem[];
+  products?: ProductItem[];
   onSelectProduct?: (product: any) => void;
   onOpenQuoteModal?: (productCode?: string) => void;
 }
 
 export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
-  products,
-  onSelectProduct
+  products: initialProducts,
+  onSelectProduct,
+  onOpenQuoteModal
 }) => {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+
+  const allActiveProducts = useMemo(() => {
+    if (initialProducts && initialProducts.length > 0) return initialProducts;
+    return getAllActiveProducts();
+  }, [initialProducts]);
 
   // Filter Categories tailored to Golden Fiber Crafts Ltd.
   const filterTabs = [
@@ -32,10 +39,10 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
   // Filtered Products
   const filteredProducts = useMemo(() => {
     if (selectedCategory === 'all') {
-      return products.slice(0, 12); // Show top 12 featured items across categories
+      return allActiveProducts.slice(0, 12); // Show top 12 featured items across categories
     }
-    return products.filter(p => p.category === selectedCategory || p.categorySlug === selectedCategory);
-  }, [products, selectedCategory]);
+    return allActiveProducts.filter(p => p.category === selectedCategory || p.categorySlug === selectedCategory);
+  }, [allActiveProducts, selectedCategory]);
 
   return (
     <section className="py-14 bg-white font-sans border-t border-stone-200/80">

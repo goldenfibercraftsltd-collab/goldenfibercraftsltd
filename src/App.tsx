@@ -95,7 +95,6 @@ export const AppContent: React.FC = () => {
             element={
               <HomePage
                 onOpenQuoteModal={handleOpenQuoteModal}
-                onSelectProduct={(p) => handleOpenQuoteModal(p.id)}
                 onOpenInfoModal={handleOpenInfoModal}
               />
             }

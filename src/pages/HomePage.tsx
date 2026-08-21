@@ -7,13 +7,11 @@ import { PRODUCTS } from '../data/products';
 
 interface HomePageProps {
   onOpenQuoteModal: (productCode?: string) => void;
-  onSelectProduct: (product: any) => void;
-  onOpenInfoModal: (title: string, content: string) => void;
+  onOpenInfoModal?: (title: string, content: string) => void;
 }
 
 export const HomePage: React.FC<HomePageProps> = ({
   onOpenQuoteModal,
-  onSelectProduct,
 }) => {
   return (
     <div className="space-y-12 pb-16">
@@ -22,8 +20,6 @@ export const HomePage: React.FC<HomePageProps> = ({
 
       {/* 2. Clean 1:1 Interactive Filterable Product Showcase */}
       <ProductShowcase
-        products={PRODUCTS}
-        onSelectProduct={onSelectProduct}
         onOpenQuoteModal={onOpenQuoteModal}
       />
 

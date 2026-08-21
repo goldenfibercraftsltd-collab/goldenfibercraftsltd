@@ -185,19 +185,16 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
               </p>
             </div>
 
-            {/* Right: Real Category Craft Product Photo Showcase */}
+            {/* Right: Official Site Branded Emblem Badge */}
             <div className="flex items-center justify-center shrink-0">
               <div className="relative group">
-                <div className="absolute -inset-2.5 rounded-2xl bg-amber-400/20 blur-md group-hover:bg-amber-400/35 transition-all duration-300"></div>
-                <div className="relative h-16 w-20 sm:h-20 sm:w-24 rounded-2xl bg-white/95 backdrop-blur-md border border-white/40 p-1.5 shadow-xl flex items-center justify-center hover:scale-105 transition-transform duration-300">
+                <div className="absolute -inset-2.5 rounded-full bg-emerald-400/20 blur-md group-hover:bg-emerald-400/35 transition-all duration-500"></div>
+                <div className="relative h-14 w-14 sm:h-16 sm:w-16 rounded-2xl bg-white/10 backdrop-blur-md border border-white/25 p-2 shadow-xl flex items-center justify-center hover:scale-105 transition-transform duration-500">
                   <img
-                    src={activeBannerImage}
-                    alt="Category Craft Preview"
-                    className="h-full w-full object-contain filter drop-shadow-sm rounded-lg"
+                    src="/logo-icon.png"
+                    alt="Golden Fiber Crafts Ltd."
+                    className="h-full w-full object-contain filter drop-shadow-md brightness-110"
                   />
-                  <span className="absolute -bottom-1 -right-1 px-1.5 py-0.2 rounded-md bg-emerald-950 text-[8px] sm:text-[9px] font-black text-amber-300 shadow-sm border border-white/20 uppercase tracking-widest">
-                    {currentCategoryObj ? currentCategoryObj.name : '100% ECO'}
-                  </span>
                 </div>
               </div>
             </div>
@@ -206,12 +203,12 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
 
         </div>
 
-        {/* Dynamic Category Background Watermark */}
-        <div className="absolute -right-6 -bottom-6 opacity-15 pointer-events-none">
+        {/* Official Watermark */}
+        <div className="absolute -right-6 -bottom-6 opacity-10 pointer-events-none">
           <img
-            src={activeBannerImage}
-            alt="Category Background"
-            className="h-40 w-40 lg:h-48 lg:w-48 object-cover rounded-full filter blur-xs"
+            src="/logo-icon.png"
+            alt="Watermark"
+            className="h-36 w-36 lg:h-44 lg:w-44 object-contain filter invert"
           />
         </div>
       </div>
