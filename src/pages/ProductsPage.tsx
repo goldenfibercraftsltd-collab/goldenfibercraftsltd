@@ -74,8 +74,10 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
                 subCat = 'floor-mats';
               } else if (nameLower.includes('placemat')) {
                 subCat = 'placemats';
-              } else if (nameLower.includes('pouf')) {
+              } else if (nameLower.includes('pouf') || nameLower.includes('ottoman') || codeLower.startsWith('bjp')) {
                 subCat = 'poufs';
+              } else if (nameLower.includes('macrame') || nameLower.includes('hanger') || codeLower.startsWith('bjc') || codeLower.startsWith('bcc')) {
+                subCat = 'macrames';
               } else {
                 subCat = 'baskets';
               }

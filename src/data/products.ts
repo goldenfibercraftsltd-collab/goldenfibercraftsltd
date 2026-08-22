@@ -214,6 +214,1474 @@ export const CATEGORIES: CategoryInfo[] = [
 
 export const PRODUCTS: ProductItem[] = [
   // ==========================================
+  // 6. Jute Macrames & Plant Hangers (Authentic Catalogue Collection - 24 Products)
+  // ==========================================
+  {
+    id: "BCC-05",
+    slug: "two-tier-dual-jute-macrame-plant-hanger-bcc-05",
+    code: "BCC-05",
+    name: "Two-Tier Dual Jute Macrame Plant Hanger",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bcc_05.png",
+    galleryImages: ["/products/bcc_05.png"],
+    description: "Vertical 2-tier dual basket macrame plant hanger handcrafted from twisted golden jute rope with teal accent banding and hanging fringe tassel.",
+    longDescription: {
+          "overview": "The Two-Tier Dual Jute Macrame Plant Hanger (Art No: BCC-05) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute",
+    color: "Natural Golden Jute & Teal Accent",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BCC-05"
+          },
+          {
+                "key": "Item Name",
+                "value": "Two-Tier Dual Jute Macrame Plant Hanger"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Natural Golden Jute & Teal Accent"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BCC-06",
+    slug: "single-bowl-braided-jute-macrame-hanger-bcc-06",
+    code: "BCC-06",
+    name: "Single Bowl Braided Jute Macrame Hanger",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bcc_06.png",
+    galleryImages: ["/products/bcc_06.png"],
+    description: "Chic hand-knotted natural jute macrame plant hanger featuring an integrated textured bowl pot holder with bottom tassel ornament.",
+    longDescription: {
+          "overview": "The Single Bowl Braided Jute Macrame Hanger (Art No: BCC-06) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute",
+    color: "Off-White & Natural Jute",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BCC-06"
+          },
+          {
+                "key": "Item Name",
+                "value": "Single Bowl Braided Jute Macrame Hanger"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Off-White & Natural Jute"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BJC-01",
+    slug: "beaded-saffron-yellow-jute-macrame-hanger-bjc-01",
+    code: "BJC-01",
+    name: "Beaded Saffron Yellow Jute Macrame Hanger",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bjc_01.png",
+    galleryImages: ["/products/bjc_01.png"],
+    description: "Artisanal macrame plant hanger holding a saffron yellow and royal blue banded pot with decorative polished natural wooden beads.",
+    longDescription: {
+          "overview": "The Beaded Saffron Yellow Jute Macrame Hanger (Art No: BJC-01) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute Rope & Wood Beads. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute Rope & Wood Beads",
+    color: "Natural Jute, Saffron Yellow & Wood Beads",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJC-01"
+          },
+          {
+                "key": "Item Name",
+                "value": "Beaded Saffron Yellow Jute Macrame Hanger"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute Rope & Wood Beads"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Natural Jute, Saffron Yellow & Wood Beads"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BJC-04",
+    slug: "monochrome-checkered-jute-macrame-hanger-bjc-04",
+    code: "BJC-04",
+    name: "Monochrome Checkered Jute Macrame Hanger",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bjc_04.png",
+    galleryImages: ["/products/bjc_04.png"],
+    description: "Modern macrame hanging planter holding a woven black and white checkered cylinder basket pot with playful hanging loop fringe.",
+    longDescription: {
+          "overview": "The Monochrome Checkered Jute Macrame Hanger (Art No: BJC-04) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute Rope. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute Rope",
+    color: "Black & White Checkered Basket with Natural Rope",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJC-04"
+          },
+          {
+                "key": "Item Name",
+                "value": "Monochrome Checkered Jute Macrame Hanger"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute Rope"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Black & White Checkered Basket with Natural Rope"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BJC-06",
+    slug: "sky-blue-banded-jute-macrame-plant-hanger-bjc-06",
+    code: "BJC-06",
+    name: "Sky Blue Banded Jute Macrame Plant Hanger",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bjc_06.png",
+    galleryImages: ["/products/bjc_06.png"],
+    description: "Hand-knotted 4-strand natural jute hanging plant cradle with a sky-blue accented woven base basket and tassel fringe.",
+    longDescription: {
+          "overview": "The Sky Blue Banded Jute Macrame Plant Hanger (Art No: BJC-06) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute",
+    color: "Natural Golden Jute with Sky Blue Band",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJC-06"
+          },
+          {
+                "key": "Item Name",
+                "value": "Sky Blue Banded Jute Macrame Plant Hanger"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Natural Golden Jute with Sky Blue Band"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BJC-07",
+    slug: "two-tier-terracotta-natural-jute-macrame-bjc-07",
+    code: "BJC-07",
+    name: "Two-Tier Terracotta & Natural Jute Macrame",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bjc_07.png",
+    galleryImages: ["/products/bjc_07.png"],
+    description: "Double vertical hanging macrame planter featuring an upper natural jute bowl and a lower terracotta red dyed planter bowl with tassels.",
+    longDescription: {
+          "overview": "The Two-Tier Terracotta & Natural Jute Macrame (Art No: BJC-07) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute",
+    color: "Natural Jute & Terracotta Red",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJC-07"
+          },
+          {
+                "key": "Item Name",
+                "value": "Two-Tier Terracotta & Natural Jute Macrame"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Natural Jute & Terracotta Red"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BJC-10",
+    slug: "tiered-beaded-double-jute-macrame-hanger-bjc-10",
+    code: "BJC-10",
+    name: "Tiered Beaded Double Jute Macrame Hanger",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bjc_10.png",
+    galleryImages: ["/products/bjc_10.png"],
+    description: "Elaborate two-tier knotted jute macrame plant hanger adorned with handcrafted beads and double woven basket holders.",
+    longDescription: {
+          "overview": "The Tiered Beaded Double Jute Macrame Hanger (Art No: BJC-10) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute Rope & Beads. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute Rope & Beads",
+    color: "Natural Golden Jute with Wooden Beads",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJC-10"
+          },
+          {
+                "key": "Item Name",
+                "value": "Tiered Beaded Double Jute Macrame Hanger"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute Rope & Beads"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Natural Golden Jute with Wooden Beads"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BJC-11",
+    slug: "minimalist-4-strand-jute-macrame-plant-sling-bjc-11",
+    code: "BJC-11",
+    name: "Minimalist 4-Strand Jute Macrame Plant Sling",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bjc_11.png",
+    galleryImages: ["/products/bjc_11.png"],
+    description: "Timeless 4-strand twisted jute rope hanging plant sling holding a natural textured woven kaisa-jute plant basket.",
+    longDescription: {
+          "overview": "The Minimalist 4-Strand Jute Macrame Plant Sling (Art No: BJC-11) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute Rope. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute Rope",
+    color: "Natural Golden Jute",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJC-11"
+          },
+          {
+                "key": "Item Name",
+                "value": "Minimalist 4-Strand Jute Macrame Plant Sling"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute Rope"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Natural Golden Jute"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BJC-13",
+    slug: "coiled-jute-pot-macrame-with-pom-pom-tassels-bjc-13",
+    code: "BJC-13",
+    name: "Coiled Jute Pot Macrame with Pom-Pom Tassels",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bjc_13.png",
+    galleryImages: ["/products/bjc_13.png"],
+    description: "Decorative macrame plant hanger featuring an integrated round basket pot holder embellished with side pom-pom fringe tassels.",
+    longDescription: {
+          "overview": "The Coiled Jute Pot Macrame with Pom-Pom Tassels (Art No: BJC-13) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute Rope. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute Rope",
+    color: "Natural Cream Jute with Tassels",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJC-13"
+          },
+          {
+                "key": "Item Name",
+                "value": "Coiled Jute Pot Macrame with Pom-Pom Tassels"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute Rope"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Natural Cream Jute with Tassels"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BJC-14",
+    slug: "small-cylinder-basket-jute-macrame-hanger-bjc-14",
+    code: "BJC-14",
+    name: "Small Cylinder Basket Jute Macrame Hanger",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bjc_14.png",
+    galleryImages: ["/products/bjc_14.png"],
+    description: "Compact hanging plant sling crafted from twisted jute rope holding a cylindrical woven basket pot with side accent tassels.",
+    longDescription: {
+          "overview": "The Small Cylinder Basket Jute Macrame Hanger (Art No: BJC-14) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute Rope. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute Rope",
+    color: "Natural Golden Jute & Tassels",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJC-14"
+          },
+          {
+                "key": "Item Name",
+                "value": "Small Cylinder Basket Jute Macrame Hanger"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute Rope"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Natural Golden Jute & Tassels"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BJC-15",
+    slug: "slender-natural-jute-macrame-plant-hanger-bjc-15",
+    code: "BJC-15",
+    name: "Slender Natural Jute Macrame Plant Hanger",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bjc_15.png",
+    galleryImages: ["/products/bjc_15.png"],
+    description: "Delicate fine-rope knotted jute macrame hanger holding a shallow round woven planter bowl with white tassel fringe.",
+    longDescription: {
+          "overview": "The Slender Natural Jute Macrame Plant Hanger (Art No: BJC-15) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute Rope. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute Rope",
+    color: "Natural Unbleached Jute",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJC-15"
+          },
+          {
+                "key": "Item Name",
+                "value": "Slender Natural Jute Macrame Plant Hanger"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute Rope"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Natural Unbleached Jute"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BJC-17",
+    slug: "teal-tasseled-dual-jute-macrame-planter-bjc-17",
+    code: "BJC-17",
+    name: "Teal Tasseled Dual Jute Macrame Planter",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bjc_17.png",
+    galleryImages: ["/products/bjc_17.png"],
+    description: "Boho-chic handcrafted macrame plant hanger adorned with turquoise blue dyed tassels and double hanging basket support.",
+    longDescription: {
+          "overview": "The Teal Tasseled Dual Jute Macrame Planter (Art No: BJC-17) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute Rope. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute Rope",
+    color: "Natural Jute & Turquoise Teal Tassels",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJC-17"
+          },
+          {
+                "key": "Item Name",
+                "value": "Teal Tasseled Dual Jute Macrame Planter"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute Rope"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Natural Jute & Turquoise Teal Tassels"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BJC-18",
+    slug: "terracotta-toned-jute-rope-macrame-hanger-bjc-18",
+    code: "BJC-18",
+    name: "Terracotta Toned Jute Rope Macrame Hanger",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bjc_18.png",
+    galleryImages: ["/products/bjc_18.png"],
+    description: "Warm terracotta dyed jute macrame plant hanger with heavy braided rope knots and a voluminous hanging fringe tassel tail.",
+    longDescription: {
+          "overview": "The Terracotta Toned Jute Rope Macrame Hanger (Art No: BJC-18) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute Rope. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute Rope",
+    color: "Warm Terracotta Jute",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJC-18"
+          },
+          {
+                "key": "Item Name",
+                "value": "Terracotta Toned Jute Rope Macrame Hanger"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute Rope"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Warm Terracotta Jute"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BJC-19",
+    slug: "wide-shallow-bowl-jute-macrame-sling-bjc-19",
+    code: "BJC-19",
+    name: "Wide Shallow Bowl Jute Macrame Sling",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bjc_19.png",
+    galleryImages: ["/products/bjc_19.png"],
+    description: "Long 4-strand knotted natural jute cord hanging sling cradling an expansive shallow circular woven planter tray basket.",
+    longDescription: {
+          "overview": "The Wide Shallow Bowl Jute Macrame Sling (Art No: BJC-19) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute Rope. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute Rope",
+    color: "Natural Golden Jute",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJC-19"
+          },
+          {
+                "key": "Item Name",
+                "value": "Wide Shallow Bowl Jute Macrame Sling"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute Rope"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Natural Golden Jute"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BJC-21",
+    slug: "conical-flowerpot-jute-macrame-hanger-bjc-21",
+    code: "BJC-21",
+    name: "Conical Flowerpot Jute Macrame Hanger",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bjc_21.png",
+    galleryImages: ["/products/bjc_21.png"],
+    description: "Hand-braided earthy natural jute macrame cord holding a conical handwoven flowerpot planter bowl with bottom loop tassel.",
+    longDescription: {
+          "overview": "The Conical Flowerpot Jute Macrame Hanger (Art No: BJC-21) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute",
+    color: "Natural Earthy Jute",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJC-21"
+          },
+          {
+                "key": "Item Name",
+                "value": "Conical Flowerpot Jute Macrame Hanger"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Natural Earthy Jute"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BJC-22",
+    slug: "wide-strap-minimalist-jute-macrame-planter-bjc-22",
+    code: "BJC-22",
+    name: "Wide-Strap Minimalist Jute Macrame Planter",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bjc_22.png",
+    galleryImages: ["/products/bjc_22.png"],
+    description: "Modern Scandinavian-inspired minimalist wide-strap braided jute macrame hanger holding an unbleached golden basket pot.",
+    longDescription: {
+          "overview": "The Wide-Strap Minimalist Jute Macrame Planter (Art No: BJC-22) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute",
+    color: "Natural Golden Jute",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJC-22"
+          },
+          {
+                "key": "Item Name",
+                "value": "Wide-Strap Minimalist Jute Macrame Planter"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Natural Golden Jute"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BJC-23",
+    slug: "fine-twisted-cord-jute-macrame-hanger-bjc-23",
+    code: "BJC-23",
+    name: "Fine Twisted Cord Jute Macrame Hanger",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bjc_23.png",
+    galleryImages: ["/products/bjc_23.png"],
+    description: "Slender multi-strand twisted natural jute cord macrame hanger holding a golden round basket planter with bottom tassel.",
+    longDescription: {
+          "overview": "The Fine Twisted Cord Jute Macrame Hanger (Art No: BJC-23) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute",
+    color: "Natural Golden Jute",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJC-23"
+          },
+          {
+                "key": "Item Name",
+                "value": "Fine Twisted Cord Jute Macrame Hanger"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Natural Golden Jute"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BJC-35",
+    slug: "magenta-tasseled-jute-macrame-plant-hanger-bjc-35",
+    code: "BJC-35",
+    name: "Magenta Tasseled Jute Macrame Plant Hanger",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bjc_35.png",
+    galleryImages: ["/products/bjc_35.png"],
+    description: "Artisanal natural golden jute plant hanger decorated with vibrant magenta and purple hanging pom-pom fringe tassels.",
+    longDescription: {
+          "overview": "The Magenta Tasseled Jute Macrame Plant Hanger (Art No: BJC-35) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute (Corchorus capsularis). Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute (Corchorus capsularis)",
+    color: "Natural Golden Jute & Magenta Tassels",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJC-35"
+          },
+          {
+                "key": "Item Name",
+                "value": "Magenta Tasseled Jute Macrame Plant Hanger"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute (Corchorus capsularis)"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Natural Golden Jute & Magenta Tassels"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BJC-36",
+    slug: "openwork-weave-charcoal-jute-macrame-hanger-bjc-36",
+    code: "BJC-36",
+    name: "Openwork Weave Charcoal Jute Macrame Hanger",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bjc_36.png",
+    galleryImages: ["/products/bjc_36.png"],
+    description: "Muted dark charcoal and natural jute braided plant hanger supporting an airy openwork woven planter basket with bottom tassel.",
+    longDescription: {
+          "overview": "The Openwork Weave Charcoal Jute Macrame Hanger (Art No: BJC-36) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute",
+    color: "Charcoal Grey & Natural Jute",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJC-36"
+          },
+          {
+                "key": "Item Name",
+                "value": "Openwork Weave Charcoal Jute Macrame Hanger"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Charcoal Grey & Natural Jute"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BJC-37",
+    slug: "tall-cylinder-basket-jute-macrame-hanger-bjc-37",
+    code: "BJC-37",
+    name: "Tall Cylinder Basket Jute Macrame Hanger",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bjc_37.png",
+    galleryImages: ["/products/bjc_37.png"],
+    description: "Deep cylindrical woven pot macrame hanger crafted from heavy-gauge natural jute cords for large indoor foliage and trailing vines.",
+    longDescription: {
+          "overview": "The Tall Cylinder Basket Jute Macrame Hanger (Art No: BJC-37) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute",
+    color: "Natural Golden Jute",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJC-37"
+          },
+          {
+                "key": "Item Name",
+                "value": "Tall Cylinder Basket Jute Macrame Hanger"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Natural Golden Jute"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BJC-39",
+    slug: "multi-strand-golden-jute-macrame-hanger-bjc-39",
+    code: "BJC-39",
+    name: "Multi-Strand Golden Jute Macrame Hanger",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bjc_39.png",
+    galleryImages: ["/products/bjc_39.png"],
+    description: "Classic multi-strand twisted natural jute macrame plant hanger cradling a golden bowl pot with reinforced hanging loop.",
+    longDescription: {
+          "overview": "The Multi-Strand Golden Jute Macrame Hanger (Art No: BJC-39) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute",
+    color: "Natural Golden Jute",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJC-39"
+          },
+          {
+                "key": "Item Name",
+                "value": "Multi-Strand Golden Jute Macrame Hanger"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Natural Golden Jute"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BJC-40",
+    slug: "flared-open-cradle-jute-macrame-planter-bjc-40",
+    code: "BJC-40",
+    name: "Flared Open Cradle Jute Macrame Planter",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bjc_40.png",
+    galleryImages: ["/products/bjc_40.png"],
+    description: "Wide flared macrame cradle holding a red-rimmed natural jute bowl planter with decorative edge loop appliques.",
+    longDescription: {
+          "overview": "The Flared Open Cradle Jute Macrame Planter (Art No: BJC-40) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute",
+    color: "Natural Jute with Red Rim",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJC-40"
+          },
+          {
+                "key": "Item Name",
+                "value": "Flared Open Cradle Jute Macrame Planter"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Natural Jute with Red Rim"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BJC-41",
+    slug: "slender-conical-jute-macrame-plant-hanger-bjc-41",
+    code: "BJC-41",
+    name: "Slender Conical Jute Macrame Plant Hanger",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bjc_41.png",
+    galleryImages: ["/products/bjc_41.png"],
+    description: "Slender hand-knotted natural jute macrame plant hanger holding a conical natural woven planter basket with fine net webbing.",
+    longDescription: {
+          "overview": "The Slender Conical Jute Macrame Plant Hanger (Art No: BJC-41) is an artisanal hanging plant hanger handcrafted from 100% Natural Jute. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "100% Natural Jute",
+    color: "Natural Golden Jute",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJC-41"
+          },
+          {
+                "key": "Item Name",
+                "value": "Slender Conical Jute Macrame Plant Hanger"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Natural Golden Jute"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+  {
+    id: "BCC-54",
+    slug: "denim-blue-seagrass-cotton-macrame-hanger-bcc-54",
+    code: "BCC-54",
+    name: "Denim Blue Seagrass & Cotton Macrame Hanger",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "macrames",
+    image: "/products/bcc_54.png",
+    galleryImages: ["/products/bcc_54.png"],
+    description: "Contemporary indigo denim blue knotted cotton cord macrame plant hanger holding a fine natural woven mini seagrass planter pot.",
+    longDescription: {
+          "overview": "The Denim Blue Seagrass & Cotton Macrame Hanger (Art No: BCC-54) is an artisanal hanging plant hanger handcrafted from Natural Seagrass & Dyed Cotton Cord. Designed for indoor botanical decor, greenhouse displays, and global sustainable home retailers.",
+          "craftsmanship": "Intricately hand-knotted by skilled Bangladeshi artisans using 100% high-tensile natural golden jute fiber. Holds up to 10kg flowerpots securely while adding vertical organic greenery and bohemian texture to living spaces.",
+          "exportDetails": "Individually folded with protective insert card and hangtag, packed in sets of 12 or 24 per 5-ply export master carton with moisture-absorbing desiccants.",
+          "careInstructions": "Dust gently with a soft dry brush. Spot clean cord with a damp cloth if necessary. Keep in dry indoor or covered patio locations."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.035,
+    setPerCarton: 24,
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.5,
+    material: "Natural Seagrass & Dyed Cotton Cord",
+    color: "Denim Indigo Blue & Natural Seagrass",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BCC-54"
+          },
+          {
+                "key": "Item Name",
+                "value": "Denim Blue Seagrass & Cotton Macrame Hanger"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "Natural Seagrass & Dyed Cotton Cord"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Denim Indigo Blue & Natural Seagrass"
+          },
+          {
+                "key": "Weight Capacity",
+                "value": "Up to 10 kg"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly Biodegradable Golden Jute","Authentic Bangladeshi Hand-Knotted Macrame Art","Heavy-Duty Weight Bearing Up to 10kg","Space-Saving Vertical Indoor Botanical Decor"]
+  },
+
+  // ==========================================
   // 5. Jute Poufs & Ottomans (Authentic Catalogue Collection - 8 Products)
   // ==========================================
   {
