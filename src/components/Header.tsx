@@ -138,9 +138,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
                 />
                 <button
                   type="submit"
-                  className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-stone-950 px-7 py-2 text-sm font-black uppercase tracking-wider transition-all duration-200 shrink-0 flex items-center justify-center gap-1.5 cursor-pointer shadow-inner"
+                  className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-stone-950 px-4 sm:px-5 py-2 text-xs sm:text-sm font-black uppercase tracking-wider transition-all duration-200 shrink-0 flex items-center justify-center gap-1.5 cursor-pointer shadow-inner"
                 >
-                  <Search className="h-4 w-4 text-stone-950 stroke-[2.5]" />
+                  <Search className="h-3.5 w-3.5 text-stone-950 stroke-[2.5]" />
                   <span className="font-extrabold text-stone-950">Search</span>
                 </button>
               </form>

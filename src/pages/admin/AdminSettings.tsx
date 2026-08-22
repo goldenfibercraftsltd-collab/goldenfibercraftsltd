@@ -11,7 +11,7 @@ export const AdminSettings: React.FC = () => {
     tagline: 'Nature Woven into Every Creation.',
     phone: '+880-1617-778488',
     whatsapp: '01617778488',
-    email: 'goldenfibercraftsltd@gmail.com',
+    email: 'info@goldenfibercraftsltd.com',
     address: 'Factory: Dhulivita, Dhamrai, Dhaka | HQ: House-12, Road-04, Sector-01, Uttara, Dhaka-1230, Bangladesh',
     cloudinary_cloud_name: 'o7zryqib',
   });

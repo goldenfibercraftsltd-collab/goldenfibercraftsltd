@@ -113,10 +113,10 @@ export const Footer: React.FC = () => {
             </h4>
             <div className="space-y-2.5 text-xs sm:text-sm text-emerald-100 font-normal leading-relaxed">
               
-              {/* MD Safiqul Islam */}
+              {/* Md. Shafiq Islam */}
               <div className="flex items-center gap-2.5">
                 <User className="h-4 w-4 text-amber-400 shrink-0" />
-                <span className="text-white font-normal">MD. Safiqul Islam</span>
+                <span className="text-white font-normal">Md. Shafiq Islam</span>
               </div>
 
               {/* Email */}

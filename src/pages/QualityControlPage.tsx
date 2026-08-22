@@ -519,29 +519,7 @@ export const QualityControlPage: React.FC = () => {
         </div>
       </section>
 
-      {/* 5. Inspection Inquiry CTA */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-gradient-to-r from-emerald-950 via-stone-900 to-emerald-950 py-6 px-6 sm:py-8 sm:px-10 text-white text-center space-y-4 shadow-xl border border-emerald-500/30">
-          <div className="max-w-2xl mx-auto space-y-1.5">
-            <h2 className="font-serif text-xl sm:text-2xl lg:text-3xl font-black text-white">
-              Require Custom Quality Standards for Your Brand?
-            </h2>
-            <p className="text-xs sm:text-sm text-stone-100 font-medium">
-              We accommodate buyer-specified QA parameters, third-party lab inspections (SGS, TÜV, Intertek, Bureau Veritas), and customized master packaging barcodes.
-            </p>
-          </div>
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-1">
-            <button
-              onClick={() => navigate('/contact')}
-              className="px-6 py-2.5 rounded-full bg-amber-400 hover:bg-amber-300 text-stone-950 font-black text-xs sm:text-sm shadow-md transition-all cursor-pointer flex items-center gap-2"
-            >
-              <span>Contact Quality Assurance Desk</span>
-              <ArrowRight className="h-4 w-4" />
-            </button>
-          </div>
-        </div>
-      </div>
-
     </div>
   );
 };
+

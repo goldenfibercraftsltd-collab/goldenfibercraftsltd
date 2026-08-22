@@ -50,9 +50,9 @@ export interface ProductItem {
 export const TAGLINE = "Nature Woven into Every Creation.";
 export const SUB_TAGLINE = "Sustainable Jute | Natural Fiber | Handcrafted Excellence";
 export const COMPANY_NAME = "Golden Fiber Crafts Ltd.";
-export const OFFICIAL_EMAIL = "info@goldenfibercrafts.com";
-export const SECONDARY_EMAIL = "goldenfibercraftsltd@gmail.com";
-export const OFFICIAL_WEBSITE = "www.goldenfibercrafts.com";
+export const OFFICIAL_EMAIL = "info@goldenfibercraftsltd.com";
+export const SECONDARY_EMAIL = "shafiq@goldenfibercraftsltd.com";
+export const OFFICIAL_WEBSITE = "www.goldenfibercraftsltd.com";
 
 export const COMPANY_ADDRESSES = {
   corporateOffice: "House# 78, Road# 16, Sector# 11, Uttara, Dhaka, Bangladesh",
@@ -62,10 +62,10 @@ export const COMPANY_ADDRESSES = {
 
 export const KEY_LEADERSHIP = {
   managingDirector: {
-    name: "Md. Safiqul Islam",
+    name: "Md. Shafiq Islam",
     title: "CEO & Managing Director",
     phone: "+8801916-183583",
-    email: "info@goldenfibercrafts.com",
+    email: "shafiq@goldenfibercraftsltd.com",
     image: "/about/md_safiqul_islam.png",
     message: "As the world moves toward sustainable living, we are proud to offer products that are not only beautifully crafted but also contribute to a greener future. Our collection of jute bags, handicrafts, home décor, and natural fiber products by promoting biodegradable and renewable materials, we strive to reduce environmental impact and encourage responsible consumption worldwide. Behind every product is the dedication of our skilled artisans, whose craftsmanship preserves Bangladesh's rich heritage while meeting the expectations of today's international markets. We continuously invest in product development, quality assurance, ethical manufacturing, and customer satisfaction to ensure that every item we produce represents excellence. Our ambition is clear: to establish Golden Fiber Crafts Ltd. as a trusted global partner for sustainable, high-quality, and responsibly crafted products from Bangladesh."
   },
@@ -73,7 +73,7 @@ export const KEY_LEADERSHIP = {
     name: "Md. Nazrul Islam Uzzal",
     title: "Senior Director & General Manager",
     phone: "+8801721-994082",
-    email: "info@goldenfibercrafts.com",
+    email: "info@goldenfibercraftsltd.com",
     image: "/about/md_nazrul_islam_uzzal.png",
     message: "At Golden Fiber Crafts Ltd., we believe that the future of business belongs to companies that can combine purpose with performance, craftsmanship with innovation, and sustainability with international standards. Our mission is not simply to create beautiful products, but to deliver products that our customers can trust—through consistent quality, responsible production, competitive value, and dependable service. We continuously strengthen our production capabilities, quality-control systems, product development, sourcing, and supply-chain management. Our greatest strength is our people. By working closely with skilled artisans, experienced professionals, and trusted business partners, we connect Bangladesh's traditional craftsmanship with contemporary international design and commercial requirements. We believe that empowering our people and developing their skills is essential to creating sustainable growth."
   }

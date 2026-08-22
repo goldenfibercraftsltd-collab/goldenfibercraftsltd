@@ -87,7 +87,7 @@ export const TermsPage: React.FC = () => {
             </p>
             <div className="bg-stone-50 p-4 rounded-xl border border-stone-200 text-xs sm:text-sm space-y-1">
               <p><span className="font-semibold text-stone-900">Company:</span> Golden Fiber Crafts Ltd.</p>
-              <p><span className="font-semibold text-stone-900">Email:</span> shafiq@goldenfibercraftsltd.com / info@goldenfibercrafts.com</p>
+              <p><span className="font-semibold text-stone-900">Email:</span> shafiq@goldenfibercraftsltd.com / info@goldenfibercraftsltd.com</p>
               <p><span className="font-semibold text-stone-900">Corporate Office:</span> House# 78, Road# 16, Sector# 11, Uttara, Dhaka, Bangladesh</p>
             </div>
           </section>

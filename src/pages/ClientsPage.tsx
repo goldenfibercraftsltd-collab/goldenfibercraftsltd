@@ -1,13 +1,11 @@
 import React from 'react';
-import { GlobalClients } from '../components/GlobalClients';
-import { HeartHandshake, ArrowRight, Award } from 'lucide-react';
 import { ScrollTypingText } from '../components/ScrollTypingText';
 
 interface ClientsPageProps {
   onOpenQuoteModal: () => void;
 }
 
-export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) => {
+export const ClientsPage: React.FC<ClientsPageProps> = () => {
   // Authentic Client Logos Extracted Directly from GFCL Corporate Presentation
   const officialBuyers = [
     { name: 'Aarong', logo: '/clients/aarong.png' },
@@ -131,25 +129,8 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
           </div>
         </div>
 
-        {/* Global Export Reach */}
-        <GlobalClients />
-
-        {/* Call to Action with reveal-up */}
-        <div className="reveal-up text-center bg-gradient-to-r from-emerald-800 to-green-900 rounded-3xl p-8 sm:p-12 text-white space-y-4 shadow-xl">
-          <h2 className="font-serif text-2xl sm:text-4xl font-bold">Partner With a Certified Fair Trade Manufacturer</h2>
-          <p className="text-stone-100 text-xs sm:text-sm max-w-xl mx-auto font-medium">
-            Get instant competitive price quotes, custom sample prototyping, and full compliance documentation.
-          </p>
-          <button
-            onClick={onOpenQuoteModal}
-            className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-emerald-950 shadow-md hover:bg-emerald-50 transition-all btn-interactive"
-          >
-            <span>Request Instant Quote</span>
-            <ArrowRight className="h-4 w-4 btn-arrow" />
-          </button>
-        </div>
-
       </div>
     </div>
   );
 };
+

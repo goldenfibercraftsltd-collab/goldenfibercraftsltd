@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Sparkles, Lock, Mail, ArrowRight, ShieldCheck } from 'lucide-react';
 
 export const AdminLogin: React.FC = () => {
-  const [email, setEmail] = useState('goldenfibercraftsltd@gmail.com');
+  const [email, setEmail] = useState('info@goldenfibercraftsltd.com');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -83,7 +83,7 @@ export const AdminLogin: React.FC = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 className="w-full pl-10 pr-4 py-3 bg-slate-950 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs font-bold text-white outline-none transition-all placeholder:text-slate-600"
-                placeholder="goldenfibercraftsltd@gmail.com"
+                placeholder="info@goldenfibercraftsltd.com"
               />
             </div>
           </div>

@@ -186,11 +186,11 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuoteModal }) =>
                   <div>
                     <h4 className="font-black text-stone-950 text-xs uppercase tracking-wider">Official Email Desk</h4>
                     <div className="space-y-0.5 mt-0.5">
-                      <a href="mailto:info@goldenfibercrafts.com" className="block text-xs sm:text-sm text-emerald-800 font-black hover:underline">
-                        info@goldenfibercrafts.com
+                      <a href="mailto:shafiq@goldenfibercraftsltd.com" className="block text-xs sm:text-sm text-emerald-800 font-black hover:underline">
+                        shafiq@goldenfibercraftsltd.com
                       </a>
-                      <a href="mailto:goldenfibercraftsltd@gmail.com" className="block text-xs sm:text-sm text-stone-700 font-bold hover:underline">
-                        goldenfibercraftsltd@gmail.com
+                      <a href="mailto:info@goldenfibercraftsltd.com" className="block text-xs sm:text-sm text-stone-700 font-bold hover:underline">
+                        info@goldenfibercraftsltd.com
                       </a>
                     </div>
                   </div>
