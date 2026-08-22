@@ -17,7 +17,7 @@ export const ProductionFacilities: React.FC = () => {
             speed={35}
           />
           <p className="text-xs sm:text-sm text-stone-800 font-medium leading-relaxed">
-            Operating export-oriented manufacturing facilities in Gazipur & Kishoreganj with over 15,000 skilled artisans.
+            Operating export-oriented manufacturing facilities in Gazipur & Kishoreganj with over 10,000 skilled artisans.
           </p>
           <p className="text-xs font-serif italic text-emerald-800 font-bold">
             "Precision Manufacturing. Sustainable Innovation. Global Quality."
@@ -39,7 +39,7 @@ export const ProductionFacilities: React.FC = () => {
                 <span className="text-[11px] font-extrabold uppercase tracking-widest text-amber-400 bg-black/40 px-2.5 py-0.5 rounded backdrop-blur-xs">
                   Gazipur & Kishoreganj Units
                 </span>
-                <p className="text-white font-serif text-lg sm:text-xl font-bold">50 × 40' HQ Container Capacity / Month</p>
+                <p className="text-white font-serif text-lg sm:text-xl font-bold">40 × 40' HQ Container Capacity / Month</p>
               </div>
             </div>
           </div>

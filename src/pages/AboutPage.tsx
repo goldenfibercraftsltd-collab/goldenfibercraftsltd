@@ -389,13 +389,13 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
           <div className="rounded-2xl bg-white p-6 shadow-sm border border-stone-200">
             <p className="font-serif text-3xl sm:text-4xl font-black text-emerald-800">
-              <AnimatedCounter target={15} suffix="K+" />
+              <AnimatedCounter target={10} suffix="K+" />
             </p>
             <p className="mt-1 text-xs text-stone-800 font-black uppercase tracking-wider">Skilled Artisans</p>
           </div>
           <div className="rounded-2xl bg-white p-6 shadow-sm border border-stone-200">
             <p className="font-serif text-3xl sm:text-4xl font-black text-emerald-800">
-              <AnimatedCounter target={50} suffix=" HQ" />
+              <AnimatedCounter target={40} suffix=" HQ" />
             </p>
             <p className="mt-1 text-xs text-stone-800 font-black uppercase tracking-wider">Monthly Containers</p>
           </div>

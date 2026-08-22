@@ -71,7 +71,7 @@ const PILLARS: HubPillar[] = [
   {
     id: 'skilled-workforce',
     title: 'Skilled Artisan Workforce',
-    subtitle: '15,000+ rural artisans preserving heritage handweaving traditions.',
+    subtitle: '10,000+ rural artisans preserving heritage handweaving traditions.',
     icon: <Users className="h-5 w-5 text-white stroke-[2.2]" />,
     colorBg: 'bg-emerald-700',
     colorBorder: 'border-emerald-200',

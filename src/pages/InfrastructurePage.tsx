@@ -412,7 +412,7 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
             </p>
             <div className="flex flex-wrap items-center gap-2 pt-1">
               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
-                <Truck className="h-3 w-3 text-amber-300" /> 50 HQ Monthly Capacity
+                <Truck className="h-3 w-3 text-amber-300" /> 40 HQ Monthly Capacity
               </span>
               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
                 100% Handcrafted
@@ -670,7 +670,7 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
                 { title: 'Flexible Production', desc: 'Custom dimensions, colors, and design lines' },
                 { title: 'Product Innovation', desc: 'Eco-friendly blends & contemporary aesthetics' },
                 { title: 'Responsible Manufacturing', desc: 'Ethical wages, safe workspaces, zero child labor' },
-                { title: 'On-Time Delivery', desc: 'Strict lead times with 50X40\' HQ containers/month' },
+                { title: 'On-Time Delivery', desc: 'Strict lead times with 40X40\' HQ containers/month' },
               ].map((str, idx) => (
                 <div key={idx} className="bg-white/15 backdrop-blur-xs p-3 sm:p-3.5 rounded-2xl border border-white/20 text-center space-y-1 hover:bg-white/25 transition-all shadow-xs">
                   <h4 className="font-black text-xs sm:text-sm text-amber-300">{str.title}</h4>
@@ -838,7 +838,7 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
                 <Users className="h-5 w-5" />
               </div>
               <div>
-                <h4 className="font-serif text-sm font-extrabold text-black">15,000+ Artisans</h4>
+                <h4 className="font-serif text-sm font-extrabold text-black">10,000+ Artisans</h4>
                 <p className="text-xs text-stone-900 font-semibold">Skilled rural workforce</p>
               </div>
             </div>
@@ -868,7 +868,7 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
                 <Package className="h-5 w-5" />
               </div>
               <div>
-                <h4 className="font-serif text-sm font-extrabold text-black">50X40' HQ / Month</h4>
+                <h4 className="font-serif text-sm font-extrabold text-black">40X40' HQ / Month</h4>
                 <p className="text-xs text-stone-900 font-semibold">Container Capacity</p>
               </div>
             </div>

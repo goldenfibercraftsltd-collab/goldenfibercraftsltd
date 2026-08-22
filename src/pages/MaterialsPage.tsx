@@ -213,7 +213,7 @@ export const MaterialsPage: React.FC = () => {
                             {String(idx + 1).padStart(2, '0')}
                           </span>
                           <span className="text-xs uppercase tracking-widest font-black text-emerald-950">
-                            Raw Material Fiber
+                            Raw Material Images
                           </span>
                         </div>
                         <div className="grid grid-cols-2 gap-3">
@@ -309,7 +309,7 @@ export const MaterialsPage: React.FC = () => {
                         <div className="flex items-center gap-2 mb-3">
                           <div className="w-2 h-5 rounded-full bg-amber-600"></div>
                           <span className="text-xs uppercase tracking-widest font-black text-amber-950">
-                            Sample Products
+                            Sample Product images
                           </span>
                         </div>
                         <div className="grid grid-cols-2 gap-3">
