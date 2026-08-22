@@ -56,45 +56,50 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
     fetch('/api/products?active_only=true')
       .then(res => res.json())
       .then(data => {
-        if (data.success && Array.isArray(data.products) && data.products.length > 0) {
-          const dbProducts = data.products.map((p: any) => ({
-            id: p.item_code || p.id,
-            slug: (p.item_code || p.id || '').toLowerCase().replace(/[^a-z0-9]+/g, '-'),
-            code: p.item_code || p.id,
-            name: p.name,
-            category: p.category_id || p.category,
-            categoryName: p.category_name || 'Handicrafts',
-            categorySlug: p.category_id || p.category,
-            subCategory: p.sub_category || p.subCategory,
-            image: p.image_url || p.image || '/favicon.svg',
-            galleryImages: typeof p.gallery_images === 'string' ? JSON.parse(p.gallery_images || '[]') : (p.gallery_images || []),
-            description: p.description || '',
-            longDescription: {
-              overview: p.description || '',
-              craftsmanship: 'Handcrafted by skilled traditional artisans in Bangladesh using sustainable natural fibers.',
-              exportDetails: 'Quality controlled, fumigated, and packed in 5-ply export master cartons.',
-              careInstructions: 'Keep in dry indoor area. Clean with soft damp cloth.',
-            },
-            specifications: [
-              { key: 'Materials', value: p.material || 'Natural Fiber' },
-              { key: 'Specification', value: p.size || 'Custom Size' },
-              { key: 'MOQ', value: p.moq || '300 Sets' },
-            ],
-            features: ['100% Eco-Friendly', 'Artisanal Handcraft', 'Export Standard'],
-            unit: p.unit || 'S/3',
-            setPerCarton: p.set_per_carton || 2,
-            cbmPerCarton: p.cbm_per_carton || 0.065,
-            nwPerCtn: p.nw_per_ctn || 3.5,
-            gwPerCtn: p.gw_per_ctn || 4.8,
-            material: p.material || 'Natural Fiber',
-            color: p.color || 'Natural',
-          }));
+        if (data && data.success && Array.isArray(data.products) && data.products.length > 0) {
+          const dbProducts = data.products.map((p: any) => {
+            const catMatch = CATEGORIES.find(c => String(c.id) === String(p.category_id) || c.slug === String(p.category_id));
+            const catId = catMatch ? catMatch.id : (p.category_id || 'jute');
+            const catSlug = catMatch ? catMatch.slug : 'jute';
+            const catName = catMatch ? catMatch.name : (p.category_name || 'Jute');
+
+            return {
+              id: String(p.item_code || p.id),
+              slug: String(p.item_code || p.id || '').toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+              code: String(p.item_code || p.id),
+              name: String(p.name || ''),
+              category: catId,
+              categoryName: catName,
+              categorySlug: catSlug,
+              subCategory: String(p.sub_category || p.subCategory || 'baskets'),
+              image: p.image_url || p.image || '/favicon.svg',
+              galleryImages: typeof p.gallery_images === 'string' ? JSON.parse(p.gallery_images || '[]') : (p.gallery_images || []),
+              description: p.description || '',
+              longDescription: {
+                overview: p.description || '',
+                craftsmanship: 'Handcrafted by skilled traditional artisans in Bangladesh using sustainable natural fibers.',
+                exportDetails: 'Quality controlled, fumigated, and packed in 5-ply export master cartons.',
+                careInstructions: 'Keep in dry indoor area. Clean with soft damp cloth.',
+              },
+              specifications: [
+                { key: 'Materials', value: p.material || 'Natural Fiber' },
+                { key: 'Specification', value: p.size || 'Custom Size' },
+                { key: 'MOQ', value: p.moq || '200 Sets' },
+              ],
+              features: ['100% Eco-Friendly', 'Artisanal Handcraft', 'Export Standard'],
+              unit: p.unit || 'S/3',
+              setPerCarton: p.set_per_carton || 4,
+              cbmPerCarton: p.cbm_per_carton || 0.058,
+              nwPerCtn: p.nw_per_ctn || 4.2,
+              gwPerCtn: p.gw_per_ctn || 5.5,
+              material: p.material || '100% Natural Jute',
+              color: p.color || 'Natural',
+            };
+          });
 
           const mergedMap = new Map();
+          getAllActiveProducts().forEach((p: any) => mergedMap.set(p.id, p));
           dbProducts.forEach((p: any) => mergedMap.set(p.id, p));
-          getAllActiveProducts().forEach((p: any) => {
-            if (!mergedMap.has(p.id)) mergedMap.set(p.id, p);
-          });
           setAllProducts(Array.from(mergedMap.values()));
         }
       })
@@ -149,35 +154,51 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
   };
 
   const filteredProducts = useMemo(() => {
+    const selCat = String(selectedCategory || 'all').toLowerCase().trim();
+    const selSub = String(selectedSubCategory || '').toLowerCase().trim();
+    const q = String(searchQuery || '').toLowerCase().trim();
+
     return allProducts.filter((p) => {
+      const pCat = String(p.category || '').toLowerCase();
+      const pCatSlug = String(p.categorySlug || '').toLowerCase();
+      const pCatName = String(p.categoryName || '').toLowerCase();
+
       // 1. Category Match
       const matchesCategory =
-        selectedCategory === 'all' ||
-        p.category === selectedCategory ||
-        p.categorySlug === selectedCategory ||
-        p.category.toLowerCase() === selectedCategory.toLowerCase();
+        selCat === 'all' ||
+        pCat === selCat ||
+        pCatSlug === selCat ||
+        pCatName === selCat ||
+        (currentCategoryObj && (
+          pCat === String(currentCategoryObj.id).toLowerCase() ||
+          pCatSlug === String(currentCategoryObj.slug).toLowerCase()
+        ));
 
       // 2. SubCategory Match
-      const matchesSubCategory =
-        !selectedSubCategory ||
-        p.subCategory === selectedSubCategory ||
-        (p.subCategory && p.subCategory.toLowerCase() === selectedSubCategory.toLowerCase()) ||
-        p.slug.includes(selectedSubCategory.toLowerCase()) ||
-        p.name.toLowerCase().includes(selectedSubCategory.toLowerCase());
+      const pSub = String(p.subCategory || '').toLowerCase();
+      const pSlug = String(p.slug || '').toLowerCase();
+      const pName = String(p.name || '').toLowerCase();
 
-      // 3. Search Query Match
-      const q = searchQuery.toLowerCase().trim();
+      const matchesSubCategory =
+        !selSub ||
+        pSub === selSub ||
+        pSub.includes(selSub) ||
+        selSub.includes(pSub) ||
+        pSlug.includes(selSub) ||
+        pName.includes(selSub);
+
+      // 3. Search Match
       const matchesSearch =
         !q ||
-        p.name.toLowerCase().includes(q) ||
-        p.id.toLowerCase().includes(q) ||
-        p.code.toLowerCase().includes(q) ||
-        (p.description && p.description.toLowerCase().includes(q)) ||
-        (p.material && p.material.toLowerCase().includes(q));
+        pName.includes(q) ||
+        String(p.id || '').toLowerCase().includes(q) ||
+        String(p.code || '').toLowerCase().includes(q) ||
+        String(p.description || '').toLowerCase().includes(q) ||
+        String(p.material || '').toLowerCase().includes(q);
 
       return matchesCategory && matchesSubCategory && matchesSearch;
     });
-  }, [allProducts, selectedCategory, selectedSubCategory, searchQuery]);
+  }, [allProducts, selectedCategory, selectedSubCategory, searchQuery, currentCategoryObj]);
 
   // Determine active category banner image
   const activeBannerImage = 
@@ -221,7 +242,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
           
           <div className="flex items-center justify-between gap-4">
             <div className="max-w-2xl">
-              <div className="flex items-center gap-2 mb-0.5">
+              <div className="flex items-center gap-2 mb-1">
                 <span className="p-1.5 rounded-lg bg-white/10 backdrop-blur-sm">
                   <Package className="h-4 w-4 text-emerald-300" />
                 </span>
@@ -233,31 +254,15 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
                 {currentCategoryObj?.description || 'Explore our complete international export collection of certified eco-friendly natural fiber handicrafts.'}
               </p>
             </div>
-
-            {/* Right: Official Site Branded Emblem Badge */}
-            <div className="flex items-center justify-center shrink-0">
-              <div className="relative group">
-                <div className="absolute -inset-2.5 rounded-full bg-emerald-400/20 blur-md group-hover:bg-emerald-400/35 transition-all duration-500"></div>
-                <div className="relative h-14 w-14 sm:h-16 sm:w-16 rounded-2xl bg-white/10 backdrop-blur-md border border-white/25 p-2 shadow-xl flex items-center justify-center hover:scale-105 transition-transform duration-500">
-                  <img
-                    src="/logo-icon.png"
-                    alt="Golden Fiber Crafts Ltd."
-                    className="h-full w-full object-contain filter drop-shadow-md brightness-110"
-                  />
-                </div>
-              </div>
-            </div>
-
           </div>
-
         </div>
 
-        {/* Official Watermark */}
-        <div className="absolute -right-6 -bottom-6 opacity-10 pointer-events-none">
+        {/* Large Decorative Watermark in Background (Fully Visible) */}
+        <div className="absolute right-4 sm:right-8 md:right-12 top-1/2 -translate-y-1/2 opacity-20 pointer-events-none select-none">
           <img
             src="/logo-icon.png"
-            alt="Watermark"
-            className="h-36 w-36 lg:h-44 lg:w-44 object-contain filter invert"
+            alt="Golden Fiber Crafts Ltd."
+            className="h-32 w-32 sm:h-40 sm:w-40 md:h-48 md:w-48 lg:h-56 lg:w-56 object-contain filter invert drop-shadow-md"
           />
         </div>
       </div>
@@ -395,9 +400,9 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
           )}
         </div>
 
-        {/* Product Cards Grid */}
+        {/* Product Cards Grid - 5 Cards Per Row on Desktop */}
         {filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
             {filteredProducts.map((product) => {
               return (
                 <div

@@ -39,7 +39,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
   // Filtered Products
   const filteredProducts = useMemo(() => {
     if (selectedCategory === 'all') {
-      return allActiveProducts.slice(0, 12); // Show top 12 featured items across categories
+      return allActiveProducts.slice(0, 15); // Show top 15 featured items (3 rows of 5)
     }
     return allActiveProducts.filter(p => p.category === selectedCategory || p.categorySlug === selectedCategory);
   }, [allActiveProducts, selectedCategory]);
@@ -82,8 +82,8 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
           })}
         </div>
 
-        {/* 3. Product Cards Grid with 1:1 Aspect Ratio (3 Columns on Desktop matching reference image) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 pt-4">
+        {/* 3. Product Cards Grid with 1:1 Aspect Ratio (5 Columns on Desktop) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 pt-4">
           {filteredProducts.map((product, idx) => {
             return (
               <div

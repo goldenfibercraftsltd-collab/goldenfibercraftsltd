@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { CATEGORIES, PRODUCTS } from '../data/products';
+import { CATEGORIES } from '../data/products';
+import { getAllActiveProducts, getAllActiveCategories } from '../utils/productStore';
 import { Package, Leaf, ShoppingBag, Sparkles, Trees, ArrowRight, Home } from 'lucide-react';
 
 interface CategoryPageProps {
@@ -11,9 +12,29 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onOpenQuoteModal }) 
   const { categorySlug } = useParams<{ categorySlug: string }>();
   const navigate = useNavigate();
 
-  // Find category by slug or fallback
-  const category = CATEGORIES.find((c) => c.slug === categorySlug) || CATEGORIES[0];
-  const categoryProducts = PRODUCTS.filter((p) => p.categorySlug === category.slug || p.category === category.id);
+  const allCategories = useMemo(() => getAllActiveCategories(), []);
+  const allProducts = useMemo(() => getAllActiveProducts(), []);
+
+  // Find category by slug or ID with fallback
+  const category = useMemo(() => {
+    if (!categorySlug) return allCategories[0] || CATEGORIES[0];
+    const cleanSlug = categorySlug.toLowerCase().trim();
+    return (
+      allCategories.find((c) => c.slug === categorySlug || c.id === categorySlug || c.slug.toLowerCase() === cleanSlug) ||
+      CATEGORIES.find((c) => c.slug === categorySlug || c.id === categorySlug || c.slug.toLowerCase() === cleanSlug) ||
+      allCategories[0] ||
+      CATEGORIES[0]
+    );
+  }, [allCategories, categorySlug]);
+
+  const categoryProducts = useMemo(() => {
+    return allProducts.filter((p) => 
+      p.categorySlug === category.slug || 
+      p.category === category.id ||
+      p.category === category.slug ||
+      p.categorySlug === category.id
+    );
+  }, [allProducts, category]);
 
   const getCategoryIcon = (iconName: string) => {
     switch (iconName) {
@@ -26,7 +47,7 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onOpenQuoteModal }) 
     }
   };
 
-  const IconComponent = getCategoryIcon(category.iconName);
+  const IconComponent = getCategoryIcon(category.iconName || 'Package');
 
   return (
     <div className="bg-stone-50 min-h-screen py-8 font-sans animate-fadeIn">
@@ -63,8 +84,8 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onOpenQuoteModal }) 
           </div>
         </div>
 
-        {/* Product Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 animate-fadeIn">
+        {/* Product Cards Grid - 5 Cards Per Row on Desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 animate-fadeIn">
           {categoryProducts.map((product) => {
             return (
               <div

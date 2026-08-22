@@ -39,17 +39,32 @@ export const ClientsPage: React.FC<ClientsPageProps> = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8">
         
         {/* Banner with reveal-up */}
-        <div className="reveal-up relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-950 via-stone-900 to-amber-950 p-6 sm:p-8 text-white shadow-xl">
-          <div className="relative z-10 max-w-3xl space-y-2.5">
+        <div className="reveal-up relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#064e3b] via-[#065f46] to-[#047857] p-6 sm:p-9 text-white shadow-xl">
+          <div 
+            className="absolute inset-0 opacity-[0.06] pointer-events-none" 
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E")`,
+            }} 
+          />
+          <div className="relative z-10 max-w-3xl space-y-2">
+            <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-black uppercase tracking-widest text-emerald-200 border border-white/20">
+              <span className="h-2 w-2 rounded-full bg-amber-400 animate-pulse"></span>
+              Global Export Partnerships
+            </div>
             <ScrollTypingText
               as="h1"
               text="Buyers We Work With"
-              className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white"
+              className="font-serif text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-white"
               speed={35}
             />
-            <p className="text-stone-200 text-xs sm:text-sm leading-relaxed font-normal">
+            <p className="text-white text-xs sm:text-sm leading-relaxed font-medium">
               Golden Fiber Crafts Ltd. is a trusted manufacturing & export partner for world-renowned fair trade organizations, ethical global retailers, and international home decor importers.
             </p>
+          </div>
+
+          {/* Large Decorative Watermark in Background (Fully Visible) */}
+          <div className="absolute right-4 sm:right-8 md:right-12 top-1/2 -translate-y-1/2 opacity-20 pointer-events-none select-none">
+            <img src="/logo-icon.png" alt="Golden Fiber Crafts Ltd." className="h-32 w-32 sm:h-40 sm:w-40 md:h-48 md:w-48 lg:h-56 lg:w-56 object-contain filter invert drop-shadow-md" />
           </div>
         </div>
 
