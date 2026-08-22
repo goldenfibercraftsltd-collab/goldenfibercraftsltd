@@ -29,15 +29,6 @@ const DEFAULT_BANNERS: BannerItem[] = [
     link_url: '/products?category=jute'
   },
   {
-    id: 2,
-    image_url: '/banners/banner2.png',
-    title: 'Handwoven Seagrass & Natural Baskets',
-    category_slug: 'seagrass',
-    category_name: 'Seagrass',
-    show_category_badge: false,
-    link_url: '/products?category=seagrass'
-  },
-  {
     id: 3,
     image_url: '/banners/banner3.png',
     title: 'Worldwide Sustainable Manufacturing',
@@ -45,15 +36,6 @@ const DEFAULT_BANNERS: BannerItem[] = [
     category_name: 'Recycle Fabric',
     show_category_badge: false,
     link_url: '/products'
-  },
-  {
-    id: 4,
-    image_url: '/banners/banner4.png',
-    title: 'Village Weavers & Artisanal Heritage',
-    category_slug: 'jute',
-    category_name: 'Jute',
-    show_category_badge: false,
-    link_url: '/products?category=jute'
   },
   {
     id: 5,

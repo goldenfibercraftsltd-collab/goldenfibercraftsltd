@@ -5,7 +5,7 @@ import { ScrollTypingText } from './ScrollTypingText';
 
 export const GlobalClients: React.FC = () => {
   const stats = [
-    { label: 'Export Destinations', target: 35, suffix: '+ Countries', icon: Globe, slideAnim: 'card-slide-far-left stagger-2' },
+    { label: 'Export Destinations', target: 20, suffix: '+ Countries', icon: Globe, slideAnim: 'card-slide-far-left stagger-2' },
     { label: 'Monthly Container Capacity', target: 50, suffix: ' HQ Containers', icon: Ship, slideAnim: 'card-slide-left stagger-1' },
     { label: 'Annual Export Turnover', target: 5, suffix: ' Million USD', icon: Award, slideAnim: 'card-slide-right stagger-1' },
     { label: 'Artisan Community', target: 15000, suffix: '+ Artisans', icon: Users, slideAnim: 'card-slide-far-right stagger-2' },

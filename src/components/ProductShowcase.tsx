@@ -126,17 +126,19 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
           })}
         </div>
 
-        {/* 4. Bottom View Full Catalog Button */}
-        <div className="text-center pt-6 reveal-up">
+        {/* 4. Bottom View All Products Button (Modern Design) */}
+        <div className="text-center pt-8 reveal-up">
           <button
             onClick={() => {
               navigate('/products');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-stone-900 text-white text-xs sm:text-sm font-semibold shadow-md hover:bg-stone-800 transition-all duration-300 group cursor-pointer"
+            className="inline-flex items-center gap-3 px-9 py-3.5 rounded-full bg-gradient-to-r from-[#14532d] via-emerald-800 to-emerald-900 hover:from-emerald-800 hover:to-[#14532d] text-white text-sm sm:text-base font-extrabold tracking-wide shadow-[0_10px_25px_rgba(20,83,45,0.25)] hover:shadow-[0_15px_35px_rgba(20,83,45,0.35)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group cursor-pointer border border-emerald-600/40"
           >
-            <span>Explore Complete Product Catalog</span>
-            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            <span className="font-extrabold">View All Products</span>
+            <div className="flex items-center justify-center w-6 h-6 rounded-full bg-amber-400 text-stone-950 group-hover:bg-amber-300 transition-colors shadow-xs">
+              <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform stroke-[2.5]" />
+            </div>
           </button>
         </div>
 

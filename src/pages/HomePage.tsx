@@ -15,19 +15,13 @@ export const HomePage: React.FC<HomePageProps> = ({
 }) => {
   return (
     <div className="space-y-12 pb-16">
-      {/* 1. Header Auto 3-Second Banner Carousel */}
+      {/* 1. Header Auto Banner Carousel */}
       <HeroBannerCarousel onOpenQuoteModal={() => onOpenQuoteModal()} />
 
       {/* 2. Clean 1:1 Interactive Filterable Product Showcase */}
       <ProductShowcase
         onOpenQuoteModal={onOpenQuoteModal}
       />
-
-      {/* 3. Global Clients */}
-      <GlobalClients />
-
-      {/* 4. Factory Certificates & Compliance (Authentic PPT Slide) */}
-      <HomeCertificates />
     </div>
   );
 };

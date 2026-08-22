@@ -7,6 +7,7 @@ import {
   Compass, Flower2, TreeDeciduous, Tag
 } from 'lucide-react';
 import { CATEGORIES, TAGLINE } from '../data/products';
+import { TopBar } from './TopBar';
 
 const getCategoryIcon = (catId: string) => {
   switch (catId) {
@@ -102,7 +103,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
   };
 
   return (
-    <>
+    <div className="sticky top-0 z-50 w-full shadow-md bg-white">
+      {/* 0. Top Bar: Language Selector (Google Translate API + 20 Popular Languages + Search), Moving Marquee Banner, Bangladesh Waving Flag & 24/7 Service */}
+      <TopBar />
+
       {/* 1. Main Header Row: Prominent Official Logo, Centered Search Bar with Tagline, Quick Actions */}
       <header className="relative z-30 w-full bg-white font-sans border-b border-stone-200/60 shadow-2xs">
         <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 py-1.5 sm:py-2">
@@ -186,12 +190,12 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
         </div>
       </header>
 
-      {/* 2. Sticky Deep Luxury Green Navigation Bar (Fixed at top-0 across entire page scroll) */}
-      <nav className="sticky top-0 z-50 w-full bg-[#14532d] text-white shadow-lg border-t border-emerald-800/80">
+      {/* 2. Deep Luxury Green Navigation Bar with Product by Category on Far Left & Space to Home */}
+      <nav className="w-full bg-[#14532d] text-white shadow-lg border-t border-emerald-800/80">
         <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 flex items-center justify-between relative">
           
-          <div className="flex items-center gap-1 sm:gap-2 w-full lg:w-auto">
-            {/* Radiant Golden "PRODUCT BY CATEGORY ˅" Button */}
+          <div className="flex items-center w-full">
+            {/* Radiant Golden "PRODUCT BY CATEGORY ˅" Button anchored to the far left */}
             <div className="relative shrink-0">
               <button
                 onClick={() => setCategoryDropdownOpen(!categoryDropdownOpen)}
@@ -281,8 +285,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               )}
             </div>
 
-            {/* Desktop Navigation Links - Rich Golden Buttons / Typography */}
-            <nav className="hidden lg:flex items-center font-extrabold text-xs sm:text-sm">
+            {/* Desktop Navigation Links - Distinct Gap/Margin to the left like BD Creation */}
+            <nav className="hidden lg:flex items-center font-extrabold text-xs sm:text-sm ml-8 sm:ml-12 lg:ml-14 xl:ml-16">
               {navItems.map((item) => {
                 const active = isActive(item.path);
                 return (
@@ -398,6 +402,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
       )}
 
       </nav>
-    </>
+    </div>
   );
 };
