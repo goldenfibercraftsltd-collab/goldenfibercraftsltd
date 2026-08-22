@@ -192,9 +192,9 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
             </div>
           </div>
 
-          {/* 6 Core Values Grid */}
+          {/* Core Values Grid */}
           <div className="pt-6 border-t border-stone-100 space-y-4">
-            <h3 className="font-serif text-xl font-bold text-stone-900 text-center">Our 6 Core Values</h3>
+            <h3 className="font-serif text-xl font-bold text-stone-900 text-center">Our Core Values</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
               {[
                 { title: 'Sustainability', desc: '100% renewable & plastic-free fibers', color: 'bg-emerald-50 text-emerald-950 border-emerald-300' },

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CATEGORIES } from '../data/products';
+import { getAllActiveCategories } from '../utils/productStore';
 import { ArrowRight, Package, Leaf, ShoppingBag, Sparkles, Trees } from 'lucide-react';
 import { ScrollTypingText } from './ScrollTypingText';
 
@@ -11,6 +12,22 @@ interface ProductCategoriesProps {
 
 export const ProductCategories: React.FC<ProductCategoriesProps> = () => {
   const navigate = useNavigate();
+  const [categories, setCategories] = useState<any[]>(() => getAllActiveCategories());
+
+  useEffect(() => {
+    fetch('/api/categories')
+      .then(res => res.json())
+      .then(data => {
+        if (data.success && Array.isArray(data.categories) && data.categories.length > 0) {
+          setCategories(data.categories);
+        } else {
+          setCategories(getAllActiveCategories());
+        }
+      })
+      .catch(() => {
+        setCategories(getAllActiveCategories());
+      });
+  }, []);
 
   const getCategoryIcon = (iconName: string) => {
     switch (iconName) {
@@ -53,8 +70,8 @@ export const ProductCategories: React.FC<ProductCategoriesProps> = () => {
 
         {/* 4-Column Grid with Middle-Outward Card Slide */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {CATEGORIES.map((cat, idx) => {
-            const IconComponent = getCategoryIcon(cat.iconName);
+          {categories.map((cat, idx) => {
+            const IconComponent = getCategoryIcon(cat.iconName || cat.icon);
             const slideAnim = getCardSlideClass(idx);
 
             return (
@@ -76,7 +93,7 @@ export const ProductCategories: React.FC<ProductCategoriesProps> = () => {
                     </p>
                     {cat.subcategories && cat.subcategories.length > 0 && (
                       <div className="mt-3 flex flex-wrap gap-1">
-                        {cat.subcategories.slice(0, 3).map(s => (
+                        {cat.subcategories.slice(0, 3).map((s: any) => (
                           <span key={s.id} className="text-[10px] bg-stone-200 text-stone-950 font-bold px-2 py-0.5 rounded">
                             {s.name}
                           </span>

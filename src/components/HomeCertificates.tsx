@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Award } from 'lucide-react';
 import { ScrollTypingText } from './ScrollTypingText';
 
 interface CertificateItem {
-  id: string;
+  id: string | number;
   title: string;
   subtitle: string;
   image: string;
-  code: string;
+  code?: string;
 }
 
-const CERTIFICATES: CertificateItem[] = [
+const DEFAULT_CERTIFICATES: CertificateItem[] = [
   {
     id: 'iso-14001',
     title: 'ISO 14001',
@@ -42,6 +42,26 @@ const CERTIFICATES: CertificateItem[] = [
 ];
 
 export const HomeCertificates: React.FC = () => {
+  const [certificates, setCertificates] = useState<CertificateItem[]>(DEFAULT_CERTIFICATES);
+
+  useEffect(() => {
+    fetch('/api/certificates')
+      .then(res => res.json())
+      .then(data => {
+        if (data.success && Array.isArray(data.certificates) && data.certificates.length > 0) {
+          setCertificates(
+            data.certificates.map((c: any) => ({
+              id: c.id,
+              title: c.title || c.name,
+              subtitle: c.issuer || c.subtitle || 'Quality & Compliance Standard',
+              image: c.image_url || c.image || '/certificates/cert1.png',
+              code: c.code || 'Export Certified Standard'
+            }))
+          );
+        }
+      })
+      .catch(() => {});
+  }, []);
   return (
     <section id="certificates" className="bg-[#fcfbf9] py-12 sm:py-16 border-t border-stone-200/80">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -68,7 +88,7 @@ export const HomeCertificates: React.FC = () => {
 
         {/* 4 Clean HD Certificate Cards in Exact PPT Slide Style */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
-          {CERTIFICATES.map((cert, idx) => {
+          {certificates.map((cert, idx) => {
             const slideAnim =
               idx === 0
                 ? 'card-slide-far-left stagger-2'

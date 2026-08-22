@@ -46,10 +46,59 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
   const [allProducts, setAllProducts] = useState<ProductItem[]>(PRODUCTS);
 
   useEffect(() => {
+    // 1. Instant load from local active store
     const loaded = getAllActiveProducts();
     if (loaded && loaded.length > 0) {
       setAllProducts(loaded);
     }
+
+    // 2. Fetch fresh real-time list from Cloudflare D1 database
+    fetch('/api/products?active_only=true')
+      .then(res => res.json())
+      .then(data => {
+        if (data.success && Array.isArray(data.products) && data.products.length > 0) {
+          const dbProducts = data.products.map((p: any) => ({
+            id: p.item_code || p.id,
+            slug: (p.item_code || p.id || '').toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+            code: p.item_code || p.id,
+            name: p.name,
+            category: p.category_id || p.category,
+            categoryName: p.category_name || 'Handicrafts',
+            categorySlug: p.category_id || p.category,
+            subCategory: p.sub_category || p.subCategory,
+            image: p.image_url || p.image || '/favicon.svg',
+            galleryImages: typeof p.gallery_images === 'string' ? JSON.parse(p.gallery_images || '[]') : (p.gallery_images || []),
+            description: p.description || '',
+            longDescription: {
+              overview: p.description || '',
+              craftsmanship: 'Handcrafted by skilled traditional artisans in Bangladesh using sustainable natural fibers.',
+              exportDetails: 'Quality controlled, fumigated, and packed in 5-ply export master cartons.',
+              careInstructions: 'Keep in dry indoor area. Clean with soft damp cloth.',
+            },
+            specifications: [
+              { key: 'Materials', value: p.material || 'Natural Fiber' },
+              { key: 'Specification', value: p.size || 'Custom Size' },
+              { key: 'MOQ', value: p.moq || '300 Sets' },
+            ],
+            features: ['100% Eco-Friendly', 'Artisanal Handcraft', 'Export Standard'],
+            unit: p.unit || 'S/3',
+            setPerCarton: p.set_per_carton || 2,
+            cbmPerCarton: p.cbm_per_carton || 0.065,
+            nwPerCtn: p.nw_per_ctn || 3.5,
+            gwPerCtn: p.gw_per_ctn || 4.8,
+            material: p.material || 'Natural Fiber',
+            color: p.color || 'Natural',
+          }));
+
+          const mergedMap = new Map();
+          dbProducts.forEach((p: any) => mergedMap.set(p.id, p));
+          getAllActiveProducts().forEach((p: any) => {
+            if (!mergedMap.has(p.id)) mergedMap.set(p.id, p);
+          });
+          setAllProducts(Array.from(mergedMap.values()));
+        }
+      })
+      .catch(() => {});
   }, []);
 
   // Sync state with URL params

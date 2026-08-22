@@ -273,10 +273,6 @@ export const SustainabilityPage: React.FC = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-3xl mx-auto space-y-2 reveal-up">
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider text-emerald-950 bg-emerald-100 border border-emerald-300">
-              <Leaf className="h-3.5 w-3.5 text-emerald-800" />
-              <span>Holistic Sustainability Framework</span>
-            </span>
             <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-black">
               Sustainability & Social Responsibility
             </h2>

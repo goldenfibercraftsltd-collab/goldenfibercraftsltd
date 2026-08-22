@@ -638,7 +638,7 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
                 { title: 'Flexible Production', desc: 'Custom dimensions, colors, and design lines' },
                 { title: 'Product Innovation', desc: 'Eco-friendly blends & contemporary aesthetics' },
                 { title: 'Responsible Manufacturing', desc: 'Ethical wages, safe workspaces, zero child labor' },
-                { title: 'On-Time Delivery', desc: 'Strict lead times with 50 HQ containers/month' },
+                { title: 'On-Time Delivery', desc: 'Strict lead times with 50X40\' HQ containers/month' },
               ].map((str, idx) => (
                 <div key={idx} className="bg-white/15 backdrop-blur-xs p-3 sm:p-3.5 rounded-2xl border border-white/20 text-center space-y-1 hover:bg-white/25 transition-all shadow-xs">
                   <h4 className="font-black text-xs sm:text-sm text-amber-300">{str.title}</h4>
@@ -648,12 +648,12 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
             </div>
           </div>
 
-          {/* Official 8-Step Manufacturing Process (Pages 14-15) */}
+          {/* Official Manufacturing Process */}
           <div className="space-y-8">
             <div className="text-center max-w-2xl mx-auto space-y-2">
               <span className="text-xs font-black uppercase tracking-widest text-emerald-900">STAGE-BY-STAGE EXECUTION</span>
               <h3 className="font-serif text-2xl sm:text-3xl font-extrabold text-black">
-                8-Step Manufacturing Process
+                Manufacturing Process
               </h3>
               <p className="text-xs text-stone-700 font-medium">From raw natural fiber sourcing to global shipment delivery.</p>
               <div className="mx-auto h-1 w-16 rounded-full bg-emerald-600 mt-2" />
@@ -836,7 +836,7 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
                 <Package className="h-5 w-5" />
               </div>
               <div>
-                <h4 className="font-serif text-sm font-extrabold text-black">50 HQ / Month</h4>
+                <h4 className="font-serif text-sm font-extrabold text-black">50X40' HQ / Month</h4>
                 <p className="text-xs text-stone-900 font-semibold">Container Capacity</p>
               </div>
             </div>
@@ -897,55 +897,7 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
         </div>
       </section>
 
-      {/* ---------------------------------------------------- */}
-      {/* 4. Elegant Call-To-Action (CTA) */}
-      {/* ---------------------------------------------------- */}
-      <section className="py-8 sm:py-12">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="reveal-up relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#1b4332] via-[#2d6a4f] to-[#081c15] p-6 sm:p-10 text-white shadow-xl space-y-4 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-6">
-            
-            {/* Background Glow */}
-            <div className="absolute top-0 right-0 w-80 h-80 bg-amber-400/10 rounded-full blur-3xl pointer-events-none" />
-
-            <div className="relative z-10 max-w-2xl space-y-2">
-              <span className="inline-flex items-center gap-2 rounded-full bg-emerald-500/20 px-3 py-0.5 text-xs font-extrabold uppercase tracking-widest text-emerald-300 backdrop-blur-md border border-emerald-500/30">
-                <Sparkles className="h-3.5 w-3.5 text-emerald-400" />
-                Handcrafted in Bangladesh
-              </span>
-              <ScrollTypingText
-                as="h2"
-                text="Crafted by Hand. Made with Nature."
-                className="font-serif text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white"
-                speed={35}
-              />
-              <p className="text-stone-200 text-xs sm:text-sm leading-relaxed font-light">
-                Partner with Golden Fiber Crafts Ltd. for custom OEM handicraft manufacturing, bespoke sizing, private labeling, and sustainable container export shipments worldwide.
-              </p>
-            </div>
-
-            <div className="relative z-10 flex flex-col sm:flex-row items-center gap-3 shrink-0">
-              <button
-                onClick={() => navigate('/products')}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-amber-400 hover:bg-amber-300 text-stone-950 px-6 py-3 text-xs font-extrabold uppercase tracking-wider shadow-xl transition-all duration-200 btn-interactive"
-              >
-                <span>Explore Our Products</span>
-                <ArrowRight className="h-4 w-4 btn-arrow" />
-              </button>
-
-              {onOpenQuoteModal && (
-                <button
-                  onClick={onOpenQuoteModal}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-white/10 hover:bg-white/20 text-white px-5 py-3 text-xs font-bold backdrop-blur-md border border-white/20 transition-all duration-200 btn-interactive"
-                >
-                  <span>Request Wholesale Quote</span>
-                </button>
-              )}
-            </div>
-
-          </div>
-        </div>
-      </section>
-
     </div>
   );
 };
+

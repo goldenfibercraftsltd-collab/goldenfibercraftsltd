@@ -192,7 +192,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
 
       {/* 2. Deep Luxury Green Navigation Bar with Product by Category on Far Left & Space to Home */}
       <nav className="w-full bg-[#14532d] text-white shadow-lg border-t border-emerald-800/80">
-        <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 flex items-center justify-between relative">
+        <div className="mx-auto max-w-7xl pl-0 sm:pl-2 lg:pl-3 pr-2 sm:pr-4 lg:pr-6 flex items-center justify-between relative">
           
           <div className="flex items-center w-full">
             {/* Radiant Golden "PRODUCT BY CATEGORY ˅" Button anchored to the far left */}

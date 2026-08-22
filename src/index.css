@@ -285,19 +285,25 @@ html.lenis, html.lenis body {
   animation: megaMenuIn 260ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Slim modern scrollbar */
+/* Slim modern scrollbar with smooth interactive dragging */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(20, 83, 45, 0.35) rgba(0, 0, 0, 0.04);
+}
 .scrollbar-thin::-webkit-scrollbar {
-  width: 5px;
+  width: 6px;
+  height: 6px;
 }
 .scrollbar-thin::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.03);
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 6px;
 }
 .scrollbar-thin::-webkit-scrollbar-thumb {
-  background: rgba(101, 163, 13, 0.3);
-  border-radius: 4px;
+  background: rgba(20, 83, 45, 0.35);
+  border-radius: 6px;
 }
 .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-  background: rgba(101, 163, 13, 0.6);
+  background: rgba(20, 83, 45, 0.7);
 }
 
 /* ==========================================================================
