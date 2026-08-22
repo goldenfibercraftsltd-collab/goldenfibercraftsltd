@@ -214,6 +214,620 @@ export const CATEGORIES: CategoryInfo[] = [
 
 export const PRODUCTS: ProductItem[] = [
   // ==========================================
+  // 4. Jute Placemats (Authentic Catalogue Collection - 10 Products)
+  // ==========================================
+  {
+    id: "BJM-01",
+    slug: "handwoven-oval-jute-placemat-bjm-01",
+    code: "BJM-01",
+    name: "Handwoven Oval Jute Placemat",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "placemats",
+    image: "/products/bjm_01.png",
+    galleryImages: ["/products/bjm_01.png"],
+    description: "Eco-friendly oval braided natural golden jute dining placemat, providing natural heat insulation and rustic tabletop elegance.",
+    longDescription: {
+          "overview": "The Handwoven Oval Jute Placemat (Art No: BJM-01) is artisanal tableware handcrafted from 100% Natural Jute. Designed for upscale dining tables, eco-friendly restaurants, and luxury tableware retailers.",
+          "craftsmanship": "Handcrafted by skilled Bengali women artisans using high-tensile Bangladeshi golden jute fiber. Heat resistant up to 100°C, naturally non-slip, and protects delicate wood/glass surfaces from scratches and spills.",
+          "exportDetails": "Export packed in sets of 4 or 6 tied with natural jute twine and buyer brand hangtag. Packed 24 sets per 5-ply export master carton with inner desiccants for moisture protection.",
+          "careInstructions": "Wipe clean with a damp cloth or soft sponge. Dry flat in shade. Do not submerge in standing water."
+    },
+    unit: "S/4",
+    cbmPerCarton: 0.038,
+    setPerCarton: 24,
+    nwPerCtn: 7.5,
+    gwPerCtn: 8.8,
+    material: "100% Natural Jute",
+    color: "Natural Golden Jute",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJM-01"
+          },
+          {
+                "key": "Item Name",
+                "value": "Handwoven Oval Jute Placemat"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/4"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Natural Golden Jute"
+          },
+          {
+                "key": "Heat Resistance",
+                "value": "Up to 100°C"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Sets"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly & Biodegradable Jute","Authentic Bangladeshi Hand-Braided Weave","Natural Heat-Resistant Surface Protection","Stain-Resistant Easy Wipe-Clean Maintenance"]
+  },
+  {
+    id: "BJM-02",
+    slug: "round-jute-placemat-with-mustard-border-bjm-02",
+    code: "BJM-02",
+    name: "Round Jute Placemat with Mustard Border",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "placemats",
+    image: "/products/bjm_02.png",
+    galleryImages: ["/products/bjm_02.png"],
+    description: "Circular coiled jute table charger framed with a sunny mustard golden yellow stitched border accent for modern table settings.",
+    longDescription: {
+          "overview": "The Round Jute Placemat with Mustard Border (Art No: BJM-02) is artisanal tableware handcrafted from 100% Natural Jute. Designed for upscale dining tables, eco-friendly restaurants, and luxury tableware retailers.",
+          "craftsmanship": "Handcrafted by skilled Bengali women artisans using high-tensile Bangladeshi golden jute fiber. Heat resistant up to 100°C, naturally non-slip, and protects delicate wood/glass surfaces from scratches and spills.",
+          "exportDetails": "Export packed in sets of 4 or 6 tied with natural jute twine and buyer brand hangtag. Packed 24 sets per 5-ply export master carton with inner desiccants for moisture protection.",
+          "careInstructions": "Wipe clean with a damp cloth or soft sponge. Dry flat in shade. Do not submerge in standing water."
+    },
+    unit: "S/4",
+    cbmPerCarton: 0.038,
+    setPerCarton: 24,
+    nwPerCtn: 7.5,
+    gwPerCtn: 8.8,
+    material: "100% Natural Jute",
+    color: "Natural Jute & Mustard Yellow Rim",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJM-02"
+          },
+          {
+                "key": "Item Name",
+                "value": "Round Jute Placemat with Mustard Border"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/4"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Natural Jute & Mustard Yellow Rim"
+          },
+          {
+                "key": "Heat Resistance",
+                "value": "Up to 100°C"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Sets"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly & Biodegradable Jute","Authentic Bangladeshi Hand-Braided Weave","Natural Heat-Resistant Surface Protection","Stain-Resistant Easy Wipe-Clean Maintenance"]
+  },
+  {
+    id: "BJM-03",
+    slug: "spiral-swirl-washable-jute-placemat-bjm-03",
+    code: "BJM-03",
+    name: "Spiral Swirl Washable Jute Placemat",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "placemats",
+    image: "/products/bjm_03.png",
+    galleryImages: ["/products/bjm_03.png"],
+    description: "Dynamic two-tone spiral swirl braided dining mat crafted from natural and moss green dyed jute cords for everyday dining.",
+    longDescription: {
+          "overview": "The Spiral Swirl Washable Jute Placemat (Art No: BJM-03) is artisanal tableware handcrafted from 100% Natural Jute. Designed for upscale dining tables, eco-friendly restaurants, and luxury tableware retailers.",
+          "craftsmanship": "Handcrafted by skilled Bengali women artisans using high-tensile Bangladeshi golden jute fiber. Heat resistant up to 100°C, naturally non-slip, and protects delicate wood/glass surfaces from scratches and spills.",
+          "exportDetails": "Export packed in sets of 4 or 6 tied with natural jute twine and buyer brand hangtag. Packed 24 sets per 5-ply export master carton with inner desiccants for moisture protection.",
+          "careInstructions": "Wipe clean with a damp cloth or soft sponge. Dry flat in shade. Do not submerge in standing water."
+    },
+    unit: "S/4",
+    cbmPerCarton: 0.038,
+    setPerCarton: 24,
+    nwPerCtn: 7.5,
+    gwPerCtn: 8.8,
+    material: "100% Natural Jute",
+    color: "Natural Jute & Moss Green Swirl",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJM-03"
+          },
+          {
+                "key": "Item Name",
+                "value": "Spiral Swirl Washable Jute Placemat"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/4"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Natural Jute & Moss Green Swirl"
+          },
+          {
+                "key": "Heat Resistance",
+                "value": "Up to 100°C"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Sets"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly & Biodegradable Jute","Authentic Bangladeshi Hand-Braided Weave","Natural Heat-Resistant Surface Protection","Stain-Resistant Easy Wipe-Clean Maintenance"]
+  },
+  {
+    id: "BJM-04",
+    slug: "mottled-indigo-green-round-jute-placemat-bjm-04",
+    code: "BJM-04",
+    name: "Mottled Indigo Green Round Jute Placemat",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "placemats",
+    image: "/products/bjm_04.png",
+    galleryImages: ["/products/bjm_04.png"],
+    description: "Textured round table charger woven from mottled deep indigo green and natural golden jute fibers with fine braided stitching.",
+    longDescription: {
+          "overview": "The Mottled Indigo Green Round Jute Placemat (Art No: BJM-04) is artisanal tableware handcrafted from 100% Natural Jute. Designed for upscale dining tables, eco-friendly restaurants, and luxury tableware retailers.",
+          "craftsmanship": "Handcrafted by skilled Bengali women artisans using high-tensile Bangladeshi golden jute fiber. Heat resistant up to 100°C, naturally non-slip, and protects delicate wood/glass surfaces from scratches and spills.",
+          "exportDetails": "Export packed in sets of 4 or 6 tied with natural jute twine and buyer brand hangtag. Packed 24 sets per 5-ply export master carton with inner desiccants for moisture protection.",
+          "careInstructions": "Wipe clean with a damp cloth or soft sponge. Dry flat in shade. Do not submerge in standing water."
+    },
+    unit: "S/4",
+    cbmPerCarton: 0.038,
+    setPerCarton: 24,
+    nwPerCtn: 7.5,
+    gwPerCtn: 8.8,
+    material: "100% Natural Jute",
+    color: "Indigo Green & Natural Mottled Weave",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJM-04"
+          },
+          {
+                "key": "Item Name",
+                "value": "Mottled Indigo Green Round Jute Placemat"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/4"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Indigo Green & Natural Mottled Weave"
+          },
+          {
+                "key": "Heat Resistance",
+                "value": "Up to 100°C"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Sets"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly & Biodegradable Jute","Authentic Bangladeshi Hand-Braided Weave","Natural Heat-Resistant Surface Protection","Stain-Resistant Easy Wipe-Clean Maintenance"]
+  },
+  {
+    id: "BJM-06",
+    slug: "denim-blue-flatweave-rectangular-placemat-bjm-06",
+    code: "BJM-06",
+    name: "Denim Blue Flatweave Rectangular Placemat",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "placemats",
+    image: "/products/bjm_06.png",
+    galleryImages: ["/products/bjm_06.png"],
+    description: "Handloomed rectangular jute table mat dyed in a handsome slate denim blue shade, perfect for casual dining and hospitality.",
+    longDescription: {
+          "overview": "The Denim Blue Flatweave Rectangular Placemat (Art No: BJM-06) is artisanal tableware handcrafted from 100% Natural Jute. Designed for upscale dining tables, eco-friendly restaurants, and luxury tableware retailers.",
+          "craftsmanship": "Handcrafted by skilled Bengali women artisans using high-tensile Bangladeshi golden jute fiber. Heat resistant up to 100°C, naturally non-slip, and protects delicate wood/glass surfaces from scratches and spills.",
+          "exportDetails": "Export packed in sets of 4 or 6 tied with natural jute twine and buyer brand hangtag. Packed 24 sets per 5-ply export master carton with inner desiccants for moisture protection.",
+          "careInstructions": "Wipe clean with a damp cloth or soft sponge. Dry flat in shade. Do not submerge in standing water."
+    },
+    unit: "S/4",
+    cbmPerCarton: 0.038,
+    setPerCarton: 24,
+    nwPerCtn: 7.5,
+    gwPerCtn: 8.8,
+    material: "100% Natural Jute",
+    color: "Slate Denim Blue",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJM-06"
+          },
+          {
+                "key": "Item Name",
+                "value": "Denim Blue Flatweave Rectangular Placemat"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/4"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Slate Denim Blue"
+          },
+          {
+                "key": "Heat Resistance",
+                "value": "Up to 100°C"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Sets"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly & Biodegradable Jute","Authentic Bangladeshi Hand-Braided Weave","Natural Heat-Resistant Surface Protection","Stain-Resistant Easy Wipe-Clean Maintenance"]
+  },
+  {
+    id: "BJM-07",
+    slug: "classic-elongated-oval-jute-table-mat-bjm-07",
+    code: "BJM-07",
+    name: "Classic Elongated Oval Jute Table Mat",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "placemats",
+    image: "/products/bjm_07.png",
+    galleryImages: ["/products/bjm_07.png"],
+    description: "Spacious oval dining placemat woven from smooth unbleached golden jute fiber, offering a protective and organic tabletop shield.",
+    longDescription: {
+          "overview": "The Classic Elongated Oval Jute Table Mat (Art No: BJM-07) is artisanal tableware handcrafted from 100% Natural Jute. Designed for upscale dining tables, eco-friendly restaurants, and luxury tableware retailers.",
+          "craftsmanship": "Handcrafted by skilled Bengali women artisans using high-tensile Bangladeshi golden jute fiber. Heat resistant up to 100°C, naturally non-slip, and protects delicate wood/glass surfaces from scratches and spills.",
+          "exportDetails": "Export packed in sets of 4 or 6 tied with natural jute twine and buyer brand hangtag. Packed 24 sets per 5-ply export master carton with inner desiccants for moisture protection.",
+          "careInstructions": "Wipe clean with a damp cloth or soft sponge. Dry flat in shade. Do not submerge in standing water."
+    },
+    unit: "S/4",
+    cbmPerCarton: 0.038,
+    setPerCarton: 24,
+    nwPerCtn: 7.5,
+    gwPerCtn: 8.8,
+    material: "100% Natural Jute",
+    color: "Unbleached Natural Golden Jute",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJM-07"
+          },
+          {
+                "key": "Item Name",
+                "value": "Classic Elongated Oval Jute Table Mat"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/4"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Unbleached Natural Golden Jute"
+          },
+          {
+                "key": "Heat Resistance",
+                "value": "Up to 100°C"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Sets"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly & Biodegradable Jute","Authentic Bangladeshi Hand-Braided Weave","Natural Heat-Resistant Surface Protection","Stain-Resistant Easy Wipe-Clean Maintenance"]
+  },
+  {
+    id: "BJM-11",
+    slug: "cobalt-white-striped-round-jute-placemat-bjm-11",
+    code: "BJM-11",
+    name: "Cobalt & White Striped Round Jute Placemat",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "placemats",
+    image: "/products/bjm_11.png",
+    galleryImages: ["/products/bjm_11.png"],
+    description: "Coastal nautical inspired circular table placemat with high-contrast concentric blue and cream white braided rings.",
+    longDescription: {
+          "overview": "The Cobalt & White Striped Round Jute Placemat (Art No: BJM-11) is artisanal tableware handcrafted from 100% Natural Jute. Designed for upscale dining tables, eco-friendly restaurants, and luxury tableware retailers.",
+          "craftsmanship": "Handcrafted by skilled Bengali women artisans using high-tensile Bangladeshi golden jute fiber. Heat resistant up to 100°C, naturally non-slip, and protects delicate wood/glass surfaces from scratches and spills.",
+          "exportDetails": "Export packed in sets of 4 or 6 tied with natural jute twine and buyer brand hangtag. Packed 24 sets per 5-ply export master carton with inner desiccants for moisture protection.",
+          "careInstructions": "Wipe clean with a damp cloth or soft sponge. Dry flat in shade. Do not submerge in standing water."
+    },
+    unit: "S/4",
+    cbmPerCarton: 0.038,
+    setPerCarton: 24,
+    nwPerCtn: 7.5,
+    gwPerCtn: 8.8,
+    material: "100% Natural Jute",
+    color: "Cobalt Blue & Cream White Stripes",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJM-11"
+          },
+          {
+                "key": "Item Name",
+                "value": "Cobalt & White Striped Round Jute Placemat"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/4"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Cobalt Blue & Cream White Stripes"
+          },
+          {
+                "key": "Heat Resistance",
+                "value": "Up to 100°C"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Sets"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly & Biodegradable Jute","Authentic Bangladeshi Hand-Braided Weave","Natural Heat-Resistant Surface Protection","Stain-Resistant Easy Wipe-Clean Maintenance"]
+  },
+  {
+    id: "BJM-08",
+    slug: "forest-green-braided-round-jute-placemat-bjm-08",
+    code: "BJM-08",
+    name: "Forest Green Braided Round Jute Placemat",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "placemats",
+    image: "/products/bjm_08.png",
+    galleryImages: ["/products/bjm_08.png"],
+    description: "Rich forest green and natural tweed-braided round table charger, hand-stitched for superior durability and heat resistance.",
+    longDescription: {
+          "overview": "The Forest Green Braided Round Jute Placemat (Art No: BJM-08) is artisanal tableware handcrafted from 100% Natural Jute. Designed for upscale dining tables, eco-friendly restaurants, and luxury tableware retailers.",
+          "craftsmanship": "Handcrafted by skilled Bengali women artisans using high-tensile Bangladeshi golden jute fiber. Heat resistant up to 100°C, naturally non-slip, and protects delicate wood/glass surfaces from scratches and spills.",
+          "exportDetails": "Export packed in sets of 4 or 6 tied with natural jute twine and buyer brand hangtag. Packed 24 sets per 5-ply export master carton with inner desiccants for moisture protection.",
+          "careInstructions": "Wipe clean with a damp cloth or soft sponge. Dry flat in shade. Do not submerge in standing water."
+    },
+    unit: "S/4",
+    cbmPerCarton: 0.038,
+    setPerCarton: 24,
+    nwPerCtn: 7.5,
+    gwPerCtn: 8.8,
+    material: "100% Natural Jute",
+    color: "Forest Green & Natural Tweed",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJM-08"
+          },
+          {
+                "key": "Item Name",
+                "value": "Forest Green Braided Round Jute Placemat"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/4"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Forest Green & Natural Tweed"
+          },
+          {
+                "key": "Heat Resistance",
+                "value": "Up to 100°C"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Sets"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly & Biodegradable Jute","Authentic Bangladeshi Hand-Braided Weave","Natural Heat-Resistant Surface Protection","Stain-Resistant Easy Wipe-Clean Maintenance"]
+  },
+  {
+    id: "DJM-21",
+    slug: "berry-wine-spiral-coiled-jute-placemat-djm-21",
+    code: "DJM-21",
+    name: "Berry Wine Spiral Coiled Jute Placemat",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "placemats",
+    image: "/products/djm_21.png",
+    galleryImages: ["/products/djm_21.png"],
+    description: "Chic circular dining placemat featuring concentric coils in berry wine plum and natural cream jute cords.",
+    longDescription: {
+          "overview": "The Berry Wine Spiral Coiled Jute Placemat (Art No: DJM-21) is artisanal tableware handcrafted from 100% Natural Jute. Designed for upscale dining tables, eco-friendly restaurants, and luxury tableware retailers.",
+          "craftsmanship": "Handcrafted by skilled Bengali women artisans using high-tensile Bangladeshi golden jute fiber. Heat resistant up to 100°C, naturally non-slip, and protects delicate wood/glass surfaces from scratches and spills.",
+          "exportDetails": "Export packed in sets of 4 or 6 tied with natural jute twine and buyer brand hangtag. Packed 24 sets per 5-ply export master carton with inner desiccants for moisture protection.",
+          "careInstructions": "Wipe clean with a damp cloth or soft sponge. Dry flat in shade. Do not submerge in standing water."
+    },
+    unit: "S/4",
+    cbmPerCarton: 0.038,
+    setPerCarton: 24,
+    nwPerCtn: 7.5,
+    gwPerCtn: 8.8,
+    material: "100% Natural Jute",
+    color: "Berry Wine Plum & Natural Cream",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "DJM-21"
+          },
+          {
+                "key": "Item Name",
+                "value": "Berry Wine Spiral Coiled Jute Placemat"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/4"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Berry Wine Plum & Natural Cream"
+          },
+          {
+                "key": "Heat Resistance",
+                "value": "Up to 100°C"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Sets"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly & Biodegradable Jute","Authentic Bangladeshi Hand-Braided Weave","Natural Heat-Resistant Surface Protection","Stain-Resistant Easy Wipe-Clean Maintenance"]
+  },
+  {
+    id: "BJM-22",
+    slug: "espresso-dark-brown-round-jute-placemat-bjm-22",
+    code: "BJM-22",
+    name: "Espresso Dark Brown Round Jute Placemat",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "placemats",
+    image: "/products/bjm_22.png",
+    galleryImages: ["/products/bjm_22.png"],
+    description: "Sophisticated monochrome dark espresso brown dyed round jute dining charger with clean spiral concentric weave.",
+    longDescription: {
+          "overview": "The Espresso Dark Brown Round Jute Placemat (Art No: BJM-22) is artisanal tableware handcrafted from 100% Natural Jute. Designed for upscale dining tables, eco-friendly restaurants, and luxury tableware retailers.",
+          "craftsmanship": "Handcrafted by skilled Bengali women artisans using high-tensile Bangladeshi golden jute fiber. Heat resistant up to 100°C, naturally non-slip, and protects delicate wood/glass surfaces from scratches and spills.",
+          "exportDetails": "Export packed in sets of 4 or 6 tied with natural jute twine and buyer brand hangtag. Packed 24 sets per 5-ply export master carton with inner desiccants for moisture protection.",
+          "careInstructions": "Wipe clean with a damp cloth or soft sponge. Dry flat in shade. Do not submerge in standing water."
+    },
+    unit: "S/4",
+    cbmPerCarton: 0.038,
+    setPerCarton: 24,
+    nwPerCtn: 7.5,
+    gwPerCtn: 8.8,
+    material: "100% Natural Jute",
+    color: "Deep Espresso Dark Brown",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJM-22"
+          },
+          {
+                "key": "Item Name",
+                "value": "Espresso Dark Brown Round Jute Placemat"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/4"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Finish",
+                "value": "Deep Espresso Dark Brown"
+          },
+          {
+                "key": "Heat Resistance",
+                "value": "Up to 100°C"
+          },
+          {
+                "key": "MOQ",
+                "value": "500 Sets"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Eco-Friendly & Biodegradable Jute","Authentic Bangladeshi Hand-Braided Weave","Natural Heat-Resistant Surface Protection","Stain-Resistant Easy Wipe-Clean Maintenance"]
+  },
+
+  // ==========================================
   // 3. Jute Floor Mats (Authentic Catalogue Collection - 8 Products)
   // ==========================================
   {
