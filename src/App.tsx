@@ -14,6 +14,8 @@ import { QualityControlPage } from './pages/QualityControlPage';
 import { ClientsPage } from './pages/ClientsPage';
 import { ContactPage } from './pages/ContactPage';
 import { MaterialsPage } from './pages/MaterialsPage';
+import { TermsPage } from './pages/TermsPage';
+import { FaqPage } from './pages/FaqPage';
 import { QuoteModal } from './components/QuoteModal';
 import { InfoModal } from './components/InfoModal';
 
@@ -120,6 +122,9 @@ export const AppContent: React.FC = () => {
           <Route path="/quality" element={<QualityControlPage />} />
           <Route path="/clients" element={<ClientsPage onOpenQuoteModal={() => handleOpenQuoteModal()} />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/terms" element={<TermsPage />} />
+          <Route path="/terms-conditions" element={<TermsPage />} />
+          <Route path="/faq" element={<FaqPage />} />
         </Routes>
 
       </main>

@@ -50,35 +50,11 @@ export const TopBar: React.FC = () => {
             </div>
           </div>
 
-          {/* Right: Bangladesh Waving Flag Animation & 24/7 Customer Service */}
-          <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
-            {/* Waving Bangladesh Flag with Realistic Cloth Ripple */}
-            <div className="flex items-center gap-1.5 bg-emerald-950/60 px-2 py-0.5 rounded-full border border-emerald-800/60 shadow-inner">
+          {/* Right: Bangladesh Waving Flag Animation (Pure clean waving flag without text) */}
+          <div className="flex items-center gap-2 shrink-0">
+            <div className="flex items-center p-1 rounded-lg bg-emerald-950/40 border border-emerald-800/40 shadow-inner">
               <BangladeshWavingFlag size="sm" showPole={true} />
-              <span className="hidden sm:inline text-[10px] font-bold text-emerald-300 tracking-wider uppercase">
-                BD
-              </span>
             </div>
-
-            {/* 24/7 Customer Service Phone & WhatsApp Quick Access */}
-            <div className="flex items-center gap-2 text-[11px] sm:text-xs font-medium text-stone-300">
-              <div className="flex items-center gap-1.5">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                </span>
-                <div className="flex flex-col leading-none">
-                  <span className="text-[9px] text-stone-400 uppercase tracking-wider font-bold">24/7 Export Desk</span>
-                  <a
-                    href="tel:+8801916183583"
-                    className="font-bold text-amber-300 hover:text-amber-200 hover:underline tracking-tight text-[11px] sm:text-xs transition-colors"
-                  >
-                    +880 1916-183583
-                  </a>
-                </div>
-              </div>
-            </div>
-
           </div>
 
         </div>

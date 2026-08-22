@@ -125,7 +125,7 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
                 <span className="inline-block px-2.5 py-0.5 rounded-full bg-emerald-500/30 text-emerald-300 text-xs font-black uppercase tracking-widest border border-emerald-400/40">
                   Empowerment & Heritage Craft
                 </span>
-                <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">Over 15,000 Skilled Artisans Workforce</h3>
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">Over 10,000+ Skilled Artisans Workforce</h3>
                 <p className="text-sm text-stone-100 font-medium leading-relaxed">
                   Decentralized rural artisan clusters across Bangladesh creating authentic woven handicrafts.
                 </p>
@@ -135,9 +135,8 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
         </div>
 
         {/* 3. Our Vision, Our Mission & 6 Core Values (Page 4 of Profile) */}
-        <div className="space-y-8 bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-stone-200/80">
-          <div className="text-center max-w-3xl mx-auto space-y-2">
-            <span className="text-xs font-black uppercase tracking-widest text-emerald-900">OUR GUIDING PRINCIPLES</span>
+        <div className="space-y-6 bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm border border-stone-200/80">
+          <div className="text-center max-w-3xl mx-auto space-y-1.5 pt-0">
             <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-stone-950">
               Vision, Mission & Core Values
             </h2>
