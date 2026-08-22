@@ -190,16 +190,16 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
         </div>
       </header>
 
-      {/* 2. Deep Luxury Green Navigation Bar with Product by Category on Far Left & Space to Home */}
+      {/* 2. Deep Luxury Green Navigation Bar with Product by Category on Far Left */}
       <nav className="w-full bg-[#14532d] text-white shadow-lg border-t border-emerald-800/80">
-        <div className="mx-auto max-w-7xl pl-0 sm:pl-2 lg:pl-3 pr-2 sm:pr-4 lg:pr-6 flex items-center justify-between relative">
+        <div className="mx-auto max-w-7xl px-0 sm:px-2 lg:px-4 flex items-center justify-between relative">
           
           <div className="flex items-center w-full">
             {/* Radiant Golden "PRODUCT BY CATEGORY ˅" Button anchored to the far left */}
             <div className="relative shrink-0">
               <button
                 onClick={() => setCategoryDropdownOpen(!categoryDropdownOpen)}
-                className="flex items-center gap-2.5 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-stone-950 px-4 sm:px-5 py-3 text-xs sm:text-sm font-black uppercase tracking-wider transition-all duration-200 border-r border-amber-600/40 shadow-md focus:outline-none cursor-pointer group"
+                className="flex items-center gap-2 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-700 text-stone-950 px-3.5 sm:px-4 py-3 text-xs font-black uppercase tracking-wider transition-all duration-200 border-r border-amber-600/40 shadow-md focus:outline-none cursor-pointer group whitespace-nowrap"
               >
                 <Menu className="h-4 w-4 text-stone-950 group-hover:rotate-90 transition-transform duration-200" />
                 <span className="font-black drop-shadow-xs text-stone-950">PRODUCT BY CATEGORY</span>
@@ -209,84 +209,76 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               {/* Category Dropdown Mega Menu (Desktop) */}
               {categoryDropdownOpen && (
                 <div
-                  className="absolute left-0 top-full z-50 flex w-[500px] bg-white rounded-b-2xl shadow-[0_20px_50px_rgba(0,0,0,0.22)] border border-stone-200/90 overflow-hidden text-stone-800 animate-megaMenuIn"
+                  className="absolute left-0 top-full z-50 flex bg-transparent overflow-visible text-stone-800 animate-megaMenuIn"
                   onMouseLeave={() => setCategoryDropdownOpen(false)}
                 >
                   {/* Left Column: 10 Main Categories */}
-                  <div className="w-56 bg-stone-50/95 border-r border-stone-200/80 py-2 max-h-[440px] overflow-y-auto scrollbar-thin shrink-0">
-                    <div className="px-3.5 py-2.5 mb-1 border-b border-emerald-900/30 bg-gradient-to-r from-[#14532d] to-[#0f3e22] text-white flex items-center justify-between shadow-xs">
-                      <span className="text-[11px] font-black uppercase tracking-wider flex items-center gap-1.5 text-amber-300">
-                        <Layers className="h-3.5 w-3.5 text-amber-300" />
-                        All Categories
-                      </span>
-                      <span className="text-[10px] bg-amber-400 text-stone-950 font-black px-1.5 py-0.5 rounded-full font-mono">
-                        {CATEGORIES.length}
-                      </span>
-                    </div>
-
-                    <div className="space-y-0.5 px-1.5">
-                      {CATEGORIES.map((cat) => {
-                        const isHovered = activeCategoryHover === cat.id;
-                        return (
-                          <div
-                            key={cat.id}
-                            onMouseEnter={() => setActiveCategoryHover(cat.id)}
-                            onClick={() => handleCategorySelect(cat.id)}
-                            className={`group w-full flex items-center justify-between px-3 py-2 text-xs font-bold transition-all duration-200 cursor-pointer rounded-lg ${
-                              isHovered
-                                ? 'bg-gradient-to-r from-[#14532d] to-[#0f3e22] text-amber-300 font-extrabold shadow-sm translate-x-0.5'
-                                : 'text-stone-700 hover:bg-emerald-50 hover:text-emerald-950'
-                            }`}
-                          >
-                            <div className="flex items-center gap-2 truncate">
-                              <span className={`transition-colors ${isHovered ? 'text-amber-300' : 'text-stone-400 group-hover:text-emerald-700'}`}>
-                                {getCategoryIcon(cat.id)}
-                              </span>
-                              <span className="truncate">{cat.name}</span>
-                            </div>
-                            <ChevronRight className={`h-3.5 w-3.5 shrink-0 transition-transform duration-200 ${isHovered ? 'text-amber-300 translate-x-0.5' : 'text-stone-300 group-hover:text-emerald-700'}`} />
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-
-                  {/* Right Column: Subcategories for Hovered Category (1 Column) */}
-                  <div className="flex-1 p-3.5 bg-stone-50/40 overflow-y-auto scrollbar-thin">
-                    {(() => {
-                      const currentCat = CATEGORIES.find(c => c.id === activeCategoryHover) || CATEGORIES[0];
+                  <div className="w-52 bg-white rounded-b-xl shadow-[0_15px_35px_rgba(0,0,0,0.18)] border border-stone-200 overflow-hidden shrink-0 py-1">
+                    {CATEGORIES.map((cat, idx) => {
+                      const isHovered = activeCategoryHover === cat.id;
                       return (
-                        <div key={currentCat.id} className="animate-subFadeIn">
-                          {/* Subcategories 1-Column List */}
-                          <div className="flex flex-col gap-2">
-                            {currentCat.subcategories.map((sub) => (
-                              <button
-                                key={sub.id}
-                                onClick={() => handleCategorySelect(currentCat.id, sub.id)}
-                                className="group flex items-center justify-between p-2.5 rounded-xl bg-white border border-stone-200/90 hover:border-amber-500 hover:bg-amber-50/50 hover:shadow-xs transition-all duration-200 text-left cursor-pointer"
-                              >
-                                <div className="flex items-center gap-2.5 min-w-0">
-                                  <div className="w-7 h-7 rounded-lg bg-emerald-50 border border-emerald-200/60 flex items-center justify-center text-[#14532d] group-hover:bg-amber-500 group-hover:text-stone-950 transition-colors duration-200 shrink-0 shadow-2xs">
-                                    {getSubcategoryIcon(sub.id)}
-                                  </div>
-                                  <span className="text-xs font-bold text-stone-800 group-hover:text-amber-950 transition-colors truncate">
-                                    {sub.name}
-                                  </span>
-                                </div>
-                                <ChevronRight className="h-3.5 w-3.5 text-stone-300 group-hover:text-amber-600 group-hover:translate-x-0.5 transition-all duration-200 shrink-0" />
-                              </button>
-                            ))}
+                        <div
+                          key={cat.id}
+                          onMouseEnter={() => setActiveCategoryHover(cat.id)}
+                          onClick={() => handleCategorySelect(cat.id)}
+                          className={`group w-full flex items-center justify-between px-4 py-2.5 text-xs font-bold transition-all duration-150 cursor-pointer border-b border-stone-100 last:border-b-0 ${
+                            isHovered
+                              ? 'bg-emerald-50 text-emerald-800 font-extrabold'
+                              : 'text-stone-700 hover:bg-stone-50 hover:text-emerald-950'
+                          }`}
+                        >
+                          <div className="flex items-center gap-2 truncate">
+                            <span className={`transition-colors ${isHovered ? 'text-emerald-700' : 'text-stone-400 group-hover:text-emerald-700'}`}>
+                              {getCategoryIcon(cat.id)}
+                            </span>
+                            <span className="truncate">{cat.name}</span>
                           </div>
+                          <ChevronRight className={`h-3.5 w-3.5 shrink-0 transition-transform duration-150 ${isHovered ? 'text-emerald-700 translate-x-0.5' : 'text-stone-300 group-hover:text-emerald-700'}`} />
                         </div>
                       );
-                    })()}
+                    })}
                   </div>
+
+                  {/* Right Column: Subcategories Flyout aligned directly with hovered category */}
+                  {(() => {
+                    const hoveredIndex = Math.max(0, CATEGORIES.findIndex(c => c.id === activeCategoryHover));
+                    const currentCat = CATEGORIES[hoveredIndex] || CATEGORIES[0];
+                    // Calculate top offset so subcategory menu starts exactly aligned across from the hovered category
+                    const topOffset = Math.min(hoveredIndex * 37, Math.max(0, 370 - (currentCat.subcategories.length * 36 + 20)));
+
+                    return (
+                      <div 
+                        className="w-56 ml-1 bg-white rounded-xl shadow-[0_15px_35px_rgba(0,0,0,0.18)] border border-stone-200 py-2.5 px-1 animate-subFadeIn shrink-0 self-start"
+                        style={{ marginTop: `${topOffset}px` }}
+                      >
+                        <div className="flex flex-col gap-0.5">
+                          {currentCat.subcategories.map((sub) => (
+                            <button
+                              key={sub.id}
+                              onClick={() => handleCategorySelect(currentCat.id, sub.id)}
+                              className="group flex items-center justify-between px-3.5 py-2 rounded-lg text-xs font-bold text-stone-700 hover:text-emerald-800 hover:bg-emerald-50 transition-all duration-150 text-left cursor-pointer"
+                            >
+                              <div className="flex items-center gap-2 min-w-0">
+                                <span className="text-stone-400 group-hover:text-emerald-700 transition-colors">
+                                  {getSubcategoryIcon(sub.id)}
+                                </span>
+                                <span className="truncate group-hover:font-extrabold">
+                                  {sub.name}
+                                </span>
+                              </div>
+                              <ChevronRight className="h-3 w-3 text-stone-300 group-hover:text-emerald-700 group-hover:translate-x-0.5 transition-all duration-150 shrink-0" />
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    );
+                  })()}
                 </div>
               )}
             </div>
 
-            {/* Desktop Navigation Links - Distinct Gap/Margin to the left like BD Creation */}
-            <nav className="hidden lg:flex items-center font-extrabold text-xs sm:text-sm ml-8 sm:ml-12 lg:ml-14 xl:ml-16">
+            {/* Desktop Navigation Links - Single line with whitespace-nowrap */}
+            <nav className="hidden lg:flex items-center font-extrabold text-[11px] xl:text-xs whitespace-nowrap ml-3 sm:ml-4 lg:ml-6 xl:ml-8 overflow-x-auto scrollbar-none">
               {navItems.map((item) => {
                 const active = isActive(item.path);
                 return (
@@ -294,7 +286,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
                     key={item.path}
                     to={item.path}
                     onClick={handleNavClick}
-                    className={`px-3.5 py-3 uppercase tracking-wider font-extrabold transition-all duration-200 cursor-pointer ${
+                    className={`px-2 xl:px-3 py-3 uppercase tracking-wider font-extrabold whitespace-nowrap transition-all duration-200 cursor-pointer ${
                       active
                         ? 'bg-[#0f3e22] text-amber-300 font-black border-b-2 border-amber-400 shadow-inner'
                         : 'text-amber-300 hover:text-white hover:bg-[#0f3e22]'

@@ -151,58 +151,35 @@ export const MaterialsPage: React.FC = () => {
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E")`,
         }} />
         
-        <div className="relative mx-auto max-w-7xl px-4 py-6 sm:py-8 sm:px-6 lg:px-8">
-          {/* Breadcrumbs */}
-          <div className="flex items-center gap-1.5 text-emerald-200/90 text-xs font-medium mb-2.5">
-            <Link to="/" className="hover:text-white transition-colors">Home</Link>
-            <ChevronRight className="h-3 w-3" />
-            <span className="text-white font-bold">Materials Information</span>
-          </div>
-          
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div>
-              <div className="flex items-center gap-2.5 mb-1.5">
-                <div className="p-2 rounded-xl bg-white/10 backdrop-blur-sm">
-                  <Leaf className="h-5 w-5 text-emerald-300" />
-                </div>
-                <h1 className="text-2xl sm:text-3xl font-serif font-black text-white tracking-tight">
-                  Raw Materials & Fibers
-                </h1>
-              </div>
-              <p className="text-white text-xs sm:text-sm font-medium max-w-xl leading-relaxed">
-                Discover the authentic natural fibers sourced from the heart of Bangladesh — each material 
-                handcrafted into premium eco-friendly products for global export.
-              </p>
-              <div className="flex items-center gap-2 mt-2.5">
-                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
-                  <Sparkles className="h-3 w-3" /> {RAW_MATERIALS.length} Natural Materials
-                </span>
-                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
-                  100% Eco-Friendly
-                </span>
-              </div>
+        <div className="relative mx-auto max-w-7xl px-4 py-7 sm:py-9 sm:px-6 lg:px-8">
+          <div className="max-w-3xl space-y-2 relative z-10">
+            <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-black uppercase tracking-widest text-emerald-200 border border-white/20">
+              <Leaf className="h-3 w-3 text-emerald-300" />
+              Natural Fiber Sourcing & Integrity
             </div>
-            
-            {/* Right: Large Branded Emblem / Original Site Icon */}
-            <div className="flex items-center justify-center shrink-0">
-              <div className="relative group">
-                {/* Glow ring */}
-                <div className="absolute -inset-3 rounded-full bg-emerald-400/20 blur-lg group-hover:bg-emerald-400/35 transition-all duration-500"></div>
-                <div className="relative h-20 w-20 sm:h-24 sm:w-24 rounded-2xl bg-white/10 backdrop-blur-md border border-white/25 p-2.5 shadow-xl flex items-center justify-center hover:scale-105 transition-transform duration-500">
-                  <img
-                    src="/logo-icon.png"
-                    alt="Golden Fiber Crafts Ltd."
-                    className="h-full w-full object-contain filter drop-shadow-md brightness-110"
-                  />
-                </div>
-              </div>
+            <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-white">
+              Raw Materials & Fibers
+            </h1>
+            <p className="text-white text-xs sm:text-sm leading-relaxed font-medium">
+              Discover the authentic natural fibers sourced from the heart of Bangladesh — each material handcrafted into premium eco-friendly products for global export.
+            </p>
+            <div className="flex flex-wrap items-center gap-2 pt-1">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
+                <Sparkles className="h-3 w-3 text-amber-300" /> {RAW_MATERIALS.length} Natural Materials
+              </span>
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
+                100% Eco-Friendly
+              </span>
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
+                Biodegradable & Non-Toxic
+              </span>
             </div>
           </div>
         </div>
 
-        {/* Large Decorative Watermark in Background */}
-        <div className="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
-          <img src="/logo-icon.png" alt="Watermark" className="h-64 w-64 lg:h-72 lg:w-72 object-contain filter invert" />
+        {/* Large Decorative Watermark in Background (Fully Visible) */}
+        <div className="absolute right-4 sm:right-8 md:right-12 top-1/2 -translate-y-1/2 opacity-20 pointer-events-none select-none">
+          <img src="/logo-icon.png" alt="Golden Fiber Crafts Ltd." className="h-32 w-32 sm:h-40 sm:w-40 md:h-48 md:w-48 lg:h-56 lg:w-56 object-contain filter invert drop-shadow-md" />
         </div>
       </div>
 

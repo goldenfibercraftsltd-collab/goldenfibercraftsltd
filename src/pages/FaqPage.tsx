@@ -66,17 +66,30 @@ export const FaqPage: React.FC = () => {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 space-y-8">
         
         {/* Header Banner */}
-        <div className="rounded-3xl bg-gradient-to-r from-[#064e3b] via-[#065f46] to-[#047857] p-8 sm:p-10 text-white shadow-xl space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm text-xs font-semibold uppercase tracking-widest text-emerald-200 border border-white/20">
-            <HelpCircle className="h-3.5 w-3.5" />
-            <span>Help Center & FAQ</span>
+        <div className="reveal-up relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#064e3b] via-[#065f46] to-[#047857] p-7 sm:p-9 text-white shadow-xl">
+          <div 
+            className="absolute inset-0 opacity-[0.06] pointer-events-none" 
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E")`,
+            }} 
+          />
+          <div className="relative z-10 max-w-2xl space-y-2">
+            <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-black uppercase tracking-widest text-emerald-200 border border-white/20">
+              <HelpCircle className="h-3 w-3 text-emerald-300" />
+              <span>Help Center & FAQ</span>
+            </div>
+            <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-black text-white">
+              Frequently Asked Questions
+            </h1>
+            <p className="text-white text-xs sm:text-sm font-medium leading-relaxed">
+              Find answers to common questions about our export ordering process, materials, sampling, container delivery, and Fair Trade manufacturing.
+            </p>
           </div>
-          <h1 className="font-serif text-3xl sm:text-4xl font-extrabold text-white">
-            Frequently Asked Questions
-          </h1>
-          <p className="text-emerald-100 text-sm font-normal max-w-2xl leading-relaxed">
-            Find answers to common questions about our export ordering process, materials, sampling, container delivery, and Fair Trade manufacturing.
-          </p>
+
+          {/* Large Decorative Watermark in Background (Fully Visible) */}
+          <div className="absolute right-4 sm:right-8 md:right-12 top-1/2 -translate-y-1/2 opacity-20 pointer-events-none select-none">
+            <img src="/logo-icon.png" alt="Golden Fiber Crafts Ltd." className="h-28 w-28 sm:h-36 sm:w-36 md:h-44 md:w-44 object-contain filter invert drop-shadow-md" />
+          </div>
         </div>
 
         {/* Category Pills */}

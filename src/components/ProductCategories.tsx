@@ -68,8 +68,8 @@ export const ProductCategories: React.FC<ProductCategoriesProps> = () => {
           <div className="mx-auto h-1 w-16 rounded-full bg-emerald-600 mt-2" />
         </div>
 
-        {/* 4-Column Grid with Middle-Outward Card Slide */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {/* 5-Column Grid with Middle-Outward Card Slide */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
           {categories.map((cat, idx) => {
             const IconComponent = getCategoryIcon(cat.iconName || cat.icon);
             const slideAnim = getCardSlideClass(idx);

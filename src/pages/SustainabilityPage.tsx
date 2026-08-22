@@ -149,20 +149,52 @@ export const SustainabilityPage: React.FC = () => {
       )}
 
       {/* ---------------------------------------------------- */}
-      {/* 1. Clean Breadcrumb */}
+      {/* 1. Breadcrumb Navigation & Hero Page Banner */}
       {/* ---------------------------------------------------- */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
-        <nav className="reveal-up flex items-center gap-2 text-xs font-bold text-stone-800">
-          <Link to="/" className="hover:text-emerald-800 transition-colors">Home</Link>
-          <span>/</span>
-          <span className="text-black font-extrabold">Sustainability</span>
-        </nav>
+      <div className="relative overflow-hidden bg-gradient-to-r from-[#064e3b] via-[#065f46] to-[#047857] text-white">
+        <div 
+          className="absolute inset-0 opacity-[0.06] pointer-events-none" 
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E")`,
+          }} 
+        />
+        
+        <div className="relative mx-auto max-w-7xl px-4 py-7 sm:py-9 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="max-w-3xl space-y-2 relative z-10">
+            <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-black uppercase tracking-widest text-emerald-200 border border-white/20">
+              <Leaf className="h-3 w-3 text-emerald-300" />
+              Eco-System & Social Responsibility
+            </div>
+            <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-white">
+              Sustainability & Fair Trade Manufacturing
+            </h1>
+            <p className="text-white text-xs sm:text-sm leading-relaxed font-medium">
+              Crafting 100% natural, biodegradable handicraft solutions while empowering rural Bangladeshi women artisans with fair living wages and safe working environments.
+            </p>
+            <div className="flex flex-wrap items-center gap-2 pt-1">
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
+                <Sparkles className="h-3 w-3 text-amber-300" /> 100% Biodegradable Fibers
+              </span>
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
+                Fair Trade Practices
+              </span>
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
+                Zero Plastic Packaging
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Large Decorative Watermark in Background (Fully Visible) */}
+        <div className="absolute right-4 sm:right-8 md:right-12 top-1/2 -translate-y-1/2 opacity-20 pointer-events-none select-none">
+          <img src="/logo-icon.png" alt="Golden Fiber Crafts Ltd." className="h-32 w-32 sm:h-40 sm:w-40 md:h-48 md:w-48 lg:h-56 lg:w-56 object-contain filter invert drop-shadow-md" />
+        </div>
       </div>
 
       {/* ---------------------------------------------------- */}
       {/* 2. Four Alternating Sustainability Pillar Sections */}
       {/* ---------------------------------------------------- */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24 space-y-24 sm:space-y-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-16 space-y-16 sm:space-y-24">
         {SUSTAINABILITY_SECTIONS.map((section, idx) => {
           const isEven = idx % 2 === 1;
 

@@ -154,8 +154,8 @@ export const QualityControlPage: React.FC = () => {
           }} 
         />
         
-        <div className="relative mx-auto max-w-7xl px-4 py-6 sm:py-8 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div className="max-w-3xl space-y-2">
+        <div className="relative mx-auto max-w-7xl px-4 py-7 sm:py-9 sm:px-6 lg:px-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="max-w-3xl space-y-2 relative z-10">
             <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-black uppercase tracking-widest text-emerald-200 border border-white/20">
               <ShieldCheck className="h-3 w-3 text-emerald-300" />
               Quality Assurance & Compliance
@@ -166,7 +166,7 @@ export const QualityControlPage: React.FC = () => {
             <p className="text-white text-xs sm:text-sm leading-relaxed font-medium">
               From raw fiber selection to final container loading, our stringent 4-stage inspection protocol ensures 100% defect-free, mold-resistant, compliant natural handicraft export.
             </p>
-            <div className="flex items-center gap-2 pt-0.5">
+            <div className="flex flex-wrap items-center gap-2 pt-1">
               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
                 <Sparkles className="h-3 w-3 text-amber-300" /> AQL 2.5 Standard
               </span>
@@ -178,24 +178,11 @@ export const QualityControlPage: React.FC = () => {
               </span>
             </div>
           </div>
-
-          <div className="hidden md:flex items-center justify-center shrink-0">
-            <div className="relative group">
-              <div className="absolute -inset-3 rounded-full bg-emerald-400/20 blur-lg group-hover:bg-emerald-400/35 transition-all duration-500"></div>
-              <div className="relative h-20 w-20 sm:h-24 sm:w-24 rounded-2xl bg-white/10 backdrop-blur-md border border-white/25 p-2.5 shadow-xl flex items-center justify-center hover:scale-105 transition-transform duration-500">
-                <img
-                  src="/logo-icon.png"
-                  alt="Golden Fiber Crafts Ltd."
-                  className="h-full w-full object-contain filter drop-shadow-md brightness-110"
-                />
-              </div>
-            </div>
-          </div>
         </div>
 
-        {/* Large Decorative Watermark in Background */}
-        <div className="absolute -right-8 -bottom-8 opacity-10 pointer-events-none">
-          <img src="/logo-icon.png" alt="Watermark" className="h-48 w-48 lg:h-60 lg:w-60 object-contain filter invert" />
+        {/* Large Decorative Watermark in Background (Fully Visible) */}
+        <div className="absolute right-4 sm:right-8 md:right-12 top-1/2 -translate-y-1/2 opacity-20 pointer-events-none select-none">
+          <img src="/logo-icon.png" alt="Golden Fiber Crafts Ltd." className="h-32 w-32 sm:h-40 sm:w-40 md:h-48 md:w-48 lg:h-56 lg:w-56 object-contain filter invert drop-shadow-md" />
         </div>
       </div>
 
