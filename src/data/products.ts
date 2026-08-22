@@ -214,6 +214,466 @@ export const CATEGORIES: CategoryInfo[] = [
 
 export const PRODUCTS: ProductItem[] = [
   // ==========================================
+  // 3. Jute Floor Mats (Authentic Catalogue Collection - 8 Products)
+  // ==========================================
+  {
+    id: "BJM-09",
+    slug: "spiral-braided-round-jute-floor-mat-bjm-09",
+    code: "BJM-09",
+    name: "Spiral Braided Round Jute Floor Mat",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "floor-mats",
+    image: "/products/bjm_09.png",
+    galleryImages: ["/products/bjm_09.png"],
+    description: "Hand-braided circular floor mat woven from pure golden jute in an elegant spiral concentric pattern for living rooms and bedrooms.",
+    longDescription: {
+          "overview": "The Spiral Braided Round Jute Floor Mat (Art No: BJM-09) is expertly handcrafted from 100% Natural Jute. Engineered for sustainable residential interiors, luxury eco-resorts, and international home decor wholesalers.",
+          "craftsmanship": "Braided and hand-stitched by experienced Bengali artisans using 100% natural, unbleached golden jute fibers. Heavy-duty construction ensures resilience, thermal insulation, and natural anti-static properties.",
+          "exportDetails": "Individually rolled or flat-packed with moisture-absorbent silica gel, wrapped in protective biodegradable poly, and packed into 5-ply export master cartons. Compliant with international REACH and textile import standards.",
+          "careInstructions": "Vacuum regularly without a beater bar. Spot clean with mild soap and damp cloth. Do not soak. Air dry in shade."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.052,
+    setPerCarton: 12,
+    nwPerCtn: 9.2,
+    gwPerCtn: 10.8,
+    material: "100% Natural Jute",
+    color: "Natural Golden Jute",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJM-09"
+          },
+          {
+                "key": "Item Name",
+                "value": "Spiral Braided Round Jute Floor Mat"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Weave",
+                "value": "Natural Golden Jute"
+          },
+          {
+                "key": "MOQ",
+                "value": "300 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Natural Biodegradable Golden Jute","Authentic Bangladeshi Hand-Braided Craftsmanship","Durable Reversible Heavy-Duty Construction","Natural Sound Dampening & Eco Living Aesthetic"]
+  },
+  {
+    id: "BJM-10",
+    slug: "natural-unbleached-round-jute-area-mat-bjm-10",
+    code: "BJM-10",
+    name: "Natural Unbleached Round Jute Area Mat",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "floor-mats",
+    image: "/products/bjm_10.png",
+    galleryImages: ["/products/bjm_10.png"],
+    description: "Minimalist round jute area mat featuring tight continuous coil stitching, offering high durability and organic texture underfoot.",
+    longDescription: {
+          "overview": "The Natural Unbleached Round Jute Area Mat (Art No: BJM-10) is expertly handcrafted from 100% Natural Jute. Engineered for sustainable residential interiors, luxury eco-resorts, and international home decor wholesalers.",
+          "craftsmanship": "Braided and hand-stitched by experienced Bengali artisans using 100% natural, unbleached golden jute fibers. Heavy-duty construction ensures resilience, thermal insulation, and natural anti-static properties.",
+          "exportDetails": "Individually rolled or flat-packed with moisture-absorbent silica gel, wrapped in protective biodegradable poly, and packed into 5-ply export master cartons. Compliant with international REACH and textile import standards.",
+          "careInstructions": "Vacuum regularly without a beater bar. Spot clean with mild soap and damp cloth. Do not soak. Air dry in shade."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.052,
+    setPerCarton: 12,
+    nwPerCtn: 9.2,
+    gwPerCtn: 10.8,
+    material: "100% Natural Jute",
+    color: "Unbleached Natural Golden Jute",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJM-10"
+          },
+          {
+                "key": "Item Name",
+                "value": "Natural Unbleached Round Jute Area Mat"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Weave",
+                "value": "Unbleached Natural Golden Jute"
+          },
+          {
+                "key": "MOQ",
+                "value": "300 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Natural Biodegradable Golden Jute","Authentic Bangladeshi Hand-Braided Craftsmanship","Durable Reversible Heavy-Duty Construction","Natural Sound Dampening & Eco Living Aesthetic"]
+  },
+  {
+    id: "BJM-12",
+    slug: "classic-flatweave-rectangular-jute-rug-bjm-12",
+    code: "BJM-12",
+    name: "Classic Flatweave Rectangular Jute Rug",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "floor-mats",
+    image: "/products/bjm_12.png",
+    galleryImages: ["/products/bjm_12.png"],
+    description: "Handloom flatwoven rectangular jute rug and hallway runner with clean selvedge edges, reversible for long-lasting performance.",
+    longDescription: {
+          "overview": "The Classic Flatweave Rectangular Jute Rug (Art No: BJM-12) is expertly handcrafted from 100% Natural Jute. Engineered for sustainable residential interiors, luxury eco-resorts, and international home decor wholesalers.",
+          "craftsmanship": "Braided and hand-stitched by experienced Bengali artisans using 100% natural, unbleached golden jute fibers. Heavy-duty construction ensures resilience, thermal insulation, and natural anti-static properties.",
+          "exportDetails": "Individually rolled or flat-packed with moisture-absorbent silica gel, wrapped in protective biodegradable poly, and packed into 5-ply export master cartons. Compliant with international REACH and textile import standards.",
+          "careInstructions": "Vacuum regularly without a beater bar. Spot clean with mild soap and damp cloth. Do not soak. Air dry in shade."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.052,
+    setPerCarton: 12,
+    nwPerCtn: 9.2,
+    gwPerCtn: 10.8,
+    material: "100% Natural Jute",
+    color: "Natural Jute Oatmeal Tone",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJM-12"
+          },
+          {
+                "key": "Item Name",
+                "value": "Classic Flatweave Rectangular Jute Rug"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Weave",
+                "value": "Natural Jute Oatmeal Tone"
+          },
+          {
+                "key": "MOQ",
+                "value": "300 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Natural Biodegradable Golden Jute","Authentic Bangladeshi Hand-Braided Craftsmanship","Durable Reversible Heavy-Duty Construction","Natural Sound Dampening & Eco Living Aesthetic"]
+  },
+  {
+    id: "BJM-13",
+    slug: "rectangular-jute-doormat-with-black-border-bjm-13",
+    code: "BJM-13",
+    name: "Rectangular Jute Doormat with Black Border",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "floor-mats",
+    image: "/products/bjm_13.png",
+    galleryImages: ["/products/bjm_13.png"],
+    description: "Heavy-duty rectangular ribbed jute entrance doormat framed with a crisp contrast black fabric border for modern entryways.",
+    longDescription: {
+          "overview": "The Rectangular Jute Doormat with Black Border (Art No: BJM-13) is expertly handcrafted from 100% Natural Jute & Cotton Canvas Border. Engineered for sustainable residential interiors, luxury eco-resorts, and international home decor wholesalers.",
+          "craftsmanship": "Braided and hand-stitched by experienced Bengali artisans using 100% natural, unbleached golden jute fibers. Heavy-duty construction ensures resilience, thermal insulation, and natural anti-static properties.",
+          "exportDetails": "Individually rolled or flat-packed with moisture-absorbent silica gel, wrapped in protective biodegradable poly, and packed into 5-ply export master cartons. Compliant with international REACH and textile import standards.",
+          "careInstructions": "Vacuum regularly without a beater bar. Spot clean with mild soap and damp cloth. Do not soak. Air dry in shade."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.052,
+    setPerCarton: 12,
+    nwPerCtn: 9.2,
+    gwPerCtn: 10.8,
+    material: "100% Natural Jute & Cotton Canvas Border",
+    color: "Natural Tan with Black Fabric Border",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJM-13"
+          },
+          {
+                "key": "Item Name",
+                "value": "Rectangular Jute Doormat with Black Border"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute & Cotton Canvas Border"
+          },
+          {
+                "key": "Color / Weave",
+                "value": "Natural Tan with Black Fabric Border"
+          },
+          {
+                "key": "MOQ",
+                "value": "300 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Natural Biodegradable Golden Jute","Authentic Bangladeshi Hand-Braided Craftsmanship","Durable Reversible Heavy-Duty Construction","Natural Sound Dampening & Eco Living Aesthetic"]
+  },
+  {
+    id: "BJM-26",
+    slug: "half-moon-semicircle-braided-jute-doormat-bjm-26",
+    code: "BJM-26",
+    name: "Half-Moon Semicircle Braided Jute Doormat",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "floor-mats",
+    image: "/products/bjm_26.png",
+    galleryImages: ["/products/bjm_26.png"],
+    description: "Artisanal half-circle semicircular braided jute welcome doormat, designed specifically for doorways, patios, and bedside accents.",
+    longDescription: {
+          "overview": "The Half-Moon Semicircle Braided Jute Doormat (Art No: BJM-26) is expertly handcrafted from 100% Natural Jute. Engineered for sustainable residential interiors, luxury eco-resorts, and international home decor wholesalers.",
+          "craftsmanship": "Braided and hand-stitched by experienced Bengali artisans using 100% natural, unbleached golden jute fibers. Heavy-duty construction ensures resilience, thermal insulation, and natural anti-static properties.",
+          "exportDetails": "Individually rolled or flat-packed with moisture-absorbent silica gel, wrapped in protective biodegradable poly, and packed into 5-ply export master cartons. Compliant with international REACH and textile import standards.",
+          "careInstructions": "Vacuum regularly without a beater bar. Spot clean with mild soap and damp cloth. Do not soak. Air dry in shade."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.052,
+    setPerCarton: 12,
+    nwPerCtn: 9.2,
+    gwPerCtn: 10.8,
+    material: "100% Natural Jute",
+    color: "Natural Golden Jute",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJM-26"
+          },
+          {
+                "key": "Item Name",
+                "value": "Half-Moon Semicircle Braided Jute Doormat"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Weave",
+                "value": "Natural Golden Jute"
+          },
+          {
+                "key": "MOQ",
+                "value": "300 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Natural Biodegradable Golden Jute","Authentic Bangladeshi Hand-Braided Craftsmanship","Durable Reversible Heavy-Duty Construction","Natural Sound Dampening & Eco Living Aesthetic"]
+  },
+  {
+    id: "BJM-27",
+    slug: "concentric-ring-mottled-jute-door-mat-bjm-27",
+    code: "BJM-27",
+    name: "Concentric Ring Mottled Jute Door Mat",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "floor-mats",
+    image: "/products/bjm_27.png",
+    galleryImages: ["/products/bjm_27.png"],
+    description: "Decorative circular entrance mat woven with concentric rings of natural and slate charcoal dyed fibers for a textured ripple effect.",
+    longDescription: {
+          "overview": "The Concentric Ring Mottled Jute Door Mat (Art No: BJM-27) is expertly handcrafted from 100% Natural Jute & Dyed Cotton Thread. Engineered for sustainable residential interiors, luxury eco-resorts, and international home decor wholesalers.",
+          "craftsmanship": "Braided and hand-stitched by experienced Bengali artisans using 100% natural, unbleached golden jute fibers. Heavy-duty construction ensures resilience, thermal insulation, and natural anti-static properties.",
+          "exportDetails": "Individually rolled or flat-packed with moisture-absorbent silica gel, wrapped in protective biodegradable poly, and packed into 5-ply export master cartons. Compliant with international REACH and textile import standards.",
+          "careInstructions": "Vacuum regularly without a beater bar. Spot clean with mild soap and damp cloth. Do not soak. Air dry in shade."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.052,
+    setPerCarton: 12,
+    nwPerCtn: 9.2,
+    gwPerCtn: 10.8,
+    material: "100% Natural Jute & Dyed Cotton Thread",
+    color: "Natural Jute & Charcoal Mottled Rings",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJM-27"
+          },
+          {
+                "key": "Item Name",
+                "value": "Concentric Ring Mottled Jute Door Mat"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute & Dyed Cotton Thread"
+          },
+          {
+                "key": "Color / Weave",
+                "value": "Natural Jute & Charcoal Mottled Rings"
+          },
+          {
+                "key": "MOQ",
+                "value": "300 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Natural Biodegradable Golden Jute","Authentic Bangladeshi Hand-Braided Craftsmanship","Durable Reversible Heavy-Duty Construction","Natural Sound Dampening & Eco Living Aesthetic"]
+  },
+  {
+    id: "BJM-31",
+    slug: "openwork-lattice-ring-jute-mandala-mat-bjm-31",
+    code: "BJM-31",
+    name: "Openwork Lattice Ring Jute Mandala Mat",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "floor-mats",
+    image: "/products/bjm_31.png",
+    galleryImages: ["/products/bjm_31.png"],
+    description: "Intricate round decorative floor rug handcrafted with a central coiled disc surrounded by an airy criss-cross openwork lattice border.",
+    longDescription: {
+          "overview": "The Openwork Lattice Ring Jute Mandala Mat (Art No: BJM-31) is expertly handcrafted from 100% Natural Jute. Engineered for sustainable residential interiors, luxury eco-resorts, and international home decor wholesalers.",
+          "craftsmanship": "Braided and hand-stitched by experienced Bengali artisans using 100% natural, unbleached golden jute fibers. Heavy-duty construction ensures resilience, thermal insulation, and natural anti-static properties.",
+          "exportDetails": "Individually rolled or flat-packed with moisture-absorbent silica gel, wrapped in protective biodegradable poly, and packed into 5-ply export master cartons. Compliant with international REACH and textile import standards.",
+          "careInstructions": "Vacuum regularly without a beater bar. Spot clean with mild soap and damp cloth. Do not soak. Air dry in shade."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.052,
+    setPerCarton: 12,
+    nwPerCtn: 9.2,
+    gwPerCtn: 10.8,
+    material: "100% Natural Jute",
+    color: "Natural Golden Jute",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJM-31"
+          },
+          {
+                "key": "Item Name",
+                "value": "Openwork Lattice Ring Jute Mandala Mat"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Weave",
+                "value": "Natural Golden Jute"
+          },
+          {
+                "key": "MOQ",
+                "value": "300 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Natural Biodegradable Golden Jute","Authentic Bangladeshi Hand-Braided Craftsmanship","Durable Reversible Heavy-Duty Construction","Natural Sound Dampening & Eco Living Aesthetic"]
+  },
+  {
+    id: "BJM-32",
+    slug: "scalloped-petal-openwork-jute-floor-rug-bjm-32",
+    code: "BJM-32",
+    name: "Scalloped Petal Openwork Jute Floor Rug",
+    category: "jute",
+    categoryName: "Jute",
+    categorySlug: "jute",
+    subCategory: "floor-mats",
+    image: "/products/bjm_32.png",
+    galleryImages: ["/products/bjm_32.png"],
+    description: "Boho-chic handcrafted round jute rug featuring concentric wheel openwork loops and an ornate scalloped petal fringe outer perimeter.",
+    longDescription: {
+          "overview": "The Scalloped Petal Openwork Jute Floor Rug (Art No: BJM-32) is expertly handcrafted from 100% Natural Jute. Engineered for sustainable residential interiors, luxury eco-resorts, and international home decor wholesalers.",
+          "craftsmanship": "Braided and hand-stitched by experienced Bengali artisans using 100% natural, unbleached golden jute fibers. Heavy-duty construction ensures resilience, thermal insulation, and natural anti-static properties.",
+          "exportDetails": "Individually rolled or flat-packed with moisture-absorbent silica gel, wrapped in protective biodegradable poly, and packed into 5-ply export master cartons. Compliant with international REACH and textile import standards.",
+          "careInstructions": "Vacuum regularly without a beater bar. Spot clean with mild soap and damp cloth. Do not soak. Air dry in shade."
+    },
+    unit: "S/1",
+    cbmPerCarton: 0.052,
+    setPerCarton: 12,
+    nwPerCtn: 9.2,
+    gwPerCtn: 10.8,
+    material: "100% Natural Jute",
+    color: "Natural Golden Jute",
+    specifications: [
+          {
+                "key": "Item Code",
+                "value": "BJM-32"
+          },
+          {
+                "key": "Item Name",
+                "value": "Scalloped Petal Openwork Jute Floor Rug"
+          },
+          {
+                "key": "Packaging Unit",
+                "value": "S/1"
+          },
+          {
+                "key": "Materials",
+                "value": "100% Natural Jute"
+          },
+          {
+                "key": "Color / Weave",
+                "value": "Natural Golden Jute"
+          },
+          {
+                "key": "MOQ",
+                "value": "300 Pieces"
+          },
+          {
+                "key": "Country of Origin",
+                "value": "Bangladesh"
+          }
+    ],
+    features: ["100% Natural Biodegradable Golden Jute","Authentic Bangladeshi Hand-Braided Craftsmanship","Durable Reversible Heavy-Duty Construction","Natural Sound Dampening & Eco Living Aesthetic"]
+  },
+
+  // ==========================================
   // 2. Jute Bags (Authentic Catalogue Collection - 28 Products)
   // ==========================================
   {
