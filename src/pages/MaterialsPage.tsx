@@ -191,9 +191,7 @@ export const MaterialsPage: React.FC = () => {
         
         <div className="space-y-6 sm:space-y-8">
           {filteredMaterials.map((mat, idx) => {
-            const staggerClass = `stagger-${(idx % 8) + 1}`;
             const isExpanded = activeMaterial === mat.id;
-            const isEven = idx % 2 === 0;
             
             return (
               <div
@@ -206,10 +204,10 @@ export const MaterialsPage: React.FC = () => {
                   transition-all duration-500 ease-out overflow-hidden
                   ${isExpanded ? 'ring-2 ring-emerald-500/30 shadow-xl' : ''}
                 `}>
-                  <div className={`grid grid-cols-1 lg:grid-cols-12 items-stretch`}>
+                  <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
                     
-                    {/* Left: Raw Material Images Showcase (Enlarged) */}
-                    <div className={`lg:col-span-3 p-5 sm:p-6 bg-stone-50/80 flex flex-col justify-between border-b lg:border-b-0 ${isEven ? 'lg:border-r border-stone-200' : 'lg:border-l border-stone-200 lg:order-3'}`}>
+                    {/* Left: Raw Material Images Showcase (Always on Left for all cards) */}
+                    <div className="lg:col-span-3 p-5 sm:p-6 bg-stone-50/80 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-stone-200">
                       <div>
                         <div className="flex items-center gap-2 mb-3">
                           <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-emerald-950 text-amber-300 text-xs font-black shadow-md border border-amber-400/30 shrink-0">
@@ -244,8 +242,8 @@ export const MaterialsPage: React.FC = () => {
                       </p>
                     </div>
 
-                    {/* Center: Bold, High-Contrast Description & Info */}
-                    <div className={`lg:col-span-5 p-6 sm:p-7 flex flex-col justify-between ${isEven ? '' : 'lg:order-2'}`}>
+                    {/* Center: Bold, High-Contrast Description & Info (Middle) */}
+                    <div className="lg:col-span-5 p-6 sm:p-7 flex flex-col justify-between">
                       <div className="space-y-3.5">
                         <div className="border-b border-stone-200 pb-3">
                           <h3 className="text-2xl sm:text-3xl font-serif font-black text-stone-950 tracking-tight leading-tight">
@@ -306,8 +304,8 @@ export const MaterialsPage: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Right: Sample Products Showcase (Enlarged) */}
-                    <div className={`lg:col-span-4 p-5 sm:p-6 bg-gradient-to-br from-amber-50/90 via-stone-50 to-amber-50/60 flex flex-col justify-between border-t lg:border-t-0 ${isEven ? 'lg:border-l border-stone-200' : 'lg:border-r border-stone-200 lg:order-1'}`}>
+                    {/* Right: Sample Product images Showcase (Always on Right for all cards) */}
+                    <div className="lg:col-span-4 p-5 sm:p-6 bg-gradient-to-br from-amber-50/90 via-stone-50 to-amber-50/60 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-stone-200">
                       <div>
                         <div className="flex items-center gap-2 mb-3">
                           <div className="w-2 h-5 rounded-full bg-amber-600"></div>
