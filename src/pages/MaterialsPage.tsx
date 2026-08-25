@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, ChevronRight, Eye, X, Leaf, ArrowRight, Sparkles } from 'lucide-react';
 import { usePageTitle } from '../utils/usePageTitle';
+import { getDynamicCardAnimation } from '../utils/scrollReveal';
 
 export interface MaterialItem {
   id: string;
@@ -197,7 +198,7 @@ export const MaterialsPage: React.FC = () => {
             return (
               <div
                 key={mat.id}
-                className={`reveal-up ${staggerClass} group`}
+                className={`${getDynamicCardAnimation(idx)} group`}
               >
                 <div className={`
                   relative rounded-2xl border border-stone-200/80 bg-white 

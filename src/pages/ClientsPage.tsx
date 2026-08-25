@@ -1,6 +1,7 @@
 import React from 'react';
-import { Globe2, Ship, Award, Users, CheckCircle2, ShieldCheck, Sparkles, Building2, ExternalLink } from 'lucide-react';
+import { Globe2, Ship, Award, Users, Sparkles, Building2 } from 'lucide-react';
 import { usePageTitle } from '../utils/usePageTitle';
+import { getDynamicCardAnimation } from '../utils/scrollReveal';
 import { AnimatedCounter } from '../components/AnimatedCounter';
 
 interface ClientsPageProps {
@@ -131,35 +132,38 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
 
           {/* Client Logos Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-2">
-            {officialBuyers.map((buyer, idx) => (
-              <div
-                key={idx}
-                className="hover-lift group flex flex-col items-center justify-between rounded-2xl bg-stone-50/80 p-5 sm:p-6 border border-stone-200/90 hover:bg-white hover:border-amber-500 hover:shadow-lg transition-all duration-300 text-center"
-              >
-                {/* Logo Container */}
-                <div className="h-24 sm:h-28 w-full rounded-xl bg-white flex items-center justify-center p-4 overflow-hidden border border-stone-100 shadow-2xs group-hover:scale-105 transition-transform duration-300">
-                  <img
-                    src={buyer.logo}
-                    alt={buyer.name}
-                    className="max-h-full max-w-full object-contain filter drop-shadow-xs"
-                    loading="lazy"
-                  />
-                </div>
+            {officialBuyers.map((buyer, idx) => {
+              const cardAnim = getDynamicCardAnimation(idx);
+              return (
+                <div
+                  key={idx}
+                  className={`${cardAnim} hover-lift group flex flex-col items-center justify-between rounded-2xl bg-stone-50/80 p-5 sm:p-6 border border-stone-200/90 hover:bg-white hover:border-amber-500 hover:shadow-lg transition-all duration-300 text-center`}
+                >
+                  {/* Logo Container */}
+                  <div className="h-24 sm:h-28 w-full rounded-xl bg-white flex items-center justify-center p-4 overflow-hidden border border-stone-100 shadow-2xs group-hover:scale-105 transition-transform duration-300">
+                    <img
+                      src={buyer.logo}
+                      alt={buyer.name}
+                      className="max-h-full max-w-full object-contain filter drop-shadow-xs"
+                      loading="lazy"
+                    />
+                  </div>
 
-                {/* Buyer Name & Country */}
-                <div className="mt-3.5 space-y-0.5 w-full">
-                  <h3 className="font-serif text-sm sm:text-base font-extrabold text-stone-900 group-hover:text-[#14532d] transition-colors">
-                    {buyer.name}
-                  </h3>
-                  <p className="text-[11px] text-amber-800 font-bold flex items-center justify-center gap-1">
-                    <Globe2 className="h-3 w-3" /> {buyer.country}
-                  </p>
-                  <p className="text-[10px] text-stone-500 font-medium truncate pt-0.5">
-                    {buyer.category}
-                  </p>
+                  {/* Buyer Name & Country */}
+                  <div className="mt-3.5 space-y-0.5 w-full">
+                    <h3 className="font-serif text-sm sm:text-base font-extrabold text-stone-900 group-hover:text-[#14532d] transition-colors">
+                      {buyer.name}
+                    </h3>
+                    <p className="text-[11px] text-amber-800 font-bold flex items-center justify-center gap-1">
+                      <Globe2 className="h-3 w-3" /> {buyer.country}
+                    </p>
+                    <p className="text-[10px] text-stone-500 font-medium truncate pt-0.5">
+                      {buyer.category}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
         </div>
@@ -186,20 +190,22 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
 
           {/* Certificate Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 pt-2">
-            {certificateImages.map((cert, idx) => (
-              <div
-                key={idx}
-                className="hover-lift group rounded-2xl bg-stone-50/80 p-5 border border-stone-200/90 hover:bg-white hover:border-emerald-600 hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center"
-              >
-                {/* Certificate Image Frame */}
-                <div className="h-36 w-full rounded-xl bg-white border border-stone-200/70 flex items-center justify-center p-3 overflow-hidden shadow-2xs group-hover:scale-105 transition-transform duration-300">
-                  <img
-                    src={cert.image}
-                    alt={cert.title}
-                    className="max-h-full max-w-full object-contain filter drop-shadow-xs"
-                    loading="lazy"
-                  />
-                </div>
+            {certificateImages.map((cert, idx) => {
+              const cardAnim = getDynamicCardAnimation(idx);
+              return (
+                <div
+                  key={idx}
+                  className={`${cardAnim} hover-lift group rounded-2xl bg-stone-50/80 p-5 border border-stone-200/90 hover:bg-white hover:border-emerald-600 hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center`}
+                >
+                  {/* Certificate Image Frame */}
+                  <div className="h-36 w-full rounded-xl bg-white border border-stone-200/70 flex items-center justify-center p-3 overflow-hidden shadow-2xs group-hover:scale-105 transition-transform duration-300">
+                    <img
+                      src={cert.image}
+                      alt={cert.title}
+                      className="max-h-full max-w-full object-contain filter drop-shadow-xs"
+                      loading="lazy"
+                    />
+                  </div>
 
                 {/* Details */}
                 <div className="mt-4 space-y-1 w-full">
@@ -214,7 +220,8 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
                   </p>
                 </div>
               </div>
-            ))}
+            );
+          })}
           </div>
 
         </div>
