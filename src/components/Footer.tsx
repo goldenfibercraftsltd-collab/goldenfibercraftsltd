@@ -17,35 +17,22 @@ export const Footer: React.FC = () => {
           
           {/* Col 1: About / Branding (lg:col-span-4) */}
           <div className="lg:col-span-4 flex flex-col items-start space-y-3">
-            <Link to="/" onClick={scrollToTop} className="block group">
-              <div className="bg-white rounded-2xl p-4 shadow-xl border border-emerald-400/30 overflow-hidden hover:scale-105 transition-transform duration-300 w-56 flex flex-col items-center justify-center text-center">
-                {/* Official Green Leaf GF Emblem */}
-                <img
-                  src="/logo-icon.png"
-                  alt="Golden Fiber Crafts Ltd."
-                  className="h-16 w-auto object-contain"
-                />
-                
-                {/* Brand Typography */}
-                <div className="mt-2 text-center w-full">
-                  <h3 className="font-serif text-sm font-black text-[#14532d] tracking-wider uppercase leading-none">
-                    GOLDEN FIBER
-                  </h3>
-                  <div className="flex items-center justify-center gap-1.5 my-1">
-                    <span className="h-[1px] w-4 bg-[#14532d]/40"></span>
-                    <span className="text-[11px] font-sans font-black text-[#14532d] uppercase tracking-widest">
-                      CRAFTS LTD.
-                    </span>
-                    <span className="h-[1px] w-4 bg-[#14532d]/40"></span>
-                  </div>
-                </div>
-
-                {/* Tagline Directly Underneath */}
-                <div className="mt-1.5 pt-1.5 border-t border-stone-200 w-full">
-                  <p className="text-xs text-stone-800 font-serif italic text-center font-normal">
-                    "{TAGLINE}"
-                  </p>
-                </div>
+            <Link to="/" onClick={scrollToTop} className="flex items-center gap-3.5 group transition-transform duration-300 hover:scale-[1.02] pb-1">
+              {/* Official Green Leaf GF Emblem (Larger & Transparent) */}
+              <img
+                src="/logo-icon.png"
+                alt="Golden Fiber Crafts Ltd."
+                className="h-16 w-16 sm:h-20 sm:w-20 object-contain drop-shadow-md brightness-110 shrink-0"
+              />
+              
+              {/* Brand Typography (Crisp White & Golden Accent on Dark Green) */}
+              <div className="flex flex-col justify-center">
+                <span className="font-serif text-xl sm:text-2xl lg:text-[1.65rem] font-black text-white tracking-wide uppercase leading-tight drop-shadow-xs">
+                  GOLDEN FIBER
+                </span>
+                <span className="text-xs sm:text-sm font-sans font-black text-amber-400 tracking-[0.28em] uppercase mt-0.5 drop-shadow-xs">
+                  CRAFTS LTD.
+                </span>
               </div>
             </Link>
 
