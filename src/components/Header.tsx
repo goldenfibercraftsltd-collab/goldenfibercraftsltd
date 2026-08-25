@@ -122,7 +122,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               <img
                 src="/logo.png"
                 alt="Golden Fiber Crafts Ltd."
-                className="h-11 sm:h-13 md:h-[3.75rem] lg:h-[4.25rem] w-auto object-contain max-w-[220px] sm:max-w-[270px] md:max-w-[320px] select-none"
+                className="h-12 sm:h-14 md:h-[4.25rem] lg:h-[4.75rem] w-auto object-contain max-w-[240px] sm:max-w-[290px] md:max-w-[350px] select-none drop-shadow-xs"
               />
             </Link>
 
