@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, MessageSquare, Clock, Globe, CheckCircle2, ShieldCheck, Sparkles, Building2, User } from 'lucide-react';
+import { usePageTitle } from '../utils/usePageTitle';
 
 interface ContactPageProps {
   onOpenQuoteModal?: () => void;
 }
 
 export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuoteModal }) => {
+  usePageTitle('Contact Us & Inquiries');
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',

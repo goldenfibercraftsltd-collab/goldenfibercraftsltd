@@ -1,11 +1,13 @@
 import React from 'react';
 import { ScrollTypingText } from '../components/ScrollTypingText';
+import { usePageTitle } from '../utils/usePageTitle';
 
 interface ClientsPageProps {
   onOpenQuoteModal: () => void;
 }
 
 export const ClientsPage: React.FC<ClientsPageProps> = () => {
+  usePageTitle('Global Clients & Export Portfolio');
   // Authentic Client Logos Extracted Directly from GFCL Corporate Presentation
   const officialBuyers = [
     { name: 'Aarong', logo: '/clients/aarong.png' },

@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { CATEGORIES } from '../data/products';
 import { getAllActiveProducts, getAllActiveCategories } from '../utils/productStore';
 import { Package, Leaf, ShoppingBag, Sparkles, Trees, ArrowRight, Home } from 'lucide-react';
+import { usePageTitle } from '../utils/usePageTitle';
 
 interface CategoryPageProps {
   onOpenQuoteModal: () => void;
@@ -35,6 +36,8 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onOpenQuoteModal }) 
       p.categorySlug === category.id
     );
   }, [allProducts, category]);
+
+  usePageTitle(category?.name || 'Category');
 
   const getCategoryIcon = (iconName: string) => {
     switch (iconName) {

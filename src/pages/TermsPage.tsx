@@ -1,8 +1,11 @@
 import React from 'react';
 import { ShieldCheck, FileText, CheckCircle2, HelpCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { usePageTitle } from '../utils/usePageTitle';
 
 export const TermsPage: React.FC = () => {
+  usePageTitle('Terms & Conditions');
+
   return (
     <div className="bg-[#fcfbf9] min-h-screen py-8 sm:py-12 font-sans text-stone-800 animate-fadeIn">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 space-y-8">

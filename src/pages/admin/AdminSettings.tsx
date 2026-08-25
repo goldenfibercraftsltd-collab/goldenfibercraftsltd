@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { AdminLayout } from '../../components/admin/AdminLayout';
 import { Save, CheckCircle2, Phone, Mail, MapPin, Tag, Cloud, MessageSquare } from 'lucide-react';
+import { usePageTitle } from '../../utils/usePageTitle';
 
 export const AdminSettings: React.FC = () => {
+  usePageTitle('Site Settings - Admin');
   const [saving, setSaving] = useState(false);
   const [success, setSuccess] = useState(false);
 

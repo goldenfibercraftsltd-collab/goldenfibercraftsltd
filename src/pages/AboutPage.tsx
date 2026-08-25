@@ -19,12 +19,15 @@ import {
 import { AnimatedCounter } from '../components/AnimatedCounter';
 import { WhyChooseUsHub } from '../components/WhyChooseUsHub';
 import { TAGLINE, KEY_LEADERSHIP, TECHNICAL_INFORMATION } from '../data/products';
+import { usePageTitle } from '../utils/usePageTitle';
 
 interface AboutPageProps {
   onOpenQuoteModal?: () => void;
 }
 
 export const AboutPage: React.FC<AboutPageProps> = () => {
+  usePageTitle('About Us');
+
   return (
     <div className="bg-[#fcfbf9] min-h-screen pb-12 font-sans text-stone-900 animate-fadeIn space-y-6 sm:space-y-8">
       

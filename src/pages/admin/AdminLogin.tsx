@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Sparkles, Lock, Mail, ArrowRight, ShieldCheck } from 'lucide-react';
+import { usePageTitle } from '../../utils/usePageTitle';
 
 export const AdminLogin: React.FC = () => {
+  usePageTitle('Admin Login');
   const [email, setEmail] = useState('info@goldenfibercraftsltd.com');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);

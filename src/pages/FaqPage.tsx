@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { HelpCircle, ChevronDown, MessageSquare, ArrowRight, ShieldCheck, Leaf, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { usePageTitle } from '../utils/usePageTitle';
 
 interface FAQItem {
   question: string;
@@ -52,6 +53,7 @@ const FAQS: FAQItem[] = [
 ];
 
 export const FaqPage: React.FC = () => {
+  usePageTitle('Frequently Asked Questions');
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const [activeCategory, setActiveCategory] = useState<string>('All');
 

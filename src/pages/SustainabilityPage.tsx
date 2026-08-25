@@ -18,6 +18,7 @@ import {
   TreePine,
   Droplets
 } from 'lucide-react';
+import { usePageTitle } from '../utils/usePageTitle';
 
 interface SustainabilitySection {
   id: string;
@@ -120,6 +121,7 @@ const SUSTAINABILITY_SECTIONS: SustainabilitySection[] = [
 ];
 
 export const SustainabilityPage: React.FC = () => {
+  usePageTitle('Sustainability & Eco-Impact');
   const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 

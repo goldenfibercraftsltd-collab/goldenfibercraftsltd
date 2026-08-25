@@ -15,6 +15,7 @@ import {
   HeartHandshake,
   Sparkles
 } from 'lucide-react';
+import { usePageTitle } from '../utils/usePageTitle';
 
 interface QualitySection {
   id: string;
@@ -117,6 +118,7 @@ const QUALITY_SECTIONS: QualitySection[] = [
 ];
 
 export const QualityControlPage: React.FC = () => {
+  usePageTitle('Quality Control & Standards');
   const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 

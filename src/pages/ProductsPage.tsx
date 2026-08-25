@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { PRODUCTS, CATEGORIES, ProductItem } from '../data/products';
 import { getAllActiveProducts } from '../utils/productStore';
+import { usePageTitle } from '../utils/usePageTitle';
 
 const CATEGORY_BANNER_IMAGES: Record<string, string> = {
   'jute': '/products/gfc_jfm_001.jpg',
@@ -44,6 +45,10 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
   const [selectedSubCategory, setSelectedSubCategory] = useState<string>(subCategoryParam);
   const [searchQuery, setSearchQuery] = useState<string>(searchParam);
   const [allProducts, setAllProducts] = useState<ProductItem[]>(PRODUCTS);
+
+  const activeCategoryObj = CATEGORIES.find(c => c.slug === selectedCategory || c.id === selectedCategory);
+  const titleCategory = activeCategoryObj ? activeCategoryObj.name : (selectedCategory !== 'all' ? selectedCategory.replace(/-/g, ' ') : '');
+  usePageTitle(titleCategory ? `${titleCategory} Catalog` : 'Our Products');
 
   useEffect(() => {
     // 1. Instant load from local active store

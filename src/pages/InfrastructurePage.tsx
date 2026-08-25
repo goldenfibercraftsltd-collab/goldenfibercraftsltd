@@ -18,6 +18,7 @@ import {
   Truck
 } from 'lucide-react';
 import { ScrollTypingText } from '../components/ScrollTypingText';
+import { usePageTitle } from '../utils/usePageTitle';
 
 interface InfrastructurePageProps {
   onSelectProduct?: (product: any) => void;
@@ -359,6 +360,7 @@ const CRAFT_SECTIONS: CraftSection[] = [
 export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
   onOpenQuoteModal,
 }) => {
+  usePageTitle('Manufacturing Infrastructure & Facilities');
   const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, ChevronRight, Eye, X, Leaf, ArrowRight, Sparkles } from 'lucide-react';
+import { usePageTitle } from '../utils/usePageTitle';
 
 export interface MaterialItem {
   id: string;
@@ -127,6 +128,7 @@ export const RAW_MATERIALS: MaterialItem[] = [
 ];
 
 export const MaterialsPage: React.FC = () => {
+  usePageTitle('Raw Materials & Natural Fibers');
   const [searchQuery, setSearchQuery] = useState('');
   const [previewImage, setPreviewImage] = useState<{ src: string; title: string } | null>(null);
   const [activeMaterial, setActiveMaterial] = useState<string | null>(null);
