@@ -126,19 +126,19 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               />
             </Link>
 
-            {/* Desktop Search Bar with Golden Search Button & Official Tagline (Centered) */}
-            <div className="hidden md:flex flex-col items-center flex-1 max-w-xl lg:max-w-2xl mx-auto gap-1 px-2">
+            {/* Desktop Search Bar with Golden Search Button & Official Tagline (Centered & 20% More Compact) */}
+            <div className="hidden md:flex flex-col items-center flex-1 max-w-[430px] lg:max-w-[490px] mx-auto gap-1 px-2">
               <form onSubmit={handleSearchSubmit} className="flex w-full rounded-md border-2 border-amber-500 overflow-hidden shadow-xs">
                 <input
                   type="text"
-                  placeholder="Search Entire Here (e.g. GFC-SB-030, Planter, Bag)..."
+                  placeholder="Search products (e.g. GFC-SB-030, Planters)..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-4 py-2 text-sm text-stone-800 focus:outline-none placeholder-stone-400 font-medium bg-white"
+                  className="w-full px-3 py-1.5 text-xs sm:text-[13px] text-stone-800 focus:outline-none placeholder-stone-400 font-medium bg-white"
                 />
                 <button
                   type="submit"
-                  className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-stone-950 px-4 sm:px-5 py-2 text-xs sm:text-sm font-black uppercase tracking-wider transition-all duration-200 shrink-0 flex items-center justify-center gap-1.5 cursor-pointer shadow-inner"
+                  className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-stone-950 px-3 sm:px-3.5 py-1.5 text-xs font-black uppercase tracking-wider transition-all duration-200 shrink-0 flex items-center justify-center gap-1.5 cursor-pointer shadow-inner"
                 >
                   <Search className="h-3.5 w-3.5 text-stone-950 stroke-[2.5]" />
                   <span className="font-extrabold text-stone-950">Search</span>
@@ -146,9 +146,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               </form>
 
               {/* Official Company Tagline directly centered under search bar */}
-              <div className="flex items-center justify-center gap-1.5 text-xs font-serif italic text-stone-700 tracking-wide text-center">
-                <Sparkles className="h-3.5 w-3.5 text-amber-600 shrink-0" />
-                <span className="font-bold text-[#14532d] text-xs sm:text-sm font-serif italic">"{TAGLINE}"</span>
+              <div className="flex items-center justify-center gap-1.5 text-[11px] sm:text-xs font-serif italic text-stone-700 tracking-wide text-center">
+                <Sparkles className="h-3 w-3 text-amber-600 shrink-0" />
+                <span className="font-bold text-[#14532d] font-serif italic">"{TAGLINE}"</span>
               </div>
             </div>
 
