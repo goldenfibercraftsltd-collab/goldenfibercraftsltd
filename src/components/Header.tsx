@@ -127,18 +127,18 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
             </Link>
 
             {/* Desktop Search Bar with Golden Search Button & Official Tagline (Centered & 20% More Compact) */}
-            <div className="hidden md:flex flex-col items-center flex-1 max-w-[430px] lg:max-w-[490px] mx-auto gap-1 px-2">
+            <div className="hidden md:flex flex-col items-center flex-1 max-w-[460px] lg:max-w-[530px] mx-auto gap-1 px-2">
               <form onSubmit={handleSearchSubmit} className="flex w-full rounded-md border-2 border-amber-500 overflow-hidden shadow-xs">
                 <input
                   type="text"
                   placeholder="Search products (e.g. GFC-SB-030, Planters)..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-3 py-1.5 text-xs sm:text-[13px] text-stone-800 focus:outline-none placeholder-stone-400 font-medium bg-white"
+                  className="w-full px-3.5 py-1.5 text-xs sm:text-[13px] text-stone-800 focus:outline-none placeholder-stone-400 font-medium bg-white"
                 />
                 <button
                   type="submit"
-                  className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-stone-950 px-3 sm:px-3.5 py-1.5 text-xs font-black uppercase tracking-wider transition-all duration-200 shrink-0 flex items-center justify-center gap-1.5 cursor-pointer shadow-inner"
+                  className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-stone-950 px-6 sm:px-8 py-1.5 text-xs font-black uppercase tracking-wider transition-all duration-200 shrink-0 flex items-center justify-center gap-2 cursor-pointer shadow-inner min-w-[95px] sm:min-w-[110px]"
                 >
                   <Search className="h-3.5 w-3.5 text-stone-950 stroke-[2.5]" />
                   <span className="font-extrabold text-stone-950">Search</span>
@@ -306,7 +306,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
         <div className="lg:hidden bg-stone-900 text-white px-4 pb-6 pt-3 shadow-2xl animate-fadeIn border-t border-stone-800 max-h-[85vh] overflow-y-auto">
           
           {/* Quick Contact Bar in Mobile Drawer */}
-          <div className="flex items-center justify-around py-3 px-4 bg-stone-900 rounded-xl mb-4 text-xs font-semibold">
+          <div className="flex items-center justify-around py-3 px-4 bg-stone-900 rounded-xl mb-3 text-xs font-semibold">
             <a
               href="https://wa.me/8801916183583"
               target="_blank"
@@ -325,6 +325,24 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               <span>Direct Call</span>
             </a>
           </div>
+
+          {/* Mobile Search Bar */}
+          <form onSubmit={handleSearchSubmit} className="flex w-full rounded-md border-2 border-amber-500 overflow-hidden shadow-xs mb-4">
+            <input
+              type="text"
+              placeholder="Search products (e.g. Baskets, Mats)..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full px-3.5 py-2 text-xs text-stone-800 focus:outline-none placeholder-stone-400 font-medium bg-white"
+            />
+            <button
+              type="submit"
+              className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:from-amber-600 text-stone-950 px-6 py-2 text-xs font-black uppercase tracking-wider shrink-0 flex items-center justify-center gap-1.5 cursor-pointer min-w-[85px]"
+            >
+              <Search className="h-3.5 w-3.5 text-stone-950 stroke-[2.5]" />
+              <span className="font-extrabold text-stone-950">Search</span>
+            </button>
+          </form>
 
           {/* Product By Category in Mobile Drawer */}
           <div className="mb-4 bg-[#14532d] rounded-xl overflow-hidden border border-amber-500/50 shadow-md">
