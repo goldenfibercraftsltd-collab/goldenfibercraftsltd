@@ -81,8 +81,8 @@ export const KEY_LEADERSHIP = {
 
 export const TECHNICAL_INFORMATION = {
   officeStaff: "30",
-  artisans: "Approximate 10,000 (Directly & Indirectly)",
-  productionCapacityMonth: "40X40' HQ Containers",
+  artisans: "Approximate 15,000 (Directly & Indirectly)",
+  productionCapacityMonth: "50X40' HQ Containers",
   productionLeadTime: "70-90 days",
   paymentTerms: "LC at sight or TT (30% Advance & 70% against copy of Shipping documents)",
   annualTurnover: "5 million USD"

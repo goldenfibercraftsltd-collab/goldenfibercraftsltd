@@ -33,9 +33,9 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
 
   const exportStats = [
     { label: 'Export Destinations', target: 20, suffix: '+ Countries', icon: Globe2 },
-    { label: 'Monthly Container Capacity', target: 40, suffix: ' HQ Containers', icon: Ship },
+    { label: 'Monthly Container Capacity', target: 50, suffix: ' HQ Containers', icon: Ship },
     { label: 'Annual Export Turnover', target: 5, suffix: ' Million USD', icon: Award },
-    { label: 'Artisan Community', target: 10000, suffix: '+ Artisans', icon: Users },
+    { label: 'Artisan Community', target: 15000, suffix: '+ Artisans', icon: Users },
   ];
 
   return (
@@ -70,7 +70,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
                 <Sparkles className="h-3 w-3 text-amber-300" /> 20+ Export Countries
               </span>
               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
-                40 HQ Containers / Month
+                50 HQ Containers / Month
               </span>
               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
                 BSCI & ISO Audited

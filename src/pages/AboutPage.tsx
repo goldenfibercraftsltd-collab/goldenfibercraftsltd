@@ -115,7 +115,7 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
                 <span className="inline-block px-2.5 py-0.5 rounded-full bg-emerald-500/30 text-emerald-300 text-xs font-black uppercase tracking-widest border border-emerald-400/40">
                   Empowerment & Heritage Craft
                 </span>
-                <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">Over 10,000+ Skilled Artisans Workforce</h3>
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">Over 15,000+ Skilled Artisans Workforce</h3>
                 <p className="text-sm text-stone-100 font-medium leading-relaxed">
                   Decentralized rural artisan clusters across Bangladesh creating authentic woven handicrafts.
                 </p>
@@ -392,13 +392,13 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
           <div className="rounded-2xl bg-white p-6 shadow-sm border border-stone-200">
             <p className="font-serif text-3xl sm:text-4xl font-black text-emerald-800">
-              <AnimatedCounter target={10} suffix="K+" />
+              <AnimatedCounter target={15} suffix="K+" />
             </p>
             <p className="mt-1 text-xs text-stone-800 font-black uppercase tracking-wider">Skilled Artisans</p>
           </div>
           <div className="rounded-2xl bg-white p-6 shadow-sm border border-stone-200">
             <p className="font-serif text-3xl sm:text-4xl font-black text-emerald-800">
-              <AnimatedCounter target={40} suffix=" HQ" />
+              <AnimatedCounter target={50} suffix=" HQ" />
             </p>
             <p className="mt-1 text-xs text-stone-800 font-black uppercase tracking-wider">Monthly Containers</p>
           </div>
