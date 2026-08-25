@@ -109,20 +109,20 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
 
       {/* 1. Main Header Row: Prominent Official Logo, Centered Search Bar with Tagline, Quick Actions */}
       <header className="relative z-30 w-full bg-white font-sans border-b border-stone-200/60 shadow-2xs">
-        <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 py-1.5 sm:py-2">
+        <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 py-0.5 sm:py-1">
           <div className="flex items-center justify-between gap-3 sm:gap-6 lg:gap-8">
             
-            {/* Official Company Logo (Clean, Crisp, Large & Unclipped) */}
+            {/* Official Company Logo (Clean, Crisp, Large & Unclipped - Zero Extra Top/Bottom Gap) */}
             <Link
               to="/"
               onClick={handleNavClick}
-              className="shrink-0 flex items-center transition-transform duration-300 hover:scale-[1.02] py-0"
+              className="shrink-0 flex items-center transition-transform duration-300 hover:scale-[1.02] py-0 my-0"
               title="Golden Fiber Crafts Ltd. - Home"
             >
               <img
                 src="/logo.png"
                 alt="Golden Fiber Crafts Ltd."
-                className="h-12 sm:h-14 md:h-[4.25rem] lg:h-[4.75rem] w-auto object-contain max-w-[240px] sm:max-w-[290px] md:max-w-[350px] select-none drop-shadow-xs"
+                className="h-14 sm:h-16 md:h-[4.75rem] lg:h-[5.5rem] w-auto object-contain max-w-[280px] sm:max-w-[340px] md:max-w-[420px] select-none drop-shadow-xs"
               />
             </Link>
 
