@@ -166,22 +166,6 @@ export const WhyChooseUsHub: React.FC = () => {
           );
         })}
       </div>
-
-      {/* Value Ribbon footer */}
-      <div className="rounded-2xl bg-gradient-to-r from-emerald-950 via-stone-900 to-emerald-950 p-4 sm:p-5 text-white flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-        <div className="space-y-0.5">
-          <p className="text-xs font-bold text-amber-300 uppercase tracking-wider">
-            Building Long-Term Global Partnerships
-          </p>
-          <p className="text-xs text-stone-300 font-light">
-            With a focus on excellence and continuous improvement, we create a positive impact on people and the planet.
-          </p>
-        </div>
-        <div className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-4 py-2 rounded-xl transition-all shadow-md shrink-0">
-          <span>Explore Catalog</span>
-          <ArrowRight className="h-3.5 w-3.5" />
-        </div>
-      </div>
     </div>
   );
 };
