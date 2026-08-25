@@ -126,29 +126,29 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               />
             </Link>
 
-            {/* Desktop Search Bar with Golden Search Button & Official Tagline (Centered & 20% More Compact) */}
-            <div className="hidden md:flex flex-col items-center flex-1 max-w-[460px] lg:max-w-[530px] mx-auto gap-1 px-2">
+            {/* Desktop Search Bar with Wider Golden Search Button & Larger Official Tagline */}
+            <div className="hidden md:flex flex-col items-center flex-1 max-w-[520px] lg:max-w-[620px] mx-auto gap-1.5 px-2">
               <form onSubmit={handleSearchSubmit} className="flex w-full rounded-md border-2 border-amber-500 overflow-hidden shadow-xs">
                 <input
                   type="text"
                   placeholder="Search products (e.g. GFC-SB-030, Planters)..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-3.5 py-1.5 text-xs sm:text-[13px] text-stone-800 focus:outline-none placeholder-stone-400 font-medium bg-white"
+                  className="w-full px-4 py-1.5 text-xs sm:text-[13px] text-stone-800 focus:outline-none placeholder-stone-400 font-medium bg-white"
                 />
                 <button
                   type="submit"
-                  className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-stone-950 px-6 sm:px-8 py-1.5 text-xs font-black uppercase tracking-wider transition-all duration-200 shrink-0 flex items-center justify-center gap-2 cursor-pointer shadow-inner min-w-[95px] sm:min-w-[110px]"
+                  className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-stone-950 px-8 sm:px-11 py-1.5 text-xs sm:text-[13px] font-black uppercase tracking-wider transition-all duration-200 shrink-0 flex items-center justify-center gap-2 cursor-pointer shadow-inner min-w-[125px] sm:min-w-[145px]"
                 >
-                  <Search className="h-3.5 w-3.5 text-stone-950 stroke-[2.5]" />
+                  <Search className="h-4 w-4 text-stone-950 stroke-[2.5]" />
                   <span className="font-extrabold text-stone-950">Search</span>
                 </button>
               </form>
 
-              {/* Official Company Tagline directly centered under search bar */}
-              <div className="flex items-center justify-center gap-1.5 text-[11px] sm:text-xs font-serif italic text-stone-700 tracking-wide text-center">
-                <Sparkles className="h-3 w-3 text-amber-600 shrink-0" />
-                <span className="font-bold text-[#14532d] font-serif italic">"{TAGLINE}"</span>
+              {/* Official Company Tagline (Enlarged & Prominent) */}
+              <div className="flex items-center justify-center gap-2 text-xs sm:text-sm md:text-[14px] font-serif italic text-stone-700 tracking-wide text-center pt-0.5">
+                <Sparkles className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-amber-600 shrink-0" />
+                <span className="font-black text-[#14532d] font-serif italic">"{TAGLINE}"</span>
               </div>
             </div>
 
