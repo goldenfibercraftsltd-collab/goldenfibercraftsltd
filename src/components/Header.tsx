@@ -127,21 +127,21 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
             </Link>
 
             {/* Desktop Search Bar with Wider Golden Search Button & Larger Official Tagline */}
-            <div className="hidden md:flex flex-col items-center flex-1 max-w-[520px] lg:max-w-[620px] mx-auto gap-1.5 px-2">
-              <form onSubmit={handleSearchSubmit} className="flex w-full rounded-md border-2 border-amber-500 overflow-hidden shadow-xs">
+            <div className="hidden md:flex flex-col items-center flex-1 max-w-[540px] lg:max-w-[650px] mx-auto gap-1.5 px-2">
+              <form onSubmit={handleSearchSubmit} className="flex w-full rounded-lg border-2 border-amber-500 overflow-hidden shadow-xs focus-within:ring-2 focus-within:ring-amber-400/40 transition-all">
                 <input
                   type="text"
                   placeholder="Search products (e.g. GFC-SB-030, Planters)..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-4 py-1.5 text-xs sm:text-[13px] text-stone-800 focus:outline-none placeholder-stone-400 font-medium bg-white"
+                  className="w-full px-4 sm:px-5 py-2.5 sm:py-3 text-sm sm:text-[14px] text-stone-800 focus:outline-none placeholder-stone-400 font-medium bg-white"
                 />
                 <button
                   type="submit"
-                  className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-stone-950 px-8 sm:px-11 py-1.5 text-xs sm:text-[13px] font-black uppercase tracking-wider transition-all duration-200 shrink-0 flex items-center justify-center gap-2 cursor-pointer shadow-inner min-w-[125px] sm:min-w-[145px]"
+                  className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-stone-950 px-8 sm:px-11 py-2.5 sm:py-3 text-xs sm:text-sm font-black uppercase tracking-wider transition-all duration-200 shrink-0 flex items-center justify-center gap-2 cursor-pointer shadow-inner min-w-[130px] sm:min-w-[150px]"
                 >
-                  <Search className="h-4 w-4 text-stone-950 stroke-[2.5]" />
-                  <span className="font-extrabold text-stone-950">Search</span>
+                  <Search className="h-4 sm:h-4.5 w-4 sm:w-4.5 text-stone-950 stroke-[2.5]" />
+                  <span className="font-extrabold text-stone-950 tracking-wider">Search</span>
                 </button>
               </form>
 
@@ -327,17 +327,17 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
           </div>
 
           {/* Mobile Search Bar */}
-          <form onSubmit={handleSearchSubmit} className="flex w-full rounded-md border-2 border-amber-500 overflow-hidden shadow-xs mb-4">
+          <form onSubmit={handleSearchSubmit} className="flex w-full rounded-lg border-2 border-amber-500 overflow-hidden shadow-xs mb-4">
             <input
               type="text"
               placeholder="Search products (e.g. Baskets, Mats)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-3.5 py-2 text-xs text-stone-800 focus:outline-none placeholder-stone-400 font-medium bg-white"
+              className="w-full px-3.5 py-2.5 text-xs sm:text-sm text-stone-800 focus:outline-none placeholder-stone-400 font-medium bg-white"
             />
             <button
               type="submit"
-              className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:from-amber-600 text-stone-950 px-6 py-2 text-xs font-black uppercase tracking-wider shrink-0 flex items-center justify-center gap-1.5 cursor-pointer min-w-[85px]"
+              className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-700 hover:from-amber-600 text-stone-950 px-5 sm:px-6 py-2.5 text-xs font-black uppercase tracking-wider shrink-0 flex items-center justify-center gap-1.5 cursor-pointer min-w-[85px]"
             >
               <Search className="h-3.5 w-3.5 text-stone-950 stroke-[2.5]" />
               <span className="font-extrabold text-stone-950">Search</span>
