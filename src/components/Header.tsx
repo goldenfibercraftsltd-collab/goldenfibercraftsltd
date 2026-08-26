@@ -163,48 +163,39 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
 
             {/* Action Controls: Animated Multi-Client Email, WhatsApp & Request Quote */}
             <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
-              {/* Rotating Official Email Client Button: 1s Gmail -> 1s Outlook -> 1s Yahoo Mail */}
+              {/* Rotating Official Email Client Button: 1s Gmail (Red) -> 1s Outlook (Blue) -> 1s Yahoo (Purple) */}
               <a
                 href="mailto:info@goldenfibercraftsltd.com?subject=Export%20Inquiry%20-%20Golden%20Fiber%20Crafts%20Ltd&body=Dear%20Golden%20Fiber%20Crafts%20Team,%0D%0A%0D%0AI%20am%20interested%20in%20your%20handicraft%20products."
-                title={`Email Us: info@goldenfibercraftsltd.com (${emailClientIndex === 0 ? 'Gmail' : emailClientIndex === 1 ? 'Outlook' : 'Yahoo Mail'})`}
-                className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-white hover:bg-stone-50 border border-stone-200/90 hover:border-amber-400 text-stone-800 shadow-sm hover:shadow transition-all duration-200 hover:scale-105 relative overflow-hidden group cursor-pointer"
+                title={
+                  emailClientIndex === 0
+                    ? 'Email via Gmail (info@goldenfibercraftsltd.com)'
+                    : emailClientIndex === 1
+                    ? 'Email via Microsoft Outlook (info@goldenfibercraftsltd.com)'
+                    : 'Email via Yahoo Mail (info@goldenfibercraftsltd.com)'
+                }
+                className={`flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full text-white shadow-sm hover:shadow transition-all duration-300 hover:scale-105 cursor-pointer ${
+                  emailClientIndex === 0
+                    ? 'bg-[#EA4335] hover:bg-[#d93025]'
+                    : emailClientIndex === 1
+                    ? 'bg-[#0078D4] hover:bg-[#006cbd]'
+                    : 'bg-[#6001D2] hover:bg-[#5200b3]'
+                }`}
               >
-                <div className="relative flex items-center justify-center h-full w-full">
-                  {emailClientIndex === 0 && (
-                    <div className="transition-all duration-200 transform scale-100 opacity-100 flex items-center justify-center" title="Gmail">
-                      {/* Gmail Official Multi-Color Icon */}
-                      <svg viewBox="0 0 48 48" className="h-5 w-5 sm:h-5.5 sm:w-5.5">
-                        <path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"/>
-                        <path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"/>
-                        <polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17"/>
-                        <path fill="#c62828" d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C8.132,7.553,5.647,8.403,5.034,10.495L3,12.298z"/>
-                        <path fill="#fbc02d" d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341c1.744-1.306,4.229-0.456,4.842,1.636L45,12.298z"/>
-                      </svg>
-                    </div>
-                  )}
-                  {emailClientIndex === 1 && (
-                    <div className="transition-all duration-200 transform scale-100 opacity-100 flex items-center justify-center" title="Microsoft Outlook">
-                      {/* Outlook Official Icon */}
-                      <svg viewBox="0 0 48 48" className="h-5 w-5 sm:h-5.5 sm:w-5.5">
-                        <path fill="#0288d1" d="M41,40H17c-1.657,0-3-1.343-3-3V11c0-1.657,1.343-3,3-3h24c1.657,0,3,1.343,3,3v26C44,38.657,42.657,40,41,40z"/>
-                        <path fill="#29b6f6" d="M41,8H17c-1.657,0-3,1.343-3,3v1l15,10l15-10v-1C44,9.343,42.657,8,41,8z"/>
-                        <path fill="#01579b" d="M29,22L14,12v25c0,1.657,1.343,3,3,3h3L29,22z"/>
-                        <path fill="#0277bd" d="M29,22l9,18h3c1.657,0,3-1.343,3-3V12L29,22z"/>
-                        <rect width="18" height="18" x="5" y="15" fill="#0288d1" rx="3"/>
-                        <path fill="#fff" d="M14,30.5c-3.584,0-6.5-2.916-6.5-6.5s2.916-6.5,6.5-6.5s6.5,2.916,6.5,6.5S17.584,30.5,14,30.5z M14,20.5c-1.93,0-3.5,1.57-3.5,3.5s1.57,3.5,3.5,3.5s3.5-1.57,3.5-3.5S15.93,20.5,14,20.5z"/>
-                      </svg>
-                    </div>
-                  )}
-                  {emailClientIndex === 2 && (
-                    <div className="transition-all duration-200 transform scale-100 opacity-100 flex items-center justify-center" title="Yahoo! Mail">
-                      {/* Yahoo Mail Official Icon */}
-                      <svg viewBox="0 0 48 48" className="h-5 w-5 sm:h-5.5 sm:w-5.5">
-                        <rect width="44" height="44" x="2" y="2" fill="#6001d2" rx="10"/>
-                        <path fill="#fff" d="M13 14l6.5 11v8.5h5V25l6.5-11h-4.8l-4.2 8-4.2-8H13zm20 15a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm-2-15h4v7.5h-4V14z"/>
-                      </svg>
-                    </div>
-                  )}
-                </div>
+                {emailClientIndex === 0 && (
+                  <svg className="h-5 w-5 sm:h-5.5 sm:w-5.5 fill-current" viewBox="0 0 24 24" title="Gmail">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                  </svg>
+                )}
+                {emailClientIndex === 1 && (
+                  <svg className="h-5 w-5 sm:h-5.5 sm:w-5.5 fill-current" viewBox="0 0 24 24" title="Outlook">
+                    <path d="M22 6c0-.55-.45-1-1-1H11l6 4.5L22 6zm-11 5.5L4 6h-.5C2.67 6 2 6.67 2 7.5v9C2 17.33 2.67 18 3.5 18H11v-6.5zM12 18h9.5c.83 0 1.5-.67 1.5-1.5V8.5L16 13l-4 5zm-4.5-9C6.12 9 5 10.12 5 11.5S6.12 14 7.5 14 10 12.88 10 11.5 8.88 9 7.5 9zm0 3.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                  </svg>
+                )}
+                {emailClientIndex === 2 && (
+                  <svg className="h-5 w-5 sm:h-5.5 sm:w-5.5 fill-current" viewBox="0 0 24 24" title="Yahoo Mail">
+                    <path d="M2.5 4l5.5 9.5V20h3.5v-6.5L17 4h-3.8l-3.5 6.8L6.2 4H2.5zm16 11.5a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6zm-1.5-11.5h3.2v6h-3.2V4z" />
+                  </svg>
+                )}
               </a>
 
               {/* WhatsApp Direct Chat */}
