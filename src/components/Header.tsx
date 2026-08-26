@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import {
   Menu, X, Search, ChevronDown, ChevronRight,
@@ -55,6 +55,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
   const [activeCategoryHover, setActiveCategoryHover] = useState<string | null>(CATEGORIES[0]?.id || 'jute');
   const [mobileCategoryOpen, setMobileCategoryOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [emailClientIndex, setEmailClientIndex] = useState(0);
+
+  // Cycle email client icons every 1 second: 0 = Gmail, 1 = Outlook, 2 = Yahoo
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setEmailClientIndex((prev) => (prev + 1) % 3);
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -152,8 +161,52 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               </div>
             </div>
 
-            {/* Action Controls: WhatsApp & Request Quote */}
-            <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
+            {/* Action Controls: Animated Multi-Client Email, WhatsApp & Request Quote */}
+            <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
+              {/* Rotating Official Email Client Button: 1s Gmail -> 1s Outlook -> 1s Yahoo Mail */}
+              <a
+                href="mailto:info@goldenfibercraftsltd.com?subject=Export%20Inquiry%20-%20Golden%20Fiber%20Crafts%20Ltd&body=Dear%20Golden%20Fiber%20Crafts%20Team,%0D%0A%0D%0AI%20am%20interested%20in%20your%20handicraft%20products."
+                title={`Email Us: info@goldenfibercraftsltd.com (${emailClientIndex === 0 ? 'Gmail' : emailClientIndex === 1 ? 'Outlook' : 'Yahoo Mail'})`}
+                className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-white hover:bg-stone-50 border border-stone-200/90 hover:border-amber-400 text-stone-800 shadow-sm hover:shadow transition-all duration-200 hover:scale-105 relative overflow-hidden group cursor-pointer"
+              >
+                <div className="relative flex items-center justify-center h-full w-full">
+                  {emailClientIndex === 0 && (
+                    <div className="transition-all duration-200 transform scale-100 opacity-100 flex items-center justify-center" title="Gmail">
+                      {/* Gmail Official Multi-Color Icon */}
+                      <svg viewBox="0 0 48 48" className="h-5 w-5 sm:h-5.5 sm:w-5.5">
+                        <path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"/>
+                        <path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"/>
+                        <polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17"/>
+                        <path fill="#c62828" d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C8.132,7.553,5.647,8.403,5.034,10.495L3,12.298z"/>
+                        <path fill="#fbc02d" d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341c1.744-1.306,4.229-0.456,4.842,1.636L45,12.298z"/>
+                      </svg>
+                    </div>
+                  )}
+                  {emailClientIndex === 1 && (
+                    <div className="transition-all duration-200 transform scale-100 opacity-100 flex items-center justify-center" title="Microsoft Outlook">
+                      {/* Outlook Official Icon */}
+                      <svg viewBox="0 0 48 48" className="h-5 w-5 sm:h-5.5 sm:w-5.5">
+                        <path fill="#0288d1" d="M41,40H17c-1.657,0-3-1.343-3-3V11c0-1.657,1.343-3,3-3h24c1.657,0,3,1.343,3,3v26C44,38.657,42.657,40,41,40z"/>
+                        <path fill="#29b6f6" d="M41,8H17c-1.657,0-3,1.343-3,3v1l15,10l15-10v-1C44,9.343,42.657,8,41,8z"/>
+                        <path fill="#01579b" d="M29,22L14,12v25c0,1.657,1.343,3,3,3h3L29,22z"/>
+                        <path fill="#0277bd" d="M29,22l9,18h3c1.657,0,3-1.343,3-3V12L29,22z"/>
+                        <rect width="18" height="18" x="5" y="15" fill="#0288d1" rx="3"/>
+                        <path fill="#fff" d="M14,30.5c-3.584,0-6.5-2.916-6.5-6.5s2.916-6.5,6.5-6.5s6.5,2.916,6.5,6.5S17.584,30.5,14,30.5z M14,20.5c-1.93,0-3.5,1.57-3.5,3.5s1.57,3.5,3.5,3.5s3.5-1.57,3.5-3.5S15.93,20.5,14,20.5z"/>
+                      </svg>
+                    </div>
+                  )}
+                  {emailClientIndex === 2 && (
+                    <div className="transition-all duration-200 transform scale-100 opacity-100 flex items-center justify-center" title="Yahoo! Mail">
+                      {/* Yahoo Mail Official Icon */}
+                      <svg viewBox="0 0 48 48" className="h-5 w-5 sm:h-5.5 sm:w-5.5">
+                        <rect width="44" height="44" x="2" y="2" fill="#6001d2" rx="10"/>
+                        <path fill="#fff" d="M13 14l6.5 11v8.5h5V25l6.5-11h-4.8l-4.2 8-4.2-8H13zm20 15a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm-2-15h4v7.5h-4V14z"/>
+                      </svg>
+                    </div>
+                  )}
+                </div>
+              </a>
+
               {/* WhatsApp Direct Chat */}
               <a
                 href="https://wa.me/8801916183583?text=Hi%20Golden%20Fiber%20Crafts%20Ltd.,%20I%20would%20like%20to%20know%20more%20about%20your%20handicraft%20products%20and%20export%20details."
@@ -306,7 +359,19 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
         <div className="lg:hidden bg-stone-900 text-white px-4 pb-6 pt-3 shadow-2xl animate-fadeIn border-t border-stone-800 max-h-[85vh] overflow-y-auto">
           
           {/* Quick Contact Bar in Mobile Drawer */}
-          <div className="flex items-center justify-around py-3 px-4 bg-stone-900 rounded-xl mb-3 text-xs font-semibold">
+          <div className="flex items-center justify-around py-3 px-3 bg-stone-900 rounded-xl mb-3 text-xs font-semibold">
+            <a
+              href="mailto:info@goldenfibercraftsltd.com"
+              className="flex items-center gap-1.5 text-amber-400 hover:text-amber-300"
+            >
+              <div className="h-4 w-4 flex items-center justify-center">
+                {emailClientIndex === 0 && <span className="text-[11px] font-black text-red-400">M</span>}
+                {emailClientIndex === 1 && <span className="text-[11px] font-black text-blue-400">O</span>}
+                {emailClientIndex === 2 && <span className="text-[11px] font-black text-purple-400">Y!</span>}
+              </div>
+              <span>{emailClientIndex === 0 ? 'Gmail' : emailClientIndex === 1 ? 'Outlook' : 'Yahoo'} Email</span>
+            </a>
+            <span className="text-stone-700">|</span>
             <a
               href="https://wa.me/8801916183583"
               target="_blank"
@@ -314,12 +379,12 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               className="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300"
             >
               <MessageCircle className="h-4 w-4" />
-              <span>WhatsApp Chat</span>
+              <span>WhatsApp</span>
             </a>
-            <span className="text-stone-600">|</span>
+            <span className="text-stone-700">|</span>
             <a
               href="tel:+8801916183583"
-              className="flex items-center gap-1.5 text-amber-300 hover:text-amber-200"
+              className="flex items-center gap-1.5 text-stone-300 hover:text-white"
             >
               <Phone className="h-4 w-4" />
               <span>Direct Call</span>
