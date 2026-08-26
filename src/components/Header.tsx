@@ -182,17 +182,17 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
                 }`}
               >
                 {emailClientIndex === 0 && (
-                  <svg className="h-5 w-5 sm:h-5.5 sm:w-5.5 fill-current" viewBox="0 0 24 24" title="Gmail">
+                  <svg className="h-5 w-5 sm:h-5.5 sm:w-5.5 fill-current" viewBox="0 0 24 24">
                     <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                   </svg>
                 )}
                 {emailClientIndex === 1 && (
-                  <svg className="h-5 w-5 sm:h-5.5 sm:w-5.5 fill-current" viewBox="0 0 24 24" title="Outlook">
+                  <svg className="h-5 w-5 sm:h-5.5 sm:w-5.5 fill-current" viewBox="0 0 24 24">
                     <path d="M22 6c0-.55-.45-1-1-1H11l6 4.5L22 6zm-11 5.5L4 6h-.5C2.67 6 2 6.67 2 7.5v9C2 17.33 2.67 18 3.5 18H11v-6.5zM12 18h9.5c.83 0 1.5-.67 1.5-1.5V8.5L16 13l-4 5zm-4.5-9C6.12 9 5 10.12 5 11.5S6.12 14 7.5 14 10 12.88 10 11.5 8.88 9 7.5 9zm0 3.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
                   </svg>
                 )}
                 {emailClientIndex === 2 && (
-                  <svg className="h-5 w-5 sm:h-5.5 sm:w-5.5 fill-current" viewBox="0 0 24 24" title="Yahoo Mail">
+                  <svg className="h-5 w-5 sm:h-5.5 sm:w-5.5 fill-current" viewBox="0 0 24 24">
                     <path d="M2.5 4l5.5 9.5V20h3.5v-6.5L17 4h-3.8l-3.5 6.8L6.2 4H2.5zm16 11.5a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6zm-1.5-11.5h3.2v6h-3.2V4z" />
                   </svg>
                 )}
