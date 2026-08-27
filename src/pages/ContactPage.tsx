@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, MessageSquare, Clock, Globe, CheckCircle2, ShieldCheck, Sparkles, Building2, User } from 'lucide-react';
+import { GmailOfficialIcon, OutlookOfficialIcon, YahooOfficialIcon } from '../components/OfficialEmailIcons';
 import { usePageTitle } from '../utils/usePageTitle';
 
 interface ContactPageProps {
@@ -172,7 +173,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuoteModal }) =>
                   <div className="h-10 w-10 rounded-xl bg-blue-100 text-blue-950 flex items-center justify-center shrink-0 shadow-xs font-bold">
                     <Mail className="h-5 w-5" />
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h4 className="font-black text-stone-950 text-xs uppercase tracking-wider">Official Email Desk</h4>
                     <div className="space-y-0.5 mt-0.5">
                       <a href="mailto:shafiq@goldenfibercraftsltd.com" className="block text-xs sm:text-sm text-emerald-800 font-black hover:underline">
@@ -180,6 +181,37 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuoteModal }) =>
                       </a>
                       <a href="mailto:info@goldenfibercraftsltd.com" className="block text-xs sm:text-sm text-stone-700 font-bold hover:underline">
                         info@goldenfibercraftsltd.com
+                      </a>
+                    </div>
+                    {/* Official Quick Webmail Launchers */}
+                    <div className="flex items-center gap-2 mt-2 pt-2 border-t border-stone-200/60">
+                      <span className="text-[11px] font-bold text-stone-500">Quick Compose:</span>
+                      <a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=info@goldenfibercraftsltd.com&su=Export%20Inquiry%20-%20Golden%20Fiber%20Crafts%20Ltd"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Compose via Gmail"
+                        className="flex h-7 w-7 items-center justify-center rounded-lg bg-white border border-stone-200 hover:border-red-400 p-1 shadow-2xs hover:scale-110 transition-transform"
+                      >
+                        <GmailOfficialIcon className="h-full w-full" />
+                      </a>
+                      <a
+                        href="https://outlook.live.com/mail/0/deeplink/compose?to=info@goldenfibercraftsltd.com&subject=Export%20Inquiry%20-%20Golden%20Fiber%20Crafts%20Ltd"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Compose via Microsoft Outlook"
+                        className="flex h-7 w-7 items-center justify-center rounded-lg bg-white border border-stone-200 hover:border-blue-400 p-1 shadow-2xs hover:scale-110 transition-transform"
+                      >
+                        <OutlookOfficialIcon className="h-full w-full" />
+                      </a>
+                      <a
+                        href="https://compose.mail.yahoo.com/?to=info@goldenfibercraftsltd.com&subject=Export%20Inquiry%20-%20Golden%20Fiber%20Crafts%20Ltd"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Compose via Yahoo Mail"
+                        className="flex h-7 w-7 items-center justify-center rounded-lg bg-white border border-stone-200 hover:border-purple-400 p-1 shadow-2xs hover:scale-110 transition-transform"
+                      >
+                        <YahooOfficialIcon className="h-full w-full" />
                       </a>
                     </div>
                   </div>

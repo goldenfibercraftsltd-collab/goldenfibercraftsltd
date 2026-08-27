@@ -29,7 +29,7 @@ const CATEGORY_BANNER_IMAGES: Record<string, string> = {
 };
 
 interface ProductsPageProps {
-  onOpenQuoteModal: (productCode?: string) => void;
+  onOpenQuoteModal: (productCodeOrData?: string | any) => void;
 }
 
 export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) => {
@@ -480,7 +480,15 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
                     </button>
 
                     <button
-                      onClick={() => onOpenQuoteModal(product.code || product.id)}
+                      onClick={() =>
+                        onOpenQuoteModal({
+                          productCode: product.code || product.id,
+                          productName: product.name,
+                          quantity: product.setPerCarton || 1,
+                          cartons: 1,
+                          cbm: product.cbmPerCarton || 0.074,
+                        })
+                      }
                       className="flex items-center gap-1.5 rounded-xl bg-gradient-to-r from-[#0088FF] to-[#0070df] hover:from-[#0070df] hover:to-[#0058b8] text-white px-3.5 py-2 text-xs font-black shadow-xs hover:shadow-md transition-all active:scale-95 cursor-pointer"
                     >
                       <MessageSquare className="h-3.5 w-3.5" />

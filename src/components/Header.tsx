@@ -8,6 +8,8 @@ import {
 } from 'lucide-react';
 import { CATEGORIES, TAGLINE } from '../data/products';
 import { TopBar } from './TopBar';
+import { EmailClientButton } from './EmailClientButton';
+import { GmailOfficialIcon, OutlookOfficialIcon, YahooOfficialIcon } from './OfficialEmailIcons';
 
 const getCategoryIcon = (catId: string) => {
   switch (catId) {
@@ -161,42 +163,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               </div>
             </div>
 
-            {/* Action Controls: Animated Multi-Client Email, WhatsApp & Request Quote */}
+            {/* Action Controls: Animated Multi-Client Official Email (Gmail, Outlook, Yahoo), WhatsApp & Request Quote */}
             <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
-              {/* Rotating Official Email Client Button: 1s Gmail (Red) -> 1s Outlook (Blue) -> 1s Yahoo (Purple) */}
-              <a
-                href="mailto:info@goldenfibercraftsltd.com?subject=Export%20Inquiry%20-%20Golden%20Fiber%20Crafts%20Ltd&body=Dear%20Golden%20Fiber%20Crafts%20Team,%0D%0A%0D%0AI%20am%20interested%20in%20your%20handicraft%20products."
-                title={
-                  emailClientIndex === 0
-                    ? 'Email via Gmail (info@goldenfibercraftsltd.com)'
-                    : emailClientIndex === 1
-                    ? 'Email via Microsoft Outlook (info@goldenfibercraftsltd.com)'
-                    : 'Email via Yahoo Mail (info@goldenfibercraftsltd.com)'
-                }
-                className={`flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full text-white shadow-sm hover:shadow transition-all duration-300 hover:scale-105 cursor-pointer ${
-                  emailClientIndex === 0
-                    ? 'bg-[#EA4335] hover:bg-[#d93025]'
-                    : emailClientIndex === 1
-                    ? 'bg-[#0078D4] hover:bg-[#006cbd]'
-                    : 'bg-[#6001D2] hover:bg-[#5200b3]'
-                }`}
-              >
-                {emailClientIndex === 0 && (
-                  <svg className="h-5 w-5 sm:h-5.5 sm:w-5.5 fill-current" viewBox="0 0 24 24">
-                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                  </svg>
-                )}
-                {emailClientIndex === 1 && (
-                  <svg className="h-5 w-5 sm:h-5.5 sm:w-5.5 fill-current" viewBox="0 0 24 24">
-                    <path d="M22 6c0-.55-.45-1-1-1H11l6 4.5L22 6zm-11 5.5L4 6h-.5C2.67 6 2 6.67 2 7.5v9C2 17.33 2.67 18 3.5 18H11v-6.5zM12 18h9.5c.83 0 1.5-.67 1.5-1.5V8.5L16 13l-4 5zm-4.5-9C6.12 9 5 10.12 5 11.5S6.12 14 7.5 14 10 12.88 10 11.5 8.88 9 7.5 9zm0 3.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
-                  </svg>
-                )}
-                {emailClientIndex === 2 && (
-                  <svg className="h-5 w-5 sm:h-5.5 sm:w-5.5 fill-current" viewBox="0 0 24 24">
-                    <path d="M2.5 4l5.5 9.5V20h3.5v-6.5L17 4h-3.8l-3.5 6.8L6.2 4H2.5zm16 11.5a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6zm-1.5-11.5h3.2v6h-3.2V4z" />
-                  </svg>
-                )}
-              </a>
+              {/* Official Email Client Switcher (100% Real Official Gmail, Outlook & Yahoo Logos) */}
+              <EmailClientButton />
 
               {/* WhatsApp Direct Chat */}
               <a
@@ -352,15 +322,23 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
           {/* Quick Contact Bar in Mobile Drawer */}
           <div className="flex items-center justify-around py-3 px-3 bg-stone-900 rounded-xl mb-3 text-xs font-semibold">
             <a
-              href="mailto:info@goldenfibercraftsltd.com"
-              className="flex items-center gap-1.5 text-amber-400 hover:text-amber-300"
+              href={
+                emailClientIndex === 0
+                  ? 'https://mail.google.com/mail/?view=cm&fs=1&to=info@goldenfibercraftsltd.com&su=Export%20Inquiry%20-%20Golden%20Fiber%20Crafts%20Ltd'
+                  : emailClientIndex === 1
+                  ? 'https://outlook.live.com/mail/0/deeplink/compose?to=info@goldenfibercraftsltd.com&subject=Export%20Inquiry%20-%20Golden%20Fiber%20Crafts%20Ltd'
+                  : 'https://compose.mail.yahoo.com/?to=info@goldenfibercraftsltd.com&subject=Export%20Inquiry%20-%20Golden%20Fiber%20Crafts%20Ltd'
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-amber-300 hover:text-amber-200"
             >
-              <div className="h-4 w-4 flex items-center justify-center">
-                {emailClientIndex === 0 && <span className="text-[11px] font-black text-red-400">M</span>}
-                {emailClientIndex === 1 && <span className="text-[11px] font-black text-blue-400">O</span>}
-                {emailClientIndex === 2 && <span className="text-[11px] font-black text-purple-400">Y!</span>}
+              <div className="h-5 w-5 rounded-full bg-white flex items-center justify-center p-0.5 shadow-xs shrink-0">
+                {emailClientIndex === 0 && <GmailOfficialIcon className="h-4 w-4" />}
+                {emailClientIndex === 1 && <OutlookOfficialIcon className="h-4 w-4" />}
+                {emailClientIndex === 2 && <YahooOfficialIcon className="h-4 w-4" />}
               </div>
-              <span>{emailClientIndex === 0 ? 'Gmail' : emailClientIndex === 1 ? 'Outlook' : 'Yahoo'} Email</span>
+              <span className="font-bold">{emailClientIndex === 0 ? 'Gmail' : emailClientIndex === 1 ? 'Outlook' : 'Yahoo'} Compose</span>
             </a>
             <span className="text-stone-700">|</span>
             <a
