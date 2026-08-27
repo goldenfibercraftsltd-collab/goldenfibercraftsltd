@@ -7617,7 +7617,319 @@ export const PRODUCTS: ProductItem[] = [
     features: ['Boho Luxury Dining', 'Rattan Frame Reinforcement', 'Natural Color Contrast', 'Handmade Artisan Finish']
   },
 
-  // 6. Rugs & Floor Coverings
+  // 6. Rugs & Floor Coverings (Catalogue Collection)
+  {
+  "id": "BDR-25",
+  "slug": "geometric-diamond-flatweave-rug-bdr-25",
+  "code": "BDR-25",
+  "name": "Geometric Diamond Flatweave Rug",
+  "category": "rugs",
+  "categoryName": "Rugs",
+  "categorySlug": "rugs",
+  "subCategory": "jute-rugs",
+  "image": "/products/bdr_25.png",
+  "galleryImages": [
+    "/products/bdr_25.png"
+  ],
+  "description": "Handcrafted geometric diamond motif flatweave floor rug in rich teal cyan and charcoal tones with braided side fringe tassels.",
+  "longDescription": {
+    "overview": "The Geometric Diamond Flatweave Rug (Art No: BDR-25) is an artisanal handloom woven area rug blending upcycled Jhuta cotton and natural fiber. Designed for living spaces, bedrooms, and contemporary boutique interiors.",
+    "craftsmanship": "Hand-woven on traditional Bangladeshi wooden pit looms using durable Jhuta and cotton yarns, creating an intricate geometric diamond flatweave pattern with reinforced knotted fringed edges.",
+    "exportDetails": "Rolled and packed in moisture-proof export polythene sleeves, 10 to 20 pcs per master export carton or bale.",
+    "careInstructions": "Shake out regularly or vacuum on low suction without a beater bar. Spot clean with damp cloth and mild eco-detergent."
+  },
+  "unit": "Single Piece",
+  "material": "Jhuta & Cotton",
+  "color": "Teal Cyan & Dark Charcoal",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "BDR-25"
+    },
+    {
+      "key": "Material",
+      "value": "Jhuta & Cotton"
+    },
+    {
+      "key": "Weave",
+      "value": "Flatweave Handloom"
+    },
+    {
+      "key": "MOQ",
+      "value": "100 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "100% Handloom Woven",
+    "Intricate Diamond Trellis",
+    "Eco-Friendly Jhuta Cotton",
+    "Reversible & Long-Lasting"
+  ]
+},
+  {
+  "id": "BDR-76",
+  "slug": "multi-color-striped-chindi-rug-bdr-76",
+  "code": "BDR-76",
+  "name": "Multi-Color Striped Chindi Rug",
+  "category": "rugs",
+  "categoryName": "Rugs",
+  "categorySlug": "rugs",
+  "subCategory": "jute-rugs",
+  "image": "/products/bdr_76.png",
+  "galleryImages": [
+    "/products/bdr_76.png"
+  ],
+  "description": "Vibrant multi-colored striped rag rug crafted from upcycled Jhuta and cotton fibers with soft natural fringed borders.",
+  "longDescription": {
+    "overview": "The Multi-Color Striped Chindi Rug (Art No: BDR-76) combines lively pastel stripes of pink, turquoise, coral, and slate grey. Perfect for nursery rooms, entryways, and modern eclectic home decor.",
+    "craftsmanship": "Skillfully hand-woven using repurposed soft Jhuta cotton strips on manual handlooms by rural artisan weavers.",
+    "exportDetails": "Folded or rolled compactly for international ocean freight, standard export bale or carton packaging.",
+    "careInstructions": "Gentle vacuuming or hand wash in cold water with mild detergent. Air dry flat in shade."
+  },
+  "unit": "Single Piece",
+  "material": "Jhuta & Cotton",
+  "color": "Multicolor Pastel Stripes",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "BDR-76"
+    },
+    {
+      "key": "Material",
+      "value": "Jhuta & Cotton"
+    },
+    {
+      "key": "Style",
+      "value": "Striped Chindi Flatweave"
+    },
+    {
+      "key": "MOQ",
+      "value": "100 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Upcycled Cotton Rag Weave",
+    "Cheerful Multi-Stripe Aesthetic",
+    "Soft & Cozy Underfoot",
+    "Zero-Waste Sustainable Decor"
+  ]
+},
+  {
+  "id": "BDR-75",
+  "slug": "trellis-diamond-colorblock-rug-bdr-75",
+  "code": "BDR-75",
+  "name": "Trellis Diamond Colorblock Rug",
+  "category": "rugs",
+  "categoryName": "Rugs",
+  "categorySlug": "rugs",
+  "subCategory": "jute-rugs",
+  "image": "/products/bdr_75.png",
+  "galleryImages": [
+    "/products/bdr_75.png"
+  ],
+  "description": "Banded colorblock geometric rug featuring yellow ochre and muted teal bands with all-over white trellis diamond motifs.",
+  "longDescription": {
+    "overview": "The Trellis Diamond Colorblock Rug (Art No: BDR-75) showcases Scandinavian-boho geometry with balanced three-band colorblocking in mustard ochre and slate teal.",
+    "craftsmanship": "Densely flat-woven with premium combed cotton and Jhuta yarns, offering crisp geometric definition and enduring structure.",
+    "exportDetails": "Individually labeled with barcode hangtags and packed in export-compliant polybags and heavy cartons.",
+    "careInstructions": "Vacuum regularly. Spot clean spills immediately. Professional dry clean recommended for large area rugs."
+  },
+  "unit": "Single Piece",
+  "material": "Cotton & Jhuta",
+  "color": "Mustard Ochre & Slate Teal",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "BDR-75"
+    },
+    {
+      "key": "Material",
+      "value": "Cotton & Jhuta"
+    },
+    {
+      "key": "Pattern",
+      "value": "Colorblock Diamond Trellis"
+    },
+    {
+      "key": "MOQ",
+      "value": "100 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Modern Colorblock Panels",
+    "High-Definition Diamond Trellis",
+    "Heavyweight Flatweave",
+    "Sustainable Natural Yarns"
+  ]
+},
+  {
+  "id": "BDR-73",
+  "slug": "modern-gradient-staggered-stripe-rug-bdr-73",
+  "code": "BDR-73",
+  "name": "Modern Gradient Staggered Stripe Rug",
+  "category": "rugs",
+  "categoryName": "Rugs",
+  "categorySlug": "rugs",
+  "subCategory": "jute-rugs",
+  "image": "/products/bdr_73.png",
+  "galleryImages": [
+    "/products/bdr_73.png"
+  ],
+  "description": "Contemporary architectural rug featuring a vertical staggered barcode gradient transition from ivory white to deep navy charcoal.",
+  "longDescription": {
+    "overview": "The Modern Gradient Staggered Stripe Rug (Art No: BDR-73) delivers a dramatic modern visual with rhythmic vertical stripe transitions from bright cream to midnight charcoal.",
+    "craftsmanship": "Precision hand-loomed with tight cotton and Jhuta yarn tension, finished with soft off-white braided end tassels.",
+    "exportDetails": "Rolled on cardboard cores and sealed in heavy protective poly wraps for export shipping.",
+    "careInstructions": "Vacuum using low suction floor tool. Rotate periodically for even wear."
+  },
+  "unit": "Single Piece",
+  "material": "Cotton & Jhuta",
+  "color": "Ivory Cream & Deep Midnight Charcoal",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "BDR-73"
+    },
+    {
+      "key": "Material",
+      "value": "Cotton & Jhuta"
+    },
+    {
+      "key": "Design",
+      "value": "Staggered Gradient Stripe"
+    },
+    {
+      "key": "MOQ",
+      "value": "100 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Striking Two-Tone Gradient",
+    "Architectural Minimalist Aesthetic",
+    "Premium Cotton & Jhuta Blend",
+    "Braided End Fringe"
+  ]
+},
+  {
+  "id": "BDR-74",
+  "slug": "monochrome-pinstripe-woven-rug-bdr-74",
+  "code": "BDR-74",
+  "name": "Monochrome Pinstripe Woven Rug",
+  "category": "rugs",
+  "categoryName": "Rugs",
+  "categorySlug": "rugs",
+  "subCategory": "jute-rugs",
+  "image": "/products/bdr_74.png",
+  "galleryImages": [
+    "/products/bdr_74.png"
+  ],
+  "description": "Classic black and white pinstripe handwoven rug made from 100% recycled cotton yarn with natural knotted fringe.",
+  "longDescription": {
+    "overview": "The Monochrome Pinstripe Woven Rug (Art No: BDR-74) offers a timeless farmhouse and Nordic striped texture, handcrafted from recycled eco-cotton.",
+    "craftsmanship": "Woven on traditional shuttle handlooms using 100% recycled cotton fiber yarns, providing natural softness and exceptional durability.",
+    "exportDetails": "Packed 15-25 pcs per standard export master carton or compressed bale.",
+    "careInstructions": "Machine wash cold gentle cycle or shake out. Lay flat to dry."
+  },
+  "unit": "Single Piece",
+  "material": "Recycled Cotton",
+  "color": "Monochrome Black & Ivory White",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "BDR-74"
+    },
+    {
+      "key": "Material",
+      "value": "Recycled Cotton"
+    },
+    {
+      "key": "Pattern",
+      "value": "Vertical Pinstripe"
+    },
+    {
+      "key": "MOQ",
+      "value": "100 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "100% Recycled Cotton",
+    "Timeless Pinstripe Motif",
+    "Machine Washable & Reversible",
+    "Soft Natural Braided Tassels"
+  ]
+},
+  {
+  "id": "BDR-72",
+  "slug": "solid-indigo-navy-handloom-rug-bdr-72",
+  "code": "BDR-72",
+  "name": "Solid Indigo Navy Handloom Rug with White Fringe",
+  "category": "rugs",
+  "categoryName": "Rugs",
+  "categorySlug": "rugs",
+  "subCategory": "jute-rugs",
+  "image": "/products/bdr_72.png",
+  "galleryImages": [
+    "/products/bdr_72.png"
+  ],
+  "description": "Deep indigo navy textured flatweave handloom rug with contrasting crisp white fringed side borders.",
+  "longDescription": {
+    "overview": "The Solid Indigo Navy Handloom Rug (Art No: BDR-72) features rich speckled dark indigo blue weave with crisp white fringe borders, offering a clean coastal and modern minimalist aesthetic.",
+    "craftsmanship": "Woven on sturdy handlooms using high-tensile cotton and Jhuta blended yarn for superior shape retention and floor grip.",
+    "exportDetails": "Master export carton containing 15-20 rugs, individually poly-wrapped with international shipping marks.",
+    "careInstructions": "Vacuum regularly. Spot clean with cold water. Avoid direct prolonged sunlight to maintain deep indigo hue."
+  },
+  "unit": "Single Piece",
+  "material": "Cotton & Jhuta",
+  "color": "Deep Indigo Navy with White Fringe",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "BDR-72"
+    },
+    {
+      "key": "Material",
+      "value": "Cotton & Jhuta"
+    },
+    {
+      "key": "Style",
+      "value": "Solid Handloom Weave"
+    },
+    {
+      "key": "MOQ",
+      "value": "100 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Deep Rich Indigo Dye",
+    "Contrasting White Fringe Ends",
+    "Durable Dense Weave",
+    "Eco-Friendly Jhuta Cotton Blend"
+  ]
+},
   {
     id: 'GFC-FM-017',
     slug: 'floor-mat-rugs-gfc-fm-017',
