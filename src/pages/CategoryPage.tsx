@@ -87,41 +87,42 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onOpenQuoteModal }) 
           </div>
         </div>
 
-        {/* Product Cards Grid - 5 Cards Per Row on Desktop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 animate-fadeIn">
+        {/* Product Cards Grid - 2 per row on mobile, 5 per row on desktop */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-5 animate-fadeIn">
           {categoryProducts.map((product) => {
             return (
               <div
                 key={product.id}
                 onClick={() => navigate(`/products/${product.slug}`)}
-                className="hover-lift group cursor-pointer flex flex-col justify-between rounded-2xl bg-white p-4 shadow-sm border border-stone-200 hover:shadow-xl hover:border-emerald-500 transition-all duration-300 animate-fadeIn"
+                className="hover-lift group cursor-pointer flex flex-col justify-between rounded-2xl bg-white p-2.5 sm:p-4 shadow-sm border border-stone-200 hover:shadow-xl hover:border-emerald-500 transition-all duration-300 animate-fadeIn"
               >
                 <div>
-                  {/* Product Photo Container */}
-                  <div className="relative h-56 w-full overflow-hidden rounded-xl bg-stone-100 flex items-center justify-center p-3 img-zoom-container">
+                  {/* Product Photo Container - Edge to Edge Auto Fit */}
+                  <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-stone-100 cursor-pointer border border-stone-200/60 img-zoom-container">
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="max-h-full max-w-full object-contain transition-transform duration-500"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-108"
+                      loading="lazy"
                     />
-                    <span className="absolute top-2.5 right-2.5 bg-stone-900/90 text-white text-xs font-bold px-2 py-0.5 rounded-md backdrop-blur-md">
-                      {product.id}
+                    <span className="absolute top-2 right-2 bg-stone-900/90 text-white text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-md backdrop-blur-md">
+                      {product.code || product.id}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h3 className="mt-4 font-serif text-sm font-extrabold text-black group-hover:text-emerald-700 transition-colors line-clamp-2">
+                  <h3 className="mt-2.5 sm:mt-4 font-serif text-xs sm:text-sm font-extrabold text-stone-900 group-hover:text-emerald-700 transition-colors line-clamp-1">
                     {product.name}
                   </h3>
-                  <p className="mt-1 text-xs text-stone-900 font-medium line-clamp-2">
+                  <p className="mt-1 text-[11px] sm:text-xs text-stone-600 font-medium line-clamp-2 leading-relaxed">
                     {product.description}
                   </p>
                 </div>
 
                 {/* View Details Link */}
-                <div className="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-xs font-bold text-emerald-700 group-hover:text-emerald-800">
+                <div className="mt-3 sm:mt-4 pt-2.5 sm:pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] sm:text-xs font-bold text-emerald-700 group-hover:text-emerald-800">
                   <span>View details</span>
-                  <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="h-3.5 w-3.5 transform group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             );

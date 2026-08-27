@@ -425,58 +425,58 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
           )}
         </div>
 
-        {/* Product Cards Grid - 5 Cards Per Row on Desktop */}
+        {/* Product Cards Grid - 2 per row on mobile, 5 per row on desktop */}
         {filteredProducts.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-5">
             {filteredProducts.map((product) => {
               return (
                 <div
                   key={product.id}
-                  className="group flex flex-col justify-between rounded-2xl bg-white p-4 shadow-sm border border-stone-200/80 hover:shadow-xl hover:border-emerald-500/60 transition-all duration-300"
+                  className="group flex flex-col justify-between rounded-2xl bg-white p-2.5 sm:p-4 shadow-sm border border-stone-200/80 hover:shadow-xl hover:border-emerald-500/60 transition-all duration-300"
                 >
                   <div>
-                    {/* Photo Container */}
+                    {/* Photo Container - Edge-to-Edge Auto Fit (Zero Blank Spaces) */}
                     <div
                       onClick={() => navigate(`/products/${product.slug}`)}
-                      className="relative aspect-square w-full overflow-hidden rounded-xl bg-stone-50 flex items-center justify-center p-3 cursor-pointer border border-stone-100 img-zoom-container group-hover:bg-amber-50/20 transition-colors"
+                      className="relative aspect-square w-full overflow-hidden rounded-xl bg-stone-100 cursor-pointer border border-stone-200/60 img-zoom-container group-hover:border-emerald-500/60 transition-colors"
                     >
                       <img
                         src={product.image}
                         alt={product.name}
-                        className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-108"
                         loading="lazy"
                       />
                       {/* Item Code Badge */}
-                      <span className="absolute top-2.5 right-2.5 bg-gradient-to-r from-emerald-900 to-stone-900 text-white text-[11px] font-extrabold px-2.5 py-0.5 rounded-lg shadow-md border border-white/10">
+                      <span className="absolute top-2 right-2 bg-stone-900/90 text-white text-[10px] sm:text-[11px] font-extrabold px-2 sm:px-2.5 py-0.5 rounded-md shadow-md border border-white/10 backdrop-blur-xs">
                         {product.code || product.id}
                       </span>
                     </div>
 
                     {/* Product Details */}
-                    <div className="mt-3.5 space-y-1">
-                      <span className="inline-block px-2 py-0.5 rounded-md bg-emerald-50 text-[10px] font-black text-emerald-800 uppercase tracking-wider border border-emerald-100">
+                    <div className="mt-2.5 sm:mt-3.5 space-y-1">
+                      <span className="inline-block px-1.5 sm:px-2 py-0.5 rounded-md bg-emerald-50 text-[9px] sm:text-[10px] font-black text-emerald-800 uppercase tracking-wider border border-emerald-100">
                         {product.categoryName || product.category}
                       </span>
                       <h3
                         onClick={() => navigate(`/products/${product.slug}`)}
-                        className="font-serif text-sm font-black text-stone-900 group-hover:text-emerald-700 transition-colors line-clamp-1 cursor-pointer pt-0.5"
+                        className="font-serif text-xs sm:text-sm font-black text-stone-900 group-hover:text-emerald-700 transition-colors line-clamp-1 cursor-pointer pt-0.5"
                       >
                         {product.name}
                       </h3>
-                      <p className="text-xs text-stone-600 font-medium line-clamp-2 leading-relaxed">
+                      <p className="text-[11px] sm:text-xs text-stone-600 font-medium line-clamp-2 leading-relaxed">
                         {product.description}
                       </p>
                     </div>
                   </div>
 
                   {/* Card Footer: Details Link + Request Quote Button */}
-                  <div className="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between gap-2">
+                  <div className="mt-3 sm:mt-4 pt-2.5 sm:pt-3 border-t border-stone-100 flex items-center justify-between gap-1.5">
                     <button
                       onClick={() => navigate(`/products/${product.slug}`)}
-                      className="text-xs font-extrabold text-stone-700 hover:text-emerald-700 flex items-center gap-1 transition-colors cursor-pointer group/btn"
+                      className="text-[11px] sm:text-xs font-extrabold text-stone-700 hover:text-emerald-700 flex items-center gap-1 transition-colors cursor-pointer group/btn"
                     >
                       <span>Details</span>
-                      <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover/btn:translate-x-1" />
+                      <ArrowRight className="h-3 sm:h-3.5 w-3 sm:w-3.5 transition-transform duration-200 group-hover/btn:translate-x-1" />
                     </button>
 
                     <button
