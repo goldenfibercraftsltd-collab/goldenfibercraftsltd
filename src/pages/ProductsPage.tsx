@@ -11,7 +11,7 @@ import {
   Layers
 } from 'lucide-react';
 import { PRODUCTS, CATEGORIES, ProductItem } from '../data/products';
-import { getAllActiveProducts } from '../utils/productStore';
+import { getAllActiveProducts, fetchLiveProducts } from '../utils/productStore';
 import { usePageTitle } from '../utils/usePageTitle';
 
 const CATEGORY_BANNER_IMAGES: Record<string, string> = {
@@ -51,84 +51,24 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
   usePageTitle(titleCategory ? `${titleCategory} Catalog` : 'Our Products');
 
   useEffect(() => {
-    // 1. Instant load from local active store
+    // 1. Initial load from local active store
     const loaded = getAllActiveProducts();
     if (loaded && loaded.length > 0) {
       setAllProducts(loaded);
     }
 
     // 2. Fetch fresh real-time list from Cloudflare D1 database
-    fetch('/api/products?active_only=true')
-      .then(res => res.json())
-      .then(data => {
-        if (data && data.success && Array.isArray(data.products) && data.products.length > 0) {
-          const dbProducts = data.products.map((p: any) => {
-            const catMatch = CATEGORIES.find(c => String(c.id) === String(p.category_id) || c.slug === String(p.category_id));
-            const catId = catMatch ? catMatch.id : (p.category_id || 'jute');
-            const catSlug = catMatch ? catMatch.slug : 'jute';
-            const catName = catMatch ? catMatch.name : (p.category_name || 'Jute');
+    fetchLiveProducts().then(list => {
+      if (list && list.length > 0) setAllProducts(list);
+    });
 
-            const staticMatch = PRODUCTS.find(sp => sp.code === p.item_code || sp.id === p.item_code || sp.id === String(p.id));
-            let subCat = p.sub_category || p.subCategory || staticMatch?.subCategory;
-            if (!subCat) {
-              const nameLower = String(p.name || '').toLowerCase();
-              const codeLower = String(p.item_code || '').toLowerCase();
-              if (nameLower.includes('bag') || nameLower.includes('tote') || nameLower.includes('backpack') || codeLower.startsWith('bjb')) {
-                subCat = 'bags';
-              } else if (nameLower.includes('mat') || nameLower.includes('rug')) {
-                subCat = 'floor-mats';
-              } else if (nameLower.includes('placemat')) {
-                subCat = 'placemats';
-              } else if (nameLower.includes('pouf') || nameLower.includes('ottoman') || codeLower.startsWith('bjp')) {
-                subCat = 'poufs';
-              } else if (nameLower.includes('macrame') || nameLower.includes('hanger') || codeLower.startsWith('bjc') || codeLower.startsWith('bcc')) {
-                subCat = 'macrames';
-              } else {
-                subCat = 'baskets';
-              }
-            }
+    // 3. Listen for live updates
+    const handleUpdate = () => {
+      setAllProducts(getAllActiveProducts());
+    };
 
-            return {
-              id: String(p.item_code || p.id),
-              slug: staticMatch?.slug || String(p.item_code || p.id || '').toLowerCase().replace(/[^a-z0-9]+/g, '-'),
-              code: String(p.item_code || p.id),
-              name: String(p.name || ''),
-              category: catId,
-              categoryName: catName,
-              categorySlug: catSlug,
-              subCategory: subCat,
-              image: p.image_url || p.image || staticMatch?.image || '/favicon.svg',
-              galleryImages: typeof p.gallery_images === 'string' ? JSON.parse(p.gallery_images || '[]') : (p.gallery_images || staticMatch?.galleryImages || []),
-              description: p.description || staticMatch?.description || '',
-              longDescription: staticMatch?.longDescription || {
-                overview: p.description || '',
-                craftsmanship: 'Handcrafted by skilled traditional artisans in Bangladesh using sustainable natural fibers.',
-                exportDetails: 'Quality controlled, fumigated, and packed in 5-ply export master cartons.',
-                careInstructions: 'Keep in dry indoor area. Clean with soft damp cloth.',
-              },
-              specifications: staticMatch?.specifications || [
-                { key: 'Materials', value: p.material || 'Natural Fiber' },
-                { key: 'Specification', value: p.size || 'Custom Size' },
-                { key: 'MOQ', value: p.moq || '200 Sets' },
-              ],
-              features: staticMatch?.features || ['100% Eco-Friendly', 'Artisanal Handcraft', 'Export Standard'],
-              unit: p.unit || staticMatch?.unit || 'S/1',
-              setPerCarton: p.set_per_carton || staticMatch?.setPerCarton || 24,
-              cbmPerCarton: p.cbm_per_carton || staticMatch?.cbmPerCarton || 0.045,
-              nwPerCtn: p.nw_per_ctn || staticMatch?.nwPerCtn || 6.5,
-              gwPerCtn: p.gw_per_ctn || staticMatch?.gwPerCtn || 7.8,
-              material: p.material || staticMatch?.material || '100% Natural Jute',
-              color: p.color || 'Natural',
-            };
-          });
-
-          const mergedMap = new Map();
-          getAllActiveProducts().forEach((p: any) => mergedMap.set(p.id, p));
-          dbProducts.forEach((p: any) => mergedMap.set(p.id, p));
-          setAllProducts(Array.from(mergedMap.values()));
-        }
-      })
-      .catch(() => {});
+    window.addEventListener('gfcl_products_updated', handleUpdate);
+    return () => window.removeEventListener('gfcl_products_updated', handleUpdate);
   }, []);
 
   // Sync state with URL params

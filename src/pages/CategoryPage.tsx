@@ -1,7 +1,7 @@
-import React, { useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { CATEGORIES } from '../data/products';
-import { getAllActiveProducts, getAllActiveCategories } from '../utils/productStore';
+import { getAllActiveProducts, getAllActiveCategories, fetchLiveProducts } from '../utils/productStore';
 import { Package, Leaf, ShoppingBag, Sparkles, Trees, ArrowRight, Home } from 'lucide-react';
 import { usePageTitle } from '../utils/usePageTitle';
 
@@ -13,8 +13,28 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onOpenQuoteModal }) 
   const { categorySlug } = useParams<{ categorySlug: string }>();
   const navigate = useNavigate();
 
-  const allCategories = useMemo(() => getAllActiveCategories(), []);
-  const allProducts = useMemo(() => getAllActiveProducts(), []);
+  const [allCategories, setAllCategories] = useState(() => getAllActiveCategories());
+  const [allProducts, setAllProducts] = useState(() => getAllActiveProducts());
+
+  useEffect(() => {
+    fetchLiveProducts().then(list => {
+      if (list && list.length > 0) setAllProducts(list);
+    });
+
+    const handleProductUpdate = () => {
+      setAllProducts(getAllActiveProducts());
+    };
+    const handleCategoryUpdate = () => {
+      setAllCategories(getAllActiveCategories());
+    };
+
+    window.addEventListener('gfcl_products_updated', handleProductUpdate);
+    window.addEventListener('gfcl_categories_updated', handleCategoryUpdate);
+    return () => {
+      window.removeEventListener('gfcl_products_updated', handleProductUpdate);
+      window.removeEventListener('gfcl_categories_updated', handleCategoryUpdate);
+    };
+  }, []);
 
   // Find category by slug or ID with fallback
   const category = useMemo(() => {

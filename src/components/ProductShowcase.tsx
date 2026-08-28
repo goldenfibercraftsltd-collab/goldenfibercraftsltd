@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ProductItem } from '../data/products';
-import { getAllActiveProducts } from '../utils/productStore';
+import { getAllActiveProducts, fetchLiveProducts } from '../utils/productStore';
 import { ArrowRight } from 'lucide-react';
 import { ScrollTypingText } from './ScrollTypingText';
 
@@ -19,10 +19,30 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
-  const allActiveProducts = useMemo(() => {
+  const [productsList, setProductsList] = useState<ProductItem[]>(() => {
     if (initialProducts && initialProducts.length > 0) return initialProducts;
     return getAllActiveProducts();
+  });
+
+  React.useEffect(() => {
+    if (initialProducts && initialProducts.length > 0) {
+      setProductsList(initialProducts);
+      return;
+    }
+
+    fetchLiveProducts().then(list => {
+      if (list && list.length > 0) setProductsList(list);
+    });
+
+    const handleUpdate = () => {
+      setProductsList(getAllActiveProducts());
+    };
+
+    window.addEventListener('gfcl_products_updated', handleUpdate);
+    return () => window.removeEventListener('gfcl_products_updated', handleUpdate);
   }, [initialProducts]);
+
+  const allActiveProducts = productsList;
 
   // Filter Categories tailored to Golden Fiber Crafts Ltd.
   const filterTabs = [
