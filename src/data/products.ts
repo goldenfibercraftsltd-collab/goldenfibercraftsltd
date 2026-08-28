@@ -7619,6 +7619,318 @@ export const PRODUCTS: ProductItem[] = [
 
   // 6. Rugs & Floor Coverings (Catalogue Collection)
   {
+  "id": "BDR-77",
+  "slug": "charcoal-slate-handloom-rug-bdr-77",
+  "code": "BDR-77",
+  "name": "Charcoal Slate Handloom Rug with White Fringe",
+  "category": "rugs",
+  "categoryName": "Rugs",
+  "categorySlug": "rugs",
+  "subCategory": "jute-rugs",
+  "image": "/products/bdr_77.png",
+  "galleryImages": [
+    "/products/bdr_77.png"
+  ],
+  "description": "Textured charcoal slate flatweave handloom rug with contrasting crisp white fringed side borders.",
+  "longDescription": {
+    "overview": "The Charcoal Slate Handloom Rug (Art No: BDR-77) provides deep modern texture with earthy charcoal tones and crisp white fringe ends. Versatile for contemporary living spaces and bedrooms.",
+    "craftsmanship": "Woven on manual wooden handlooms with high-density cotton and Jhuta blended yarn for durable everyday use.",
+    "exportDetails": "Rolled and sealed in heavy export-grade polythene bags, 15 to 20 pcs per master carton.",
+    "careInstructions": "Vacuum on low suction without beater bar. Spot clean stains with mild eco soap."
+  },
+  "unit": "Single Piece",
+  "material": "Cotton & Jhuta",
+  "color": "Charcoal Slate & White Fringe",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "BDR-77"
+    },
+    {
+      "key": "Material",
+      "value": "Cotton & Jhuta"
+    },
+    {
+      "key": "Style",
+      "value": "Solid Flatweave"
+    },
+    {
+      "key": "MOQ",
+      "value": "100 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Deep Charcoal Slate Tone",
+    "Contrasting White Fringe",
+    "Reversible & Heavyweight",
+    "Natural Eco Cotton & Jhuta"
+  ]
+},
+  {
+  "id": "BDR-26",
+  "slug": "burgundy-accent-pinstripe-flatweave-rug-bdr-26",
+  "code": "BDR-26",
+  "name": "Burgundy Accent Pinstripe Flatweave Rug",
+  "category": "rugs",
+  "categoryName": "Rugs",
+  "categorySlug": "rugs",
+  "subCategory": "jute-rugs",
+  "image": "/products/bdr_26.png",
+  "galleryImages": [
+    "/products/bdr_26.png"
+  ],
+  "description": "Light ecru textured flatweave floor rug accented with vertical burgundy red pinstripes and natural fringe.",
+  "longDescription": {
+    "overview": "The Burgundy Accent Pinstripe Flatweave Rug (Art No: BDR-26) features subtle vertical ruby red stripes across a heathered ecru background, offering understated elegance.",
+    "craftsmanship": "Expertly hand-woven using fine cotton and Jhuta threads on pit looms by artisan weavers in Bangladesh.",
+    "exportDetails": "Individually rolled with poly wrap and packed in master export cartons.",
+    "careInstructions": "Regular gentle vacuuming. Spot clean with cool water and mild detergent."
+  },
+  "unit": "Single Piece",
+  "material": "Cotton & Jhuta",
+  "color": "Heathered Ecru & Burgundy Red",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "BDR-26"
+    },
+    {
+      "key": "Material",
+      "value": "Cotton & Jhuta"
+    },
+    {
+      "key": "Pattern",
+      "value": "Vertical Pinstripe"
+    },
+    {
+      "key": "MOQ",
+      "value": "100 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Minimalist Ruby Pinstripes",
+    "Breathable Natural Fiber",
+    "Durable Flatweave Structure",
+    "Hand-Knotted Fringe"
+  ]
+},
+  {
+  "id": "BDR-27",
+  "slug": "navy-diamond-honeycomb-geometric-rug-bdr-27",
+  "code": "BDR-27",
+  "name": "Navy Diamond Honeycomb Geometric Rug",
+  "category": "rugs",
+  "categoryName": "Rugs",
+  "categorySlug": "rugs",
+  "subCategory": "jute-rugs",
+  "image": "/products/bdr_27.png",
+  "galleryImages": [
+    "/products/bdr_27.png"
+  ],
+  "description": "Intricate navy blue and cream geometric honeycomb diamond flatweave area rug with soft braided fringe.",
+  "longDescription": {
+    "overview": "The Navy Diamond Honeycomb Geometric Rug (Art No: BDR-27) delivers an all-over diamond lattice design in nautical navy blue and natural ecru.",
+    "craftsmanship": "Tight shuttle handloom weaving creates a crisp diamond geometric grid with thick braided edge tassels.",
+    "exportDetails": "Packed 10 to 15 pcs per master carton or ocean freight export bale.",
+    "careInstructions": "Vacuum regularly. Spot clean spills immediately with damp sponge."
+  },
+  "unit": "Single Piece",
+  "material": "Cotton & Jhuta",
+  "color": "Navy Blue & Natural Ecru",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "BDR-27"
+    },
+    {
+      "key": "Material",
+      "value": "Cotton & Jhuta"
+    },
+    {
+      "key": "Pattern",
+      "value": "Geometric Honeycomb Trellis"
+    },
+    {
+      "key": "MOQ",
+      "value": "100 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "High-Contrast Diamond Lattice",
+    "Heavy Duty Handloom Weave",
+    "Braided Cotton Fringe",
+    "Sustainable Eco Yarns"
+  ]
+},
+  {
+  "id": "BDR-24",
+  "slug": "sage-green-ribbed-stripe-rug-bdr-24",
+  "code": "BDR-24",
+  "name": "Sage Green Ribbed Stripe Rug with Coral Fringe",
+  "category": "rugs",
+  "categoryName": "Rugs",
+  "categorySlug": "rugs",
+  "subCategory": "jute-rugs",
+  "image": "/products/bdr_24.png",
+  "galleryImages": [
+    "/products/bdr_24.png"
+  ],
+  "description": "Pastel sage green and cream subtle textured stripe rug finished with playful coral peach fringed borders.",
+  "longDescription": {
+    "overview": "The Sage Green Ribbed Stripe Rug (Art No: BDR-24) introduces gentle organic serenity with sage ribbed stripes and warm salmon coral tassels.",
+    "craftsmanship": "Handcrafted on wooden looms combining soft cotton yarns and Jhuta fiber for tactile depth and warmth.",
+    "exportDetails": "Rolled on recycled cores and poly-wrapped in standard master export cartons.",
+    "careInstructions": "Gentle shake-out or vacuum. Hand wash cold if needed and flat dry."
+  },
+  "unit": "Single Piece",
+  "material": "Cotton & Jhuta",
+  "color": "Sage Green & Coral Peach Fringe",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "BDR-24"
+    },
+    {
+      "key": "Material",
+      "value": "Cotton & Jhuta"
+    },
+    {
+      "key": "Pattern",
+      "value": "Ribbed Linear Stripe"
+    },
+    {
+      "key": "MOQ",
+      "value": "100 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Calming Sage Green Palette",
+    "Charming Coral Fringe Accent",
+    "Ribbed Tactile Weave",
+    "100% Biodegradable & Upcycled"
+  ]
+},
+  {
+  "id": "BDR-22",
+  "slug": "windowpane-grid-check-handwoven-rug-bdr-22",
+  "code": "BDR-22",
+  "name": "Windowpane Grid Check Handwoven Rug",
+  "category": "rugs",
+  "categoryName": "Rugs",
+  "categorySlug": "rugs",
+  "subCategory": "jute-rugs",
+  "image": "/products/bdr_22.png",
+  "galleryImages": [
+    "/products/bdr_22.png"
+  ],
+  "description": "Modern farmhouse windowpane grid check rug in deep charcoal navy with contrasting white double-lines and side fringe.",
+  "longDescription": {
+    "overview": "The Windowpane Grid Check Handwoven Rug (Art No: BDR-22) provides modern architectural symmetry with bold windowpane cross-stripes.",
+    "craftsmanship": "Handloom flatwoven with high-contrast cotton and Jhuta yarn with reinforced side hem and knotted tassels.",
+    "exportDetails": "15 to 25 pcs per standard export master box.",
+    "careInstructions": "Vacuum regularly. Spot clean with mild detergent."
+  },
+  "unit": "Single Piece",
+  "material": "Cotton & Jhuta",
+  "color": "Deep Midnight Navy & White Grid",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "BDR-22"
+    },
+    {
+      "key": "Material",
+      "value": "Cotton & Jhuta"
+    },
+    {
+      "key": "Pattern",
+      "value": "Windowpane Check"
+    },
+    {
+      "key": "MOQ",
+      "value": "100 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Bold Windowpane Check Pattern",
+    "Reversible Dual-Sided Wear",
+    "Dense Floor-Grip Flatweave",
+    "Upcycled Cotton Jhuta Blend"
+  ]
+},
+  {
+  "id": "BDR-23",
+  "slug": "bold-black-white-vertical-stripe-rug-bdr-23",
+  "code": "BDR-23",
+  "name": "Bold Black & White Vertical Stripe Rug",
+  "category": "rugs",
+  "categoryName": "Rugs",
+  "categorySlug": "rugs",
+  "subCategory": "jute-rugs",
+  "image": "/products/bdr_23.png",
+  "galleryImages": [
+    "/products/bdr_23.png"
+  ],
+  "description": "Striking monochrome black and white vertical wide bar stripe flatweave rug with knotted natural fringe.",
+  "longDescription": {
+    "overview": "The Bold Black & White Vertical Stripe Rug (Art No: BDR-23) makes a bold graphic statement with alternating wide black and ivory white stripes.",
+    "craftsmanship": "Heavyweight flatweave crafted from durable Jhuta and cotton fibers on traditional handlooms.",
+    "exportDetails": "Folded or rolled for containerized ocean shipping, export cartons or bales.",
+    "careInstructions": "Machine wash gentle cold or vacuum regularly. Air dry flat."
+  },
+  "unit": "Single Piece",
+  "material": "Jhuta + Cotton",
+  "color": "Bold Black & Ivory White",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "BDR-23"
+    },
+    {
+      "key": "Material",
+      "value": "Jhuta + Cotton"
+    },
+    {
+      "key": "Pattern",
+      "value": "Wide Bar Stripe"
+    },
+    {
+      "key": "MOQ",
+      "value": "100 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Graphic High-Contrast Stripes",
+    "Heavy Duty Jhuta Cotton Weave",
+    "Knotted Side Fringe",
+    "Modern Coastal & Urban Decor"
+  ]
+},
+  {
   "id": "BDR-25",
   "slug": "geometric-diamond-flatweave-rug-bdr-25",
   "code": "BDR-25",
