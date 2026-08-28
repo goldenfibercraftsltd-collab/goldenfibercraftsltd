@@ -7619,6 +7619,214 @@ export const PRODUCTS: ProductItem[] = [
 
   // 6. Rugs & Floor Coverings (Catalogue Collection)
   {
+  "id": "BDR-83",
+  "slug": "tangerine-orange-shaggy-floor-mat-bdr-83",
+  "code": "BDR-83",
+  "name": "Tangerine Orange Shaggy Floor Mat",
+  "category": "rugs",
+  "categoryName": "Rugs",
+  "categorySlug": "rugs",
+  "subCategory": "jute-rugs",
+  "image": "/products/bdr_83.png",
+  "galleryImages": [
+    "/products/bdr_83.png"
+  ],
+  "description": "Vibrant tangerine orange plush shaggy doormat crafted from 100% upcycled Jhuta with hand-knotted edge fringe.",
+  "longDescription": {
+    "overview": "The Tangerine Orange Shaggy Floor Mat (Art No: BDR-83) brings rich tactile softness and vibrant warmth to indoor entryways, bedside floors, and children's play areas.",
+    "craftsmanship": "Hand-tufted and knotted using 100% premium soft Jhuta cotton strips on a durable woven base.",
+    "exportDetails": "Folded or flat-packed in export cartons, 20 to 30 pcs per master carton.",
+    "careInstructions": "Shake out dirt outdoors or vacuum gently with floor brush. Hand wash cold and line dry."
+  },
+  "unit": "Single Piece",
+  "material": "100% Jhuta",
+  "color": "Vibrant Tangerine Orange",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "BDR-83"
+    },
+    {
+      "key": "Material",
+      "value": "100% Jhuta"
+    },
+    {
+      "key": "Style",
+      "value": "Plush Shaggy Tuft"
+    },
+    {
+      "key": "MOQ",
+      "value": "100 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "High-Pile Plush Texture",
+    "Vibrant Saturated Dye",
+    "Soft & Warm Underfoot",
+    "100% Upcycled Eco Jhuta"
+  ]
+},
+  {
+  "id": "BDR-84",
+  "slug": "kaleidoscope-patchwork-shaggy-door-mat-bdr-84",
+  "code": "BDR-84",
+  "name": "Kaleidoscope Patchwork Shaggy Door Mat",
+  "category": "rugs",
+  "categoryName": "Rugs",
+  "categorySlug": "rugs",
+  "subCategory": "jute-rugs",
+  "image": "/products/bdr_84.png",
+  "galleryImages": [
+    "/products/bdr_84.png"
+  ],
+  "description": "Playful multicolor patchwork shaggy doormat featuring plush tufts of magenta, orange, blue, green, and black with natural fringe tassels.",
+  "longDescription": {
+    "overview": "The Kaleidoscope Patchwork Shaggy Door Mat (Art No: BDR-84) showcases a dynamic block patchwork of colorful recycled textiles.",
+    "craftsmanship": "Hand-crafted by artisan weavers using 90% Jhuta and 10% cotton scrap yarns, creating a thick cushioned pile.",
+    "exportDetails": "Packed compactly in export bales or cartons for international shipping.",
+    "careInstructions": "Shake regularly. Spot clean or gentle cold hand wash."
+  },
+  "unit": "Single Piece",
+  "material": "90% Jhuta + 10% Cotton",
+  "color": "Multicolor Patchwork (Magenta, Orange, Blue, Green, Black)",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "BDR-84"
+    },
+    {
+      "key": "Material",
+      "value": "90% Jhuta + 10% Cotton"
+    },
+    {
+      "key": "Style",
+      "value": "Patchwork Shaggy Tuft"
+    },
+    {
+      "key": "MOQ",
+      "value": "100 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Vibrant Multi-Color Block Tufting",
+    "High-Density Plush Shag",
+    "Zero-Waste Upcycled Craft",
+    "Hand-Knotted Fringe"
+  ]
+},
+  {
+  "id": "BDR-03",
+  "slug": "natural-jute-jhuta-trellis-area-rug-bdr-03",
+  "code": "BDR-03",
+  "name": "Natural Jute & Jhuta Trellis Area Rug",
+  "category": "rugs",
+  "categoryName": "Rugs",
+  "categorySlug": "rugs",
+  "subCategory": "jute-rugs",
+  "image": "/products/bdr_03.png",
+  "galleryImages": [
+    "/products/bdr_03.png"
+  ],
+  "description": "Earthy golden jute and cotton trellis flatweave area rug featuring an all-over diamond motif and solid tan edge bindings.",
+  "longDescription": {
+    "overview": "The Natural Jute & Jhuta Trellis Area Rug (Art No: BDR-03) combines the organic strength of golden jute with the softness of cotton Jhuta yarn.",
+    "craftsmanship": "Woven on heavy-duty pit looms with 60% Jhuta and 40% natural jute, framed by reinforced solid tan woven edge bands.",
+    "exportDetails": "Rolled and encased in export polythene tubing, 8 to 15 pcs per master carton.",
+    "careInstructions": "Vacuum regularly without beater bar. Spot clean with damp cloth."
+  },
+  "unit": "Single Piece",
+  "material": "60% Jhuta & 40% Jute",
+  "color": "Natural Golden Jute & Oatmeal Beige",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "BDR-03"
+    },
+    {
+      "key": "Material",
+      "value": "60% Jhuta & 40% Jute"
+    },
+    {
+      "key": "Pattern",
+      "value": "Diamond Lattice Trellis"
+    },
+    {
+      "key": "MOQ",
+      "value": "100 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Heavyweight Jute & Cotton Blend",
+    "Crisp Diamond Geometric Weave",
+    "Reinforced Solid Edge Binding",
+    "Natural Reversible Durability"
+  ]
+},
+  {
+  "id": "BDR-23-WA",
+  "slug": "coastal-blue-ticking-stripe-woven-rug-bdr-23-wa",
+  "code": "BDR-23-WA",
+  "name": "Coastal Blue Ticking Stripe Woven Rug",
+  "category": "rugs",
+  "categoryName": "Rugs",
+  "categorySlug": "rugs",
+  "subCategory": "jute-rugs",
+  "image": "/products/bdr_23_wa.png",
+  "galleryImages": [
+    "/products/bdr_23_wa.png"
+  ],
+  "description": "Breezy coastal blue and off-white vertical ticking stripe flatweave rug finished with braided side fringe tassels.",
+  "longDescription": {
+    "overview": "The Coastal Blue Ticking Stripe Woven Rug (Art No: BDR-23-WA) offers timeless seaside charm with soft cornflower blue stripes across an ivory flatweave background.",
+    "craftsmanship": "Handloom woven with durable Jhuta and cotton yarns for a soft, breathable texture and long-lasting performance.",
+    "exportDetails": "Individually rolled and tagged, packed in master export cartons.",
+    "careInstructions": "Machine wash cold gentle cycle or vacuum regularly. Lay flat to dry."
+  },
+  "unit": "Single Piece",
+  "material": "Jhuta + Cotton",
+  "color": "Cornflower Blue & Ivory White",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "BDR-23-WA"
+    },
+    {
+      "key": "Material",
+      "value": "Jhuta + Cotton"
+    },
+    {
+      "key": "Pattern",
+      "value": "Vertical Ticking Stripe"
+    },
+    {
+      "key": "MOQ",
+      "value": "100 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Classic Coastal Ticking Stripe",
+    "Soft Upcycled Jhuta Cotton",
+    "Braided Natural Fringe Ends",
+    "Reversible & Easy-Care"
+  ]
+},
+  {
   "id": "BDR-77",
   "slug": "charcoal-slate-handloom-rug-bdr-77",
   "code": "BDR-77",
