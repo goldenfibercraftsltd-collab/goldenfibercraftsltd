@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   CheckCircle2,
   Leaf,
@@ -18,8 +18,13 @@ import {
 } from 'lucide-react';
 import { AnimatedCounter } from '../components/AnimatedCounter';
 import { WhyChooseUsHub } from '../components/WhyChooseUsHub';
-import { TAGLINE, KEY_LEADERSHIP, TECHNICAL_INFORMATION } from '../data/products';
 import { usePageTitle } from '../utils/usePageTitle';
+import { 
+  SiteSettingsData, 
+  DEFAULT_SITE_SETTINGS, 
+  getLocalSiteSettings, 
+  fetchLiveSiteSettings 
+} from '../utils/siteContentStore';
 
 interface AboutPageProps {
   onOpenQuoteModal?: () => void;
@@ -27,6 +32,21 @@ interface AboutPageProps {
 
 export const AboutPage: React.FC<AboutPageProps> = () => {
   usePageTitle('About Us');
+  const [settings, setSettings] = useState<SiteSettingsData>(() => getLocalSiteSettings());
+
+  useEffect(() => {
+    fetchLiveSiteSettings().then(data => {
+      if (data) setSettings(data);
+    });
+
+    const handleUpdated = (e: any) => {
+      if (e.detail) setSettings(e.detail);
+      else setSettings(getLocalSiteSettings());
+    };
+
+    window.addEventListener('gfcl_settings_updated', handleUpdated);
+    return () => window.removeEventListener('gfcl_settings_updated', handleUpdated);
+  }, []);
 
   return (
     <div className="bg-[#fcfbf9] min-h-screen pb-12 font-sans text-stone-900 animate-fadeIn space-y-6 sm:space-y-8">
@@ -47,26 +67,26 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
               Corporate Profile & Heritage
             </div>
             <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-white">
-              About Golden Fiber Crafts Ltd.
+              About {settings.site_name}
             </h1>
             <p className="text-amber-300 font-serif italic text-sm sm:text-base font-bold">
-              "{TAGLINE}"
+              "{settings.tagline}"
             </p>
             <p className="text-white text-xs sm:text-sm leading-relaxed font-medium">
-              Bangladesh’s premier manufacturer and exporter of eco-friendly jute, seagrass, kaisa grass handicrafts, storage baskets, planters, and sustainable home decor.
+              {settings.about_intro || "Bangladesh’s premier manufacturer and exporter of eco-friendly jute, seagrass, kaisa grass handicrafts, storage baskets, planters, and sustainable home decor."}
             </p>
           </div>
         </div>
 
-        {/* Large Decorative Watermark in Background (Fully Visible) */}
+        {/* Large Decorative Watermark in Background */}
         <div className="absolute right-4 sm:right-8 md:right-12 top-1/2 -translate-y-1/2 opacity-20 pointer-events-none select-none">
-          <img src="/logo-icon.png" alt="Golden Fiber Crafts Ltd." className="h-32 w-32 sm:h-40 sm:w-40 md:h-48 md:w-48 lg:h-56 lg:w-56 object-contain filter invert drop-shadow-md" />
+          <img src="/logo-icon.png" alt={settings.site_name} className="h-32 w-32 sm:h-40 sm:w-40 md:h-48 md:w-48 lg:h-56 lg:w-56 object-contain filter invert drop-shadow-md" />
         </div>
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-14 sm:space-y-20">
 
-        {/* 2. Company History & Overview (Page 2 of Corporate Profile) */}
+        {/* 2. Company History & Overview */}
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
           <div className="space-y-5">
             <span className="inline-flex items-center gap-2 rounded-full bg-emerald-100 text-emerald-950 px-3.5 py-1 text-xs font-black uppercase tracking-wider border border-emerald-200">
@@ -77,13 +97,13 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
               Showcasing Bangladesh's Natural Fibers to the Global Marketplace
             </h2>
             <p className="text-stone-700 text-sm sm:text-base leading-relaxed font-medium">
-              <strong className="text-stone-950 font-bold">Golden Fiber Crafts Ltd.</strong> was established with a vision to showcase the beauty, versatility, and sustainability of Bangladesh's natural fibers to the global marketplace. Inspired by the country's rich tradition of handicrafts and its reputation as the home of the world's finest jute—known as the <em className="text-emerald-900 font-semibold">"Golden Fiber"</em>—the company was founded to create a high-quality diverse range of eco-friendly products, including jute bags, home décor, storage solutions, gift items, and handcrafted accessories.
+              <strong className="text-stone-950 font-bold">{settings.site_name}</strong> was established with a vision to showcase the beauty, versatility, and sustainability of Bangladesh's natural fibers to the global marketplace. Inspired by the country's rich tradition of handicrafts and its reputation as the home of the world's finest jute—known as the <em className="text-emerald-900 font-semibold">"Golden Fiber"</em>—the company was founded to create a high-quality diverse range of eco-friendly products, including jute bags, home décor, storage solutions, gift items, and handcrafted accessories.
             </p>
             <p className="text-stone-700 text-sm sm:text-base leading-relaxed font-medium">
               Over the years, we have continuously invested in product innovation, quality management, and sustainable manufacturing practices. Our commitment to excellence has enabled us to build strong relationships with customers across <strong className="text-stone-950 font-bold">Europe, North America, Australia, Japan,</strong> and other international markets.
             </p>
             <p className="text-stone-700 text-sm leading-relaxed font-medium">
-              Today, Golden Fiber Crafts Ltd. is recognized as a reliable manufacturer and exporter of eco-friendly handicrafts and natural fiber products. Guided by our core values of quality, integrity, innovation, and sustainability, we remain dedicated to promoting environmentally responsible products while supporting local artisans and contributing to Bangladesh's growing handicraft industry.
+              Today, {settings.site_name} is recognized as a reliable manufacturer and exporter of eco-friendly handicrafts and natural fiber products. Guided by our core values of quality, integrity, innovation, and sustainability, we remain dedicated to promoting environmentally responsible products while supporting local artisans and contributing to Bangladesh's growing handicraft industry.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 pt-2">
@@ -124,7 +144,7 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
           </div>
         </div>
 
-        {/* 3. Our Vision, Our Mission & 6 Core Values (Page 4 of Profile) */}
+        {/* 3. Our Vision, Our Mission & Core Values */}
         <div className="space-y-6 bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm border border-stone-200/80">
           <div className="text-center max-w-3xl mx-auto space-y-1.5 pt-0">
             <h2 className="font-serif text-3xl sm:text-4xl font-extrabold text-stone-950">
@@ -203,7 +223,7 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
           </div>
         </div>
 
-        {/* 4. Leadership Messages: Both MD & Senior Director (Page 3 of Corporate Profile) */}
+        {/* 4. Leadership Messages: Both MD & Senior Director */}
         <div className="space-y-8">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-black uppercase tracking-widest text-emerald-900">EXECUTIVE LEADERSHIP</span>
@@ -219,30 +239,30 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
               <div className="space-y-4 relative z-10">
                 <div className="flex items-center gap-4">
                   <img
-                    src="/about/md_safiqul_islam.png"
-                    alt={KEY_LEADERSHIP.managingDirector.name}
+                    src={settings.md_image || "/about/md_safiqul_islam.png"}
+                    alt={settings.md_name}
                     className="h-20 w-20 sm:h-24 sm:w-24 rounded-2xl object-cover border-2 border-amber-400/80 shadow-lg shrink-0"
                   />
                   <div>
                     <span className="inline-block px-2.5 py-0.5 rounded-full text-xs font-black uppercase tracking-wider text-amber-300 bg-amber-500/20 border border-amber-400/30 mb-1">
-                      {KEY_LEADERSHIP.managingDirector.title}
+                      {settings.md_title}
                     </span>
                     <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">
-                      {KEY_LEADERSHIP.managingDirector.name}
+                      {settings.md_name}
                     </h3>
                     <p className="text-xs text-stone-200 font-semibold">Message From Managing Director</p>
-                    <a href="tel:+8801916183583" className="text-xs text-emerald-300 hover:underline inline-flex items-center gap-1 mt-1 font-bold">
-                      <Phone className="h-3 w-3" /> +8801916-183583
+                    <a href={`tel:${settings.md_phone}`} className="text-xs text-emerald-300 hover:underline inline-flex items-center gap-1 mt-1 font-bold">
+                      <Phone className="h-3 w-3" /> {settings.md_phone}
                     </a>
                   </div>
                 </div>
 
                 <blockquote className="text-stone-100 text-xs sm:text-sm leading-relaxed font-medium italic border-l-2 border-amber-400 pl-4 py-1">
-                  "{KEY_LEADERSHIP.managingDirector.message}"
+                  "{settings.md_message}"
                 </blockquote>
               </div>
               <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-emerald-300 font-bold">
-                <span>Golden Fiber Crafts Ltd.</span>
+                <span>{settings.site_name}</span>
                 <span className="font-serif italic font-bold text-amber-300">Sustainable Excellence</span>
               </div>
             </div>
@@ -252,37 +272,37 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
               <div className="space-y-4 relative z-10">
                 <div className="flex items-center gap-4">
                   <img
-                    src="/about/md_nazrul_islam_uzzal.png"
-                    alt={KEY_LEADERSHIP.seniorDirector.name}
+                    src={settings.director_image || "/about/md_nazrul_islam_uzzal.png"}
+                    alt={settings.director_name}
                     className="h-20 w-20 sm:h-24 sm:w-24 rounded-2xl object-cover border-2 border-emerald-400/80 shadow-lg shrink-0"
                   />
                   <div>
                     <span className="inline-block px-2.5 py-0.5 rounded-full text-xs font-black uppercase tracking-wider text-emerald-300 bg-emerald-500/20 border border-emerald-400/30 mb-1">
-                      {KEY_LEADERSHIP.seniorDirector.title}
+                      {settings.director_title}
                     </span>
                     <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">
-                      {KEY_LEADERSHIP.seniorDirector.name}
+                      {settings.director_name}
                     </h3>
                     <p className="text-xs text-stone-200 font-semibold">Message From Senior Director</p>
-                    <a href="tel:+8801721994082" className="text-xs text-emerald-300 hover:underline inline-flex items-center gap-1 mt-1 font-bold">
-                      <Phone className="h-3 w-3" /> +8801721-994082
+                    <a href={`tel:${settings.director_phone}`} className="text-xs text-emerald-300 hover:underline inline-flex items-center gap-1 mt-1 font-bold">
+                      <Phone className="h-3 w-3" /> {settings.director_phone}
                     </a>
                   </div>
                 </div>
 
                 <blockquote className="text-stone-100 text-xs sm:text-sm leading-relaxed font-medium italic border-l-2 border-emerald-400 pl-4 py-1">
-                  "{KEY_LEADERSHIP.seniorDirector.message}"
+                  "{settings.director_message}"
                 </blockquote>
               </div>
               <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-emerald-300 font-bold">
-                <span>Golden Fiber Crafts Ltd.</span>
+                <span>{settings.site_name}</span>
                 <span className="font-serif italic font-bold text-amber-300">Empowering Artisans</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* 5. Technical Information Section (Page 12 of Profile) */}
+        {/* 5. Technical Information Section */}
         <div className="rounded-3xl bg-white p-8 sm:p-12 shadow-sm border border-stone-200/80">
           <div className="text-center max-w-2xl mx-auto mb-8 space-y-2">
             <span className="text-xs font-black uppercase tracking-widest text-emerald-900">OPERATIONAL CAPACITIES</span>
@@ -301,7 +321,7 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
                     Office Staff
                   </td>
                   <td className="px-6 py-4 text-sm text-stone-800 font-semibold">
-                    : <span className="font-bold text-stone-950">{TECHNICAL_INFORMATION.officeStaff} Professionals</span>
+                    : <span className="font-bold text-stone-950">{settings.office_staff} Professionals</span>
                   </td>
                 </tr>
                 <tr className="hover:bg-stone-50 transition-colors">
@@ -309,7 +329,7 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
                     Artisans Workforce
                   </td>
                   <td className="px-6 py-4 text-sm text-stone-800 font-semibold">
-                    : <span className="font-bold text-stone-950">{TECHNICAL_INFORMATION.artisans}</span>
+                    : <span className="font-bold text-stone-950">{settings.artisans_count}</span>
                   </td>
                 </tr>
                 <tr className="hover:bg-stone-50 transition-colors">
@@ -317,7 +337,7 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
                     Production Capacity
                   </td>
                   <td className="px-6 py-4 text-sm text-stone-800 font-semibold">
-                    : <span className="font-bold text-stone-950">{TECHNICAL_INFORMATION.productionCapacityMonth} / Month</span>
+                    : <span className="font-bold text-stone-950">{settings.monthly_capacity} / Month</span>
                   </td>
                 </tr>
                 <tr className="hover:bg-stone-50 transition-colors">
@@ -325,7 +345,7 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
                     Production Lead Time
                   </td>
                   <td className="px-6 py-4 text-sm text-stone-800 font-semibold">
-                    : <span className="font-bold text-stone-950">{TECHNICAL_INFORMATION.productionLeadTime}</span>
+                    : <span className="font-bold text-stone-950">{settings.production_lead_time}</span>
                   </td>
                 </tr>
                 <tr className="hover:bg-stone-50 transition-colors">
@@ -333,7 +353,7 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
                     Payment Terms
                   </td>
                   <td className="px-6 py-4 text-sm text-stone-800 font-semibold">
-                    : <span className="font-bold text-stone-950">{TECHNICAL_INFORMATION.paymentTerms}</span>
+                    : <span className="font-bold text-stone-950">{settings.payment_terms}</span>
                   </td>
                 </tr>
                 <tr className="hover:bg-stone-50 transition-colors">
@@ -341,7 +361,7 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
                     Annual Turnover
                   </td>
                   <td className="px-6 py-4 text-sm text-stone-800 font-semibold">
-                    : <span className="font-bold text-emerald-800">{TECHNICAL_INFORMATION.annualTurnover}</span>
+                    : <span className="font-bold text-emerald-800">{settings.annual_turnover}</span>
                   </td>
                 </tr>
               </tbody>
@@ -349,19 +369,19 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
           </div>
         </div>
 
-        {/* 6. "Why Choose Us" Hub (Page 5 of Corporate Profile) */}
+        {/* 6. "Why Choose Us" Hub */}
         <div>
           <WhyChooseUsHub />
         </div>
 
-        {/* 7. Future Goals & Expansion Plan (Page 20 of Corporate Profile) */}
+        {/* 7. Future Goals & Expansion Plan */}
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-stone-950 via-[#064e3b] to-stone-950 py-5 px-5 sm:py-6 sm:px-8 text-white shadow-xl border border-emerald-500/30 space-y-4">
           <div className="text-center max-w-3xl mx-auto space-y-1 relative z-10">
             <h2 className="font-serif text-xl sm:text-2xl lg:text-3xl font-black text-white">
               Future Goals & Expansion Plan
             </h2>
             <p className="text-stone-100 text-xs sm:text-sm font-medium leading-relaxed">
-              At Golden Fiber Crafts Ltd., we are focused on sustainable growth, global expansion, and continuous innovation. Our long-term vision is to strengthen our position as a trusted global manufacturer and exporter of eco-friendly handicrafts.
+              At {settings.site_name}, we are focused on sustainable growth, global expansion, and continuous innovation. Our long-term vision is to strengthen our position as a trusted global manufacturer and exporter of eco-friendly handicrafts.
             </p>
           </div>
 
@@ -420,3 +440,5 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
     </div>
   );
 };
+
+export default AboutPage;

@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Globe2, Ship, Award, Users, Sparkles, Building2 } from 'lucide-react';
 import { usePageTitle } from '../utils/usePageTitle';
 import { getDynamicCardAnimation } from '../utils/scrollReveal';
 import { AnimatedCounter } from '../components/AnimatedCounter';
+import { 
+  ClientItem, 
+  DEFAULT_CLIENTS, 
+  fetchLiveClients, 
+  getLocalClients,
+  CertificateItem,
+  DEFAULT_CERTIFICATES,
+  fetchLiveCertificates,
+  getLocalCertificates,
+  getLocalSiteSettings,
+  fetchLiveSiteSettings,
+  SiteSettingsData
+} from '../utils/siteContentStore';
 
 interface ClientsPageProps {
   onOpenQuoteModal: () => void;
@@ -11,25 +24,40 @@ interface ClientsPageProps {
 export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) => {
   usePageTitle('Global Clients & Export Portfolio');
 
-  // Authentic Client Logos Extracted Directly from GFCL Corporate Presentation
-  const officialBuyers = [
-    { name: 'Aarong', logo: '/clients/aarong.png', country: 'Bangladesh', category: 'Ethical Lifestyle & Craft Retailing' },
-    { name: 'Det Gamle Apotek', logo: '/clients/det_gamle_apotek.png', country: 'Denmark', category: 'Home Decor & Seasonal Crafts' },
-    { name: 'Ten Thousand Villages', logo: '/clients/ten_thousand_villages.png', country: 'USA / Canada', category: 'Fair Trade Artisan Products' },
-    { name: 'The Body Shop', logo: '/clients/the_body_shop.png', country: 'UK / Global', category: 'Sustainable Packaging & Baskets' },
-    { name: 'Bozy', logo: '/clients/bozy.png', country: 'Australia', category: 'Boho Home Accents & Storage' },
-    { name: 'Le Rêve', logo: '/clients/le_reve.png', country: 'Bangladesh', category: 'Fashion & Handcrafted Accessories' },
-    { name: 'Dekker Decoration', logo: '/clients/dekker_decoration.png', country: 'Netherlands', category: 'European Home & Garden Accessories' },
-    { name: 'Traidcraft', logo: '/clients/traidcraft.png', country: 'UK', category: 'Pioneering Fair Trade Organization' }
-  ];
+  const [clients, setClients] = useState<ClientItem[]>(() => getLocalClients());
+  const [certs, setCerts] = useState<CertificateItem[]>(() => getLocalCertificates());
+  const [settings, setSettings] = useState<SiteSettingsData>(() => getLocalSiteSettings());
 
-  // Authentic Certificate Images Extracted Directly from GFCL Product PPT
-  const certificateImages = [
-    { title: 'ISO 14001:2015', sub: 'Environmental Management System', code: 'Certified Green Facility', image: '/certificates/cert1.png' },
-    { title: 'ISO 9001:2015', sub: 'Quality Management System', code: 'Zero-Defect Export Standard', image: '/certificates/cert2.png' },
-    { title: 'amfori BSCI Member', sub: 'Business Social Compliance Initiative', code: 'Ethical Workplace Audited', image: '/certificates/cert3.png' },
-    { title: 'OEKO-TEX® Standard 100', sub: 'Tested for Harmful Substances', code: 'Non-Toxic Tested Textiles', image: '/certificates/cert4.png' }
-  ];
+  useEffect(() => {
+    fetchLiveClients().then(data => { if (data && data.length) setClients(data); });
+    fetchLiveCertificates().then(data => { if (data && data.length) setCerts(data); });
+    fetchLiveSiteSettings().then(data => { if (data) setSettings(data); });
+
+    const handleClientsUpdated = (e: any) => {
+      if (e.detail && Array.isArray(e.detail)) setClients(e.detail);
+      else setClients(getLocalClients());
+    };
+
+    const handleCertsUpdated = (e: any) => {
+      if (e.detail && Array.isArray(e.detail)) setCerts(e.detail);
+      else setCerts(getLocalCertificates());
+    };
+
+    const handleSettingsUpdated = (e: any) => {
+      if (e.detail) setSettings(e.detail);
+      else setSettings(getLocalSiteSettings());
+    };
+
+    window.addEventListener('gfcl_clients_updated', handleClientsUpdated);
+    window.addEventListener('gfcl_certificates_updated', handleCertsUpdated);
+    window.addEventListener('gfcl_settings_updated', handleSettingsUpdated);
+
+    return () => {
+      window.removeEventListener('gfcl_clients_updated', handleClientsUpdated);
+      window.removeEventListener('gfcl_certificates_updated', handleCertsUpdated);
+      window.removeEventListener('gfcl_settings_updated', handleSettingsUpdated);
+    };
+  }, []);
 
   const exportStats = [
     { label: 'Export Destinations', target: 20, suffix: '+ Countries', icon: Globe2 },
@@ -38,10 +66,13 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
     { label: 'Artisan Community', target: 15000, suffix: '+ Artisans', icon: Users },
   ];
 
+  const validClients = clients.length > 0 ? clients : DEFAULT_CLIENTS;
+  const validCerts = certs.length > 0 ? certs : DEFAULT_CERTIFICATES;
+
   return (
     <div className="bg-[#fcfbf9] min-h-screen pb-16 font-sans text-stone-900 animate-fadeIn space-y-8 sm:space-y-12">
       
-      {/* 1. Standard Page Banner Header (Matches AboutPage, InfrastructurePage, SustainabilityPage) */}
+      {/* 1. Page Banner Header */}
       <div className="relative overflow-hidden bg-gradient-to-r from-[#064e3b] via-[#065f46] to-[#047857] text-white">
         <div 
           className="absolute inset-0 opacity-[0.06] pointer-events-none" 
@@ -70,7 +101,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
                 <Sparkles className="h-3 w-3 text-amber-300" /> 20+ Export Countries
               </span>
               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
-                50 HQ Containers / Month
+                {settings.monthly_capacity || '50 HQ Containers / Month'}
               </span>
               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-[11px] font-bold text-emerald-100">
                 BSCI & ISO Audited
@@ -79,7 +110,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
           </div>
         </div>
 
-        {/* Large Decorative Watermark in Background (Fully Visible) */}
+        {/* Large Decorative Watermark in Background */}
         <div className="absolute right-4 sm:right-8 md:right-12 top-1/2 -translate-y-1/2 opacity-20 pointer-events-none select-none">
           <img src="/logo-icon.png" alt="Golden Fiber Crafts Ltd." className="h-32 w-32 sm:h-40 sm:w-40 md:h-48 md:w-48 lg:h-56 lg:w-56 object-contain filter invert drop-shadow-md" />
         </div>
@@ -132,33 +163,38 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
 
           {/* Client Logos Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-2">
-            {officialBuyers.map((buyer, idx) => {
+            {validClients.map((buyer, idx) => {
               const cardAnim = getDynamicCardAnimation(idx);
+              const logoImg = buyer.logo_url || '';
               return (
                 <div
-                  key={idx}
+                  key={buyer.id || idx}
                   className={`${cardAnim} hover-lift group flex flex-col items-center justify-between rounded-2xl bg-stone-50/80 p-5 sm:p-6 border border-stone-200/90 hover:bg-white hover:border-amber-500 hover:shadow-lg transition-all duration-300 text-center`}
                 >
                   {/* Logo Container */}
                   <div className="h-24 sm:h-28 w-full rounded-xl bg-white flex items-center justify-center p-4 overflow-hidden border border-stone-100 shadow-2xs group-hover:scale-105 transition-transform duration-300">
-                    <img
-                      src={buyer.logo}
-                      alt={buyer.name}
-                      className="max-h-full max-w-full object-contain filter drop-shadow-xs"
-                      loading="lazy"
-                    />
+                    {logoImg ? (
+                      <img
+                        src={logoImg}
+                        alt={buyer.name}
+                        className="max-h-full max-w-full object-contain filter drop-shadow-xs"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <Building2 className="h-10 w-10 text-emerald-700" />
+                    )}
                   </div>
 
                   {/* Buyer Name & Country */}
                   <div className="mt-3.5 space-y-0.5 w-full">
-                    <h3 className="font-serif text-sm sm:text-base font-extrabold text-stone-900 group-hover:text-[#14532d] transition-colors">
+                    <h3 className="font-serif text-sm sm:text-base font-extrabold text-stone-900 group-hover:text-[#14532d] transition-colors truncate">
                       {buyer.name}
                     </h3>
                     <p className="text-[11px] text-amber-800 font-bold flex items-center justify-center gap-1">
-                      <Globe2 className="h-3 w-3" /> {buyer.country}
+                      <Globe2 className="h-3 w-3" /> {buyer.country || 'Global'}
                     </p>
                     <p className="text-[10px] text-stone-500 font-medium truncate pt-0.5">
-                      {buyer.category}
+                      {buyer.category || 'Wholesale Partner'}
                     </p>
                   </div>
                 </div>
@@ -190,38 +226,43 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
 
           {/* Certificate Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 pt-2">
-            {certificateImages.map((cert, idx) => {
+            {validCerts.map((cert, idx) => {
               const cardAnim = getDynamicCardAnimation(idx);
+              const img = cert.image_url || cert.logo_url || cert.image || '';
               return (
                 <div
-                  key={idx}
+                  key={cert.id || idx}
                   className={`${cardAnim} hover-lift group rounded-2xl bg-stone-50/80 p-5 border border-stone-200/90 hover:bg-white hover:border-emerald-600 hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center`}
                 >
                   {/* Certificate Image Frame */}
                   <div className="h-36 w-full rounded-xl bg-white border border-stone-200/70 flex items-center justify-center p-3 overflow-hidden shadow-2xs group-hover:scale-105 transition-transform duration-300">
-                    <img
-                      src={cert.image}
-                      alt={cert.title}
-                      className="max-h-full max-w-full object-contain filter drop-shadow-xs"
-                      loading="lazy"
-                    />
+                    {img ? (
+                      <img
+                        src={img}
+                        alt={cert.title || cert.name || 'Certificate'}
+                        className="max-h-full max-w-full object-contain filter drop-shadow-xs"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <Award className="h-12 w-12 text-emerald-600" />
+                    )}
                   </div>
 
-                {/* Details */}
-                <div className="mt-4 space-y-1 w-full">
-                  <span className="inline-block text-[10px] font-extrabold uppercase tracking-wider text-emerald-900 bg-emerald-100/80 px-2 py-0.5 rounded-md border border-emerald-200">
-                    {cert.code}
-                  </span>
-                  <h3 className="font-serif text-base font-extrabold text-black pt-1">
-                    {cert.title}
-                  </h3>
-                  <p className="text-xs text-stone-600 font-semibold leading-snug">
-                    {cert.sub}
-                  </p>
+                  {/* Details */}
+                  <div className="mt-4 space-y-1 w-full">
+                    <span className="inline-block text-[10px] font-extrabold uppercase tracking-wider text-emerald-900 bg-emerald-100/80 px-2 py-0.5 rounded-md border border-emerald-200 truncate max-w-full">
+                      {cert.badge || 'Verified Standard'}
+                    </span>
+                    <h3 className="font-serif text-base font-extrabold text-black pt-1 truncate">
+                      {cert.title || cert.name}
+                    </h3>
+                    <p className="text-xs text-stone-600 font-semibold leading-snug line-clamp-2">
+                      {cert.description || 'Certified export quality compliance'}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
           </div>
 
         </div>
@@ -242,7 +283,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({ onOpenQuoteModal }) =>
               Request B2B Quote
             </button>
             <a
-              href="https://wa.me/8801916183583"
+              href={`https://wa.me/${(settings.whatsapp || '8801916183583').replace(/[^0-9]/g, '')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white/15 hover:bg-white/25 border border-white/30 text-white px-6 py-3 rounded-full text-xs sm:text-sm font-black uppercase tracking-wider transition-all duration-200"
