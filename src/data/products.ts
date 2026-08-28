@@ -7619,6 +7619,318 @@ export const PRODUCTS: ProductItem[] = [
 
   // 6. Rugs & Floor Coverings (Catalogue Collection)
   {
+  "id": "BDR-04",
+  "slug": "chunky-braided-natural-jute-beni-rug-bdr-04",
+  "code": "BDR-04",
+  "name": "Chunky Braided Natural Jute Beni Rug",
+  "category": "rugs",
+  "categoryName": "Rugs",
+  "categorySlug": "rugs",
+  "subCategory": "jhuta-rugs",
+  "image": "/products/bdr_04.png",
+  "galleryImages": [
+    "/products/bdr_04.png"
+  ],
+  "description": "Chunky thick-braided natural golden jute Beni textured rectangular area rug and doormat handcrafted from 100% natural jute.",
+  "longDescription": {
+    "overview": "The Chunky Braided Natural Jute Beni Rug (Art No: BDR-04) delivers organic tactile luxury with heavy-gauge cable-braided golden jute yarns. Ideal for entryways, living rooms, and rustic-modern spaces.",
+    "craftsmanship": "Hand-braided using 100% premium grade Bangladesh golden jute yarn, spiraled and heavy-stitch bound for extra durability and cushioned support.",
+    "exportDetails": "Rolled tightly and packed in heavy export poly-bags before placing into master cartons (4 to 6 rugs per box).",
+    "careInstructions": "Vacuum regularly without beater bar. Spot clean stains with mild soap solution."
+  },
+  "unit": "Single Piece",
+  "material": "100% Natural Jute",
+  "color": "Natural Golden Jute",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "BDR-04"
+    },
+    {
+      "key": "Material",
+      "value": "100% Natural Jute"
+    },
+    {
+      "key": "Weave",
+      "value": "Chunky Cable Beni Braided"
+    },
+    {
+      "key": "MOQ",
+      "value": "100 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Heavy-Gauge Chunky Braid",
+    "100% Pure Golden Jute",
+    "Natural Acoustic & Thermal Insulation",
+    "Reversible & Long-Lasting"
+  ]
+},
+  {
+  "id": "BDR-05",
+  "slug": "khaki-jute-cotton-beni-textured-rug-bdr-05",
+  "code": "BDR-05",
+  "name": "Khaki Jute & Cotton Beni Textured Rug",
+  "category": "rugs",
+  "categoryName": "Rugs",
+  "categorySlug": "rugs",
+  "subCategory": "jhuta-rugs",
+  "image": "/products/bdr_05.png",
+  "galleryImages": [
+    "/products/bdr_05.png"
+  ],
+  "description": "Heavy braided khaki golden jute and cotton blend Beni textured rug with reinforced bordered hem.",
+  "longDescription": {
+    "overview": "The Khaki Jute & Cotton Beni Textured Rug (Art No: BDR-05) features dense ribbed cable rows in earthy khaki tones, combining natural jute strength with cotton flexibility.",
+    "craftsmanship": "Braided on hand-operated binding frames using premium jute-cotton blended cords with sturdy fabric edge tape.",
+    "exportDetails": "Rolled on core tubes with moisture-barrier wrapping in export master cartons.",
+    "careInstructions": "Shake out debris. Vacuum on low suction. Spot clean with damp sponge."
+  },
+  "unit": "Single Piece",
+  "material": "Jute + Cotton",
+  "color": "Khaki Earth & Golden Jute",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "BDR-05"
+    },
+    {
+      "key": "Material",
+      "value": "Jute & Cotton Blend"
+    },
+    {
+      "key": "Weave",
+      "value": "Beni Textured Braid"
+    },
+    {
+      "key": "MOQ",
+      "value": "100 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Dense Ribbed Cable Weave",
+    "Jute-Cotton Blended Strength",
+    "Reinforced Edge Binding",
+    "High-Traffic Floor Durability"
+  ]
+},
+  {
+  "id": "BDR-61",
+  "slug": "deep-teal-geometric-diamond-flatweave-rug-bdr-61",
+  "code": "BDR-61",
+  "name": "Deep Teal Geometric Diamond Flatweave Rug",
+  "category": "rugs",
+  "categoryName": "Rugs",
+  "categorySlug": "rugs",
+  "subCategory": "jhuta-rugs",
+  "image": "/products/bdr_61.png",
+  "galleryImages": [
+    "/products/bdr_61.png"
+  ],
+  "description": "Rich dark teal cyan and black geometric diamond motif flatweave floor rug with fine side fringe ends.",
+  "longDescription": {
+    "overview": "The Deep Teal Geometric Diamond Flatweave Rug (Art No: BDR-61) delivers vibrant jewel-tone sophistication with all-over diamond trellis geometry in rich teal and charcoal.",
+    "craftsmanship": "Precision handloom flatwoven using dyed cotton and natural jute yarns by master artisan weavers.",
+    "exportDetails": "Packed 15-20 pcs per master export carton or export bale.",
+    "careInstructions": "Vacuum regularly. Spot clean with mild detergent."
+  },
+  "unit": "Single Piece",
+  "material": "Cotton & Jute",
+  "color": "Deep Teal Cyan & Charcoal Black",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "BDR-61"
+    },
+    {
+      "key": "Material",
+      "value": "Cotton & Jute"
+    },
+    {
+      "key": "Pattern",
+      "value": "Diamond Trellis Flatweave"
+    },
+    {
+      "key": "MOQ",
+      "value": "100 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Jewel-Tone Deep Teal Palette",
+    "Intricate Geometric Diamond Motif",
+    "Lightweight & Reversible",
+    "Eco-Friendly Natural Fibers"
+  ]
+},
+  {
+  "id": "BDR-59",
+  "slug": "mint-aqua-diamond-trellis-flatweave-rug-bdr-59",
+  "code": "BDR-59",
+  "name": "Mint Aqua Diamond Trellis Flatweave Rug",
+  "category": "rugs",
+  "categoryName": "Rugs",
+  "categorySlug": "rugs",
+  "subCategory": "jhuta-rugs",
+  "image": "/products/bdr_59.png",
+  "galleryImages": [
+    "/products/bdr_59.png"
+  ],
+  "description": "Refreshing mint aqua green and beige diamond geometric trellis flatweave rug with braided fringe.",
+  "longDescription": {
+    "overview": "The Mint Aqua Diamond Trellis Flatweave Rug (Art No: BDR-59) infuses botanical calmness into interiors with its pastel seafoam green diamond pattern.",
+    "craftsmanship": "Densely woven on traditional shuttle looms using combed cotton and resilient jute threads.",
+    "exportDetails": "Individually tagged and sealed in moisture-proof poly-sleeve cartons.",
+    "careInstructions": "Gentle vacuuming. Spot clean cold water. Air dry flat."
+  },
+  "unit": "Single Piece",
+  "material": "Cotton & Jute",
+  "color": "Mint Aqua Green & Natural Beige",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "BDR-59"
+    },
+    {
+      "key": "Material",
+      "value": "Cotton & Jute"
+    },
+    {
+      "key": "Pattern",
+      "value": "Diamond Trellis"
+    },
+    {
+      "key": "MOQ",
+      "value": "100 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Pastel Mint Aqua Hue",
+    "Crisp Geometric Definition",
+    "Soft Underfoot Texture",
+    "Sustainable Cotton-Jute Yarn"
+  ]
+},
+  {
+  "id": "BDR-10",
+  "slug": "mustard-golden-jute-diamond-rug-bdr-10",
+  "code": "BDR-10",
+  "name": "Mustard Golden Jute Diamond Rug with Black Fringe",
+  "category": "rugs",
+  "categoryName": "Rugs",
+  "categorySlug": "rugs",
+  "subCategory": "jhuta-rugs",
+  "image": "/products/bdr_10.png",
+  "galleryImages": [
+    "/products/bdr_10.png"
+  ],
+  "description": "100% natural golden jute and black diamond geometric trellis flatweave rug framed with bold black fringe tassels.",
+  "longDescription": {
+    "overview": "The Mustard Golden Jute Diamond Rug (Art No: BDR-10) combines natural golden jute with bold black diamond geometric contrast and chunky black fringe ends.",
+    "craftsmanship": "Hand-woven from 100% premium Bangladeshi golden jute on traditional handlooms.",
+    "exportDetails": "Rolled tightly with export band packaging, 10 to 15 pcs per master carton.",
+    "careInstructions": "Vacuum regularly. Spot clean dry or mild soap solution."
+  },
+  "unit": "Single Piece",
+  "material": "100% Jute",
+  "color": "Natural Mustard Jute & Black Fringe",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "BDR-10"
+    },
+    {
+      "key": "Material",
+      "value": "100% Natural Golden Jute"
+    },
+    {
+      "key": "Pattern",
+      "value": "High-Contrast Diamond Trellis"
+    },
+    {
+      "key": "MOQ",
+      "value": "100 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "100% Natural Golden Jute",
+    "High-Contrast Black Trellis",
+    "Chunky Black Edge Fringe",
+    "Eco-Friendly Boho Statement"
+  ]
+},
+  {
+  "id": "BDR-47",
+  "slug": "charcoal-ivory-ladder-stripe-handloom-rug-bdr-47",
+  "code": "BDR-47",
+  "name": "Charcoal & Ivory Ladder Stripe Handloom Rug",
+  "category": "rugs",
+  "categoryName": "Rugs",
+  "categorySlug": "rugs",
+  "subCategory": "jhuta-rugs",
+  "image": "/products/bdr_47.png",
+  "galleryImages": [
+    "/products/bdr_47.png"
+  ],
+  "description": "Charcoal grey and ivory vertical ladder stripe handloom flatweave rug finished with braided side fringe tassels.",
+  "longDescription": {
+    "overview": "The Charcoal & Ivory Ladder Stripe Handloom Rug (Art No: BDR-47) features alternating textured ladder block stripes in smoky charcoal and natural ivory.",
+    "craftsmanship": "Handcrafted on pit looms by skilled artisans with blended jute and cotton yarns for tactile relief and longevity.",
+    "exportDetails": "Packed 15 to 20 pcs per master export carton.",
+    "careInstructions": "Vacuum regularly. Spot clean with damp cloth."
+  },
+  "unit": "Single Piece",
+  "material": "Jute & Cotton",
+  "color": "Smoky Charcoal & Ivory White",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "BDR-47"
+    },
+    {
+      "key": "Material",
+      "value": "Jute & Cotton"
+    },
+    {
+      "key": "Pattern",
+      "value": "Ladder Block Stripe"
+    },
+    {
+      "key": "MOQ",
+      "value": "100 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Modern Ladder Stripe Geometry",
+    "Smoky Charcoal & Ivory Contrast",
+    "Braided Natural Fringe",
+    "Reversible Dual-Sided Construction"
+  ]
+},
+  {
   "id": "BDR-83",
   "slug": "tangerine-orange-shaggy-floor-mat-bdr-83",
   "code": "BDR-83",
