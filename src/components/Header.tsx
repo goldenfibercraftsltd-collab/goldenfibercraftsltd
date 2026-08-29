@@ -324,10 +324,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
             <a
               href={
                 emailClientIndex === 0
-                  ? 'https://mail.google.com/mail/?view=cm&fs=1&to=info@goldenfibercraftsltd.com&su=Export%20Inquiry%20-%20Golden%20Fiber%20Crafts%20Ltd'
+                  ? 'https://mail.google.com/mail/?view=cm&fs=1&to=shafiq@goldenfibercraftsltd.com&su=Export%20Inquiry%20-%20Golden%20Fiber%20Crafts%20Ltd'
                   : emailClientIndex === 1
-                  ? 'https://outlook.live.com/mail/0/deeplink/compose?to=info@goldenfibercraftsltd.com&subject=Export%20Inquiry%20-%20Golden%20Fiber%20Crafts%20Ltd'
-                  : 'https://compose.mail.yahoo.com/?to=info@goldenfibercraftsltd.com&subject=Export%20Inquiry%20-%20Golden%20Fiber%20Crafts%20Ltd'
+                  ? 'https://outlook.live.com/mail/0/deeplink/compose?to=shafiq@goldenfibercraftsltd.com&subject=Export%20Inquiry%20-%20Golden%20Fiber%20Crafts%20Ltd'
+                  : 'https://compose.mail.yahoo.com/?to=shafiq@goldenfibercraftsltd.com&subject=Export%20Inquiry%20-%20Golden%20Fiber%20Crafts%20Ltd'
               }
               target="_blank"
               rel="noopener noreferrer"

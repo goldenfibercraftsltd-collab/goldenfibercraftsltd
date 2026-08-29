@@ -33,7 +33,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
       })
       .catch(() => {
         // Fallback for dev mode
-        setAdminUser({ username: 'Admin', email: 'info@goldenfibercraftsltd.com' });
+        setAdminUser({ username: 'Admin', email: 'shafiq@goldenfibercraftsltd.com' });
       })
       .finally(() => setLoading(false));
   }, [navigate]);
@@ -69,7 +69,7 @@ export const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
           <div className="flex items-center gap-3 text-xs">
             <span className="text-slate-400">Signed in as</span>
             <span className="font-bold text-white bg-slate-800 px-3 py-1 rounded-full border border-slate-700">
-              {adminUser?.email || 'info@goldenfibercraftsltd.com'}
+              {adminUser?.email || 'shafiq@goldenfibercraftsltd.com'}
             </span>
           </div>
         </header>
