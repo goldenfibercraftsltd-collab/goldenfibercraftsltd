@@ -265,7 +265,7 @@ export const AdminSettings: React.FC = () => {
               <div className="border-b border-slate-800 pb-3">
                 <h3 className="font-serif text-lg font-extrabold text-white flex items-center gap-2">
                   <MapPin className="h-5 w-5 text-emerald-400" />
-                  Corporate Office & Factory Units (Salna & Kishoreganj)
+                  Corporate Office & Factory Units (Gazipur & Kishoreganj)
                 </h3>
                 <p className="text-xs text-slate-400 mt-0.5">Real-time address details shown on Contact Us page and Site Footer</p>
               </div>
@@ -297,7 +297,7 @@ export const AdminSettings: React.FC = () => {
 
                 {/* Factory 1 */}
                 <div className="bg-slate-950 p-5 rounded-2xl border border-slate-800 space-y-3">
-                  <span className="text-xs font-mono font-bold text-emerald-400 uppercase">2. Factory 1 (Salna, Gazipur)</span>
+                  <span className="text-xs font-mono font-bold text-emerald-400 uppercase">2. Factory 1 (Gazipur)</span>
                   <div className="space-y-1.5">
                     <label className="block text-xs font-bold text-slate-300">Factory 1 Address & Location</label>
                     <textarea

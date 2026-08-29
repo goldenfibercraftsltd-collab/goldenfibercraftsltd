@@ -56,7 +56,7 @@ export const OFFICIAL_WEBSITE = "www.goldenfibercraftsltd.com";
 
 export const COMPANY_ADDRESSES = {
   corporateOffice: "House# 78, Road# 16, Sector# 11, Uttara, Dhaka, Bangladesh",
-  factoryUnit1: "Factory 1: Paler para, Akter market (Beside UTAH Garments), Salna, Gazipur",
+  factoryUnit1: "Factory 1: Paler para, Akter market (Beside UTAH Garments), Gazipur",
   factoryUnit2: "Factory 2: Kacharipara, Milonganj Bazar, Nilganj, Kishoreganj",
 };
 

@@ -193,7 +193,7 @@ export const Footer: React.FC = () => {
                 <MapPin className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
                   <span className="text-emerald-300 font-normal block text-xs uppercase tracking-wider">
-                    Factory 1 (Salna, Gazipur):
+                    Factory 1 (Gazipur):
                   </span>
                   <span className="text-white font-normal text-xs sm:text-sm">
                     {settings.factory_unit_1}
@@ -223,7 +223,7 @@ export const Footer: React.FC = () => {
       {/* Bottom Copyright Strip */}
       <div className="bg-[#032e23] py-3.5 px-4 text-center text-xs sm:text-sm text-emerald-100 font-normal border-t border-emerald-900/80">
         <div className="mx-auto max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span>{settings.copyright_text}</span>
+          <span>{settings.copyright_text || "Golden Fiber Crafts Ltd. All rights reserved."}</span>
           <span className="text-amber-300 font-serif italic font-normal">"{settings.tagline}"</span>
           <button
             onClick={scrollToTop}

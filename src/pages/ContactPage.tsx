@@ -198,7 +198,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuoteModal }) =>
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
-                    <h4 className="font-black text-stone-950 text-xs uppercase tracking-wider">Factory 1 (Salna, Gazipur)</h4>
+                    <h4 className="font-black text-stone-950 text-xs uppercase tracking-wider">Factory 1 (Gazipur)</h4>
                     <p className="text-xs sm:text-sm text-stone-700 font-medium leading-relaxed mt-0.5">
                       {settings.factory_unit_1}
                     </p>
