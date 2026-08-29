@@ -56,12 +56,95 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
     { id: 'bamboo', label: 'Bamboo Crafts' }
   ];
 
-  // Filtered Products
+  // Filtered Products (Curating 1-3 diverse products per category & subcategory for 'all' tab)
   const filteredProducts = useMemo(() => {
-    if (selectedCategory === 'all') {
-      return allActiveProducts.slice(0, 15); // Show top 15 featured items (3 rows of 5)
+    if (selectedCategory !== 'all') {
+      return allActiveProducts.filter(p => 
+        p.category === selectedCategory || 
+        p.categorySlug === selectedCategory || 
+        (p as any).category_slug === selectedCategory ||
+        (p as any).category_id === selectedCategory
+      );
     }
-    return allActiveProducts.filter(p => p.category === selectedCategory || p.categorySlug === selectedCategory);
+
+    // Curate a vibrant diverse showcase across all major categories & subcategories
+    const categoryOrder = [
+      'jute',
+      'seagrass',
+      'kans-grass',
+      'water-hyacinth',
+      'date-leaf',
+      'rugs',
+      'recycle-fabric',
+      'bamboo',
+      'palm-fiber',
+      'rattan'
+    ];
+
+    const curated: ProductItem[] = [];
+    const seenIds = new Set<string>();
+
+    categoryOrder.forEach(catKey => {
+      // Find all products in this category
+      const catProducts = allActiveProducts.filter(p => 
+        p.category === catKey || 
+        p.categorySlug === catKey || 
+        (p as any).category_slug === catKey ||
+        (p as any).category_id === catKey
+      );
+
+      if (catProducts.length === 0) return;
+
+      // Group products in this category by subcategory
+      const subcatMap = new Map<string, ProductItem[]>();
+      catProducts.forEach(p => {
+        const sub = p.subCategory || (p as any).sub_category || 'baskets';
+        if (!subcatMap.has(sub)) subcatMap.set(sub, []);
+        subcatMap.get(sub)!.push(p);
+      });
+
+      let addedForThisCat = 0;
+      const maxForCat = 2; // 2 items per category = 15-20 balanced showcase items
+
+      // Take 1 item from each subcategory starting with the earliest/initial items
+      for (const [_, subItems] of subcatMap.entries()) {
+        if (addedForThisCat >= maxForCat) break;
+        const item = subItems.find(i => !seenIds.has(i.id) && !seenIds.has(i.code));
+        if (item) {
+          curated.push(item);
+          seenIds.add(item.id);
+          seenIds.add(item.code);
+          addedForThisCat++;
+        }
+      }
+
+      // If category didn't fill from subcategories, pick from general category products
+      if (addedForThisCat < maxForCat) {
+        for (const item of catProducts) {
+          if (addedForThisCat >= maxForCat) break;
+          if (!seenIds.has(item.id) && !seenIds.has(item.code)) {
+            curated.push(item);
+            seenIds.add(item.id);
+            seenIds.add(item.code);
+            addedForThisCat++;
+          }
+        }
+      }
+    });
+
+    // If less than 15 items, fill with remaining items
+    if (curated.length < 15) {
+      for (const p of allActiveProducts) {
+        if (curated.length >= 20) break;
+        if (!seenIds.has(p.id) && !seenIds.has(p.code)) {
+          curated.push(p);
+          seenIds.add(p.id);
+          seenIds.add(p.code);
+        }
+      }
+    }
+
+    return curated;
   }, [allActiveProducts, selectedCategory]);
 
   return (
@@ -121,7 +204,8 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
                     src={product.image}
                     alt={product.name}
                     className="h-full w-full object-contain group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
+                    loading={idx < 5 ? "eager" : "lazy"}
+                    decoding="async"
                   />
 
                   {/* Clean Subtle Art No Badge */}
