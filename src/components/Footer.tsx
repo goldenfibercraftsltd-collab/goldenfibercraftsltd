@@ -53,7 +53,7 @@ export const Footer: React.FC = () => {
                 <span className="font-serif text-xl sm:text-2xl lg:text-[1.65rem] font-black text-white tracking-wide uppercase leading-tight drop-shadow-xs">
                   GOLDEN FIBER
                 </span>
-                <span className="text-xs sm:text-sm font-sans font-black text-amber-400 tracking-[0.28em] uppercase mt-0.5 drop-shadow-xs">
+                <span className="text-xs sm:text-sm font-sans font-black text-amber-400 tracking-[0.28em] pl-[0.28em] uppercase mt-0.5 drop-shadow-xs text-center">
                   CRAFTS LTD.
                 </span>
               </div>
