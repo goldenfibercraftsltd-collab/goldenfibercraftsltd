@@ -83,7 +83,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2.5 text-xs sm:text-sm font-normal text-emerald-100">
               <li>
                 <a
-                  href="/company-profile.pdf"
+                  href={settings.footer_company_profile_url || "/company-profile.pdf"}
                   download="Golden_Fiber_Crafts_Ltd_Company_Profile.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -95,7 +95,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  to="/terms"
+                  to={settings.footer_terms_url || "/terms"}
                   onClick={scrollToTop}
                   className="hover:text-amber-300 transition-colors flex items-center gap-2"
                 >
@@ -105,7 +105,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  to="/faq"
+                  to={settings.footer_faq_url || "/faq"}
                   onClick={scrollToTop}
                   className="hover:text-amber-300 transition-colors flex items-center gap-2"
                 >
@@ -113,6 +113,28 @@ export const Footer: React.FC = () => {
                   <span>FAQ</span>
                 </Link>
               </li>
+              {settings.footer_info_custom_title_1 && (
+                <li>
+                  <a
+                    href={settings.footer_info_custom_url_1 || "#"}
+                    className="hover:text-amber-300 transition-colors flex items-center gap-2"
+                  >
+                    <FileText className="h-3.5 w-3.5 text-amber-400 shrink-0" />
+                    <span>{settings.footer_info_custom_title_1}</span>
+                  </a>
+                </li>
+              )}
+              {settings.footer_info_custom_title_2 && (
+                <li>
+                  <a
+                    href={settings.footer_info_custom_url_2 || "#"}
+                    className="hover:text-amber-300 transition-colors flex items-center gap-2"
+                  >
+                    <FileText className="h-3.5 w-3.5 text-amber-400 shrink-0" />
+                    <span>{settings.footer_info_custom_title_2}</span>
+                  </a>
+                </li>
+              )}
             </ul>
           </div>
 

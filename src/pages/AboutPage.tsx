@@ -94,16 +94,16 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
               Company History & Overview
             </span>
             <h2 className="font-serif text-2xl sm:text-4xl font-extrabold text-stone-950 leading-tight">
-              Showcasing Bangladesh's Natural Fibers to the Global Marketplace
+              {settings.about_history_title || "Showcasing Bangladesh's Natural Fibers to the Global Marketplace"}
             </h2>
             <p className="text-stone-700 text-sm sm:text-base leading-relaxed font-medium">
-              <strong className="text-stone-950 font-bold">{settings.site_name}</strong> was established with a vision to showcase the beauty, versatility, and sustainability of Bangladesh's natural fibers to the global marketplace. Inspired by the country's rich tradition of handicrafts and its reputation as the home of the world's finest jute—known as the <em className="text-emerald-900 font-semibold">"Golden Fiber"</em>—the company was founded to create a high-quality diverse range of eco-friendly products, including jute bags, home décor, storage solutions, gift items, and handcrafted accessories.
+              {settings.about_history_p1 || `${settings.site_name} was established with a vision to showcase the beauty, versatility, and sustainability of Bangladesh's natural fibers to the global marketplace. Inspired by the country's rich tradition of handicrafts and its reputation as the home of the world's finest jute—known as the "Golden Fiber"—the company was founded to create a high-quality diverse range of eco-friendly products.`}
             </p>
             <p className="text-stone-700 text-sm sm:text-base leading-relaxed font-medium">
-              Over the years, we have continuously invested in product innovation, quality management, and sustainable manufacturing practices. Our commitment to excellence has enabled us to build strong relationships with customers across <strong className="text-stone-950 font-bold">Europe, North America, Australia, Japan,</strong> and other international markets.
+              {settings.about_history_p2 || "Over the years, we have continuously invested in product innovation, quality management, and sustainable manufacturing practices. Our commitment to excellence has enabled us to build strong relationships with customers across Europe, North America, Australia, Japan, and other international markets."}
             </p>
             <p className="text-stone-700 text-sm leading-relaxed font-medium">
-              Today, {settings.site_name} is recognized as a reliable manufacturer and exporter of eco-friendly handicrafts and natural fiber products. Guided by our core values of quality, integrity, innovation, and sustainability, we remain dedicated to promoting environmentally responsible products while supporting local artisans and contributing to Bangladesh's growing handicraft industry.
+              {settings.about_history_p3 || `Today, ${settings.site_name} is recognized as a reliable manufacturer and exporter of eco-friendly handicrafts and natural fiber products. Guided by our core values of quality, integrity, innovation, and sustainability, we remain dedicated to promoting environmentally responsible products while supporting local artisans.`}
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 pt-2">
@@ -126,8 +126,8 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
 
           <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white bg-stone-100 group">
             <img
-              src="/about/authentic_artisans_circle.png"
-              alt="Golden Fiber Crafts Rural Artisan Workforce Handweaving"
+              src={settings.about_artisan_image || "/about/authentic_artisans_circle.png"}
+              alt={`${settings.site_name} Rural Artisan Workforce Handweaving`}
               className="w-full h-[460px] object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/30 to-transparent flex items-end p-8 text-white">
@@ -135,9 +135,11 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
                 <span className="inline-block px-2.5 py-0.5 rounded-full bg-emerald-500/30 text-emerald-300 text-xs font-black uppercase tracking-widest border border-emerald-400/40">
                   Empowerment & Heritage Craft
                 </span>
-                <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">Over 10,000+ Skilled Artisans Workforce</h3>
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">
+                  {settings.about_artisan_headline || "Over 10,000+ Skilled Artisans Workforce"}
+                </h3>
                 <p className="text-sm text-stone-100 font-medium leading-relaxed">
-                  Decentralized rural artisan clusters across Bangladesh creating authentic woven handicrafts.
+                  {settings.about_artisan_subtext || "Decentralized rural artisan clusters across Bangladesh creating authentic woven handicrafts."}
                 </p>
               </div>
             </div>
@@ -160,9 +162,11 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
                 <div className="h-12 w-12 rounded-2xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center border border-emerald-400/30">
                   <Eye className="h-6 w-6" />
                 </div>
-                <h3 className="font-serif text-2xl font-bold text-amber-300">Our Vision</h3>
+                <h3 className="font-serif text-2xl font-bold text-amber-300">
+                  {settings.vision_title || "Our Vision"}
+                </h3>
                 <p className="text-stone-100 text-sm sm:text-base leading-relaxed font-medium">
-                  "To become a globally trusted leader in sustainable jute, natural fiber, and handicraft products, transforming Bangladesh's rich natural resources and traditional craftsmanship into innovative, high-quality solutions for a greener world."
+                  "{settings.vision_text || "To become a globally trusted leader in sustainable jute, natural fiber, and handicraft products, transforming Bangladesh's rich natural resources and traditional craftsmanship into innovative, high-quality solutions for a greener world."}"
                 </p>
               </div>
               <div className="pt-4 border-t border-emerald-800/60 flex items-center gap-2 text-xs text-emerald-300 font-bold">
@@ -177,29 +181,12 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
                 <div className="h-12 w-12 rounded-2xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center border border-emerald-400/30">
                   <Target className="h-6 w-6" />
                 </div>
-                <h3 className="font-serif text-2xl font-bold text-amber-300">Our Mission</h3>
-                <ul className="space-y-2.5 text-xs sm:text-sm text-stone-100 font-medium">
-                  <li className="flex items-start gap-2.5">
-                    <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
-                    <span>Promote sustainable living through eco-friendly products</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
-                    <span>Manufacture premium-quality jute and handicraft items</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
-                    <span>Support local artisans and skilled craftsmen</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
-                    <span>Build long-term partnerships with customers worldwide</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
-                    <span>Contribute to reducing plastic pollution through natural fiber alternatives</span>
-                  </li>
-                </ul>
+                <h3 className="font-serif text-2xl font-bold text-amber-300">
+                  {settings.mission_title || "Our Mission"}
+                </h3>
+                <p className="text-stone-100 text-sm sm:text-base leading-relaxed font-medium">
+                  {settings.mission_text || "To design, produce, and export premier eco-friendly jute, seagrass, and natural handicraft products that surpass global quality benchmarks, while providing fair living wages, hygienic work conditions, and continuous skill development for our artisan community."}
+                </p>
               </div>
               <div className="pt-4 border-t border-emerald-800/60 flex items-center gap-2 text-xs text-emerald-300 font-bold">
                 <Sparkles className="h-4 w-4" />

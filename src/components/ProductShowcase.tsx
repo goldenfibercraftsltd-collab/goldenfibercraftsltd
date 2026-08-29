@@ -1,9 +1,10 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ProductItem } from '../data/products';
 import { getAllActiveProducts, fetchLiveProducts } from '../utils/productStore';
 import { ArrowRight } from 'lucide-react';
 import { ScrollTypingText } from './ScrollTypingText';
+import { getDynamicCardAnimation, initScrollReveal } from '../utils/scrollReveal';
 
 interface ProductShowcaseProps {
   products?: ProductItem[];
@@ -147,6 +148,13 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
     return curated;
   }, [allActiveProducts, selectedCategory]);
 
+  useEffect(() => {
+    const cleanup = initScrollReveal();
+    return () => {
+      if (cleanup) cleanup();
+    };
+  }, [filteredProducts, selectedCategory]);
+
   return (
     <section className="py-14 bg-white font-sans border-t border-stone-200/80">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10">
@@ -196,7 +204,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
                   else navigate(`/products/${product.slug || product.id}`);
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="group relative rounded-2xl bg-white border border-stone-200/90 hover:border-stone-300 shadow-xs hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col cursor-pointer hover-lift-sm"
+                className={`group relative rounded-2xl bg-white border border-stone-200/90 hover:border-stone-300 shadow-xs hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col cursor-pointer hover-lift-sm ${getDynamicCardAnimation(idx)}`}
               >
                 {/* 1:1 Square Image Container */}
                 <div className="relative aspect-square w-full bg-stone-50/60 overflow-hidden flex items-center justify-center p-6">

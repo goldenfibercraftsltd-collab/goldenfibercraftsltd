@@ -33,7 +33,7 @@ import {
 
 export const AdminSettings: React.FC = () => {
   usePageTitle('Site Settings & Content Editor - Admin');
-  const [activeTab, setActiveTab] = useState<'general' | 'addresses' | 'leadership' | 'technical' | 'social' | 'footer'>('general');
+  const [activeTab, setActiveTab] = useState<'general' | 'about' | 'addresses' | 'leadership' | 'technical' | 'social' | 'footer'>('general');
   const [settings, setSettings] = useState<SiteSettingsData>(() => getLocalSiteSettings());
   const [saving, setSaving] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -81,11 +81,12 @@ export const AdminSettings: React.FC = () => {
 
   const navTabs = [
     { id: 'general', label: 'General & Branding', icon: Tag },
+    { id: 'about', label: 'About Us Page Content', icon: Sparkles },
     { id: 'addresses', label: 'Offices & Factory Units', icon: MapPin },
     { id: 'leadership', label: 'Key Leadership & Bios', icon: User },
     { id: 'technical', label: 'Technical & Production Specs', icon: Sliders },
     { id: 'social', label: 'Social Media & Links', icon: Share2 },
-    { id: 'footer', label: 'Footer & Legal Content', icon: FileText },
+    { id: 'footer', label: 'Footer & Information Links', icon: FileText },
   ];
 
   return (
@@ -655,15 +656,165 @@ export const AdminSettings: React.FC = () => {
             </div>
           )}
 
-          {/* TAB 6: FOOTER & LEGAL CONTENT */}
+          {/* TAB: ABOUT US PAGE CONTENT */}
+          {activeTab === 'about' && (
+            <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl animate-fadeIn">
+              <div className="border-b border-slate-800 pb-3">
+                <h3 className="font-serif text-lg font-extrabold text-white flex items-center gap-2">
+                  <Sparkles className="h-5 w-5 text-emerald-400" />
+                  About Us Page Texts & Media Manager
+                </h3>
+                <p className="text-xs text-slate-400 mt-0.5">Live visual text editor for every single section and word on the About page</p>
+              </div>
+
+              <div className="space-y-6">
+                {/* 1. Header Banner Intro */}
+                <div className="bg-slate-950 p-5 rounded-2xl border border-slate-800 space-y-3">
+                  <span className="text-xs font-mono font-bold text-amber-400 uppercase">1. About Header Tagline & Intro</span>
+                  <div className="space-y-1.5">
+                    <label className="block text-xs font-bold text-slate-300">About Page Hero Intro Subtitle</label>
+                    <textarea
+                      rows={3}
+                      value={settings.about_intro || ''}
+                      onChange={(e) => setSettings(prev => ({ ...prev, about_intro: e.target.value }))}
+                      className="w-full px-4 py-2.5 bg-slate-900 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs text-white outline-none leading-relaxed"
+                    />
+                  </div>
+                </div>
+
+                {/* 2. Company History & Overview */}
+                <div className="bg-slate-950 p-5 rounded-2xl border border-slate-800 space-y-4">
+                  <span className="text-xs font-mono font-bold text-emerald-400 uppercase">2. Company History & Overview Section</span>
+                  <div className="space-y-1.5">
+                    <label className="block text-xs font-bold text-slate-300">Main Headline Title</label>
+                    <input
+                      type="text"
+                      value={settings.about_history_title || ''}
+                      onChange={(e) => setSettings(prev => ({ ...prev, about_history_title: e.target.value }))}
+                      className="w-full px-4 py-2.5 bg-slate-900 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs font-bold text-white outline-none"
+                    />
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="block text-xs font-bold text-slate-300">Paragraph 1 (Founding Vision & Natural Fibers)</label>
+                    <textarea
+                      rows={3}
+                      value={settings.about_history_p1 || ''}
+                      onChange={(e) => setSettings(prev => ({ ...prev, about_history_p1: e.target.value }))}
+                      className="w-full px-4 py-2.5 bg-slate-900 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs text-slate-200 outline-none leading-relaxed"
+                    />
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="block text-xs font-bold text-slate-300">Paragraph 2 (Global Markets & Innovation)</label>
+                    <textarea
+                      rows={3}
+                      value={settings.about_history_p2 || ''}
+                      onChange={(e) => setSettings(prev => ({ ...prev, about_history_p2: e.target.value }))}
+                      className="w-full px-4 py-2.5 bg-slate-900 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs text-slate-200 outline-none leading-relaxed"
+                    />
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="block text-xs font-bold text-slate-300">Paragraph 3 (Today's Position & Core Values)</label>
+                    <textarea
+                      rows={3}
+                      value={settings.about_history_p3 || ''}
+                      onChange={(e) => setSettings(prev => ({ ...prev, about_history_p3: e.target.value }))}
+                      className="w-full px-4 py-2.5 bg-slate-900 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs text-slate-200 outline-none leading-relaxed"
+                    />
+                  </div>
+                </div>
+
+                {/* 3. Artisan Highlight */}
+                <div className="bg-slate-950 p-5 rounded-2xl border border-slate-800 space-y-4">
+                  <span className="text-xs font-mono font-bold text-amber-400 uppercase">3. Rural Artisan Workforce Highlight Card</span>
+                  <div className="space-y-1.5">
+                    <label className="block text-xs font-bold text-slate-300">Artisan Section Headline</label>
+                    <input
+                      type="text"
+                      value={settings.about_artisan_headline || ''}
+                      onChange={(e) => setSettings(prev => ({ ...prev, about_artisan_headline: e.target.value }))}
+                      className="w-full px-4 py-2.5 bg-slate-900 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs font-bold text-white outline-none"
+                    />
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="block text-xs font-bold text-slate-300">Artisan Section Subtext</label>
+                    <textarea
+                      rows={2}
+                      value={settings.about_artisan_subtext || ''}
+                      onChange={(e) => setSettings(prev => ({ ...prev, about_artisan_subtext: e.target.value }))}
+                      className="w-full px-4 py-2.5 bg-slate-900 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs text-slate-200 outline-none leading-relaxed"
+                    />
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="block text-xs font-bold text-slate-300">Artisan Feature Photo (Cloudflare Image Uploader)</label>
+                    <ImageUploader
+                      value={settings.about_artisan_image || '/about/authentic_artisans_circle.png'}
+                      onChange={(url: string) => setSettings(prev => ({ ...prev, about_artisan_image: url }))}
+                      folder="about"
+                      label="Artisan Feature Photo"
+                    />
+                  </div>
+                </div>
+
+                {/* 4. Vision & Mission */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-slate-950 p-5 rounded-2xl border border-slate-800 space-y-3">
+                    <span className="text-xs font-mono font-bold text-emerald-400 uppercase">4. Our Vision</span>
+                    <div className="space-y-1.5">
+                      <label className="block text-xs font-bold text-slate-300">Vision Card Title</label>
+                      <input
+                        type="text"
+                        value={settings.vision_title || ''}
+                        onChange={(e) => setSettings(prev => ({ ...prev, vision_title: e.target.value }))}
+                        className="w-full px-4 py-2.5 bg-slate-900 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs font-bold text-white outline-none"
+                      />
+                    </div>
+                    <div className="space-y-1.5">
+                      <label className="block text-xs font-bold text-slate-300">Vision Description</label>
+                      <textarea
+                        rows={4}
+                        value={settings.vision_text || ''}
+                        onChange={(e) => setSettings(prev => ({ ...prev, vision_text: e.target.value }))}
+                        className="w-full px-4 py-2.5 bg-slate-900 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs text-slate-200 outline-none leading-relaxed"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="bg-slate-950 p-5 rounded-2xl border border-slate-800 space-y-3">
+                    <span className="text-xs font-mono font-bold text-emerald-400 uppercase">5. Our Mission</span>
+                    <div className="space-y-1.5">
+                      <label className="block text-xs font-bold text-slate-300">Mission Card Title</label>
+                      <input
+                        type="text"
+                        value={settings.mission_title || ''}
+                        onChange={(e) => setSettings(prev => ({ ...prev, mission_title: e.target.value }))}
+                        className="w-full px-4 py-2.5 bg-slate-900 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs font-bold text-white outline-none"
+                      />
+                    </div>
+                    <div className="space-y-1.5">
+                      <label className="block text-xs font-bold text-slate-300">Mission Description</label>
+                      <textarea
+                        rows={4}
+                        value={settings.mission_text || ''}
+                        onChange={(e) => setSettings(prev => ({ ...prev, mission_text: e.target.value }))}
+                        className="w-full px-4 py-2.5 bg-slate-900 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs text-slate-200 outline-none leading-relaxed"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          )}
+
+          {/* TAB 7: FOOTER & INFORMATION LINKS */}
           {activeTab === 'footer' && (
             <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-xl animate-fadeIn">
               <div className="border-b border-slate-800 pb-3">
                 <h3 className="font-serif text-lg font-extrabold text-white flex items-center gap-2">
                   <FileText className="h-5 w-5 text-emerald-400" />
-                  Footer Brand Description & Copyright Notice
+                  Footer Content, Information Links & Copyright
                 </h3>
-                <p className="text-xs text-slate-400 mt-0.5">Short company intro and legal notices shown across the bottom of every page</p>
+                <p className="text-xs text-slate-400 mt-0.5">Manage every single link and text appearing on the site footer</p>
               </div>
 
               <div className="space-y-6">
@@ -678,14 +829,83 @@ export const AdminSettings: React.FC = () => {
                   />
                 </div>
 
-                <div className="space-y-1.5">
-                  <label className="block text-xs font-bold text-slate-300 uppercase tracking-wider">About Us Hero Banner Intro</label>
-                  <textarea
-                    rows={3}
-                    value={settings.about_intro}
-                    onChange={(e) => setSettings(prev => ({ ...prev, about_intro: e.target.value }))}
-                    className="w-full px-4 py-2.5 bg-slate-950 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs text-slate-200 outline-none leading-relaxed"
-                  />
+                {/* Information Column Link URLs */}
+                <div className="bg-slate-950 p-5 rounded-2xl border border-slate-800 space-y-4">
+                  <span className="text-xs font-mono font-bold text-amber-400 uppercase">Information Column Links</span>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="space-y-1.5">
+                      <label className="block text-xs font-bold text-slate-300">Company Profile PDF URL</label>
+                      <input
+                        type="text"
+                        value={settings.footer_company_profile_url || ''}
+                        onChange={(e) => setSettings(prev => ({ ...prev, footer_company_profile_url: e.target.value }))}
+                        placeholder="/company-profile.pdf"
+                        className="w-full px-4 py-2.5 bg-slate-900 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs text-white outline-none"
+                      />
+                    </div>
+                    <div className="space-y-1.5">
+                      <label className="block text-xs font-bold text-slate-300">Terms & Conditions URL</label>
+                      <input
+                        type="text"
+                        value={settings.footer_terms_url || ''}
+                        onChange={(e) => setSettings(prev => ({ ...prev, footer_terms_url: e.target.value }))}
+                        placeholder="/terms"
+                        className="w-full px-4 py-2.5 bg-slate-900 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs text-white outline-none"
+                      />
+                    </div>
+                    <div className="space-y-1.5">
+                      <label className="block text-xs font-bold text-slate-300">FAQ Page URL</label>
+                      <input
+                        type="text"
+                        value={settings.footer_faq_url || ''}
+                        onChange={(e) => setSettings(prev => ({ ...prev, footer_faq_url: e.target.value }))}
+                        placeholder="/faq"
+                        className="w-full px-4 py-2.5 bg-slate-900 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs text-white outline-none"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                    <div className="space-y-1.5">
+                      <label className="block text-xs font-bold text-slate-300">Custom Link 1 (Title & URL)</label>
+                      <div className="grid grid-cols-2 gap-2">
+                        <input
+                          type="text"
+                          value={settings.footer_info_custom_title_1 || ''}
+                          onChange={(e) => setSettings(prev => ({ ...prev, footer_info_custom_title_1: e.target.value }))}
+                          placeholder="e.g. Catalog 2026"
+                          className="w-full px-3 py-2 bg-slate-900 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs text-white outline-none"
+                        />
+                        <input
+                          type="text"
+                          value={settings.footer_info_custom_url_1 || ''}
+                          onChange={(e) => setSettings(prev => ({ ...prev, footer_info_custom_url_1: e.target.value }))}
+                          placeholder="https://..."
+                          className="w-full px-3 py-2 bg-slate-900 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs text-white outline-none"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <label className="block text-xs font-bold text-slate-300">Custom Link 2 (Title & URL)</label>
+                      <div className="grid grid-cols-2 gap-2">
+                        <input
+                          type="text"
+                          value={settings.footer_info_custom_title_2 || ''}
+                          onChange={(e) => setSettings(prev => ({ ...prev, footer_info_custom_title_2: e.target.value }))}
+                          placeholder="e.g. CSR Report"
+                          className="w-full px-3 py-2 bg-slate-900 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs text-white outline-none"
+                        />
+                        <input
+                          type="text"
+                          value={settings.footer_info_custom_url_2 || ''}
+                          onChange={(e) => setSettings(prev => ({ ...prev, footer_info_custom_url_2: e.target.value }))}
+                          placeholder="https://..."
+                          className="w-full px-3 py-2 bg-slate-900 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs text-white outline-none"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="space-y-1.5">
