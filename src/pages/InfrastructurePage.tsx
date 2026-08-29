@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import {
   Sparkles,
@@ -19,6 +19,11 @@ import {
 } from 'lucide-react';
 import { ScrollTypingText } from '../components/ScrollTypingText';
 import { usePageTitle } from '../utils/usePageTitle';
+import {
+  PageSectionItem,
+  getLocalSections,
+  fetchLiveSections
+} from '../utils/pageSectionsStore';
 
 interface InfrastructurePageProps {
   onSelectProduct?: (product: any) => void;
@@ -363,6 +368,22 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
   usePageTitle('Manufacturing Infrastructure & Facilities');
   const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [sections, setSections] = useState<PageSectionItem[]>(() => getLocalSections('infrastructure'));
+
+  useEffect(() => {
+    fetchLiveSections('infrastructure').then(data => {
+      if (data && data.length > 0) setSections(data);
+    });
+
+    const handleUpdated = (e: any) => {
+      if (e.detail?.type === 'infrastructure' || !e.detail?.type) {
+        setSections(getLocalSections('infrastructure'));
+      }
+    };
+
+    window.addEventListener('gfcl_sections_updated', handleUpdated);
+    return () => window.removeEventListener('gfcl_sections_updated', handleUpdated);
+  }, []);
 
   return (
     <div className="bg-[#fcfbf9] text-stone-800 font-sans min-h-screen animate-fadeIn">
@@ -433,16 +454,23 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
       </div>
 
       {/* ---------------------------------------------------- */}
-      {/* 2. Four Alternating Craftsmanship & Product Sections */}
+      {/* 2. Alternating Dynamic Craftsmanship & Product Sections */}
       {/* ---------------------------------------------------- */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-8 sm:space-y-12">
-        {CRAFT_SECTIONS.map((section, idx) => {
+        {sections.filter(s => s.is_active !== 0 && s.is_active !== false).map((section, idx) => {
           const isEven = idx % 2 === 1;
+          const img = section.image_url || section.image || '/infrastructure/jute_bags.jpg';
+          const imgAlt = section.image_alt || section.imageAlt || section.title;
+          const highlights = section.highlights || section.points || [];
+          const processSteps = section.process || [];
+          const categorySlug = section.category_slug || section.categorySlug || 'jute';
+          const title = section.title || (section as any).productTitle;
+          const tagline = section.subtitle || section.badge || (section as any).tagline;
 
           return (
             <section
-              key={section.id}
-              id={section.id}
+              key={section.id || idx}
+              id={section.section_key || String(section.id || idx)}
               className="scroll-mt-20 pb-8 border-b border-stone-200/70 last:border-b-0 last:pb-0"
             >
               <div
@@ -457,14 +485,14 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
                     
                     {/* Number Stamp */}
                     <div className="absolute top-4 left-4 z-20 bg-stone-950/80 backdrop-blur-md text-amber-300 font-mono text-xs font-extrabold px-3.5 py-1.5 rounded-xl border border-white/20 shadow-md">
-                      SECTION {section.number}
+                      SECTION {section.number || (idx + 1).toString().padStart(2, '0')}
                     </div>
 
                     {/* Image Container with Top-Flush Alignment */}
                     <div className="relative h-[320px] sm:h-[400px] lg:h-[460px] w-full overflow-hidden">
                       <img
-                        src={section.image}
-                        alt={section.imageAlt}
+                        src={img}
+                        alt={imgAlt}
                         loading="lazy"
                         className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                       />
@@ -475,7 +503,7 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
 
                     {/* Expand Details Lightbox Trigger Button */}
                     <button
-                      onClick={() => setSelectedImage(section.image)}
+                      onClick={() => setSelectedImage(img)}
                       className="absolute bottom-4 right-4 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-stone-950/80 hover:bg-emerald-700 text-white text-xs font-bold backdrop-blur-md border border-white/20 shadow-lg transition-all duration-200 hover:scale-105 btn-interactive"
                     >
                       <Maximize2 className="h-3.5 w-3.5" />
@@ -483,16 +511,18 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
                     </button>
 
                     {/* Feature Chips Floating Over Image Bottom Left */}
-                    <div className="absolute bottom-4 left-4 z-20 flex flex-wrap gap-1.5 max-w-[75%]">
-                      {section.highlights.map((h, i) => (
-                        <span
-                          key={i}
-                          className="bg-stone-900/80 text-amber-200 text-[10px] font-bold px-2.5 py-0.5 rounded-lg backdrop-blur-md border border-white/10"
-                        >
-                          {h}
-                        </span>
-                      ))}
-                    </div>
+                    {highlights.length > 0 && (
+                      <div className="absolute bottom-4 left-4 z-20 flex flex-wrap gap-1.5 max-w-[75%]">
+                        {highlights.map((h, i) => (
+                          <span
+                            key={i}
+                            className="bg-stone-900/80 text-amber-200 text-[10px] font-bold px-2.5 py-0.5 rounded-lg backdrop-blur-md border border-white/10"
+                          >
+                            {h}
+                          </span>
+                        ))}
+                      </div>
+                    )}
 
                   </div>
                 </div>
@@ -502,60 +532,64 @@ export const InfrastructurePage: React.FC<InfrastructurePageProps> = ({
                   
                   {/* Category Tagline */}
                   <div className="space-y-1">
-                    <span className="text-xs font-extrabold uppercase tracking-widest text-black">
-                      {section.tagline}
-                    </span>
+                    {tagline && (
+                      <span className="text-xs font-extrabold uppercase tracking-widest text-black">
+                        {tagline}
+                      </span>
+                    )}
                     <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-extrabold text-black tracking-tight leading-tight">
-                      {section.productTitle}
+                      {title}
                     </h2>
                   </div>
 
                   {/* Core Description Quote */}
                   <div className="relative pl-3.5 border-l-4 border-emerald-700 bg-[#f7f2ea] p-3 rounded-r-2xl border-y border-r border-[#e8ded1]">
                     <p className="text-sm sm:text-base text-black leading-relaxed font-serif font-bold italic">
-                      "{section.description}"
+                      "{section.quote || section.description}"
                     </p>
                   </div>
 
                   {/* Production Step-by-Step Flow */}
-                  <div className="space-y-2 pt-1">
-                    <h3 className="text-xs font-black uppercase tracking-wider text-black flex items-center gap-1.5">
-                      <Layers className="h-3.5 w-3.5 text-emerald-700" />
-                      <span>Handmade Production Process</span>
-                    </h3>
+                  {processSteps.length > 0 && (
+                    <div className="space-y-2 pt-1">
+                      <h3 className="text-xs font-black uppercase tracking-wider text-black flex items-center gap-1.5">
+                        <Layers className="h-3.5 w-3.5 text-emerald-700" />
+                        <span>Handmade Production Process</span>
+                      </h3>
 
-                    <div className="space-y-2">
-                      {section.process.map((item, pIdx) => {
-                        const stepStagger = `stagger-${pIdx + 1}`;
-                        return (
-                          <div
-                            key={item.step}
-                            className={`reveal-up ${stepStagger} hover-lift-sm group/step flex items-start gap-3 p-2.5 rounded-2xl bg-white border border-[#eae0d2] hover:border-emerald-600 hover:shadow-md transition-all duration-300`}
-                          >
-                            <div className="h-6 w-6 rounded-xl bg-[#f0e8dc] group-hover/step:bg-emerald-700 text-stone-950 group-hover/step:text-white flex items-center justify-center text-xs font-mono font-extrabold shrink-0 transition-colors shadow-xs">
-                              {item.step}
+                      <div className="space-y-2">
+                        {processSteps.map((item, pIdx) => {
+                          const stepStagger = `stagger-${pIdx + 1}`;
+                          return (
+                            <div
+                              key={item.step || pIdx}
+                              className={`reveal-up ${stepStagger} hover-lift-sm group/step flex items-start gap-3 p-2.5 rounded-2xl bg-white border border-[#eae0d2] hover:border-emerald-600 hover:shadow-md transition-all duration-300`}
+                            >
+                              <div className="h-6 w-6 rounded-xl bg-[#f0e8dc] group-hover/step:bg-emerald-700 text-stone-950 group-hover/step:text-white flex items-center justify-center text-xs font-mono font-extrabold shrink-0 transition-colors shadow-xs">
+                                {item.step || (pIdx + 1)}
+                              </div>
+                              <div className="space-y-0.5 min-w-0">
+                                <h4 className="text-xs sm:text-sm font-extrabold text-black group-hover/step:text-emerald-900 transition-colors">
+                                  {item.title}
+                                </h4>
+                                <p className="text-xs text-stone-900 leading-relaxed font-medium">
+                                  {item.description}
+                                </p>
+                              </div>
                             </div>
-                            <div className="space-y-0.5 min-w-0">
-                              <h4 className="text-xs sm:text-sm font-extrabold text-black group-hover/step:text-emerald-900 transition-colors">
-                                {item.title}
-                              </h4>
-                              <p className="text-xs text-stone-900 leading-relaxed font-medium">
-                                {item.description}
-                              </p>
-                            </div>
-                          </div>
-                        );
-                      })}
+                          );
+                        })}
+                      </div>
                     </div>
-                  </div>
+                  )}
 
                   {/* Quick Action Button for Category */}
                   <div className="pt-2 flex items-center gap-3">
                     <button
-                      onClick={() => navigate(`/products?category=${section.categorySlug}`)}
-                      className="inline-flex items-center gap-2 rounded-xl bg-stone-900 hover:bg-emerald-700 text-white px-5 py-2 text-xs font-extrabold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-200 btn-interactive"
+                      onClick={() => navigate(`/products?category=${categorySlug}`)}
+                      className="inline-flex items-center gap-2 rounded-xl bg-stone-900 hover:bg-emerald-700 text-white px-5 py-2 text-xs font-extrabold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-200 btn-interactive cursor-pointer"
                     >
-                      <span>Explore {section.productTitle}</span>
+                      <span>Explore {title}</span>
                       <ArrowRight className="h-3.5 w-3.5 btn-arrow" />
                     </button>
                   </div>

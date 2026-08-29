@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import {
   ShieldCheck,
@@ -16,111 +16,32 @@ import {
   Sparkles
 } from 'lucide-react';
 import { usePageTitle } from '../utils/usePageTitle';
-
-interface QualitySection {
-  id: string;
-  number: string;
-  badge: string;
-  title: string;
-  quote: string;
-  description: string;
-  image: string;
-  imageAlt: string;
-  metrics: { label: string; value: string }[];
-  guarantees: string[];
-}
-
-const QUALITY_SECTIONS: QualitySection[] = [
-  {
-    id: 'raw-fiber-testing',
-    number: '01',
-    badge: 'Raw Material Verification',
-    title: 'Raw Fiber Purity & Tensile Strength Testing',
-    quote: 'Only top-grade natural golden tossa jute, sun-cured coastal seagrass, and flexible date palm fronds are admitted into our weaving lines.',
-    description:
-      'Every incoming batch of raw natural fiber undergoes tensile load testing, color consistency matching, and fiber strand length verification. We reject brittle or chemically treated strands to ensure our handwoven products withstand heavy daily use and international retail handling.',
-    image: '/quality/quality_tensile_test.png',
-    imageAlt: 'Artisan inspecting golden jute fiber tensile strength with calibrated measuring instruments in laboratory',
-    metrics: [
-      { label: 'Tensile Endurance', value: '>45 kgf' },
-      { label: 'Synthetic Content', value: '0.0% Pure' },
-      { label: 'Natural Fiber Yield', value: 'Grade-A Only' }
-    ],
-    guarantees: [
-      '100% Natural Golden Jute & Wild Coastal Seagrass',
-      'No synthetic nylon or polyester core threads',
-      'Non-toxic, azo-free and heavy metal free vegetable colorings'
-    ]
-  },
-  {
-    id: 'artisan-precision-audit',
-    number: '02',
-    badge: 'In-Line Weaving Inspection',
-    title: 'Workstation Craftsmanship & Dimensional Precision',
-    quote: 'Our master craftswomen inspect every weave interval, knot security, and frame alignment in realtime during production.',
-    description:
-      'Unlike automated machines that cannot account for natural fiber variations, our skilled artisans use generation-old tactile expertise combined with steel template jigs. Each basket, rug, and placemat is checked for uniform wall thickness, balanced handles, and exact geometric symmetry.',
-    image: '/infrastructure/seagrass_baskets.png',
-    imageAlt: 'Master artisan precision weaving seagrass basket with structural check',
-    metrics: [
-      { label: 'Size Tolerance', value: '±1.5% Strict' },
-      { label: 'Structure Check', value: 'Rigid Frame' },
-      { label: 'Handle Capacity', value: '15-20 kg' }
-    ],
-    guarantees: [
-      'Zero loose ends, unraveling coils, or jagged edges',
-      'Reinforced double-wrapped load bearing handles',
-      'Flat laying base guarantee for all mats and rugs'
-    ]
-  },
-  {
-    id: 'moisture-mold-control',
-    number: '03',
-    badge: 'Climate & Mold Defense',
-    title: 'Digital Moisture Metering & Anti-Mold Guarantee',
-    quote: 'We guarantee 100% mold-free delivery through climate-controlled drying chambers and digital moisture metering.',
-    description:
-      'Moisture is the primary risk during international maritime container transit. Golden Fiber Crafts Ltd enforces a strict protocol: all products undergo heated dehumidification chambers, digital pin hygrometer tests ensuring moisture stays strictly between 8% and 12%, followed by certified fumigation and silica gel pouch inclusion.',
-    image: '/quality/quality_inspection.png',
-    imageAlt: 'Quality control officer testing handcrafted seagrass basket with digital moisture meter hygrometer',
-    metrics: [
-      { label: 'Moisture Level', value: '8% - 12%' },
-      { label: 'Mold Protection', value: '100% Guaranteed' },
-      { label: 'Fumigation', value: 'Govt. Certified' }
-    ],
-    guarantees: [
-      'Digital hygrometer testing of every production batch',
-      'Official Phytosanitary & Export Fumigation certificates provided',
-      'Heavy-duty desiccants placed inside every master carton'
-    ]
-  },
-  {
-    id: 'export-packaging-logistics',
-    number: '04',
-    badge: 'Packaging & Container Safety',
-    title: '5-Ply Export Master Cartons & Barcode Compliance',
-    quote: 'Robust export packaging engineered for maximum container CBM space and zero shipping transit damage.',
-    description:
-      'Our packaging line utilizes heavy-duty 5-ply double-wall corrugated master cartons, reinforced edge taping, and precision nestable stacking. Every carton is labeled with buyer-specific GS1/EAN barcodes, drop-tested according to ISTA 1A standards, and sealed with moisture-barrier liners.',
-    image: '/quality/quality_export_packaging.png',
-    imageAlt: 'Export warehouse workers packing handcrafted storage baskets in 5-ply cartons with barcodes',
-    metrics: [
-      { label: 'Carton Standard', value: '5-Ply Heavy Duty' },
-      { label: 'Drop Test Standard', value: 'ISTA 1A Passed' },
-      { label: 'Barcode Scanning', value: '100% Verified' }
-    ],
-    guarantees: [
-      'High-bursting strength cartons (>18 kg/cm² burst factor)',
-      'Custom buyer private labeling, hangtags, and SKU barcodes',
-      'Optimized palletization and container space maximization'
-    ]
-  }
-];
+import {
+  PageSectionItem,
+  getLocalSections,
+  fetchLiveSections
+} from '../utils/pageSectionsStore';
 
 export const QualityControlPage: React.FC = () => {
   usePageTitle('Quality Control & Standards');
   const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [sections, setSections] = useState<PageSectionItem[]>(() => getLocalSections('quality'));
+
+  useEffect(() => {
+    fetchLiveSections('quality').then(data => {
+      if (data && data.length > 0) setSections(data);
+    });
+
+    const handleUpdated = (e: any) => {
+      if (e.detail?.type === 'quality' || !e.detail?.type) {
+        setSections(getLocalSections('quality'));
+      }
+    };
+
+    window.addEventListener('gfcl_sections_updated', handleUpdated);
+    return () => window.removeEventListener('gfcl_sections_updated', handleUpdated);
+  }, []);
 
   return (
     <div className="bg-[#fcfbf9] text-stone-900 font-sans min-h-screen pb-12 animate-fadeIn space-y-6 sm:space-y-8">
@@ -188,13 +109,17 @@ export const QualityControlPage: React.FC = () => {
         </div>
       </div>
 
-      {/* 2. Four Alternating Quality Pillar Sections */}
+      {/* 2. Alternating Dynamic Quality Pillar Sections */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-14">
-        {QUALITY_SECTIONS.map((section, idx) => {
+        {sections.filter(s => s.is_active !== 0 && s.is_active !== false).map((section, idx) => {
           const isEven = idx % 2 === 1;
+          const img = section.image_url || section.image || '/quality/quality_tensile_test.png';
+          const imgAlt = section.image_alt || section.imageAlt || section.title;
+          const guarantees = section.guarantees || section.points || [];
+          const metrics = section.metrics || [];
 
           return (
-            <section key={section.id} id={section.id} className="scroll-mt-24">
+            <section key={section.id || idx} id={section.section_key || `section-${section.id || idx}`} className="scroll-mt-24">
               <div
                 className={`flex flex-col gap-10 lg:gap-14 items-start ${
                   isEven ? 'lg:flex-row-reverse' : 'lg:flex-row'
@@ -205,13 +130,13 @@ export const QualityControlPage: React.FC = () => {
                   <div className="relative group rounded-3xl overflow-hidden bg-stone-100 border border-stone-200 shadow-md hover:shadow-xl transition-all duration-500">
                     
                     <div className="absolute top-4 left-4 z-20 bg-stone-950/85 backdrop-blur-md text-amber-300 font-mono text-xs font-black px-3.5 py-1.5 rounded-xl border border-white/20 shadow-md">
-                      STAGE {section.number} • {section.badge}
+                      STAGE {section.number || (idx + 1).toString().padStart(2, '0')} {section.badge ? `• ${section.badge}` : ''}
                     </div>
 
                     <div className="relative h-[340px] sm:h-[400px] lg:h-[440px] w-full overflow-hidden">
                       <img
-                        src={section.image}
-                        alt={section.imageAlt}
+                        src={img}
+                        alt={imgAlt}
                         loading="lazy"
                         className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                       />
@@ -219,7 +144,7 @@ export const QualityControlPage: React.FC = () => {
                     </div>
 
                     <button
-                      onClick={() => setSelectedImage(section.image)}
+                      onClick={() => setSelectedImage(img)}
                       className="absolute bottom-4 right-4 z-20 flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-stone-950/85 hover:bg-emerald-700 text-white text-xs font-bold backdrop-blur-md border border-white/20 shadow-lg transition-all duration-200 cursor-pointer"
                     >
                       <Maximize2 className="h-3.5 w-3.5" />
@@ -227,17 +152,19 @@ export const QualityControlPage: React.FC = () => {
                     </button>
 
                     {/* Metrics Badges floating on image */}
-                    <div className="absolute bottom-4 left-4 z-20 flex flex-wrap gap-2 max-w-[80%]">
-                      {section.metrics.map((m, i) => (
-                        <div
-                          key={i}
-                          className="bg-stone-950/85 backdrop-blur-md border border-white/15 px-3 py-1 rounded-xl text-left shadow-md"
-                        >
-                          <span className="block text-[9px] text-amber-300 font-medium uppercase">{m.label}</span>
-                          <strong className="block text-xs font-extrabold text-white">{m.value}</strong>
-                        </div>
-                      ))}
-                    </div>
+                    {metrics.length > 0 && (
+                      <div className="absolute bottom-4 left-4 z-20 flex flex-wrap gap-2 max-w-[80%]">
+                        {metrics.map((m, i) => (
+                          <div
+                            key={i}
+                            className="bg-stone-950/85 backdrop-blur-md border border-white/15 px-3 py-1 rounded-xl text-left shadow-md"
+                          >
+                            <span className="block text-[9px] text-amber-300 font-medium uppercase">{m.label}</span>
+                            <strong className="block text-xs font-extrabold text-white">{m.value}</strong>
+                          </div>
+                        ))}
+                      </div>
+                    )}
 
                   </div>
                 </div>
@@ -255,33 +182,39 @@ export const QualityControlPage: React.FC = () => {
                     </h2>
                   </div>
 
-                  <div className="relative pl-4 border-l-4 border-emerald-700 bg-emerald-50/40 p-4 rounded-r-2xl border border-emerald-100">
-                    <p className="text-sm sm:text-base text-stone-900 leading-relaxed font-serif font-bold italic">
-                      "{section.quote}"
-                    </p>
-                  </div>
+                  {section.quote && (
+                    <div className="relative pl-4 border-l-4 border-emerald-700 bg-emerald-50/40 p-4 rounded-r-2xl border border-emerald-100">
+                      <p className="text-sm sm:text-base text-stone-900 leading-relaxed font-serif font-bold italic">
+                        "{section.quote}"
+                      </p>
+                    </div>
+                  )}
 
                   <p className="text-sm sm:text-base text-stone-700 leading-relaxed font-medium">
                     {section.description}
                   </p>
 
                   {/* Guaranteed Points Checklist */}
-                  <div className="space-y-2.5 pt-2">
-                    <h4 className="text-xs font-black uppercase tracking-wider text-stone-900">
-                      Export Quality Guarantee Points:
-                    </h4>
-                    {section.guarantees.map((item, idx2) => (
-                      <div
-                        key={idx2}
-                        className="flex items-start gap-3 p-3 rounded-xl bg-white border border-stone-200/80 shadow-xs hover:border-emerald-300 transition-colors"
-                      >
-                        <div className="h-5 w-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 mt-0.5">
-                          <Check className="h-3.5 w-3.5 stroke-[3]" />
+                  {guarantees.length > 0 && (
+                    <div className="space-y-2.5 pt-2">
+                      <h4 className="text-xs font-black uppercase tracking-wider text-stone-900">
+                        Export Quality Guarantee Points:
+                      </h4>
+                      {guarantees.map((item, idx2) => (
+                        <div
+                          key={idx2}
+                          className="flex items-start gap-3 p-3 rounded-xl bg-white border border-stone-200/80 shadow-xs hover:border-emerald-300 transition-colors"
+                        >
+                          <div className="h-5 w-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 mt-0.5">
+                            <Check className="h-3.5 w-3.5 stroke-[3]" />
+                          </div>
+                          <span className="text-xs sm:text-sm text-stone-800 font-bold leading-snug">
+                            {item}
+                          </span>
                         </div>
-                        <span className="text-xs font-bold text-stone-900">{item}</span>
-                      </div>
-                    ))}
-                  </div>
+                      ))}
+                    </div>
+                  )}
 
                 </div>
               </div>

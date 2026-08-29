@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import {
   Leaf,
@@ -19,111 +19,32 @@ import {
   Droplets
 } from 'lucide-react';
 import { usePageTitle } from '../utils/usePageTitle';
-
-interface SustainabilitySection {
-  id: string;
-  number: string;
-  badge: string;
-  title: string;
-  quote: string;
-  description: string;
-  image: string;
-  imageAlt: string;
-  metrics: { label: string; value: string }[];
-  impactPoints: string[];
-}
-
-const SUSTAINABILITY_SECTIONS: SustainabilitySection[] = [
-  {
-    id: 'carbon-negative-harvest',
-    number: '01',
-    badge: 'Eco-Cultivation & Climate Sinks',
-    title: '100% Natural, Carbon-Negative Fiber Harvesting',
-    quote: 'Jute and wild grasses act as powerful carbon sinks, absorbing over 15 tonnes of CO2 per hectare during their rapid 120-day growth cycle.',
-    description:
-      'Our primary raw materials — golden jute, wild riverbed seagrass, date palm leaves, and kans grass — are rapidly renewable botanical fibers that require zero synthetic chemical fertilizers or pesticides. Cultivated in rain-fed alluvial river basins in Bangladesh, they naturally replenish soil fertility and leave zero synthetic residue upon return to the earth.',
-    image: '/sustainability/sustainability_harvest.png',
-    imageAlt: 'Lush green sustainable jute fields and river harvesting in rural Bangladesh with golden fibers drying',
-    metrics: [
-      { label: 'CO2 Absorption', value: '15 T/Hectare' },
-      { label: 'Chemical Fertilizers', value: '0% Needed' },
-      { label: 'Biodegradability', value: '100% Organic' }
-    ],
-    impactPoints: [
-      'Rapid 120-day natural crop regeneration without artificial irrigation',
-      'Naturally enriches agricultural soil nutrients for seasonal crop rotation',
-      'Completely compostable back into organic mulch in 60 to 90 days'
-    ]
-  },
-  {
-    id: 'artisan-empowerment',
-    number: '02',
-    badge: 'Social Impact & Gender Equality',
-    title: 'Empowering Rural Women & Ethical Livelihoods',
-    quote: 'Over 85% of our weaving workforce comprises skilled rural women craftswomen earning fair-trade living wages.',
-    description:
-      'Handicraft production is a transformative social catalyst in rural Bangladesh. Golden Fiber Crafts Ltd operates decentralized, well-ventilated village artisan centers that allow mothers and women artisans to work with dignity, receive healthcare stipends, finance their children’s education, and achieve financial self-reliance within their local communities.',
-    image: '/sustainability/sustainability_empowerment.png',
-    imageAlt: 'Smiling Bangladeshi women artisans proudly holding handcrafted eco baskets in sunlit community workshop',
-    metrics: [
-      { label: 'Female Workforce', value: '>85% Women' },
-      { label: 'Fair Trade Wage', value: '35% Above Local' },
-      { label: 'Child Education Aid', value: '100% Supported' }
-    ],
-    impactPoints: [
-      'Flexible home and community cluster workstations for mothers',
-      'Zero child labor guarantee with mandatory school attendance programs',
-      'Continuous masterclass training in traditional and modern export weaving'
-    ]
-  },
-  {
-    id: 'circular-zerowaste',
-    number: '03',
-    badge: 'Closed-Loop Manufacturing',
-    title: 'Circular Economy & Zero-Waste Upcycling',
-    quote: 'We champion closed-loop production by blending virgin plant fibers with upcycled organic textile off-cuts.',
-    description:
-      'In our Recycle Fabric product line, we divert clean organic cotton and linen scraps from garment factories, hand-coiling them with natural golden jute into vibrant, durable eco-hampers and baskets. Furthermore, 100% of organic fiber trim generated during production is collected and composted into nutrient-rich bio-mulch for local agriculture.',
-    image: '/sustainability/sustainability_zerowaste.png',
-    imageAlt: 'Artisan hand-coiling upcycled cotton fabric scraps and golden jute cords into colorful zero-waste storage basket',
-    metrics: [
-      { label: 'Landfill Waste', value: '0.0% Zero Waste' },
-      { label: 'Upcycled Material', value: 'Cotton Scraps' },
-      { label: 'Organic Bio-Mulch', value: '100% Composted' }
-    ],
-    impactPoints: [
-      'Eliminates textile landfill burden through artisanal braided upcycling',
-      'Closed-loop water and organic trimming recycling in every workshop',
-      'Plastic-free packaging with 100% recyclable FSC master cartons'
-    ]
-  },
-  {
-    id: 'clean-dyes-water',
-    number: '04',
-    badge: 'Clean Water & Non-Toxic Coloring',
-    title: 'Azo-Free Dyes & Water Table Protection',
-    quote: 'All colors are created using azo-free, heavy-metal-free, plant-safe pigments that protect local rivers and indoor air quality.',
-    description:
-      'We respect Bangladesh’s life-giving waterways. Our dye houses utilize strictly certified REACH-compliant and OEKO-TEX certified colorants alongside natural vegetable extracts from tea leaves, turmeric, and indigo. Sun-curing eliminates the need for fossil-fuel dryers, resulting in clean, non-toxic products safe for babies, pets, and food storage.',
-    image: '/infrastructure/jute_floor_mats.png',
-    imageAlt: 'Natural golden jute fibers dyed with non-toxic eco pigments in artisan workshop',
-    metrics: [
-      { label: 'Azo Colorants', value: '0% Azo-Free' },
-      { label: 'Drying Energy', value: '100% Solar Heat' },
-      { label: 'Indoor Safety', value: 'Pet & Baby Safe' }
-    ],
-    impactPoints: [
-      'Zero toxic wastewater discharge into rural village water bodies',
-      'Heavy-metal free formulas safe for kitchen and pantry food storage',
-      'Low carbon footprint solar air drying across our southern facilities'
-    ]
-  }
-];
+import {
+  PageSectionItem,
+  getLocalSections,
+  fetchLiveSections
+} from '../utils/pageSectionsStore';
 
 export const SustainabilityPage: React.FC = () => {
   usePageTitle('Sustainability & Eco-Impact');
   const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [sections, setSections] = useState<PageSectionItem[]>(() => getLocalSections('sustainability'));
+
+  useEffect(() => {
+    fetchLiveSections('sustainability').then(data => {
+      if (data && data.length > 0) setSections(data);
+    });
+
+    const handleUpdated = (e: any) => {
+      if (e.detail?.type === 'sustainability' || !e.detail?.type) {
+        setSections(getLocalSections('sustainability'));
+      }
+    };
+
+    window.addEventListener('gfcl_sections_updated', handleUpdated);
+    return () => window.removeEventListener('gfcl_sections_updated', handleUpdated);
+  }, []);
 
   return (
     <div className="bg-[#fcfbf9] text-stone-800 font-sans min-h-screen animate-fadeIn">
@@ -194,14 +115,18 @@ export const SustainabilityPage: React.FC = () => {
       </div>
 
       {/* ---------------------------------------------------- */}
-      {/* 2. Four Alternating Sustainability Pillar Sections */}
+      {/* 2. Alternating Dynamic Sustainability Pillars */}
       {/* ---------------------------------------------------- */}
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 sm:py-16 space-y-16 sm:space-y-24">
-        {SUSTAINABILITY_SECTIONS.map((section, idx) => {
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16 py-8">
+        {sections.filter(s => s.is_active !== 0 && s.is_active !== false).map((section, idx) => {
           const isEven = idx % 2 === 1;
+          const img = section.image_url || section.image || '/sustainability/sustainability_harvest.png';
+          const imgAlt = section.image_alt || section.imageAlt || section.title;
+          const impactPoints = section.impactPoints || section.points || [];
+          const metrics = section.metrics || [];
 
           return (
-            <section key={section.id} id={section.id} className="scroll-mt-24">
+            <section key={section.id || idx} id={section.section_key || `section-${section.id || idx}`} className="scroll-mt-24">
               <div
                 className={`flex flex-col gap-10 lg:gap-16 items-start ${
                   isEven ? 'lg:flex-row-reverse' : 'lg:flex-row'
@@ -212,13 +137,13 @@ export const SustainabilityPage: React.FC = () => {
                   <div className="relative group rounded-3xl overflow-hidden bg-[#edf4ee] border border-[#d6e5d8] shadow-xl hover:shadow-2xl transition-all duration-500 img-zoom-container">
                     
                     <div className="absolute top-4 left-4 z-20 bg-emerald-950/85 backdrop-blur-md text-emerald-300 font-mono text-xs font-extrabold px-3.5 py-1.5 rounded-xl border border-emerald-500/30 shadow-md">
-                      PILLAR {section.number} • {section.badge}
+                      PILLAR {section.number || (idx + 1).toString().padStart(2, '0')} {section.badge ? `• ${section.badge}` : ''}
                     </div>
 
                     <div className="relative h-[340px] sm:h-[420px] lg:h-[460px] w-full overflow-hidden">
                       <img
-                        src={section.image}
-                        alt={section.imageAlt}
+                        src={img}
+                        alt={imgAlt}
                         loading="lazy"
                         className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                       />
@@ -226,7 +151,7 @@ export const SustainabilityPage: React.FC = () => {
                     </div>
 
                     <button
-                      onClick={() => setSelectedImage(section.image)}
+                      onClick={() => setSelectedImage(img)}
                       className="absolute bottom-4 right-4 z-20 flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-stone-950/80 hover:bg-emerald-700 text-white text-xs font-bold backdrop-blur-md border border-white/20 shadow-lg transition-all duration-200 hover:scale-105 btn-interactive"
                     >
                       <Maximize2 className="h-3.5 w-3.5" />
@@ -234,17 +159,19 @@ export const SustainabilityPage: React.FC = () => {
                     </button>
 
                     {/* Metrics Badges floating on image */}
-                    <div className="absolute bottom-4 left-4 z-20 flex flex-wrap gap-2 max-w-[80%]">
-                      {section.metrics.map((m, i) => (
-                        <div
-                          key={i}
-                          className="bg-stone-950/85 backdrop-blur-md border border-emerald-500/30 px-3 py-1 rounded-xl text-left shadow-md"
-                        >
-                          <span className="block text-[9px] text-emerald-400 font-medium uppercase">{m.label}</span>
-                          <strong className="block text-xs font-extrabold text-white">{m.value}</strong>
-                        </div>
-                      ))}
-                    </div>
+                    {metrics.length > 0 && (
+                      <div className="absolute bottom-4 left-4 z-20 flex flex-wrap gap-2 max-w-[80%]">
+                        {metrics.map((m, i) => (
+                          <div
+                            key={i}
+                            className="bg-stone-950/85 backdrop-blur-md border border-emerald-500/30 px-3 py-1 rounded-xl text-left shadow-md"
+                          >
+                            <span className="block text-[9px] text-emerald-400 font-medium uppercase">{m.label}</span>
+                            <strong className="block text-xs font-extrabold text-white">{m.value}</strong>
+                          </div>
+                        ))}
+                      </div>
+                    )}
 
                   </div>
                 </div>
@@ -262,36 +189,40 @@ export const SustainabilityPage: React.FC = () => {
                     </h2>
                   </div>
 
-                  <div className="relative pl-4 border-l-4 border-emerald-700 bg-[#edf5ef] p-4 rounded-r-2xl border-y border-r border-[#d8e8da]">
-                    <p className="text-sm sm:text-base text-black leading-relaxed font-serif font-bold italic">
-                      "{section.quote}"
-                    </p>
-                  </div>
+                  {section.quote && (
+                    <div className="relative pl-4 border-l-4 border-emerald-700 bg-[#edf5ef] p-4 rounded-r-2xl border-y border-r border-[#d8e8da]">
+                      <p className="text-sm sm:text-base text-black leading-relaxed font-serif font-bold italic">
+                        "{section.quote}"
+                      </p>
+                    </div>
+                  )}
 
                   <p className="text-sm sm:text-base text-stone-900 leading-relaxed font-medium">
                     {section.description}
                   </p>
 
                   {/* Impact Points Checklist with Staggered Entrance */}
-                  <div className="space-y-2.5 pt-2">
-                    <h4 className="text-xs font-black uppercase tracking-wider text-black">
-                      Measurable Sustainability Impact:
-                    </h4>
-                    {section.impactPoints.map((item, idx2) => {
-                      const pStagger = `stagger-${idx2 + 1}`;
-                      return (
-                        <div
-                          key={idx2}
-                          className={`reveal-up ${pStagger} hover-lift-sm flex items-start gap-3 p-3 rounded-xl bg-white border border-[#d6e5d8] shadow-xs`}
-                        >
-                          <div className="h-5 w-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 mt-0.5">
-                            <CheckCircle2 className="h-3.5 w-3.5" />
+                  {impactPoints.length > 0 && (
+                    <div className="space-y-2.5 pt-2">
+                      <h4 className="text-xs font-black uppercase tracking-wider text-black">
+                        Measurable Sustainability Impact:
+                      </h4>
+                      {impactPoints.map((item, idx2) => {
+                        const pStagger = `stagger-${idx2 + 1}`;
+                        return (
+                          <div
+                            key={idx2}
+                            className={`reveal-up ${pStagger} hover-lift-sm flex items-start gap-3 p-3 rounded-xl bg-white border border-[#d6e5d8] shadow-xs`}
+                          >
+                            <div className="h-5 w-5 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 mt-0.5">
+                              <CheckCircle2 className="h-3.5 w-3.5" />
+                            </div>
+                            <span className="text-xs font-bold text-black">{item}</span>
                           </div>
-                          <span className="text-xs font-bold text-black">{item}</span>
-                        </div>
-                      );
-                    })}
-                  </div>
+                        );
+                      })}
+                    </div>
+                  )}
 
                 </div>
               </div>
