@@ -123,10 +123,10 @@ export const Footer: React.FC = () => {
             </h4>
             <div className="space-y-2.5 text-xs sm:text-sm text-emerald-100 font-normal leading-relaxed">
               
-              {/* MD Name & Title */}
+              {/* MD Name */}
               <div className="flex items-center gap-2.5">
                 <User className="h-4 w-4 text-amber-400 shrink-0" />
-                <span className="text-white font-normal">{settings.md_name} ({settings.md_title})</span>
+                <span className="text-white font-normal">{settings.md_name}</span>
               </div>
 
               {/* Email */}
@@ -166,12 +166,12 @@ export const Footer: React.FC = () => {
                 </div>
               </div>
 
-              {/* Unit 1 */}
+              {/* Factory 1 */}
               <div className="flex items-start gap-2.5 pt-0.5">
                 <MapPin className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
                   <span className="text-emerald-300 font-normal block text-xs uppercase tracking-wider">
-                    Unit 1 (Salna, Gazipur):
+                    Factory 1 (Salna, Gazipur):
                   </span>
                   <span className="text-white font-normal text-xs sm:text-sm">
                     {settings.factory_unit_1}
@@ -179,12 +179,12 @@ export const Footer: React.FC = () => {
                 </div>
               </div>
 
-              {/* Unit 2 */}
+              {/* Factory 2 */}
               <div className="flex items-start gap-2.5 pt-0.5">
                 <MapPin className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
                 <div>
                   <span className="text-emerald-300 font-normal block text-xs uppercase tracking-wider">
-                    Unit 2 (Kishoreganj):
+                    Factory 2 (Kishoreganj):
                   </span>
                   <span className="text-white font-normal text-xs sm:text-sm">
                     {settings.factory_unit_2}

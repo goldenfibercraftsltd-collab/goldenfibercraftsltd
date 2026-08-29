@@ -135,7 +135,7 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
                 <span className="inline-block px-2.5 py-0.5 rounded-full bg-emerald-500/30 text-emerald-300 text-xs font-black uppercase tracking-widest border border-emerald-400/40">
                   Empowerment & Heritage Craft
                 </span>
-                <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">Over 15,000+ Skilled Artisans Workforce</h3>
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">Over 10,000+ Skilled Artisans Workforce</h3>
                 <p className="text-sm text-stone-100 font-medium leading-relaxed">
                   Decentralized rural artisan clusters across Bangladesh creating authentic woven handicrafts.
                 </p>
@@ -172,33 +172,39 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
             </div>
 
             {/* Mission Card */}
-            <div className="rounded-2xl bg-stone-50 p-7 border border-stone-200/80 shadow-xs space-y-4">
-              <div className="h-12 w-12 rounded-2xl bg-amber-100 text-amber-900 flex items-center justify-center">
-                <Target className="h-6 w-6" />
+            <div className="rounded-2xl bg-gradient-to-br from-emerald-950 via-stone-900 to-emerald-950 p-7 text-white shadow-md space-y-4 flex flex-col justify-between border border-emerald-500/20">
+              <div className="space-y-3">
+                <div className="h-12 w-12 rounded-2xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center border border-emerald-400/30">
+                  <Target className="h-6 w-6" />
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-amber-300">Our Mission</h3>
+                <ul className="space-y-2.5 text-xs sm:text-sm text-stone-100 font-medium">
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span>Promote sustainable living through eco-friendly products</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span>Manufacture premium-quality jute and handicraft items</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span>Support local artisans and skilled craftsmen</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span>Build long-term partnerships with customers worldwide</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                    <span>Contribute to reducing plastic pollution through natural fiber alternatives</span>
+                  </li>
+                </ul>
               </div>
-              <h3 className="font-serif text-2xl font-bold text-stone-900">Our Mission</h3>
-              <ul className="space-y-2.5 text-xs sm:text-sm text-stone-800 font-medium">
-                <li className="flex items-start gap-2.5">
-                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>Promote sustainable living through eco-friendly products</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>Manufacture premium-quality jute and handicraft items</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>Support local artisans and skilled craftsmen</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>Build long-term partnerships with customers worldwide</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>Contribute to reducing plastic pollution through natural fiber alternatives</span>
-                </li>
-              </ul>
+              <div className="pt-4 border-t border-emerald-800/60 flex items-center gap-2 text-xs text-emerald-300 font-bold">
+                <Sparkles className="h-4 w-4" />
+                <span>Committed to Ethical & Sustainable Craftsmanship</span>
+              </div>
             </div>
           </div>
 
@@ -361,7 +367,7 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
                     Annual Turnover
                   </td>
                   <td className="px-6 py-4 text-sm text-stone-800 font-semibold">
-                    : <span className="font-bold text-emerald-800">{settings.annual_turnover}</span>
+                    : <span className="font-bold text-stone-950">{settings.annual_turnover}</span>
                   </td>
                 </tr>
               </tbody>
@@ -412,13 +418,13 @@ export const AboutPage: React.FC<AboutPageProps> = () => {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
           <div className="rounded-2xl bg-white p-6 shadow-sm border border-stone-200">
             <p className="font-serif text-3xl sm:text-4xl font-black text-emerald-800">
-              <AnimatedCounter target={15} suffix="K+" />
+              <AnimatedCounter target={10} suffix="K+" />
             </p>
             <p className="mt-1 text-xs text-stone-800 font-black uppercase tracking-wider">Skilled Artisans</p>
           </div>
           <div className="rounded-2xl bg-white p-6 shadow-sm border border-stone-200">
             <p className="font-serif text-3xl sm:text-4xl font-black text-emerald-800">
-              <AnimatedCounter target={50} suffix=" HQ" />
+              <AnimatedCounter target={40} suffix=" HQ" />
             </p>
             <p className="mt-1 text-xs text-stone-800 font-black uppercase tracking-wider">Monthly Containers</p>
           </div>

@@ -192,26 +192,26 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenQuoteModal }) =>
                   </div>
                 </div>
 
-                {/* Factory Unit 1 */}
+                {/* Factory 1 */}
                 <div className="flex items-start gap-3 p-2 rounded-xl bg-stone-50 border border-stone-100">
                   <div className="h-10 w-10 rounded-xl bg-amber-100 text-amber-950 flex items-center justify-center shrink-0 shadow-xs font-bold">
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
-                    <h4 className="font-black text-stone-950 text-xs uppercase tracking-wider">Factory Unit 1 (Gazipur)</h4>
+                    <h4 className="font-black text-stone-950 text-xs uppercase tracking-wider">Factory 1 (Salna, Gazipur)</h4>
                     <p className="text-xs sm:text-sm text-stone-700 font-medium leading-relaxed mt-0.5">
                       {settings.factory_unit_1}
                     </p>
                   </div>
                 </div>
 
-                {/* Factory Unit 2 */}
+                {/* Factory 2 */}
                 <div className="flex items-start gap-3 p-2 rounded-xl bg-stone-50 border border-stone-100">
                   <div className="h-10 w-10 rounded-xl bg-teal-100 text-teal-950 flex items-center justify-center shrink-0 shadow-xs font-bold">
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
-                    <h4 className="font-black text-stone-950 text-xs uppercase tracking-wider">Factory Unit 2 (Kishoreganj)</h4>
+                    <h4 className="font-black text-stone-950 text-xs uppercase tracking-wider">Factory 2 (Kishoreganj)</h4>
                     <p className="text-xs sm:text-sm text-stone-700 font-medium leading-relaxed mt-0.5">
                       {settings.factory_unit_2}
                     </p>

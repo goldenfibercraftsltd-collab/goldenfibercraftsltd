@@ -56,8 +56,8 @@ export const OFFICIAL_WEBSITE = "www.goldenfibercraftsltd.com";
 
 export const COMPANY_ADDRESSES = {
   corporateOffice: "House# 78, Road# 16, Sector# 11, Uttara, Dhaka, Bangladesh",
-  factoryUnit1: "Unit 1: Paler para, Akter market (Beside UTAH Garments), Salna, Gazipur",
-  factoryUnit2: "Unit 2: Kacharipara, Milonganj Bazar, Nilganj, Kishoreganj",
+  factoryUnit1: "Factory 1: Paler para, Akter market (Beside UTAH Garments), Salna, Gazipur",
+  factoryUnit2: "Factory 2: Kacharipara, Milonganj Bazar, Nilganj, Kishoreganj",
 };
 
 export const KEY_LEADERSHIP = {
@@ -81,8 +81,8 @@ export const KEY_LEADERSHIP = {
 
 export const TECHNICAL_INFORMATION = {
   officeStaff: "30",
-  artisans: "Approximate 15,000 (Directly & Indirectly)",
-  productionCapacityMonth: "50X40' HQ Containers",
+  artisans: "Approximate 10,000 (Directly & Indirectly)",
+  productionCapacityMonth: "40X40' HQ Containers",
   productionLeadTime: "70-90 days",
   paymentTerms: "LC at sight or TT (30% Advance & 70% against copy of Shipping documents)",
   annualTurnover: "5 million USD"

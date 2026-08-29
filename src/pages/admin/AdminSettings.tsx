@@ -294,11 +294,11 @@ export const AdminSettings: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Factory Unit 1 */}
+                {/* Factory 1 */}
                 <div className="bg-slate-950 p-5 rounded-2xl border border-slate-800 space-y-3">
-                  <span className="text-xs font-mono font-bold text-emerald-400 uppercase">2. Factory Unit 1 (Gazipur)</span>
+                  <span className="text-xs font-mono font-bold text-emerald-400 uppercase">2. Factory 1 (Salna, Gazipur)</span>
                   <div className="space-y-1.5">
-                    <label className="block text-xs font-bold text-slate-300">Unit 1 Address & Location</label>
+                    <label className="block text-xs font-bold text-slate-300">Factory 1 Address & Location</label>
                     <textarea
                       rows={2}
                       value={settings.factory_unit_1}
@@ -317,11 +317,11 @@ export const AdminSettings: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Factory Unit 2 */}
+                {/* Factory 2 */}
                 <div className="bg-slate-950 p-5 rounded-2xl border border-slate-800 space-y-3">
-                  <span className="text-xs font-mono font-bold text-emerald-400 uppercase">3. Factory Unit 2 (Kishoreganj)</span>
+                  <span className="text-xs font-mono font-bold text-emerald-400 uppercase">3. Factory 2 (Kishoreganj)</span>
                   <div className="space-y-1.5">
-                    <label className="block text-xs font-bold text-slate-300">Unit 2 Address & Location</label>
+                    <label className="block text-xs font-bold text-slate-300">Factory 2 Address & Location</label>
                     <textarea
                       rows={2}
                       value={settings.factory_unit_2}
@@ -541,7 +541,7 @@ export const AdminSettings: React.FC = () => {
                     type="text"
                     value={settings.artisans_count}
                     onChange={(e) => setSettings(prev => ({ ...prev, artisans_count: e.target.value }))}
-                    placeholder="e.g. Approximate 15,000 (Directly & Indirectly)"
+                    placeholder="e.g. Approximate 10,000 (Directly & Indirectly)"
                     className="w-full px-4 py-2.5 bg-slate-950 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs font-bold text-white outline-none"
                   />
                 </div>
@@ -552,7 +552,7 @@ export const AdminSettings: React.FC = () => {
                     type="text"
                     value={settings.monthly_capacity}
                     onChange={(e) => setSettings(prev => ({ ...prev, monthly_capacity: e.target.value }))}
-                    placeholder="e.g. 50X40' HQ Containers"
+                    placeholder="e.g. 40X40' HQ Containers"
                     className="w-full px-4 py-2.5 bg-slate-950 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs font-bold text-white outline-none"
                   />
                 </div>
