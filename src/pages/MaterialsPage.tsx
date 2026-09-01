@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Search, ChevronRight, Eye, X, Leaf, ArrowRight, Sparkles } from 'lucide-react';
+import { Search, Eye, X } from 'lucide-react';
 import { usePageTitle } from '../utils/usePageTitle';
 import { getDynamicCardAnimation } from '../utils/scrollReveal';
 
@@ -71,8 +70,8 @@ export const RAW_MATERIALS: MaterialItem[] = [
     name: 'Bamboo',
     scientificName: 'Bambusa Vulgaris',
     description: 'This material can be used to prepare different types of baskets i.e. Storage, Laundry, Table mat, Planter, Tray, Coaster, Hanging basket, Stool, Furniture etc.',
-    rawImages: ['/materials/orig_bamboo-1.jpg', '/materials/orig_bamboo-2.jpg'],
-    sampleImages: ['/materials/orig_BDB-01.jpg', '/materials/orig_BDB-06.jpg'],
+    rawImages: ['/materials/bamboo_plant_new.jpg', '/materials/bamboo_fiber_new.jpg'],
+    sampleImages: ['/materials/bamboo_sample_bowls.jpg', '/materials/bamboo_sample_baskets.jpg'],
     categorySlug: 'bamboo',
     products: ['Storage', 'Laundry', 'Table mat', 'Planter', 'Tray', 'Coaster', 'Hanging basket', 'Stool', 'Furniture']
   },
@@ -132,7 +131,7 @@ export const MaterialsPage: React.FC = () => {
   usePageTitle('Raw Materials & Natural Fibers');
   const [searchQuery, setSearchQuery] = useState('');
   const [previewImage, setPreviewImage] = useState<{ src: string; title: string } | null>(null);
-  const [activeMaterial, setActiveMaterial] = useState<string | null>(null);
+
 
   const filteredMaterials = RAW_MATERIALS.filter((mat) => {
     const q = searchQuery.toLowerCase().trim();
@@ -204,10 +203,10 @@ export const MaterialsPage: React.FC = () => {
                   transition-all duration-500 ease-out overflow-hidden
                   ${isExpanded ? 'ring-2 ring-emerald-500/30 shadow-xl' : ''}
                 `}>
-                  <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 items-stretch">
                     
                     {/* Left: Raw Material Images Showcase (Always on Left for all cards) */}
-                    <div className="lg:col-span-3 p-5 sm:p-6 bg-stone-50/80 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-stone-200">
+                    <div className="p-5 sm:p-6 bg-stone-50/80 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-stone-200">
                       <div>
                         <div className="flex items-center gap-2 mb-3">
                           <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-emerald-950 text-amber-300 text-xs font-black shadow-md border border-amber-400/30 shrink-0">
@@ -243,7 +242,7 @@ export const MaterialsPage: React.FC = () => {
                     </div>
 
                     {/* Center: Bold, High-Contrast Description & Info (Middle) */}
-                    <div className="lg:col-span-5 p-6 sm:p-7 flex flex-col justify-between">
+                    <div className="p-6 sm:p-7 flex flex-col justify-center">
                       <div className="space-y-3.5">
                         <div className="border-b border-stone-200 pb-3">
                           <h3 className="text-2xl sm:text-3xl font-serif font-black text-stone-950 tracking-tight leading-tight">
@@ -258,54 +257,11 @@ export const MaterialsPage: React.FC = () => {
                           {mat.description}
                         </p>
 
-                        {/* Product Application Badges */}
-                        <div className="pt-1">
-                          <p className="text-xs font-black uppercase tracking-wider text-stone-900 mb-2">
-                            Product Applications:
-                          </p>
-                          <div className="flex flex-wrap gap-1.5">
-                            {mat.products.slice(0, isExpanded ? undefined : 8).map((product) => (
-                              <span
-                                key={product}
-                                className="inline-flex items-center px-3 py-1 rounded-lg bg-stone-100 text-stone-950 text-xs font-bold border border-stone-300 hover:bg-emerald-50 hover:text-emerald-950 hover:border-emerald-400 transition-colors cursor-default"
-                              >
-                                {product}
-                              </span>
-                            ))}
-                            {!isExpanded && mat.products.length > 8 && (
-                              <button
-                                onClick={() => setActiveMaterial(mat.id)}
-                                className="inline-flex items-center px-3 py-1 rounded-lg bg-emerald-100 text-emerald-950 text-xs font-black border border-emerald-300 hover:bg-emerald-200 transition-colors cursor-pointer"
-                              >
-                                +{mat.products.length - 8} more
-                              </button>
-                            )}
-                            {isExpanded && mat.products.length > 8 && (
-                              <button
-                                onClick={() => setActiveMaterial(null)}
-                                className="inline-flex items-center px-3 py-1 rounded-lg bg-stone-200 text-stone-900 text-xs font-bold border border-stone-300 hover:bg-stone-300 transition-colors cursor-pointer"
-                              >
-                                Show less
-                              </button>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Browse Button */}
-                      <div className="pt-4">
-                        <Link
-                          to={`/products?category=${mat.categorySlug}`}
-                          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-900 hover:bg-emerald-800 text-white text-xs sm:text-sm font-black shadow-md hover:shadow-lg transition-all duration-200 w-fit group/btn border border-emerald-700 cursor-pointer"
-                        >
-                          <span>Browse {mat.name} Products</span>
-                          <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover/btn:translate-x-1" />
-                        </Link>
                       </div>
                     </div>
 
                     {/* Right: Sample Product images Showcase (Always on Right for all cards) */}
-                    <div className="lg:col-span-4 p-5 sm:p-6 bg-gradient-to-br from-amber-50/90 via-stone-50 to-amber-50/60 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-stone-200">
+                    <div className="p-5 sm:p-6 bg-gradient-to-br from-amber-50/90 via-stone-50 to-amber-50/60 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-stone-200">
                       <div>
                         <div className="flex items-center gap-2 mb-3">
                           <div className="w-2 h-5 rounded-full bg-amber-600"></div>
