@@ -80,8 +80,8 @@ export const RAW_MATERIALS: MaterialItem[] = [
     name: 'Palm Fiber',
     scientificName: 'Borassus Flabellifer',
     description: 'This material can be used to prepare different types of baskets i.e. Storage, Laundry, Table mat, Coaster etc.',
-    rawImages: ['/materials/orig_palm-1.jpg', '/materials/orig_palm-2.jpg'],
-    sampleImages: ['/materials/orig_BSL-01.jpg', '/materials/orig_BSL-02.jpg'],
+    rawImages: ['/materials/palm_fiber_plant_new.jpg', '/materials/palm_fiber_fiber_new.jpg'],
+    sampleImages: ['/materials/palm_sample_bowl_new.jpg', '/materials/palm_sample_basket_new.jpg'],
     categorySlug: 'palm-fiber',
     products: ['Storage', 'Laundry', 'Table mat', 'Coaster']
   },
@@ -126,6 +126,238 @@ export const RAW_MATERIALS: MaterialItem[] = [
     products: ['Storage', 'Laundry', 'Door mat', 'Table mat', 'Planter', 'Pet basket', 'Coaster']
   }
 ];
+
+interface MaterialTheme {
+  cardBorder: string;
+  cardHoverBorder: string;
+  leftBg: string;
+  leftBorder: string;
+  numberBadge: string;
+  leftTitle: string;
+  leftSubtitle: string;
+  leftRing: string;
+  leftRingHover: string;
+  scientificColor: string;
+  rightBg: string;
+  rightBorder: string;
+  rightBar: string;
+  rightTitle: string;
+  rightSubtitle: string;
+  rightRing: string;
+  rightRingHover: string;
+}
+
+const MATERIAL_THEMES: Record<string, MaterialTheme> = {
+  'seagrass': {
+    cardBorder: 'border-teal-200/90',
+    cardHoverBorder: 'hover:border-teal-400',
+    leftBg: 'bg-gradient-to-br from-teal-50/90 via-emerald-50/30 to-teal-50/60',
+    leftBorder: 'border-teal-200/80',
+    numberBadge: 'bg-teal-950 text-teal-300 border-teal-400/30',
+    leftTitle: 'text-teal-950',
+    leftSubtitle: 'text-teal-900',
+    leftRing: 'ring-teal-200',
+    leftRingHover: 'hover:ring-teal-600',
+    scientificColor: 'text-teal-800',
+    rightBg: 'bg-gradient-to-br from-emerald-50/90 via-teal-50/40 to-emerald-100/60',
+    rightBorder: 'border-teal-200/80',
+    rightBar: 'bg-teal-600',
+    rightTitle: 'text-teal-950',
+    rightSubtitle: 'text-teal-950',
+    rightRing: 'ring-emerald-200',
+    rightRingHover: 'hover:ring-emerald-600',
+  },
+  'kans-grass': {
+    cardBorder: 'border-sky-200/90',
+    cardHoverBorder: 'hover:border-sky-400',
+    leftBg: 'bg-gradient-to-br from-sky-50/90 via-slate-50 to-sky-50/60',
+    leftBorder: 'border-sky-200/80',
+    numberBadge: 'bg-sky-950 text-sky-300 border-sky-400/30',
+    leftTitle: 'text-sky-950',
+    leftSubtitle: 'text-sky-900',
+    leftRing: 'ring-sky-200',
+    leftRingHover: 'hover:ring-sky-600',
+    scientificColor: 'text-sky-800',
+    rightBg: 'bg-gradient-to-br from-blue-50/90 via-sky-50/40 to-indigo-50/60',
+    rightBorder: 'border-sky-200/80',
+    rightBar: 'bg-sky-600',
+    rightTitle: 'text-sky-950',
+    rightSubtitle: 'text-sky-950',
+    rightRing: 'ring-sky-200',
+    rightRingHover: 'hover:ring-sky-600',
+  },
+  'date-leaf': {
+    cardBorder: 'border-orange-200/90',
+    cardHoverBorder: 'hover:border-orange-400',
+    leftBg: 'bg-gradient-to-br from-orange-50/90 via-stone-50 to-orange-50/60',
+    leftBorder: 'border-orange-200/80',
+    numberBadge: 'bg-orange-950 text-amber-300 border-orange-400/30',
+    leftTitle: 'text-orange-950',
+    leftSubtitle: 'text-orange-900',
+    leftRing: 'ring-orange-200',
+    leftRingHover: 'hover:ring-orange-600',
+    scientificColor: 'text-orange-800',
+    rightBg: 'bg-gradient-to-br from-amber-50/90 via-orange-50/40 to-yellow-100/60',
+    rightBorder: 'border-orange-200/80',
+    rightBar: 'bg-orange-600',
+    rightTitle: 'text-orange-950',
+    rightSubtitle: 'text-orange-950',
+    rightRing: 'ring-amber-200',
+    rightRingHover: 'hover:ring-amber-600',
+  },
+  'jute': {
+    cardBorder: 'border-amber-200/90',
+    cardHoverBorder: 'hover:border-amber-400',
+    leftBg: 'bg-gradient-to-br from-yellow-50/90 via-stone-50 to-amber-50/60',
+    leftBorder: 'border-amber-200/80',
+    numberBadge: 'bg-amber-950 text-yellow-300 border-amber-400/30',
+    leftTitle: 'text-amber-950',
+    leftSubtitle: 'text-amber-900',
+    leftRing: 'ring-amber-200',
+    leftRingHover: 'hover:ring-amber-600',
+    scientificColor: 'text-amber-800',
+    rightBg: 'bg-gradient-to-br from-amber-50/90 via-yellow-50/40 to-stone-100/60',
+    rightBorder: 'border-amber-200/80',
+    rightBar: 'bg-amber-600',
+    rightTitle: 'text-amber-950',
+    rightSubtitle: 'text-amber-950',
+    rightRing: 'ring-amber-200',
+    rightRingHover: 'hover:ring-amber-600',
+  },
+  'rattan': {
+    cardBorder: 'border-stone-300/90',
+    cardHoverBorder: 'hover:border-stone-400',
+    leftBg: 'bg-gradient-to-br from-stone-100/90 via-stone-50 to-amber-50/40',
+    leftBorder: 'border-stone-200',
+    numberBadge: 'bg-stone-900 text-amber-300 border-stone-400/30',
+    leftTitle: 'text-stone-950',
+    leftSubtitle: 'text-stone-900',
+    leftRing: 'ring-stone-200',
+    leftRingHover: 'hover:ring-stone-600',
+    scientificColor: 'text-stone-700',
+    rightBg: 'bg-gradient-to-br from-stone-100/90 via-amber-50/30 to-stone-200/60',
+    rightBorder: 'border-stone-200',
+    rightBar: 'bg-stone-700',
+    rightTitle: 'text-stone-950',
+    rightSubtitle: 'text-stone-950',
+    rightRing: 'ring-stone-300',
+    rightRingHover: 'hover:ring-stone-600',
+  },
+  'bamboo': {
+    cardBorder: 'border-emerald-200/90',
+    cardHoverBorder: 'hover:border-emerald-400',
+    leftBg: 'bg-gradient-to-br from-emerald-50/90 via-stone-50 to-emerald-50/60',
+    leftBorder: 'border-emerald-200/80',
+    numberBadge: 'bg-emerald-950 text-lime-300 border-emerald-400/30',
+    leftTitle: 'text-emerald-950',
+    leftSubtitle: 'text-emerald-900',
+    leftRing: 'ring-emerald-200',
+    leftRingHover: 'hover:ring-emerald-600',
+    scientificColor: 'text-emerald-800',
+    rightBg: 'bg-gradient-to-br from-emerald-50/90 via-lime-50/30 to-green-100/60',
+    rightBorder: 'border-emerald-200/80',
+    rightBar: 'bg-emerald-600',
+    rightTitle: 'text-emerald-950',
+    rightSubtitle: 'text-emerald-950',
+    rightRing: 'ring-emerald-200',
+    rightRingHover: 'hover:ring-emerald-600',
+  },
+  'palm-fiber': {
+    cardBorder: 'border-yellow-200/90',
+    cardHoverBorder: 'hover:border-yellow-400',
+    leftBg: 'bg-gradient-to-br from-yellow-50/90 via-amber-50/30 to-yellow-50/60',
+    leftBorder: 'border-yellow-200/80',
+    numberBadge: 'bg-yellow-950 text-amber-200 border-yellow-400/30',
+    leftTitle: 'text-yellow-950',
+    leftSubtitle: 'text-yellow-900',
+    leftRing: 'ring-yellow-200',
+    leftRingHover: 'hover:ring-yellow-600',
+    scientificColor: 'text-yellow-800',
+    rightBg: 'bg-gradient-to-br from-amber-50/90 via-stone-50 to-yellow-100/60',
+    rightBorder: 'border-yellow-200/80',
+    rightBar: 'bg-yellow-700',
+    rightTitle: 'text-yellow-950',
+    rightSubtitle: 'text-yellow-950',
+    rightRing: 'ring-amber-200',
+    rightRingHover: 'hover:ring-amber-600',
+  },
+  'corn-husk': {
+    cardBorder: 'border-amber-200/90',
+    cardHoverBorder: 'hover:border-amber-400',
+    leftBg: 'bg-gradient-to-br from-amber-50/80 via-yellow-50/30 to-amber-50/60',
+    leftBorder: 'border-amber-200/80',
+    numberBadge: 'bg-amber-900 text-yellow-200 border-amber-400/30',
+    leftTitle: 'text-amber-950',
+    leftSubtitle: 'text-amber-900',
+    leftRing: 'ring-amber-200',
+    leftRingHover: 'hover:ring-amber-600',
+    scientificColor: 'text-amber-700',
+    rightBg: 'bg-gradient-to-br from-yellow-50/90 via-amber-50/30 to-orange-50/60',
+    rightBorder: 'border-amber-200/80',
+    rightBar: 'bg-amber-500',
+    rightTitle: 'text-amber-950',
+    rightSubtitle: 'text-amber-950',
+    rightRing: 'ring-yellow-200',
+    rightRingHover: 'hover:ring-yellow-600',
+  },
+  'banana-fiber': {
+    cardBorder: 'border-lime-200/90',
+    cardHoverBorder: 'hover:border-lime-400',
+    leftBg: 'bg-gradient-to-br from-lime-50/90 via-stone-50 to-lime-50/60',
+    leftBorder: 'border-lime-200/80',
+    numberBadge: 'bg-lime-950 text-emerald-300 border-lime-400/30',
+    leftTitle: 'text-lime-950',
+    leftSubtitle: 'text-lime-900',
+    leftRing: 'ring-lime-200',
+    leftRingHover: 'hover:ring-lime-600',
+    scientificColor: 'text-lime-800',
+    rightBg: 'bg-gradient-to-br from-lime-50/90 via-emerald-50/30 to-lime-100/60',
+    rightBorder: 'border-lime-200/80',
+    rightBar: 'bg-lime-600',
+    rightTitle: 'text-lime-950',
+    rightSubtitle: 'text-lime-950',
+    rightRing: 'ring-lime-200',
+    rightRingHover: 'hover:ring-lime-600',
+  },
+  'pineapple-fiber': {
+    cardBorder: 'border-yellow-200/90',
+    cardHoverBorder: 'hover:border-yellow-400',
+    leftBg: 'bg-gradient-to-br from-yellow-50/90 via-amber-50/30 to-yellow-50/60',
+    leftBorder: 'border-yellow-200/80',
+    numberBadge: 'bg-yellow-950 text-amber-300 border-yellow-400/30',
+    leftTitle: 'text-yellow-950',
+    leftSubtitle: 'text-yellow-900',
+    leftRing: 'ring-yellow-200',
+    leftRingHover: 'hover:ring-yellow-600',
+    scientificColor: 'text-yellow-700',
+    rightBg: 'bg-gradient-to-br from-yellow-50/90 via-amber-50/30 to-lime-50/60',
+    rightBorder: 'border-yellow-200/80',
+    rightBar: 'bg-yellow-600',
+    rightTitle: 'text-yellow-950',
+    rightSubtitle: 'text-yellow-950',
+    rightRing: 'ring-yellow-200',
+    rightRingHover: 'hover:ring-yellow-600',
+  },
+  'water-hyacinth': {
+    cardBorder: 'border-cyan-200/90',
+    cardHoverBorder: 'hover:border-cyan-400',
+    leftBg: 'bg-gradient-to-br from-cyan-50/90 via-stone-50 to-cyan-50/60',
+    leftBorder: 'border-cyan-200/80',
+    numberBadge: 'bg-cyan-950 text-cyan-300 border-cyan-400/30',
+    leftTitle: 'text-cyan-950',
+    leftSubtitle: 'text-cyan-900',
+    leftRing: 'ring-cyan-200',
+    leftRingHover: 'hover:ring-cyan-600',
+    scientificColor: 'text-cyan-800',
+    rightBg: 'bg-gradient-to-br from-cyan-50/90 via-teal-50/30 to-blue-100/60',
+    rightBorder: 'border-cyan-200/80',
+    rightBar: 'bg-cyan-600',
+    rightTitle: 'text-cyan-950',
+    rightSubtitle: 'text-cyan-950',
+    rightRing: 'ring-cyan-200',
+    rightRingHover: 'hover:ring-cyan-600',
+  }
+};
 
 export const MaterialsPage: React.FC = () => {
   usePageTitle('Raw Materials & Natural Fibers');
@@ -191,26 +423,28 @@ export const MaterialsPage: React.FC = () => {
         <div className="space-y-6 sm:space-y-8">
 
           {filteredMaterials.map((mat, idx) => {
+            const theme = MATERIAL_THEMES[mat.id] || MATERIAL_THEMES['seagrass'];
+
             return (
               <div
                 key={mat.id}
                 className={`${getDynamicCardAnimation(idx)} group`}
               >
                 <div className={`
-                  relative rounded-2xl border border-stone-200/80 bg-white 
-                  shadow-md hover:shadow-2xl hover:border-emerald-200/60
+                  relative rounded-2xl border ${theme.cardBorder} bg-white 
+                  shadow-md hover:shadow-2xl ${theme.cardHoverBorder}
                   transition-all duration-500 ease-out overflow-hidden
                 `}>
                   <div className="grid grid-cols-1 lg:grid-cols-3 items-stretch">
                     
                     {/* Left: Raw Material Images Showcase (Always on Left for all cards) */}
-                    <div className="p-5 sm:p-6 bg-stone-50/80 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-stone-200">
+                    <div className={`p-5 sm:p-6 ${theme.leftBg} flex flex-col justify-between border-b lg:border-b-0 lg:border-r ${theme.leftBorder}`}>
                       <div>
                         <div className="flex items-center gap-2 mb-3">
-                          <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-emerald-950 text-amber-300 text-xs font-black shadow-md border border-amber-400/30 shrink-0">
+                          <span className={`inline-flex items-center justify-center w-7 h-7 rounded-full ${theme.numberBadge} text-xs font-black shadow-md shrink-0`}>
                             {String(idx + 1).padStart(2, '0')}
                           </span>
-                          <span className="text-xs uppercase tracking-widest font-black text-emerald-950">
+                          <span className={`text-xs uppercase tracking-widest font-black ${theme.leftTitle}`}>
                             Raw Material Images
                           </span>
                         </div>
@@ -219,7 +453,7 @@ export const MaterialsPage: React.FC = () => {
                             <div
                               key={i}
                               onClick={() => setPreviewImage({ src: imgSrc, title: `${mat.name} — Raw Material` })}
-                              className="relative aspect-4/3 sm:aspect-square rounded-2xl overflow-hidden bg-stone-200 cursor-pointer group/img ring-1 ring-stone-300 hover:ring-emerald-600 transition-all duration-300 shadow-sm hover:shadow-xl"
+                              className={`relative aspect-4/3 sm:aspect-square rounded-2xl overflow-hidden bg-stone-200 cursor-pointer group/img ring-1 ${theme.leftRing} ${theme.leftRingHover} transition-all duration-300 shadow-sm hover:shadow-xl`}
                             >
                               <img
                                 src={imgSrc}
@@ -234,7 +468,7 @@ export const MaterialsPage: React.FC = () => {
                           ))}
                         </div>
                       </div>
-                      <p className="text-[11px] font-black text-stone-800 mt-2.5 text-center uppercase tracking-wide">
+                      <p className={`text-[11px] font-black ${theme.leftSubtitle} mt-2.5 text-center uppercase tracking-wide`}>
                         Natural Plantation & Fiber
                       </p>
                     </div>
@@ -246,7 +480,7 @@ export const MaterialsPage: React.FC = () => {
                           <h3 className="text-2xl sm:text-3xl font-serif font-black text-stone-950 tracking-tight leading-tight">
                             {mat.name}
                           </h3>
-                          <p className="text-sm font-black text-emerald-800 italic mt-0.5">
+                          <p className={`text-sm font-black ${theme.scientificColor} italic mt-0.5`}>
                             {mat.scientificName}
                           </p>
                         </div>
@@ -259,11 +493,11 @@ export const MaterialsPage: React.FC = () => {
                     </div>
 
                     {/* Right: Sample Product images Showcase (Always on Right for all cards) */}
-                    <div className="p-5 sm:p-6 bg-gradient-to-br from-amber-50/90 via-stone-50 to-amber-50/60 flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-stone-200">
+                    <div className={`p-5 sm:p-6 ${theme.rightBg} flex flex-col justify-between border-t lg:border-t-0 lg:border-l ${theme.rightBorder}`}>
                       <div>
                         <div className="flex items-center gap-2 mb-3">
-                          <div className="w-2 h-5 rounded-full bg-amber-600"></div>
-                          <span className="text-xs uppercase tracking-widest font-black text-amber-950">
+                          <div className={`w-2 h-5 rounded-full ${theme.rightBar}`}></div>
+                          <span className={`text-xs uppercase tracking-widest font-black ${theme.rightTitle}`}>
                             Sample Product images
                           </span>
                         </div>
@@ -272,7 +506,7 @@ export const MaterialsPage: React.FC = () => {
                             <div
                               key={i}
                               onClick={() => setPreviewImage({ src: imgSrc, title: `${mat.name} — Sample Product` })}
-                              className="relative aspect-4/3 sm:aspect-square rounded-2xl overflow-hidden bg-white cursor-pointer group/img ring-1 ring-amber-300 hover:ring-amber-600 transition-all duration-300 shadow-sm hover:shadow-xl"
+                              className={`relative aspect-4/3 sm:aspect-square rounded-2xl overflow-hidden bg-white cursor-pointer group/img ring-1 ${theme.rightRing} ${theme.rightRingHover} transition-all duration-300 shadow-sm hover:shadow-xl`}
                             >
                               <img
                                 src={imgSrc}
@@ -287,7 +521,7 @@ export const MaterialsPage: React.FC = () => {
                           ))}
                         </div>
                       </div>
-                      <p className="text-[11px] font-black text-amber-950 mt-2.5 text-center uppercase tracking-wide">
+                      <p className={`text-[11px] font-black ${theme.rightSubtitle} mt-2.5 text-center uppercase tracking-wide`}>
                         Export Quality Finished Handicrafts
                       </p>
                     </div>

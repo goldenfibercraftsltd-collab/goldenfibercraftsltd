@@ -207,11 +207,11 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
                 className={`group relative rounded-2xl bg-white border border-stone-200/90 hover:border-stone-300 shadow-xs hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col cursor-pointer hover-lift-sm ${getDynamicCardAnimation(idx)}`}
               >
                 {/* 1:1 Square Image Container */}
-                <div className="relative aspect-square w-full bg-stone-50/60 overflow-hidden flex items-center justify-center p-6">
+                <div className="relative aspect-square w-full bg-gradient-to-b from-stone-50/80 to-stone-100/40 overflow-hidden flex items-center justify-center p-4 sm:p-5">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="h-full w-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="h-full w-full object-contain group-hover:scale-108 transition-transform duration-700 ease-out drop-shadow-xs"
                     loading={idx < 5 ? "eager" : "lazy"}
                     decoding="async"
                   />
