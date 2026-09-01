@@ -3732,7 +3732,10 @@ export const PRODUCTS: ProductItem[] = [
     categorySlug: "jute",
     subCategory: "bags",
     image: "/products/bjb_56.png",
-    galleryImages: ["/products/bjb_56.png"],
+    galleryImages: [
+      "/products/bjb_56.png",
+      "/products/bjb_56_lifestyle.jpg"
+    ],
     description: "Structured square shopping tote made from tightly woven natural golden jute fiber with sturdy integrated shoulder straps.",
     longDescription: {
           "overview": "The Handcrafted Golden Jute Classic Tote (Art No: BJB-56) is masterfully handcrafted from 100% Natural Jute. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
