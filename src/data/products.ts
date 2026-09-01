@@ -3494,7 +3494,10 @@ export const PRODUCTS: ProductItem[] = [
     categorySlug: "jute",
     subCategory: "bags",
     image: "/products/bjb_07.png",
-    galleryImages: ["/products/bjb_07.png"],
+    galleryImages: [
+      "/products/bjb_07.png",
+      "/products/bjb_07_lifestyle.jpg"
+    ],
     description: "Versatile nesting trio of shallow round charcoal grey jute tote baskets with integrated side carrying handles.",
     longDescription: {
           "overview": "The Wholesale Jute Utility Bowls (Set of 3) (Art No: BJB-07) is masterfully handcrafted from 100% Natural Jute. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
