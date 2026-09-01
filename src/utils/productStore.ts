@@ -1,8 +1,8 @@
 import { PRODUCTS, ProductItem, CATEGORIES, CategoryInfo } from '../data/products';
 
-const DELETED_KEY = 'gfcl_deleted_product_ids';
-const CUSTOM_KEY = 'gfcl_custom_products';
-const LIVE_CACHE_KEY = 'gfcl_live_products_cache';
+const DELETED_KEY = 'gfcl_deleted_product_ids_v3';
+const CUSTOM_KEY = 'gfcl_custom_products_v3';
+const LIVE_CACHE_KEY = 'gfcl_live_products_cache_v3';
 
 export function getDeletedProductIds(): string[] {
   try {
@@ -98,9 +98,19 @@ export function formatDbProductToItem(p: any): ProductItem {
   let gallery: string[] = [];
   if (typeof p.gallery_images === 'string') {
     try {
+      // Clean any accidental double-escaping
+      const cleaned = p.gallery_images.replace(/\\/g, '').replace(/\["/, '["').replace(/"\]/, '"]');
       gallery = JSON.parse(p.gallery_images || '[]');
+      if (!Array.isArray(gallery) || !gallery.length) {
+        gallery = JSON.parse(cleaned || '[]');
+      }
     } catch {
-      gallery = [];
+      try {
+        const matches = p.gallery_images.match(/\/products\/[^",\]\s]+/g);
+        gallery = matches || [];
+      } catch {
+        gallery = [];
+      }
     }
   } else if (Array.isArray(p.gallery_images)) {
     gallery = p.gallery_images;

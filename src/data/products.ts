@@ -3259,11 +3259,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: "Jute",
     categorySlug: "jute",
     subCategory: "bags",
-    image: "/products/bjb_68.png",
-    galleryImages: [
-      "/products/bjb_68.png",
-      "/products/bjb_68_lifestyle.jpg"
-    ],
+    image: "/products/bjb_68_new.jpg",
+    galleryImages: ["/products/bjb_68_new.jpg", "/products/bjb_68_lifestyle.jpg"],
     description: "Artisanal handwoven jute shopping tote featuring a stylish two-tone diamond checkered weave with reinforced top handles.",
     longDescription: {
           "overview": "The Checkered Woven Jute Shopping Bag (Art No: BJB-68) is masterfully handcrafted from 100% Natural Jute. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
@@ -3319,8 +3316,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: "Jute",
     categorySlug: "jute",
     subCategory: "bags",
-    image: "/products/bjb_69.png",
-    galleryImages: ["/products/bjb_69.png"],
+    image: "/products/bjb_69_new.jpg",
+    galleryImages: ["/products/bjb_69_new.jpg"],
     description: "Wide flared conical beach bag crafted from woven golden jute with red-trimmed supportive vertical carry straps.",
     longDescription: {
           "overview": "The Conical Jute & Fabric Beach Bag (Art No: BJB-69) is masterfully handcrafted from Jute & Fabric. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
@@ -3376,11 +3373,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: "Jute",
     categorySlug: "jute",
     subCategory: "bags",
-    image: "/products/bjb_66.png",
-    galleryImages: [
-      "/products/bjb_66.png",
-      "/products/bjb_66_lifestyle.jpg"
-    ],
+    image: "/products/bjb_66_new.jpg",
+    galleryImages: ["/products/bjb_66_new.jpg", "/products/bjb_66_lifestyle.jpg"],
     description: "Charming dusty rose dyed coiled jute bucket bag with sturdy upright handle and artisanal woven loop detail.",
     longDescription: {
           "overview": "The Dusty Rose Braided Jute Bucket Bag (Art No: BJB-66) is masterfully handcrafted from 100% Natural Jute. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
@@ -3436,8 +3430,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: "Jute",
     categorySlug: "jute",
     subCategory: "bags",
-    image: "/products/bjb_67.png",
-    galleryImages: ["/products/bjb_67.png"],
+    image: "/products/bjb_67_new.jpg",
+    galleryImages: ["/products/bjb_67_new.jpg"],
     description: "Circular handwoven natural golden jute handbag featuring long comfortable shoulder straps and decorative vibrant tassels.",
     longDescription: {
           "overview": "The Round Jute Gift Bag with Tassel (Art No: BJB-67) is masterfully handcrafted from 100% Natural Jute. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
@@ -3493,11 +3487,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: "Jute",
     categorySlug: "jute",
     subCategory: "bags",
-    image: "/products/bjb_07.png",
-    galleryImages: [
-      "/products/bjb_07.png",
-      "/products/bjb_07_lifestyle.jpg"
-    ],
+    image: "/products/bjb_07_new.jpg",
+    galleryImages: ["/products/bjb_07_new.jpg", "/products/bjb_07_lifestyle.jpg"],
     description: "Versatile nesting trio of shallow round charcoal grey jute tote baskets with integrated side carrying handles.",
     longDescription: {
           "overview": "The Wholesale Jute Utility Bowls (Set of 3) (Art No: BJB-07) is masterfully handcrafted from 100% Natural Jute. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
@@ -3553,12 +3544,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: "Jute",
     categorySlug: "jute",
     subCategory: "bags",
-    image: "/products/bjb_70.png",
-    galleryImages: [
-      "/products/bjb_70.png",
-      "/products/bjb_70_gallery_1.jpg",
-      "/products/bjb_70_gallery_2.jpg"
-    ],
+    image: "/products/bjb_70_new.jpg",
+    galleryImages: ["/products/bjb_70_new.jpg", "/products/bjb_70_gallery_1.jpg", "/products/bjb_70_gallery_2.jpg"],
     description: "Wide boat tote constructed from thick coiled jute rope with horizontal navy blue and cream stripes and double handles.",
     longDescription: {
           "overview": "The Nautical Striped Jute Rope Boat Bag (Art No: BJB-70) is masterfully handcrafted from 100% Natural Jute. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
@@ -3614,11 +3601,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: "Jute",
     categorySlug: "jute",
     subCategory: "bags",
-    image: "/products/bjb_26.png",
-    galleryImages: [
-      "/products/bjb_26.png",
-      "/products/bjb_26_lifestyle.jpg"
-    ],
+    image: "/products/bjb_26_new.jpg",
+    galleryImages: ["/products/bjb_26_new.jpg", "/products/bjb_26_lifestyle.jpg"],
     description: "Minimalist sustainable unbleached jute backpack with comfortable wide shoulder straps and relaxed drawstring top.",
     longDescription: {
           "overview": "The Unbleached Natural Jute Backpack Tote (Art No: BJB-26) is masterfully handcrafted from 100% Natural Jute. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
@@ -3674,8 +3658,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: "Jute",
     categorySlug: "jute",
     subCategory: "bags",
-    image: "/products/bjb_55.png",
-    galleryImages: ["/products/bjb_55.png"],
+    image: "/products/bjb_55_new.jpg",
+    galleryImages: ["/products/bjb_55_new.jpg"],
     description: "Elegant wide-mouth boat tote bag crafted from horizontal coiled jute rope with cream upper half and natural tan lower body.",
     longDescription: {
           "overview": "The Two-Tone Coiled Rope Jute Boat Tote (Art No: BJB-55) is masterfully handcrafted from 100% Natural Jute. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
@@ -3731,11 +3715,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: "Jute",
     categorySlug: "jute",
     subCategory: "bags",
-    image: "/products/bjb_56.png",
-    galleryImages: [
-      "/products/bjb_56.png",
-      "/products/bjb_56_lifestyle.jpg"
-    ],
+    image: "/products/bjb_56_new.jpg",
+    galleryImages: ["/products/bjb_56_new.jpg", "/products/bjb_56_lifestyle.jpg"],
     description: "Structured square shopping tote made from tightly woven natural golden jute fiber with sturdy integrated shoulder straps.",
     longDescription: {
           "overview": "The Handcrafted Golden Jute Classic Tote (Art No: BJB-56) is masterfully handcrafted from 100% Natural Jute. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
@@ -3791,8 +3772,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: "Jute",
     categorySlug: "jute",
     subCategory: "bags",
-    image: "/products/bjb_57.png",
-    galleryImages: ["/products/bjb_57.png"],
+    image: "/products/bjb_57_new.jpg",
+    galleryImages: ["/products/bjb_57_new.jpg"],
     description: "Spacious laminated water-resistant natural jute tote bag decorated with an intricate teal blue artisanal mandala screen print.",
     longDescription: {
           "overview": "The Mandala Print Laminated Jute Tote (Art No: BJB-57) is masterfully handcrafted from 100% Laminated Jute. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
@@ -3848,11 +3829,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: "Jute",
     categorySlug: "jute",
     subCategory: "bags",
-    image: "/products/bjb_58.png",
-    galleryImages: [
-      "/products/bjb_58.png",
-      "/products/bjb_58_lifestyle.jpg"
-    ],
+    image: "/products/bjb_58_new.jpg",
+    galleryImages: ["/products/bjb_58_new.jpg", "/products/bjb_58_lifestyle.jpg"],
     description: "Conical flared natural jute basket bag featuring a sunny yellow dipped base and handcrafted pink and orange tassel ornaments.",
     longDescription: {
           "overview": "The Color-Dipped Jute Basket Bag with Tassels (Art No: BJB-58) is masterfully handcrafted from 100% Natural Jute. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
@@ -6826,8 +6804,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: "Jute",
     categorySlug: "jute",
     subCategory: "baskets",
-    image: "/products/djb_52.png",
-    galleryImages: ["/products/djb_52.png"],
+    image: "/products/djb_52_new.jpg",
+    galleryImages: ["/products/djb_52_new.jpg"],
     description: "Two-tone off-white natural jute and vibrant scarlet red coiled storage baskets with scalloped rim detailing and dual upright carry handles (Set of 3).",
     longDescription: {
           "overview": "The Red & Cream Scalloped Storage Baskets (Art No: DJB-52) is masterfully handcrafted from 100% Natural Jute. Designed for international retail brands, luxury home decor boutiques, and sustainable organization solutions.",
@@ -7034,11 +7012,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: 'Jute',
     categorySlug: 'jute',
     subCategory: 'baskets',
-    image: '/products/gfc_sb_030.png',
-    galleryImages: [
-      '/products/gfc_sb_030.png',
-      '/products/gfc_sb_030_laundry.png'
-    ],
+    image: '/products/gfc_sb_030_new.jpg',
+    galleryImages: ["/products/gfc_sb_030_new.jpg"],
     description: 'Charming round handwoven storage basket with cute animal/bear ear accent options or minimal natural weave for nursery & vanity organization.',
     longDescription: {
       overview: 'The GFC-SB-030 model blends playful artisanal aesthetics with functional utility. Perfect for nursery decor, vanity storage, children’s rooms, or eco gift hampers.',
