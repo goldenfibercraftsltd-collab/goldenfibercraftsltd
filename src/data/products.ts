@@ -7034,7 +7034,7 @@ export const PRODUCTS: ProductItem[] = [
     subCategory: "baskets",
     image: "/products/djb_52.png",
     galleryImages: ["/products/djb_52.png"],
-    description: "Two-tone off-white and scarlet red storage baskets with scalloped rim and red handles.",
+    description: "Two-tone off-white natural jute and vibrant scarlet red coiled storage baskets with scalloped rim detailing and dual upright carry handles (Set of 3).",
     longDescription: {
           "overview": "The Red & Cream Scalloped Storage Baskets (Art No: DJB-52) is masterfully handcrafted from 100% Natural Jute. Designed for international retail brands, luxury home decor boutiques, and sustainable organization solutions.",
           "craftsmanship": "Handcrafted by skilled Bengali women artisans in rural handicraft clusters. 100% natural, biodegradable fibers, tightly hand-braided and stitched with precision for long-lasting durability.",
