@@ -3260,7 +3260,10 @@ export const PRODUCTS: ProductItem[] = [
     categorySlug: "jute",
     subCategory: "bags",
     image: "/products/bjb_68.png",
-    galleryImages: ["/products/bjb_68.png"],
+    galleryImages: [
+      "/products/bjb_68.png",
+      "/products/bjb_68_lifestyle.jpg"
+    ],
     description: "Artisanal handwoven jute shopping tote featuring a stylish two-tone diamond checkered weave with reinforced top handles.",
     longDescription: {
           "overview": "The Checkered Woven Jute Shopping Bag (Art No: BJB-68) is masterfully handcrafted from 100% Natural Jute. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
