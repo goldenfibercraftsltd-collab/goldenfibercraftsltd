@@ -3615,7 +3615,10 @@ export const PRODUCTS: ProductItem[] = [
     categorySlug: "jute",
     subCategory: "bags",
     image: "/products/bjb_26.png",
-    galleryImages: ["/products/bjb_26.png"],
+    galleryImages: [
+      "/products/bjb_26.png",
+      "/products/bjb_26_lifestyle.jpg"
+    ],
     description: "Minimalist sustainable unbleached jute backpack with comfortable wide shoulder straps and relaxed drawstring top.",
     longDescription: {
           "overview": "The Unbleached Natural Jute Backpack Tote (Art No: BJB-26) is masterfully handcrafted from 100% Natural Jute. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
