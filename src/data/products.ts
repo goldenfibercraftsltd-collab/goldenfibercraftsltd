@@ -3377,7 +3377,10 @@ export const PRODUCTS: ProductItem[] = [
     categorySlug: "jute",
     subCategory: "bags",
     image: "/products/bjb_66.png",
-    galleryImages: ["/products/bjb_66.png"],
+    galleryImages: [
+      "/products/bjb_66.png",
+      "/products/bjb_66_lifestyle.jpg"
+    ],
     description: "Charming dusty rose dyed coiled jute bucket bag with sturdy upright handle and artisanal woven loop detail.",
     longDescription: {
           "overview": "The Dusty Rose Braided Jute Bucket Bag (Art No: BJB-66) is masterfully handcrafted from 100% Natural Jute. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
