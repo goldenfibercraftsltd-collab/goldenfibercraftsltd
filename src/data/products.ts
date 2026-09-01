@@ -3849,7 +3849,10 @@ export const PRODUCTS: ProductItem[] = [
     categorySlug: "jute",
     subCategory: "bags",
     image: "/products/bjb_58.png",
-    galleryImages: ["/products/bjb_58.png"],
+    galleryImages: [
+      "/products/bjb_58.png",
+      "/products/bjb_58_lifestyle.jpg"
+    ],
     description: "Conical flared natural jute basket bag featuring a sunny yellow dipped base and handcrafted pink and orange tassel ornaments.",
     longDescription: {
           "overview": "The Color-Dipped Jute Basket Bag with Tassels (Art No: BJB-58) is masterfully handcrafted from 100% Natural Jute. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
