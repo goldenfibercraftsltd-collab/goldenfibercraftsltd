@@ -61,7 +61,7 @@ export const RAW_MATERIALS: MaterialItem[] = [
     name: 'Rattan',
     scientificName: 'Calamus Tenuis',
     description: 'This material can be used to prepare different types of baskets i.e. Storage, Laundry, Table mat, Pet basket, Planter, Tray, Coaster, Stool, Furniture etc.',
-    rawImages: ['/materials/orig_rattan-1.jpg', '/materials/orig_rattan-2.jpg'],
+    rawImages: ['/materials/rattan_plant_new.jpg', '/materials/rattan_fiber_new.jpg'],
     sampleImages: ['/materials/orig_BDC-02.jpg', '/materials/orig_BDC-06.jpg'],
     categorySlug: 'rattan',
     products: ['Storage', 'Laundry', 'Table mat', 'Pet basket', 'Planter', 'Tray', 'Coaster', 'Stool', 'Furniture']

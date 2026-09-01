@@ -19,7 +19,7 @@ const CATEGORY_BANNER_IMAGES: Record<string, string> = {
   'seagrass': '/products/gfc_sfm_001.jpg',
   'kans-grass': '/products/gfc_kpm_001.jpg',
   'date-leaf': '/materials/orig_date-1.jpg',
-  'rattan': '/materials/orig_rattan-1.jpg',
+  'rattan': '/materials/rattan_plant_new.jpg',
   'bamboo': '/materials/orig_BWH-02.jpg',
   'palm-fiber': '/materials/orig_palm-1.jpg',
   'water-hyacinth': '/materials/orig_water-hyacinth-1.jpg',
