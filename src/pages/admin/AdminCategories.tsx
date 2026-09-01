@@ -27,6 +27,7 @@ import {
   RefreshCw,
   Eye
 } from 'lucide-react';
+import { usePageTitle } from '../../utils/usePageTitle';
 
 interface SubCategoryItem {
   id: string;
@@ -64,6 +65,7 @@ const AVAILABLE_ICONS = [
 ];
 
 export const AdminCategories: React.FC = () => {
+  usePageTitle('Manage Categories - Admin');
   const [categories, setCategories] = useState<CategoryData[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [searchQuery, setSearchQuery] = useState<string>('');

@@ -76,7 +76,7 @@ export const ScrollTypingText: React.FC<ScrollTypingTextProps> = ({
   }, [hasStarted, text, speed, delay]);
 
   return (
-    <div ref={elementRef} className="inline-block">
+    <div ref={elementRef} className="block w-full">
       <Component className={className}>
         {displayedText || (hasStarted ? '' : ' ')}
         {showCursor && !isDone && hasStarted && (

@@ -20,6 +20,7 @@ import {
   Layers,
   ArrowRight
 } from 'lucide-react';
+import { usePageTitle } from '../../utils/usePageTitle';
 
 interface BannerData {
   id: number | string;
@@ -50,6 +51,7 @@ const PRESET_BANNERS = [
 ];
 
 export const AdminBanners: React.FC = () => {
+  usePageTitle('Banner Management - Admin');
   const [banners, setBanners] = useState<BannerData[]>([]);
   const [categories, setCategories] = useState<any[]>([]);
   const [loading, setLoading] = useState<boolean>(true);

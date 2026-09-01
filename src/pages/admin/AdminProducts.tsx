@@ -4,8 +4,10 @@ import { AdminLayout } from '../../components/admin/AdminLayout';
 import { PRODUCTS } from '../../data/products';
 import { getAllActiveProducts, markProductDeletedLocally } from '../../utils/productStore';
 import { Plus, Search, Edit3, Trash2, ExternalLink, Image as ImageIcon, CheckCircle, XCircle } from 'lucide-react';
+import { usePageTitle } from '../../utils/usePageTitle';
 
 export const AdminProducts: React.FC = () => {
+  usePageTitle('Manage Products - Admin');
   const [products, setProducts] = useState<any[]>(() => getAllActiveProducts());
   const [search, setSearch] = useState('');
   const [selectedCat, setSelectedCat] = useState('');
@@ -110,7 +112,7 @@ export const AdminProducts: React.FC = () => {
             <Search className="absolute left-3.5 top-3.5 h-4 w-4 text-slate-500" />
             <input
               type="text"
-              placeholder="Search by Item Code or Name..."
+              placeholder="Search by Art Code, Item Code, or Product Name..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="w-full pl-10 pr-4 py-2.5 bg-slate-900 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs font-bold text-white outline-none"
@@ -139,7 +141,7 @@ export const AdminProducts: React.FC = () => {
               <thead className="bg-slate-950/80 text-slate-400 font-mono text-[10px] uppercase border-b border-slate-800">
                 <tr>
                   <th className="px-5 py-3.5">Image</th>
-                  <th className="px-5 py-3.5">Item Code</th>
+                  <th className="px-5 py-3.5">Art Code / Item Code</th>
                   <th className="px-5 py-3.5">Product Name</th>
                   <th className="px-5 py-3.5">Category</th>
                   <th className="px-5 py-3.5 text-center">Status</th>

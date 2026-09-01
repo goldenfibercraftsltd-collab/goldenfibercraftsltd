@@ -22,6 +22,11 @@ const REVEAL_SELECTORS = [
   '.card-slide-right',
   '.card-slide-far-left',
   '.card-slide-far-right',
+  '.card-reveal-up',
+  '.card-reveal-left',
+  '.card-reveal-right',
+  '.card-reveal-pop',
+  '.card-reveal-tilt',
   '[data-reveal]'
 ].join(', ');
 
@@ -37,8 +42,30 @@ const NOT_REVEALED_SELECTORS = [
   '.card-slide-right:not(.revealed)',
   '.card-slide-far-left:not(.revealed)',
   '.card-slide-far-right:not(.revealed)',
+  '.card-reveal-up:not(.revealed)',
+  '.card-reveal-left:not(.revealed)',
+  '.card-reveal-right:not(.revealed)',
+  '.card-reveal-pop:not(.revealed)',
+  '.card-reveal-tilt:not(.revealed)',
   '[data-reveal]:not(.revealed)'
 ].join(', ');
+
+/**
+ * Generates an alternating / dynamic combination of 5 modern WOW animations with smooth staggered timing
+ */
+export function getDynamicCardAnimation(index: number, pattern: 'varied' | 'directional' = 'varied'): string {
+  const animStyles = [
+    'card-reveal-up',
+    'card-reveal-left',
+    'card-reveal-right',
+    'card-reveal-pop',
+    'card-reveal-tilt'
+  ];
+  
+  const stagger = `stagger-${(index % 6) + 1}`;
+  const anim = animStyles[index % animStyles.length];
+  return `${anim} ${stagger}`;
+}
 
 function getObserver(): IntersectionObserver | null {
   if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {

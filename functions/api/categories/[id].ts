@@ -5,7 +5,7 @@ export const onRequestOptions: PagesFunction<Env> = async () => corsHeaders();
 export const onRequestGet: PagesFunction<Env> = async (context) => {
   try {
     const id = context.params.id as string;
-    const category: any = await context.env.DB.prepare('SELECT * FROM categories WHERE id = ?').bind(id).first();
+    const category: any = await context.env.DB.prepare('SELECT * FROM categories WHERE id = ? OR slug = ?').bind(id, id).first();
     if (!category) return jsonResponse({ error: 'Category not found' }, 404);
 
     let subcategories = [];
@@ -49,9 +49,9 @@ export const onRequestPut: PagesFunction<Env> = async (context) => {
 
     if (!fields.length) return jsonResponse({ error: 'No fields to update' }, 400);
     fields.push("updated_at = datetime('now')");
-    values.push(id);
+    values.push(id, id);
 
-    await context.env.DB.prepare(`UPDATE categories SET ${fields.join(', ')} WHERE id = ?`).bind(...values).run();
+    await context.env.DB.prepare(`UPDATE categories SET ${fields.join(', ')} WHERE id = ? OR slug = ?`).bind(...values).run();
     return jsonResponse({ success: true });
   } catch (err: any) {
     return jsonResponse({ error: err.message }, 500);
@@ -66,12 +66,12 @@ export const onRequestDelete: PagesFunction<Env> = async (context) => {
     const id = context.params.id as string;
     
     // Check if products exist under this category
-    const products = await context.env.DB.prepare('SELECT COUNT(*) as count FROM products WHERE category_id = ?').bind(id).first();
+    const products = await context.env.DB.prepare('SELECT COUNT(*) as count FROM products WHERE category_id = ? OR category_id = (SELECT id FROM categories WHERE slug = ?)').bind(id, id).first();
     if (products && (products.count as number) > 0) {
       return jsonResponse({ error: `Cannot delete category. It is linked to ${products.count} products in the database.` }, 400);
     }
 
-    await context.env.DB.prepare('DELETE FROM categories WHERE id = ?').bind(id).run();
+    await context.env.DB.prepare('DELETE FROM categories WHERE id = ? OR slug = ?').bind(id, id).run();
     return jsonResponse({ success: true });
   } catch (err: any) {
     return jsonResponse({ error: err.message }, 500);

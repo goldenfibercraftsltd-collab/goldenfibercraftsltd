@@ -3,8 +3,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import { useUserAuth } from '../context/UserAuthContext';
 import { Trash2, Home, User, LogIn, Lock, CheckCircle2, AlertCircle, ShoppingBag, ArrowRight, ShieldCheck, Mail, Scale, Package } from 'lucide-react';
+import { usePageTitle } from '../utils/usePageTitle';
 
 export const CartPage: React.FC = () => {
+  usePageTitle('Inquiry Cart');
   const { cart, removeFromCart, updateQuantity, clearCart, totalCartonsCount, totalCbmSum, totalNwSum, totalGwSum, totalCartItemsCount } = useCart();
   const { buyer, loginBuyer, isLoggedIn } = useUserAuth();
   const navigate = useNavigate();

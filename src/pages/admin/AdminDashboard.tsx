@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AdminLayout } from '../../components/admin/AdminLayout';
 import { Package, Folders, MessageSquare, Users, Award, Plus, ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import { usePageTitle } from '../../utils/usePageTitle';
 
 export const AdminDashboard: React.FC = () => {
+  usePageTitle('Dashboard - Admin');
   const [stats, setStats] = useState({ products: 18, categories: 5, inquiries: 0, clients: 8 });
   const [inquiries, setInquiries] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);

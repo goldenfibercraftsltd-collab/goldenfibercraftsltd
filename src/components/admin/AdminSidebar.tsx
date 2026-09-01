@@ -19,6 +19,7 @@ export const AdminSidebar: React.FC<AdminSidebarProps> = ({ onLogout }) => {
     { path: '/admin/clients', label: 'Clients / Buyers', icon: Users },
     { path: '/admin/certificates', label: 'Certificates', icon: Award },
     { path: '/admin/banners', label: 'Hero Banners', icon: Image },
+    { path: '/admin/sections', label: 'Pillars & Sections', icon: Sparkles },
     { path: '/admin/inquiries', label: 'Inquiries', icon: MessageSquare },
     { path: '/admin/settings', label: 'Site Settings', icon: Settings },
   ];

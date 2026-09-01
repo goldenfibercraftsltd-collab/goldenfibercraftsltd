@@ -1,10 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Phone, MessageSquare, Sparkles, ShieldCheck } from 'lucide-react';
 import { LanguageSelector } from './LanguageSelector';
 import { BangladeshWavingFlag } from './BangladeshWavingFlag';
+import { 
+  SiteSettingsData, 
+  DEFAULT_SITE_SETTINGS, 
+  getLocalSiteSettings, 
+  fetchLiveSiteSettings 
+} from '../utils/siteContentStore';
 
 export const TopBar: React.FC = () => {
-  const tickerText =
+  const [settings, setSettings] = useState<SiteSettingsData>(() => getLocalSiteSettings());
+
+  useEffect(() => {
+    fetchLiveSiteSettings().then(data => { if (data) setSettings(data); });
+
+    const handleUpdated = (e: any) => {
+      if (e.detail) setSettings(e.detail);
+      else setSettings(getLocalSiteSettings());
+    };
+
+    window.addEventListener('gfcl_settings_updated', handleUpdated);
+    return () => window.removeEventListener('gfcl_settings_updated', handleUpdated);
+  }, []);
+
+  const tickerText = settings.announcement_bar ||
     'Bangladesh’s premier manufacturer & global exporter of sustainable, 100% natural fiber handicrafts.';
 
   return (
@@ -50,7 +70,7 @@ export const TopBar: React.FC = () => {
             </div>
           </div>
 
-          {/* Right: Bangladesh Waving Flag Animation (Pure clean waving flag without text) */}
+          {/* Right: Bangladesh Waving Flag Animation */}
           <div className="flex items-center gap-2 shrink-0">
             <div className="flex items-center p-1 rounded-lg bg-emerald-950/40 border border-emerald-800/40 shadow-inner">
               <BangladeshWavingFlag size="sm" showPole={true} />
@@ -79,3 +99,5 @@ export const TopBar: React.FC = () => {
     </div>
   );
 };
+
+export default TopBar;

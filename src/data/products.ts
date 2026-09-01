@@ -6979,8 +6979,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: "Jute",
     categorySlug: "jute",
     subCategory: "baskets",
-    image: "/products/djb_64_0.png",
-    galleryImages: ["/products/djb_64_0.png"],
+    image: "/products/djb_64_0_new.jpg",
+    galleryImages: ["/products/djb_64_0_new.jpg"],
     description: "Shallow rectangular off-white jute vanity organizer trays with red edge piping.",
     longDescription: {
           "overview": "The Rectangular Jute Vanity Tray with Red Trim (Art No: DJB-64-0) is masterfully handcrafted from 100% Natural Jute. Designed for international retail brands, luxury home decor boutiques, and sustainable organization solutions.",

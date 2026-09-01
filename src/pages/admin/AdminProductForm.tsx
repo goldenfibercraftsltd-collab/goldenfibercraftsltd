@@ -8,11 +8,14 @@ import {
   ArrowLeft, Save, Loader2, Plus, X, Scale, Package, Image as ImageIcon,
   Check, Trash2, Star, Sparkles, RefreshCw, Link as LinkIcon
 } from 'lucide-react';
+import { usePageTitle } from '../../utils/usePageTitle';
 
 export const AdminProductForm: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const isEdit = Boolean(id);
   const navigate = useNavigate();
+
+  usePageTitle(isEdit ? 'Edit Product - Admin' : 'Add New Product - Admin');
 
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
@@ -436,17 +439,17 @@ export const AdminProductForm: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               
-              {/* Item Code */}
+              {/* Item Code / Art No */}
               <div className="space-y-1.5">
                 <label className="block text-xs font-extrabold text-slate-300 uppercase tracking-wider">
-                  Item Code (PPT Code) *
+                  Art Code / Item Code (Art No) *
                 </label>
                 <input
                   type="text"
                   required
                   value={formData.item_code}
                   onChange={(e) => setFormData(prev => ({ ...prev, item_code: e.target.value }))}
-                  placeholder="e.g. GFC-SB-030"
+                  placeholder="e.g. DJB-01 or BCC-05 or GFC-SB-030"
                   className="w-full px-4 py-2.5 bg-slate-950 border border-slate-800 focus:border-emerald-500 rounded-xl text-xs font-bold text-amber-400 font-mono outline-none"
                 />
               </div>

@@ -3,7 +3,8 @@ import { HeroBannerCarousel } from '../components/HeroBannerCarousel';
 import { ProductShowcase } from '../components/ProductShowcase';
 import { GlobalClients } from '../components/GlobalClients';
 import { HomeCertificates } from '../components/HomeCertificates';
-import { PRODUCTS } from '../data/products';
+import { PRODUCTS, TAGLINE } from '../data/products';
+import { usePageTitle } from '../utils/usePageTitle';
 
 interface HomePageProps {
   onOpenQuoteModal: (productCode?: string) => void;
@@ -13,6 +14,8 @@ interface HomePageProps {
 export const HomePage: React.FC<HomePageProps> = ({
   onOpenQuoteModal,
 }) => {
+  usePageTitle('Home', TAGLINE);
+
   return (
     <div className="space-y-12 pb-16">
       {/* 1. Header Auto Banner Carousel */}
@@ -22,6 +25,9 @@ export const HomePage: React.FC<HomePageProps> = ({
       <ProductShowcase
         onOpenQuoteModal={onOpenQuoteModal}
       />
+
+      {/* 3. Moving Right-to-Left Continuous Certificates Ticker */}
+      <HomeCertificates />
     </div>
   );
 };

@@ -17,9 +17,12 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
     const params: any[] = [];
 
     if (active_only) { conditions.push('p.is_active = 1'); }
-    if (category) { conditions.push('c.slug = ?'); params.push(category); }
+    if (category) { conditions.push('(c.slug = ? OR p.category_id = ?)'); params.push(category, category); }
     if (featured === 'true') { conditions.push('p.is_featured = 1'); }
-    if (search) { conditions.push('(p.name LIKE ? OR p.item_code LIKE ?)'); params.push(`%${search}%`, `%${search}%`); }
+    if (search) { 
+      conditions.push('(p.name LIKE ? OR p.item_code LIKE ? OR p.material LIKE ? OR p.sub_category LIKE ?)'); 
+      params.push(`%${search}%`, `%${search}%`, `%${search}%`, `%${search}%`); 
+    }
 
     if (conditions.length) sql += ' WHERE ' + conditions.join(' AND ');
     sql += ' ORDER BY p.display_order ASC, p.id DESC';
@@ -40,19 +43,38 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
   try {
     const body = await context.request.json() as any;
-    const { category_id, item_code, name, description, material, size, color, moq, price_range, image_url, gallery_images, is_featured, is_active, display_order } = body;
+    let { 
+      category_id, sub_category, item_code, name, description, material, size, color, 
+      moq, price_range, image_url, gallery_images, is_featured, is_active, display_order,
+      unit, set_per_carton, cbm_per_carton, nw_per_ctn, gw_per_ctn
+    } = body;
 
-    if (!item_code || !name || !category_id) {
-      return jsonResponse({ error: 'item_code, name, and category_id are required' }, 400);
+    if (!item_code || !name) {
+      return jsonResponse({ error: 'item_code and name are required' }, 400);
+    }
+
+    // Convert string category slug to ID if needed
+    if (typeof category_id === 'string' && isNaN(Number(category_id))) {
+      const cat = await context.env.DB.prepare('SELECT id FROM categories WHERE slug = ?').bind(category_id).first();
+      category_id = cat ? cat.id : 1;
+    } else {
+      category_id = Number(category_id) || 1;
     }
 
     const result = await context.env.DB.prepare(
-      `INSERT INTO products (category_id, item_code, name, description, material, size, color, moq, price_range, image_url, gallery_images, is_featured, is_active, display_order)
-       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
+      `INSERT INTO products (
+        category_id, sub_category, item_code, name, description, material, size, color, 
+        moq, price_range, image_url, gallery_images, is_featured, is_active, display_order,
+        unit, set_per_carton, cbm_per_carton, nw_per_ctn, gw_per_ctn
+      ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`
     ).bind(
-      category_id, item_code, name, description || '', material || '', size || '', color || '',
-      moq || '', price_range || '', image_url || '', gallery_images || '[]',
-      is_featured ? 1 : 0, is_active !== false ? 1 : 0, display_order || 0
+      category_id, sub_category || 'baskets', item_code.trim(), name.trim(), description || '', 
+      material || 'Natural Fiber', size || '', color || 'Natural',
+      moq || '200 Sets', price_range || 'FOB Chattogram / Negotiable', 
+      image_url || '', typeof gallery_images === 'string' ? gallery_images : JSON.stringify(gallery_images || []),
+      is_featured ? 1 : 0, is_active !== false ? 1 : 0, Number(display_order) || 0,
+      unit || 'S/1', Number(set_per_carton) || 24, Number(cbm_per_carton) || 0.045, 
+      Number(nw_per_ctn) || 6.5, Number(gw_per_ctn) || 7.8
     ).run();
 
     return jsonResponse({ success: true, id: result.meta.last_row_id }, 201);

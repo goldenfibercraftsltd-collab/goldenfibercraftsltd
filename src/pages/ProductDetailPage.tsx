@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { CATEGORIES, ProductItem } from '../data/products';
-import { getAllActiveProducts } from '../utils/productStore';
+import { getAllActiveProducts, fetchLiveProducts, formatDbProductToItem } from '../utils/productStore';
 import { ImageMagnifier } from '../components/ImageMagnifier';
 import { useCart, CartItem } from '../context/CartContext';
-import { Check, AlertTriangle, ChevronLeft, ChevronRight, Home, ArrowLeft } from 'lucide-react';
+import { Check, AlertTriangle, ChevronLeft, ChevronRight, Home, ArrowLeft, Send, FileText, ShoppingCart } from 'lucide-react';
 
 export const PRODUCT_SEO_TITLES: Record<string, string> = {
   'GFC-KB-005': 'Wholesale Kaisa Grass Basket Bowl Exporter Storage Kans Grass Basket Manufacturer Handwoven Natural Basket Supplier - Golden Fiber Crafts Ltd',
@@ -28,20 +28,17 @@ export const PRODUCT_SEO_TITLES: Record<string, string> = {
 
 export function getProductSeoTitle(product: ProductItem): string {
   const code = (product.code || product.id || '').toUpperCase();
-  if (PRODUCT_SEO_TITLES[code]) {
-    return PRODUCT_SEO_TITLES[code];
-  }
-
-  // Dynamic Generator for any custom or new products
-  const mat = product.material ? product.material.split(',')[0].trim() : (product.categoryName || 'Natural Fiber');
   const name = product.name || 'Handicraft Item';
-  const sub = product.subCategory ? product.subCategory.replace(/-/g, ' ') : 'Handicrafts';
+  const mat = product.material ? product.material.split(',')[0].trim() : (product.categoryName || 'Natural Fiber');
   
-  return `Wholesale ${mat} ${name} Exporter Storage ${mat} ${sub} Manufacturer Handwoven Eco-Friendly Supplier - Golden Fiber Crafts Ltd`;
+  if (code) {
+    return `${name} (${code}) | Wholesale ${mat} - Golden Fiber Crafts Ltd`;
+  }
+  return `${name} | Wholesale ${mat} - Golden Fiber Crafts Ltd`;
 }
 
 interface ProductDetailPageProps {
-  onOpenQuoteModal?: (productCode?: string) => void;
+  onOpenQuoteModal?: (productCodeOrData?: string | any) => void;
 }
 
 export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuoteModal }) => {
@@ -49,13 +46,49 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
   const navigate = useNavigate();
   const { addToCart } = useCart();
 
-  const allActiveProducts = useMemo(() => getAllActiveProducts(), []);
+  const [productsList, setProductsList] = useState<ProductItem[]>(() => getAllActiveProducts());
+
+  useEffect(() => {
+    // 1. Initial live fetch from Cloudflare D1
+    fetchLiveProducts().then(list => {
+      if (list && list.length > 0) setProductsList(list);
+    });
+
+    // 2. Listen for real-time admin edits/deletions
+    const handleUpdate = () => {
+      setProductsList(getAllActiveProducts());
+    };
+
+    window.addEventListener('gfcl_products_updated', handleUpdate);
+    return () => window.removeEventListener('gfcl_products_updated', handleUpdate);
+  }, []);
+
+  // Guarantee live fresh product data when navigating to a product
+  useEffect(() => {
+    if (!productSlug) return;
+    const cleanSlug = productSlug.toLowerCase().trim();
+    fetch(`/api/products/${encodeURIComponent(cleanSlug)}`)
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.success && data.product) {
+          const formatted = formatDbProductToItem(data.product);
+          setProductsList(prev => {
+            const map = new Map(prev.map(p => [p.code || p.id, p]));
+            map.set(formatted.code || formatted.id, formatted);
+            return Array.from(map.values());
+          });
+        }
+      })
+      .catch(() => {});
+  }, [productSlug]);
+
+  const allActiveProducts = productsList;
 
   // Find product by slug or id or code (with case-insensitive fallback)
   const product: ProductItem = useMemo(() => {
-    if (!productSlug) return allActiveProducts[0];
+    if (!productSlug) return productsList[0] || getAllActiveProducts()[0];
     const cleanSlug = productSlug.toLowerCase().trim();
-    const found = allActiveProducts.find((p) => 
+    const found = productsList.find((p) => 
       p.slug === productSlug || 
       p.id === productSlug || 
       p.code === productSlug ||
@@ -63,8 +96,8 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
       (p.id && p.id.toLowerCase() === cleanSlug) ||
       (p.code && p.code.toLowerCase() === cleanSlug)
     );
-    return found || allActiveProducts[0];
-  }, [allActiveProducts, productSlug]);
+    return found || productsList[0] || getAllActiveProducts()[0];
+  }, [productsList, productSlug]);
 
   const currentCategory = useMemo(() => {
     return (
@@ -104,6 +137,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
 
   // Dynamic calculations
   const totalCartons = Math.max(1, Math.ceil(orderQty / setPerCarton));
+  const totalReceivedQty = totalCartons * setPerCarton;
   const totalCbm = (totalCartons * cbmPerCarton).toFixed(3);
   const totalGw = (totalCartons * gwPerCtn).toString();
 
@@ -131,6 +165,19 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
     addToCart(cartItem);
     setAddedSuccess(true);
     setTimeout(() => setAddedSuccess(false), 3000);
+  };
+
+  const handleRequestQuote = () => {
+    if (onOpenQuoteModal) {
+      onOpenQuoteModal({
+        productCode: product.code || product.id,
+        productName: product.name,
+        quantity: orderQty,
+        cartons: totalCartons,
+        cbm: totalCbm,
+        message: `Inquiry for ${product.name} (${product.code || product.id}). Order Quantity: ${orderQty} pcs, Total Cartons: ${totalCartons}, Total CBM: ${totalCbm} m³. Material: ${material}, Color: ${color}.`,
+      });
+    }
   };
 
   // Build 15 Related Products (same category first, filled with other catalog items)
@@ -285,80 +332,97 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
               </div>
 
               {/* Total G.W(KG) Box */}
-              <div className="grid grid-cols-12 items-center py-1">
-                <span className="col-span-4 text-black font-bold">Total G.W(KG):</span>
-                <div className="col-span-8">
+              <div className="grid grid-cols-12 items-center py-1 gap-2">
+                <span className="col-span-5 sm:col-span-4 text-black font-bold text-xs sm:text-sm">Total G.W(KG):</span>
+                <div className="col-span-7 sm:col-span-8">
                   <input
                     type="text"
                     readOnly
                     value={totalGw}
-                    className="w-48 px-3 py-1.5 bg-white border border-stone-400 rounded-sm text-sm text-black font-bold font-mono"
+                    className="w-full max-w-[190px] sm:w-48 px-3 py-1.5 bg-white border border-stone-400 rounded-sm text-xs sm:text-sm text-black font-bold font-mono"
                   />
                 </div>
               </div>
 
               {/* Total Carton Box */}
-              <div className="grid grid-cols-12 items-center py-1">
-                <span className="col-span-4 text-black font-bold">Total Carton:</span>
-                <div className="col-span-8">
+              <div className="grid grid-cols-12 items-center py-1 gap-2">
+                <span className="col-span-5 sm:col-span-4 text-black font-bold text-xs sm:text-sm">Total Carton:</span>
+                <div className="col-span-7 sm:col-span-8">
                   <input
                     type="text"
                     readOnly
                     value={totalCartons}
-                    className="w-48 px-3 py-1.5 bg-white border border-stone-400 rounded-sm text-sm text-black font-bold font-mono"
+                    className="w-full max-w-[190px] sm:w-48 px-3 py-1.5 bg-white border border-stone-400 rounded-sm text-xs sm:text-sm text-black font-bold font-mono"
                   />
                 </div>
               </div>
 
               {/* Total CBM Box */}
-              <div className="grid grid-cols-12 items-center py-1">
-                <span className="col-span-4 text-black font-bold">Total CBM:</span>
-                <div className="col-span-8">
+              <div className="grid grid-cols-12 items-center py-1 gap-2">
+                <span className="col-span-5 sm:col-span-4 text-black font-bold text-xs sm:text-sm">Total CBM:</span>
+                <div className="col-span-7 sm:col-span-8">
                   <input
                     type="text"
                     readOnly
                     value={totalCbm}
-                    className="w-48 px-3 py-1.5 bg-white border border-stone-400 rounded-sm text-sm text-black font-bold font-mono"
+                    className="w-full max-w-[190px] sm:w-48 px-3 py-1.5 bg-white border border-stone-400 rounded-sm text-xs sm:text-sm text-black font-bold font-mono"
                   />
                 </div>
               </div>
 
-              {/* Received Qty Box */}
-              <div className="grid grid-cols-12 items-center py-1.5">
-                <span className="col-span-4 font-bold text-[#166534]">Received Qty:</span>
-                <div className="col-span-8">
+              {/* Received Qty Box (Auto-Calculated based on Full Cartons) */}
+              <div className="grid grid-cols-12 items-center py-1.5 gap-2">
+                <span className="col-span-5 sm:col-span-4 font-bold text-[#166534] text-xs sm:text-sm">Received Qty:</span>
+                <div className="col-span-7 sm:col-span-8 flex items-center gap-1.5">
                   <input
                     type="text"
-                    value={receivedQty}
-                    onChange={(e) => setReceivedQty(e.target.value)}
-                    className="w-48 px-3 py-1.5 bg-white border-2 border-[#166534] rounded-sm text-sm text-stone-900 font-mono outline-hidden"
-                    placeholder=""
+                    readOnly
+                    value={totalReceivedQty}
+                    className="w-full max-w-[190px] sm:w-48 px-3 py-1.5 bg-[#f0fdf4] border-2 border-[#166534] rounded-sm text-xs sm:text-sm text-[#14532d] font-bold font-mono outline-hidden shadow-2xs"
+                    title="Exact shipped quantity based on full export cartons"
                   />
+                  <span className="text-[10px] sm:text-xs text-stone-500 font-medium whitespace-nowrap">(Full Pcs)</span>
                 </div>
               </div>
 
-              {/* Order Qty + Add To Cart Row */}
-              <div className="grid grid-cols-12 items-center py-2">
-                <span className="col-span-4 font-bold text-stone-900">Order Qty</span>
-                <div className="col-span-8 flex items-center gap-3">
+              {/* Order Qty + Request Quote Row */}
+              <div className="grid grid-cols-12 items-start sm:items-center py-2 gap-2">
+                <span className="col-span-5 sm:col-span-4 font-bold text-stone-900 text-xs sm:text-sm pt-2 sm:pt-0">Order Qty</span>
+                <div className="col-span-7 sm:col-span-8 flex flex-wrap items-center gap-2.5">
                   <input
                     type="number"
                     min={setPerCarton}
                     step={setPerCarton}
                     value={orderQty}
                     onChange={(e) => setOrderQty(Math.max(1, Number(e.target.value)))}
-                    className="w-44 px-3 py-2 bg-white border-2 border-[#166534] rounded-sm text-sm font-bold text-stone-900 font-mono outline-hidden"
+                    className="w-full max-w-[190px] sm:w-44 px-3 py-2 bg-white border-2 border-[#166534] rounded-sm text-xs sm:text-sm font-bold text-stone-900 font-mono outline-hidden"
                   />
+                  
+                  {/* Primary Request Quote Button */}
+                  <button
+                    onClick={handleRequestQuote}
+                    className="px-5 sm:px-6 py-2 sm:py-2.5 rounded-sm bg-[#166534] hover:bg-[#14532d] border-2 border-[#166534] hover:border-[#14532d] text-white font-black text-xs sm:text-sm transition-all duration-200 cursor-pointer flex items-center gap-1.5 shadow-sm hover:shadow hover:scale-[1.02] active:scale-[0.98]"
+                    title="Request Official Factory Quote for this item"
+                  >
+                    <Send className="h-3.5 sm:h-4 w-3.5 sm:w-4" />
+                    <span>Request Quote</span>
+                  </button>
+
+                  {/* Secondary Add to Cart Button */}
                   <button
                     onClick={handleAddToCart}
-                    className="px-6 py-2 rounded-sm border-2 border-[#166534] text-[#166534] hover:bg-[#166534] hover:text-white font-bold text-sm transition-all duration-200 cursor-pointer flex items-center gap-1.5 shadow-2xs"
+                    className="px-3 sm:px-3.5 py-2 sm:py-2.5 rounded-sm border border-stone-400 bg-stone-100 hover:bg-stone-200 text-stone-800 font-bold text-xs transition-all duration-200 cursor-pointer flex items-center gap-1 shadow-2xs"
+                    title="Add to multi-item inquiry cart"
                   >
                     {addedSuccess ? (
                       <>
-                        <Check className="h-4 w-4" /> Added
+                        <Check className="h-3.5 w-3.5 text-emerald-700" /> <span className="text-emerald-800 font-black">Added</span>
                       </>
                     ) : (
-                      '+ Add To Cart'
+                      <>
+                        <ShoppingCart className="h-3.5 w-3.5 text-stone-600" />
+                        <span>+ Cart</span>
+                      </>
                     )}
                   </button>
                 </div>

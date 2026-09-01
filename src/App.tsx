@@ -34,13 +34,67 @@ import { AdminCertificates } from './pages/admin/AdminCertificates';
 import { AdminBanners } from './pages/admin/AdminBanners';
 import { AdminInquiries } from './pages/admin/AdminInquiries';
 import { AdminSettings } from './pages/admin/AdminSettings';
+import { AdminPageSections } from './pages/admin/AdminPageSections';
 
 import { initScrollReveal } from './utils/scrollReveal';
 import { SmoothScrollProvider } from './components/SmoothScroll';
+import { formatPageTitle } from './utils/usePageTitle';
 
 export const AppContent: React.FC = () => {
   const location = useLocation();
   const isAdminRoute = location.pathname.startsWith('/admin');
+
+  // Dynamic Browser Tab / Falcon Title Manager based on current page
+  React.useEffect(() => {
+    const p = location.pathname;
+    if (p === '/') {
+      document.title = formatPageTitle('Home');
+    } else if (p === '/about') {
+      document.title = formatPageTitle('About Us');
+    } else if (p === '/products') {
+      document.title = formatPageTitle('Our Products');
+    } else if (p === '/cart') {
+      document.title = formatPageTitle('Inquiry Cart');
+    } else if (p === '/materials' || p === '/handicrafts-material') {
+      document.title = formatPageTitle('Raw Materials & Natural Fibers');
+    } else if (p === '/infrastructure') {
+      document.title = formatPageTitle('Manufacturing Infrastructure');
+    } else if (p === '/sustainability') {
+      document.title = formatPageTitle('Sustainability & Eco-Impact');
+    } else if (p === '/quality') {
+      document.title = formatPageTitle('Quality Control & Standards');
+    } else if (p === '/clients') {
+      document.title = formatPageTitle('Global Clients & Export');
+    } else if (p === '/contact') {
+      document.title = formatPageTitle('Contact Us');
+    } else if (p === '/terms' || p === '/terms-conditions') {
+      document.title = formatPageTitle('Terms & Conditions');
+    } else if (p === '/faq') {
+      document.title = formatPageTitle('Frequently Asked Questions');
+    } else if (p === '/admin/login') {
+      document.title = formatPageTitle('Admin Login');
+    } else if (p === '/admin' || p === '/admin/dashboard') {
+      document.title = formatPageTitle('Admin Dashboard');
+    } else if (p === '/admin/products') {
+      document.title = formatPageTitle('Manage Products - Admin');
+    } else if (p === '/admin/products/new') {
+      document.title = formatPageTitle('Add Product - Admin');
+    } else if (p.startsWith('/admin/products/edit')) {
+      document.title = formatPageTitle('Edit Product - Admin');
+    } else if (p === '/admin/categories') {
+      document.title = formatPageTitle('Manage Categories - Admin');
+    } else if (p === '/admin/clients') {
+      document.title = formatPageTitle('Manage Clients - Admin');
+    } else if (p === '/admin/certificates') {
+      document.title = formatPageTitle('Manage Certificates - Admin');
+    } else if (p === '/admin/banners') {
+      document.title = formatPageTitle('Banner Management - Admin');
+    } else if (p === '/admin/inquiries') {
+      document.title = formatPageTitle('Inquiries - Admin');
+    } else if (p === '/admin/settings') {
+      document.title = formatPageTitle('Admin Settings');
+    }
+  }, [location.pathname]);
 
   // Trigger high-performance scroll reveal on route change
   React.useEffect(() => {
@@ -50,12 +104,19 @@ export const AppContent: React.FC = () => {
 
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);
   const [selectedProductCode, setSelectedProductCode] = useState<string | undefined>(undefined);
+  const [selectedQuoteData, setSelectedQuoteData] = useState<any>(undefined);
 
   const [infoModalOpen, setInfoModalOpen] = useState(false);
   const [infoModalData, setInfoModalData] = useState({ title: '', content: '' });
 
-  const handleOpenQuoteModal = (productCode?: string) => {
-    setSelectedProductCode(productCode);
+  const handleOpenQuoteModal = (productCodeOrData?: string | any) => {
+    if (typeof productCodeOrData === 'object' && productCodeOrData !== null) {
+      setSelectedQuoteData(productCodeOrData);
+      setSelectedProductCode(productCodeOrData.productCode);
+    } else {
+      setSelectedProductCode(productCodeOrData);
+      setSelectedQuoteData(productCodeOrData ? { productCode: productCodeOrData } : undefined);
+    }
     setQuoteModalOpen(true);
   };
 
@@ -76,6 +137,7 @@ export const AppContent: React.FC = () => {
         <Route path="/admin/clients" element={<AdminClients />} />
         <Route path="/admin/certificates" element={<AdminCertificates />} />
         <Route path="/admin/banners" element={<AdminBanners />} />
+        <Route path="/admin/sections" element={<AdminPageSections />} />
         <Route path="/admin/inquiries" element={<AdminInquiries />} />
         <Route path="/admin/settings" element={<AdminSettings />} />
         <Route path="/admin" element={<AdminDashboard />} />
@@ -137,6 +199,7 @@ export const AppContent: React.FC = () => {
         isOpen={quoteModalOpen}
         onClose={() => setQuoteModalOpen(false)}
         initialProductCode={selectedProductCode}
+        initialData={selectedQuoteData}
       />
       
       <InfoModal

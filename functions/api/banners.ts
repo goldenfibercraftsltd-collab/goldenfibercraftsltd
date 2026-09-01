@@ -4,9 +4,15 @@ export const onRequestOptions: PagesFunction<Env> = async () => corsHeaders();
 
 export const onRequestGet: PagesFunction<Env> = async (context) => {
   try {
-    const result = await context.env.DB.prepare(
-      'SELECT * FROM banners WHERE is_active = 1 ORDER BY display_order ASC'
-    ).all();
+    const url = new URL(context.request.url);
+    const activeOnly = url.searchParams.get('active_only') !== 'false';
+    let sql = 'SELECT * FROM banners';
+    if (activeOnly) {
+      sql += ' WHERE is_active = 1';
+    }
+    sql += ' ORDER BY display_order ASC, id DESC';
+
+    const result = await context.env.DB.prepare(sql).all();
     return jsonResponse({ success: true, banners: result.results });
   } catch (err: any) {
     return jsonResponse({ error: err.message }, 500);

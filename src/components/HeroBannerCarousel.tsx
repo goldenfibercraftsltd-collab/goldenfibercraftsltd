@@ -53,7 +53,6 @@ export const HeroBannerCarousel: React.FC<HeroBannerCarouselProps> = () => {
   // Infinite track uses currentIndex starting at 1 (representing banners[0])
   const [currentIndex, setCurrentIndex] = useState<number>(1);
   const [isTransitioning, setIsTransitioning] = useState<boolean>(true);
-  const [isPaused, setIsPaused] = useState<boolean>(false);
   const navigate = useNavigate();
 
   // Touch & Swipe gesture state
@@ -93,14 +92,14 @@ export const HeroBannerCarousel: React.FC<HeroBannerCarouselProps> = () => {
     setCurrentIndex(prev => prev - 1);
   }, [banners.length]);
 
-  // Smooth Auto-Slide every 4.5 seconds (always continuously sliding leftward)
+  // Non-stop continuous Auto-Slide every 3 seconds (uninterrupted by mouse hover)
   useEffect(() => {
-    if (banners.length <= 1 || isPaused) return;
+    if (banners.length <= 1) return;
     const timer = setInterval(() => {
       nextSlide();
-    }, 4500);
+    }, 3000);
     return () => clearInterval(timer);
-  }, [banners.length, isPaused, nextSlide]);
+  }, [banners.length, nextSlide]);
 
   // Seamless Infinite Loop Reset on Transition End
   const handleTransitionEnd = () => {
@@ -166,8 +165,6 @@ export const HeroBannerCarousel: React.FC<HeroBannerCarouselProps> = () => {
   return (
     <div
       className="relative w-full overflow-hidden bg-stone-950 font-sans select-none"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
