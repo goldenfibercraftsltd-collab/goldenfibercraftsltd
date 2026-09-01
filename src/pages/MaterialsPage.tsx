@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Eye, X } from 'lucide-react';
+import { Search, Eye, X, Leaf, Sparkles } from 'lucide-react';
 import { usePageTitle } from '../utils/usePageTitle';
 import { getDynamicCardAnimation } from '../utils/scrollReveal';
 
@@ -189,9 +189,8 @@ export const MaterialsPage: React.FC = () => {
       <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8 mt-8 sm:mt-10">
         
         <div className="space-y-6 sm:space-y-8">
+
           {filteredMaterials.map((mat, idx) => {
-            const isExpanded = activeMaterial === mat.id;
-            
             return (
               <div
                 key={mat.id}
@@ -201,7 +200,6 @@ export const MaterialsPage: React.FC = () => {
                   relative rounded-2xl border border-stone-200/80 bg-white 
                   shadow-md hover:shadow-2xl hover:border-emerald-200/60
                   transition-all duration-500 ease-out overflow-hidden
-                  ${isExpanded ? 'ring-2 ring-emerald-500/30 shadow-xl' : ''}
                 `}>
                   <div className="grid grid-cols-1 lg:grid-cols-3 items-stretch">
                     
