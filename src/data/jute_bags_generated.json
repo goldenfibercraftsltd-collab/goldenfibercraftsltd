@@ -980,9 +980,10 @@
     "categoryName": "Jute",
     "categorySlug": "jute",
     "subCategory": "bags",
-    "image": "/products/bjb_63.png",
+    "image": "/products/bjb_63_new.jpg",
     "galleryImages": [
-      "/products/bjb_63.png"
+      "/products/bjb_63_new.jpg",
+      "/products/bjb_63_hd.jpg"
     ],
     "description": "Modern flared shopper tote with clean cream upper body, charcoal heather base, and elongated upright tubular handles.",
     "longDescription": {
@@ -1044,9 +1045,10 @@
     "categoryName": "Jute",
     "categorySlug": "jute",
     "subCategory": "bags",
-    "image": "/products/bjb_64.png",
+    "image": "/products/bjb_64_new.jpg",
     "galleryImages": [
-      "/products/bjb_64.png"
+      "/products/bjb_64_new.jpg",
+      "/products/bjb_64_hd.jpg"
     ],
     "description": "Feminine flared market tote featuring a dusty lilac mauve top section and cheerful lemon yellow and white striped body.",
     "longDescription": {
@@ -1108,9 +1110,10 @@
     "categoryName": "Jute",
     "categorySlug": "jute",
     "subCategory": "bags",
-    "image": "/products/bjb_65.png",
+    "image": "/products/bjb_65_new.jpg",
     "galleryImages": [
-      "/products/bjb_65.png"
+      "/products/bjb_65_new.jpg",
+      "/products/bjb_65_hd.jpg"
     ],
     "description": "Handcrafted flared boat basket bag woven from coarse golden jute, finished with hand-stitched tan leather carry straps.",
     "longDescription": {
@@ -1172,9 +1175,10 @@
     "categoryName": "Jute",
     "categorySlug": "jute",
     "subCategory": "bags",
-    "image": "/products/bjb_17.png",
+    "image": "/products/bjb_17_new.jpg",
     "galleryImages": [
-      "/products/bjb_17.png"
+      "/products/bjb_17_new.jpg",
+      "/products/bjb_17_hd.jpg"
     ],
     "description": "Sleek structured rectangular tote bag crafted from deep black dyed golden jute fiber with reinforced double handles.",
     "longDescription": {
@@ -1236,9 +1240,10 @@
     "categoryName": "Jute",
     "categorySlug": "jute",
     "subCategory": "bags",
-    "image": "/products/bjb_05.png",
+    "image": "/products/bjb_05_new.jpg",
     "galleryImages": [
-      "/products/bjb_05.png"
+      "/products/bjb_05_new.jpg",
+      "/products/bjb_05_hd.jpg"
     ],
     "description": "Classic market tote bag featuring vertical indigo navy and white pinstripes with natural unbleached jute support handles.",
     "longDescription": {

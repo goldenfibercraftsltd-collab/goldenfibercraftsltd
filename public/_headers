@@ -16,6 +16,15 @@
   Cache-Control: public, max-age=31536000, immutable
   Access-Control-Allow-Origin: *
 
+/favicon*
+  Cache-Control: public, max-age=0, must-revalidate
+  Access-Control-Allow-Origin: *
+
+/site.webmanifest*
+  Content-Type: application/manifest+json
+  Cache-Control: public, max-age=0, must-revalidate
+  Access-Control-Allow-Origin: *
+
 /*.png
   Cache-Control: public, max-age=31536000, immutable
 
