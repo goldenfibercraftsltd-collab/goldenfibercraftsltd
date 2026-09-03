@@ -3886,8 +3886,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: "Jute",
     categorySlug: "jute",
     subCategory: "bags",
-    image: "/products/bjb_59.png",
-    galleryImages: ["/products/bjb_59.png"],
+    image: "/products/bjb_59_new.jpg",
+    galleryImages: ["/products/bjb_59_new.jpg", "/products/bjb_59_hd.jpg"],
     description: "Chic flared market bag with horizontal denim blue and white slub stripes and seamless circular woven carry cutout.",
     longDescription: {
           "overview": "The Nautical Slub Striped Flared Jute Bag (Art No: BJB-59) is masterfully handcrafted from 100% Natural Jute. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
@@ -3943,8 +3943,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: "Jute",
     categorySlug: "jute",
     subCategory: "bags",
-    image: "/products/bjb_60.png",
-    galleryImages: ["/products/bjb_60.png"],
+    image: "/products/bjb_60_new.jpg",
+    galleryImages: ["/products/bjb_60_new.jpg", "/products/bjb_60_hd.jpg"],
     description: "Sophisticated oval flared natural jute bag with crisp horizontal black stripes and premium riveted genuine leather handles.",
     longDescription: {
           "overview": "The Striped Jute Oval Bag with Leather Handles (Art No: BJB-60) is masterfully handcrafted from 100% Natural Jute, Genuine Leather. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
@@ -4000,8 +4000,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: "Jute",
     categorySlug: "jute",
     subCategory: "bags",
-    image: "/products/bjb_61.png",
-    galleryImages: ["/products/bjb_61.png"],
+    image: "/products/bjb_61_new.jpg",
+    galleryImages: ["/products/bjb_61_new.jpg", "/products/bjb_61_hd.jpg"],
     description: "Vibrant tri-color flared tote bag with natural tan upper tier, vivid saffron yellow middle band, and royal blue base.",
     longDescription: {
           "overview": "The Tri-Tone Sun & Ocean Jute Flared Bag (Art No: BJB-61) is masterfully handcrafted from 100% Natural Jute. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
@@ -4057,8 +4057,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: "Jute",
     categorySlug: "jute",
     subCategory: "bags",
-    image: "/products/bjb_62.png",
-    galleryImages: ["/products/bjb_62.png"],
+    image: "/products/bjb_62_new.jpg",
+    galleryImages: ["/products/bjb_62_new.jpg", "/products/bjb_62_hd.jpg"],
     description: "Textured flared shopper bag in charcoal grey and natural mélange pinstripe weave with soft double rope shoulder straps.",
     longDescription: {
           "overview": "The Charcoal Mélange Striped Woven Jute Tote (Art No: BJB-62) is masterfully handcrafted from 100% Natural Jute. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
