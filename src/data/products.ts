@@ -2788,65 +2788,8 @@ export const PRODUCTS: ProductItem[] = [
   },
 
   // ==========================================
-  // 3. Jute Floor Mats (Authentic Catalogue Collection - 8 Products)
+  // 3. Jute Floor Mats (Authentic Catalogue Collection - 7 Products)
   // ==========================================
-  {
-    id: "BJM-09",
-    slug: "spiral-braided-round-jute-floor-mat-bjm-09",
-    code: "BJM-09",
-    name: "Spiral Braided Round Jute Floor Mat",
-    category: "jute",
-    categoryName: "Jute",
-    categorySlug: "jute",
-    subCategory: "floor-mats",
-    image: "/products/bjm_09.png",
-    galleryImages: ["/products/bjm_09.png"],
-    description: "Hand-braided circular floor mat woven from pure golden jute in an elegant spiral concentric pattern for living rooms and bedrooms.",
-    longDescription: {
-          "overview": "The Spiral Braided Round Jute Floor Mat (Art No: BJM-09) is expertly handcrafted from 100% Natural Jute. Engineered for sustainable residential interiors, luxury eco-resorts, and international home decor wholesalers.",
-          "craftsmanship": "Braided and hand-stitched by experienced Bengali artisans using 100% natural, unbleached golden jute fibers. Heavy-duty construction ensures resilience, thermal insulation, and natural anti-static properties.",
-          "exportDetails": "Individually rolled or flat-packed with moisture-absorbent silica gel, wrapped in protective biodegradable poly, and packed into 5-ply export master cartons. Compliant with international REACH and textile import standards.",
-          "careInstructions": "Vacuum regularly without a beater bar. Spot clean with mild soap and damp cloth. Do not soak. Air dry in shade."
-    },
-    unit: "S/1",
-    cbmPerCarton: 0.052,
-    setPerCarton: 12,
-    nwPerCtn: 9.2,
-    gwPerCtn: 10.8,
-    material: "100% Natural Jute",
-    color: "Natural Golden Jute",
-    specifications: [
-          {
-                "key": "Item Code",
-                "value": "BJM-09"
-          },
-          {
-                "key": "Item Name",
-                "value": "Spiral Braided Round Jute Floor Mat"
-          },
-          {
-                "key": "Packaging Unit",
-                "value": "S/1"
-          },
-          {
-                "key": "Materials",
-                "value": "100% Natural Jute"
-          },
-          {
-                "key": "Color / Weave",
-                "value": "Natural Golden Jute"
-          },
-          {
-                "key": "MOQ",
-                "value": "300 Pieces"
-          },
-          {
-                "key": "Country of Origin",
-                "value": "Bangladesh"
-          }
-    ],
-    features: ["100% Natural Biodegradable Golden Jute","Authentic Bangladeshi Hand-Braided Craftsmanship","Durable Reversible Heavy-Duty Construction","Natural Sound Dampening & Eco Living Aesthetic"]
-  },
   {
     id: "BJM-10",
     slug: "natural-unbleached-round-jute-area-mat-bjm-10",
