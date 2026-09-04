@@ -385,6 +385,17 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
                         alt={product.name}
                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-108"
                         loading="lazy"
+                        onError={(e) => {
+                          const target = e.currentTarget;
+                          if (!target.dataset.triedFallback) {
+                            target.dataset.triedFallback = 'true';
+                            if (target.src.endsWith('.png')) {
+                              target.src = target.src.replace(/\.png$/, '.jpg');
+                            } else if (target.src.endsWith('.jpg')) {
+                              target.src = target.src.replace(/\.jpg$/, '.png');
+                            }
+                          }
+                        }}
                       />
                       {/* Item Code Badge */}
                       <span className="absolute top-2 right-2 bg-stone-900/90 text-white text-[10px] sm:text-[11px] font-extrabold px-2 sm:px-2.5 py-0.5 rounded-md shadow-md border border-white/10 backdrop-blur-xs">

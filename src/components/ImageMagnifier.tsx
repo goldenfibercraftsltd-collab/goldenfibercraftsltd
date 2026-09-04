@@ -60,6 +60,17 @@ export const ImageMagnifier: React.FC<ImageMagnifierProps> = ({
           alt={alt}
           className="h-full w-full max-h-[450px] sm:max-h-[520px] object-contain filter drop-shadow-md transition-transform duration-300 group-hover:scale-[1.01] image-render-sharp"
           style={{ imageRendering: '-webkit-optimize-contrast' }}
+          onError={(e) => {
+            const target = e.currentTarget;
+            if (!target.dataset.triedFallback) {
+              target.dataset.triedFallback = 'true';
+              if (target.src.endsWith('.png')) {
+                target.src = target.src.replace(/\.png$/, '.jpg');
+              } else if (target.src.endsWith('.jpg')) {
+                target.src = target.src.replace(/\.jpg$/, '.png');
+              }
+            }
+          }}
         />
 
         {/* Hover Hint Badge */}
