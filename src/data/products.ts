@@ -2186,7 +2186,7 @@ export const PRODUCTS: ProductItem[] = [
     categorySlug: "jute",
     subCategory: "placemats",
     image: "/products/bjm_01.png",
-    galleryImages: ["/products/bjm_01.png"],
+    galleryImages: ["/products/bjm_01.png", "/products/bjm_01_mkt.jpg"],
     description: "Eco-friendly oval braided natural golden jute dining placemat, providing natural heat insulation and rustic tabletop elegance.",
     longDescription: {
           "overview": "The Handwoven Oval Jute Placemat (Art No: BJM-01) is artisanal tableware handcrafted from 100% Natural Jute. Designed for upscale dining tables, eco-friendly restaurants, and luxury tableware retailers.",
@@ -2247,7 +2247,7 @@ export const PRODUCTS: ProductItem[] = [
     categorySlug: "jute",
     subCategory: "placemats",
     image: "/products/bjm_02.png",
-    galleryImages: ["/products/bjm_02.png"],
+    galleryImages: ["/products/bjm_02.png", "/products/bjm_02_mkt.jpg"],
     description: "Circular coiled jute table charger framed with a sunny mustard golden yellow stitched border accent for modern table settings.",
     longDescription: {
           "overview": "The Round Jute Placemat with Mustard Border (Art No: BJM-02) is artisanal tableware handcrafted from 100% Natural Jute. Designed for upscale dining tables, eco-friendly restaurants, and luxury tableware retailers.",
@@ -2308,7 +2308,7 @@ export const PRODUCTS: ProductItem[] = [
     categorySlug: "jute",
     subCategory: "placemats",
     image: "/products/bjm_03.png",
-    galleryImages: ["/products/bjm_03.png"],
+    galleryImages: ["/products/bjm_03.png", "/products/bjm_03_mkt.jpg"],
     description: "Dynamic two-tone spiral swirl braided dining mat crafted from natural and moss green dyed jute cords for everyday dining.",
     longDescription: {
           "overview": "The Spiral Swirl Washable Jute Placemat (Art No: BJM-03) is artisanal tableware handcrafted from 100% Natural Jute. Designed for upscale dining tables, eco-friendly restaurants, and luxury tableware retailers.",
@@ -2369,7 +2369,7 @@ export const PRODUCTS: ProductItem[] = [
     categorySlug: "jute",
     subCategory: "placemats",
     image: "/products/bjm_04.png",
-    galleryImages: ["/products/bjm_04.png"],
+    galleryImages: ["/products/bjm_04.png", "/products/bjm_04_mkt.jpg"],
     description: "Textured round table charger woven from mottled deep indigo green and natural golden jute fibers with fine braided stitching.",
     longDescription: {
           "overview": "The Mottled Indigo Green Round Jute Placemat (Art No: BJM-04) is artisanal tableware handcrafted from 100% Natural Jute. Designed for upscale dining tables, eco-friendly restaurants, and luxury tableware retailers.",
@@ -2430,7 +2430,7 @@ export const PRODUCTS: ProductItem[] = [
     categorySlug: "jute",
     subCategory: "placemats",
     image: "/products/bjm_06.png",
-    galleryImages: ["/products/bjm_06.png"],
+    galleryImages: ["/products/bjm_06.png", "/products/bjm_06_mkt.jpg"],
     description: "Handloomed rectangular jute table mat dyed in a handsome slate denim blue shade, perfect for casual dining and hospitality.",
     longDescription: {
           "overview": "The Denim Blue Flatweave Rectangular Placemat (Art No: BJM-06) is artisanal tableware handcrafted from 100% Natural Jute. Designed for upscale dining tables, eco-friendly restaurants, and luxury tableware retailers.",
@@ -2491,7 +2491,7 @@ export const PRODUCTS: ProductItem[] = [
     categorySlug: "jute",
     subCategory: "placemats",
     image: "/products/bjm_07.png",
-    galleryImages: ["/products/bjm_07.png"],
+    galleryImages: ["/products/bjm_07.png", "/products/bjm_07_mkt.jpg"],
     description: "Spacious oval dining placemat woven from smooth unbleached golden jute fiber, offering a protective and organic tabletop shield.",
     longDescription: {
           "overview": "The Classic Elongated Oval Jute Table Mat (Art No: BJM-07) is artisanal tableware handcrafted from 100% Natural Jute. Designed for upscale dining tables, eco-friendly restaurants, and luxury tableware retailers.",
@@ -2552,7 +2552,7 @@ export const PRODUCTS: ProductItem[] = [
     categorySlug: "jute",
     subCategory: "placemats",
     image: "/products/bjm_11.png",
-    galleryImages: ["/products/bjm_11.png"],
+    galleryImages: ["/products/bjm_11.png", "/products/bjm_11_mkt.jpg"],
     description: "Coastal nautical inspired circular table placemat with high-contrast concentric blue and cream white braided rings.",
     longDescription: {
           "overview": "The Cobalt & White Striped Round Jute Placemat (Art No: BJM-11) is artisanal tableware handcrafted from 100% Natural Jute. Designed for upscale dining tables, eco-friendly restaurants, and luxury tableware retailers.",
@@ -2613,7 +2613,7 @@ export const PRODUCTS: ProductItem[] = [
     categorySlug: "jute",
     subCategory: "placemats",
     image: "/products/bjm_08.png",
-    galleryImages: ["/products/bjm_08.png"],
+    galleryImages: ["/products/bjm_08.png", "/products/bjm_08_mkt.jpg"],
     description: "Rich forest green and natural tweed-braided round table charger, hand-stitched for superior durability and heat resistance.",
     longDescription: {
           "overview": "The Forest Green Braided Round Jute Placemat (Art No: BJM-08) is artisanal tableware handcrafted from 100% Natural Jute. Designed for upscale dining tables, eco-friendly restaurants, and luxury tableware retailers.",
@@ -2674,7 +2674,7 @@ export const PRODUCTS: ProductItem[] = [
     categorySlug: "jute",
     subCategory: "placemats",
     image: "/products/djm_21.png",
-    galleryImages: ["/products/djm_21.png"],
+    galleryImages: ["/products/djm_21.png", "/products/djm_21_mkt.jpg"],
     description: "Chic circular dining placemat featuring concentric coils in berry wine plum and natural cream jute cords.",
     longDescription: {
           "overview": "The Berry Wine Spiral Coiled Jute Placemat (Art No: DJM-21) is artisanal tableware handcrafted from 100% Natural Jute. Designed for upscale dining tables, eco-friendly restaurants, and luxury tableware retailers.",
@@ -2735,7 +2735,7 @@ export const PRODUCTS: ProductItem[] = [
     categorySlug: "jute",
     subCategory: "placemats",
     image: "/products/bjm_22.png",
-    galleryImages: ["/products/bjm_22.png"],
+    galleryImages: ["/products/bjm_22.png", "/products/bjm_22_mkt.jpg"],
     description: "Sophisticated monochrome dark espresso brown dyed round jute dining charger with clean spiral concentric weave.",
     longDescription: {
           "overview": "The Espresso Dark Brown Round Jute Placemat (Art No: BJM-22) is artisanal tableware handcrafted from 100% Natural Jute. Designed for upscale dining tables, eco-friendly restaurants, and luxury tableware retailers.",
