@@ -4399,8 +4399,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: "Jute",
     categorySlug: "jute",
     subCategory: "bags",
-    image: "/products/bjb_06.png",
-    galleryImages: ["/products/bjb_06.png"],
+    image: "/products/bjb_06_new.jpg",
+    galleryImages: ["/products/bjb_06_new.jpg", "/products/bjb_06_hd.jpg"],
     description: "Sustainable textured eco-bag woven from upcycled cotton-jhuta and natural golden jute with vertical webbing strap handles.",
     longDescription: {
           "overview": "The Eco-Textured Jute-Jhuta Blend Shopper (Art No: BJB-06) is masterfully handcrafted from 60% Jute, 35% Jhuta Recycled Fiber, 5% Cotton. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
@@ -4456,8 +4456,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: "Jute",
     categorySlug: "jute",
     subCategory: "bags",
-    image: "/products/bjb_15.png",
-    galleryImages: ["/products/bjb_15.png"],
+    image: "/products/bjb_15_new.jpg",
+    galleryImages: ["/products/bjb_15_new.jpg", "/products/bjb_15_hd.jpg"],
     description: "Chic cylindrical bucket bag crafted from off-white coiled rope featuring vibrant scarlet red vertical stripes and red handles.",
     longDescription: {
           "overview": "The Candy Cane Red Striped Coiled Jute Bag (Art No: BJB-15) is masterfully handcrafted from 100% Natural Jute. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
@@ -4513,8 +4513,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: "Jute",
     categorySlug: "jute",
     subCategory: "bags",
-    image: "/products/bjb_16.png",
-    galleryImages: ["/products/bjb_16.png"],
+    image: "/products/bjb_16_new.jpg",
+    galleryImages: ["/products/bjb_16_new.jpg", "/products/bjb_16_hd.jpg"],
     description: "Timeless horizontal striped tote bag in alternating black and cream white jute bands with sleek black rope shoulder straps.",
     longDescription: {
           "overview": "The Classic Monochrome Striped Jute Tote (Art No: BJB-16) is masterfully handcrafted from 100% Natural Jute. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
@@ -4570,8 +4570,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: "Jute",
     categorySlug: "jute",
     subCategory: "bags",
-    image: "/products/bjb_25.png",
-    galleryImages: ["/products/bjb_25.png"],
+    image: "/products/bjb_25_new.jpg",
+    galleryImages: ["/products/bjb_25_new.jpg", "/products/bjb_25_hd.jpg"],
     description: "Expansive boat-style woven market basket bag crafted from 100% untreated golden jute with thick vertical support handles.",
     longDescription: {
           "overview": "The Wide Natural Golden Jute Basket Tote (Art No: BJB-25) is masterfully handcrafted from 100% Natural Jute. Designed for international eco-fashion retailers, lifestyle brands, departmental stores, and green consumer boutiques.",
@@ -7047,10 +7047,8 @@ export const PRODUCTS: ProductItem[] = [
     categoryName: 'Jute',
     categorySlug: 'jute',
     subCategory: 'bags',
-    image: '/products/gfc_sb_011.png',
-    galleryImages: [
-      '/products/gfc_sb_011.png'
-    ],
+    image: '/products/gfc_sb_011_new.jpg',
+    galleryImages: ['/products/gfc_sb_011_new.jpg', '/products/gfc_sb_011_hd.jpg'],
     description: 'Heavy-duty 100% golden jute shopping tote bag with inner LDPE lamination and padded cotton rope handles.',
     longDescription: {
       overview: 'The golden fiber eco alternative to plastic bags. Designed with water-resistant lamination inside, expanding side gusset, and comfortable padded handles for retail branding and supermarket shopping.',

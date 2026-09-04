@@ -1305,9 +1305,10 @@
     "categoryName": "Jute",
     "categorySlug": "jute",
     "subCategory": "bags",
-    "image": "/products/bjb_06.png",
+    "image": "/products/bjb_06_new.jpg",
     "galleryImages": [
-      "/products/bjb_06.png"
+      "/products/bjb_06_new.jpg",
+      "/products/bjb_06_hd.jpg"
     ],
     "description": "Sustainable textured eco-bag woven from upcycled cotton-jhuta and natural golden jute with vertical webbing strap handles.",
     "longDescription": {
@@ -1369,9 +1370,10 @@
     "categoryName": "Jute",
     "categorySlug": "jute",
     "subCategory": "bags",
-    "image": "/products/bjb_15.png",
+    "image": "/products/bjb_15_new.jpg",
     "galleryImages": [
-      "/products/bjb_15.png"
+      "/products/bjb_15_new.jpg",
+      "/products/bjb_15_hd.jpg"
     ],
     "description": "Chic cylindrical bucket bag crafted from off-white coiled rope featuring vibrant scarlet red vertical stripes and red handles.",
     "longDescription": {
@@ -1433,9 +1435,10 @@
     "categoryName": "Jute",
     "categorySlug": "jute",
     "subCategory": "bags",
-    "image": "/products/bjb_16.png",
+    "image": "/products/bjb_16_new.jpg",
     "galleryImages": [
-      "/products/bjb_16.png"
+      "/products/bjb_16_new.jpg",
+      "/products/bjb_16_hd.jpg"
     ],
     "description": "Timeless horizontal striped tote bag in alternating black and cream white jute bands with sleek black rope shoulder straps.",
     "longDescription": {
@@ -1497,9 +1500,10 @@
     "categoryName": "Jute",
     "categorySlug": "jute",
     "subCategory": "bags",
-    "image": "/products/bjb_25.png",
+    "image": "/products/bjb_25_new.jpg",
     "galleryImages": [
-      "/products/bjb_25.png"
+      "/products/bjb_25_new.jpg",
+      "/products/bjb_25_hd.jpg"
     ],
     "description": "Expansive boat-style woven market basket bag crafted from 100% untreated golden jute with thick vertical support handles.",
     "longDescription": {
