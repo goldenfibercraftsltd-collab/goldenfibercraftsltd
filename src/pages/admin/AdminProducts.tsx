@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { AdminLayout } from '../../components/admin/AdminLayout';
 import { PRODUCTS } from '../../data/products';
-import { getAllActiveProducts, markProductDeletedLocally } from '../../utils/productStore';
+import { getAllActiveProducts, markProductDeletedLocally, formatDbProductToItem, setLiveCachedProducts } from '../../utils/productStore';
 import { Plus, Search, Edit3, Trash2, ExternalLink, Image as ImageIcon, CheckCircle, XCircle } from 'lucide-react';
 import { usePageTitle } from '../../utils/usePageTitle';
 
@@ -14,64 +14,74 @@ export const AdminProducts: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [deletingId, setDeletingId] = useState<string | null>(null);
 
-  const fetchProducts = () => {
+  const fetchProducts = async () => {
     setLoading(true);
-    fetch('/api/products?active_only=false')
-      .then(res => res.json())
-      .then(data => {
-        if (data.success && data.products?.length > 0) {
-          const dbProducts = data.products;
-          const mergedMap = new Map();
-          
-          // Add DB products
-          dbProducts.forEach((p: any) => mergedMap.set(p.item_code || p.id, p));
-          
-          // Add local active products if not in DB response
-          getAllActiveProducts().forEach((p: any) => {
-            if (!mergedMap.has(p.id) && !mergedMap.has(p.code)) {
-              mergedMap.set(p.id, p);
-            }
-          });
-
-          setProducts(Array.from(mergedMap.values()));
-        } else {
-          setProducts(getAllActiveProducts());
-        }
-      })
-      .catch(() => {
-        setProducts(getAllActiveProducts());
-      })
-      .finally(() => setLoading(false));
+    try {
+      const res = await fetch('/api/products?active_only=false');
+      const data = await res.json();
+      if (data && data.success && Array.isArray(data.products)) {
+        // Direct authoritative database products from Cloudflare D1
+        setProducts(data.products);
+        // Also keep live store in sync
+        const activeItems = data.products
+          .filter((p: any) => p.is_active !== false && p.is_active !== 0)
+          .map(formatDbProductToItem);
+        setLiveCachedProducts(activeItems);
+        return;
+      }
+    } catch (err) {
+      console.warn('Network error loading DB products, fallback to local', err);
+    } finally {
+      setLoading(false);
+    }
+    setProducts(getAllActiveProducts());
   };
 
   useEffect(() => {
     fetchProducts();
   }, []);
 
-  const handleDelete = async (id: string, name: string) => {
-    if (!window.confirm(`Are you sure you want to permanently delete "${name}" (${id}) directly from Database?`)) return;
+  const handleDelete = async (item: any) => {
+    const displayName = item.name || item.item_code || 'Product';
+    const displayCode = item.item_code || item.code || item.id;
+    const dbId = item.id;
 
-    setDeletingId(id);
+    if (!window.confirm(`Are you sure you want to permanently delete "${displayName}" (${displayCode}) from the Database?`)) {
+      return;
+    }
+
+    setDeletingId(String(dbId || displayCode));
     const token = localStorage.getItem('gfcl_admin_token') || '';
 
     try {
-      // 1. Direct D1 DB DELETE API Call
-      await fetch(`/api/products/${id}`, {
+      const targetParam = dbId || displayCode;
+      const res = await fetch(`/api/products/${encodeURIComponent(targetParam)}`, {
         method: 'DELETE',
-        headers: { Authorization: `Bearer ${token}` }
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        }
       });
 
-      // 2. Mark deleted in local store so static/cached fallbacks never display it
-      markProductDeletedLocally(id);
+      const data = await res.json().catch(() => ({}));
 
-      // 3. Remove instantly from current list UI state
-      setProducts(prev => prev.filter(p => p.id !== id && p.item_code !== id && p.code !== id));
-      
-      alert(`Product "${name}" (${id}) permanently deleted from Database.`);
+      if (!res.ok && res.status !== 404) {
+        throw new Error(data.error || `Server responded with status ${res.status}`);
+      }
+
+      // Mark deleted locally across all identifiers
+      markProductDeletedLocally(dbId, displayCode, item.item_code, item.code, item.slug);
+
+      // Remove immediately from UI state
+      setProducts(prev => prev.filter(p => 
+        p.id !== dbId && 
+        p.item_code !== displayCode && 
+        p.code !== displayCode
+      ));
+
+      alert(`Product "${displayName}" (${displayCode}) permanently deleted.`);
     } catch (err: any) {
-      // Fallback local deletion if network error
-      markProductDeletedLocally(id);
-      setProducts(prev => prev.filter(p => p.id !== id && p.item_code !== id && p.code !== id));
+      alert(`Delete failed: ${err.message}. Please check your login session.`);
     } finally {
       setDeletingId(null);
     }
@@ -198,7 +208,7 @@ export const AdminProducts: React.FC = () => {
                           </RouterLink>
 
                           <RouterLink
-                            to={`/admin/products/edit/${itemId}`}
+                            to={`/admin/products/edit/${encodeURIComponent(item.id || item.item_code || item.code)}`}
                             className="p-2 rounded-lg bg-emerald-950 hover:bg-emerald-900 text-emerald-300 border border-emerald-800 transition-colors"
                             title="Edit Product"
                           >
@@ -206,8 +216,8 @@ export const AdminProducts: React.FC = () => {
                           </RouterLink>
 
                           <button
-                            onClick={() => handleDelete(itemId, item.name)}
-                            disabled={deletingId === itemId}
+                            onClick={() => handleDelete(item)}
+                            disabled={deletingId === String(item.id || item.item_code || item.code)}
                             className="p-2 rounded-lg bg-rose-950 hover:bg-rose-900 text-rose-300 border border-rose-800 transition-colors disabled:opacity-50 cursor-pointer"
                             title="Delete Permanently from DB"
                           >

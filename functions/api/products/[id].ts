@@ -23,10 +23,10 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
 // PUT update or upsert product
 export const onRequestPut: PagesFunction<Env> = async (context) => {
   const user = await authenticateAdmin(context.request, context.env);
-  if (!user) return jsonResponse({ error: 'Unauthorized' }, 401);
+  if (!user) return jsonResponse({ error: 'Unauthorized. Please login again.' }, 401);
 
   try {
-    const idParam = context.params.id as string;
+    const idParam = (context.params.id as string || '').trim();
     const body = await context.request.json() as any;
 
     // Check if product exists by id or item_code
@@ -41,6 +41,18 @@ export const onRequestPut: PagesFunction<Env> = async (context) => {
     }
 
     if (existing) {
+      // Check if new item_code conflicts with another existing product
+      const newItemCode = (body.item_code || '').toString().trim();
+      if (newItemCode && newItemCode.toLowerCase() !== (existing.item_code || '').toLowerCase()) {
+        const dupe = await context.env.DB.prepare(
+          'SELECT id, item_code FROM products WHERE (item_code = ? OR LOWER(item_code) = LOWER(?)) AND id != ?'
+        ).bind(newItemCode, newItemCode, existing.id).first() as any;
+
+        if (dupe) {
+          return jsonResponse({ error: `Item code "${newItemCode}" is already in use by product ID ${dupe.id}. Please use a unique item code.` }, 400);
+        }
+      }
+
       const fields: string[] = [];
       const values: any[] = [];
 
@@ -56,6 +68,8 @@ export const onRequestPut: PagesFunction<Env> = async (context) => {
           fields.push(`${field} = ?`);
           if (field === 'is_featured' || field === 'is_active') {
             values.push(body[field] ? 1 : 0);
+          } else if (field === 'item_code') {
+            values.push(newItemCode || existing.item_code);
           } else if (field === 'gallery_images') {
             values.push(typeof body[field] === 'string' ? body[field] : JSON.stringify(body[field]));
           } else if (['display_order', 'set_per_carton', 'cbm_per_carton', 'nw_per_ctn', 'gw_per_ctn', 'category_id'].includes(field)) {
@@ -75,7 +89,12 @@ export const onRequestPut: PagesFunction<Env> = async (context) => {
         `UPDATE products SET ${fields.join(', ')} WHERE id = ?`
       ).bind(...values).run();
 
-      return jsonResponse({ success: true, updated_id: existing.id });
+      return jsonResponse({
+        success: true,
+        updated_id: existing.id,
+        old_item_code: existing.item_code,
+        item_code: newItemCode || existing.item_code
+      });
     } else {
       // Upsert: product didn't exist in D1 yet, insert it!
       const { 
@@ -84,8 +103,17 @@ export const onRequestPut: PagesFunction<Env> = async (context) => {
         unit, set_per_carton, cbm_per_carton, nw_per_ctn, gw_per_ctn
       } = body;
 
-      const codeToUse = item_code || idParam;
-      const nameToUse = name || codeToUse;
+      const codeToUse = (item_code || idParam || '').toString().trim();
+      const nameToUse = (name || codeToUse || 'Handicraft Item').toString().trim();
+
+      // Check if codeToUse already exists
+      const dupe = await context.env.DB.prepare(
+        'SELECT id FROM products WHERE item_code = ? OR LOWER(item_code) = LOWER(?)'
+      ).bind(codeToUse, codeToUse).first();
+
+      if (dupe) {
+        return jsonResponse({ error: `Product with item code "${codeToUse}" already exists in Database.` }, 400);
+      }
 
       const result = await context.env.DB.prepare(
         `INSERT INTO products (
@@ -103,7 +131,7 @@ export const onRequestPut: PagesFunction<Env> = async (context) => {
         Number(nw_per_ctn) || 6.5, Number(gw_per_ctn) || 7.8
       ).run();
 
-      return jsonResponse({ success: true, inserted_id: result.meta.last_row_id });
+      return jsonResponse({ success: true, inserted_id: result.meta.last_row_id, item_code: codeToUse });
     }
   } catch (err: any) {
     return jsonResponse({ error: err.message }, 500);
@@ -113,42 +141,47 @@ export const onRequestPut: PagesFunction<Env> = async (context) => {
 // DELETE product
 export const onRequestDelete: PagesFunction<Env> = async (context) => {
   const user = await authenticateAdmin(context.request, context.env);
-  if (!user) return jsonResponse({ error: 'Unauthorized' }, 401);
+  if (!user) return jsonResponse({ error: 'Unauthorized. Please login again.' }, 401);
 
   try {
-    const idParam = context.params.id as string;
+    const idParam = (context.params.id as string || '').trim();
 
     const product = await context.env.DB.prepare(
-      'SELECT id, image_url, gallery_images FROM products WHERE id = ? OR item_code = ? OR LOWER(item_code) = LOWER(?)'
+      'SELECT id, item_code, image_url, gallery_images FROM products WHERE id = ? OR item_code = ? OR LOWER(item_code) = LOWER(?)'
     ).bind(idParam, idParam, idParam).first() as any;
     
-    if (!product) return jsonResponse({ error: 'Product not found' }, 404);
-
-    // Delete from Cloudinary if image exists
-    if (product.image_url && (product.image_url as string).includes('cloudinary')) {
-      try {
-        const publicId = extractCloudinaryPublicId(product.image_url as string);
-        if (publicId) {
-          await deleteFromCloudinary(publicId, context.env);
-        }
-      } catch { /* ignore cloudinary errors */ }
+    if (!product) {
+      return jsonResponse({ success: true, message: 'Product already deleted or not found in database', deleted_id: idParam });
     }
 
-    // Delete gallery images from Cloudinary
+    // Delete from Cloudinary safely
+    if (product.image_url && typeof product.image_url === 'string' && product.image_url.includes('cloudinary')) {
+      try {
+        const publicId = extractCloudinaryPublicId(product.image_url);
+        if (publicId) await deleteFromCloudinary(publicId, context.env);
+      } catch { /* ignore */ }
+    }
+
+    // Delete gallery images from Cloudinary safely
     if (product.gallery_images) {
       try {
-        const gallery = JSON.parse(product.gallery_images as string);
-        for (const url of gallery) {
-          if (url.includes('cloudinary')) {
-            const publicId = extractCloudinaryPublicId(url);
-            if (publicId) await deleteFromCloudinary(publicId, context.env);
+        let gallery: any = product.gallery_images;
+        if (typeof gallery === 'string') {
+          gallery = JSON.parse(gallery);
+        }
+        if (Array.isArray(gallery)) {
+          for (const url of gallery) {
+            if (typeof url === 'string' && url.includes('cloudinary')) {
+              const publicId = extractCloudinaryPublicId(url);
+              if (publicId) await deleteFromCloudinary(publicId, context.env);
+            }
           }
         }
       } catch { /* ignore */ }
     }
 
     await context.env.DB.prepare('DELETE FROM products WHERE id = ?').bind(product.id).run();
-    return jsonResponse({ success: true, deleted_id: product.id });
+    return jsonResponse({ success: true, deleted_id: product.id, deleted_code: product.item_code });
   } catch (err: any) {
     return jsonResponse({ error: err.message }, 500);
   }
@@ -168,6 +201,7 @@ function extractCloudinaryPublicId(url: string): string | null {
 }
 
 async function deleteFromCloudinary(publicId: string, env: Env) {
+  if (!env.CLOUDINARY_API_SECRET || !env.CLOUDINARY_API_KEY || !env.CLOUDINARY_CLOUD_NAME) return;
   const timestamp = Math.floor(Date.now() / 1000).toString();
   const signStr = `public_id=${publicId}&timestamp=${timestamp}${env.CLOUDINARY_API_SECRET}`;
   const encoder = new TextEncoder();

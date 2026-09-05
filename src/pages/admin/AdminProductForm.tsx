@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { AdminLayout } from '../../components/admin/AdminLayout';
 import { ImageUploader } from '../../components/admin/ImageUploader';
 import { PRODUCTS, CATEGORIES, ProductItem } from '../../data/products';
-import { saveCustomProductLocally } from '../../utils/productStore';
+import { saveCustomProductLocally, markProductDeletedLocally, fetchLiveProducts } from '../../utils/productStore';
 import {
   ArrowLeft, Save, Loader2, Plus, X, Scale, Package, Image as ImageIcon,
   Check, Trash2, Star, Sparkles, RefreshCw, Link as LinkIcon
@@ -20,6 +20,8 @@ export const AdminProductForm: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState('');
+  const [originalItemCode, setOriginalItemCode] = useState<string>('');
+  const [dbProductId, setDbProductId] = useState<number | null>(null);
   const [customImageUrl, setCustomImageUrl] = useState('');
   const [customGalleryUrl, setCustomGalleryUrl] = useState('');
 
@@ -51,11 +53,15 @@ export const AdminProductForm: React.FC = () => {
       setLoading(true);
 
       // 1. First try fetching from Cloudflare D1 API
-      fetch(`/api/products/${id}`)
+      fetch(`/api/products/${encodeURIComponent(id)}`)
         .then(res => res.json())
         .then(data => {
           if (data.success && data.product) {
             const p = data.product;
+            setDbProductId(p.id ? Number(p.id) : null);
+            const loadedCode = (p.item_code || p.code || p.id || '').toString().trim();
+            setOriginalItemCode(loadedCode);
+
             let gallery: string[] = [];
             try {
               gallery = typeof p.gallery_images === 'string' ? JSON.parse(p.gallery_images || '[]') : (p.gallery_images || []);
@@ -66,7 +72,7 @@ export const AdminProductForm: React.FC = () => {
             setFormData({
               category_id: p.category_id || p.category || 'jute',
               sub_category: p.sub_category || p.subCategory || 'baskets',
-              item_code: p.item_code || p.code || p.id || '',
+              item_code: loadedCode,
               name: p.name || '',
               description: p.description || '',
               material: p.material || '',
@@ -102,6 +108,8 @@ export const AdminProductForm: React.FC = () => {
       prod => prod.id === targetId || prod.code === targetId || prod.slug === targetId
     );
     if (p) {
+      const code = p.code || p.id;
+      setOriginalItemCode(code);
       const matSpec = p.specifications?.find(s => s.key === 'Materials')?.value || p.material || '';
       const sizeSpec = p.specifications?.find(s => s.key === 'Specification')?.value || '';
       const moqSpec = p.specifications?.find(s => s.key === 'MOQ')?.value || '300 Sets';
@@ -109,7 +117,7 @@ export const AdminProductForm: React.FC = () => {
       setFormData({
         category_id: p.category || 'jute',
         sub_category: p.subCategory || 'baskets',
-        item_code: p.code || p.id,
+        item_code: code,
         name: p.name,
         description: p.description || p.longDescription?.overview || '',
         material: matSpec,
@@ -138,19 +146,34 @@ export const AdminProductForm: React.FC = () => {
 
     const token = localStorage.getItem('gfcl_admin_token') || '';
 
+    const cleanCode = formData.item_code.trim();
+    const cleanName = formData.name.trim();
+
+    if (!cleanCode) {
+      setError('Item code is required.');
+      setSaving(false);
+      return;
+    }
+
+    if (!cleanName) {
+      setError('Product name is required.');
+      setSaving(false);
+      return;
+    }
+
     const payload = {
       ...formData,
+      item_code: cleanCode,
+      name: cleanName,
       gallery_images: JSON.stringify(formData.gallery_images),
     };
 
-    // Save locally so it immediately reflects across site UI
-    saveCustomProductLocally(formData);
-
     try {
-      const url = isEdit ? `/api/products/${id}` : '/api/products';
+      const targetParam = dbProductId || id || cleanCode;
+      const url = isEdit ? `/api/products/${encodeURIComponent(targetParam)}` : '/api/products';
       const method = isEdit ? 'PUT' : 'POST';
 
-      await fetch(url, {
+      const res = await fetch(url, {
         method,
         headers: {
           'Content-Type': 'application/json',
@@ -159,9 +182,26 @@ export const AdminProductForm: React.FC = () => {
         body: JSON.stringify(payload),
       });
 
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        throw new Error(data.error || `Server responded with status ${res.status}`);
+      }
+
+      // If item code was edited, purge the old item code completely from all local stores!
+      if (originalItemCode && originalItemCode.toLowerCase() !== cleanCode.toLowerCase()) {
+        markProductDeletedLocally(originalItemCode);
+      }
+
+      // Save locally with reference to old code so it immediately updates without duplication
+      saveCustomProductLocally(payload, originalItemCode);
+
+      // Force background live products refresh
+      fetchLiveProducts().catch(() => {});
+
       navigate('/admin/products');
     } catch (err: any) {
-      navigate('/admin/products');
+      setError(`Save failed: ${err.message}. Please check your login session.`);
     } finally {
       setSaving(false);
     }

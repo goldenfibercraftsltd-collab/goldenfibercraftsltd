@@ -45,6 +45,7 @@ export interface ProductItem {
   gwPerCtn?: number;
   material?: string;
   color?: string;
+  db_id?: number | string;
 }
 
 export const TAGLINE = "Nature Woven into Every Creation.";

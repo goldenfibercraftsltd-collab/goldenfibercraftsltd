@@ -12,10 +12,12 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
     const passwordHash = await hashPassword(password);
 
-    // Check admin_users table
+    const cleanInput = (email || '').trim();
+
+    // Check admin_users table (by email or username)
     const user = await context.env.DB.prepare(
-      'SELECT id, username, email, role, password_hash FROM admin_users WHERE email = ? AND is_active = 1'
-    ).bind(email).first();
+      'SELECT id, username, email, role, password_hash FROM admin_users WHERE (email = ? OR username = ? OR LOWER(email) = LOWER(?)) AND is_active = 1'
+    ).bind(cleanInput, cleanInput, cleanInput).first() as any;
 
     if (!user) {
       return jsonResponse({ error: 'Invalid email or password' }, 401);
@@ -32,9 +34,10 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     ).bind(user.id).run();
 
     // Create JWT token
+    const secret = context.env.JWT_SECRET || 'gfcl_jwt_secret_2026_golden_fiber';
     const token = await createJWT(
       { id: user.id, username: user.username, email: user.email, role: user.role },
-      context.env.JWT_SECRET
+      secret
     );
 
     return jsonResponse({

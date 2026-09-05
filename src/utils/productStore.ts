@@ -13,21 +13,44 @@ export function getDeletedProductIds(): string[] {
   }
 }
 
-export function markProductDeletedLocally(id: string) {
+export function markProductDeletedLocally(...idsOrCodes: (string | number | undefined | null)[]) {
   try {
+    const validKeys = idsOrCodes
+      .filter((k): k is string | number => k !== undefined && k !== null && String(k).trim() !== '')
+      .map(k => String(k).trim());
+
+    if (!validKeys.length) return;
+
+    const lowerKeys = validKeys.map(k => k.toLowerCase());
+
     const deleted = getDeletedProductIds();
-    if (!deleted.includes(id)) {
-      deleted.push(id);
-      localStorage.setItem(DELETED_KEY, JSON.stringify(deleted));
-    }
-    // Also remove from custom products
+    let updatedDeleted = [...deleted];
+    validKeys.forEach(k => {
+      if (!updatedDeleted.some(d => d.toLowerCase() === k.toLowerCase())) {
+        updatedDeleted.push(k);
+      }
+    });
+    localStorage.setItem(DELETED_KEY, JSON.stringify(updatedDeleted));
+
+    // Remove from custom products
     const customs = getCustomProducts();
-    const filtered = customs.filter(p => p.id !== id && p.code !== id && p.item_code !== id);
-    localStorage.setItem(CUSTOM_KEY, JSON.stringify(filtered));
+    const filteredCustoms = customs.filter(p => {
+      const pId = String(p.id || '').toLowerCase();
+      const pCode = String(p.code || '').toLowerCase();
+      const pItemCode = String(p.item_code || '').toLowerCase();
+      return !lowerKeys.includes(pId) && !lowerKeys.includes(pCode) && !lowerKeys.includes(pItemCode);
+    });
+    localStorage.setItem(CUSTOM_KEY, JSON.stringify(filteredCustoms));
 
     // Remove from live cache
     const cached = getLiveCachedProducts();
-    const filteredCache = cached.filter(p => p.id !== id && p.code !== id && (p as any).item_code !== id);
+    const filteredCache = cached.filter(p => {
+      const pId = String(p.id || '').toLowerCase();
+      const pCode = String(p.code || '').toLowerCase();
+      const pItemCode = String((p as any).item_code || '').toLowerCase();
+      const pDbId = String((p as any).db_id || '').toLowerCase();
+      return !lowerKeys.includes(pId) && !lowerKeys.includes(pCode) && !lowerKeys.includes(pItemCode) && !lowerKeys.includes(pDbId);
+    });
     localStorage.setItem(LIVE_CACHE_KEY, JSON.stringify(filteredCache));
 
     if (typeof window !== 'undefined') {
@@ -74,7 +97,7 @@ export function formatDbProductToItem(p: any): ProductItem {
   const catSlug = catMatch ? catMatch.slug : (p.category_slug || 'jute');
   const catName = catMatch ? catMatch.name : (p.category_name || 'Jute');
 
-  const staticMatch = PRODUCTS.find(sp => sp.code === code || sp.id === code || sp.id === String(p.id));
+  const staticMatch = PRODUCTS.find(sp => sp.code?.toLowerCase() === code.toLowerCase() || sp.id?.toLowerCase() === code.toLowerCase());
   
   let subCat = p.sub_category || p.subCategory || staticMatch?.subCategory;
   if (!subCat) {
@@ -98,12 +121,8 @@ export function formatDbProductToItem(p: any): ProductItem {
   let gallery: string[] = [];
   if (typeof p.gallery_images === 'string') {
     try {
-      // Clean any accidental double-escaping
-      const cleaned = p.gallery_images.replace(/\\/g, '').replace(/\["/, '["').replace(/"\]/, '"]');
       gallery = JSON.parse(p.gallery_images || '[]');
-      if (!Array.isArray(gallery) || !gallery.length) {
-        gallery = JSON.parse(cleaned || '[]');
-      }
+      if (!Array.isArray(gallery)) gallery = [];
     } catch {
       try {
         const matches = p.gallery_images.match(/\/products\/[^",\]\s]+/g);
@@ -123,10 +142,16 @@ export function formatDbProductToItem(p: any): ProductItem {
     gallery = staticMatch.galleryImages;
   }
 
-  const mainImage = p.image_url || p.image || staticMatch?.image || gallery[0] || '/favicon.svg';
+  const mainImage = p.image_url || p.image || gallery[0] || staticMatch?.image || '/favicon.svg';
+
+  const overviewDesc = p.description || staticMatch?.description || '';
+  const itemMaterial = p.material || staticMatch?.material || 'Natural Fiber';
+  const itemSize = p.size || staticMatch?.specifications?.find(s => s.key === 'Specification')?.value || 'Custom Size';
+  const itemMoq = p.moq || staticMatch?.specifications?.find(s => s.key === 'MOQ')?.value || '200 Sets';
 
   return {
     id: code,
+    db_id: p.id,
     slug: staticMatch?.slug || code.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
     code: code,
     name: p.name || staticMatch?.name || 'Handicraft Item',
@@ -136,18 +161,18 @@ export function formatDbProductToItem(p: any): ProductItem {
     subCategory: subCat,
     image: mainImage,
     galleryImages: gallery.length ? gallery : [mainImage],
-    description: p.description || staticMatch?.description || '',
-    longDescription: staticMatch?.longDescription || {
-      overview: p.description || '',
-      craftsmanship: 'Handcrafted by skilled traditional artisans in Bangladesh using sustainable natural fibers.',
-      exportDetails: 'Quality controlled, fumigated, and packed in 5-ply export master cartons.',
-      careInstructions: 'Keep in dry indoor area. Clean with soft damp cloth.',
+    description: overviewDesc,
+    longDescription: {
+      overview: overviewDesc,
+      craftsmanship: staticMatch?.longDescription?.craftsmanship || 'Handcrafted by skilled traditional artisans in Bangladesh using sustainable natural fibers.',
+      exportDetails: staticMatch?.longDescription?.exportDetails || 'Quality controlled, fumigated, and packed in 5-ply export master cartons.',
+      careInstructions: staticMatch?.longDescription?.careInstructions || 'Keep in dry indoor area. Clean with soft damp cloth.',
     },
-    specifications: staticMatch?.specifications || [
+    specifications: [
       { key: 'Item Code', value: code },
-      { key: 'Materials', value: p.material || 'Natural Fiber' },
-      { key: 'Specification', value: p.size || 'Custom Size' },
-      { key: 'MOQ', value: p.moq || '200 Sets' },
+      { key: 'Materials', value: itemMaterial },
+      { key: 'Specification', value: itemSize },
+      { key: 'MOQ', value: itemMoq },
     ],
     features: staticMatch?.features || ['100% Eco-Friendly', 'Artisanal Handcraft', 'Export Standard'],
     unit: p.unit || staticMatch?.unit || 'S/1',
@@ -155,29 +180,54 @@ export function formatDbProductToItem(p: any): ProductItem {
     cbmPerCarton: Number(p.cbm_per_carton ?? p.cbmPerCarton ?? staticMatch?.cbmPerCarton ?? 0.045),
     nwPerCtn: Number(p.nw_per_ctn ?? p.nwPerCtn ?? staticMatch?.nwPerCtn ?? 6.5),
     gwPerCtn: Number(p.gw_per_ctn ?? p.gwPerCtn ?? staticMatch?.gwPerCtn ?? 7.8),
-    material: p.material || staticMatch?.material || 'Natural Fiber',
+    material: itemMaterial,
     color: p.color || staticMatch?.color || 'Natural',
   };
 }
 
-export function saveCustomProductLocally(productData: any) {
+export function saveCustomProductLocally(productData: any, oldCodeOrId?: string) {
   try {
-    const customs = getCustomProducts();
     const itemCode = (productData.item_code || productData.code || productData.id || '').toString().trim();
-    
-    const existingIdx = customs.findIndex(
-      p => p.id === itemCode || p.item_code === itemCode || p.code === itemCode
-    );
+    if (!itemCode) return;
+
+    // If old code exists and is different from new code, remove old code from all stores
+    if (oldCodeOrId && String(oldCodeOrId).trim().toLowerCase() !== itemCode.toLowerCase()) {
+      markProductDeletedLocally(oldCodeOrId);
+    }
 
     const formatted = formatDbProductToItem(productData);
 
-    if (existingIdx >= 0) {
-      customs[existingIdx] = { ...customs[existingIdx], ...formatted };
+    // 1. Update customs
+    const customs = getCustomProducts();
+    const existingCustomIdx = customs.findIndex(
+      p => String(p.id).toLowerCase() === itemCode.toLowerCase() ||
+           String(p.code).toLowerCase() === itemCode.toLowerCase() ||
+           String(p.item_code).toLowerCase() === itemCode.toLowerCase()
+    );
+
+    if (existingCustomIdx >= 0) {
+      customs[existingCustomIdx] = { ...customs[existingCustomIdx], ...formatted };
     } else {
       customs.unshift(formatted);
     }
-
     localStorage.setItem(CUSTOM_KEY, JSON.stringify(customs));
+
+    // 2. Also update live cache so instant refresh displays edited item
+    const cached = getLiveCachedProducts();
+    if (cached.length > 0) {
+      const existingCacheIdx = cached.findIndex(
+        p => String(p.id).toLowerCase() === itemCode.toLowerCase() ||
+             String(p.code).toLowerCase() === itemCode.toLowerCase() ||
+             (oldCodeOrId && String(p.id).toLowerCase() === String(oldCodeOrId).toLowerCase()) ||
+             (oldCodeOrId && String(p.code).toLowerCase() === String(oldCodeOrId).toLowerCase())
+      );
+      if (existingCacheIdx >= 0) {
+        cached[existingCacheIdx] = { ...cached[existingCacheIdx], ...formatted };
+      } else {
+        cached.unshift(formatted);
+      }
+      localStorage.setItem(LIVE_CACHE_KEY, JSON.stringify(cached));
+    }
 
     if (typeof window !== 'undefined') {
       window.dispatchEvent(new CustomEvent('gfcl_products_updated', { detail: formatted }));
@@ -188,31 +238,42 @@ export function saveCustomProductLocally(productData: any) {
 }
 
 export function getAllActiveProducts(): ProductItem[] {
-  const deletedIds = getDeletedProductIds();
+  const deletedIds = getDeletedProductIds().map(id => String(id).toLowerCase().trim());
   const customs = getCustomProducts();
   const cachedLive = getLiveCachedProducts();
 
-  // Combined Map keyed by product code/id
+  const isDeleted = (idOrCode: any) => {
+    if (!idOrCode) return false;
+    const str = String(idOrCode).toLowerCase().trim();
+    return deletedIds.includes(str);
+  };
+
   const combinedMap = new Map<string, ProductItem>();
-  
-  // 1. Static PRODUCTS (base catalog)
-  PRODUCTS.forEach(p => {
-    if (!deletedIds.includes(p.id) && !deletedIds.includes(p.code)) {
-      combinedMap.set(p.code || p.id, p);
-    }
-  });
 
-  // 2. Cached Live DB products (takes precedence over static)
-  cachedLive.forEach(p => {
-    if (!deletedIds.includes(p.id) && !deletedIds.includes(p.code)) {
-      combinedMap.set(p.code || p.id, p);
-    }
-  });
+  // If live cache has products from Cloudflare D1 database:
+  // USE THE D1 PRODUCTS AS SOURCE OF TRUTH!
+  if (cachedLive && cachedLive.length > 0) {
+    cachedLive.forEach(p => {
+      const codeKey = (p.code || p.id || '').toUpperCase();
+      if (!isDeleted(p.id) && !isDeleted(p.code) && !isDeleted(codeKey) && !isDeleted((p as any).db_id)) {
+        combinedMap.set(codeKey, p);
+      }
+    });
+  } else {
+    // Only on initial cold load before API responds, fallback to static base catalog:
+    PRODUCTS.forEach(p => {
+      const codeKey = (p.code || p.id || '').toUpperCase();
+      if (!isDeleted(p.id) && !isDeleted(p.code) && !isDeleted(codeKey)) {
+        combinedMap.set(codeKey, p);
+      }
+    });
+  }
 
-  // 3. Local customs (highest priority for offline/instant admin edits)
+  // Overlay local customs (immediate preview before D1 roundtrip)
   customs.forEach(p => {
-    if (!deletedIds.includes(p.id) && !deletedIds.includes(p.code)) {
-      combinedMap.set(p.code || p.id, p);
+    const codeKey = (p.code || p.id || '').toUpperCase();
+    if (!isDeleted(p.id) && !isDeleted(p.code) && !isDeleted(codeKey)) {
+      combinedMap.set(codeKey, p);
     }
   });
 
