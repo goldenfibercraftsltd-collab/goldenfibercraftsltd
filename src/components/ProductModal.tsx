@@ -30,7 +30,8 @@ export const ProductModal: React.FC<ProductModalProps> = ({ product, onClose, on
           <div className="relative aspect-square md:aspect-auto w-full bg-stone-900">
             <img
               src={product.image}
-              alt={product.name}
+              alt={`${product.name} (Item Code: ${product.itemCode}) - Handcrafted Jute Product by Golden Fiber Crafts Ltd.`}
+              title={`${product.name} (Item Code: ${product.itemCode}) - Handcrafted Jute Product by Golden Fiber Crafts Ltd.`}
               className="h-full w-full object-cover"
             />
             <div className="absolute left-4 top-4 rounded-lg bg-amber-500 px-3 py-1 text-xs font-bold text-stone-950 shadow-md">

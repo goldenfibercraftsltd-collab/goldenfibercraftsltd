@@ -121,7 +121,8 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onOpenQuoteModal }) 
                   <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-stone-100 cursor-pointer border border-stone-200/60 img-zoom-container">
                     <img
                       src={product.image}
-                      alt={product.name}
+                      alt={`${product.name} (${product.code || product.id}) - Handcrafted ${product.material || 'Natural Jute'} by Golden Fiber Crafts Ltd.`}
+                      title={`${product.name} (${product.code || product.id}) - Handcrafted ${product.material || 'Natural Jute'} by Golden Fiber Crafts Ltd.`}
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-108"
                       loading="lazy"
                     />

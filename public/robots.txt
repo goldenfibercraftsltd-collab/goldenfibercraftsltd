@@ -7,4 +7,7 @@ Allow: /
 User-agent: Googlebot-Image
 Allow: /
 
+User-agent: Googlebot-Favicon
+Allow: /
+
 Sitemap: https://goldenfibercraftsltd.com/sitemap.xml

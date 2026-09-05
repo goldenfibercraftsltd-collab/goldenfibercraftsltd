@@ -250,7 +250,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
           {/* Left Column: Product Image with Zoom & Gallery */}
           <div className="lg:col-span-5 flex flex-col items-center justify-center">
             <div className="w-full max-w-[460px] h-[360px] sm:h-[420px] flex items-center justify-center p-4 bg-white rounded-2xl">
-              <ImageMagnifier src={selectedImage} alt={product.name} zoomLevel={2.2} />
+              <ImageMagnifier src={selectedImage} alt={seoTitle} title={seoTitle} zoomLevel={2.2} />
             </div>
 
             {/* Gallery Thumbnails if available */}
@@ -264,7 +264,12 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
                       selectedImage === img ? 'border-emerald-600 ring-2 ring-emerald-500/40' : 'border-stone-200 hover:border-stone-300'
                     }`}
                   >
-                    <img src={img} alt="Thumb" className="h-full w-full object-contain" />
+                    <img
+                      src={img}
+                      alt={`${product.name} (${product.code || product.id}) - View ${idx + 1}`}
+                      title={`${product.name} (${product.code || product.id}) - View ${idx + 1}`}
+                      className="h-full w-full object-contain"
+                    />
                   </button>
                 ))}
               </div>
@@ -479,7 +484,8 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
                     <div className="h-32 sm:h-36 w-full flex items-center justify-center p-2">
                       <img
                         src={relProd.image}
-                        alt={relProd.name}
+                        alt={`${relProd.name} (${relProd.code || relProd.id}) - Wholesale Eco-Friendly Jute Crafts Bangladesh - Golden Fiber Crafts Ltd.`}
+                        title={`${relProd.name} (${relProd.code || relProd.id}) - Wholesale Eco-Friendly Jute Crafts Bangladesh - Golden Fiber Crafts Ltd.`}
                         className="h-full w-full object-contain group-hover/card:scale-108 transition-transform duration-300"
                         loading="lazy"
                       />

@@ -1,7 +1,12 @@
 {
-  "name": "Golden Fiber Crafts Ltd",
-  "short_name": "GoldenFiberCrafts",
+  "name": "Golden Fiber Crafts Ltd. | Jute & Natural Fiber Handicraft Manufacturer",
+  "short_name": "Golden Fiber Crafts Ltd.",
   "icons": [
+    {
+      "src": "/favicon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
     {
       "src": "/favicon-192x192.png",
       "sizes": "192x192",
@@ -15,5 +20,6 @@
   ],
   "theme_color": "#166534",
   "background_color": "#ffffff",
-  "display": "standalone"
+  "display": "standalone",
+  "start_url": "/"
 }

@@ -210,7 +210,8 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
                 <div className="relative aspect-square w-full bg-gradient-to-b from-stone-50/80 to-stone-100/40 overflow-hidden flex items-center justify-center p-4 sm:p-5">
                   <img
                     src={product.image}
-                    alt={product.name}
+                    alt={`${product.name} (${product.code || product.id}) - Eco-Friendly Handcrafted Jute Handicrafts Bangladesh - Golden Fiber Crafts Ltd.`}
+                    title={`${product.name} (${product.code || product.id}) - Eco-Friendly Handcrafted Jute Handicrafts Bangladesh - Golden Fiber Crafts Ltd.`}
                     className="h-full w-full object-contain group-hover:scale-108 transition-transform duration-700 ease-out drop-shadow-xs"
                     loading={idx < 5 ? "eager" : "lazy"}
                     decoding="async"

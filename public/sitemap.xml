@@ -3,1112 +3,1777 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://goldenfibercraftsltd.com/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/about</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/materials</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/infrastructure</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/sustainability</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/quality</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/clients</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/contact</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/faq</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/terms</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/jute</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/jute-baskets</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/jute-bags</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/jute-floor-mats</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/jute-placemats</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/jute-poufs</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/jute-macrames</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/seagrass</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/seagrass-baskets</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/seagrass-planters</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/seagrass-floor-mats</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/seagrass-placemats</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/seagrass-trays</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/kans-grass</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/kans-grass-baskets</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/kans-grass-placemats</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/kans-grass-trays</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/date-leaf</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/date-leaf-baskets</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/date-leaf-placemats</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/date-leaf-trays</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/rattan</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/rattan-baskets</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/rattan-placemats</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/rattan-furnitures</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/rattan-mirrors</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/bamboo</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/bamboo-baskets</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/bamboo-furnitures</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/palm-fiber</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/palm-fiber-baskets</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/palm-fiber-placemats</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/water-hyacinth</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/water-hyacinth-baskets</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/water-hyacinth-placemats</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/rugs</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/jute-rugs</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/jhuta-rugs</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/cotton-rugs</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/recycle-fabric</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/categories/recycle-fabric-baskets</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://goldenfibercraftsltd.com/products/two-tier-dual-jute-macrame-plant-hanger-bcc-05</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/single-bowl-braided-jute-macrame-hanger-bcc-06</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/beaded-saffron-yellow-jute-macrame-hanger-bjc-01</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/monochrome-checkered-jute-macrame-hanger-bjc-04</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/sky-blue-banded-jute-macrame-plant-hanger-bjc-06</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/two-tier-terracotta-natural-jute-macrame-bjc-07</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/tiered-beaded-double-jute-macrame-hanger-bjc-10</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/minimalist-4-strand-jute-macrame-plant-sling-bjc-11</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/coiled-jute-pot-macrame-with-pom-pom-tassels-bjc-13</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/small-cylinder-basket-jute-macrame-hanger-bjc-14</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/slender-natural-jute-macrame-plant-hanger-bjc-15</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/teal-tasseled-dual-jute-macrame-planter-bjc-17</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/terracotta-toned-jute-rope-macrame-hanger-bjc-18</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/wide-shallow-bowl-jute-macrame-sling-bjc-19</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/conical-flowerpot-jute-macrame-hanger-bjc-21</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/wide-strap-minimalist-jute-macrame-planter-bjc-22</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/fine-twisted-cord-jute-macrame-hanger-bjc-23</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/magenta-tasseled-jute-macrame-plant-hanger-bjc-35</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/openwork-weave-charcoal-jute-macrame-hanger-bjc-36</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/tall-cylinder-basket-jute-macrame-hanger-bjc-37</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/multi-strand-golden-jute-macrame-hanger-bjc-39</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/flared-open-cradle-jute-macrame-planter-bjc-40</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/slender-conical-jute-macrame-plant-hanger-bjc-41</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/denim-blue-seagrass-cotton-macrame-hanger-bcc-54</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/black-cream-striped-cylindrical-jute-pouf-bjp-01</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/domed-cylinder-natural-jute-pouf-ottoman-bjp-02</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/square-pyramid-small-capsule-jute-pouf-bjp-05</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/square-pyramid-large-capsule-jute-pouf-bjp-06</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/cube-square-structured-jute-ottoman-pouf-bjp-07</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/low-round-drum-jute-cube-pouf-bjp-08</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/round-capsule-jute-coir-floor-cushion-bjp-09</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/sage-tinted-round-capsule-jute-coir-pouf-bjp-10</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/handwoven-oval-jute-placemat-bjm-01</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/round-jute-placemat-with-mustard-border-bjm-02</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/spiral-swirl-washable-jute-placemat-bjm-03</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/mottled-indigo-green-round-jute-placemat-bjm-04</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/denim-blue-flatweave-rectangular-placemat-bjm-06</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/classic-elongated-oval-jute-table-mat-bjm-07</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/cobalt-white-striped-round-jute-placemat-bjm-11</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/forest-green-braided-round-jute-placemat-bjm-08</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/berry-wine-spiral-coiled-jute-placemat-djm-21</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/espresso-dark-brown-round-jute-placemat-bjm-22</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/spiral-braided-round-jute-floor-mat-bjm-09</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/natural-unbleached-round-jute-area-mat-bjm-10</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/classic-flatweave-rectangular-jute-rug-bjm-12</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/rectangular-jute-doormat-with-black-border-bjm-13</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/half-moon-semicircle-braided-jute-doormat-bjm-26</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/concentric-ring-mottled-jute-door-mat-bjm-27</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/openwork-lattice-ring-jute-mandala-mat-bjm-31</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://goldenfibercraftsltd.com/products/scalloped-petal-openwork-jute-floor-rug-bjm-32</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://goldenfibercraftsltd.com/products/checkered-woven-jute-shopping-bag-bjb-68</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_68_new.jpg</image:loc>
+      <image:title>Checkered Woven Jute Shopping Bag (BJB-68) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Checkered Woven Jute Shopping Bag (BJB-68) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/conical-jute-fabric-beach-bag-bjb-69</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_69_new.jpg</image:loc>
+      <image:title>Conical Jute &amp; Fabric Beach Bag (BJB-69) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Conical Jute &amp; Fabric Beach Bag (BJB-69) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/dusty-rose-braided-jute-bucket-bag-bjb-66</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_66_new.jpg</image:loc>
+      <image:title>Dusty Rose Braided Jute Bucket Bag (BJB-66) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Dusty Rose Braided Jute Bucket Bag (BJB-66) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/round-jute-gift-bag-with-tassel-bjb-67</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_67_new.jpg</image:loc>
+      <image:title>Round Jute Gift Bag with Tassel (BJB-67) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Round Jute Gift Bag with Tassel (BJB-67) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/wholesale-jute-utility-bowls-set-of-3--bjb-07</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_07_new.jpg</image:loc>
+      <image:title>Wholesale Jute Utility Bowls (Set of 3) (BJB-07) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Wholesale Jute Utility Bowls (Set of 3) (BJB-07) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/nautical-striped-jute-rope-boat-bag-bjb-70</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_70_new.jpg</image:loc>
+      <image:title>Nautical Striped Jute Rope Boat Bag (BJB-70) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Nautical Striped Jute Rope Boat Bag (BJB-70) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/unbleached-natural-jute-backpack-tote-bjb-26</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_26_new.jpg</image:loc>
+      <image:title>Unbleached Natural Jute Backpack Tote (BJB-26) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Unbleached Natural Jute Backpack Tote (BJB-26) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/two-tone-coiled-rope-jute-boat-tote-bjb-55</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_55_new.jpg</image:loc>
+      <image:title>Two-Tone Coiled Rope Jute Boat Tote (BJB-55) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Two-Tone Coiled Rope Jute Boat Tote (BJB-55) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/handcrafted-golden-jute-classic-tote-bjb-56</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_56_new.jpg</image:loc>
+      <image:title>Handcrafted Golden Jute Classic Tote (BJB-56) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Handcrafted Golden Jute Classic Tote (BJB-56) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/mandala-print-laminated-jute-tote-bjb-57</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_57_new.jpg</image:loc>
+      <image:title>Mandala Print Laminated Jute Tote (BJB-57) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Mandala Print Laminated Jute Tote (BJB-57) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/color-dipped-jute-basket-bag-with-tassels-bjb-58</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_58_new.jpg</image:loc>
+      <image:title>Color-Dipped Jute Basket Bag with Tassels (BJB-58) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Color-Dipped Jute Basket Bag with Tassels (BJB-58) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/nautical-slub-striped-flared-jute-bag-bjb-59</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_59_new.jpg</image:loc>
+      <image:title>Nautical Slub Striped Flared Jute Bag (BJB-59) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Nautical Slub Striped Flared Jute Bag (BJB-59) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/striped-jute-oval-bag-with-leather-handles-bjb-60</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_60_new.jpg</image:loc>
+      <image:title>Striped Jute Oval Bag with Leather Handles (BJB-60) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Striped Jute Oval Bag with Leather Handles (BJB-60) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/tri-tone-sun-ocean-jute-flared-bag-bjb-61</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_61_new.jpg</image:loc>
+      <image:title>Tri-Tone Sun &amp; Ocean Jute Flared Bag (BJB-61) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Tri-Tone Sun &amp; Ocean Jute Flared Bag (BJB-61) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/charcoal-m-lange-striped-woven-jute-tote-bjb-62</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_62_new.jpg</image:loc>
+      <image:title>Charcoal Mélange Striped Woven Jute Tote (BJB-62) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Charcoal Mélange Striped Woven Jute Tote (BJB-62) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/colorblock-cream-charcoal-jute-tote-bjb-63</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_63_new.jpg</image:loc>
+      <image:title>Colorblock Cream &amp; Charcoal Jute Tote (BJB-63) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Colorblock Cream &amp; Charcoal Jute Tote (BJB-63) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/lilac-lemon-striped-jute-ladies-bag-bjb-64</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_64_new.jpg</image:loc>
+      <image:title>Lilac &amp; Lemon Striped Jute Ladies Bag (BJB-64) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Lilac &amp; Lemon Striped Jute Ladies Bag (BJB-64) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/golden-jute-oval-basket-bag-with-leather-straps-bjb-65</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_65_new.jpg</image:loc>
+      <image:title>Golden Jute Oval Basket Bag with Leather Straps (BJB-65) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Golden Jute Oval Basket Bag with Leather Straps (BJB-65) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/structured-midnight-black-jute-tote-bjb-17</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_17_new.jpg</image:loc>
+      <image:title>Structured Midnight Black Jute Tote (BJB-17) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Structured Midnight Black Jute Tote (BJB-17) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/indigo-striped-jute-cotton-market-bag-bjb-05</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_05_new.jpg</image:loc>
+      <image:title>Indigo Striped Jute-Cotton Market Bag (BJB-05) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Indigo Striped Jute-Cotton Market Bag (BJB-05) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/eco-textured-jute-jhuta-blend-shopper-bjb-06</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_06_new.jpg</image:loc>
+      <image:title>Eco-Textured Jute-Jhuta Blend Shopper (BJB-06) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Eco-Textured Jute-Jhuta Blend Shopper (BJB-06) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/candy-cane-red-striped-coiled-jute-bag-bjb-15</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_15_new.jpg</image:loc>
+      <image:title>Candy Cane Red Striped Coiled Jute Bag (BJB-15) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Candy Cane Red Striped Coiled Jute Bag (BJB-15) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/classic-monochrome-striped-jute-tote-bjb-16</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_16_new.jpg</image:loc>
+      <image:title>Classic Monochrome Striped Jute Tote (BJB-16) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Classic Monochrome Striped Jute Tote (BJB-16) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/wide-natural-golden-jute-basket-tote-bjb-25</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_25_new.jpg</image:loc>
+      <image:title>Wide Natural Golden Jute Basket Tote (BJB-25) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Wide Natural Golden Jute Basket Tote (BJB-25) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/storage-jute-basket-set-of-3--djb-01</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_01_hd.jpg</image:loc>
+      <image:title>Storage Jute Basket (Set of 3) (DJB-01) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Storage Jute Basket (Set of 3) (DJB-01) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/jute-fruit-basket-set-of-3--djb-05</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_05_hd.jpg</image:loc>
+      <image:title>Jute Fruit Basket (Set of 3) (DJB-05) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Jute Fruit Basket (Set of 3) (DJB-05) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/jute-fruit-basket-with-rings-djb-25</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_25_hd.jpg</image:loc>
+      <image:title>Jute Fruit Basket with Rings (DJB-25) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Jute Fruit Basket with Rings (DJB-25) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/jute-round-basket-with-black-rim-djb-03</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_03_hd.jpg</image:loc>
+      <image:title>Jute Round Basket with Black Rim (DJB-03) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Jute Round Basket with Black Rim (DJB-03) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/jute-round-cylinder-bins-djb-11</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_11_hd.jpg</image:loc>
+      <image:title>Jute Round Cylinder Bins (DJB-11) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Jute Round Cylinder Bins (DJB-11) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/lidded-jute-storage-canisters-djb-13</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_13_hd.jpg</image:loc>
+      <image:title>Lidded Jute Storage Canisters (DJB-13) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Lidded Jute Storage Canisters (DJB-13) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/two-tone-jute-round-cylinder-planters-djb-28</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_28_hd.jpg</image:loc>
+      <image:title>Two-Tone Jute Round Cylinder Planters (DJB-28) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Two-Tone Jute Round Cylinder Planters (DJB-28) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/jute-mini-baskets-with-handles-djb-34</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_34_hd.jpg</image:loc>
+      <image:title>Jute Mini Baskets with Handles (DJB-34) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Jute Mini Baskets with Handles (DJB-34) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/cream-jute-cylinder-with-curved-handles-djb-35</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_35_hd.jpg</image:loc>
+      <image:title>Cream Jute Cylinder with Curved Handles (DJB-35) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Cream Jute Cylinder with Curved Handles (DJB-35) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/forest-green-stripe-cylinder-with-leather-handles-djb-38</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_38_hd.jpg</image:loc>
+      <image:title>Forest Green Stripe Cylinder with Leather Handles (DJB-38) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Forest Green Stripe Cylinder with Leather Handles (DJB-38) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/jute-round-conical-baskets-with-tassels-djb-40</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_40_hd.jpg</image:loc>
+      <image:title>Jute Round Conical Baskets with Tassels (DJB-40) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Jute Round Conical Baskets with Tassels (DJB-40) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/jute-round-cylinder-with-long-handles-djb-41</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_41_hd.jpg</image:loc>
+      <image:title>Jute Round Cylinder with Long Handles (DJB-41) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Jute Round Cylinder with Long Handles (DJB-41) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/mustard-jute-fruit-cup-cylinder-djb-49</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_49_hd.jpg</image:loc>
+      <image:title>Mustard Jute Fruit Cup Cylinder (DJB-49) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Mustard Jute Fruit Cup Cylinder (DJB-49) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/colorblock-jute-cylinder-with-handles-djb-50</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_50.png</image:loc>
+      <image:title>Colorblock Jute Cylinder with Handles (DJB-50) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Colorblock Jute Cylinder with Handles (DJB-50) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/jute-small-stripe-basket-trays-djb-65</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_65.png</image:loc>
+      <image:title>Jute Small Stripe Basket Trays (DJB-65) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Jute Small Stripe Basket Trays (DJB-65) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/jute-tiffin-box-with-lid-djb-14</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_14.png</image:loc>
+      <image:title>Jute Tiffin Box with Lid (DJB-14) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Jute Tiffin Box with Lid (DJB-14) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/oval-bread-basket-with-blue-center-bdf-44</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bdf_44.png</image:loc>
+      <image:title>Oval Bread Basket with Blue Center (BDF-44) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Oval Bread Basket with Blue Center (BDF-44) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/oval-jute-cylinder-with-handles-bdf-45</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bdf_45.png</image:loc>
+      <image:title>Oval Jute Cylinder with Handles (BDF-45) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Oval Jute Cylinder with Handles (BDF-45) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/handcrafted-kitchen-storage-cylinder-bdh-171</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bdh_171.png</image:loc>
+      <image:title>Handcrafted Kitchen Storage Cylinder (BDH-171) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Handcrafted Kitchen Storage Cylinder (BDH-171) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/coiled-jute-sunburst-small-bowl-bdh-172</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bdh_172.png</image:loc>
+      <image:title>Coiled Jute Sunburst Small Bowl (BDH-172) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Coiled Jute Sunburst Small Bowl (BDH-172) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/jute-cat-ears-toy-basket-djb-36</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_36.png</image:loc>
+      <image:title>Jute Cat Ears Toy Basket (DJB-36) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Jute Cat Ears Toy Basket (DJB-36) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/white-braid-basket-with-green-coin-accents-djb-37</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_37.png</image:loc>
+      <image:title>White Braid Basket with Green Coin Accents (DJB-37) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>White Braid Basket with Green Coin Accents (DJB-37) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/jute-square-storage-box-cubes-djb-04</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_04.png</image:loc>
+      <image:title>Jute Square Storage Box Cubes (DJB-04) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Jute Square Storage Box Cubes (DJB-04) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/jute-rectangular-storage-bins-djb-07</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_07.png</image:loc>
+      <image:title>Jute Rectangular Storage Bins (DJB-07) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Jute Rectangular Storage Bins (DJB-07) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/large-storage-laundry-basket-with-lid-djb-61</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_61.png</image:loc>
+      <image:title>Large Storage Laundry Basket with Lid (DJB-61) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Large Storage Laundry Basket with Lid (DJB-61) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/charcoal-heather-storage-basket-with-lid-djb-62</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_62.png</image:loc>
+      <image:title>Charcoal Heather Storage Basket with Lid (DJB-62) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Charcoal Heather Storage Basket with Lid (DJB-62) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/jute-storage-basket-with-upright-handles-djb-64</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_64.png</image:loc>
+      <image:title>Jute Storage Basket with Upright Handles (DJB-64) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Jute Storage Basket with Upright Handles (DJB-64) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/round-cylinder-basket-with-terracotta-stripe-bjb-15-csf</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_15_csf.png</image:loc>
+      <image:title>Round Cylinder Basket with Terracotta Stripe (BJB-15-CSF) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Round Cylinder Basket with Terracotta Stripe (BJB-15-CSF) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/round-storage-basket-with-teal-stripe-bjb-15-grs</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjb_15_grs.png</image:loc>
+      <image:title>Round Storage Basket with Teal Stripe (BJB-15-GRS) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Round Storage Basket with Teal Stripe (BJB-15-GRS) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/jute-urn-laundry-basket-djb-57</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_57.png</image:loc>
+      <image:title>Jute Urn Laundry Basket (DJB-57) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Jute Urn Laundry Basket (DJB-57) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/rectangular-jute-caddy-with-handles-djb-60</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_60.png</image:loc>
+      <image:title>Rectangular Jute Caddy with Handles (DJB-60) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Rectangular Jute Caddy with Handles (DJB-60) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/round-braided-fruit-basket-with-overhead-handle-djb-66</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_66.png</image:loc>
+      <image:title>Round Braided Fruit Basket with Overhead Handle (DJB-66) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Round Braided Fruit Basket with Overhead Handle (DJB-66) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/two-tone-royal-blue-jute-belly-basket-djb-71</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_71.png</image:loc>
+      <image:title>Two-Tone Royal Blue Jute Belly Basket (DJB-71) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Two-Tone Royal Blue Jute Belly Basket (DJB-71) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/jute-bear-face-kids-toy-basket-djb-80</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_80.png</image:loc>
+      <image:title>Jute Bear Face Kids Toy Basket (DJB-80) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Jute Bear Face Kids Toy Basket (DJB-80) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/jute-bunny-kids-toy-basket-djb-82</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_82.png</image:loc>
+      <image:title>Jute Bunny Kids Toy Basket (DJB-82) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Jute Bunny Kids Toy Basket (DJB-82) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/grey-teddy-bear-jute-toy-storage-hamper-djb-81</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_81.png</image:loc>
+      <image:title>Grey Teddy Bear Jute Toy Storage Hamper (DJB-81) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Grey Teddy Bear Jute Toy Storage Hamper (DJB-81) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/emerald-green-striped-round-baskets-djb-08</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_08.png</image:loc>
+      <image:title>Emerald Green Striped Round Baskets (DJB-08) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Emerald Green Striped Round Baskets (DJB-08) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/festive-christmas-santa-belly-basket-djb-85</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_85.png</image:loc>
+      <image:title>Festive Christmas Santa Belly Basket (DJB-85) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Festive Christmas Santa Belly Basket (DJB-85) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/festive-snowman-jute-belly-basket-djb-84</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_84.png</image:loc>
+      <image:title>Festive Snowman Jute Belly Basket (DJB-84) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Festive Snowman Jute Belly Basket (DJB-84) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/tri-tone-blue-cylinder-jute-baskets-djb-61-0</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_61_0.png</image:loc>
+      <image:title>Tri-Tone Blue Cylinder Jute Baskets (DJB-61-0) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Tri-Tone Blue Cylinder Jute Baskets (DJB-61-0) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/rectangular-jute-vanity-tray-with-red-trim-djb-64-0</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_64_0_new.jpg</image:loc>
+      <image:title>Rectangular Jute Vanity Tray with Red Trim (DJB-64-0) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Rectangular Jute Vanity Tray with Red Trim (DJB-64-0) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/red-cream-scalloped-storage-baskets-djb-52</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djb_52_new.jpg</image:loc>
+      <image:title>Red &amp; Cream Scalloped Storage Baskets (DJB-52) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Red &amp; Cream Scalloped Storage Baskets (DJB-52) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/natural-unbleached-round-jute-area-mat-bjm-10</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjm_10_new.jpg</image:loc>
+      <image:title>Natural Unbleached Round Jute Area Mat (BJM-10) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Natural Unbleached Round Jute Area Mat (BJM-10) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/classic-flatweave-rectangular-jute-rug-bjm-12</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjm_12_new.jpg</image:loc>
+      <image:title>Classic Flatweave Rectangular Jute Rug (BJM-12) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Classic Flatweave Rectangular Jute Rug (BJM-12) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/rectangular-jute-doormat-with-black-border-bjm-13</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjm_13_new.jpg</image:loc>
+      <image:title>Rectangular Jute Doormat with Black Border (BJM-13) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Rectangular Jute Doormat with Black Border (BJM-13) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/half-moon-semicircle-braided-jute-doormat-bjm-26</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjm_26_new.jpg</image:loc>
+      <image:title>Half-Moon Semicircle Braided Jute Doormat (BJM-26) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Half-Moon Semicircle Braided Jute Doormat (BJM-26) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/concentric-ring-mottled-jute-door-mat-bjm-27</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjm_27_new.jpg</image:loc>
+      <image:title>Concentric Ring Mottled Jute Door Mat (BJM-27) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Concentric Ring Mottled Jute Door Mat (BJM-27) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/openwork-lattice-ring-jute-mandala-mat-bjm-31</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjm_31_new.jpg</image:loc>
+      <image:title>Openwork Lattice Ring Jute Mandala Mat (BJM-31) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Openwork Lattice Ring Jute Mandala Mat (BJM-31) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/scalloped-petal-openwork-jute-floor-rug-bjm-32</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjm_32_new.jpg</image:loc>
+      <image:title>Scalloped Petal Openwork Jute Floor Rug (BJM-32) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Scalloped Petal Openwork Jute Floor Rug (BJM-32) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/two-tier-dual-jute-macrame-plant-hanger-bcc-05</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bcc_05_hd.jpg</image:loc>
+      <image:title>Two-Tier Dual Jute Macrame Plant Hanger (BCC-05) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Two-Tier Dual Jute Macrame Plant Hanger (BCC-05) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/single-bowl-braided-jute-macrame-hanger-bcc-06</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bcc_06_hd.jpg</image:loc>
+      <image:title>Single Bowl Braided Jute Macrame Hanger (BCC-06) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Single Bowl Braided Jute Macrame Hanger (BCC-06) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/beaded-saffron-yellow-jute-macrame-hanger-bjc-01</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjc_01_hd.jpg</image:loc>
+      <image:title>Beaded Saffron Yellow Jute Macrame Hanger (BJC-01) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Beaded Saffron Yellow Jute Macrame Hanger (BJC-01) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/monochrome-checkered-jute-macrame-hanger-bjc-04</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjc_04_hd.jpg</image:loc>
+      <image:title>Monochrome Checkered Jute Macrame Hanger (BJC-04) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Monochrome Checkered Jute Macrame Hanger (BJC-04) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/sky-blue-banded-jute-macrame-plant-hanger-bjc-06</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjc_06_hd.jpg</image:loc>
+      <image:title>Sky Blue Banded Jute Macrame Plant Hanger (BJC-06) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Sky Blue Banded Jute Macrame Plant Hanger (BJC-06) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/two-tier-terracotta-natural-jute-macrame-bjc-07</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjc_07_hd.jpg</image:loc>
+      <image:title>Two-Tier Terracotta &amp; Natural Jute Macrame (BJC-07) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Two-Tier Terracotta &amp; Natural Jute Macrame (BJC-07) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/tiered-beaded-double-jute-macrame-hanger-bjc-10</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjc_10_hd.jpg</image:loc>
+      <image:title>Tiered Beaded Double Jute Macrame Hanger (BJC-10) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Tiered Beaded Double Jute Macrame Hanger (BJC-10) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/minimalist-4-strand-jute-macrame-plant-sling-bjc-11</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjc_11_hd.jpg</image:loc>
+      <image:title>Minimalist 4-Strand Jute Macrame Plant Sling (BJC-11) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Minimalist 4-Strand Jute Macrame Plant Sling (BJC-11) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/coiled-jute-pot-macrame-with-pom-pom-tassels-bjc-13</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjc_13_hd.jpg</image:loc>
+      <image:title>Coiled Jute Pot Macrame with Pom-Pom Tassels (BJC-13) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Coiled Jute Pot Macrame with Pom-Pom Tassels (BJC-13) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/small-cylinder-basket-jute-macrame-hanger-bjc-14</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjc_14_hd.jpg</image:loc>
+      <image:title>Small Cylinder Basket Jute Macrame Hanger (BJC-14) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Small Cylinder Basket Jute Macrame Hanger (BJC-14) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/slender-natural-jute-macrame-plant-hanger-bjc-15</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjc_15.png</image:loc>
+      <image:title>Slender Natural Jute Macrame Plant Hanger (BJC-15) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Slender Natural Jute Macrame Plant Hanger (BJC-15) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/teal-tasseled-dual-jute-macrame-planter-bjc-17</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjc_17.png</image:loc>
+      <image:title>Teal Tasseled Dual Jute Macrame Planter (BJC-17) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Teal Tasseled Dual Jute Macrame Planter (BJC-17) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/terracotta-toned-jute-rope-macrame-hanger-bjc-18</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjc_18.png</image:loc>
+      <image:title>Terracotta Toned Jute Rope Macrame Hanger (BJC-18) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Terracotta Toned Jute Rope Macrame Hanger (BJC-18) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/wide-shallow-bowl-jute-macrame-sling-bjc-19</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjc_19.png</image:loc>
+      <image:title>Wide Shallow Bowl Jute Macrame Sling (BJC-19) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Wide Shallow Bowl Jute Macrame Sling (BJC-19) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/conical-flowerpot-jute-macrame-hanger-bjc-21</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjc_21.png</image:loc>
+      <image:title>Conical Flowerpot Jute Macrame Hanger (BJC-21) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Conical Flowerpot Jute Macrame Hanger (BJC-21) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/wide-strap-minimalist-jute-macrame-planter-bjc-22</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjc_22.png</image:loc>
+      <image:title>Wide-Strap Minimalist Jute Macrame Planter (BJC-22) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Wide-Strap Minimalist Jute Macrame Planter (BJC-22) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/fine-twisted-cord-jute-macrame-hanger-bjc-23</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjc_23.png</image:loc>
+      <image:title>Fine Twisted Cord Jute Macrame Hanger (BJC-23) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Fine Twisted Cord Jute Macrame Hanger (BJC-23) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/magenta-tasseled-jute-macrame-plant-hanger-bjc-35</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjc_35.png</image:loc>
+      <image:title>Magenta Tasseled Jute Macrame Plant Hanger (BJC-35) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Magenta Tasseled Jute Macrame Plant Hanger (BJC-35) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/openwork-weave-charcoal-jute-macrame-hanger-bjc-36</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjc_36.png</image:loc>
+      <image:title>Openwork Weave Charcoal Jute Macrame Hanger (BJC-36) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Openwork Weave Charcoal Jute Macrame Hanger (BJC-36) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/tall-cylinder-basket-jute-macrame-hanger-bjc-37</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjc_37.png</image:loc>
+      <image:title>Tall Cylinder Basket Jute Macrame Hanger (BJC-37) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Tall Cylinder Basket Jute Macrame Hanger (BJC-37) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/multi-strand-golden-jute-macrame-hanger-bjc-39</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjc_39.png</image:loc>
+      <image:title>Multi-Strand Golden Jute Macrame Hanger (BJC-39) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Multi-Strand Golden Jute Macrame Hanger (BJC-39) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/flared-open-cradle-jute-macrame-planter-bjc-40</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjc_40.png</image:loc>
+      <image:title>Flared Open Cradle Jute Macrame Planter (BJC-40) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Flared Open Cradle Jute Macrame Planter (BJC-40) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/slender-conical-jute-macrame-plant-hanger-bjc-41</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjc_41.png</image:loc>
+      <image:title>Slender Conical Jute Macrame Plant Hanger (BJC-41) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Slender Conical Jute Macrame Plant Hanger (BJC-41) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/denim-blue-seagrass-cotton-macrame-hanger-bcc-54</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bcc_54.png</image:loc>
+      <image:title>Denim Blue Seagrass &amp; Cotton Macrame Hanger (BCC-54) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Denim Blue Seagrass &amp; Cotton Macrame Hanger (BCC-54) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/handwoven-oval-jute-placemat-bjm-01</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjm_01.png</image:loc>
+      <image:title>Handwoven Oval Jute Placemat (BJM-01) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Handwoven Oval Jute Placemat (BJM-01) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/round-jute-placemat-with-mustard-border-bjm-02</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjm_02.png</image:loc>
+      <image:title>Round Jute Placemat with Mustard Border (BJM-02) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Round Jute Placemat with Mustard Border (BJM-02) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/spiral-swirl-washable-jute-placemat-bjm-03</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjm_03.png</image:loc>
+      <image:title>Spiral Swirl Washable Jute Placemat (BJM-03) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Spiral Swirl Washable Jute Placemat (BJM-03) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/mottled-indigo-green-round-jute-placemat-bjm-04</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjm_04.png</image:loc>
+      <image:title>Mottled Indigo Green Round Jute Placemat (BJM-04) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Mottled Indigo Green Round Jute Placemat (BJM-04) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/denim-blue-flatweave-rectangular-placemat-bjm-06</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjm_06.png</image:loc>
+      <image:title>Denim Blue Flatweave Rectangular Placemat (BJM-06) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Denim Blue Flatweave Rectangular Placemat (BJM-06) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/classic-elongated-oval-jute-table-mat-bjm-07</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjm_07.png</image:loc>
+      <image:title>Classic Elongated Oval Jute Table Mat (BJM-07) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Classic Elongated Oval Jute Table Mat (BJM-07) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/cobalt-white-striped-round-jute-placemat-bjm-11</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjm_11.png</image:loc>
+      <image:title>Cobalt &amp; White Striped Round Jute Placemat (BJM-11) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Cobalt &amp; White Striped Round Jute Placemat (BJM-11) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/forest-green-braided-round-jute-placemat-bjm-08</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjm_08.png</image:loc>
+      <image:title>Forest Green Braided Round Jute Placemat (BJM-08) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Forest Green Braided Round Jute Placemat (BJM-08) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/berry-wine-spiral-coiled-jute-placemat-djm-21</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/djm_21.png</image:loc>
+      <image:title>Berry Wine Spiral Coiled Jute Placemat (DJM-21) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Berry Wine Spiral Coiled Jute Placemat (DJM-21) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/espresso-dark-brown-round-jute-placemat-bjm-22</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjm_22.png</image:loc>
+      <image:title>Espresso Dark Brown Round Jute Placemat (BJM-22) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Espresso Dark Brown Round Jute Placemat (BJM-22) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/black-cream-striped-cylindrical-jute-pouf-bjp-01</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjp_01.jpg</image:loc>
+      <image:title>Black &amp; Cream Striped Cylindrical Jute Pouf (BJP-01) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Black &amp; Cream Striped Cylindrical Jute Pouf (BJP-01) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/domed-cylinder-natural-jute-pouf-ottoman-bjp-02</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjp_02.jpg</image:loc>
+      <image:title>Domed Cylinder Natural Jute Pouf Ottoman (BJP-02) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Domed Cylinder Natural Jute Pouf Ottoman (BJP-02) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/square-pyramid-small-capsule-jute-pouf-bjp-05</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjp_05.jpg</image:loc>
+      <image:title>Square Pyramid Small Capsule Jute Pouf (BJP-05) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Square Pyramid Small Capsule Jute Pouf (BJP-05) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/square-pyramid-large-capsule-jute-pouf-bjp-06</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjp_06.jpg</image:loc>
+      <image:title>Square Pyramid Large Capsule Jute Pouf (BJP-06) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Square Pyramid Large Capsule Jute Pouf (BJP-06) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/cube-square-structured-jute-ottoman-pouf-bjp-07</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjp_07.jpg</image:loc>
+      <image:title>Cube Square Structured Jute Ottoman Pouf (BJP-07) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Cube Square Structured Jute Ottoman Pouf (BJP-07) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/low-round-drum-jute-cube-pouf-bjp-08</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjp_08.jpg</image:loc>
+      <image:title>Low Round Drum Jute Cube Pouf (BJP-08) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Low Round Drum Jute Cube Pouf (BJP-08) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/round-capsule-jute-coir-floor-cushion-bjp-09</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjp_09.jpg</image:loc>
+      <image:title>Round Capsule Jute &amp; Coir Floor Cushion (BJP-09) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Round Capsule Jute &amp; Coir Floor Cushion (BJP-09) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/sage-tinted-round-capsule-jute-coir-pouf-bjp-10</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bjp_10.jpg</image:loc>
+      <image:title>Sage Tinted Round Capsule Jute &amp; Coir Pouf (BJP-10) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Sage Tinted Round Capsule Jute &amp; Coir Pouf (BJP-10) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://goldenfibercraftsltd.com/products/jute</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/bcc_05_hd.jpg</image:loc>
+      <image:title>Jute (jute) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Jute (jute) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/sancerre-seagrass-rectangular-basket-gfc-sb-015</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/gfc_sb_015.png</image:loc>
+      <image:title>Sancerre Seagrass Rectangular Basket (GFC-SB-015) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Sancerre Seagrass Rectangular Basket (GFC-SB-015) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/sancerre-seagrass-rectangular-basket-gfc-sb-025</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/gfc_sb_025.png</image:loc>
+      <image:title>Sancerre Seagrass Rectangular Basket (Medium) (GFC-SB-025) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Sancerre Seagrass Rectangular Basket (Medium) (GFC-SB-025) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/round-seagrass-laundry-basket-gfc-sb-017</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/gfc_sb_017.png</image:loc>
+      <image:title>Round Seagrass Laundry Basket (GFC-SB-017) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Round Seagrass Laundry Basket (GFC-SB-017) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/seagrass-planters-gfc-sp-0029</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/gfc_sp_0029.png</image:loc>
+      <image:title>Seagrass Indoor &amp; Outdoor Planters (GFC-SP-0029) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Seagrass Indoor &amp; Outdoor Planters (GFC-SP-0029) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/round-shape-jute-storage-basket-gfc-sb-030</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/gfc_sb_030_new.jpg</image:loc>
+      <image:title>Round Shape Jute Storage Basket (GFC-SB-030) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Round Shape Jute Storage Basket (GFC-SB-030) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/jute-shopping-bag-customize-bag-gfc-sb-011</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/gfc_sb_011_new.jpg</image:loc>
+      <image:title>Jute Shopping Bag / Custom Bag (GFC-SB-011) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Jute Shopping Bag / Custom Bag (GFC-SB-011) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/jute-tote-bag-gfc-tb-012</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/gfc_tb_012.png</image:loc>
+      <image:title>Artisan Jute Tote Bag (GFC-TB-012) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Artisan Jute Tote Bag (GFC-TB-012) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/promotional-jute-bag-gfc-pb-008</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/gfc_pb_008.png</image:loc>
+      <image:title>Promotional Jute Bag (GFC-PB-008) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Promotional Jute Bag (GFC-PB-008) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/jute-wine-bag-gfc-wb-007</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/gfc_wb_007.png</image:loc>
+      <image:title>Jute Wine Bottle Bag (GFC-WB-007) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Jute Wine Bottle Bag (GFC-WB-007) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/table-mat-gfc-tm-004</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/gfc_tm_004.png</image:loc>
+      <image:title>Braided Jute &amp; Cotton Table Mat (GFC-TM-004) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Braided Jute &amp; Cotton Table Mat (GFC-TM-004) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/plant-holder-macrame-gfc-ph-008</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/gfc_ph_008.png</image:loc>
+      <image:title>Macrame Jute Plant Holder (GFC-PH-008) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Macrame Jute Plant Holder (GFC-PH-008) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/kaisa-basket-bowl-gfc-kb-005</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/gfc_kb_005.png</image:loc>
+      <image:title>Kaisa Grass Basket Bowl (GFC-KB-005) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Kaisa Grass Basket Bowl (GFC-KB-005) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/casafield-round-storage-basket-gfc-sb-024</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/gfc_sb_024.png</image:loc>
+      <image:title>Casafield Water Hyacinth Round Storage Basket (GFC-SB-024) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Casafield Water Hyacinth Round Storage Basket (GFC-SB-024) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/jute-rattan-placement-set-gfc-ps-009</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/gfc_ps_009.png</image:loc>
+      <image:title>Rattan &amp; Jute Placement Set (GFC-PS-009) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Rattan &amp; Jute Placement Set (GFC-PS-009) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/floor-mat-rugs-gfc-fm-017</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/gfc_fm_017.png</image:loc>
+      <image:title>Braided Jute Floor Rug &amp; Area Mat (GFC-FM-017) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Braided Jute Floor Rug &amp; Area Mat (GFC-FM-017) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/bamboo-products-gfc-bp-007</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/gfc_bp_007.png</image:loc>
+      <image:title>Artisan Bamboo Products &amp; Crafts (GFC-BP-007) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Artisan Bamboo Products &amp; Crafts (GFC-BP-007) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://goldenfibercraftsltd.com/products/cotton-rope-laundry-hamper-woven-basket-gfc-wb-009</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://goldenfibercraftsltd.com/products/gfc_wb_009.png</image:loc>
+      <image:title>Cotton Rope Laundry Hamper Woven Basket (GFC-WB-009) - Golden Fiber Crafts Ltd.</image:title>
+      <image:caption>Cotton Rope Laundry Hamper Woven Basket (GFC-WB-009) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh</image:caption>
+    </image:image>
   </url>
 </urlset>

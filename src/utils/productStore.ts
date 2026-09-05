@@ -2,7 +2,7 @@ import { PRODUCTS, ProductItem, CATEGORIES, CategoryInfo } from '../data/product
 
 const DELETED_KEY = 'gfcl_deleted_product_ids_v3';
 const CUSTOM_KEY = 'gfcl_custom_products_v3';
-const LIVE_CACHE_KEY = 'gfcl_live_products_cache_v3';
+const LIVE_CACHE_KEY = 'gfcl_live_products_cache_v4';
 
 export function getDeletedProductIds(): string[] {
   try {

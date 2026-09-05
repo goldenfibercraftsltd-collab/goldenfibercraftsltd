@@ -221,7 +221,12 @@ export const CartPage: React.FC = () => {
                         {/* Product Image */}
                         <td className="px-4 py-4">
                           <div className="h-14 w-14 rounded-lg bg-stone-100 p-1 border border-stone-200 flex items-center justify-center">
-                            <img src={item.image} alt={item.name} className="max-h-full max-w-full object-contain" />
+                            <img
+                              src={item.image}
+                              alt={`${item.name} (${item.artNo || item.id || ''})`}
+                              title={`${item.name} (${item.artNo || item.id || ''}) - Golden Fiber Crafts Ltd.`}
+                              className="max-h-full max-w-full object-contain"
+                            />
                           </div>
                         </td>
 

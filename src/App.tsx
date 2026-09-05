@@ -38,7 +38,7 @@ import { AdminPageSections } from './pages/admin/AdminPageSections';
 
 import { initScrollReveal } from './utils/scrollReveal';
 import { SmoothScrollProvider } from './components/SmoothScroll';
-import { formatPageTitle } from './utils/usePageTitle';
+import { formatPageTitle, setPageTitle } from './utils/usePageTitle';
 
 export const AppContent: React.FC = () => {
   const location = useLocation();
@@ -48,7 +48,7 @@ export const AppContent: React.FC = () => {
   React.useEffect(() => {
     const p = location.pathname;
     if (p === '/') {
-      document.title = formatPageTitle('Home');
+      setPageTitle('Home');
     } else if (p === '/about') {
       document.title = formatPageTitle('About Us');
     } else if (p === '/products') {

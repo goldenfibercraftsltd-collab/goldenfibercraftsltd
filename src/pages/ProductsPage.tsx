@@ -382,7 +382,8 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
                     >
                       <img
                         src={product.image}
-                        alt={product.name}
+                        alt={`${product.name} (${product.code || product.id}) - Wholesale ${product.material || 'Natural Jute'} Handicrafts Exporter Bangladesh - Golden Fiber Crafts Ltd.`}
+                        title={`${product.name} (${product.code || product.id}) - Wholesale ${product.material || 'Natural Jute'} Handicrafts Exporter Bangladesh - Golden Fiber Crafts Ltd.`}
                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-108"
                         loading="lazy"
                         onError={(e) => {

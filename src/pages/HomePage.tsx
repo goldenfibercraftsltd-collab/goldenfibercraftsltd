@@ -1,10 +1,8 @@
 import React from 'react';
 import { HeroBannerCarousel } from '../components/HeroBannerCarousel';
 import { ProductShowcase } from '../components/ProductShowcase';
-import { GlobalClients } from '../components/GlobalClients';
 import { HomeCertificates } from '../components/HomeCertificates';
-import { PRODUCTS, TAGLINE } from '../data/products';
-import { usePageTitle } from '../utils/usePageTitle';
+import { usePageTitle, DEFAULT_HOME_DESCRIPTION } from '../utils/usePageTitle';
 
 interface HomePageProps {
   onOpenQuoteModal: (productCode?: string) => void;
@@ -14,10 +12,13 @@ interface HomePageProps {
 export const HomePage: React.FC<HomePageProps> = ({
   onOpenQuoteModal,
 }) => {
-  usePageTitle('Home', TAGLINE);
+  usePageTitle('Home', undefined, DEFAULT_HOME_DESCRIPTION);
 
   return (
     <div className="space-y-12 pb-16">
+      {/* Primary SEO Heading for Google Crawlers & Accessibility */}
+      <h1 className="sr-only">Golden Fiber Crafts Ltd. | Jute &amp; Natural Fiber Handicraft Manufacturer</h1>
+
       {/* 1. Header Auto Banner Carousel */}
       <HeroBannerCarousel onOpenQuoteModal={() => onOpenQuoteModal()} />
 
@@ -31,4 +32,3 @@ export const HomePage: React.FC<HomePageProps> = ({
     </div>
   );
 };
-

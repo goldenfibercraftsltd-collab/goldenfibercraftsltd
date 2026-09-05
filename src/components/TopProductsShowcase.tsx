@@ -83,7 +83,8 @@ export const TopProductsShowcase: React.FC<TopProductsShowcaseProps> = ({ produc
                 {/* Product Image */}
                 <img
                   src={product.image}
-                  alt={product.name}
+                  alt={`${product.name} (Item Code: ${product.itemCode}) - Top Export Jute & Natural Fiber Handicraft - Golden Fiber Crafts Ltd.`}
+                  title={`${product.name} (Item Code: ${product.itemCode}) - Top Export Jute & Natural Fiber Handicraft - Golden Fiber Crafts Ltd.`}
                   className="h-full w-full object-cover transition-transform duration-700 opacity-90 group-hover:opacity-100"
                   loading="lazy"
                 />
