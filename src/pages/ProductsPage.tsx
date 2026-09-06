@@ -248,10 +248,9 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
                     : 'bg-stone-100 text-stone-700 hover:bg-stone-200 hover:text-stone-900 border border-stone-200/80'
                 }`}
               >
-                All Categories ({allProducts.length})
+                All Categories
               </button>
               {CATEGORIES.map((cat) => {
-                const count = allProducts.filter(p => p.category === cat.id || p.categorySlug === cat.slug).length;
                 const isActive = selectedCategory === cat.id || selectedCategory === cat.slug;
                 return (
                   <button
@@ -263,7 +262,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
                         : 'bg-stone-100 text-stone-700 hover:bg-stone-200 hover:text-stone-900 border border-stone-200/80'
                     }`}
                   >
-                    {cat.name} ({count})
+                    {cat.name}
                   </button>
                 );
               })}
@@ -315,10 +314,6 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
               </button>
               {currentCategoryObj.subcategories.map((sub) => {
                 const isSubActive = selectedSubCategory === sub.id || selectedSubCategory === sub.slug;
-                const subCount = allProducts.filter(p => 
-                  (p.category === currentCategoryObj.id || p.categorySlug === currentCategoryObj.slug) && 
-                  (p.subCategory === sub.id || p.subCategory === sub.slug)
-                ).length;
 
                 return (
                   <button
@@ -330,7 +325,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
                         : 'bg-stone-100 text-stone-700 hover:bg-stone-200 border border-stone-200'
                     }`}
                   >
-                    {sub.name} {subCount > 0 && `(${subCount})`}
+                    {sub.name}
                   </button>
                 );
               })}
@@ -346,7 +341,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenQuoteModal }) 
         {/* Results Bar */}
         <div className="flex items-center justify-between mb-5 pb-3 border-b border-stone-200/80">
           <div className="text-xs sm:text-sm font-bold text-stone-700">
-            Showing <span className="font-black text-stone-950">{filteredProducts.length}</span> export products
+            Export Product Collection
             {(selectedCategory !== 'all' || selectedSubCategory || searchQuery) && (
               <span className="ml-2 px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-800 font-extrabold text-xs border border-emerald-200">
                 Filtered

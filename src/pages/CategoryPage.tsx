@@ -101,7 +101,7 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onOpenQuoteModal }) 
                 {category.description}
               </p>
               <span className="inline-block mt-2 text-xs font-black text-emerald-900 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-300">
-                {categoryProducts.length} Products Available
+                Export Quality Handcrafted Collection
               </span>
             </div>
           </div>
