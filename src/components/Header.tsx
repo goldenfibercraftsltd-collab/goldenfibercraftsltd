@@ -181,10 +181,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
                 </svg>
               </a>
 
-              {/* Request Quote Button */}
+              {/* Request Quote Button (Hidden on Mobile screens to ensure clean responsive layout; visible on tablets & desktops) */}
               <button
                 onClick={onOpenQuoteModal}
-                className="flex items-center justify-center gap-1 rounded-full bg-[#0088FF] hover:bg-[#0077ee] text-white px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-extrabold shadow-sm hover:shadow transition-all duration-200 hover:scale-[1.03] cursor-pointer"
+                className="hidden md:flex items-center justify-center gap-1 rounded-full bg-[#0088FF] hover:bg-[#0077ee] text-white px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-extrabold shadow-sm hover:shadow transition-all duration-200 hover:scale-[1.03] cursor-pointer shrink-0"
               >
                 <span>Request Quote</span>
               </button>
@@ -220,74 +220,208 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
                 <ChevronDown className={`h-4 w-4 text-stone-950 transition-transform duration-200 ${categoryDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
 
-              {/* Category Dropdown Mega Menu (Desktop) */}
+              {/* Category Dropdown: Desktop Mega Menu (hidden lg:flex) & Mobile Responsive Sheet (lg:hidden) */}
               {categoryDropdownOpen && (
-                <div
-                  className="absolute left-0 top-full z-50 flex bg-transparent overflow-visible text-stone-800 animate-megaMenuIn"
-                  onMouseLeave={() => setCategoryDropdownOpen(false)}
-                >
-                  {/* Left Column: 10 Main Categories */}
-                  <div className="w-52 bg-white rounded-b-xl shadow-[0_15px_35px_rgba(0,0,0,0.18)] border border-stone-200 overflow-hidden shrink-0 py-1">
-                    {CATEGORIES.map((cat, idx) => {
-                      const isHovered = activeCategoryHover === cat.id;
-                      return (
-                        <div
-                          key={cat.id}
-                          onMouseEnter={() => setActiveCategoryHover(cat.id)}
-                          onClick={() => handleCategorySelect(cat.id)}
-                          className={`group w-full flex items-center justify-between px-4 py-2.5 text-xs font-bold transition-all duration-150 cursor-pointer border-b border-stone-100 last:border-b-0 ${
-                            isHovered
-                              ? 'bg-emerald-50 text-emerald-800 font-extrabold'
-                              : 'text-stone-700 hover:bg-stone-50 hover:text-emerald-950'
-                          }`}
-                        >
-                          <div className="flex items-center gap-2 truncate">
-                            <span className={`transition-colors ${isHovered ? 'text-emerald-700' : 'text-stone-400 group-hover:text-emerald-700'}`}>
-                              {getCategoryIcon(cat.id)}
-                            </span>
-                            <span className="truncate">{cat.name}</span>
+                <>
+                  {/* --- 1. DESKTOP MEGA MENU (Visible only on lg: and above) --- */}
+                  <div
+                    className="hidden lg:flex absolute left-0 top-full z-50 bg-transparent overflow-visible text-stone-800 animate-megaMenuIn"
+                    onMouseLeave={() => setCategoryDropdownOpen(false)}
+                  >
+                    {/* Left Column: 10 Main Categories */}
+                    <div className="w-52 bg-white rounded-b-xl shadow-[0_15px_35px_rgba(0,0,0,0.18)] border border-stone-200 overflow-hidden shrink-0 py-1">
+                      {CATEGORIES.map((cat) => {
+                        const isHovered = activeCategoryHover === cat.id;
+                        return (
+                          <div
+                            key={cat.id}
+                            onMouseEnter={() => setActiveCategoryHover(cat.id)}
+                            onClick={() => handleCategorySelect(cat.id)}
+                            className={`group w-full flex items-center justify-between px-4 py-2.5 text-xs font-bold transition-all duration-150 cursor-pointer border-b border-stone-100 last:border-b-0 ${
+                              isHovered
+                                ? 'bg-emerald-50 text-emerald-800 font-extrabold'
+                                : 'text-stone-700 hover:bg-stone-50 hover:text-emerald-950'
+                            }`}
+                          >
+                            <div className="flex items-center gap-2 truncate">
+                              <span className={`transition-colors ${isHovered ? 'text-emerald-700' : 'text-stone-400 group-hover:text-emerald-700'}`}>
+                                {getCategoryIcon(cat.id)}
+                              </span>
+                              <span className="truncate">{cat.name}</span>
+                            </div>
+                            <ChevronRight className={`h-3.5 w-3.5 shrink-0 transition-transform duration-150 ${isHovered ? 'text-emerald-700 translate-x-0.5' : 'text-stone-300 group-hover:text-emerald-700'}`} />
                           </div>
-                          <ChevronRight className={`h-3.5 w-3.5 shrink-0 transition-transform duration-150 ${isHovered ? 'text-emerald-700 translate-x-0.5' : 'text-stone-300 group-hover:text-emerald-700'}`} />
+                        );
+                      })}
+                    </div>
+
+                    {/* Right Column: Subcategories Flyout aligned directly with hovered category */}
+                    {(() => {
+                      const hoveredIndex = Math.max(0, CATEGORIES.findIndex(c => c.id === activeCategoryHover));
+                      const currentCat = CATEGORIES[hoveredIndex] || CATEGORIES[0];
+                      const topOffset = Math.min(hoveredIndex * 37, Math.max(0, 370 - (currentCat.subcategories.length * 36 + 60)));
+
+                      return (
+                        <div 
+                          className="w-56 ml-1 bg-white rounded-xl shadow-[0_15px_35px_rgba(0,0,0,0.18)] border border-stone-200 py-2 px-1 animate-subFadeIn shrink-0 self-start"
+                          style={{ marginTop: `${topOffset}px` }}
+                        >
+                          <div className="flex flex-col gap-0.5">
+                            {/* View All items in this category */}
+                            <button
+                              onClick={() => handleCategorySelect(currentCat.id)}
+                              className="group flex items-center justify-between px-3 py-1.5 rounded-lg text-xs font-black text-emerald-900 bg-emerald-50/90 hover:bg-emerald-100 transition-all duration-150 text-left cursor-pointer border border-emerald-200/80 mb-1"
+                            >
+                              <div className="flex items-center gap-1.5 min-w-0">
+                                <Sparkles className="h-3.5 w-3.5 text-amber-600 shrink-0" />
+                                <span className="truncate font-extrabold">All {currentCat.name} Products</span>
+                              </div>
+                              <ChevronRight className="h-3 w-3 text-emerald-700 group-hover:translate-x-0.5 transition-transform shrink-0" />
+                            </button>
+
+                            {/* Subcategories */}
+                            {currentCat.subcategories.map((sub) => (
+                              <button
+                                key={sub.id}
+                                onClick={() => handleCategorySelect(currentCat.id, sub.id)}
+                                className="group flex items-center justify-between px-3.5 py-2 rounded-lg text-xs font-bold text-stone-700 hover:text-emerald-800 hover:bg-emerald-50 transition-all duration-150 text-left cursor-pointer"
+                              >
+                                <div className="flex items-center gap-2 min-w-0">
+                                  <span className="text-stone-400 group-hover:text-emerald-700 transition-colors">
+                                    {getSubcategoryIcon(sub.id)}
+                                  </span>
+                                  <span className="truncate group-hover:font-extrabold">
+                                    {sub.name}
+                                  </span>
+                                </div>
+                                <ChevronRight className="h-3 w-3 text-stone-300 group-hover:text-emerald-700 group-hover:translate-x-0.5 transition-all duration-150 shrink-0" />
+                              </button>
+                            ))}
+                          </div>
                         </div>
                       );
-                    })}
+                    })()}
                   </div>
 
-                  {/* Right Column: Subcategories Flyout aligned directly with hovered category */}
-                  {(() => {
-                    const hoveredIndex = Math.max(0, CATEGORIES.findIndex(c => c.id === activeCategoryHover));
-                    const currentCat = CATEGORIES[hoveredIndex] || CATEGORIES[0];
-                    // Calculate top offset so subcategory menu starts exactly aligned across from the hovered category
-                    const topOffset = Math.min(hoveredIndex * 37, Math.max(0, 370 - (currentCat.subcategories.length * 36 + 20)));
+                  {/* --- 2. MOBILE & TABLET CATEGORY SHEET (Visible only on screens below lg:) --- */}
+                  {/* Backdrop */}
+                  <div
+                    className="fixed inset-0 bg-black/60 backdrop-blur-xs z-40 lg:hidden animate-fadeIn"
+                    onClick={() => setCategoryDropdownOpen(false)}
+                    aria-hidden="true"
+                  />
 
-                    return (
-                      <div 
-                        className="w-56 ml-1 bg-white rounded-xl shadow-[0_15px_35px_rgba(0,0,0,0.18)] border border-stone-200 py-2.5 px-1 animate-subFadeIn shrink-0 self-start"
-                        style={{ marginTop: `${topOffset}px` }}
-                      >
-                        <div className="flex flex-col gap-0.5">
-                          {currentCat.subcategories.map((sub) => (
-                            <button
-                              key={sub.id}
-                              onClick={() => handleCategorySelect(currentCat.id, sub.id)}
-                              className="group flex items-center justify-between px-3.5 py-2 rounded-lg text-xs font-bold text-stone-700 hover:text-emerald-800 hover:bg-emerald-50 transition-all duration-150 text-left cursor-pointer"
-                            >
-                              <div className="flex items-center gap-2 min-w-0">
-                                <span className="text-stone-400 group-hover:text-emerald-700 transition-colors">
-                                  {getSubcategoryIcon(sub.id)}
-                                </span>
-                                <span className="truncate group-hover:font-extrabold">
-                                  {sub.name}
-                                </span>
-                              </div>
-                              <ChevronRight className="h-3 w-3 text-stone-300 group-hover:text-emerald-700 group-hover:translate-x-0.5 transition-all duration-150 shrink-0" />
-                            </button>
-                          ))}
-                        </div>
+                  {/* Mobile Dropdown Sheet Container */}
+                  <div
+                    className="fixed inset-x-2.5 sm:inset-x-6 top-[108px] sm:top-[120px] z-50 max-w-lg mx-auto bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.35)] border-2 border-amber-500 overflow-hidden flex flex-col max-h-[75vh] animate-megaMenuIn lg:hidden"
+                    data-lenis-prevent="true"
+                    onWheel={(e) => e.stopPropagation()}
+                  >
+                    {/* Header: Title + Badge + Close Button */}
+                    <div className="bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-stone-950 px-3.5 py-2.5 flex items-center justify-between shrink-0 shadow-xs">
+                      <div className="flex items-center gap-2 font-black text-xs uppercase tracking-wider">
+                        <Menu className="h-4 w-4 text-stone-950" />
+                        <span>PRODUCT BY CATEGORY</span>
+                        <span className="bg-stone-950 text-amber-300 text-[10px] px-2 py-0.5 rounded-full font-bold font-mono">
+                          {CATEGORIES.length}
+                        </span>
                       </div>
-                    );
-                  })()}
-                </div>
+                      <button
+                        onClick={() => setCategoryDropdownOpen(false)}
+                        className="p-1 rounded-lg hover:bg-amber-600/40 text-stone-950 cursor-pointer transition-colors"
+                        aria-label="Close categories"
+                      >
+                        <X className="h-4.5 w-4.5 stroke-[2.5]" />
+                      </button>
+                    </div>
+
+                    {/* Helpful Touch Guide Hint */}
+                    <div className="bg-emerald-50 px-3 py-1.5 text-[11px] text-emerald-900 border-b border-emerald-200/60 font-semibold flex items-center justify-between shrink-0">
+                      <span className="flex items-center gap-1.5 truncate">
+                        <Sparkles className="h-3 w-3 text-amber-600 shrink-0" />
+                        <span>Select category on left, tap subcategory on right:</span>
+                      </span>
+                    </div>
+
+                    {/* Split 2-Column Touch Interface */}
+                    <div className="flex flex-1 min-h-0 overflow-hidden divide-x divide-stone-200" data-lenis-prevent="true">
+                      {/* Left Column: 10 Main Categories (Tapping only selects, does NOT navigate away!) */}
+                      <div className="w-[42%] bg-stone-50 overflow-y-auto divide-y divide-stone-100 scrollbar-thin shrink-0" data-lenis-prevent="true">
+                        {CATEGORIES.map((cat) => {
+                          const isSelected = activeCategoryHover === cat.id;
+                          return (
+                            <button
+                              key={cat.id}
+                              type="button"
+                              onClick={() => setActiveCategoryHover(cat.id)}
+                              className={`w-full flex items-center justify-between px-3 py-3 text-left transition-all duration-150 cursor-pointer ${
+                                isSelected
+                                  ? 'bg-[#14532d] text-amber-300 font-black border-l-4 border-amber-400 shadow-inner'
+                                  : 'text-stone-700 hover:bg-stone-100 hover:text-stone-950 font-bold'
+                              }`}
+                            >
+                              <div className="flex items-center gap-1.5 min-w-0 truncate">
+                                <span className={`shrink-0 ${isSelected ? 'text-amber-300' : 'text-emerald-700'}`}>
+                                  {getCategoryIcon(cat.id)}
+                                </span>
+                                <span className="text-xs truncate">{cat.name}</span>
+                              </div>
+                              {isSelected && (
+                                <ChevronRight className="h-3.5 w-3.5 text-amber-300 shrink-0" />
+                              )}
+                            </button>
+                          );
+                        })}
+                      </div>
+
+                      {/* Right Column: Subcategories for Selected Category */}
+                      {(() => {
+                        const activeIndex = Math.max(0, CATEGORIES.findIndex((c) => c.id === activeCategoryHover));
+                        const currentCat = CATEGORIES[activeIndex] || CATEGORIES[0];
+
+                        return (
+                          <div className="w-[58%] bg-white overflow-y-auto p-2.5 flex flex-col gap-1.5 scrollbar-thin" data-lenis-prevent="true">
+                            {/* Top Action: View All Products for this category */}
+                            <button
+                              onClick={() => handleCategorySelect(currentCat.id)}
+                              className="w-full flex items-center justify-between px-3 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 via-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-stone-950 font-black text-xs shadow-xs active:scale-[0.98] transition-all cursor-pointer"
+                            >
+                              <div className="flex items-center gap-1.5 min-w-0">
+                                <Sparkles className="h-3.5 w-3.5 text-stone-950 shrink-0" />
+                                <span className="truncate">All {currentCat.name} Products</span>
+                              </div>
+                              <ChevronRight className="h-3.5 w-3.5 shrink-0" />
+                            </button>
+
+                            {/* Subcategories Label */}
+                            <div className="text-[10px] font-bold text-stone-400 uppercase tracking-wider px-1 pt-1">
+                              Subcategories ({currentCat.subcategories.length})
+                            </div>
+
+                            {/* Subcategories List */}
+                            <div className="flex flex-col gap-1.5">
+                              {currentCat.subcategories.map((sub) => (
+                                <button
+                                  key={sub.id}
+                                  onClick={() => handleCategorySelect(currentCat.id, sub.id)}
+                                  className="w-full flex items-center justify-between px-3 py-2.5 rounded-xl border border-stone-200/80 bg-stone-50/70 hover:bg-emerald-50 hover:border-emerald-300 text-stone-800 hover:text-emerald-950 font-bold text-xs transition-all cursor-pointer active:scale-[0.98] group text-left"
+                                >
+                                  <div className="flex items-center gap-2 min-w-0">
+                                    <span className="text-stone-400 group-hover:text-emerald-700 transition-colors shrink-0">
+                                      {getSubcategoryIcon(sub.id)}
+                                    </span>
+                                    <span className="truncate group-hover:font-extrabold">{sub.name}</span>
+                                  </div>
+                                  <ChevronRight className="h-3 w-3 text-stone-300 group-hover:text-emerald-700 group-hover:translate-x-0.5 transition-all shrink-0" />
+                                </button>
+                              ))}
+                            </div>
+                          </div>
+                        );
+                      })()}
+                    </div>
+                  </div>
+                </>
               )}
             </div>
 
@@ -352,6 +486,17 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
             </a>
           </div>
 
+          {/* Quick Request Quote in Mobile Drawer */}
+          <button
+            onClick={() => {
+              setMobileMenuOpen(false);
+              onOpenQuoteModal();
+            }}
+            className="w-full mb-3.5 flex items-center justify-center gap-2 rounded-xl bg-[#0088FF] hover:bg-[#0077ee] text-white py-2.5 px-4 text-xs font-extrabold uppercase tracking-wider shadow-md hover:shadow-lg transition-all cursor-pointer active:scale-[0.98]"
+          >
+            <span>Request Quote / RFQ</span>
+          </button>
+
           {/* Mobile Search Bar */}
           <form onSubmit={handleSearchSubmit} className="flex w-full rounded-lg border-2 border-amber-500 overflow-hidden shadow-xs mb-4">
             <input
@@ -387,15 +532,18 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               <div className="divide-y divide-emerald-800/60 max-h-72 overflow-y-auto animate-fadeIn">
                 {CATEGORIES.map((cat) => (
                   <div key={cat.id} className="p-3 bg-[#0d3b1f]">
-                    <div
-                      onClick={() => handleCategorySelect(cat.id)}
-                      className="flex items-center justify-between text-xs font-bold text-white cursor-pointer hover:text-amber-300 py-1"
-                    >
-                      <span className="flex items-center gap-1.5">
-                        <span className="text-amber-300">{getCategoryIcon(cat.id)}</span>
-                        {cat.name}
+                    <div className="flex items-center justify-between text-xs font-bold text-white py-1">
+                      <span className="flex items-center gap-1.5 text-amber-300">
+                        <span>{getCategoryIcon(cat.id)}</span>
+                        <span className="text-white font-extrabold">{cat.name}</span>
                       </span>
-                      <span className="text-[10px] bg-amber-500 text-stone-950 font-black px-2.5 py-0.5 rounded-full">All Items</span>
+                      <button
+                        type="button"
+                        onClick={() => handleCategorySelect(cat.id)}
+                        className="text-[10px] bg-amber-500 hover:bg-amber-400 active:scale-95 text-stone-950 font-black px-2.5 py-0.5 rounded-full cursor-pointer transition-all"
+                      >
+                        All Items
+                      </button>
                     </div>
                     <div className="mt-2 flex flex-wrap gap-1.5 pl-1">
                       {cat.subcategories.map((sub) => (
