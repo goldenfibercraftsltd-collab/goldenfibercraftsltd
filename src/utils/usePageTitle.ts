@@ -63,6 +63,30 @@ export function setPageTitle(pageTitle?: string, subtitleOrTagline?: string, des
       twitterDesc.setAttribute('content', targetDesc);
     }
   }
+
+  // Dynamically update self-referencing canonical URL & og:url (Prevents GSC canonical issues)
+  try {
+    const currentPath = window.location.pathname;
+    const cleanPath = currentPath.length > 1 && currentPath.endsWith('/') 
+      ? currentPath.slice(0, -1) 
+      : currentPath;
+    const canonicalUrl = `https://goldenfibercraftsltd.com${cleanPath === '/' ? '' : cleanPath}`;
+
+    let canonicalEl = document.querySelector('link[rel="canonical"]');
+    if (!canonicalEl) {
+      canonicalEl = document.createElement('link');
+      canonicalEl.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalEl);
+    }
+    canonicalEl.setAttribute('href', canonicalUrl);
+
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) {
+      ogUrl.setAttribute('content', canonicalUrl);
+    }
+  } catch (e) {
+    // Ignore in SSR/non-browser contexts
+  }
 }
 
 /**
