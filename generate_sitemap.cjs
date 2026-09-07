@@ -18,6 +18,8 @@ function escapeXml(str) {
 const corePages = [
   { url: '/', priority: '1.0', changefreq: 'daily' },
   { url: '/products', priority: '0.9', changefreq: 'daily' },
+  { url: '/blog', priority: '0.9', changefreq: 'weekly' },
+  { url: '/jute-basket-manufacturer-bangladesh', priority: '0.9', changefreq: 'weekly' },
   { url: '/about', priority: '0.8', changefreq: 'weekly' },
   { url: '/materials', priority: '0.8', changefreq: 'weekly' },
   { url: '/infrastructure', priority: '0.8', changefreq: 'weekly' },

@@ -105,6 +105,16 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
+                  to="/blog"
+                  onClick={scrollToTop}
+                  className="hover:text-amber-300 transition-colors flex items-center gap-2"
+                >
+                  <FileText className="h-3.5 w-3.5 text-emerald-400 shrink-0" />
+                  <span>Sourcing Blog & Guides</span>
+                </Link>
+              </li>
+              <li>
+                <Link
                   to={settings.footer_faq_url || "/faq"}
                   onClick={scrollToTop}
                   className="hover:text-amber-300 transition-colors flex items-center gap-2"

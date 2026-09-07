@@ -16,6 +16,8 @@ import { ContactPage } from './pages/ContactPage';
 import { MaterialsPage } from './pages/MaterialsPage';
 import { TermsPage } from './pages/TermsPage';
 import { FaqPage } from './pages/FaqPage';
+import { BlogPage } from './pages/BlogPage';
+import { ArticleDetailPage } from './pages/ArticleDetailPage';
 import { QuoteModal } from './components/QuoteModal';
 import { InfoModal } from './components/InfoModal';
 
@@ -71,6 +73,10 @@ export const AppContent: React.FC = () => {
       document.title = formatPageTitle('Terms & Conditions');
     } else if (p === '/faq') {
       document.title = formatPageTitle('Frequently Asked Questions');
+    } else if (p === '/blog') {
+      document.title = formatPageTitle('B2B Sourcing Blog & Guides');
+    } else if (p === '/jute-basket-manufacturer-bangladesh') {
+      document.title = formatPageTitle('Jute Basket Manufacturer in Bangladesh | Custom Wholesale & OEM Exporter');
     } else if (p === '/admin/login') {
       document.title = formatPageTitle('Admin Login');
     } else if (p === '/admin' || p === '/admin/dashboard') {
@@ -187,6 +193,9 @@ export const AppContent: React.FC = () => {
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/terms-conditions" element={<TermsPage />} />
           <Route path="/faq" element={<FaqPage />} />
+          <Route path="/blog" element={<BlogPage onOpenQuoteModal={() => handleOpenQuoteModal()} />} />
+          <Route path="/jute-basket-manufacturer-bangladesh" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
+          <Route path="/:slug" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
         </Routes>
 
       </main>
