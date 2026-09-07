@@ -305,7 +305,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
               {/* Material photo */}
               <figure className="my-6 rounded-xl overflow-hidden border border-stone-200">
                 <img
-                  src="/materials/jute_fiber_new.jpg"
+                  src="/images/blog/raw-tosha-jute-fiber-inspection-bangladesh.jpg"
                   alt="Raw Bangladeshi Tosha jute fiber bundles inspected for basket rope spinning"
                   className="w-full h-64 object-cover"
                 />
@@ -443,7 +443,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
               {/* Quality inspection image */}
               <figure className="my-6 rounded-xl overflow-hidden border border-stone-200">
                 <img
-                  src="/quality/quality_inspection.png"
+                  src="/images/blog/jute-basket-quality-control-moisture-inspection.jpg"
                   alt="Quality control inspection of handcrafted jute baskets at Bangladesh factory"
                   className="w-full h-72 object-cover"
                 />
