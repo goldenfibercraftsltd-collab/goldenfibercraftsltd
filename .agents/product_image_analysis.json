@@ -1,0 +1,1469 @@
+[
+  {
+    "id": 19,
+    "code": "DJB-01",
+    "name": "Storage Jute Basket (Set of 3)",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_01_hd.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_01_hd.jpg"
+  },
+  {
+    "id": 20,
+    "code": "DJB-05",
+    "name": "Jute Fruit Basket (Set of 3)",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_05_hd.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_05_hd.jpg"
+  },
+  {
+    "id": 21,
+    "code": "DJB-25",
+    "name": "Jute Fruit Basket with Rings",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_25_hd.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_25_hd.jpg"
+  },
+  {
+    "id": 22,
+    "code": "DJB-03",
+    "name": "Jute Round Basket with Black Rim",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_03_hd.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_03_hd.jpg"
+  },
+  {
+    "id": 23,
+    "code": "DJB-11",
+    "name": "Jute Round Cylinder Bins",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_11_hd.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_11_hd.jpg"
+  },
+  {
+    "id": 24,
+    "code": "DJB-13",
+    "name": "Lidded Jute Storage Canisters",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_13_hd.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_13_hd.jpg"
+  },
+  {
+    "id": 25,
+    "code": "DJB-28",
+    "name": "Two-Tone Jute Round Cylinder Planters",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_28_hd.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_28_hd.jpg"
+  },
+  {
+    "id": 26,
+    "code": "DJB-34",
+    "name": "Jute Mini Baskets with Handles",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_34_hd.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_34_hd.jpg"
+  },
+  {
+    "id": 27,
+    "code": "DJB-35",
+    "name": "Cream Jute Cylinder with Curved Handles",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_35_hd.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_35_hd.jpg"
+  },
+  {
+    "id": 28,
+    "code": "DJB-38",
+    "name": "Forest Green Stripe Cylinder with Leather Handles",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_38_hd.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_38_hd.jpg"
+  },
+  {
+    "id": 29,
+    "code": "DJB-40",
+    "name": "Jute Round Conical Baskets with Tassels",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_40_hd.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_40_hd.jpg"
+  },
+  {
+    "id": 30,
+    "code": "DJB-41",
+    "name": "Jute Round Cylinder with Long Handles",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_41_hd.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_41_hd.jpg"
+  },
+  {
+    "id": 31,
+    "code": "DJB-49",
+    "name": "Mustard Jute Fruit Cup Cylinder",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_49_hd.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_49_hd.jpg"
+  },
+  {
+    "id": 32,
+    "code": "DJB-50",
+    "name": "Colorblock Jute Cylinder with Handles",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_50.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_50.png"
+  },
+  {
+    "id": 33,
+    "code": "DJB-65",
+    "name": "Jute Small Stripe Basket Trays",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_65.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_65.png"
+  },
+  {
+    "id": 34,
+    "code": "DJB-14",
+    "name": "Jute Tiffin Box with Lid",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_14.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_14.png"
+  },
+  {
+    "id": 35,
+    "code": "BDF-44",
+    "name": "Oval Bread Basket with Blue Center",
+    "sub_category": "baskets",
+    "image_url": "/products/bdf_44.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdf_44.png"
+  },
+  {
+    "id": 36,
+    "code": "BDF-45",
+    "name": "Oval Jute Cylinder with Handles",
+    "sub_category": "baskets",
+    "image_url": "/products/bdf_45.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdf_45.png"
+  },
+  {
+    "id": 37,
+    "code": "BDH-171",
+    "name": "Handcrafted Kitchen Storage Cylinder",
+    "sub_category": "baskets",
+    "image_url": "/products/bdh_171.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdh_171.png"
+  },
+  {
+    "id": 38,
+    "code": "BDH-172",
+    "name": "Coiled Jute Sunburst Small Bowl",
+    "sub_category": "baskets",
+    "image_url": "/products/bdh_172.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdh_172.png"
+  },
+  {
+    "id": 39,
+    "code": "DJB-36",
+    "name": "Jute Cat Ears Toy Basket",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_36.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_36.png"
+  },
+  {
+    "id": 40,
+    "code": "DJB-37",
+    "name": "White Braid Basket with Green Coin Accents",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_37.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_37.png"
+  },
+  {
+    "id": 41,
+    "code": "DJB-04",
+    "name": "Jute Square Storage Box Cubes",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_04.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_04.png"
+  },
+  {
+    "id": 42,
+    "code": "DJB-07",
+    "name": "Jute Rectangular Storage Bins",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_07.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_07.png"
+  },
+  {
+    "id": 43,
+    "code": "DJB-61",
+    "name": "Large Storage Laundry Basket with Lid",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_61.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_61.png"
+  },
+  {
+    "id": 44,
+    "code": "DJB-62",
+    "name": "Charcoal Heather Storage Basket with Lid",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_62.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_62.png"
+  },
+  {
+    "id": 45,
+    "code": "DJB-64",
+    "name": "Jute Storage Basket with Upright Handles",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_64.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_64.png"
+  },
+  {
+    "id": 46,
+    "code": "BJB-15-CSF",
+    "name": "Round Cylinder Basket with Terracotta Stripe",
+    "sub_category": "baskets",
+    "image_url": "/products/bjb_15_csf.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_15_csf.png"
+  },
+  {
+    "id": 47,
+    "code": "BJB-15-GRS",
+    "name": "Round Storage Basket with Teal Stripe",
+    "sub_category": "baskets",
+    "image_url": "/products/bjb_15_grs.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_15_grs.png"
+  },
+  {
+    "id": 48,
+    "code": "DJB-57",
+    "name": "Jute Urn Laundry Basket",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_57.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_57.png"
+  },
+  {
+    "id": 49,
+    "code": "DJB-60",
+    "name": "Rectangular Jute Caddy with Handles",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_60.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_60.png"
+  },
+  {
+    "id": 50,
+    "code": "DJB-66",
+    "name": "Round Braided Fruit Basket with Overhead Handle",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_66.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_66.png"
+  },
+  {
+    "id": 51,
+    "code": "DJB-71",
+    "name": "Two-Tone Royal Blue Jute Belly Basket",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_71.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_71.png"
+  },
+  {
+    "id": 52,
+    "code": "DJB-80",
+    "name": "Jute Bear Face Kids Toy Basket",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_80.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_80.png"
+  },
+  {
+    "id": 53,
+    "code": "DJB-82",
+    "name": "Jute Bunny Kids Toy Basket",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_82.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_82.png"
+  },
+  {
+    "id": 54,
+    "code": "DJB-81",
+    "name": "Grey Teddy Bear Jute Toy Storage Hamper",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_81.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_81.png"
+  },
+  {
+    "id": 55,
+    "code": "DJB-08",
+    "name": "Emerald Green Striped Round Baskets",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_08.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_08.png"
+  },
+  {
+    "id": 56,
+    "code": "DJB-85",
+    "name": "Festive Christmas Santa Belly Basket",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_85.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_85.png"
+  },
+  {
+    "id": 57,
+    "code": "DJB-84",
+    "name": "Festive Snowman Jute Belly Basket",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_84.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_84.png"
+  },
+  {
+    "id": 58,
+    "code": "DJB-61-0",
+    "name": "Tri-Tone Blue Cylinder Jute Baskets",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_61_0.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_61_0.png"
+  },
+  {
+    "id": 59,
+    "code": "DJB-64-0",
+    "name": "Rectangular Jute Vanity Tray with Red Trim",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_64_0_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_64_0_new.jpg"
+  },
+  {
+    "id": 60,
+    "code": "DJB-52",
+    "name": "Red & Cream Scalloped Storage Baskets",
+    "sub_category": "baskets",
+    "image_url": "/products/djb_52_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djb_52_new.jpg"
+  },
+  {
+    "id": 61,
+    "code": "BJB-68",
+    "name": "Checkered Woven Jute Shopping Bag",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_68_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_68_new.jpg"
+  },
+  {
+    "id": 62,
+    "code": "BJB-69",
+    "name": "Conical Jute & Fabric Beach Bag",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_69_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_69_new.jpg"
+  },
+  {
+    "id": 63,
+    "code": "BJB-66",
+    "name": "Dusty Rose Braided Jute Bucket Bag",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_66_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_66_new.jpg"
+  },
+  {
+    "id": 64,
+    "code": "BJB-67",
+    "name": "Round Jute Gift Bag with Tassel",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_67_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_67_new.jpg"
+  },
+  {
+    "id": 65,
+    "code": "BJB-07",
+    "name": "Wholesale Jute Utility Bowls (Set of 3)",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_07_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_07_new.jpg"
+  },
+  {
+    "id": 66,
+    "code": "BJB-70",
+    "name": "Nautical Striped Jute Rope Boat Bag",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_70_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_70_new.jpg"
+  },
+  {
+    "id": 71,
+    "code": "BJB-26",
+    "name": "Unbleached Natural Jute Backpack Tote",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_26_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_26_new.jpg"
+  },
+  {
+    "id": 72,
+    "code": "BJB-55",
+    "name": "Two-Tone Coiled Rope Jute Boat Tote",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_55_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_55_new.jpg"
+  },
+  {
+    "id": 73,
+    "code": "BJB-56",
+    "name": "Handcrafted Golden Jute Classic Tote",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_56_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_56_new.jpg"
+  },
+  {
+    "id": 74,
+    "code": "BJB-57",
+    "name": "Mandala Print Laminated Jute Tote",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_57_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_57_new.jpg"
+  },
+  {
+    "id": 75,
+    "code": "BJB-58",
+    "name": "Color-Dipped Jute Basket Bag with Tassels",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_58_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_58_new.jpg"
+  },
+  {
+    "id": 76,
+    "code": "BJB-59",
+    "name": "Nautical Slub Striped Flared Jute Bag",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_59_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_59_new.jpg"
+  },
+  {
+    "id": 77,
+    "code": "BJB-60",
+    "name": "Striped Jute Oval Bag with Leather Handles",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_60_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_60_new.jpg"
+  },
+  {
+    "id": 78,
+    "code": "BJB-61",
+    "name": "Tri-Tone Sun & Ocean Jute Flared Bag",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_61_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_61_new.jpg"
+  },
+  {
+    "id": 79,
+    "code": "BJB-62",
+    "name": "Charcoal Mélange Striped Woven Jute Tote",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_62_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_62_new.jpg"
+  },
+  {
+    "id": 80,
+    "code": "BJB-63",
+    "name": "Colorblock Cream & Charcoal Jute Tote",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_63_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_63_new.jpg"
+  },
+  {
+    "id": 81,
+    "code": "BJB-64",
+    "name": "Lilac & Lemon Striped Jute Ladies Bag",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_64_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_64_new.jpg"
+  },
+  {
+    "id": 82,
+    "code": "BJB-65",
+    "name": "Golden Jute Oval Basket Bag with Leather Straps",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_65_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_65_new.jpg"
+  },
+  {
+    "id": 83,
+    "code": "BJB-17",
+    "name": "Structured Midnight Black Jute Tote",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_17_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_17_new.jpg"
+  },
+  {
+    "id": 84,
+    "code": "BJB-05",
+    "name": "Indigo Striped Jute-Cotton Market Bag",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_05_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_05_new.jpg"
+  },
+  {
+    "id": 85,
+    "code": "BJB-06",
+    "name": "Eco-Textured Jute-Jhuta Blend Shopper",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_06_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_06_new.jpg"
+  },
+  {
+    "id": 86,
+    "code": "BJB-15",
+    "name": "Candy Cane Red Striped Coiled Jute Bag",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_15_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_15_new.jpg"
+  },
+  {
+    "id": 87,
+    "code": "BJB-16",
+    "name": "Classic Monochrome Striped Jute Tote",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_16_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_16_new.jpg"
+  },
+  {
+    "id": 88,
+    "code": "BJB-25",
+    "name": "Wide Natural Golden Jute Basket Tote",
+    "sub_category": "bags",
+    "image_url": "/products/bjb_25_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjb_25_new.jpg"
+  },
+  {
+    "id": 97,
+    "code": "BJM-01",
+    "name": "Handwoven Oval Jute Placemat",
+    "sub_category": "placemats",
+    "image_url": "/products/bjm_01.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjm_01.png"
+  },
+  {
+    "id": 98,
+    "code": "BJM-02",
+    "name": "Round Jute Placemat with Mustard Border",
+    "sub_category": "placemats",
+    "image_url": "/products/bjm_02.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjm_02.png"
+  },
+  {
+    "id": 99,
+    "code": "BJM-03",
+    "name": "Spiral Swirl Washable Jute Placemat",
+    "sub_category": "placemats",
+    "image_url": "/products/bjm_03.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjm_03.png"
+  },
+  {
+    "id": 100,
+    "code": "BJM-04",
+    "name": "Mottled Indigo Green Round Jute Placemat",
+    "sub_category": "placemats",
+    "image_url": "/products/bjm_04.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjm_04.png"
+  },
+  {
+    "id": 101,
+    "code": "BJM-06",
+    "name": "Denim Blue Flatweave Rectangular Placemat",
+    "sub_category": "placemats",
+    "image_url": "/products/bjm_06.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjm_06.png"
+  },
+  {
+    "id": 102,
+    "code": "BJM-07",
+    "name": "Classic Elongated Oval Jute Table Mat",
+    "sub_category": "placemats",
+    "image_url": "/products/bjm_07.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjm_07.png"
+  },
+  {
+    "id": 103,
+    "code": "BJM-11",
+    "name": "Cobalt & White Striped Round Jute Placemat",
+    "sub_category": "placemats",
+    "image_url": "/products/bjm_11.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjm_11.png"
+  },
+  {
+    "id": 104,
+    "code": "BJM-08",
+    "name": "Forest Green Braided Round Jute Placemat",
+    "sub_category": "placemats",
+    "image_url": "/products/bjm_08.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjm_08.png"
+  },
+  {
+    "id": 105,
+    "code": "DJM-21",
+    "name": "Berry Wine Spiral Coiled Jute Placemat",
+    "sub_category": "placemats",
+    "image_url": "/products/djm_21.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\djm_21.png"
+  },
+  {
+    "id": 106,
+    "code": "BJM-22",
+    "name": "Espresso Dark Brown Round Jute Placemat",
+    "sub_category": "placemats",
+    "image_url": "/products/bjm_22.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjm_22.png"
+  },
+  {
+    "id": 107,
+    "code": "BJP-01",
+    "name": "Black & Cream Striped Cylindrical Jute Pouf",
+    "sub_category": "poufs",
+    "image_url": "/products/bjp_01.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjp_01.jpg"
+  },
+  {
+    "id": 108,
+    "code": "BJP-02",
+    "name": "Domed Cylinder Natural Jute Pouf Ottoman",
+    "sub_category": "poufs",
+    "image_url": "/products/bjp_02.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjp_02.jpg"
+  },
+  {
+    "id": 109,
+    "code": "BJP-05",
+    "name": "Square Pyramid Small Capsule Jute Pouf",
+    "sub_category": "poufs",
+    "image_url": "/products/bjp_05.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjp_05.jpg"
+  },
+  {
+    "id": 110,
+    "code": "BJP-06",
+    "name": "Square Pyramid Large Capsule Jute Pouf",
+    "sub_category": "poufs",
+    "image_url": "/products/bjp_06.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjp_06.jpg"
+  },
+  {
+    "id": 111,
+    "code": "BJP-07",
+    "name": "Cube Square Structured Jute Ottoman Pouf",
+    "sub_category": "poufs",
+    "image_url": "/products/bjp_07.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjp_07.jpg"
+  },
+  {
+    "id": 112,
+    "code": "BJP-08",
+    "name": "Low Round Drum Jute Cube Pouf",
+    "sub_category": "poufs",
+    "image_url": "/products/bjp_08.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjp_08.jpg"
+  },
+  {
+    "id": 113,
+    "code": "BJP-09",
+    "name": "Round Capsule Jute & Coir Floor Cushion",
+    "sub_category": "poufs",
+    "image_url": "/products/bjp_09.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjp_09.jpg"
+  },
+  {
+    "id": 114,
+    "code": "BJP-10",
+    "name": "Sage Tinted Round Capsule Jute & Coir Pouf",
+    "sub_category": "poufs",
+    "image_url": "/products/bjp_10.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjp_10.jpg"
+  },
+  {
+    "id": 116,
+    "code": "BCC-06",
+    "name": "Single Bowl Braided Jute Macrame Hanger",
+    "sub_category": "macrames",
+    "image_url": "/products/bcc_06_hd.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bcc_06_hd.jpg"
+  },
+  {
+    "id": 117,
+    "code": "BJC-01",
+    "name": "Beaded Saffron Yellow Jute Macrame Hanger",
+    "sub_category": "macrames",
+    "image_url": "/products/bjc_01_hd.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjc_01_hd.jpg"
+  },
+  {
+    "id": 119,
+    "code": "BJC-06",
+    "name": "Sky Blue Banded Jute Macrame Plant Hanger",
+    "sub_category": "macrames",
+    "image_url": "/products/bjc_06_hd.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjc_06_hd.jpg"
+  },
+  {
+    "id": 120,
+    "code": "BJC-07",
+    "name": "Two-Tier Terracotta & Natural Jute Macrame",
+    "sub_category": "macrames",
+    "image_url": "/products/bjc_07_hd.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjc_07_hd.jpg"
+  },
+  {
+    "id": 122,
+    "code": "BJC-11",
+    "name": "Minimalist 4-Strand Jute Macrame Plant Sling",
+    "sub_category": "macrames",
+    "image_url": "/products/bjc_11_hd.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjc_11_hd.jpg"
+  },
+  {
+    "id": 123,
+    "code": "BJC-13",
+    "name": "Coiled Jute Pot Macrame with Pom-Pom Tassels",
+    "sub_category": "macrames",
+    "image_url": "/products/bjc_13_hd.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjc_13_hd.jpg"
+  },
+  {
+    "id": 124,
+    "code": "BJC-14",
+    "name": "Small Cylinder Basket Jute Macrame Hanger",
+    "sub_category": "macrames",
+    "image_url": "/products/bjc_14_hd.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjc_14_hd.jpg"
+  },
+  {
+    "id": 125,
+    "code": "BJC-15",
+    "name": "Slender Natural Jute Macrame Plant Hanger",
+    "sub_category": "macrames",
+    "image_url": "/products/bjc_15.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjc_15.png"
+  },
+  {
+    "id": 127,
+    "code": "BJC-18",
+    "name": "Terracotta Toned Jute Rope Macrame Hanger",
+    "sub_category": "macrames",
+    "image_url": "/products/bjc_18.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjc_18.png"
+  },
+  {
+    "id": 130,
+    "code": "BJC-22",
+    "name": "Wide-Strap Minimalist Jute Macrame Planter",
+    "sub_category": "macrames",
+    "image_url": "/products/bjc_22.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjc_22.png"
+  },
+  {
+    "id": 132,
+    "code": "BJC-35",
+    "name": "Magenta Tasseled Jute Macrame Plant Hanger",
+    "sub_category": "macrames",
+    "image_url": "/products/bjc_35.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjc_35.png"
+  },
+  {
+    "id": 136,
+    "code": "BJC-40",
+    "name": "Flared Open Cradle Jute Macrame Planter",
+    "sub_category": "macrames",
+    "image_url": "/products/bjc_40.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjc_40.png"
+  },
+  {
+    "id": 137,
+    "code": "BJC-41",
+    "name": "Slender Conical Jute Macrame Plant Hanger",
+    "sub_category": "macrames",
+    "image_url": "/products/bjc_41.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjc_41.png"
+  },
+  {
+    "id": 139,
+    "code": "GFC-SB-015",
+    "name": "Sancerre Seagrass Rectangular Basket",
+    "sub_category": "baskets",
+    "image_url": "/products/gfc_sb_015.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_sb_015.png"
+  },
+  {
+    "id": 140,
+    "code": "GFC-SB-025",
+    "name": "Sancerre Seagrass Rectangular Basket (Medium)",
+    "sub_category": "baskets",
+    "image_url": "/products/gfc_sb_025.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_sb_025.png"
+  },
+  {
+    "id": 141,
+    "code": "GFC-SB-017",
+    "name": "Round Seagrass Laundry Basket",
+    "sub_category": "baskets",
+    "image_url": "/products/gfc_sb_017.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_sb_017.png"
+  },
+  {
+    "id": 142,
+    "code": "GFC-SP-0029",
+    "name": "Seagrass Indoor & Outdoor Planters",
+    "sub_category": "planters",
+    "image_url": "/products/gfc_sp_0029.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_sp_0029.png"
+  },
+  {
+    "id": 143,
+    "code": "GFC-SB-030",
+    "name": "Round Shape Jute Storage Basket",
+    "sub_category": "baskets",
+    "image_url": "/products/gfc_sb_030_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_sb_030_new.jpg"
+  },
+  {
+    "id": 144,
+    "code": "GFC-SB-011",
+    "name": "Jute Shopping Bag / Custom Bag",
+    "sub_category": "bags",
+    "image_url": "/products/gfc_sb_011_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_sb_011_new.jpg"
+  },
+  {
+    "id": 145,
+    "code": "GFC-TB-012",
+    "name": "Artisan Jute Tote Bag",
+    "sub_category": "bags",
+    "image_url": "/products/gfc_tb_012.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_tb_012.png"
+  },
+  {
+    "id": 146,
+    "code": "GFC-PB-008",
+    "name": "Promotional Jute Bag",
+    "sub_category": "bags",
+    "image_url": "/products/gfc_pb_008.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_pb_008.png"
+  },
+  {
+    "id": 147,
+    "code": "GFC-WB-007",
+    "name": "Jute Wine Bottle Bag",
+    "sub_category": "bags",
+    "image_url": "/products/gfc_wb_007.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_wb_007.png"
+  },
+  {
+    "id": 148,
+    "code": "GFC-TM-004",
+    "name": "Braided Jute & Cotton Table Mat",
+    "sub_category": "placemats",
+    "image_url": "/products/gfc_tm_004.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_tm_004.png"
+  },
+  {
+    "id": 149,
+    "code": "GFC-PH-008",
+    "name": "Macrame Jute Plant Holder",
+    "sub_category": "macrames",
+    "image_url": "/products/gfc_ph_008.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_ph_008.png"
+  },
+  {
+    "id": 150,
+    "code": "GFC-KB-005",
+    "name": "Kaisa Grass Basket Bowl",
+    "sub_category": "baskets",
+    "image_url": "/products/gfc_kb_005.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_kb_005.png"
+  },
+  {
+    "id": 151,
+    "code": "GFC-SB-024",
+    "name": "Casafield Water Hyacinth Round Storage Basket",
+    "sub_category": "baskets",
+    "image_url": "/products/gfc_sb_024.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_sb_024.png"
+  },
+  {
+    "id": 152,
+    "code": "GFC-PS-009",
+    "name": "Rattan & Jute Placement Set",
+    "sub_category": "placemats",
+    "image_url": "/products/gfc_ps_009.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_ps_009.png"
+  },
+  {
+    "id": 153,
+    "code": "BDR-04",
+    "name": "Chunky Braided Natural Jute Beni Rug",
+    "sub_category": "jhuta-rugs",
+    "image_url": "/products/bdr_04.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdr_04.png"
+  },
+  {
+    "id": 154,
+    "code": "BDR-05",
+    "name": "Khaki Jute & Cotton Beni Textured Rug",
+    "sub_category": "jhuta-rugs",
+    "image_url": "/products/bdr_05.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdr_05.png"
+  },
+  {
+    "id": 155,
+    "code": "BDR-61",
+    "name": "Deep Teal Geometric Diamond Flatweave Rug",
+    "sub_category": "jhuta-rugs",
+    "image_url": "/products/bdr_61.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdr_61.png"
+  },
+  {
+    "id": 156,
+    "code": "BDR-59",
+    "name": "Mint Aqua Diamond Trellis Flatweave Rug",
+    "sub_category": "jhuta-rugs",
+    "image_url": "/products/bdr_59.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdr_59.png"
+  },
+  {
+    "id": 157,
+    "code": "BDR-10",
+    "name": "Mustard Golden Jute Diamond Rug with Black Fringe",
+    "sub_category": "jhuta-rugs",
+    "image_url": "/products/bdr_10.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdr_10.png"
+  },
+  {
+    "id": 158,
+    "code": "BDR-47",
+    "name": "Charcoal & Ivory Ladder Stripe Handloom Rug",
+    "sub_category": "jhuta-rugs",
+    "image_url": "/products/bdr_47.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdr_47.png"
+  },
+  {
+    "id": 159,
+    "code": "BDR-83",
+    "name": "Tangerine Orange Shaggy Floor Mat",
+    "sub_category": "jute-rugs",
+    "image_url": "/products/bdr_83.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdr_83.png"
+  },
+  {
+    "id": 160,
+    "code": "BDR-84",
+    "name": "Kaleidoscope Patchwork Shaggy Door Mat",
+    "sub_category": "jute-rugs",
+    "image_url": "/products/bdr_84.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdr_84.png"
+  },
+  {
+    "id": 161,
+    "code": "BDR-03",
+    "name": "Natural Jute & Jhuta Trellis Area Rug",
+    "sub_category": "jute-rugs",
+    "image_url": "/products/bdr_03.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdr_03.png"
+  },
+  {
+    "id": 162,
+    "code": "BDR-23-WA",
+    "name": "Coastal Blue Ticking Stripe Woven Rug",
+    "sub_category": "jute-rugs",
+    "image_url": "/products/bdr_23_wa.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdr_23_wa.png"
+  },
+  {
+    "id": 163,
+    "code": "BDR-77",
+    "name": "Charcoal Slate Handloom Rug with White Fringe",
+    "sub_category": "jute-rugs",
+    "image_url": "/products/bdr_77.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdr_77.png"
+  },
+  {
+    "id": 164,
+    "code": "BDR-26",
+    "name": "Burgundy Accent Pinstripe Flatweave Rug",
+    "sub_category": "jute-rugs",
+    "image_url": "/products/bdr_26.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdr_26.png"
+  },
+  {
+    "id": 165,
+    "code": "BDR-27",
+    "name": "Navy Diamond Honeycomb Geometric Rug",
+    "sub_category": "jute-rugs",
+    "image_url": "/products/bdr_27.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdr_27.png"
+  },
+  {
+    "id": 166,
+    "code": "BDR-24",
+    "name": "Sage Green Ribbed Stripe Rug with Coral Fringe",
+    "sub_category": "jute-rugs",
+    "image_url": "/products/bdr_24.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdr_24.png"
+  },
+  {
+    "id": 167,
+    "code": "BDR-22",
+    "name": "Windowpane Grid Check Handwoven Rug",
+    "sub_category": "jute-rugs",
+    "image_url": "/products/bdr_22.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdr_22.png"
+  },
+  {
+    "id": 168,
+    "code": "BDR-23",
+    "name": "Bold Black & White Vertical Stripe Rug",
+    "sub_category": "jute-rugs",
+    "image_url": "/products/bdr_23.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdr_23.png"
+  },
+  {
+    "id": 169,
+    "code": "BDR-25",
+    "name": "Geometric Diamond Flatweave Rug",
+    "sub_category": "jute-rugs",
+    "image_url": "/products/bdr_25.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdr_25.png"
+  },
+  {
+    "id": 170,
+    "code": "BDR-76",
+    "name": "Multi-Color Striped Chindi Rug",
+    "sub_category": "jute-rugs",
+    "image_url": "/products/bdr_76.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdr_76.png"
+  },
+  {
+    "id": 171,
+    "code": "BDR-75",
+    "name": "Trellis Diamond Colorblock Rug",
+    "sub_category": "jute-rugs",
+    "image_url": "/products/bdr_75.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdr_75.png"
+  },
+  {
+    "id": 172,
+    "code": "BDR-73",
+    "name": "Modern Gradient Staggered Stripe Rug",
+    "sub_category": "jute-rugs",
+    "image_url": "/products/bdr_73.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdr_73.png"
+  },
+  {
+    "id": 173,
+    "code": "BDR-74",
+    "name": "Monochrome Pinstripe Woven Rug",
+    "sub_category": "jute-rugs",
+    "image_url": "/products/bdr_74.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdr_74.png"
+  },
+  {
+    "id": 174,
+    "code": "BDR-72",
+    "name": "Solid Indigo Navy Handloom Rug with White Fringe",
+    "sub_category": "jute-rugs",
+    "image_url": "/products/bdr_72.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bdr_72.png"
+  },
+  {
+    "id": 175,
+    "code": "GFC-FM-017",
+    "name": "Braided Jute Floor Rug & Area Mat",
+    "sub_category": "jute-rugs",
+    "image_url": "/products/gfc_fm_017.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_fm_017.png"
+  },
+  {
+    "id": 176,
+    "code": "GFC-BP-007",
+    "name": "Artisan Bamboo Products & Crafts",
+    "sub_category": "baskets",
+    "image_url": "/products/gfc_bp_007.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_bp_007.png"
+  },
+  {
+    "id": 177,
+    "code": "GFC-WB-009",
+    "name": "Cotton Rope Laundry Hamper Woven Basket",
+    "sub_category": "baskets",
+    "image_url": "/products/gfc_wb_009.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_wb_009.png"
+  },
+  {
+    "id": 178,
+    "code": "GFC-JFM-001",
+    "name": "Handwoven Jute Doormat",
+    "sub_category": "floor-mats",
+    "image_url": "/products/gfc_jfm_001.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_jfm_001.jpg"
+  },
+  {
+    "id": 179,
+    "code": "GFC-JP-001",
+    "name": "Braided Jute Ottoman Pouf",
+    "sub_category": "poufs",
+    "image_url": "/products/gfc_jp_001.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_jp_001.jpg"
+  },
+  {
+    "id": 180,
+    "code": "GFC-SFM-001",
+    "name": "Natural Seagrass Floor Mat",
+    "sub_category": "floor-mats",
+    "image_url": "/products/gfc_sfm_001.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_sfm_001.jpg"
+  },
+  {
+    "id": 181,
+    "code": "GFC-SPM-001",
+    "name": "Round Seagrass Table Placemat Set",
+    "sub_category": "placemats",
+    "image_url": "/products/gfc_spm_001.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_spm_001.jpg"
+  },
+  {
+    "id": 182,
+    "code": "GFC-ST-001",
+    "name": "Seagrass Serving Tray with Handles",
+    "sub_category": "trays",
+    "image_url": "/products/gfc_st_001.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_st_001.jpg"
+  },
+  {
+    "id": 183,
+    "code": "GFC-SPB-001",
+    "name": "Seagrass Pet Basket Bed",
+    "sub_category": "baskets",
+    "image_url": "/products/gfc_spb_001.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_spb_001.jpg"
+  },
+  {
+    "id": 184,
+    "code": "GFC-KPM-001",
+    "name": "Kaisa Grass Round Placemat",
+    "sub_category": "placemats",
+    "image_url": "/products/gfc_kpm_001.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_kpm_001.jpg"
+  },
+  {
+    "id": 185,
+    "code": "GFC-KT-001",
+    "name": "Kans Grass Bread & Fruit Tray",
+    "sub_category": "trays",
+    "image_url": "/products/gfc_kt_001.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\gfc_kt_001.jpg"
+  },
+  {
+    "id": 186,
+    "code": "GFC-DLB-001",
+    "name": "Date Leaf Storage Hamper Set",
+    "sub_category": "baskets",
+    "image_url": "/materials/orig_BDD-03.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\materials\\orig_BDD-03.jpg"
+  },
+  {
+    "id": 187,
+    "code": "GFC-DPM-001",
+    "name": "Braided Date Palm Leaf Placemat Set",
+    "sub_category": "placemats",
+    "image_url": "/materials/orig_BDD-31.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\materials\\orig_BDD-31.jpg"
+  },
+  {
+    "id": 188,
+    "code": "GFC-DT-001",
+    "name": "Date Leaf Decorative Utility Tray",
+    "sub_category": "trays",
+    "image_url": "/products/image20.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\image20.png"
+  },
+  {
+    "id": 189,
+    "code": "GFC-RB-001",
+    "name": "Open Weave Rattan Storage Basket",
+    "sub_category": "baskets",
+    "image_url": "/materials/orig_BDC-02.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\materials\\orig_BDC-02.jpg"
+  },
+  {
+    "id": 190,
+    "code": "GFC-RF-001",
+    "name": "Handcrafted Rattan Accent Stool & Table",
+    "sub_category": "furnitures",
+    "image_url": "/materials/orig_BDC-06.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\materials\\orig_BDC-06.jpg"
+  },
+  {
+    "id": 191,
+    "code": "GFC-RWM-010",
+    "name": "Sunburst Rattan Wall Mirror",
+    "sub_category": "mirrors",
+    "image_url": "/products/image54.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\image54.png"
+  },
+  {
+    "id": 192,
+    "code": "GFC-BSD-031",
+    "name": "Bamboo Eco Living Stool & Decor",
+    "sub_category": "furnitures",
+    "image_url": "/materials/orig_BDB-06.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\materials\\orig_BDB-06.jpg"
+  },
+  {
+    "id": 194,
+    "code": "GFC-PTM-003",
+    "name": "Palm Fiber Round Table Mat Set",
+    "sub_category": "placemats",
+    "image_url": "/materials/orig_BSL-02.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\materials\\orig_BSL-02.jpg"
+  },
+  {
+    "id": 195,
+    "code": "GFC-WPS-033",
+    "name": "Water Hyacinth Braided Placemat Set",
+    "sub_category": "placemats",
+    "image_url": "/materials/orig_BWH-02.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\materials\\orig_BWH-02.jpg"
+  },
+  {
+    "id": 196,
+    "code": "GFC-JHR-001",
+    "name": "Recycled Jhuta Braided Area Rug",
+    "sub_category": "jhuta-rugs",
+    "image_url": "/products/image52.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\image52.png"
+  },
+  {
+    "id": 197,
+    "code": "GFC-CR-001",
+    "name": "Handwoven Organic Cotton Rug",
+    "sub_category": "cotton-rugs",
+    "image_url": "/products/image50.png",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\image50.png"
+  },
+  {
+    "id": 205,
+    "code": "BJM-10",
+    "name": "Natural Unbleached Round Jute Area Mat",
+    "sub_category": "floor-mats",
+    "image_url": "/products/bjm_10_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjm_10_new.jpg"
+  },
+  {
+    "id": 206,
+    "code": "BJM-12",
+    "name": "Classic Flatweave Rectangular Jute Rug",
+    "sub_category": "floor-mats",
+    "image_url": "/products/bjm_12_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjm_12_new.jpg"
+  },
+  {
+    "id": 207,
+    "code": "BJM-13",
+    "name": "Rectangular Jute Doormat with Black Border",
+    "sub_category": "floor-mats",
+    "image_url": "/products/bjm_13_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjm_13_new.jpg"
+  },
+  {
+    "id": 208,
+    "code": "BJM-26",
+    "name": "Half-Moon Semicircle Braided Jute Doormat",
+    "sub_category": "floor-mats",
+    "image_url": "/products/bjm_26_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjm_26_new.jpg"
+  },
+  {
+    "id": 209,
+    "code": "BJM-27",
+    "name": "Concentric Ring Mottled Jute Door Mat",
+    "sub_category": "floor-mats",
+    "image_url": "/products/bjm_27_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjm_27_new.jpg"
+  },
+  {
+    "id": 210,
+    "code": "BJM-31",
+    "name": "Openwork Lattice Ring Jute Mandala Mat",
+    "sub_category": "floor-mats",
+    "image_url": "/products/bjm_31_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjm_31_new.jpg"
+  },
+  {
+    "id": 211,
+    "code": "BJM-32",
+    "name": "Scalloped Petal Openwork Jute Floor Rug",
+    "sub_category": "floor-mats",
+    "image_url": "/products/bjm_32_new.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\products\\bjm_32_new.jpg"
+  },
+  {
+    "id": 212,
+    "code": "GFC-PSB-041",
+    "name": "Palm Fiber Utility Storage Basket",
+    "sub_category": "baskets",
+    "image_url": "/materials/orig_BSL-01.jpg",
+    "exists": true,
+    "fullPath": "c:\\My coding\\GoldenFiberCraftsLtd\\public\\materials\\orig_BSL-01.jpg"
+  }
+]
