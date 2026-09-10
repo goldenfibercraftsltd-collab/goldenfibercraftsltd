@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useLocation } from 'react-router-dom';
 import { getArticleBySlug, ARTICLES_DATA } from '../data/articles';
 import { usePageTitle } from '../utils/usePageTitle';
 import { 
@@ -15,7 +15,10 @@ interface ArticleDetailPageProps {
 
 export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuoteModal }) => {
   const { slug, articleSlug } = useParams<{ slug?: string; articleSlug?: string }>();
-  const currentSlug = slug || articleSlug || 'jute-bag-manufacturer-bangladesh';
+  const location = useLocation();
+  const pathSegments = location.pathname.split('/').filter(Boolean);
+  const pathSlug = pathSegments.length > 0 ? pathSegments[pathSegments.length - 1] : '';
+  const currentSlug = slug || articleSlug || (pathSlug && pathSlug !== 'blog' ? pathSlug : '') || 'jute-bag-manufacturer-bangladesh';
   const article = getArticleBySlug(currentSlug) || ARTICLES_DATA[0];
 
   const isBagArticle = article.slug.includes('bag') || article.category_slug === 'bags';
@@ -193,13 +196,13 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
 
       {/* 3. Featured Hero Image */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-        <figure className="bg-stone-100 rounded-2xl overflow-hidden border border-stone-200/80 shadow-md">
+        <figure className="bg-stone-50 rounded-2xl overflow-hidden border border-stone-200/80 shadow-md flex flex-col items-center">
           <img
             src={article.featured_image}
             alt={article.featured_image_alt}
-            className="w-full aspect-[16/9] object-cover"
+            className="w-full h-auto max-h-[580px] object-contain mx-auto block"
           />
-          <figcaption className="p-3 sm:p-4 text-xs sm:text-sm text-stone-500 bg-white border-t border-stone-100 flex items-center justify-between">
+          <figcaption className="w-full p-3 sm:p-4 text-xs sm:text-sm text-stone-500 bg-white border-t border-stone-100 flex items-center justify-between">
             <span>{article.featured_image_caption}</span>
             <span className="text-[11px] text-stone-400 font-mono hidden sm:inline">Golden Fiber Crafts Ltd.</span>
           </figcaption>
@@ -334,13 +337,13 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                   </div>
 
                   {/* Image 4: Raw Fiber & Material Inspection */}
-                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs">
+                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs bg-stone-50 flex flex-col items-center">
                     <img
                       src="/images/blog/raw-tosha-jute-fiber-inspection-bangladesh.jpg"
                       alt="Raw golden Tosha jute bast fiber bundles inspected and graded on bamboo racks in rural Bangladesh"
-                      className="w-full h-80 object-cover"
+                      className="w-full h-auto max-h-[560px] object-contain mx-auto block"
                     />
-                    <figcaption className="p-3 text-xs text-stone-500 bg-stone-50 flex items-center justify-between">
+                    <figcaption className="w-full p-3 text-xs text-stone-500 bg-stone-50 border-t border-stone-100 flex items-center justify-between">
                       <span>Bangladeshi Tosha jute bast fibers graded for staple length, tensile luster, and clean retted quality at Golden Fiber Crafts.</span>
                       <span className="font-mono text-[11px] text-amber-700 font-semibold">TOSHA FIBER GRADE</span>
                     </figcaption>
@@ -450,13 +453,13 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                   </div>
 
                   {/* Image 2: Artisan Stitching */}
-                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs">
+                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs bg-stone-50 flex flex-col items-center">
                     <img
                       src="/images/blog/bangladeshi-artisan-stitching-jute-bag.jpg"
                       alt="Bangladeshi woman artisan stitching reinforced cross-box handles on a natural jute shopping bag using an industrial sewing machine"
-                      className="w-full h-80 object-cover"
+                      className="w-full h-auto max-h-[560px] object-contain mx-auto block"
                     />
-                    <figcaption className="p-3 text-xs text-stone-500 bg-stone-50 flex items-center justify-between">
+                    <figcaption className="w-full p-3 text-xs text-stone-500 bg-stone-50 border-t border-stone-100 flex items-center justify-between">
                       <span>Artisan at Golden Fiber Crafts Limited securing padded cotton webbing handles with reinforced cross-box lock-stitching.</span>
                       <span className="font-mono text-[11px] text-amber-700 font-semibold">FACTORY STITCHING LINE</span>
                     </figcaption>
@@ -571,13 +574,13 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                   </div>
 
                   {/* Image 5: QC Inspection */}
-                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs">
+                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs bg-stone-50 flex flex-col items-center">
                     <img
                       src="/images/blog/jute-bag-quality-control-moisture-inspection.jpg"
                       alt="Quality control technician in Bangladesh checking moisture level of jute shopping bag using digital meter before packaging"
-                      className="w-full h-80 object-cover"
+                      className="w-full h-auto max-h-[560px] object-contain mx-auto block"
                     />
-                    <figcaption className="p-3 text-xs text-stone-500 bg-stone-50 flex items-center justify-between">
+                    <figcaption className="w-full p-3 text-xs text-stone-500 bg-stone-50 border-t border-stone-100 flex items-center justify-between">
                       <span>Digital moisture probe inspection: every production lot is measured to ensure fiber moisture is under 12% before master carton sealing.</span>
                       <span className="font-mono text-[11px] text-amber-700 font-semibold">EXPORT QA PROTOCOL</span>
                     </figcaption>
@@ -611,13 +614,13 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                   </div>
 
                   {/* Image 3: Studio Catalog Showcase */}
-                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs">
+                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs bg-stone-50 flex flex-col items-center">
                     <img
                       src="/images/blog/custom-jute-tote-bags-wholesale-display.jpg"
                       alt="Collection of four custom export-grade jute tote bags including shopping totes and drawstring gift pouches on neutral pedestal"
-                      className="w-full h-80 object-cover"
+                      className="w-full h-auto max-h-[560px] object-contain mx-auto block"
                     />
-                    <figcaption className="p-3 text-xs text-stone-500 bg-stone-50 flex items-center justify-between">
+                    <figcaption className="w-full p-3 text-xs text-stone-500 bg-stone-50 border-t border-stone-100 flex items-center justify-between">
                       <span>Export-grade product lines: from laminated supermarket shoppers to luxury resort boat totes, engineered for flat-pack container shipping.</span>
                       <span className="font-mono text-[11px] text-amber-700 font-semibold">OEM EXPORT RANGE</span>
                     </figcaption>
@@ -748,28 +751,415 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
               </>
             ) : (
               /* ========================================================================= */
-              /* JUTE BASKET EDITORIAL CONTENT (FALLBACK FOR BASKET SLUG) */
+              /* JUTE BASKET EDITORIAL CONTENT (COMPLETE 11 SECTIONS) */
               /* ========================================================================= */
               <>
+                {/* Section 1: Natural Fiber Engineering */}
                 <section id="natural-fiber-engineering" className="prose prose-stone max-w-none">
                   <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
                     1. What Is a Jute Basket? Natural Fiber Engineering & Anatomy
                   </h2>
-                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-3">
-                    At its foundation, a commercial jute basket is an engineered three-dimensional storage or decorative vessel constructed from the bast fiber of the <em>Corchorus</em> plant—principally <em>Corchorus olitorius</em> (Tosha jute) and <em>Corchorus capsularis</em> (White jute).
+                  
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Direct Definition:</strong>
+                    A commercial jute basket is an engineered three-dimensional storage and decorative vessel constructed from the bast fiber of the <em>Corchorus</em> plant—primarily Bangladeshi Tosha jute (<em>Corchorus olitorius</em>). Formed by helical rope coiling joined by multi-directional zig-zag lock-stitching, genuine jute baskets leverage natural cellular lignin (12%–14%) for upright structural rigidity without metal wire frames, combined with cellulose (60%–63%) for exceptional tensile durability.
+                  </div>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    Unlike soft canvas totes or brittle wicker baskets, handcrafted coiled jute baskets combine flexible tactile warmth with remarkable self-standing load resistance. The cellular architecture of Bangladeshi Tosha jute bast fibers provides high flexural strength, allowing the basket walls to maintain vertical cylindrical or rectangular profiles even after repeated compression during international container shipping.
                   </p>
-                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200">
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-5 text-xs text-stone-700">
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="font-bold text-stone-900 text-sm block mb-1 text-amber-800">60%–63% Cellulose</span>
+                      <span>High polymeric core density providing heavy load-bearing stamina and resistance to tensile wall blowout.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="font-bold text-stone-900 text-sm block mb-1 text-amber-800">12%–14% Natural Lignin</span>
+                      <span>Natural woody polymer that imparts rigid self-standing structure, keeping basket walls upright without wire supports.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="font-bold text-stone-900 text-sm block mb-1 text-amber-800">8mm–12mm Braided Core</span>
+                      <span>Multi-strand braided jute cord foundation bound by heavy-duty polyester-bonded nylon thread (6–8 stitches per inch).</span>
+                    </div>
+                  </div>
+
+                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs bg-stone-50 flex flex-col items-center">
                     <img
                       src="/images/blog/raw-tosha-jute-fiber-inspection-bangladesh.jpg"
                       alt="Raw Bangladeshi Tosha jute fiber bundles inspected for basket rope spinning"
-                      className="w-full h-64 object-cover"
+                      className="w-full h-auto max-h-[560px] object-contain mx-auto block"
                     />
-                    <figcaption className="p-3 text-xs text-stone-500 bg-stone-50">
-                      Raw Golden Tosha jute fiber graded by staple length and tensile strength at Golden Fiber Crafts Limited.
+                    <figcaption className="w-full p-3 text-xs text-stone-500 bg-stone-50 border-t border-stone-100 flex items-center justify-between">
+                      <span>Raw Golden Tosha jute bast fiber bundles graded by staple length and tensile luster at Golden Fiber Crafts Limited.</span>
+                      <span className="font-mono text-[11px] text-amber-700 font-semibold">TOSHA FIBER GRADING</span>
                     </figcaption>
                   </figure>
                 </section>
-                {/* Additional basket sections preserved */}
+
+                {/* Section 2: Why International Retailers Are Transitioning */}
+                <section id="why-retailers-switch" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    2. Why International Retailers Are Transitioning to Natural Jute Storage
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Market Shift Insight:</strong>
+                    Global homeware retailers, department stores, and nursery brands in North America, the UK, and Europe are aggressively transitioning from plastic storage bins and chemical-treated wicker to natural coiled jute baskets. Jute offers 100% circular biodegradability, zero microplastics, child-safe tactile softness, and premium organic aesthetics that command 3x–4x retail markup over disposable plastic totes.
+                  </div>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    Consumer preference has permanently pivoted toward honest, sustainable home goods. Coiled jute baskets fulfill modern interior decor demands across multiple living spaces:
+                  </p>
+
+                  <ul className="mt-3 space-y-3 text-xs sm:text-sm text-stone-700 list-disc pl-5">
+                    <li>
+                      <strong>Zero Microplastic & Child-Safe Nurseries:</strong> Coiled jute baskets contain no sharp wires, brittle splinters, or phthalate plasticizers, making them the gold standard for newborn nursery toy bins and laundry hampers.
+                    </li>
+                    <li>
+                      <strong>Organic Biophilic Aesthetics:</strong> Natural golden Tosha jute complements Scandinavian minimalism, Japandi decor, and contemporary boho interiors, turning functional home storage into an intentional design centerpiece.
+                    </li>
+                    <li>
+                      <strong>Collapsible Memory Resilience:</strong> Unlike rigid wire or wood baskets that crack during moves, coiled jute can flex, collapse for compact transport, and immediately regain its cylindrical symmetry with gentle steaming.
+                    </li>
+                  </ul>
+                </section>
+
+                {/* Section 3: Commercial Classifications */}
+                <section id="structural-styles" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    3. Commercial Classifications & Structural Styles of Jute Baskets
+                  </h2>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    Golden Fiber Crafts Limited manufactures four primary export categories of jute baskets engineered for international wholesale catalog programs:
+                  </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                    <div className="p-4 rounded-xl border border-stone-200 bg-white shadow-2xs">
+                      <div className="flex items-center gap-2 text-amber-800 font-bold font-serif text-sm">
+                        <Package className="w-4 h-4" />
+                        <h4>1. Coiled Rope Zig-Zag Storage Baskets</h4>
+                      </div>
+                      <p className="text-xs text-stone-600 mt-2 leading-relaxed">
+                        Precision-sewn from 8mm–12mm braided jute cord using industrial lock-stitch zig-zag machines. Available in round, oval, and rectangular profiles with integrated cord handles or genuine leather tab handles.
+                      </p>
+                    </div>
+
+                    <div className="p-4 rounded-xl border border-stone-200 bg-white shadow-2xs">
+                      <div className="flex items-center gap-2 text-amber-800 font-bold font-serif text-sm">
+                        <Package className="w-4 h-4" />
+                        <h4>2. Tall Laundry Hampers & Toy Chests</h4>
+                      </div>
+                      <p className="text-xs text-stone-600 mt-2 leading-relaxed">
+                        High-capacity upright cylindrical hampers (heights 45–60 cm) equipped with matching fitted lids, top loop knobs, and double-riveted leather shoulder straps for easy laundry transport.
+                      </p>
+                    </div>
+
+                    <div className="p-4 rounded-xl border border-stone-200 bg-white shadow-2xs">
+                      <div className="flex items-center gap-2 text-amber-800 font-bold font-serif text-sm">
+                        <Package className="w-4 h-4" />
+                        <h4>3. Modular Shelf Storage Cube Bins</h4>
+                      </div>
+                      <p className="text-xs text-stone-600 mt-2 leading-relaxed">
+                        Dimensionally standardized to seamlessly slide into popular 13" x 13" (33x33x33 cm) IKEA Kallax or Target modular bookcase cubbies, featuring slotted front finger-pull handles.
+                      </p>
+                    </div>
+
+                    <div className="p-4 rounded-xl border border-stone-200 bg-white shadow-2xs">
+                      <div className="flex items-center gap-2 text-amber-800 font-bold font-serif text-sm">
+                        <Package className="w-4 h-4" />
+                        <h4>4. Two-Tone Dipped Planter Baskets</h4>
+                      </div>
+                      <p className="text-xs text-stone-600 mt-2 leading-relaxed">
+                        Artisan decorative plant pot covers featuring dipped AZO-free reactive dyed bases (charcoal black, olive green, terracotta) and removable waterproof interior PE liners protecting floor surfaces.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section 4: Manufacturing Process */}
+                <section id="manufacturing-process" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    4. The Complete Manufacturing Process: From Field to Master Carton
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Direct Answer:</strong>
+                    Producing export-grade coiled jute baskets requires seven tightly synchronized manufacturing phases: (1) raw Tosha fiber hackling and grading, (2) multi-strand core cord twisting and braiding, (3) continuous spiral base coiling, (4) precision vertical wall shaping with industrial zig-zag lock-stitching, (5) handle riveting and rim reinforcement, (6) 48-hour hot-air chamber dehumidification (moisture &lt;10%–12%), and (7) nested set assembly and master carton packing.
+                  </div>
+
+                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs bg-stone-50 flex flex-col items-center">
+                    <img
+                      src="/images/blog/bangladeshi-artisan-stitching-coiled-jute-basket.jpg"
+                      alt="Bangladeshi artisan stitching a coiled natural jute basket using an industrial heavy-duty zig-zag sewing machine"
+                      className="w-full h-auto max-h-[560px] object-contain mx-auto block"
+                    />
+                    <figcaption className="w-full p-3 text-xs text-stone-500 bg-stone-50 border-t border-stone-100 flex items-center justify-between">
+                      <span>Artisan at Golden Fiber Crafts Limited shaping and joining braided jute rope with high-tension zig-zag lock-stitching.</span>
+                      <span className="font-mono text-[11px] text-amber-700 font-semibold">COILING & STITCHING LINE</span>
+                    </figcaption>
+                  </figure>
+
+                  <div className="space-y-3 mt-4 text-xs sm:text-sm text-stone-700">
+                    <div className="p-3.5 bg-white rounded-lg border border-stone-200 flex gap-3">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-900 font-bold flex items-center justify-center shrink-0 text-xs">1</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif">Fiber Grading & Core Braiding</strong>
+                        Selected golden Tosha fibers are hackled and machine-twisted into uniform 8mm, 10mm, or 12mm braided ropes with consistent core density.
+                      </div>
+                    </div>
+
+                    <div className="p-3.5 bg-white rounded-lg border border-stone-200 flex gap-3">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-900 font-bold flex items-center justify-center shrink-0 text-xs">2</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif">Precision Zig-Zag Lock-Stitching</strong>
+                        Artisans hand-guide the coiled rope on industrial flatbed machines, interlocking adjacent coils with heavy-duty bonded thread to prevent seam separation.
+                      </div>
+                    </div>
+
+                    <div className="p-3.5 bg-white rounded-lg border border-stone-200 flex gap-3">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-900 font-bold flex items-center justify-center shrink-0 text-xs">3</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif">Wall Curvature & Symmetry Shaping</strong>
+                        The basket wall angle is formed dynamically under experienced artisan hands, ensuring identical diameters and seamless nesting compatibility.
+                      </div>
+                    </div>
+
+                    <div className="p-3.5 bg-white rounded-lg border border-stone-200 flex gap-3">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-900 font-bold flex items-center justify-center shrink-0 text-xs">4</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif">Handle Installation & Hardware Fastening</strong>
+                        Genuine top-grain leather straps or cotton cord loops are affixed with heavy-duty solid brass rivets tested to exceed 20 kgf pull tension.
+                      </div>
+                    </div>
+
+                    <div className="p-3.5 bg-white rounded-lg border border-stone-200 flex gap-3">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-900 font-bold flex items-center justify-center shrink-0 text-xs">5</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif">Hot-Air Dehumidification Chamber</strong>
+                        Finished baskets undergo continuous drying in climate-controlled rooms at 45°C–50°C until moisture stabilizes strictly below 10%–12%.
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section 5: OEM Customization */}
+                <section id="oem-customization" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    5. OEM / ODM Customization Options for Private-Label Brands
+                  </h2>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    As an integrated direct factory, Golden Fiber Crafts Limited supports complete bespoke product development for retail chains and catalog brands:
+                  </p>
+
+                  <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-stone-700">
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Nesting Set Configurations:</strong> Sets of 2, 3, 4, or 5 progressively sized baskets engineered to nest completely flush for zero wasted freight volume.</span>
+                    </div>
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Pantone Yarn Dyeing:</strong> AZO-free reactive dyed accent bands or full-body dyeing matched to buyer Pantone FHI color standards.</span>
+                    </div>
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Custom Leather & Hardware:</strong> Vegetable-tanned leather handles, burnished solid brass hardware, antique copper rivets, and metal eyelets.</span>
+                    </div>
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Private Label Branding:</strong> Blind debossed leather logo patches, woven organic cotton brand labels, custom hangtags, and GS1 barcode labeling.</span>
+                    </div>
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Linings & Protective Backing:</strong> Removable and washable organic cotton canvas liners, screen-printed interior patterns, or waterproof plant liners.</span>
+                    </div>
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Retail Packaging Engineering:</strong> Color belly-band wraps, custom master cartons with drop-test certification, and ISTA-3A e-commerce packaging.</span>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section 6: Quality Control */}
+                <section id="quality-control" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    6. Quality Control & Defect Prevention: The AQL 2.5 Standard
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Direct Answer:</strong>
+                    We enforce strict AQL 2.5 General Inspection Level II standards across every production batch. Testing protocols include pin-probe moisture readings strictly under 10%–12%, 100% conveyor metal/broken needle scanning, handle pull-force mechanical stress testing exceeding 20–25 kgf, and dimensional nesting tolerance checks before carton sealing.
+                  </div>
+
+                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs bg-stone-50 flex flex-col items-center">
+                    <img
+                      src="/images/blog/jute-basket-quality-control-moisture-inspection.jpg"
+                      alt="Quality control inspector testing moisture percentage of coiled jute basket using digital electrical resistance pin meter"
+                      className="w-full h-auto max-h-[560px] object-contain mx-auto block"
+                    />
+                    <figcaption className="w-full p-3 text-xs text-stone-500 bg-stone-50 border-t border-stone-100 flex items-center justify-between">
+                      <span>Digital moisture probe inspection: every production lot is measured to ensure fiber moisture is strictly under 12% before master carton packing.</span>
+                      <span className="font-mono text-[11px] text-amber-700 font-semibold">QA MOISTURE AUDIT</span>
+                    </figcaption>
+                  </figure>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs mt-3">
+                    <div className="p-3.5 bg-stone-100 rounded-lg">
+                      <span className="font-bold text-stone-900 block mb-1">1. Moisture &lt;10%–12%</span>
+                      <span>Calibrated resistance meters eliminate any risk of mold or mildew during 30–45 days of ocean container shipping.</span>
+                    </div>
+                    <div className="p-3.5 bg-stone-100 rounded-lg">
+                      <span className="font-bold text-stone-900 block mb-1">2. 100% Needle Detection</span>
+                      <span>Tunnel metal detectors scan every stitched basket to guarantee zero broken sewing machine needles remain in the product.</span>
+                    </div>
+                    <div className="p-3.5 bg-stone-100 rounded-lg">
+                      <span className="font-bold text-stone-900 block mb-1">3. Handle Pull Stress &gt;20 kgf</span>
+                      <span>Handle rivets and stitch joints are tested on mechanical tension dynamometers to ensure heavy real-world durability.</span>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section 7: Packaging Logistics & The Power of Nesting */}
+                <section id="packaging-logistics" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    7. Packaging Logistics & Freight Optimization: The Power of Nesting
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Logistics Breakthrough:</strong>
+                    Because ocean freight is billed on volumetric cubic meters (CBM), nesting baskets in sets of 3 (Small inside Medium inside Large) reduces ocean shipping volume by up to 65%. A 40ft High Cube container carries over 4,500 Sets of 3 (13,500+ individual baskets), lowering ocean freight cost per basket to as little as $0.18–$0.25.
+                  </div>
+
+                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs bg-stone-50 flex flex-col items-center">
+                    <img
+                      src="/images/blog/nested-set-of-3-jute-storage-baskets-wholesale.jpg"
+                      alt="Set of three nesting handcrafted coiled jute storage baskets with leather handles packed together for export container loading"
+                      className="w-full h-auto max-h-[560px] object-contain mx-auto block"
+                    />
+                    <figcaption className="w-full p-3 text-xs text-stone-500 bg-stone-50 border-t border-stone-100 flex items-center justify-between">
+                      <span>Export-grade nesting sets: Small, Medium, and Large baskets engineered to nest completely flush for optimal container displacement.</span>
+                      <span className="font-mono text-[11px] text-amber-700 font-semibold">NESTED EXPORT SET (S/3)</span>
+                    </figcaption>
+                  </figure>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    Our packaging protocol guarantees zero moisture intrusion, carton crush resistance, and seamless warehouse pallet handling:
+                  </p>
+
+                  <ul className="mt-2 space-y-2 text-xs sm:text-sm text-stone-700 list-disc pl-5">
+                    <li><strong>5-Ply Heavy-Duty Master Cartons:</strong> Double-wall corrugated export boxes with Edge Crush Test (ECT) rating of 44 lbs/in.</li>
+                    <li><strong>Polyethylene Moisture Barrier Liners:</strong> Sealed interior polybags prevent humidity penetration during oceanic temperature swings.</li>
+                    <li><strong>High-Absorption Desiccant Packs:</strong> Silica gel and bentonite clay desiccant pouches inside every master carton maintain dry carton micro-climates.</li>
+                  </ul>
+                </section>
+
+                {/* Section 8: Why Source Baskets From Bangladesh */}
+                <section id="why-bangladesh" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    8. Why Source Jute Baskets Directly From Bangladesh?
+                  </h2>
+
+                  <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-stone-700">
+                    <div className="p-4 rounded-xl bg-white border border-stone-200">
+                      <span className="font-bold text-stone-900 block font-serif text-sm mb-1">Native Tosha Raw Material</span>
+                      <span>Zero foreign exchange currency risk or cross-border import duties on raw fiber. Bangladesh's alluvial delta soil produces the world's finest golden jute filaments.</span>
+                    </div>
+                    <div className="p-4 rounded-xl bg-white border border-stone-200">
+                      <span className="font-bold text-stone-900 block font-serif text-sm mb-1">Duty-Free Market Entry (GSP / EBA)</span>
+                      <span>Under the European Union's Everything But Arms (EBA) initiative and the UK DCTS, manufactured jute baskets enter Europe with 0% customs import duty.</span>
+                    </div>
+                    <div className="p-4 rounded-xl bg-white border border-stone-200">
+                      <span className="font-bold text-stone-900 block font-serif text-sm mb-1">Direct Factory Pricing</span>
+                      <span>By partnering directly with Golden Fiber Crafts Limited, international retail brands bypass overseas trading agents, cutting middleman markups by 20% to 35%.</span>
+                    </div>
+                    <div className="p-4 rounded-xl bg-white border border-stone-200">
+                      <span className="font-bold text-stone-900 block font-serif text-sm mb-1">Chattogram Seaport (BDCGP)</span>
+                      <span>Direct container feeder routes connect Chattogram Port to major global transshipment hubs (Singapore, Colombo), enabling smooth transit worldwide.</span>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section 9: Sustainability & Social Ethics */}
+                <section id="sustainable-ethics" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    9. Sustainable Manufacturing, Social Impact & Artisan Ethics
+                  </h2>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    At Golden Fiber Crafts Limited, sustainability encompasses both ecological stewardship and social empowerment. Over 85% of our basket coiling, stitching, and finishing artisans are rural Bangladeshi women. Through dignified, fair-wage employment, flexible community-based production hubs, and safe workshop conditions, we empower craftswomen to achieve financial independence and educate their families.
+                  </p>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-2">
+                    On the factory floor, 100% of rope cuttings and fiber trims are collected and redirected into organic paper recycling and felt padding pipelines, achieving zero landfill waste.
+                  </p>
+                </section>
+
+                {/* Section 10: Buyer Due Diligence */}
+                <section id="buyer-due-diligence" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    10. How to Choose a Reliable Jute Basket Manufacturer
+                  </h2>
+
+                  <div className="mt-4 p-5 bg-white rounded-xl border border-stone-200 shadow-2xs space-y-3 text-xs sm:text-sm">
+                    <div className="flex items-start gap-2.5 text-stone-800">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Verify Factory Ownership:</strong> Confirm physical production workshops and commercial export licenses in Bangladesh rather than trading intermediaries.</span>
+                    </div>
+                    <div className="flex items-start gap-2.5 text-stone-800">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Inspect Moisture Logs:</strong> Require written quality records verifying pin-probe moisture readings strictly under 10%–12% on finished carton lots.</span>
+                    </div>
+                    <div className="flex items-start gap-2.5 text-stone-800">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Validate Nesting Tolerances:</strong> Ensure sample sets nest completely flush without binding or warping outer basket circumferences.</span>
+                    </div>
+                    <div className="flex items-start gap-2.5 text-stone-800">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Check Handle Pull Strength:</strong> Request pull-test records verifying &gt;20 kgf tension resistance on leather handles and brass rivet anchors.</span>
+                    </div>
+                    <div className="flex items-start gap-2.5 text-stone-800">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Verify Chemical Safety & RSL:</strong> Demand declarations confirming AZO-free reactive dyes, lead-free metal rivets, and EU REACH compliance.</span>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section 11: Procurement Guide */}
+                <section id="procurement-guide" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    11. Step-by-Step International Procurement Guide (Inquiry to FOB)
+                  </h2>
+
+                  <div className="mt-4 grid grid-cols-1 sm:grid-cols-5 gap-3 text-xs">
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center mb-2">1</span>
+                      <strong className="text-stone-900 block font-serif text-sm">Spec & RFQ</strong>
+                      <span className="text-stone-500 mt-1 block leading-relaxed">Provide target nesting dimensions, rope thickness (8/10/12mm), handle material, and quantity.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center mb-2">2</span>
+                      <strong className="text-stone-900 block font-serif text-sm">Sample Prototyping</strong>
+                      <span className="text-stone-500 mt-1 block leading-relaxed">Physical pre-production nested sets crafted and dispatched in 7–10 days via DHL/FedEx.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center mb-2">3</span>
+                      <strong className="text-stone-900 block font-serif text-sm">PO & Contract</strong>
+                      <span className="text-stone-500 mt-1 block leading-relaxed">Proforma Invoice locked with 30% commercial deposit or Irrevocable L/C at Sight.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center mb-2">4</span>
+                      <strong className="text-stone-900 block font-serif text-sm">Bulk Production</strong>
+                      <span className="text-stone-500 mt-1 block leading-relaxed">30–40 days execution for 1x20ft FCL with ongoing in-line AQL 2.5 quality audits.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center mb-2">5</span>
+                      <strong className="text-stone-900 block font-serif text-sm">FOB Export</strong>
+                      <span className="text-stone-500 mt-1 block leading-relaxed">Container drayage to Chattogram Seaport, ISPM 15 fumigation, customs clearance, and B/L issuance.</span>
+                    </div>
+                  </div>
+                </section>
               </>
             )}
 
@@ -852,11 +1242,11 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                   { code: 'DJB-38', name: 'Striped Storage w/ Leather', img: '/products/djb_38_hd.jpg', desc: 'Genuine leather tab handles' }
                 ]).map((prod) => (
                   <div key={prod.code} className="bg-stone-50 rounded-xl p-3 border border-stone-200/80 flex flex-col justify-between group">
-                    <div className="aspect-square rounded-lg overflow-hidden bg-white mb-2.5">
+                    <div className="aspect-square rounded-lg overflow-hidden bg-white mb-2.5 flex items-center justify-center p-1.5">
                       <img
                         src={prod.img}
                         alt={prod.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+                        className="max-h-full max-w-full object-contain group-hover:scale-105 transition duration-300"
                         loading="lazy"
                         onError={(e) => {
                           (e.target as HTMLElement).style.display = 'none';
