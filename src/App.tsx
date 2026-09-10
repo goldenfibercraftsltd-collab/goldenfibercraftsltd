@@ -75,6 +75,8 @@ export const AppContent: React.FC = () => {
       document.title = formatPageTitle('Frequently Asked Questions');
     } else if (p === '/blog') {
       document.title = formatPageTitle('B2B Sourcing Blog & Guides');
+    } else if (p === '/jute-bag-manufacturer-bangladesh') {
+      document.title = formatPageTitle('Jute Bag Manufacturer in Bangladesh | Custom Wholesale & OEM Exporter');
     } else if (p === '/jute-basket-manufacturer-bangladesh') {
       document.title = formatPageTitle('Jute Basket Manufacturer in Bangladesh | Custom Wholesale & OEM Exporter');
     } else if (p === '/admin/login') {
@@ -194,6 +196,7 @@ export const AppContent: React.FC = () => {
           <Route path="/terms-conditions" element={<TermsPage />} />
           <Route path="/faq" element={<FaqPage />} />
           <Route path="/blog" element={<BlogPage onOpenQuoteModal={() => handleOpenQuoteModal()} />} />
+          <Route path="/jute-bag-manufacturer-bangladesh" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
           <Route path="/jute-basket-manufacturer-bangladesh" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
           <Route path="/:slug" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
         </Routes>

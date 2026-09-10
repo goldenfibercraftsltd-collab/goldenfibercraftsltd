@@ -19,7 +19,14 @@ const corePages = [
   { url: '/', priority: '1.0', changefreq: 'daily' },
   { url: '/products', priority: '0.9', changefreq: 'daily' },
   { url: '/blog', priority: '0.9', changefreq: 'weekly' },
-  { url: '/jute-basket-manufacturer-bangladesh', priority: '0.9', changefreq: 'weekly' },
+  { url: '/jute-bag-manufacturer-bangladesh', priority: '0.95', changefreq: 'weekly', images: [
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-jute-bag-manufacturer-bangladesh.jpg', title: 'Custom Jute Bag Manufacturer in Bangladesh Wholesale' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/bangladeshi-artisan-stitching-jute-bag.jpg', title: 'Bangladeshi Artisan Stitching Jute Bags' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/custom-jute-tote-bags-wholesale-display.jpg', title: 'Custom Jute Tote Bags Wholesale Display' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/raw-tosha-jute-fiber-inspection-bangladesh.jpg', title: 'Raw Tosha Jute Fiber Inspection Bangladesh' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/jute-bag-quality-control-moisture-inspection.jpg', title: 'Jute Bag Quality Control and Moisture Inspection' }
+  ]},
+  { url: '/jute-basket-manufacturer-bangladesh', priority: '0.90', changefreq: 'weekly' },
   { url: '/about', priority: '0.8', changefreq: 'weekly' },
   { url: '/materials', priority: '0.8', changefreq: 'weekly' },
   { url: '/infrastructure', priority: '0.8', changefreq: 'weekly' },
@@ -93,6 +100,14 @@ for (const p of corePages) {
   xml += `    <lastmod>${TODAY}</lastmod>\n`;
   xml += `    <changefreq>${p.changefreq}</changefreq>\n`;
   xml += `    <priority>${p.priority}</priority>\n`;
+  if (p.images && p.images.length > 0) {
+    for (const img of p.images) {
+      xml += `    <image:image>\n`;
+      xml += `      <image:loc>${escapeXml(img.loc)}</image:loc>\n`;
+      xml += `      <image:title>${escapeXml(img.title)}</image:title>\n`;
+      xml += `    </image:image>\n`;
+    }
+  }
   xml += `  </url>\n`;
 }
 
