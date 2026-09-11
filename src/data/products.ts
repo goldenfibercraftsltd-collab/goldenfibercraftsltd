@@ -6908,6 +6908,234 @@ export const PRODUCTS: ProductItem[] = [
     features: ['Tall Laundry Design', 'Built-in Handles', 'Breathable Natural Weave', 'Scandi Minimalist Look']
   },
   {
+    id: 'GFC-SB-014',
+    slug: 'lidded-rectangular-seagrass-laundry-hamper-gfc-sb-014',
+    code: 'GFC-SB-014',
+    name: 'Lidded Rectangular Seagrass Laundry Hamper',
+    category: 'seagrass',
+    categoryName: 'Seagrass',
+    categorySlug: 'seagrass',
+    subCategory: 'baskets',
+    image: '/products/gfc_sb_014.png',
+    galleryImages: [
+      '/products/gfc_sb_014.png',
+      '/products/gfc_sb_014.jpg'
+    ],
+    description: 'Handwoven tapered rectangular coastal seagrass laundry basket featuring a fitted lift-off lid with loop handle, removable cotton fabric liner, and dual-tone natural and charcoal base weave.',
+    longDescription: {
+      overview: 'The Lidded Rectangular Seagrass Laundry Hamper (Art No: GFC-SB-014) combines timeless Scandinavian organization with sustainable natural fiber craftsmanship. Engineered with an internal rigid frame, removable off-white cotton fabric lining, and a fitted lid, it provides an odor-resistant and aesthetic solution for laundry, linens, and closet storage.',
+      craftsmanship: 'Hand-plaited by skilled Bangladeshi artisans utilizing select coastal seagrass fibers. The lower section is accented with contrasting dyed charcoal horizontal bands, seamlessly joined to the natural golden upper weave.',
+      exportDetails: 'Individually bagged with silica gel desiccant packs, packed 2 sets per 5-ply export master carton. Pre-treated against moisture, mold, and humidity.',
+      careInstructions: 'Spot clean seagrass with a soft dry or slightly damp cloth. Remove cotton liner for machine washing. Keep in a dry, ventilated indoor room.'
+    },
+    unit: 'S/1',
+    cbmPerCarton: 0.082,
+    setPerCarton: 2,
+    nwPerCtn: 4.2,
+    gwPerCtn: 5.6,
+    material: '100% Coastal Seagrass, Cotton Fabric Liner',
+    color: 'Natural Seagrass & Charcoal Black Two-Tone',
+    specifications: [
+      { key: 'Item Code', value: 'GFC-SB-014' },
+      { key: 'Item Name', value: 'Lidded Rectangular Seagrass Laundry Hamper' },
+      { key: 'Specification', value: '42cm W x 32cm D x 58cm H' },
+      { key: 'Materials', value: '100% Coastal Seagrass, Cotton Liner' },
+      { key: 'MOQ', value: '200 Pcs' },
+      { key: 'Country of Origin', value: 'Bangladesh' }
+    ],
+    features: ['Fitted Hinged/Lift-Off Lid', 'Removable Washable Cotton Liner', 'Integrated Cutout Handles', 'Modern Two-Tone Colorblock Weave']
+  },
+  {
+    id: 'GFC-SB-016',
+    slug: 'vertical-stripe-cylindrical-seagrass-storage-basket-gfc-sb-016',
+    code: 'GFC-SB-016',
+    name: 'Vertical Stripe Cylindrical Seagrass Storage Basket',
+    category: 'seagrass',
+    categoryName: 'Seagrass',
+    categorySlug: 'seagrass',
+    subCategory: 'baskets',
+    image: '/products/gfc_sb_016.png',
+    galleryImages: [
+      '/products/gfc_sb_016.png',
+      '/products/gfc_sb_016.jpg'
+    ],
+    description: 'Cylindrical handwoven seagrass storage basket designed with alternating vertical stripes of natural golden seagrass and crisp white cord, complete with dual upright wrapped cotton loop handles.',
+    longDescription: {
+      overview: 'The Vertical Stripe Cylindrical Seagrass Storage Basket (Art No: GFC-SB-016) brings fresh coastal warmth into contemporary living areas. Ideal for storing throw blankets, nursery plush toys, rolled towels, or as an elevated cover for indoor botanical planters.',
+      craftsmanship: 'Coiled and hand-stitched by artisan weavers using thick golden-green coastal seagrass and pure white macrame cord, resulting in a structured vertical ribbed texture with heavy-duty durability.',
+      exportDetails: 'Master carton packing of 4 pieces nested. Meets international export standards for fumigation, humidity levels (<12%), and eco-packaging.',
+      careInstructions: 'Dust regularly with a dry feather duster or soft brush. Wipe stains promptly with a damp cloth and allow to air dry completely.'
+    },
+    unit: 'S/1',
+    cbmPerCarton: 0.058,
+    setPerCarton: 4,
+    nwPerCtn: 3.6,
+    gwPerCtn: 4.8,
+    material: 'Natural Coastal Seagrass & White Cotton Cord',
+    color: 'Natural Seagrass & Crisp White Vertical Stripes',
+    specifications: [
+      { key: 'Item Code', value: 'GFC-SB-016' },
+      { key: 'Item Name', value: 'Vertical Stripe Cylindrical Seagrass Storage Basket' },
+      { key: 'Specification', value: 'Diameter 32cm x Height 34cm' },
+      { key: 'Materials', value: 'Natural Seagrass & Cotton Cord' },
+      { key: 'MOQ', value: '300 Pcs' },
+      { key: 'Country of Origin', value: 'Bangladesh' }
+    ],
+    features: ['Durable Vertical Ribbed Texture', 'Upright White Wrapped Loop Handles', 'Reinforced Braided Top Rim', 'Lightweight & High Tensile Strength']
+  },
+  {
+    id: 'GFC-SB-018',
+    slug: 'emerald-green-accent-round-seagrass-belly-basket-gfc-sb-018',
+    code: 'GFC-SB-018',
+    name: 'Emerald Green Accent Round Seagrass Belly Basket',
+    category: 'seagrass',
+    categoryName: 'Seagrass',
+    categorySlug: 'seagrass',
+    subCategory: 'baskets',
+    image: '/products/gfc_sb_018.png',
+    galleryImages: [
+      '/products/gfc_sb_018.png',
+      '/products/gfc_sb_018.jpg'
+    ],
+    description: 'Charming bulbous round seagrass basket featuring a high overhead curved carrying handle, woven with spiraled vibrant emerald green dyed cord accents over natural seagrass fiber.',
+    longDescription: {
+      overview: 'The Emerald Green Accent Round Seagrass Belly Basket (Art No: GFC-SB-018) is an artisanal statement piece designed for farm-to-table gathering, holiday eco gift hampers, floral arrangements, and rustic kitchen display.',
+      craftsmanship: 'Hand-coiled with resilient Bangladeshi coastal seagrass rope, carefully spiral-wrapped with AZO-free emerald green dyed cotton yarn. The sturdy overhead arch handle is reinforced with an internal core for dependable carrying.',
+      exportDetails: 'Shipped nested 6 units per master carton with protective tissue and desiccants. Global wholesale ready for North America, Europe, and Australia.',
+      careInstructions: 'Dust with a soft brush. Keep indoors away from continuous standing moisture or saturated rainfall.'
+    },
+    unit: 'S/1',
+    cbmPerCarton: 0.062,
+    setPerCarton: 6,
+    nwPerCtn: 3.9,
+    gwPerCtn: 5.1,
+    material: '100% Coastal Seagrass & Dyed Emerald Cotton Cord',
+    color: 'Vibrant Emerald Green & Natural Golden Seagrass',
+    specifications: [
+      { key: 'Item Code', value: 'GFC-SB-018' },
+      { key: 'Item Name', value: 'Emerald Green Accent Round Seagrass Belly Basket' },
+      { key: 'Specification', value: 'Diameter 28cm x Height 22cm (Handle 35cm Total Height)' },
+      { key: 'Materials', value: 'Coastal Seagrass & Cotton Cord' },
+      { key: 'MOQ', value: '300 Pcs' },
+      { key: 'Country of Origin', value: 'Bangladesh' }
+    ],
+    features: ['Sturdy Arched Overhead Handle', 'Charming Bulbous Belly Silhouette', 'Vibrant AZO-Free Emerald Green Dye', 'Eco-Friendly Multipurpose Tote Basket']
+  },
+  {
+    id: 'GFC-SB-019',
+    slug: 'rectangular-seagrass-magazine-basket-with-wooden-handle-gfc-sb-019',
+    code: 'GFC-SB-019',
+    name: 'Rectangular Seagrass Magazine Basket with Wooden Handle',
+    category: 'seagrass',
+    categoryName: 'Seagrass',
+    categorySlug: 'seagrass',
+    subCategory: 'baskets',
+    image: '/products/gfc_sb_019.png',
+    galleryImages: [
+      '/products/gfc_sb_019.png',
+      '/products/gfc_sb_019.jpg'
+    ],
+    description: 'Rectangular handwoven coastal seagrass organizer basket featuring scooped high side walls and a smooth solid natural wooden dowel bar handle fixed across the top for easy portability.',
+    longDescription: {
+      overview: 'The Rectangular Seagrass Magazine Basket with Wooden Handle (Art No: GFC-SB-019) is a functional hearth and living room storage caddy. Its ergonomic scooped profile and solid hardwood crossbar handle make it effortlessly portable for magazines, journals, fireside wood, or guest towels.',
+      craftsmanship: 'Handwoven around a rust-resistant steel frame with thick twisted seagrass ropes, finished with a smooth polished teak/acacia wooden dowel crossbar fastened securely to the woven side peaks.',
+      exportDetails: 'Packed 4 units per 5-ply export master carton with protective corner padding and moisture absorbers.',
+      careInstructions: 'Wipe natural seagrass with a dry cloth. Clean wood handle with a lightly damp microfiber cloth.'
+    },
+    unit: 'S/1',
+    cbmPerCarton: 0.071,
+    setPerCarton: 4,
+    nwPerCtn: 4.8,
+    gwPerCtn: 6.2,
+    material: 'Natural Coastal Seagrass & Solid Hardwood Dowel',
+    color: 'Natural Earthy Golden Seagrass',
+    specifications: [
+      { key: 'Item Code', value: 'GFC-SB-019' },
+      { key: 'Item Name', value: 'Rectangular Seagrass Magazine Basket with Wooden Handle' },
+      { key: 'Specification', value: '40cm L x 25cm W x 32cm H' },
+      { key: 'Materials', value: 'Natural Seagrass, Steel Wire Frame, Hardwood' },
+      { key: 'MOQ', value: '250 Pcs' },
+      { key: 'Country of Origin', value: 'Bangladesh' }
+    ],
+    features: ['Solid Polished Wooden Dowel Handle', 'High Scooped Ergonomic Side Profile', 'Reinforced Internal Metal Structure', 'Ideal for Fireplace Hearth, Reading Nook & Bathroom']
+  },
+  {
+    id: 'GFC-SB-020',
+    slug: 'round-seagrass-shallow-bowl-baskets-with-navy-rim-gfc-sb-020',
+    code: 'GFC-SB-020',
+    name: 'Round Seagrass Shallow Bowl Baskets with Navy Rim (Set of 3)',
+    category: 'seagrass',
+    categoryName: 'Seagrass',
+    categorySlug: 'seagrass',
+    subCategory: 'baskets',
+    image: '/products/gfc_sb_020.png',
+    galleryImages: [
+      '/products/gfc_sb_020.png',
+      '/products/gfc_sb_020.jpg'
+    ],
+    description: 'Nesting set of three round shallow handwoven seagrass bowl trays, highlighted with contrasting dark navy blue cord-wrapped rims and dual curved ear handles on each size.',
+    longDescription: {
+      overview: 'The Round Seagrass Shallow Bowl Baskets with Navy Rim (Art No: GFC-SB-020) come as a versatile set of 3 nesting bowls. Designed for coffee table styling, fruit displays, keys and jewelry catching, or serving dry bread and breadsticks.',
+      craftsmanship: 'Meticulously handwoven by artisan women using tightly coiled natural seagrass cords. The rims and handles are securely bound with dark navy blue cord, providing striking color contrast and superior edge resilience.',
+      exportDetails: 'Shipped fully nested in sets of 3, 4 sets (12 individual baskets) per export master carton.',
+      careInstructions: 'Spot clean with a soft damp cloth. Not intended for direct wet food contact without a napkin or liner.'
+    },
+    unit: 'S/3',
+    cbmPerCarton: 0.054,
+    setPerCarton: 4,
+    nwPerCtn: 3.2,
+    gwPerCtn: 4.5,
+    material: 'Natural Coastal Seagrass & Navy Blue Cord',
+    color: 'Natural Seagrass & Dark Navy Blue Rim Accent',
+    specifications: [
+      { key: 'Item Code', value: 'GFC-SB-020' },
+      { key: 'Item Name', value: 'Round Seagrass Shallow Bowl Baskets with Navy Rim' },
+      { key: 'Specification', value: 'L: Dia 34x15cm | M: Dia 29x13cm | S: Dia 24x11cm' },
+      { key: 'Materials', value: 'Natural Seagrass & Dyed Navy Cord' },
+      { key: 'MOQ', value: '200 Sets' },
+      { key: 'Country of Origin', value: 'Bangladesh' }
+    ],
+    features: ['Set of 3 Nesting Sizes (S/M/L)', 'Dark Navy Wrapped Contrast Rim', 'Dual Upright Stitched Ear Handles', 'Space-Saving Tabletop Organizer & Serving Tray']
+  },
+  {
+    id: 'GFC-SB-021',
+    slug: 'rustic-ruffled-rim-seagrass-nesting-bowl-baskets-gfc-sb-021',
+    code: 'GFC-SB-021',
+    name: 'Rustic Ruffled Rim Seagrass Nesting Bowl Baskets (Set of 3)',
+    category: 'seagrass',
+    categoryName: 'Seagrass',
+    categorySlug: 'seagrass',
+    subCategory: 'baskets',
+    image: '/products/gfc_sb_021.png',
+    galleryImages: [
+      '/products/gfc_sb_021.png',
+      '/products/gfc_sb_021.jpg'
+    ],
+    description: 'Artisanal nesting set of three round open seagrass bowl planter baskets, handcrafted with thick rustic twisted coastal seagrass coils and distinctive ruffled flared collar rims.',
+    longDescription: {
+      overview: 'The Rustic Ruffled Rim Seagrass Nesting Bowl Baskets (Art No: GFC-SB-021) showcase the raw, organic beauty of unbleached coastal seagrass. Featuring sculptural wavy ruffled rims, these open bowls serve as bohemian centerpieces, wall basket art, or stylish planters for indoor greenery.',
+      craftsmanship: 'Expertly hand-coiled with heavy-gauge sun-dried seagrass rope. Artisans hand-manipulate the upper perimeter into an undulating fluted ripple border, creating a tactile artisan signature.',
+      exportDetails: 'Packed 3 pieces nested per set, 3 sets per export master carton with protective corrugated interleaving.',
+      careInstructions: 'Dust with a brush or vacuum on gentle suction. Suitable for dry indoor living environments.'
+    },
+    unit: 'S/3',
+    cbmPerCarton: 0.068,
+    setPerCarton: 3,
+    nwPerCtn: 3.5,
+    gwPerCtn: 4.9,
+    material: '100% Heavy-Twisted Natural Coastal Seagrass',
+    color: 'Raw Golden-Brown Coastal Seagrass',
+    specifications: [
+      { key: 'Item Code', value: 'GFC-SB-021' },
+      { key: 'Item Name', value: 'Rustic Ruffled Rim Seagrass Nesting Bowl Baskets' },
+      { key: 'Specification', value: 'L: Dia 36x18cm | M: Dia 30x15cm | S: Dia 24x12cm' },
+      { key: 'Materials', value: '100% Coastal Seagrass' },
+      { key: 'MOQ', value: '200 Sets' },
+      { key: 'Country of Origin', value: 'Bangladesh' }
+    ],
+    features: ['Set of 3 Graduated Nesting Sizes', 'Sculptural Fluted Ruffled Edge Collar', 'Heavy-Duty Natural Rope Coil', 'Boho Table Centerpiece & Wall Decor Hanging']
+  },
+  {
     id: 'GFC-SP-0029',
     slug: 'seagrass-planters-gfc-sp-0029',
     code: 'GFC-SP-0029',
