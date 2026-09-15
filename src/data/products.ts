@@ -10211,4 +10211,544 @@ export const PRODUCTS: ProductItem[] = [
     "Hand-Knotted Fringe"
   ]
 },
+{
+  "id": "GFC-SPM-002",
+  "slug": "classic-spiral-braided-round-seagrass-placemat-gfc-spm-002",
+  "code": "GFC-SPM-002",
+  "name": "Classic Spiral Braided Round Seagrass Placemat",
+  "category": "seagrass",
+  "categoryName": "Seagrass",
+  "categorySlug": "seagrass",
+  "subCategory": "placemats",
+  "image": "/products/gfc_spm_002.jpg",
+  "galleryImages": [
+    "/products/gfc_spm_002.jpg"
+  ],
+  "description": "Handcrafted round dining placemat tightly coiled from 100% natural sun-cured coastal seagrass fiber in a continuous spiral weave for heat insulation and organic tabletop warmth.",
+  "longDescription": {
+    "overview": "Handcrafted round dining placemat tightly coiled from 100% natural sun-cured coastal seagrass fiber in a continuous spiral weave for heat insulation and organic tabletop warmth.",
+    "craftsmanship": "Artisan coiled and cross-stitched by skilled women weavers in coastal Bangladesh using sustainably harvested wild seagrass.",
+    "exportDetails": "Stacked and packed in export-grade cartons with moisture barrier desiccant packs. Custom barcode and hangtag packaging available.",
+    "careInstructions": "Wipe clean with a soft dry or slightly damp cloth. Air dry thoroughly before storing."
+  },
+  "unit": "S/1",
+  "cbmPerCarton": 0.042,
+  "setPerCarton": 48,
+  "nwPerCtn": 7.2,
+  "gwPerCtn": 8.5,
+  "material": "100% Natural Coastal Seagrass",
+  "color": "Natural Golden Tan Seagrass",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-SPM-002"
+    },
+    {
+      "key": "Item Name",
+      "value": "Classic Spiral Braided Round Seagrass Placemat"
+    },
+    {
+      "key": "Specification",
+      "value": "Diameter 38cm (15 inch)"
+    },
+    {
+      "key": "Materials",
+      "value": "100% Natural Coastal Seagrass"
+    },
+    {
+      "key": "MOQ",
+      "value": "300 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "100% Natural Seagrass",
+    "Heat Resistant",
+    "Spiral Braided Weave",
+    "Eco-Friendly Tableware"
+  ]
+},
+{
+  "id": "GFC-SPM-003",
+  "slug": "ribbed-oval-braided-seagrass-table-placemat-gfc-spm-003",
+  "code": "GFC-SPM-003",
+  "name": "Ribbed Oval Braided Seagrass Table Placemat",
+  "category": "seagrass",
+  "categoryName": "Seagrass",
+  "categorySlug": "seagrass",
+  "subCategory": "placemats",
+  "image": "/products/gfc_spm_003.jpg",
+  "galleryImages": [
+    "/products/gfc_spm_003.jpg"
+  ],
+  "description": "Artisanal oval dining table placemat woven with heavy natural seagrass cords featuring horizontal ribbed weave center and smooth braided perimeter trim.",
+  "longDescription": {
+    "overview": "Artisanal oval dining table placemat woven with heavy natural seagrass cords featuring horizontal ribbed weave center and smooth braided perimeter trim.",
+    "craftsmanship": "Densely woven with heavy dual-ply seagrass cordage in an elongated oval geometry designed for complete place setting layouts.",
+    "exportDetails": "Packed flat in 5-ply corrugated master export cartons of 48 pieces.",
+    "careInstructions": "Wipe with a soft damp cloth and allow to air dry completely."
+  },
+  "unit": "S/1",
+  "cbmPerCarton": 0.045,
+  "setPerCarton": 48,
+  "nwPerCtn": 7.5,
+  "gwPerCtn": 8.8,
+  "material": "100% Natural Coastal Seagrass",
+  "color": "Natural Golden Seagrass",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-SPM-003"
+    },
+    {
+      "key": "Item Name",
+      "value": "Ribbed Oval Braided Seagrass Table Placemat"
+    },
+    {
+      "key": "Specification",
+      "value": "45cm x 30cm (18 x 12 inch)"
+    },
+    {
+      "key": "Materials",
+      "value": "100% Natural Coastal Seagrass"
+    },
+    {
+      "key": "MOQ",
+      "value": "300 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Heavy Ribbed Weave",
+    "Elongated Oval Shape",
+    "100% Biodegradable",
+    "Farmhouse Rustic Aesthetic"
+  ]
+},
+{
+  "id": "GFC-SPM-004",
+  "slug": "basketweave-rectangular-seagrass-dining-placemat-gfc-spm-004",
+  "code": "GFC-SPM-004",
+  "name": "Basketweave Rectangular Seagrass Dining Placemat",
+  "category": "seagrass",
+  "categoryName": "Seagrass",
+  "categorySlug": "seagrass",
+  "subCategory": "placemats",
+  "image": "/products/gfc_spm_004.jpg",
+  "galleryImages": [
+    "/products/gfc_spm_004.jpg"
+  ],
+  "description": "Dense rectangular woven table placemat handcrafted from natural seagrass rope and kaisa fiber in an interlocking checkerboard grid with finished braided outer hem.",
+  "longDescription": {
+    "overview": "Dense rectangular woven table placemat handcrafted from natural seagrass rope and kaisa fiber in an interlocking checkerboard grid with finished braided outer hem.",
+    "craftsmanship": "Interlocking grid handwoven technique creating substantial tabletop heft and superior thermal plate protection.",
+    "exportDetails": "Packed 48 pieces per export master carton with polybag inner wrap.",
+    "careInstructions": "Spot clean or shake off crumbs. Dry thoroughly away from direct heat."
+  },
+  "unit": "S/1",
+  "cbmPerCarton": 0.046,
+  "setPerCarton": 48,
+  "nwPerCtn": 7.8,
+  "gwPerCtn": 9.2,
+  "material": "Natural Seagrass & Kaisa Grass",
+  "color": "Natural Golden Grass",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-SPM-004"
+    },
+    {
+      "key": "Item Name",
+      "value": "Basketweave Rectangular Seagrass Dining Placemat"
+    },
+    {
+      "key": "Specification",
+      "value": "45cm x 32cm (18 x 12.5 inch)"
+    },
+    {
+      "key": "Materials",
+      "value": "Natural Seagrass & Kaisa Grass"
+    },
+    {
+      "key": "MOQ",
+      "value": "300 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Checkerboard Grid Weave",
+    "Heavy Duty Construction",
+    "Natural Heat Shield",
+    "Export Certified"
+  ]
+},
+{
+  "id": "GFC-SPM-005",
+  "slug": "openwork-radial-lattice-round-seagrass-placemat-gfc-spm-005",
+  "code": "GFC-SPM-005",
+  "name": "Openwork Radial Lattice Round Seagrass Placemat",
+  "category": "seagrass",
+  "categoryName": "Seagrass",
+  "categorySlug": "seagrass",
+  "subCategory": "placemats",
+  "image": "/products/gfc_spm_005.jpg",
+  "galleryImages": [
+    "/products/gfc_spm_005.jpg"
+  ],
+  "description": "Decorative circular seagrass charger placemat featuring a solid concentric woven medallion center surrounded by an airy radiating openwork lace wheel border.",
+  "longDescription": {
+    "overview": "Decorative circular seagrass charger placemat featuring a solid concentric woven medallion center surrounded by an airy radiating openwork lace wheel border.",
+    "craftsmanship": "Expertly hand-knotted open lattice spokes radiating outward from a dense spiral center core.",
+    "exportDetails": "Flat carton packaging with moisture control protection.",
+    "careInstructions": "Dust gently with a dry brush or wipe with slightly damp cloth."
+  },
+  "unit": "S/1",
+  "cbmPerCarton": 0.042,
+  "setPerCarton": 48,
+  "nwPerCtn": 6.8,
+  "gwPerCtn": 8.2,
+  "material": "100% Natural Coastal Seagrass",
+  "color": "Natural Sun-Cured Seagrass",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-SPM-005"
+    },
+    {
+      "key": "Item Name",
+      "value": "Openwork Radial Lattice Round Seagrass Placemat"
+    },
+    {
+      "key": "Specification",
+      "value": "Diameter 38cm (15 inch)"
+    },
+    {
+      "key": "Materials",
+      "value": "100% Natural Coastal Seagrass"
+    },
+    {
+      "key": "MOQ",
+      "value": "300 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Radial Lace Lattice",
+    "Boho Tableware",
+    "Coastal Dining Elegance",
+    "Handcrafted Artisanal"
+  ]
+},
+{
+  "id": "GFC-SPM-006",
+  "slug": "black-accent-ring-round-seagrass-placemat-gfc-spm-006",
+  "code": "GFC-SPM-006",
+  "name": "Black Accent Ring Round Seagrass Placemat",
+  "category": "seagrass",
+  "categoryName": "Seagrass",
+  "categorySlug": "seagrass",
+  "subCategory": "placemats",
+  "image": "/products/gfc_spm_006.jpg",
+  "galleryImages": [
+    "/products/gfc_spm_006.jpg"
+  ],
+  "description": "Handwoven round seagrass dining charger placemat detailed with a dyed charcoal black contrasting inlay circle and open-spoke lattice outer perimeter.",
+  "longDescription": {
+    "overview": "Handwoven round seagrass dining charger placemat detailed with a dyed charcoal black contrasting inlay circle and open-spoke lattice outer perimeter.",
+    "craftsmanship": "Combination of natural coastal seagrass fiber with azo-free dyed black accent cords in an openwork circular pattern.",
+    "exportDetails": "Export master carton of 48 pieces.",
+    "careInstructions": "Wipe with a soft dry cloth. Keep dry."
+  },
+  "unit": "S/1",
+  "cbmPerCarton": 0.042,
+  "setPerCarton": 48,
+  "nwPerCtn": 7,
+  "gwPerCtn": 8.4,
+  "material": "Natural Coastal Seagrass & Eco Dyed Fiber",
+  "color": "Natural Golden Tan with Black Accent",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-SPM-006"
+    },
+    {
+      "key": "Item Name",
+      "value": "Black Accent Ring Round Seagrass Placemat"
+    },
+    {
+      "key": "Specification",
+      "value": "Diameter 38cm (15 inch)"
+    },
+    {
+      "key": "Materials",
+      "value": "Natural Coastal Seagrass & Eco Dyed Fiber"
+    },
+    {
+      "key": "MOQ",
+      "value": "300 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Contrasting Black Band",
+    "Openwork Radiating Spokes",
+    "Natural Eco-Friendly",
+    "Modern Bohemian"
+  ]
+},
+{
+  "id": "GFC-SPM-007",
+  "slug": "oval-seagrass-placemat-with-navy-fabric-trim-gfc-spm-007",
+  "code": "GFC-SPM-007",
+  "name": "Oval Seagrass Placemat with Navy Fabric Trim",
+  "category": "seagrass",
+  "categoryName": "Seagrass",
+  "categorySlug": "seagrass",
+  "subCategory": "placemats",
+  "image": "/products/gfc_spm_007.jpg",
+  "galleryImages": [
+    "/products/gfc_spm_007.jpg"
+  ],
+  "description": "Tailored oval handwoven seagrass table placemat framed with a premium navy blue cotton twill stitched fabric edge binding for coastal dining decor.",
+  "longDescription": {
+    "overview": "Tailored oval handwoven seagrass table placemat framed with a premium navy blue cotton twill stitched fabric edge binding for coastal dining decor.",
+    "craftsmanship": "Natural woven seagrass core precision-hemmed with durable navy dyed cotton twill border ribbon.",
+    "exportDetails": "Packed 48 pieces in sturdy export cartons.",
+    "careInstructions": "Spot clean fabric trim with mild soap. Wipe seagrass with dry cloth."
+  },
+  "unit": "S/1",
+  "cbmPerCarton": 0.045,
+  "setPerCarton": 48,
+  "nwPerCtn": 7.6,
+  "gwPerCtn": 9,
+  "material": "Natural Seagrass & Navy Cotton Twill Trim",
+  "color": "Natural Tan with Navy Blue Border",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-SPM-007"
+    },
+    {
+      "key": "Item Name",
+      "value": "Oval Seagrass Placemat with Navy Fabric Trim"
+    },
+    {
+      "key": "Specification",
+      "value": "46cm x 33cm (18 x 13 inch)"
+    },
+    {
+      "key": "Materials",
+      "value": "Natural Seagrass & Navy Cotton Twill Trim"
+    },
+    {
+      "key": "MOQ",
+      "value": "300 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Navy Fabric Border",
+    "Coiled Seagrass Core",
+    "Coastal Nautical Style",
+    "Durable Stitching"
+  ]
+},
+{
+  "id": "GFC-SPM-008",
+  "slug": "oval-seagrass-placemat-with-cream-cotton-trim-gfc-spm-008",
+  "code": "GFC-SPM-008",
+  "name": "Oval Seagrass Placemat with Cream Cotton Trim",
+  "category": "seagrass",
+  "categoryName": "Seagrass",
+  "categorySlug": "seagrass",
+  "subCategory": "placemats",
+  "image": "/products/gfc_spm_008.jpg",
+  "galleryImages": [
+    "/products/gfc_spm_008.jpg"
+  ],
+  "description": "Elegant oval natural seagrass dining placemat neatly bound with a crisp cream-white cotton fabric stitched border rim for Scandinavian and modern rustic dining.",
+  "longDescription": {
+    "overview": "Elegant oval natural seagrass dining placemat neatly bound with a crisp cream-white cotton fabric stitched border rim for Scandinavian and modern rustic dining.",
+    "craftsmanship": "Hand-stitched cream cotton canvas hem securely wrapped around an organic natural seagrass oval core.",
+    "exportDetails": "Packed 48 pieces per master export carton.",
+    "careInstructions": "Spot clean gently with damp cloth. Air dry thoroughly."
+  },
+  "unit": "S/1",
+  "cbmPerCarton": 0.045,
+  "setPerCarton": 48,
+  "nwPerCtn": 7.6,
+  "gwPerCtn": 9,
+  "material": "Natural Seagrass & Cream Cotton Canvas Trim",
+  "color": "Natural Golden Seagrass with White Border",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-SPM-008"
+    },
+    {
+      "key": "Item Name",
+      "value": "Oval Seagrass Placemat with Cream Cotton Trim"
+    },
+    {
+      "key": "Specification",
+      "value": "46cm x 33cm (18 x 13 inch)"
+    },
+    {
+      "key": "Materials",
+      "value": "Natural Seagrass & Cream Cotton Canvas Trim"
+    },
+    {
+      "key": "MOQ",
+      "value": "300 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "White Canvas Border",
+    "Scandinavian Minimalist Look",
+    "Durable Coiled Construction",
+    "Table Protection"
+  ]
+},
+{
+  "id": "GFC-SPM-009",
+  "slug": "round-seagrass-charger-placemat-with-black-border-gfc-spm-009",
+  "code": "GFC-SPM-009",
+  "name": "Round Seagrass Charger Placemat with Black Border",
+  "category": "seagrass",
+  "categoryName": "Seagrass",
+  "categorySlug": "seagrass",
+  "subCategory": "placemats",
+  "image": "/products/gfc_spm_009.jpg",
+  "galleryImages": [
+    "/products/gfc_spm_009.jpg"
+  ],
+  "description": "Striking round handcrafted seagrass dining charger placemat featuring a fine concentric spiral grass center encased in a bold black fabric stitched edge border.",
+  "longDescription": {
+    "overview": "Striking round handcrafted seagrass dining charger placemat featuring a fine concentric spiral grass center encased in a bold black fabric stitched edge border.",
+    "craftsmanship": "Fine spiral coiled seagrass surrounded by high-contrast black cotton edging with industrial lockstitch reinforcement.",
+    "exportDetails": "Master cartons of 48 pieces.",
+    "careInstructions": "Wipe with dry microfiber cloth."
+  },
+  "unit": "S/1",
+  "cbmPerCarton": 0.042,
+  "setPerCarton": 48,
+  "nwPerCtn": 7.3,
+  "gwPerCtn": 8.7,
+  "material": "Natural Coastal Seagrass & Black Cotton Fabric",
+  "color": "Natural Honey Seagrass with Black Border",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-SPM-009"
+    },
+    {
+      "key": "Item Name",
+      "value": "Round Seagrass Charger Placemat with Black Border"
+    },
+    {
+      "key": "Specification",
+      "value": "Diameter 38cm (15 inch)"
+    },
+    {
+      "key": "Materials",
+      "value": "Natural Coastal Seagrass & Black Cotton Fabric"
+    },
+    {
+      "key": "MOQ",
+      "value": "300 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Bold Black Fabric Border",
+    "Fine Concentric Weave",
+    "Modern Dining Elegance",
+    "Eco-Friendly"
+  ]
+},
+{
+  "id": "GFC-SPM-010",
+  "slug": "artisan-braided-round-seagrass-dining-charger-gfc-spm-010",
+  "code": "GFC-SPM-010",
+  "name": "Artisan Braided Round Seagrass Dining Charger",
+  "category": "seagrass",
+  "categoryName": "Seagrass",
+  "categorySlug": "seagrass",
+  "subCategory": "placemats",
+  "image": "/products/gfc_spm_010.jpg",
+  "galleryImages": [
+    "/products/gfc_spm_010.jpg"
+  ],
+  "description": "Luxury handcrafted circular dining charger placemat woven from pure coastal seagrass rope with tactile rustic texture, designed for fine dining and hospitality table settings.",
+  "longDescription": {
+    "overview": "Luxury handcrafted circular dining charger placemat woven from pure coastal seagrass rope with tactile rustic texture, designed for fine dining and hospitality table settings.",
+    "craftsmanship": "Hand-braided thick coastal seagrass rope spiraled into a resilient, textured dining charger.",
+    "exportDetails": "Shipped in 5-ply export master cartons of 48 pieces.",
+    "careInstructions": "Wipe clean with a damp cloth and dry naturally."
+  },
+  "unit": "S/1",
+  "cbmPerCarton": 0.042,
+  "setPerCarton": 48,
+  "nwPerCtn": 7.2,
+  "gwPerCtn": 8.5,
+  "material": "100% Pure Coastal Seagrass",
+  "color": "Natural Organic Seagrass",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-SPM-010"
+    },
+    {
+      "key": "Item Name",
+      "value": "Artisan Braided Round Seagrass Dining Charger"
+    },
+    {
+      "key": "Specification",
+      "value": "Diameter 38cm (15 inch)"
+    },
+    {
+      "key": "Materials",
+      "value": "100% Pure Coastal Seagrass"
+    },
+    {
+      "key": "MOQ",
+      "value": "300 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Heavy Rustic Braid",
+    "Hospitality Grade",
+    "100% Organic Fiber",
+    "Natural Heat Resistance"
+  ]
+},
 ];
