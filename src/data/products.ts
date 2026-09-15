@@ -7136,6 +7136,196 @@ export const PRODUCTS: ProductItem[] = [
     features: ['Set of 3 Graduated Nesting Sizes', 'Sculptural Fluted Ruffled Edge Collar', 'Heavy-Duty Natural Rope Coil', 'Boho Table Centerpiece & Wall Decor Hanging']
   },
   {
+    id: 'GFC-SB-022',
+    slug: 'handcrafted-seagrass-floor-vase-set-gfc-sb-022',
+    code: 'GFC-SB-022',
+    name: 'Handcrafted Seagrass Floor Vase Set (Set of 3)',
+    category: 'seagrass',
+    categoryName: 'Seagrass',
+    categorySlug: 'seagrass',
+    subCategory: 'baskets',
+    image: '/products/gfc_sb_022.jpg',
+    galleryImages: [
+      '/products/gfc_sb_022.jpg',
+      '/products/gfc_sb_022_hd.jpg'
+    ],
+    description: 'Nesting trio of tall cylindrical handcrafted coastal seagrass floor vases, tightly coiled from natural golden seagrass rope for luxury interior and botanical displays.',
+    longDescription: {
+      overview: 'The Handcrafted Seagrass Floor Vase Set (Art No: GFC-SB-022) offers three graduated architectural floor urns designed for upscale home styling, boutique hotels, and dry botanical displays. Their slender tapered silhouette and organic golden weave add warmth and tactile height to corners and entryways.',
+      craftsmanship: 'Hand-plaited and spiral-stitched by skilled rural women artisans in southern Bangladesh using sun-cured riverbed seagrass ropes over a rigid reinforcing core for permanent vertical stability.',
+      exportDetails: 'Shipped nested 1 set of 3 per heavy-duty 5-ply export master carton with protective silica gel packs and inner wrapping.',
+      careInstructions: 'Dust with a soft dry feather duster or dry cloth. Intended for indoor display with dried flora or artificial stems. Keep away from direct water pooling.'
+    },
+    unit: 'S/3',
+    cbmPerCarton: 0.088,
+    setPerCarton: 1,
+    nwPerCtn: 4.2,
+    gwPerCtn: 5.6,
+    material: '100% Natural Coastal Seagrass',
+    color: 'Natural Sun-Cured Golden Seagrass',
+    specifications: [
+      { key: 'Item Code', value: 'GFC-SB-022' },
+      { key: 'Item Name', value: 'Handcrafted Seagrass Floor Vase Set (Set of 3)' },
+      { key: 'Specification', value: 'L: Dia 32x75cm | M: Dia 28x62cm | S: Dia 22x48cm' },
+      { key: 'Materials', value: '100% Natural Coastal Seagrass' },
+      { key: 'MOQ', value: '150 Sets' },
+      { key: 'Country of Origin', value: 'Bangladesh' }
+    ],
+    features: ['Set of 3 Graduated Nesting Heights', 'Slender Architectural Urn Silhouette', '100% Renewable Natural Seagrass', 'Ideal for Pampas Grass & Tall Floral Displays']
+  },
+  {
+    id: 'GFC-SB-023',
+    slug: 'artisan-seagrass-urn-vase-magenta-accent-gfc-sb-023',
+    code: 'GFC-SB-023',
+    name: 'Artisan Seagrass Urn Vase with Magenta Accent',
+    category: 'seagrass',
+    categoryName: 'Seagrass',
+    categorySlug: 'seagrass',
+    subCategory: 'baskets',
+    image: '/products/gfc_sb_023.jpg',
+    galleryImages: [
+      '/products/gfc_sb_023.jpg',
+      '/products/gfc_sb_023_hd.jpg'
+    ],
+    description: 'Sculptural amphora urn vase handcrafted from natural coastal seagrass, detailed with a flared collar rim and a vibrant fuchsia-magenta dyed woven lattice belt.',
+    longDescription: {
+      overview: 'The Artisan Seagrass Urn Vase with Magenta Accent (Art No: GFC-SB-023) showcases traditional Bengali basketry with contemporary color-blocking. Featuring a classical Greek amphora contour, its rich golden seagrass weave is beautifully contrasted by a bold fuchsia-magenta open lattice midsection.',
+      craftsmanship: 'Masterfully coiled by artisan weavers using select wild seagrass fibers. The mid-band is woven with AZO-free dyed fuchsia jute-cotton cord in a breathable openwork criss-cross diamond grid.',
+      exportDetails: 'Individually polybagged with desiccant pouches, packed 4 units per master export carton.',
+      careInstructions: 'Spot clean with a soft dry brush. Preserve dyed color vibrancy by keeping away from prolonged direct outdoor sunlight.'
+    },
+    unit: 'S/1',
+    cbmPerCarton: 0.065,
+    setPerCarton: 4,
+    nwPerCtn: 3.4,
+    gwPerCtn: 4.7,
+    material: 'Natural Coastal Seagrass & Dyed Jute Cord',
+    color: 'Natural Golden Tan with Fuchsia Magenta Accent',
+    specifications: [
+      { key: 'Item Code', value: 'GFC-SB-023' },
+      { key: 'Item Name', value: 'Artisan Seagrass Urn Vase with Magenta Accent' },
+      { key: 'Specification', value: 'Diameter 30cm x Height 48cm' },
+      { key: 'Materials', value: 'Coastal Seagrass, Dyed Jute Cord' },
+      { key: 'MOQ', value: '250 Pcs' },
+      { key: 'Country of Origin', value: 'Bangladesh' }
+    ],
+    features: ['Classic Amphora Urn Silhouette', 'Vibrant Magenta Dyed Lattice Waist Band', 'Flared Sculpted Collar Mouth', 'Fair-Trade Handcrafted in Bangladesh']
+  },
+  {
+    id: 'GFC-SB-026',
+    slug: 'scalloped-wavy-rim-seagrass-basket-bowl-gfc-sb-026',
+    code: 'GFC-SB-026',
+    name: 'Scalloped Wavy Rim Seagrass Basket Bowl',
+    category: 'seagrass',
+    categoryName: 'Seagrass',
+    categorySlug: 'seagrass',
+    subCategory: 'baskets',
+    image: '/products/gfc_sb_026.jpg',
+    galleryImages: [
+      '/products/gfc_sb_026.jpg',
+      '/products/gfc_sb_026_hd.jpg'
+    ],
+    description: 'Round artisanal seagrass storage and centerpiece bowl featuring an organic undulating fluted rim wrapped in spiral candy stripes of emerald green and grey cord.',
+    longDescription: {
+      overview: 'The Scalloped Wavy Rim Seagrass Basket Bowl (Art No: GFC-SB-026) merges bohemian organic flair with playful color detailing. Its sculptural undulating perimeter and green spiral candy stripe border create an eye-catching statement on dining tables, kitchen islands, and console displays.',
+      craftsmanship: 'Hand-coiled with heavy sun-dried coastal seagrass. The dramatic rippled collar is shaped by hand while weaving, and meticulously wrapped in alternating emerald green and soft grey cotton yarn bindings.',
+      exportDetails: 'Packed 6 units nested per export master carton with corrugated dividers and humidity control sachets.',
+      careInstructions: 'Gently wipe with a soft dry cloth. For food service, use with dry goods, wrapped snacks, or fruit liners.'
+    },
+    unit: 'S/1',
+    cbmPerCarton: 0.056,
+    setPerCarton: 6,
+    nwPerCtn: 2.9,
+    gwPerCtn: 4.1,
+    material: '100% Coastal Seagrass & Cotton Yarn Wrap',
+    color: 'Natural Golden Seagrass with Emerald Green & Grey Rim',
+    specifications: [
+      { key: 'Item Code', value: 'GFC-SB-026' },
+      { key: 'Item Name', value: 'Scalloped Wavy Rim Seagrass Basket Bowl' },
+      { key: 'Specification', value: 'Diameter 36cm x Height 20cm' },
+      { key: 'Materials', value: 'Natural Seagrass, Dyed Cotton Cord' },
+      { key: 'MOQ', value: '300 Pcs' },
+      { key: 'Country of Origin', value: 'Bangladesh' }
+    ],
+    features: ['Sculptural Undulating Wavy Petal Rim', 'Emerald Green & Grey Spiral Bound Edge', 'Durable Thick Hand-Coiled Seagrass', 'Boho Dining Centerpiece & Catchall']
+  },
+  {
+    id: 'GFC-SB-027',
+    slug: 'bear-silhouette-seagrass-pet-bed-gfc-sb-027',
+    code: 'GFC-SB-027',
+    name: 'Bear Silhouette Seagrass Pet Bed with Plush Cushion',
+    category: 'seagrass',
+    categoryName: 'Seagrass',
+    categorySlug: 'seagrass',
+    subCategory: 'baskets',
+    image: '/products/gfc_sb_027.jpg',
+    galleryImages: [
+      '/products/gfc_sb_027.jpg',
+      '/products/gfc_sb_027_hd.jpg'
+    ],
+    description: 'Charming round woven seagrass cat and pet basket bed sculpted with dual bear ear backrests and outfitted with a plush, button-tufted cream washable cushion.',
+    longDescription: {
+      overview: 'The Bear Silhouette Seagrass Pet Bed with Plush Cushion (Art No: GFC-SB-027) combines charming aesthetics with pet comfort. Handcrafted from natural coastal seagrass, this round basket bed features whimsical bear/mouse ears on the elevated backrest and a thick, cozy off-white cushion for cats and small dogs.',
+      craftsmanship: 'The rigid circular base and ear contours are tightly coiled from eco-friendly coastal seagrass and natural jute fibers. Includes a removable, washable button-tufted cotton canvas cushion filled with hypoallergenic polyfill.',
+      exportDetails: 'Packed 4 units nested per 5-ply export master carton with cushions vacuum-compressed inside protective polybags.',
+      careInstructions: 'Wipe basket frame with a dry or lightly damp cloth. Cushion cover is machine washable on gentle cycle.'
+    },
+    unit: 'S/1',
+    cbmPerCarton: 0.078,
+    setPerCarton: 4,
+    nwPerCtn: 4.8,
+    gwPerCtn: 6.3,
+    material: 'Natural Coastal Seagrass, Cotton Canvas, Polyfill',
+    color: 'Natural Golden Seagrass with Off-White Cushion',
+    specifications: [
+      { key: 'Item Code', value: 'GFC-SB-027' },
+      { key: 'Item Name', value: 'Bear Silhouette Seagrass Pet Bed with Cushion' },
+      { key: 'Specification', value: 'Dia 48cm x Front H 18cm (Back H 30cm with Ears)' },
+      { key: 'Materials', value: 'Coastal Seagrass, Cotton Cushion' },
+      { key: 'MOQ', value: '200 Sets' },
+      { key: 'Country of Origin', value: 'Bangladesh' }
+    ],
+    features: ['Whimsical Bear Ear Backrest Silhouette', 'Removable Washable Padded Cushion', 'Breathable Odor-Resistant Natural Weave', 'Designed for Cats & Small Puppies']
+  },
+  {
+    id: 'GFC-SB-028',
+    slug: 'striped-oval-seagrass-pet-lounger-basket-bed-gfc-sb-028',
+    code: 'GFC-SB-028',
+    name: 'Striped Oval Seagrass Pet Lounger Basket Bed',
+    category: 'seagrass',
+    categoryName: 'Seagrass',
+    categorySlug: 'seagrass',
+    subCategory: 'baskets',
+    image: '/products/gfc_sb_028.jpg',
+    galleryImages: [
+      '/products/gfc_sb_028.jpg',
+      '/products/gfc_sb_028_hd.jpg'
+    ],
+    description: 'Oval low-front woven seagrass pet bed patterned with horizontal navy blue and cream stripes, complete with a fitted dark navy blue padded mattress.',
+    longDescription: {
+      overview: 'The Striped Oval Seagrass Pet Lounger Basket Bed (Art No: GFC-SB-028) offers an ergonomic sleeping haven for small pets. Engineered with a low front step-in threshold and high supportive side bolsters, its coastal nautical navy-and-cream striped weave seamlessly matches modern home interiors.',
+      craftsmanship: 'Coiled using resilient sun-dried coastal seagrass intertwined with dyed dark navy cotton rope. Features a custom oval mattress cushion upholstered in heavy-duty navy twill fabric.',
+      exportDetails: 'Shipped nested 4 units per export carton with moisture barrier liners and desiccant packs.',
+      careInstructions: 'Spot clean woven seagrass structure with a soft brush. Hand or machine wash navy cushion on cold gentle cycle.'
+    },
+    unit: 'S/1',
+    cbmPerCarton: 0.082,
+    setPerCarton: 4,
+    nwPerCtn: 5.1,
+    gwPerCtn: 6.8,
+    material: 'Natural Coastal Seagrass, Navy Cotton Cord, Twill Cushion',
+    color: 'Navy Blue & Cream Stripes with Navy Mattress',
+    specifications: [
+      { key: 'Item Code', value: 'GFC-SB-028' },
+      { key: 'Item Name', value: 'Striped Oval Seagrass Pet Lounger Basket Bed' },
+      { key: 'Specification', value: 'L 55cm x W 40cm x Back H 20cm (Front H 10cm)' },
+      { key: 'Materials', value: 'Natural Seagrass, Dyed Cotton, Twill Fabric' },
+      { key: 'MOQ', value: '200 Sets' },
+      { key: 'Country of Origin', value: 'Bangladesh' }
+    ],
+    features: ['Ergonomic Low-Front Step-In Access', 'Nautical Navy & Cream Striped Body', 'Matching Deep Navy Padded Mattress', 'Sturdy High-Sided Woven Bolsters']
+  },
+  {
     id: 'GFC-SP-0029',
     slug: 'seagrass-planters-gfc-sp-0029',
     code: 'GFC-SP-0029',
