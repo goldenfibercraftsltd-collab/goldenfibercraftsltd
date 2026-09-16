@@ -301,6 +301,158 @@ export const ARTICLES_DATA: Article[] = [
         description: 'Exploring the structural firmness and rich natural golden-brown textures of wild kaisa grass interwoven with raw Bangladeshi Tosha jute.'
       }
     ]
+  },
+  {
+    id: 'art-jute-floor-mat-manufacturer-bangladesh',
+    slug: 'jute-floor-mat-manufacturer-bangladesh',
+    title: 'Custom Jute Floor Mats Manufacturer & Wholesale Bulk Exporter in Bangladesh',
+    h1: 'Custom Jute Floor Mats Manufacturer & Wholesale Bulk Exporter in Bangladesh',
+    meta_title: 'Jute Floor Mats Manufacturer in Bangladesh | Custom Wholesale & OEM Exporter - Golden Fiber Crafts Ltd',
+    meta_description: 'Direct Bangladesh manufacturer of handcrafted natural jute floor mats, braided area rugs & entrance doormats. OEM/ODM custom sizes, private labeling, wholesale bulk export to USA, UK & EU.',
+    category: 'Jute Floor Mats',
+    category_slug: 'floor-mats',
+    featured_image: '/images/blog/featured-jute-floor-mat-manufacturer-bangladesh.jpg',
+    featured_image_alt: 'Handcrafted luxury natural golden jute floor mats and braided area rugs on hardwood floor in modern interior manufactured in Bangladesh',
+    featured_image_caption: 'Factory-direct sustainable floor coverings: handcrafted unbleached Tosha jute floor mats and braided runners engineered for global interior retailers.',
+    excerpt: 'Discover how Golden Fiber Crafts Limited manufactures and exports custom, handwoven, and braided jute floor mats, entrance doormats, and circular mandala area rugs from Bangladesh. Explore OEM private labeling, natural latex anti-slip backings, moisture control under 12%, and container shipping economics.',
+    author: 'Golden Fiber Crafts Export Desk',
+    published_date: 'September 14, 2026',
+    updated_date: 'September 14, 2026',
+    reading_time_minutes: 18,
+    word_count: 3580,
+    primary_keyword: 'jute floor mats manufacturer',
+    secondary_keywords: [
+      'jute floor mats manufacturer in bangladesh',
+      'wholesale jute rugs supplier',
+      'custom braided jute doormats factory',
+      'natural fiber floor mats bulk exporter',
+      'handwoven jute area mats dhaka',
+      'oem private label jute floor mats',
+      'jute runner mats manufacturer bangladesh'
+    ],
+    related_products: ['BJM-10', 'BJM-12', 'BJM-13', 'BJM-26', 'BJM-27', 'BJM-31', 'BJM-32'],
+    table_of_contents: [
+      { id: 'fiber-anatomy-engineering', title: '1. Jute Fiber Anatomy & Material Engineering: The Underfoot Advantage', level: 2 },
+      { id: 'why-retailers-switch', title: '2. Why Global Retailers Are Transitioning to Natural Jute Floor Mats', level: 2 },
+      { id: 'commercial-classifications', title: '3. Commercial Classifications & Weaving Structures of Jute Floor Mats', level: 2 },
+      { id: 'manufacturing-process', title: '4. The 7-Stage Manufacturing Process: From Raw Bast Fiber to Finished Mat', level: 2 },
+      { id: 'oem-customization', title: '5. OEM / ODM Customization Options for Private-Label Brands', level: 2 },
+      { id: 'quality-control', title: '6. Quality Control & Defect Prevention: The AQL 2.5 Standard', level: 2 },
+      { id: 'packaging-logistics', title: '7. Packaging Logistics & Ocean Freight Optimization (CBM Calculations)', level: 2 },
+      { id: 'why-bangladesh', title: '8. Why Source Jute Floor Mats Directly From Bangladesh?', level: 2 },
+      { id: 'sustainable-ethics', title: '9. Sustainable Manufacturing, Social Ethics & Women Empowerment', level: 2 },
+      { id: 'buyer-due-diligence', title: '10. Buyer Due Diligence Audit Checklist for Jute Floor Mat Sourcing', level: 2 },
+      { id: 'procurement-guide', title: '11. Step-by-Step International Procurement Guide (Inquiry to FOB)', level: 2 },
+      { id: 'specifications-tables', title: '12. Export Specifications, Customization Matrix & Container Logistics Tables', level: 2 },
+      { id: 'faq-section', title: '13. Frequently Asked Questions (FAQ) with Technical Answers', level: 2 }
+    ],
+    tables: [
+      {
+        title: 'Table 1: Standard Export Jute Floor Mat Specifications (Flagship Models)',
+        headers: ['Model Code', 'Model Name', 'Weaving / Braiding Technique', 'Standard Dimensions', 'Fiber Grade & Weight', 'Edge Hem / Binding', 'Packaging Config', 'Est. FOB Unit Price'],
+        rows: [
+          ['BJM-10', 'Natural Unbleached Round Jute Area Mat', 'Continuous Helical Braided Coil', 'Dia: 120 cm / 150 cm', '100% Tosha Jute (2,200 GSM)', 'Reversible Braided Selvedge', '12 Pcs / 0.052 CBM (Rolled)', 'US$4.80 – $9.50'],
+          ['BJM-12', 'Classic Flatweave Rectangular Jute Rug', 'Heavy Punja Handloom Weave', '80 x 150 cm / 120 x 180 cm', '100% Raw Tosha Jute (2,000 GSM)', 'Turned & Bound End Hem', '12 Pcs / 0.052 CBM (Rolled)', 'US$5.20 – $11.00'],
+          ['BJM-13', 'Rectangular Jute Doormat w/ Black Border', 'Ribbed Bouclé Weave + Canvas', '50 x 80 cm / 60 x 90 cm', 'Jute Core + Cotton Canvas Trim', 'Reinforced Bound Edge', '12 Pcs / 0.052 CBM (Flat Pack)', 'US$2.60 – $4.90'],
+          ['BJM-26', 'Half-Moon Semicircle Braided Doormat', 'Concentric Braided Arc Coil', '50 x 80 cm / 60 x 100 cm', '100% Golden Jute Braid', 'Interlocked Flat Lock-Stitch', '12 Pcs / 0.052 CBM (Flat Pack)', 'US$2.80 – $5.10'],
+          ['BJM-27', 'Concentric Ring Mottled Jute Door Mat', 'Multi-Tone Braided Coil', 'Dia: 80 cm / 100 cm', 'Natural Jute + Charcoal Dyed Thread', 'Heavy-Duty Lock Stitching', '12 Pcs / 0.052 CBM (Flat Pack)', 'US$3.10 – $5.80'],
+          ['BJM-31', 'Openwork Lattice Ring Jute Mandala Mat', 'Mandala Openwork Loop Lace', 'Dia: 100 cm / 120 cm', 'Fine Platted Tosha Jute Braid', 'Hand-Knotted Loop Perimeter', '12 Pcs / 0.052 CBM (Rolled)', 'US$4.50 – $8.90'],
+          ['BJM-32', 'Scalloped Petal Openwork Floor Rug', 'Wheel Core + Scalloped Edge', 'Dia: 120 cm / 150 cm', '100% Golden Tosha Jute', 'Scalloped Petal Border Hem', '10 Pcs / 0.058 CBM (Rolled)', 'US$5.80 – $11.50']
+        ]
+      },
+      {
+        title: 'Table 2: Customization & OEM / ODM Capability Matrix',
+        headers: ['Parameter', 'Standard Factory Baseline', 'Custom / OEM Capability', 'Buyer Minimum / Notes'],
+        rows: [
+          ['Minimum Order Quantity (MOQ)', '300 Pieces per standard design / size', '150 Pieces for boutique trial orders', 'Consolidatable across multi-SKU container orders'],
+          ['Dimensions & Geometries', 'Rounds (80–150cm), Rectangles (50x80 to 120x180cm)', 'Custom runners up to 300cm, rugs up to 240x300cm, ovals', 'Exact dimensional cutting tolerance +/- 1.5%'],
+          ['Braid Thickness & Yarn Count', '8mm, 10mm, 12mm 3-ply braided rope cords', '4mm micro-braid to 16mm chunky rope; panama, bouclé', 'Tosha natural golden, White jute, or Juco blends'],
+          ['Dyeing & Colorways', 'Unbleached natural golden / oatmeal baseline', 'Pantone Matching System (PMS) dyed yarns or dipped borders', 'AZO-free reactive dyes compliant with EU REACH & US CPSIA'],
+          ['Backing & Anti-Slip Options', 'Reversible unbacked natural baseline', 'Natural vulcanized latex spray, recycled cotton backing, silicone dots', 'Solvent-free, non-staining, odor-free formulations'],
+          ['Border Trims & Bindings', 'Natural turned selvedge or fringe edges', '100% organic cotton canvas tape binding (5 cm), leather tabs', 'Double-needle heavy lock-stitching for edge durability'],
+          ['Private Labeling & Branding', 'Standard export paper hangtag & UPC barcode', 'Debossed genuine leather logo corner patch, woven satin label', 'Buyer supplies vector graphic (.AI, .PDF)'],
+          ['Production & Sample Lead Time', '7 to 10 business days for samples', '30 to 40 days for 20ft FCL (approx. 5,000–6,500 mats)', 'Begins upon written pre-production sample sign-off']
+        ]
+      },
+      {
+        title: 'Table 3: Export Logistics & Container Packing Optimization Matrix',
+        headers: ['Container Size', 'Approx. Usable CBM', 'Master Cartons (5-Ply)', 'Carton Dimensions (cm)', 'Total Floor Mats (Units)', 'Est. Gross Weight (kg)', 'Est. FOB Chattogram Unit Cost'],
+        rows: [
+          ['20ft General Purpose (GP)', '28.0 CBM', '500 – 540 Cartons', '56 x 44 x 42 cm', '5,500 – 6,400 Units', '~11,200 kg', 'US$2.60 – $8.50 / pc'],
+          ['40ft Standard (GP)', '58.0 CBM', '1,050 – 1,100 Cartons', '56 x 44 x 42 cm', '11,500 – 13,000 Units', '~22,800 kg', 'US$2.45 – $7.90 / pc'],
+          ['40ft High Cube (HQ)', '68.0 CBM', '1,240 – 1,300 Cartons', '56 x 44 x 42 cm', '13,800 – 15,500 Units', '~26,500 kg', 'US$2.30 – $7.50 / pc'],
+          ['Less than Container Load (LCL)', '2.0 to 15.0 CBM', 'As per booking', 'Standard 5-Ply Export', 'Palletized & shrink-wrapped', 'Palletized standard', 'US$3.00 – $9.20 / pc']
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: 'What is the Minimum Order Quantity (MOQ) for custom jute floor mats and area rugs?',
+        answer: 'Our standard wholesale production baseline is 300 pieces per custom size, weave design, or colorway. For established retail chains launching multi-SKU home collections or boutique interior brands testing pilot assortments, we accommodate trial runs of 150 pieces per design upon commercial review. Multiple rug sizes, runner dimensions, and doormat models can be consolidated seamlessly into a single 20ft or 40ft High Cube ocean container.'
+      },
+      {
+        question: 'How do you prevent mold, humidity damage, and edge curling during ocean container transit?',
+        answer: 'Moisture mitigation is our primary engineering protocol. All braided jute cords and finished floor mats undergo forced hot-air circulation chamber dehumidification at 45°C–50°C until fiber moisture measures strictly below 10%–12% via calibrated digital electrical resistance pin meters. Each 5-ply export master carton is lined with a heavy virgin polyethylene moisture barrier bag sealed with 50g–100g industrial silica gel or clay desiccants. Furthermore, container drayage to Chattogram Seaport includes comprehensive phytosanitary fumigation compliant with ISPM 15 standards.'
+      },
+      {
+        question: 'What natural anti-slip backings and finishes do you offer for jute floor mats?',
+        answer: 'While our traditional braided mats are 100% reversible with identical double-sided durability, we offer three export-certified backing solutions: (1) spray-applied natural vulcanized liquid latex backing that cures into a transparent, flexible non-slip layer without synthetic odor; (2) laminated natural unbleached cotton canvas backing with reinforced lock-stitched perimeter tape; and (3) non-toxic silicone micro-dots engineered for luxury vinyl, polished hardwood, and marble flooring.'
+      },
+      {
+        question: 'How do you calculate container packing (rolled vs flat-packed) to minimize ocean freight CBM?',
+        answer: 'Packaging method is optimized based on mat thickness and diameter. Semicircular doormats and mats under 80 cm diameter are flat-packed in sets of 12 inside 5-ply master cartons (0.052 CBM/carton). Larger area rugs (120 cm, 150 cm, and runners) are tightly rolled around high-crush recycled cardboard cores and wrapped in moisture-barrier poly tubing, compressing shipping volume by up to 35% compared to loose packing and allowing a 40ft HQ container to carry over 14,000 units.'
+      },
+      {
+        question: 'Can Golden Fiber Crafts produce custom Pantone colors, border bindings, and private brand labels?',
+        answer: 'Yes. We operate full OEM/ODM manufacturing. We formulate custom yarn dyeing matched to Pantone Fashion, Home + Interiors (FHI) and PMS color standards using certified AZO-free reactive dyes. For edge finishes, we offer 100% organic cotton canvas borders (in 3 cm to 8 cm widths), turned fringes, and scalloped openwork rims. Branding options include blind debossed genuine leather corner labels, laser-engraved cork badges, woven satin labels, and GS1-compliant retail barcodes.'
+      },
+      {
+        question: 'What is the standard sample prototyping and bulk production lead time?',
+        answer: 'Pre-production physical sample prototypes are crafted and dispatched within 7 to 10 business days (or 10 to 14 days for custom Pantone yarn dyeing and specialized custom binder tooling) via DHL or FedEx Express. Bulk manufacturing for a 20ft Full Container Load (approx. 5,500–6,400 mats) takes 30 to 40 calendar days following pre-production sample sign-off. A 40ft High Cube container (approx. 13,800–15,500 mats) completes within 45 to 55 days.'
+      },
+      {
+        question: 'What international trade terms (Incoterms), certifications, and payment methods do you support?',
+        answer: 'We execute export orders primarily under FOB Chattogram (Chittagong Port, BDCGP) or CFR/CIF to any designated global seaport (such as New York, Los Angeles, Felixstowe, Rotterdam, Hamburg, Sydney, Valencia). Standard international payment terms are Telegraphic Transfer (T/T: 30% advance deposit upon Proforma Invoice confirmation, 70% balance upon presentation of shipping documents and Bill of Lading copy) or Irrevocable Commercial Letter of Credit at Sight (L/C at Sight).'
+      }
+    ],
+    cluster_topics: [
+      {
+        title: 'Wholesale Jute Runner Rugs for High-Traffic Hallways & Hospitality Interiors',
+        keyword: 'wholesale jute runner rugs',
+        intent: 'Commercial / Long hallway runners',
+        description: 'Comprehensive sourcing guide to specifying heavy-duty 2,400 GSM ribbed and braided jute hallway runners with reinforced edges for hotels and multi-family residences.'
+      },
+      {
+        title: 'Custom Natural Latex Backed Jute Doormats: Direct Factory Manufacturing Guide',
+        keyword: 'natural latex backed jute doormats',
+        intent: 'Technical / Anti-slip floor mats',
+        description: 'How natural rubber vulcanization provides durable slip-resistance on tile and wood floors while preserving 100% biodegradable sustainability credentials.'
+      },
+      {
+        title: 'Braided vs Flatweave Jute Floor Mats: A Commercial Retailer’s Decision Guide',
+        keyword: 'braided vs flatweave jute rugs wholesale',
+        intent: 'Informational / Material & Weave Selection',
+        description: 'Technical comparison of continuous spiral coiled braids vs shuttle loom flatweaves regarding tensile wear, underfoot cushioning, and carton packing density.'
+      },
+      {
+        title: 'Circular Mandala Jute Floor Mats: Trend Analysis & OEM Prototyping',
+        keyword: 'mandala round jute rug manufacturer',
+        intent: 'Commercial / Boho & Japandi Decor',
+        description: 'Exploring the production of intricate lace openwork rings and concentric medallions for Scandinavian, coastal, and bohemian lifestyle retailers.'
+      },
+      {
+        title: 'How to Calculate CBM & Freight Loading for Rolled vs Flat-Packed Jute Rugs',
+        keyword: 'jute rug export cbm container loading calculator',
+        intent: 'Technical / Logistics Optimization',
+        description: 'Mathematical breakdown of cylindrical roll diameter vs master carton cube calculations to maximize cubic utilization in 20ft and 40ft HQ ocean containers.'
+      },
+      {
+        title: 'Eco-Friendly Cleaning & Maintenance Protocols for Natural Bast Fiber Floor Mats',
+        keyword: 'jute floor mat care and maintenance',
+        intent: 'Informational / Aftercare & Durability',
+        description: 'Factory best practices for dry-brush vacuuming, spot stain removal, moisture control, and preserving natural fiber luster in commercial installations.'
+      }
+    ]
   }
 ];
 

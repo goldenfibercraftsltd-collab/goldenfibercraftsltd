@@ -26,7 +26,20 @@ const corePages = [
     { loc: 'https://goldenfibercraftsltd.com/images/blog/raw-tosha-jute-fiber-inspection-bangladesh.jpg', title: 'Raw Tosha Jute Fiber Inspection Bangladesh' },
     { loc: 'https://goldenfibercraftsltd.com/images/blog/jute-bag-quality-control-moisture-inspection.jpg', title: 'Jute Bag Quality Control and Moisture Inspection' }
   ]},
-  { url: '/jute-basket-manufacturer-bangladesh', priority: '0.90', changefreq: 'weekly' },
+  { url: '/jute-basket-manufacturer-bangladesh', priority: '0.95', changefreq: 'weekly', images: [
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-jute-basket-manufacturer-bangladesh.jpg', title: 'Custom Jute Basket Manufacturer in Bangladesh Wholesale' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/bangladeshi-artisan-stitching-coiled-jute-basket.jpg', title: 'Bangladeshi Artisan Stitching Coiled Jute Basket' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/nested-set-of-3-jute-storage-baskets-wholesale.jpg', title: 'Nested Set of 3 Jute Storage Baskets Wholesale' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/raw-tosha-jute-fiber-inspection-bangladesh.jpg', title: 'Raw Tosha Jute Fiber Inspection Bangladesh' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/jute-basket-quality-control-moisture-inspection.jpg', title: 'Jute Basket Quality Control Moisture Inspection' }
+  ]},
+  { url: '/jute-floor-mat-manufacturer-bangladesh', priority: '0.95', changefreq: 'weekly', images: [
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-jute-floor-mat-manufacturer-bangladesh.jpg', title: 'Custom Jute Floor Mats Manufacturer in Bangladesh Wholesale' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/bangladeshi-artisan-weaving-jute-floor-mat.jpg', title: 'Bangladeshi Artisan Weaving Jute Floor Mat' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/custom-jute-floor-mats-wholesale-display.jpg', title: 'Custom Jute Floor Mats Wholesale Display' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/raw-jute-fiber-grading-floor-mats-bangladesh.jpg', title: 'Raw Golden Jute Bast Fiber Grading Bangladesh' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/jute-floor-mat-quality-control-moisture-inspection.jpg', title: 'Jute Floor Mat Quality Control Moisture Meter Inspection' }
+  ]},
   { url: '/about', priority: '0.8', changefreq: 'weekly' },
   { url: '/materials', priority: '0.8', changefreq: 'weekly' },
   { url: '/infrastructure', priority: '0.8', changefreq: 'weekly' },

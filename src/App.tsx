@@ -79,6 +79,8 @@ export const AppContent: React.FC = () => {
       document.title = formatPageTitle('Jute Bag Manufacturer in Bangladesh | Custom Wholesale & OEM Exporter');
     } else if (p === '/jute-basket-manufacturer-bangladesh') {
       document.title = formatPageTitle('Jute Basket Manufacturer in Bangladesh | Custom Wholesale & OEM Exporter');
+    } else if (p === '/jute-floor-mat-manufacturer-bangladesh' || p === '/jute-floor-mats-manufacturer-bangladesh') {
+      document.title = formatPageTitle('Jute Floor Mats Manufacturer in Bangladesh | Custom Wholesale & OEM Exporter');
     } else if (p === '/admin/login') {
       document.title = formatPageTitle('Admin Login');
     } else if (p === '/admin' || p === '/admin/dashboard') {
@@ -199,6 +201,8 @@ export const AppContent: React.FC = () => {
           <Route path="/blog/:slug" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
           <Route path="/jute-bag-manufacturer-bangladesh" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
           <Route path="/jute-basket-manufacturer-bangladesh" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
+          <Route path="/jute-floor-mat-manufacturer-bangladesh" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
+          <Route path="/jute-floor-mats-manufacturer-bangladesh" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
           <Route path="/:slug" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
         </Routes>
 

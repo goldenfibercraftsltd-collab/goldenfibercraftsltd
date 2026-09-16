@@ -22,6 +22,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
   const article = getArticleBySlug(currentSlug) || ARTICLES_DATA[0];
 
   const isBagArticle = article.slug.includes('bag') || article.category_slug === 'bags';
+  const isMatArticle = article.slug.includes('mat') || article.category_slug === 'floor-mats' || article.id.includes('mat');
 
   usePageTitle(
     article.title,
@@ -249,13 +250,13 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                   Direct Factory Desk
                 </span>
                 <h4 className="font-serif font-bold text-base text-white">
-                  {isBagArticle ? 'Need Custom Jute Bag Samples?' : 'Need Custom Jute Basket Samples?'}
+                  {isBagArticle ? 'Need Custom Jute Bag Samples?' : isMatArticle ? 'Need Custom Jute Floor Mat Samples?' : 'Need Custom Jute Basket Samples?'}
                 </h4>
                 <p className="mt-2 text-xs text-amber-100/90 leading-relaxed">
                   We supply OEM sample prototypes with custom screen printing, PMS color dyeing, and direct FOB Chattogram container quotes in 24 hours.
                 </p>
                 <button
-                  onClick={() => onOpenQuoteModal({ productCode: isBagArticle ? 'OEM-JUTE-BAGS' : 'OEM-JUTE-BASKETS' })}
+                  onClick={() => onOpenQuoteModal({ productCode: isBagArticle ? 'OEM-JUTE-BAGS' : isMatArticle ? 'OEM-JUTE-FLOOR-MATS' : 'OEM-JUTE-BASKETS' })}
                   className="mt-4 w-full py-2.5 bg-white hover:bg-stone-100 text-amber-950 rounded-lg text-xs font-bold transition shadow-xs flex items-center justify-center gap-1.5"
                 >
                   <Mail className="w-3.5 h-3.5" />
@@ -275,7 +276,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                 </div>
                 <div className="flex justify-between text-stone-600">
                   <span>Standard MOQ:</span>
-                  <span className="font-medium text-stone-900">{isBagArticle ? '500 Pieces (Flexible)' : '200 Sets (Flexible)'}</span>
+                  <span className="font-medium text-stone-900">{isBagArticle ? '500 Pieces (Flexible)' : isMatArticle ? '300 Pieces (Flexible)' : '200 Sets (Flexible)'}</span>
                 </div>
                 <div className="flex justify-between text-stone-600">
                   <span>Moisture Tolerance:</span>
@@ -749,6 +750,472 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                   </div>
                 </section>
               </>
+            ) : isMatArticle ? (
+              /* ========================================================================= */
+              /* JUTE FLOOR MAT EDITORIAL CONTENT (COMPLETE 11 SECTIONS) */
+              /* ========================================================================= */
+              <>
+                {/* Section 1: Fiber Anatomy & Material Engineering */}
+                <section id="fiber-anatomy-engineering" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    1. Jute Fiber Anatomy & Material Engineering: The Bast Fiber Advantage Underfoot
+                  </h2>
+                  
+                  {/* GEO/AEO Direct Answer Snippet Callout */}
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Direct Definition:</strong>
+                    A commercial jute floor mat is an engineered, heavy-duty floor covering constructed from high-tensile bast fibers of the <em>Corchorus</em> plant—predominantly Bangladeshi golden Tosha jute (<em>Corchorus olitorius</em>). Possessing a composite cellular matrix of 60%–63% cellulose, 12%–14% lignin, and natural anti-static properties, genuine jute mats deliver high abrasion resistance, natural thermal insulation, underfoot sound dampening, and complete biodegradability without shedding microplastics.
+                  </div>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    In global residential, commercial, and hospitality flooring, natural jute floor coverings occupy an unmatched technical niche. Unlike surface-bonded synthetic carpets or delicate paper-twine rugs, handwoven and braided jute mats are derived from the phloem vascular tissue of annual <em>Corchorus</em> stems harvested in the Brahmaputra and Ganges river delta of Bangladesh.
+                  </p>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-2">
+                    Through natural slow-water ribbon retting, the non-fibrous pectins and hemicelluloses dissolve, leaving pristine bundles of high-aspect-ratio bast filaments. When plied into heavy-duty 8mm to 12mm braided cores or spun into heavy 14 lb/spy to 28 lb/spy handloom yarns, the structural fibers form a dense underfoot matrix engineered to absorb thousands of daily footfalls without pile crushing or structural fatigue.
+                  </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-5 text-xs text-stone-700">
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="font-bold text-stone-900 text-sm block mb-1 text-amber-800">60%–63% Cellulose</span>
+                      <span>High crystalline polymer density providing extraordinary axial tensile strength, heavy load endurance, and resistance to dimensional distortion.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="font-bold text-stone-900 text-sm block mb-1 text-amber-800">12%–14% Natural Lignin</span>
+                      <span>Natural bio-polymeric resin matrix that imparts compressive rebound and springiness, preventing floor mats from permanently packing down.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="font-bold text-stone-900 text-sm block mb-1 text-amber-800">2,000–2,400 GSM Pile</span>
+                      <span>Heavyweight physical ballast that anchors mats securely to floorboards while providing acoustic dampening and thermal underfoot warmth.</span>
+                    </div>
+                  </div>
+
+                  {/* Image 4: Raw Fiber Inspection & Grading */}
+                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs bg-stone-50 flex flex-col items-center">
+                    <img
+                      src="/images/blog/raw-jute-fiber-grading-floor-mats-bangladesh.jpg"
+                      alt="Raw golden Tosha jute bast fiber bundles drying on bamboo frames in rural Bangladesh for floor mat weaving"
+                      className="w-full h-auto max-h-[560px] object-contain mx-auto block"
+                    />
+                    <figcaption className="w-full p-3 text-xs text-stone-500 bg-stone-50 border-t border-stone-100 flex items-center justify-between">
+                      <span>Raw golden Tosha jute bast fibers graded by staple length, tensile luster, and clean retted quality at Golden Fiber Crafts Limited.</span>
+                      <span className="font-mono text-[11px] text-amber-700 font-semibold">TOSHA FIBER GRADING</span>
+                    </figcaption>
+                  </figure>
+                </section>
+
+                {/* Section 2: Why Global Retailers Are Transitioning */}
+                <section id="why-retailers-switch" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    2. Why Global Retailers Are Transitioning to Natural Jute Floor Mats
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Market Shift Insight:</strong>
+                    International homeware retailers, department store chains, and hospitality brands across North America, the UK, and Europe are transitioning from petroleum-based synthetic rugs to natural jute floor mats. Spurred by the EU Corporate Sustainability Due Diligence Directive (CSDDD), ecodesign packaging regulations, and consumer aversion to indoor microplastic shedding, handcrafted jute floor coverings offer 100% circular biodegradability, biophilic organic warmth, and 3x–4x higher retail profit margins.
+                  </div>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    The rapid global shift toward natural fiber floor mats is propelled by four distinct regulatory, ecological, and interior design tailwinds:
+                  </p>
+
+                  <ul className="mt-3 space-y-3 text-xs sm:text-sm text-stone-700 list-disc pl-5">
+                    <li>
+                      <strong>Elimination of Microplastics & Chemical Off-Gassing:</strong> Conventional polypropylene and nylon rugs shed microscopic synthetic fibers during vacuuming and normal foot traffic, degrading indoor residential air quality. Furthermore, synthetic backings rely on petroleum-derived styrene-butadiene rubber (SBR) that releases volatile organic compounds (VOCs). Unbleached golden jute mats are 100% plant-based, breathable, non-toxic, and naturally hypoallergenic.
+                    </li>
+                    <li>
+                      <strong>Upcoming EU & Global Circularity Mandates:</strong> Under the European Union’s Ecodesign for Sustainable Products Regulation (ESPR) and textile Extended Producer Responsibility (EPR) frameworks, global retailers will soon be penalized for unrecyclable composite floor coverings. Jute floor mats are 100% circular and fully home-compostable at end-of-life.
+                    </li>
+                    <li>
+                      <strong>Biophilic Living & Organic Interior Architecture:</strong> High-end interior design movements—ranging from Japandi and Scandinavian minimalism to modern farmhouse and Mediterranean coastal styles—prioritize raw organic textures over artificial sheen. Natural jute floor mats act as grounding design foundations in living rooms, entryways, bedrooms, and covered verandas.
+                    </li>
+                    <li>
+                      <strong>Natural Thermal Comfort & Sound Attenuation:</strong> The microscopic cellular lumen within each jute fiber traps still air, creating an organic thermal barrier that keeps floors warm in winter and cool in summer while significantly dampening footstep echoes in open-plan modern spaces.
+                    </li>
+                  </ul>
+
+                  <aside className="my-5 rounded-xl border border-emerald-300 bg-emerald-50/80 p-4 text-emerald-950 text-xs sm:text-sm">
+                    <div className="flex items-center gap-2 font-bold mb-1">
+                      <Award className="w-4 h-4 text-emerald-700" />
+                      <span>The Environmental Math of Tosha Jute</span>
+                    </div>
+                    <p className="text-stone-700 leading-relaxed">
+                      One hectare of Bangladeshi jute plants assimilates over 15 tonnes of atmospheric carbon dioxide (CO₂) and discharges 11 tonnes of pure oxygen within its brief 120-day vegetative cycle. Handcrafted jute floor mats are naturally carbon-negative from field harvest to floor installation.
+                    </p>
+                  </aside>
+                </section>
+
+                {/* Section 3: Commercial Classifications & Weaving Styles */}
+                <section id="commercial-classifications" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    3. Commercial Classifications & Weaving Structures of Jute Floor Mats
+                  </h2>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    At Golden Fiber Crafts Limited, our export manufacturing encompasses five primary commercial classifications engineered for varied retail catalog programs and residential zones:
+                  </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                    <div className="p-4 rounded-xl border border-stone-200 bg-white shadow-2xs">
+                      <div className="flex items-center gap-2 text-amber-800 font-bold font-serif text-sm">
+                        <Package className="w-4 h-4" />
+                        <h4>1. Continuous Helical Braided Mats & Mandalas (BJM-10, BJM-31)</h4>
+                      </div>
+                      <p className="text-xs text-stone-600 mt-2 leading-relaxed">
+                        Formed by coiling continuous 8mm–12mm braided jute ropes in concentric Archimedean spirals, joined by high-tension industrial zig-zag lock-stitching. Completely reversible with identical double-sided wear longevity, available in solid discs or intricate openwork mandala loop borders.
+                      </p>
+                    </div>
+
+                    <div className="p-4 rounded-xl border border-stone-200 bg-white shadow-2xs">
+                      <div className="flex items-center gap-2 text-amber-800 font-bold font-serif text-sm">
+                        <Package className="w-4 h-4" />
+                        <h4>2. Heavy Punja Handloom Flatweave Rugs & Runners (BJM-12)</h4>
+                      </div>
+                      <p className="text-xs text-stone-600 mt-2 leading-relaxed">
+                        Handcrafted on heavy wooden pit looms by master Bengali weavers. High-density interlocking of thick plied jute wefts over durable cotton warps creates a dense, low-profile flatweave runner (80x150 cm to 80x300 cm) with clean turned selvedge edges that glide under low-clearance doors.
+                      </p>
+                    </div>
+
+                    <div className="p-4 rounded-xl border border-stone-200 bg-white shadow-2xs">
+                      <div className="flex items-center gap-2 text-amber-800 font-bold font-serif text-sm">
+                        <Package className="w-4 h-4" />
+                        <h4>3. Ribbed Bouclé Entrance Doormats with Canvas Borders (BJM-13)</h4>
+                      </div>
+                      <p className="text-xs text-stone-600 mt-2 leading-relaxed">
+                        Engineered with an aggressive ribbed bouclé loop-pile construction that scrapes dirt and grit from footwear at entryways. Framed with a 100% heavy organic cotton canvas perimeter binding (5 cm width) and double-needle lock-stitching for extreme perimeter durability.
+                      </p>
+                    </div>
+
+                    <div className="p-4 rounded-xl border border-stone-200 bg-white shadow-2xs">
+                      <div className="flex items-center gap-2 text-amber-800 font-bold font-serif text-sm">
+                        <Package className="w-4 h-4" />
+                        <h4>4. Half-Moon Semicircle Braided Doormats (BJM-26)</h4>
+                      </div>
+                      <p className="text-xs text-stone-600 mt-2 leading-relaxed">
+                        Specialty geometric mats woven in calibrated semicircular arcs (50x80 cm and 60x100 cm). Specifically dimensioned for interior door thresholds, patio exits, and bedside runners where standard rectangular rugs crowd doorway swings.
+                      </p>
+                    </div>
+
+                    <div className="p-4 rounded-xl border border-stone-200 bg-white shadow-2xs sm:col-span-2">
+                      <div className="flex items-center gap-2 text-amber-800 font-bold font-serif text-sm">
+                        <Package className="w-4 h-4" />
+                        <h4>5. Scalloped Petal & Multi-Tone Mottled Statement Mats (BJM-27, BJM-32)</h4>
+                      </div>
+                      <p className="text-xs text-stone-600 mt-2 leading-relaxed">
+                        Artisanal accent rugs combining unbleached golden Tosha jute with AZO-free dyed charcoal slate bands or ornate scalloped floral petal rims. These statement mats provide distinctive bohemian luxury character to retail home furnishing collections.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section 4: 7-Stage Manufacturing Process */}
+                <section id="manufacturing-process" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    4. The 7-Stage Manufacturing Process: From Raw Bast Fiber to Finished Mat
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Direct Answer:</strong>
+                    Manufacturing export-grade jute floor mats requires seven tightly controlled production stages: (1) Tosha bast fiber hackling, carding, and grading, (2) high-twist yarn spinning and multi-strand core cord braiding (4mm–16mm), (3) handloom flatweaving or concentric spiral coil assembly, (4) industrial multi-needle zig-zag lock-stitching, (5) edge binding, fringe trimming, and optional natural latex spray, (6) 48-hour hot-air dehumidification (&lt;10%–12% moisture), and (7) AQL 2.5 quality auditing, metal detection, and container export packaging.
+                  </div>
+
+                  {/* Image 2: Artisan Craftsmanship */}
+                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs bg-stone-50 flex flex-col items-center">
+                    <img
+                      src="/images/blog/bangladeshi-artisan-weaving-jute-floor-mat.jpg"
+                      alt="Bangladeshi woman artisan stitching a coiled natural golden jute floor mat using heavy-duty industrial sewing machine"
+                      className="w-full h-auto max-h-[560px] object-contain mx-auto block"
+                    />
+                    <figcaption className="w-full p-3 text-xs text-stone-500 bg-stone-50 border-t border-stone-100 flex items-center justify-between">
+                      <span>Artisan at Golden Fiber Crafts Limited shaping and joining braided jute rope with high-tension zig-zag lock-stitching.</span>
+                      <span className="font-mono text-[11px] text-amber-700 font-semibold">BRAIDING & STITCHING LINE</span>
+                    </figcaption>
+                  </figure>
+
+                  <div className="space-y-3 mt-4 text-xs sm:text-sm text-stone-700">
+                    <div className="p-3.5 bg-white rounded-lg border border-stone-200 flex gap-3">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-900 font-bold flex items-center justify-center shrink-0 text-xs">1</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif">Fiber Hackling, Carding & Sliver Preparation</strong>
+                        Selected golden Tosha jute bast fibers undergo comb-hackling to remove root bark, impurities, and coarse fragments, followed by mechanical drawing into continuous slivers with uniform linear density.
+                      </div>
+                    </div>
+
+                    <div className="p-3.5 bg-white rounded-lg border border-stone-200 flex gap-3">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-900 font-bold flex items-center justify-center shrink-0 text-xs">2</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif">Multi-Strand Braiding & Core Cord Twisting</strong>
+                        Slivers are plied into 3-strand or 5-strand circular braids (ranging from 4mm micro-braid to 16mm chunky rope) on high-speed braiding machines, maintaining exact dimensional core tension.
+                      </div>
+                    </div>
+
+                    <div className="p-3.5 bg-white rounded-lg border border-stone-200 flex gap-3">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-900 font-bold flex items-center justify-center shrink-0 text-xs">3</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif">Handloom Flatweaving & Spiral Assembly</strong>
+                        For flatweave runners, warp yarns are mounted on traditional handlooms where weavers pass heavy jute weft. For coiled mats, artisans spiral braided cords continuously from the central core.
+                      </div>
+                    </div>
+
+                    <div className="p-3.5 bg-white rounded-lg border border-stone-200 flex gap-3">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-900 font-bold flex items-center justify-center shrink-0 text-xs">4</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif">Industrial Multi-Needle Zig-Zag Lock-Stitching</strong>
+                        Coils are joined on heavy-duty industrial flatbed sewing machines using bonded nylon/polyester thread (6–8 stitches per inch), interlocking neighboring coils to eliminate seam rupture under foot torque.
+                      </div>
+                    </div>
+
+                    <div className="p-3.5 bg-white rounded-lg border border-stone-200 flex gap-3">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-900 font-bold flex items-center justify-center shrink-0 text-xs">5</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif">Border Hemming, Canvas Edge Framing & Latex Spray</strong>
+                        Mats receive cotton canvas border binding, turned fringes, or scalloped petal trims. For non-slip models, a thin micro-atomized coating of natural vulcanized liquid rubber is sprayed on the reverse side.
+                      </div>
+                    </div>
+
+                    <div className="p-3.5 bg-white rounded-lg border border-stone-200 flex gap-3">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-900 font-bold flex items-center justify-center shrink-0 text-xs">6</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif">Hot-Air Dehumidification Chamber (&lt;10%–12% Moisture)</strong>
+                        Completed floor mats enter dedicated hot-air circulation rooms at 45°C–50°C for 48 hours until core fiber moisture stabilizes strictly below 10%–12% on digital probe meters.
+                      </div>
+                    </div>
+
+                    <div className="p-3.5 bg-white rounded-lg border border-stone-200 flex gap-3">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-900 font-bold flex items-center justify-center shrink-0 text-xs">7</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif">Final AQL 2.5 Inspection, Metal Detection & Packing</strong>
+                        Mats undergo 100% tunnel metal detection to verify zero broken sewing machine needles, followed by dimensional tolerance checks, barcode labeling, rolling/flat-packing, and sealing in 5-ply cartons.
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section 5: OEM Customization */}
+                <section id="oem-customization" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    5. OEM / ODM Customization Options for Private-Label Brands
+                  </h2>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    As an integrated direct manufacturer, Golden Fiber Crafts Limited delivers turnkey private-label floor mat development for international home decor brands, supermarket chains, and boutique importers:
+                  </p>
+
+                  <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-stone-700">
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Custom Geometries & Sizing:</strong> Standard rounds (80 cm to 150 cm), hallway runners (80x150 cm up to 80x400 cm), area rugs up to 240x300 cm, ovals, and threshold semicircles with precision cutting tolerances within ±1.5%.</span>
+                    </div>
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Pantone Yarn & Accent Dyeing:</strong> Custom yarn-dyed stripes, border bands, or dipped colorways matched to Pantone Fashion, Home + Interiors (FHI) standards using certified AZO-free reactive dyes.</span>
+                    </div>
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Border Bindings & Edge Trims:</strong> 100% organic cotton canvas edge binding (3 cm to 8 cm width in black, navy, terracotta, or natural), turned fringes, scalloped loops, and vegetable-tanned leather corner tabs.</span>
+                    </div>
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Anti-Slip Backing Formulations:</strong> Reversible unbacked baseline, spray-applied natural vulcanized latex, laminated unbleached cotton backing, or non-marking silicone micro-dots engineered for polished timber and tile floors.</span>
+                    </div>
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Private Label Branding:</strong> Blind-debossed genuine leather logo corner labels, laser-engraved natural cork badges, woven satin brand tags, full-color graphic belly bands, and GS1-compliant retail barcodes.</span>
+                    </div>
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Retail & E-Commerce Packaging:</strong> Heavy-duty 5-ply export master cartons, individual rolled presentation wrapped in branded recyclable kraft paper sleeves, and drop-test certified ISTA-3A e-commerce packaging.</span>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section 6: Quality Control */}
+                <section id="quality-control" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    6. Quality Control & Defect Prevention: The AQL 2.5 Standard
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Direct Answer:</strong>
+                    We enforce strict AQL 2.5 General Inspection Level II standards across every floor mat production batch. Testing protocols include digital pin-probe moisture readings strictly under 10%–12%, 100% conveyor tunnel metal detection to eliminate broken needles, edge tensile stress tests exceeding 350 N, and optical flatness verification to ensure zero edge curling when laid on floors.
+                  </div>
+
+                  {/* Image 5: Quality Control & Packaging Inspection */}
+                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs bg-stone-50 flex flex-col items-center">
+                    <img
+                      src="/images/blog/jute-floor-mat-quality-control-moisture-inspection.jpg"
+                      alt="Quality control inspector testing moisture percentage of woven jute floor mat using digital pin meter in Bangladesh export warehouse"
+                      className="w-full h-auto max-h-[560px] object-contain mx-auto block"
+                    />
+                    <figcaption className="w-full p-3 text-xs text-stone-500 bg-stone-50 border-t border-stone-100 flex items-center justify-between">
+                      <span>Digital moisture probe audit: every production batch is measured to ensure fiber moisture is strictly under 12% before master carton packing.</span>
+                      <span className="font-mono text-[11px] text-amber-700 font-semibold">QA MOISTURE AUDIT</span>
+                    </figcaption>
+                  </figure>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs mt-3">
+                    <div className="p-3.5 bg-stone-100 rounded-lg">
+                      <span className="font-bold text-stone-900 block mb-1">1. Moisture Strictly &lt;10%–12%</span>
+                      <span>Calibrated electrical resistance pin meters ensure zero mold or mildew risk during 30–45 days of ocean container transit.</span>
+                    </div>
+                    <div className="p-3.5 bg-stone-100 rounded-lg">
+                      <span className="font-bold text-stone-900 block mb-1">2. 100% Needle Detection</span>
+                      <span>High-sensitivity conveyor tunnel metal detectors scan every stitched mat to guarantee zero broken sewing needles remain.</span>
+                    </div>
+                    <div className="p-3.5 bg-stone-100 rounded-lg">
+                      <span className="font-bold text-stone-900 block mb-1">3. Seam Pull & Flatness Testing</span>
+                      <span>Dynamometer mechanical pull tests confirm seam joints exceed 350 N tensile resistance, paired with 24-hour floor flatness tests.</span>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section 7: Packaging Logistics */}
+                <section id="packaging-logistics" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    7. Packaging Logistics & Ocean Freight Optimization (CBM Calculations)
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Logistics Breakthrough:</strong>
+                    Because ocean freight is billed on volumetric cubic meters (CBM), we engineer rolled cylindrical core packaging and dense flat-folding to maximize container loadability. A standard 20ft GP container carries 5,500 to 6,400 jute floor mats across 500–540 master cartons (28 CBM), while a 40ft High Cube (HQ) container accommodates 13,800 to 15,500 units (68 CBM)—compressing international ocean shipping costs to just $0.18–$0.28 per mat.
+                  </div>
+
+                  {/* Image 3: Studio Catalog Showcase */}
+                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs bg-stone-50 flex flex-col items-center">
+                    <img
+                      src="/images/blog/custom-jute-floor-mats-wholesale-display.jpg"
+                      alt="Collection of custom export-grade jute floor mats including circular mandala mat, flatweave runner, and semicircle doormat on concrete podium"
+                      className="w-full h-auto max-h-[560px] object-contain mx-auto block"
+                    />
+                    <figcaption className="w-full p-3 text-xs text-stone-500 bg-stone-50 border-t border-stone-100 flex items-center justify-between">
+                      <span>Export-grade floor mat collections: from handloom flatweave runners to circular mandala area rugs, engineered for rolled and flat-pack container shipping.</span>
+                      <span className="font-mono text-[11px] text-amber-700 font-semibold">OEM EXPORT COLLECTION</span>
+                    </figcaption>
+                  </figure>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    Our packaging engineering protocols prevent carton crushing, moisture penetration, and pallet shifting during ocean voyages:
+                  </p>
+
+                  <ul className="mt-2 space-y-2 text-xs sm:text-sm text-stone-700 list-disc pl-5">
+                    <li><strong>5-Ply Heavy-Duty Master Cartons:</strong> Double-wall corrugated export cartons with Edge Crush Test (ECT) rating of 44 lbs/in and 275 psi bursting strength.</li>
+                    <li><strong>Hermetic Polyethylene Moisture Barrier Liners:</strong> Each carton is lined with a thick virgin PE moisture-barrier bag, taped airtight after packing.</li>
+                    <li><strong>Active Desiccant Protection:</strong> Two 50g–100g non-toxic activated silica gel or bentonite clay desiccant packs inside each carton to absorb ambient micro-humidity.</li>
+                    <li><strong>Export Markings & Barcodes:</strong> Standard GS1-compliant shipping marks, gross/net weight indicators, and scannable master carton barcode labels.</li>
+                  </ul>
+                </section>
+
+                {/* Section 8: Why Source Jute Floor Mats from Bangladesh */}
+                <section id="why-bangladesh" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    8. Why Source Jute Floor Mats Directly From Bangladesh?
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Direct Answer:</strong>
+                    Bangladesh is the undisputed global hub for natural jute manufacturing, producing over 40% of the world's raw bast fiber and supplying over 70% of global manufactured jute exports. Sourcing factory-direct from Golden Fiber Crafts Limited provides international buyers raw fiber cost stability, zero import customs tariffs under EU Everything But Arms (EBA) and UK DCTS treaties, and rapid maritime dispatch from Chattogram Seaport.
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 text-xs sm:text-sm text-stone-700">
+                    <div className="p-4 rounded-xl bg-white border border-stone-200">
+                      <span className="font-bold text-stone-900 block font-serif text-sm mb-1">Native Tosha Raw Material</span>
+                      <span>Zero currency exchange risk or cross-border duties on raw fiber. Bangladesh's fertile delta basin produces the world's longest, silkiest, and most resilient bast fibers.</span>
+                    </div>
+                    <div className="p-4 rounded-xl bg-white border border-stone-200">
+                      <span className="font-bold text-stone-900 block font-serif text-sm mb-1">Duty-Free Market Entry (GSP / EBA)</span>
+                      <span>Under the European Union's Everything But Arms (EBA) and UK DCTS trade agreements, manufactured jute floor mats enter European and British markets with 0% customs import duty.</span>
+                    </div>
+                    <div className="p-4 rounded-xl bg-white border border-stone-200">
+                      <span className="font-bold text-stone-900 block font-serif text-sm mb-1">Direct Factory Pricing</span>
+                      <span>By partnering directly with Golden Fiber Crafts Limited, international retail brands bypass overseas trading intermediaries, cutting middleman markups by 20% to 35%.</span>
+                    </div>
+                    <div className="p-4 rounded-xl bg-white border border-stone-200">
+                      <span className="font-bold text-stone-900 block font-serif text-sm mb-1">Chattogram Seaport (BDCGP)</span>
+                      <span>Direct feeder container vessels connect Chattogram Port to major transshipment ports (Singapore, Tanjung Pelepas, Colombo), enabling smooth transit to Europe and North America.</span>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section 9: Sustainability & Ethics */}
+                <section id="sustainable-ethics" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    9. Sustainable Manufacturing, Social Ethics & Women Empowerment
+                  </h2>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    At Golden Fiber Crafts Limited, sustainability encompasses ecological stewardship and tangible social impact. Over 85% of our weaving, coiling, stitching, and finishing artisans are rural Bangladeshi women. Through dignified, fair-wage employment, flexible community-based production hubs, healthcare stipends, and safe workshop conditions, we empower craftswomen to achieve financial independence and educate their families.
+                  </p>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-2">
+                    On our factory floor, 100% of rope cuttings, fabric selvedges, and raw fiber trims are sorted and redirected into secondary recycling pipelines—such as organic handmade paper manufacturing and felt sound-insulation padding—achieving zero landfill waste.
+                  </p>
+                </section>
+
+                {/* Section 10: Buyer Due Diligence */}
+                <section id="buyer-due-diligence" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    10. Buyer Due Diligence Audit Checklist for Jute Floor Mat Sourcing
+                  </h2>
+
+                  <div className="mt-4 p-5 bg-white rounded-xl border border-stone-200 shadow-2xs space-y-3 text-xs sm:text-sm">
+                    <div className="flex items-start gap-2.5 text-stone-800">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Verify Direct Factory Ownership:</strong> Confirm physical production workshops, weaving handlooms, and valid commercial export licenses in Bangladesh rather than trading intermediaries.</span>
+                    </div>
+                    <div className="flex items-start gap-2.5 text-stone-800">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Audit Fiber Moisture Metering:</strong> Require written quality logs verifying digital pin-probe testing strictly below 10%–12% moisture on every finished carton lot before sealing.</span>
+                    </div>
+                    <div className="flex items-start gap-2.5 text-stone-800">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Verify 100% Metal Detection & Needle Scanning:</strong> Request third-party inspection certificates proving 100% conveyor tunnel metal detection for consumer safety.</span>
+                    </div>
+                    <div className="flex items-start gap-2.5 text-stone-800">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Inspect Seam Lock-Stitching & Flatness:</strong> Inspect sample units for flat floor alignment without edge curling and seam joint pull resistance exceeding 350 N.</span>
+                    </div>
+                    <div className="flex items-start gap-2.5 text-stone-800">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Verify Chemical Safety & RSL:</strong> Demand signed declarations of AZO-free reactive dyes, non-toxic backing formulations, and full compliance with EU REACH and US California Proposition 65.</span>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section 11: Procurement Guide */}
+                <section id="procurement-guide" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    11. Step-by-Step International Procurement Guide (Inquiry to FOB)
+                  </h2>
+
+                  <div className="mt-4 grid grid-cols-1 sm:grid-cols-5 gap-3 text-xs">
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center mb-2">1</span>
+                      <strong className="text-stone-900 block font-serif text-sm">Spec & RFQ</strong>
+                      <span className="text-stone-500 mt-1 block leading-relaxed">Provide target dimensions (round/runner/doormat), weave construction, border trim, and estimated quantities.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center mb-2">2</span>
+                      <strong className="text-stone-900 block font-serif text-sm">Sample Prototyping</strong>
+                      <span className="text-stone-500 mt-1 block leading-relaxed">Physical pre-production floor mat prototypes crafted and dispatched in 7–10 days via DHL/FedEx.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center mb-2">3</span>
+                      <strong className="text-stone-900 block font-serif text-sm">PO & Contract</strong>
+                      <span className="text-stone-500 mt-1 block leading-relaxed">Proforma Invoice confirmed with 30% commercial deposit or Irrevocable Commercial L/C at Sight.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center mb-2">4</span>
+                      <strong className="text-stone-900 block font-serif text-sm">Bulk Manufacturing</strong>
+                      <span className="text-stone-500 mt-1 block leading-relaxed">30–40 days execution for 1x20ft FCL with ongoing in-line AQL 2.5 quality inspections and moisture monitoring.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center mb-2">5</span>
+                      <strong className="text-stone-900 block font-serif text-sm">FOB Export</strong>
+                      <span className="text-stone-500 mt-1 block leading-relaxed">Container drayage to Chattogram Seaport, ISPM 15 fumigation, customs clearance, and B/L issuance.</span>
+                    </div>
+                  </div>
+                </section>
+              </>
             ) : (
               /* ========================================================================= */
               /* JUTE BASKET EDITORIAL CONTENT (COMPLETE 11 SECTIONS) */
@@ -1213,14 +1680,14 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                 <div>
                   <span className="text-amber-700 text-xs font-semibold uppercase tracking-wider block mb-1">Catalog Spotlight</span>
                   <h3 className="text-xl font-serif font-bold text-stone-900">
-                    {isBagArticle ? 'Featured Jute Bag Export Models' : 'Featured Jute Basket Export Models'}
+                    {isBagArticle ? 'Featured Jute Bag Export Models' : isMatArticle ? 'Featured Jute Floor Mat Export Models' : 'Featured Jute Basket Export Models'}
                   </h3>
                 </div>
                 <Link
-                  to={isBagArticle ? '/categories/bags' : '/categories/baskets'}
+                  to={isBagArticle ? '/categories/bags' : isMatArticle ? '/categories/jute' : '/categories/baskets'}
                   className="inline-flex items-center gap-1 text-xs font-semibold text-amber-700 hover:text-amber-800"
                 >
-                  <span>{isBagArticle ? 'View All 24 Bag Models' : 'View All 42 Basket Models'}</span>
+                  <span>{isBagArticle ? 'View All 24 Bag Models' : isMatArticle ? 'View All Floor Mat Models' : 'View All 42 Basket Models'}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
@@ -1233,6 +1700,13 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                   { code: 'BJB-17', name: 'Midnight Black Jute Tote', img: '/products/bjb_17_new.jpg', desc: 'AZO-free black dyed burlap tote' },
                   { code: 'BJB-55', name: 'Coiled Rope Jute Boat Tote', img: '/products/bjb_55_new.jpg', desc: '14mm marine cotton rope handles' },
                   { code: 'BJB-05', name: 'Indigo Striped Market Bag', img: '/products/bjb_05_new.jpg', desc: 'Jute-cotton union soft shopper' }
+                ] : isMatArticle ? [
+                  { code: 'BJM-10', name: 'Unbleached Round Jute Area Mat', img: '/products/bjm_10_new.jpg', desc: 'Continuous helical braided coil' },
+                  { code: 'BJM-12', name: 'Classic Flatweave Rectangular Rug', img: '/products/bjm_12_new.jpg', desc: 'Handloom flatwoven selvedge runner' },
+                  { code: 'BJM-13', name: 'Rectangular Doormat w/ Black Border', img: '/products/bjm_13_new.jpg', desc: 'Ribbed bouclé + canvas border' },
+                  { code: 'BJM-26', name: 'Half-Moon Semicircle Doormat', img: '/products/bjm_26_new.jpg', desc: 'Concentric braided entrance mat' },
+                  { code: 'BJM-27', name: 'Concentric Ring Mottled Door Mat', img: '/products/bjm_27_new.jpg', desc: 'Charcoal & natural ripple weave' },
+                  { code: 'BJM-31', name: 'Openwork Lattice Ring Mandala Mat', img: '/products/bjm_31_new.jpg', desc: 'Intricate boho mandala loops' }
                 ] : [
                   { code: 'DJB-01', name: 'Storage Jute Basket (Set of 3)', img: '/products/djb_01_hd.jpg', desc: 'Coiled Tosha jute storage bins' },
                   { code: 'DJB-03', name: 'Round Basket w/ Black Rim', img: '/products/djb_03_hd.jpg', desc: 'Dyed accent trim nesting set' },
@@ -1344,6 +1818,8 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                 <h3 className="text-2xl sm:text-3xl font-serif font-bold tracking-tight">
                   {isBagArticle
                     ? 'Launch Your Custom Jute Bag Program with Golden Fiber Crafts'
+                    : isMatArticle
+                    ? 'Launch Your Custom Jute Floor Mat Collection with Golden Fiber Crafts'
                     : 'Launch Your Custom Jute Basket Collection with Golden Fiber Crafts'}
                 </h3>
                 <p className="mt-3 text-sm sm:text-base text-stone-300 leading-relaxed font-light">
@@ -1352,7 +1828,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                 
                 <div className="mt-6 flex flex-wrap gap-4 items-center">
                   <button
-                    onClick={() => onOpenQuoteModal({ productCode: isBagArticle ? 'JUTE-BAG-CONTAINER-RFQ' : 'JUTE-BASKET-CONTAINER-RFQ' })}
+                    onClick={() => onOpenQuoteModal({ productCode: isBagArticle ? 'JUTE-BAG-CONTAINER-RFQ' : isMatArticle ? 'JUTE-FLOOR-MAT-CONTAINER-RFQ' : 'JUTE-BASKET-CONTAINER-RFQ' })}
                     className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold rounded-lg text-sm transition shadow-sm flex items-center gap-2"
                   >
                     <Mail className="w-4 h-4" />
