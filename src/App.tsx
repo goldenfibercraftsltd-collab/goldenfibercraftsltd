@@ -203,6 +203,8 @@ export const AppContent: React.FC = () => {
           <Route path="/jute-basket-manufacturer-bangladesh" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
           <Route path="/jute-floor-mat-manufacturer-bangladesh" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
           <Route path="/jute-floor-mats-manufacturer-bangladesh" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
+          <Route path="/jute-placemat-manufacturer-bangladesh" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
+          <Route path="/jute-placemats-manufacturer-bangladesh" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
           <Route path="/:slug" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
         </Routes>
 

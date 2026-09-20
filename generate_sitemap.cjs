@@ -40,6 +40,13 @@ const corePages = [
     { loc: 'https://goldenfibercraftsltd.com/images/blog/raw-jute-fiber-grading-floor-mats-bangladesh.jpg', title: 'Raw Golden Jute Bast Fiber Grading Bangladesh' },
     { loc: 'https://goldenfibercraftsltd.com/images/blog/jute-floor-mat-quality-control-moisture-inspection.jpg', title: 'Jute Floor Mat Quality Control Moisture Meter Inspection' }
   ]},
+  { url: '/jute-placemat-manufacturer-bangladesh', priority: '0.95', changefreq: 'weekly', images: [
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-jute-placemat-manufacturer-bangladesh.jpg', title: 'Custom Jute Placemat Manufacturer in Bangladesh Wholesale' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/bangladeshi-artisan-weaving-jute-placemat.jpg', title: 'Bangladeshi Artisan Weaving Jute Placemat' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/custom-jute-placemats-wholesale-display.jpg', title: 'Custom Jute Placemats Wholesale Display' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/raw-jute-fiber-grading-placemats-bangladesh.jpg', title: 'Raw Golden Jute Bast Fiber Grading Placemats Bangladesh' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/jute-placemat-quality-control-moisture-inspection.jpg', title: 'Jute Placemat Quality Control Moisture Meter Inspection' }
+  ]},
   { url: '/about', priority: '0.8', changefreq: 'weekly' },
   { url: '/materials', priority: '0.8', changefreq: 'weekly' },
   { url: '/infrastructure', priority: '0.8', changefreq: 'weekly' },

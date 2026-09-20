@@ -21,8 +21,9 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
   const currentSlug = slug || articleSlug || (pathSlug && pathSlug !== 'blog' ? pathSlug : '') || 'jute-bag-manufacturer-bangladesh';
   const article = getArticleBySlug(currentSlug) || ARTICLES_DATA[0];
 
-  const isBagArticle = article.slug.includes('bag') || article.category_slug === 'bags';
-  const isMatArticle = article.slug.includes('mat') || article.category_slug === 'floor-mats' || article.id.includes('mat');
+  const isPlacematArticle = article.slug.includes('placemat') || article.category_slug === 'placemats';
+  const isBagArticle = !isPlacematArticle && (article.slug.includes('bag') || article.category_slug === 'bags');
+  const isMatArticle = !isPlacematArticle && (article.slug.includes('floor-mat') || article.category_slug === 'floor-mats' || (article.slug.includes('mat') && !article.slug.includes('placemat')) || article.id.includes('floor-mat'));
 
   usePageTitle(
     article.title,
@@ -184,7 +185,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
 
             <div className="flex items-center gap-2">
               <button
-                onClick={() => onOpenQuoteModal({ productCode: isBagArticle ? 'JUTE-BAG-OEM' : 'JUTE-BASKET-OEM' })}
+                onClick={() => onOpenQuoteModal({ productCode: isBagArticle ? 'JUTE-BAG-OEM' : isMatArticle ? 'JUTE-FLOOR-MAT-OEM' : isPlacematArticle ? 'JUTE-PLACEMAT-OEM' : 'JUTE-BASKET-OEM' })}
                 className="px-4 py-2 bg-amber-600 hover:bg-amber-500 text-white rounded-lg text-xs font-semibold transition shadow-xs flex items-center gap-1.5"
               >
                 <Mail className="w-3.5 h-3.5" />
@@ -250,13 +251,13 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                   Direct Factory Desk
                 </span>
                 <h4 className="font-serif font-bold text-base text-white">
-                  {isBagArticle ? 'Need Custom Jute Bag Samples?' : isMatArticle ? 'Need Custom Jute Floor Mat Samples?' : 'Need Custom Jute Basket Samples?'}
+                  {isBagArticle ? 'Need Custom Jute Bag Samples?' : isMatArticle ? 'Need Custom Jute Floor Mat Samples?' : isPlacematArticle ? 'Need Custom Jute Placemat Samples?' : 'Need Custom Jute Basket Samples?'}
                 </h4>
                 <p className="mt-2 text-xs text-amber-100/90 leading-relaxed">
                   We supply OEM sample prototypes with custom screen printing, PMS color dyeing, and direct FOB Chattogram container quotes in 24 hours.
                 </p>
                 <button
-                  onClick={() => onOpenQuoteModal({ productCode: isBagArticle ? 'OEM-JUTE-BAGS' : isMatArticle ? 'OEM-JUTE-FLOOR-MATS' : 'OEM-JUTE-BASKETS' })}
+                  onClick={() => onOpenQuoteModal({ productCode: isBagArticle ? 'OEM-JUTE-BAGS' : isMatArticle ? 'OEM-JUTE-FLOOR-MATS' : isPlacematArticle ? 'OEM-JUTE-PLACEMATS' : 'OEM-JUTE-BASKETS' })}
                   className="mt-4 w-full py-2.5 bg-white hover:bg-stone-100 text-amber-950 rounded-lg text-xs font-bold transition shadow-xs flex items-center justify-center gap-1.5"
                 >
                   <Mail className="w-3.5 h-3.5" />
@@ -276,7 +277,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                 </div>
                 <div className="flex justify-between text-stone-600">
                   <span>Standard MOQ:</span>
-                  <span className="font-medium text-stone-900">{isBagArticle ? '500 Pieces (Flexible)' : isMatArticle ? '300 Pieces (Flexible)' : '200 Sets (Flexible)'}</span>
+                  <span className="font-medium text-stone-900">{isBagArticle ? '500 Pieces (Flexible)' : isMatArticle ? '300 Pieces (Flexible)' : isPlacematArticle ? '500 Pieces (125 Sets of 4)' : '200 Sets (Flexible)'}</span>
                 </div>
                 <div className="flex justify-between text-stone-600">
                   <span>Moisture Tolerance:</span>
@@ -1216,6 +1217,521 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                   </div>
                 </section>
               </>
+            ) : isPlacematArticle ? (
+              /* ========================================================================= */
+              /* JUTE PLACEMAT EDITORIAL CONTENT (COMPLETE 11 SECTIONS) */
+              /* ========================================================================= */
+              <>
+                {/* Section 1: Fiber Anatomy & Material Engineering */}
+                <section id="fiber-anatomy-engineering" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    1. Jute Fiber Anatomy & Heat-Resistant Tableware Engineering
+                  </h2>
+                  
+                  {/* GEO/AEO Direct Answer Snippet Callout */}
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Direct Definition:</strong>
+                    A commercial jute placemat is an engineered tabletop protective charger crafted from natural bast fibers of the <em>Corchorus</em> plant—predominantly Bangladeshi golden Tosha jute (<em>Corchorus olitorius</em>). Possessing a composite cellular matrix of 60%–63% cellulose, 12%–14% lignin, and natural thermal insulation up to 100°C–120°C, genuine jute placemats deliver heat protection, acoustic tableware dampening, table scratch resistance, and 100% home-compostable circularity without toxic PVC or synthetic microfibers.
+                  </div>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    In global residential, hospitality, and luxury restaurant table settings, handcrafted jute placemats provide a distinctive synergy of rustic organic warmth and rugged commercial durability. Derived from the fibrous phloem sheath of tall annual <em>Corchorus</em> stalks harvested across the fertile riverbanks of Faridpur, Rangpur, and Tangail in Bangladesh, raw golden jute bast filaments possess extraordinary longitudinal tensile strength.
+                  </p>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-2">
+                    Through slow biological microbial retting in clean slow-moving freshwater ponds, plant pectins dissolve cleanly. The resulting golden fibers are hackled, combed, and spun into dense 3-ply core braids (4mm to 10mm thickness). When coiled and bound with double-needle lock-stitching, the natural air-trapping hollow lumens inside the bast fiber cellular walls provide exceptional thermal barrier performance, protecting polished oak, walnut, quartz, and marble surfaces from scorching hot plates, serving casseroles, and steaming soup tureens.
+                  </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-5 text-xs text-stone-700">
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="font-bold text-stone-900 text-sm block mb-1 text-amber-800">60%–63% Cellulose</span>
+                      <span>Crystalline polymer core providing high dimensional tensile strength, preventing distortion under heavy hot dinnerware.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="font-bold text-stone-900 text-sm block mb-1 text-amber-800">12%–14% Natural Lignin</span>
+                      <span>Natural plant resin that imparts structural body and firm resilience, ensuring placemats lie flat without curling.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="font-bold text-stone-900 text-sm block mb-1 text-amber-800">100°C–120°C Heat Barrier</span>
+                      <span>Hollow cellular lumen structures insulate tabletops against thermal shock, hot porcelain dishes, and coffee carafes.</span>
+                    </div>
+                  </div>
+
+                  {/* Image 4: Raw Fiber Inspection & Grading */}
+                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs bg-stone-50 flex flex-col items-center">
+                    <img
+                      src="/images/blog/raw-jute-fiber-grading-placemats-bangladesh.jpg"
+                      alt="Raw golden Tosha jute bast fiber bundles drying on bamboo frames in rural Bangladesh for placemat weaving"
+                      className="w-full h-auto max-h-[560px] object-contain mx-auto block"
+                    />
+                    <figcaption className="w-full p-3 text-xs text-stone-500 bg-stone-50 border-t border-stone-100 flex items-center justify-between">
+                      <span>Raw golden Tosha jute bast fibers graded by staple length, tensile luster, and clean retted quality at Golden Fiber Crafts Limited.</span>
+                      <span className="font-mono text-[11px] text-amber-700 font-semibold">TOSHA FIBER GRADING</span>
+                    </figcaption>
+                  </figure>
+                </section>
+
+                {/* Section 2: Why Global Hospitality & Retail Brands Are Switching */}
+                <section id="why-retailers-switch" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    2. Why Global Hospitality & Retail Brands Are Switching to Natural Jute Placemats
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Market Shift Insight:</strong>
+                    International hospitality procurement managers, eco-resorts, homeware retail chains, and dining table accessory brands across North America, the UK, Europe, and Australia are systematically decommissioning synthetic PVC and polyester placemats in favor of handcrafted jute dining table mats. Propelled by strict ESG mandates, plastic ban regulations, and rising consumer demand for biophilic organic textures, natural jute placemats deliver 100% home compostability, premium tactile luxury, and superior retail sales velocity.
+                  </div>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    The rapid global transition away from petroleum-based synthetic table mats is driven by four powerful commercial and ecological forces:
+                  </p>
+
+                  <ul className="mt-3 space-y-3 text-xs sm:text-sm text-stone-700 list-disc pl-5">
+                    <li>
+                      <strong>Elimination of Microplastics & Chemical Leaching:</strong> Conventional PVC and woven polyester vinyl placemats contain plasticizers, phthalates, and synthetic stabilizers that release harmful volatile organic compounds (VOCs) when heated by hot dinnerware. Tosha jute placemats are 100% plant-based, AZO-free dyed, non-toxic, and certified food-contact safe under EU REACH and US California Proposition 65 standards.
+                    </li>
+                    <li>
+                      <strong>Superior Heat Protection Without Warping:</strong> Synthetic vinyl chargers soften, deform, and warp when subjected to plates above 60°C. In contrast, tightly braided and stitched natural jute comfortably withstands temperatures up to 100°C–120°C (212°F–248°F), shielding expensive solid wood and quartz dining tables against thermal ring damage.
+                    </li>
+                    <li>
+                      <strong>Acoustic Clatter Absorption in High-End Dining:</strong> In bustling restaurants, boutique hotel dining rooms, and lively family dinners, porcelain dinnerware and heavy cutlery clatter loudly against glass and hardwood surfaces. Dense 8mm braided jute placemats naturally absorb acoustic vibrations, creating a serene, upscale dining ambiance.
+                    </li>
+                    <li>
+                      <strong>High Retail Profit Margins as Multi-Piece Sets:</strong> When packaged as coordinated retail Sets of 4 (S/4) or Sets of 6 (S/6) with matching coasters tied in rustic jute twine or kraft belly bands, natural jute placemats command 3x–4x markup at retail, making them a top-performing SKU in department stores and boutique gift catalogs.
+                    </li>
+                  </ul>
+                </section>
+
+                {/* Section 3: Commercial Classifications & Weaving Styles */}
+                <section id="commercial-classifications" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    3. Commercial Classifications & Weaving Styles of Jute Placemats
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Direct Classification Guide:</strong>
+                    Commercial jute placemats are classified into four principal structural typologies: (1) Continuous Helical Braided Coils (round and oval table chargers assembled with industrial lock-stitching), (2) Punja Handloom Flatweaves (smooth rectangular mats with fringe ends), (3) Openwork Mandala & Petal Lace (artisan decorative centerpieces), and (4) Hybrid Natural Fiber Weaves (jute interwoven with wild seagrass or kaisa grass).
+                  </div>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    Depending on target interior aesthetics, table dimensions, and commercial end-use, Golden Fiber Crafts manufactures four distinct structural constructions:
+                  </p>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+                    <div className="p-4 bg-white rounded-xl border border-stone-200 shadow-2xs space-y-2">
+                      <h4 className="font-serif font-bold text-stone-900 text-sm flex items-center gap-1.5">
+                        <Sparkles className="w-4 h-4 text-amber-700" />
+                        Continuous Helical Braided Coils
+                      </h4>
+                      <p className="text-xs text-stone-600 leading-relaxed">
+                        Constructed by continuously coiling an 8mm to 10mm 3-ply braided jute rope outward from a central core, joined with heavy-duty industrial zig-zag lock-stitching. Engineered in circular diameters (35cm, 38cm charger standard) and generous ovals (30x45cm). Offers maximum thickness (6mm–8mm) and heavy thermal insulation.
+                      </p>
+                      <div className="text-[11px] font-mono text-stone-500 bg-stone-50 p-2 rounded">
+                        <strong>Models:</strong> BJM-01 (Oval), BJM-02 (Mustard Rim), BJM-08 (Natural Round)
+                      </div>
+                    </div>
+
+                    <div className="p-4 bg-white rounded-xl border border-stone-200 shadow-2xs space-y-2">
+                      <h4 className="font-serif font-bold text-stone-900 text-sm flex items-center gap-1.5">
+                        <Sparkles className="w-4 h-4 text-amber-700" />
+                        Punja Handloom Flatweaves
+                      </h4>
+                      <p className="text-xs text-stone-600 leading-relaxed">
+                        Woven on traditional artisan pit looms using high-twist jute yarns interwoven with unbleached cotton warp threads. Creates a smooth, uniform planar surface (30x45cm rectangular) that prevents stemware wobble while featuring hand-knotted 2cm–3cm fringed selvedge ends for a timeless bohemian table setting.
+                      </p>
+                      <div className="text-[11px] font-mono text-stone-500 bg-stone-50 p-2 rounded">
+                        <strong>Models:</strong> BJM-06 (Denim Blue Flatweave), GFC-TM-004 (Jute-Cotton)
+                      </div>
+                    </div>
+
+                    <div className="p-4 bg-white rounded-xl border border-stone-200 shadow-2xs space-y-2">
+                      <h4 className="font-serif font-bold text-stone-900 text-sm flex items-center gap-1.5">
+                        <Sparkles className="w-4 h-4 text-amber-700" />
+                        Openwork Mandala & Petal Lace Chargers
+                      </h4>
+                      <p className="text-xs text-stone-600 leading-relaxed">
+                        Features intricate hand-looped concentric rings, scalloped petal selvedges, and open geometric lace medallions. Highly sought after by Scandinavian, Japandi, and luxury coastal wedding planners as decorative chargers beneath clear glass dinner plates.
+                      </p>
+                      <div className="text-[11px] font-mono text-stone-500 bg-stone-50 p-2 rounded">
+                        <strong>Models:</strong> BJM-31 (Mandala Openwork), BJM-32 (Petal Border)
+                      </div>
+                    </div>
+
+                    <div className="p-4 bg-white rounded-xl border border-stone-200 shadow-2xs space-y-2">
+                      <h4 className="font-serif font-bold text-stone-900 text-sm flex items-center gap-1.5">
+                        <Sparkles className="w-4 h-4 text-amber-700" />
+                        Hybrid Jute & Seagrass / Kaisa Tableware
+                      </h4>
+                      <p className="text-xs text-stone-600 leading-relaxed">
+                        Combines the silky softness and dye-receptivity of Tosha jute with the rigid, moisture-tolerant structural cores of wild Bangladeshi kaisa grass or saline seagrass cords. Produces a firm, tactile table charger with rich two-tone natural color contrast.
+                      </p>
+                      <div className="text-[11px] font-mono text-stone-500 bg-stone-50 p-2 rounded">
+                        <strong>Models:</strong> GFC-SPM-006 to GFC-SPM-010 (Seagrass Placemats)
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section 4: 7-Stage Manufacturing Process */}
+                <section id="manufacturing-process" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    4. The 7-Stage Manufacturing Process: From Raw Bast Fiber to Master Carton
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Direct Process Summary:</strong>
+                    Manufacturing export-grade jute placemats requires seven tightly controlled production stages: (1) Tosha bast fiber hackling and grading, (2) yarn spinning and core cord braiding (4mm–10mm), (3) AZO-free reactive yarn dyeing (Pantone matching), (4) artisan hand-coiling and multi-needle lock-stitching, (5) edge trimming, fringe brushing, and optional repellent coating, (6) 48-hour hot-air dehumidification (&lt;10%–12% moisture), and (7) AQL 2.5 quality auditing, metal detection, and export packing.
+                  </div>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    At Golden Fiber Crafts Limited, every batch of tableware placemats follows an audited, zero-defect standard operating procedure:
+                  </p>
+
+                  <div className="space-y-3 my-5">
+                    <div className="flex gap-3 p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs text-xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-700 text-white font-bold flex items-center justify-center shrink-0">1</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif text-sm">Fiber Hackling, Combing & Grading</strong>
+                        <span className="text-stone-600 leading-relaxed">Raw Tosha golden jute bundles undergo manual hackling to remove root bark, crop debris, and coarse fiber ends, selecting only premium Grade B & C long bast strands for tableware softness and luster.</span>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-3 p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs text-xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-700 text-white font-bold flex items-center justify-center shrink-0">2</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif text-sm">High-Twist Spinning & Multi-Strand Cord Braiding</strong>
+                        <span className="text-stone-600 leading-relaxed">Selected fibers are spun into uniform 8 lb/spy to 14 lb/spy yarns, then plied into 3-strand or 4-strand round braided cords (6mm–10mm) with controlled tension to prevent diameter irregularities.</span>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-3 p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs text-xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-700 text-white font-bold flex items-center justify-center shrink-0">3</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif text-sm">AZO-Free Reactive Dyeing & Pantone Verification</strong>
+                        <span className="text-stone-600 leading-relaxed">Yarns destined for colored borders or multi-tone designs undergo high-temperature reactive dyeing using non-toxic AZO-free dyestuffs, matched to Pantone FHI/PMS standards with spectrophotometer validation.</span>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-3 p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs text-xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-700 text-white font-bold flex items-center justify-center shrink-0">4</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif text-sm">Artisan Helical Coiling & Industrial Lock-Stitching</strong>
+                        <span className="text-stone-600 leading-relaxed">Artisans coil the braided ropes radially while synchronizing feeding speed with heavy-duty zig-zag lock-stitching sewing heads. Balanced mechanical stitch tension ensures placemats lie 100% dead-flat without potato-chip curvature.</span>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-3 p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs text-xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-700 text-white font-bold flex items-center justify-center shrink-0">5</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif text-sm">Selvedge Binding, Fringe Combing & Finishing</strong>
+                        <span className="text-stone-600 leading-relaxed">Perimeter ropes are securely tapered and lock-stitched underneath. For fringed models, edges are combed to a uniform 2.5cm–3.0cm length. Optional non-toxic water-repellent mist is applied for hospitality clients.</span>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-3 p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs text-xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-700 text-white font-bold flex items-center justify-center shrink-0">6</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif text-sm">48-Hour Forced Hot-Air Dehumidification</strong>
+                        <span className="text-stone-600 leading-relaxed">Placemats are racked inside specialized dehumidification drying chambers at 45°C–50°C for 48 hours until digital pin-probe moisture readings confirm internal moisture strictly under 10%–12%.</span>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-3 p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs text-xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-700 text-white font-bold flex items-center justify-center shrink-0">7</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif text-sm">AQL 2.5 Quality Audit, Metal Detection & Packaging</strong>
+                        <span className="text-stone-600 leading-relaxed">Every piece passes through a tunnel conveyor needle detector (&lt;0.8mm ferrous sensitivity). Approved goods are bundled into retail Sets of 4/6 or bulk flat-packed into heavy-duty 5-ply export master cartons.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Image 2: Artisan Stitching Image */}
+                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs bg-stone-50 flex flex-col items-center">
+                    <img
+                      src="/images/blog/bangladeshi-artisan-weaving-jute-placemat.jpg"
+                      alt="Bangladeshi artisan woman hand-stitching a round coiled golden jute placemat in a clean workshop"
+                      className="w-full h-auto max-h-[560px] object-contain mx-auto block"
+                    />
+                    <figcaption className="w-full p-3 text-xs text-stone-500 bg-stone-50 border-t border-stone-100 flex items-center justify-between">
+                      <span>Bangladeshi artisan hand-stitching a round braided Tosha jute placemat with balanced thread tension for perfect tabletop flatness.</span>
+                      <span className="font-mono text-[11px] text-amber-700 font-semibold">ARTISAN CRAFTSMANSHIP</span>
+                    </figcaption>
+                  </figure>
+                </section>
+
+                {/* Section 5: OEM / ODM Customization Options */}
+                <section id="oem-customization" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    5. OEM / ODM Customization Options for Private-Label Tableware Brands
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Customization Direct Answer:</strong>
+                    Golden Fiber Crafts Limited operates full OEM/ODM bespoke manufacturing for global private labels. Customization capabilities include bespoke diameters (round 30cm, 35cm, 38cm, 40cm), tailored geometries (oval 30x45cm, rectangular 33x48cm), Pantone-matched fiber dyeing, contrast cotton canvas borders, laser-engraved vegan leather tags, and multi-piece retail gift packs (Set of 4 or 6) with branded belly bands and GS1 barcodes.
+                  </div>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    Our technical engineering team collaborates directly with retail buyers and interior product developers:
+                  </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-5 text-xs text-stone-700">
+                    <div className="p-4 bg-white rounded-xl border border-stone-200 space-y-1.5">
+                      <strong className="text-stone-900 font-serif block text-sm">Bespoke Shapes & Dimensions</strong>
+                      <span>Circular chargers (35cm / 38cm / 40cm), dining ovals (30x45cm), rectangles (33x48cm), octagons, and matching drink coasters (10cm / 12cm). Dimensional tolerance maintained strictly within +/- 1.0%.</span>
+                    </div>
+
+                    <div className="p-4 bg-white rounded-xl border border-stone-200 space-y-1.5">
+                      <strong className="text-stone-900 font-serif block text-sm">Pantone Color Matching (PMS & FHI)</strong>
+                      <span>Custom yarn dyeing matched to Pantone Fashion, Home + Interiors (FHI) palettes using certified AZO-free reactive dyes. Available in solid colorways, bi-color spirals, dipped outer borders, or mottled ring effects.</span>
+                    </div>
+
+                    <div className="p-4 bg-white rounded-xl border border-stone-200 space-y-1.5">
+                      <strong className="text-stone-900 font-serif block text-sm">Decorative Borders & Selvedge Trims</strong>
+                      <span>Turned self-selvedge ropes, soft combed 2.5cm–3.5cm natural fringe hems, 100% organic cotton canvas bound borders (in navy, charcoal, olive, or mustard), and delicate scalloped lace loops.</span>
+                    </div>
+
+                    <div className="p-4 bg-white rounded-xl border border-stone-200 space-y-1.5">
+                      <strong className="text-stone-900 font-serif block text-sm">Retail Packaging & Private Labeling</strong>
+                      <span>Debossed genuine leather or vegan cork corner badges, woven damask brand tags, printed recycled kraft belly bands (Set of 4 / Set of 6), FSC-certified carton inserts, and retail-ready GS1 UPC barcodes.</span>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section 6: Quality Control & Defect Prevention */}
+                <section id="quality-control" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    6. Quality Control & Defect Prevention: The AQL 2.5 Standard
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Direct QC Standard:</strong>
+                    Golden Fiber Crafts enforces the ISO 2859-1 / AQL 2.5 General Inspection Level II standard across all placemat export orders. Testing protocols include digital pin-probe moisture verification strictly under 10%–12%, 100% conveyor tunnel metal detection (&lt;0.8mm ferrous sensitivity) to eliminate broken sewing needles, optical flatness verification to ensure zero plate-wobble curvature, and colorfastness testing (ISO 105-X12 Grade 4–5).
+                  </div>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    Tableware exports require extreme precision because uneven mats cause wine glasses to tilt and plates to wobble. Our quality assurance protocol eliminates common export defects:
+                  </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-5 text-xs text-stone-700">
+                    <div className="p-4 bg-white rounded-xl border border-stone-200 space-y-1.5">
+                      <strong className="text-stone-900 font-serif block text-sm">Strict Moisture Audit (&lt;10%–12%)</strong>
+                      <span>Every production lot is probed with calibrated Delmhorst digital resistance pin meters. Packaging never proceeds until fiber moisture is confirmed under 12%, permanently preventing mold during tropical maritime transit.</span>
+                    </div>
+
+                    <div className="p-4 bg-white rounded-xl border border-stone-200 space-y-1.5">
+                      <strong className="text-stone-900 font-serif block text-sm">100% Broken Needle Metal Detection</strong>
+                      <span>Because placemats are sewn on high-speed zig-zag machines, every finished piece passes through an industrial conveyor needle detector tunnel calibrated to detect metallic particles down to 0.8mm ferrous diameter.</span>
+                    </div>
+
+                    <div className="p-4 bg-white rounded-xl border border-stone-200 space-y-1.5">
+                      <strong className="text-stone-900 font-serif block text-sm">Surface Flatness & Zero-Warp Audit</strong>
+                      <span>Placemats are tested on precision optical granite surface plates. Any dish curvature exceeding 1.5mm edge lift is rejected, guaranteeing flawless plate stability on consumer dining tables.</span>
+                    </div>
+
+                    <div className="p-4 bg-white rounded-xl border border-stone-200 space-y-1.5">
+                      <strong className="text-stone-900 font-serif block text-sm">Colorfastness to Wet & Dry Rubbing</strong>
+                      <span>Dyed borders and multi-tone designs undergo crockmeter testing (ISO 105-X12) confirming Grade 4–5 colorfastness, ensuring zero dye bleed onto light-colored wooden tables or damp linen napkins.</span>
+                    </div>
+                  </div>
+
+                  {/* Image 5: Quality Control & Moisture Inspection */}
+                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs bg-stone-50 flex flex-col items-center">
+                    <img
+                      src="/images/blog/jute-placemat-quality-control-moisture-inspection.jpg"
+                      alt="Quality control inspector testing moisture content on stacked jute placemats using digital pin probe meter"
+                      className="w-full h-auto max-h-[560px] object-contain mx-auto block"
+                    />
+                    <figcaption className="w-full p-3 text-xs text-stone-500 bg-stone-50 border-t border-stone-100 flex items-center justify-between">
+                      <span>Quality control inspector testing moisture content on stacked jute placemats with a digital pin-type moisture meter, ensuring readings strictly under 10%–12%.</span>
+                      <span className="font-mono text-[11px] text-amber-700 font-semibold">AQL 2.5 MOISTURE AUDIT</span>
+                    </figcaption>
+                  </figure>
+                </section>
+
+                {/* Section 7: Packaging Logistics & Freight Optimization */}
+                <section id="packaging-logistics" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    7. Packaging Logistics & Ocean Freight Optimization (CBM Calculations)
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Direct Freight Math:</strong>
+                    Because jute placemats are low-profile flat goods, export shipping economics achieve extraordinary volumetric efficiency. A standard 5-ply export master carton (44 x 44 x 26 cm = 0.050 CBM) holds 48 to 60 placemats (or 12 to 15 retail Sets of 4). A standard 20ft GP container accommodates 560–600 cartons (27,000–30,000 placemats), while a 40ft High Cube container loads up to 1,440 cartons (66,000–74,000 placemats), reducing unit ocean freight to mere pennies per piece.
+                  </div>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    Unlike bulky woven storage baskets or lightweight hollow planters, dining placemats stack completely flat with near-zero wasted airspace:
+                  </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-5 text-xs text-stone-700">
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="font-bold text-stone-900 text-sm block mb-1 text-amber-800">20ft GP Container</span>
+                      <span>560–600 Master Cartons carrying 27,000–30,000 individual placemats (6,750–7,500 Sets of 4). Gross cargo weight approx. 8,400 kg.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="font-bold text-stone-900 text-sm block mb-1 text-amber-800">40ft HQ Container</span>
+                      <span>1,380–1,440 Master Cartons carrying 66,000–74,000 individual placemats (16,500–18,500 Sets of 4). Gross cargo weight approx. 20,500 kg.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="font-bold text-stone-900 text-sm block mb-1 text-amber-800">Moisture Barrier Inclusions</span>
+                      <span>Heavy virgin polyethylene liners inside each carton sealed with 50g industrial silica gel desiccants protect against container rain during ocean transit.</span>
+                    </div>
+                  </div>
+
+                  {/* Image 3: Studio Catalog Display / Bulk Packaging */}
+                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs bg-stone-50 flex flex-col items-center">
+                    <img
+                      src="/images/blog/custom-jute-placemats-wholesale-display.jpg"
+                      alt="Studio catalog display of round braided natural golden jute dining placemats with coasters on neutral podium"
+                      className="w-full h-auto max-h-[560px] object-contain mx-auto block"
+                    />
+                    <figcaption className="w-full p-3 text-xs text-stone-500 bg-stone-50 border-t border-stone-100 flex items-center justify-between">
+                      <span>Export-ready natural golden jute placemats and matching coasters displayed in sets of 4 and sets of 6 on showroom pedestal.</span>
+                      <span className="font-mono text-[11px] text-amber-700 font-semibold">WHOLESALE PACKSHOT</span>
+                    </figcaption>
+                  </figure>
+                </section>
+
+                {/* Section 8: Why Source Directly From Bangladesh? */}
+                <section id="why-bangladesh" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    8. Why Source Jute Placemats Directly From Bangladesh?
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Strategic Sourcing Direct Answer:</strong>
+                    Bangladesh is the uncontested global epicenter of natural golden jute, producing over 70% of the world’s high-grade Tosha fiber. Sourcing directly from Golden Fiber Crafts Limited provides global B2B buyers with: (1) direct factory-gate pricing without trading middlemen, (2) duty-free import preferences (EBA/GSP) into the UK, EU, Canada, and Australia, and (3) access to ancestral artisan handicraft clusters delivering unmatched hand-braiding consistency.
+                  </div>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    Global tableware brands that source from re-exporters in India or China typically incur a 15%–25% intermediary markup because those countries import raw fiber from Bangladesh. By working directly with our manufacturing facilities in Dhaka and regional craft hubs, international buyers benefit from:
+                  </p>
+
+                  <ul className="mt-3 space-y-2 text-xs sm:text-sm text-stone-700 list-disc pl-5">
+                    <li><strong>Fiber Supremacy:</strong> Bangladeshi Tosha jute (*Corchorus olitorius*) possesses the highest tensile strength, golden luster, and flexibility among all natural bast fibers worldwide.</li>
+                    <li><strong>0% Import Tariffs via GSP:</strong> Under Generalized Scheme of Preferences (GSP) and Everything But Arms (EBA) trade agreements, Bangladeshi jute tableware enters the UK, EU, Australia, and Canada with 0% customs duty (saving 4% to 9.6% compared to non-GSP origins).</li>
+                    <li><strong>Modern Port Infrastructure:</strong> Direct container transport from Dhaka factories to Chattogram Seaport (BDCGP) via 4-lane expressways ensures predictable 24-hour vessel loading schedules for feeder vessels to Singapore, Colombo, and Tanjung Pelepas.</li>
+                  </ul>
+                </section>
+
+                {/* Section 9: Sustainable Manufacturing, Zero Waste & Social Ethics */}
+                <section id="sustainable-ethics" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    9. Sustainable Manufacturing, Zero Waste & Rural Artisan Ethics
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">ESG & Social Impact Core:</strong>
+                    Golden Fiber Crafts Limited operates a zero-waste, carbon-negative manufacturing model. Over 85% of our hand-braiding and stitching artisans are rural Bangladeshi women who earn fair living wages, enabling economic independence, children’s education, and community healthcare access. All production scraps are re-carded or composted, leaving zero landfill footprint.
+                  </div>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    Every jute placemat manufactured in our workshops embodies ethical, circular production principles:
+                  </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-5 text-xs text-stone-700">
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="font-bold text-stone-900 text-sm block mb-1 text-emerald-800">Carbon Negative Crop</span>
+                      <span>One hectare of growing jute plants absorbs 15 tonnes of CO2 and releases 11 tonnes of oxygen in just 120 days of growth.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="font-bold text-stone-900 text-sm block mb-1 text-emerald-800">Female Artisan Welfare</span>
+                      <span>Fair living wages, safe ergonomic rural workshops, healthcare coverage, and maternity benefits empower over 850 artisan families.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="font-bold text-stone-900 text-sm block mb-1 text-emerald-800">100% Home Compostable</span>
+                      <span>At the end of its multi-year dining life, a 100% natural jute placemat decomposes harmlessly into organic garden humus within 90–120 days.</span>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section 10: Buyer Due Diligence Audit Checklist */}
+                <section id="buyer-due-diligence" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    10. Buyer Due Diligence Audit Checklist for Tableware Sourcing
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Due Diligence Protocol:</strong>
+                    Before committing to international ocean container procurement of handcrafted natural table mats, commercial buyers should execute a rigorous factory audit verifying fiber moisture control, needle detection logs, chemical dye compliance (EU REACH), and phytosanitary fumigation standards.
+                  </div>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    Use this 8-point factory audit checklist when evaluating natural fiber placemat manufacturers:
+                  </p>
+
+                  <div className="space-y-2.5 my-5 text-xs text-stone-700">
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Fiber Moisture & Dehumidification Audit:</strong> Does the factory operate dedicated hot-air circulation chambers maintaining fiber moisture strictly under 10%–12%?</span>
+                    </div>
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Conveyor Needle Detection Protocol:</strong> Is 100% of finished production scanned through calibrated metal detector tunnels (&lt;0.8mm ferrous sensitivity)?</span>
+                    </div>
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Flatness & Dimensional Tolerance:</strong> Are placemats audited on optical granite plates to verify zero edge curling and strict +/- 1% dimensional consistency?</span>
+                    </div>
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Chemical Safety & REACH Certification:</strong> Are all reactive dyes and printing inks certified AZO-free, heavy metal-free, and compliant with EU REACH & US CPSIA?</span>
+                    </div>
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Moisture-Barrier Export Packaging:</strong> Are master cartons 5-ply corrugated with heavy poly liners and 50g industrial silica gel / clay desiccants?</span>
+                    </div>
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Phytosanitary Fumigation (ISPM 15):</strong> Does the supplier provide valid government phytosanitary fumigation certification prior to container loading at Chattogram?</span>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section 11: Step-by-Step International Procurement Guide */}
+                <section id="procurement-guide" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    11. Step-by-Step International Procurement Guide (Inquiry to FOB)
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Procurement Workflow:</strong>
+                    Procuring custom wholesale jute placemats from Golden Fiber Crafts follows a clear, 5-step commercial pipeline: (1) Technical RFQ specification alignment, (2) Prototype sampling and courier dispatch (5–7 days), (3) Formal purchase order and commercial deposit, (4) Mass manufacturing with in-line AQL 2.5 auditing (20–30 days), and (5) ISPM 15 fumigation and FOB Chattogram container dispatch.
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 my-6 text-xs">
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center mb-2">1</span>
+                      <strong className="text-stone-900 block font-serif text-sm">RFQ & Specs</strong>
+                      <span className="text-stone-500 mt-1 block leading-relaxed">Submit target diameters, weave style, Pantone color codes, and retail set packaging requirements.</span>
+                    </div>
+
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center mb-2">2</span>
+                      <strong className="text-stone-900 block font-serif text-sm">Sample Approval</strong>
+                      <span className="text-stone-500 mt-1 block leading-relaxed">Handmade prototypes dispatched in 5–7 business days via DHL/FedEx Express for physical tactile review.</span>
+                    </div>
+
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center mb-2">3</span>
+                      <strong className="text-stone-900 block font-serif text-sm">PO & Deposit</strong>
+                      <span className="text-stone-500 mt-1 block leading-relaxed">Confirm Proforma Invoice with standard 30% T/T advance deposit or Irrevocable L/C at Sight.</span>
+                    </div>
+
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center mb-2">4</span>
+                      <strong className="text-stone-900 block font-serif text-sm">Mass Production</strong>
+                      <span className="text-stone-500 mt-1 block leading-relaxed">20–30 days execution for 1x20ft FCL with ongoing in-line AQL 2.5 quality audits and moisture monitoring.</span>
+                    </div>
+
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center mb-2">5</span>
+                      <strong className="text-stone-900 block font-serif text-sm">FOB Export</strong>
+                      <span className="text-stone-500 mt-1 block leading-relaxed">Container drayage to Chattogram Seaport, ISPM 15 fumigation, customs clearance, and B/L issuance.</span>
+                    </div>
+                  </div>
+                </section>
+              </>
             ) : (
               /* ========================================================================= */
               /* JUTE BASKET EDITORIAL CONTENT (COMPLETE 11 SECTIONS) */
@@ -1680,14 +2196,14 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                 <div>
                   <span className="text-amber-700 text-xs font-semibold uppercase tracking-wider block mb-1">Catalog Spotlight</span>
                   <h3 className="text-xl font-serif font-bold text-stone-900">
-                    {isBagArticle ? 'Featured Jute Bag Export Models' : isMatArticle ? 'Featured Jute Floor Mat Export Models' : 'Featured Jute Basket Export Models'}
+                    {isBagArticle ? 'Featured Jute Bag Export Models' : isMatArticle ? 'Featured Jute Floor Mat Export Models' : isPlacematArticle ? 'Featured Jute Placemat Export Models' : 'Featured Jute Basket Export Models'}
                   </h3>
                 </div>
                 <Link
-                  to={isBagArticle ? '/categories/bags' : isMatArticle ? '/categories/jute' : '/categories/baskets'}
+                  to={isBagArticle ? '/categories/bags' : isMatArticle ? '/categories/jute' : isPlacematArticle ? '/categories/jute' : '/categories/baskets'}
                   className="inline-flex items-center gap-1 text-xs font-semibold text-amber-700 hover:text-amber-800"
                 >
-                  <span>{isBagArticle ? 'View All 24 Bag Models' : isMatArticle ? 'View All Floor Mat Models' : 'View All 42 Basket Models'}</span>
+                  <span>{isBagArticle ? 'View All 24 Bag Models' : isMatArticle ? 'View All Floor Mat Models' : isPlacematArticle ? 'View All Placemat Models' : 'View All 42 Basket Models'}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
@@ -1707,6 +2223,13 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                   { code: 'BJM-26', name: 'Half-Moon Semicircle Doormat', img: '/products/bjm_26_new.jpg', desc: 'Concentric braided entrance mat' },
                   { code: 'BJM-27', name: 'Concentric Ring Mottled Door Mat', img: '/products/bjm_27_new.jpg', desc: 'Charcoal & natural ripple weave' },
                   { code: 'BJM-31', name: 'Openwork Lattice Ring Mandala Mat', img: '/products/bjm_31_new.jpg', desc: 'Intricate boho mandala loops' }
+                ] : isPlacematArticle ? [
+                  { code: 'BJM-01', name: 'Handwoven Oval Jute Placemat', img: '/products/bjm_01.png', desc: 'Concentric braided oval dining charger' },
+                  { code: 'BJM-02', name: 'Round Placemat w/ Mustard Border', img: '/products/bjm_02.png', desc: 'Sunny mustard golden yellow rim accent' },
+                  { code: 'BJM-03', name: 'Spiral Swirl Washable Placemat', img: '/products/bjm_03.png', desc: 'Two-tone radial moss green spiral swirl' },
+                  { code: 'BJM-04', name: 'Mottled Indigo Green Placemat', img: '/products/bjm_04.png', desc: 'Textured mottled deep indigo weave' },
+                  { code: 'BJM-06', name: 'Denim Blue Flatweave Placemat', img: '/products/bjm_06.png', desc: 'Handloom flatweave with 2cm fringe' },
+                  { code: 'BJM-11', name: 'Cobalt & White Striped Placemat', img: '/products/bjm_11.png', desc: 'Concentric nautical bi-color braided rings' }
                 ] : [
                   { code: 'DJB-01', name: 'Storage Jute Basket (Set of 3)', img: '/products/djb_01_hd.jpg', desc: 'Coiled Tosha jute storage bins' },
                   { code: 'DJB-03', name: 'Round Basket w/ Black Rim', img: '/products/djb_03_hd.jpg', desc: 'Dyed accent trim nesting set' },
