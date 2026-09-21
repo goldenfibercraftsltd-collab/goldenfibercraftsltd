@@ -9191,6 +9191,306 @@ export const PRODUCTS: ProductItem[] = [
     "Export Certified"
   ]
 },
+{
+  "id": "GFC-SFM-002",
+  "slug": "rectangular-braided-seagrass-floor-mat-gfc-sfm-002",
+  "code": "GFC-SFM-002",
+  "name": "Rectangular Braided Seagrass Floor Mat",
+  "category": "seagrass",
+  "categoryName": "Seagrass",
+  "categorySlug": "seagrass",
+  "subCategory": "floor-mats",
+  "image": "/products/gfc_sfm_002.jpg",
+  "galleryImages": [
+    "/products/gfc_sfm_002.jpg"
+  ],
+  "description": "Durable rectangular handwoven seagrass floor mat and entryway doormat featuring dense horizontal ribbed braids with bound border selvage.",
+  "longDescription": {
+    "overview": "The Rectangular Braided Seagrass Floor Mat (Art No: GFC-SFM-002) is designed for modern eco-conscious residential and commercial interiors. Handcrafted from heavy-gauge sun-dried coastal seagrass fibers, its dense ribbed weave creates a textured, naturally slip-resistant surface that withstands daily high-traffic entrance zones and living room areas.",
+    "craftsmanship": "Skillfully braided by rural artisan women in southern Bangladesh coastal communities. Raw natural seagrass blades are sun-cured, spun into uniform thick cords, and hand-stitched into robust linear rows with reinforced border edging for long-lasting structural stability.",
+    "exportDetails": "Export packaged rolled or flat in moisture-barrier poly wraps inside 5-ply heavy-duty corrugated export master cartons (10 pieces per carton). Humidity strictly verified below 12% before dispatch.",
+    "careInstructions": "Regularly shake off surface dust or vacuum without a beater brush. For spills, blot immediately with a damp cotton cloth and allow to air dry in a well-ventilated space."
+  },
+  "unit": "Single Piece",
+  "cbmPerCarton": 0.062,
+  "setPerCarton": 10,
+  "nwPerCtn": 14.5,
+  "gwPerCtn": 16.0,
+  "material": "100% Coastal Wild Seagrass",
+  "color": "Natural Golden Straw / Khaki Tan",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-SFM-002"
+    },
+    {
+      "key": "Item Name",
+      "value": "Rectangular Braided Seagrass Floor Mat"
+    },
+    {
+      "key": "Specification",
+      "value": "60cm x 90cm"
+    },
+    {
+      "key": "Materials",
+      "value": "100% Natural Coastal Seagrass"
+    },
+    {
+      "key": "MOQ",
+      "value": "200 Pieces"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "100% Eco-Friendly & Biodegradable",
+    "Dense Ribbed Braided Construction",
+    "Natural Anti-Static & Cooling Underfoot",
+    "Heavy-Duty High-Traffic Durability"
+  ]
+},
+{
+  "id": "GFC-SFM-003",
+  "slug": "concentric-spiral-round-seagrass-floor-mat-gfc-sfm-003",
+  "code": "GFC-SFM-003",
+  "name": "Concentric Spiral Round Seagrass Floor Mat",
+  "category": "seagrass",
+  "categoryName": "Seagrass",
+  "categorySlug": "seagrass",
+  "subCategory": "floor-mats",
+  "image": "/products/gfc_sfm_003.jpg",
+  "galleryImages": [
+    "/products/gfc_sfm_003.jpg"
+  ],
+  "description": "Artisanal circular round floor mat hand-coiled in a mesmerizing continuous spiral weave using natural sun-cured golden coastal seagrass.",
+  "longDescription": {
+    "overview": "The Concentric Spiral Round Seagrass Floor Mat (Art No: GFC-SFM-003) introduces organic symmetry and grounding warmth to contemporary living rooms, reading nooks, bedrooms, and boutique resort spaces. Its spiral braided coils radiate outward seamlessly to create an inviting bohemian statement piece.",
+    "craftsmanship": "Handmade using traditional coiling and braiding techniques passed down through generations. Selected Bangladeshi wild seagrass stalks are braided into uniform ropes and coiled tightly on wooden floor workbenches, joined with concealed high-tensile natural thread stitching.",
+    "exportDetails": "Packed flat or folded with protective cardboard interleaving in master cartons of 8 pieces. Strict fumigation and anti-humidity packaging standards applied for ocean container transit.",
+    "careInstructions": "Vacuum regularly with suction only. Spot clean with mild soap and damp cloth if needed. Keep away from continuous standing moisture."
+  },
+  "unit": "Single Piece",
+  "cbmPerCarton": 0.058,
+  "setPerCarton": 8,
+  "nwPerCtn": 12.8,
+  "gwPerCtn": 14.2,
+  "material": "100% Coastal Wild Seagrass",
+  "color": "Natural Golden Honey / Straw Beige",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-SFM-003"
+    },
+    {
+      "key": "Item Name",
+      "value": "Concentric Spiral Round Seagrass Floor Mat"
+    },
+    {
+      "key": "Specification",
+      "value": "100cm Diameter"
+    },
+    {
+      "key": "Materials",
+      "value": "100% Natural Coastal Seagrass"
+    },
+    {
+      "key": "MOQ",
+      "value": "200 Pieces"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Continuous Spiral Radial Weave",
+    "Naturally Breathable & Hypoallergenic",
+    "Reversible Design for Extended Life",
+    "Artisanal Hand-Stitched Finish"
+  ]
+},
+{
+  "id": "GFC-SFM-004",
+  "slug": "round-seagrass-floor-mat-with-black-border-gfc-sfm-004",
+  "code": "GFC-SFM-004",
+  "name": "Round Seagrass Floor Mat with Black Border",
+  "category": "seagrass",
+  "categoryName": "Seagrass",
+  "categorySlug": "seagrass",
+  "subCategory": "floor-mats",
+  "image": "/products/gfc_sfm_004.jpg",
+  "galleryImages": [
+    "/products/gfc_sfm_004.jpg"
+  ],
+  "description": "Striking circular round natural seagrass floor rug framed by an elegant contrasting black braided outer perimeter border rim.",
+  "longDescription": {
+    "overview": "Combining organic rustic texture with sharp Scandinavian modernism, the Round Seagrass Floor Mat with Black Border (Art No: GFC-SFM-004) features a golden coiled seagrass body bounded by a bold, deep-black braided rim. A top wholesale pick for luxury home decor brands, boutique hotels, and retail department stores worldwide.",
+    "craftsmanship": "Master rural weavers in Bangladesh twist pure coastal seagrass into concentric coils, finished with an edge band hand-dyed using eco-certified AZO-free non-toxic deep black dyes, hand-bound with heavy-duty lockstitching.",
+    "exportDetails": "Export packaged in heavy-duty poly-sleeves, packed 8 pieces per 5-ply export master carton. Passed SGS drop testing and container load optimization.",
+    "careInstructions": "Vacuum with floor attachment. In case of spills, blot gently without scrubbing. Store in dry, well-ventilated rooms."
+  },
+  "unit": "Single Piece",
+  "cbmPerCarton": 0.060,
+  "setPerCarton": 8,
+  "nwPerCtn": 13.0,
+  "gwPerCtn": 14.5,
+  "material": "100% Natural Seagrass & Azo-Free Dyed Jute/Seagrass Border",
+  "color": "Natural Golden Beige with Matte Black Border",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-SFM-004"
+    },
+    {
+      "key": "Item Name",
+      "value": "Round Seagrass Floor Mat with Black Border"
+    },
+    {
+      "key": "Specification",
+      "value": "100cm Diameter"
+    },
+    {
+      "key": "Materials",
+      "value": "100% Natural Seagrass, AZO-free dye"
+    },
+    {
+      "key": "MOQ",
+      "value": "200 Pieces"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "High-Contrast Modern Black Border",
+    "Eco-Friendly AZO-Free Dyeing",
+    "Dense Anti-Curling Edge Construction",
+    "Export Grade Quality Tested"
+  ]
+},
+{
+  "id": "GFC-SFM-005",
+  "slug": "oval-seagrass-floor-mat-with-black-border-gfc-sfm-005",
+  "code": "GFC-SFM-005",
+  "name": "Oval Seagrass Floor Mat with Black Border",
+  "category": "seagrass",
+  "categoryName": "Seagrass",
+  "categorySlug": "seagrass",
+  "subCategory": "floor-mats",
+  "image": "/products/gfc_sfm_005.jpg",
+  "galleryImages": [
+    "/products/gfc_sfm_005.jpg"
+  ],
+  "description": "Elongated oval handwoven natural seagrass floor rug accented with an eye-catching black braided outer border, ideal for entryways and bedside runners.",
+  "longDescription": {
+    "overview": "The Oval Seagrass Floor Mat with Black Border (Art No: GFC-SFM-005) provides a graceful elongated silhouette that elongates interior spaces while protecting high-wear floor zones. Its natural wheat center framed by crisp black braided borders adds sophisticated coastal modern aesthetic to hallways, kitchen islands, and bedroom sides.",
+    "craftsmanship": "Handcrafted by experienced artisans using selected pliable seagrass reeds cultivated in Bangladesh's southern alluvial river estuaries. Coiled in precise elliptical curves and edged with double-braided dyed black fibers.",
+    "exportDetails": "Packed rolled or flat 10 units per master carton, protected by moisture-absorbing silica packets and heavy outer corrugation.",
+    "careInstructions": "Vacuum without brush bar. Spot clean stains with damp towel and mild detergent; dry thoroughly."
+  },
+  "unit": "Single Piece",
+  "cbmPerCarton": 0.065,
+  "setPerCarton": 10,
+  "nwPerCtn": 15.0,
+  "gwPerCtn": 16.6,
+  "material": "100% Coastal Seagrass & Eco-Dyed Border",
+  "color": "Natural Golden Sand with Jet Black Border",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-SFM-005"
+    },
+    {
+      "key": "Item Name",
+      "value": "Oval Seagrass Floor Mat with Black Border"
+    },
+    {
+      "key": "Specification",
+      "value": "60cm x 100cm"
+    },
+    {
+      "key": "Materials",
+      "value": "100% Natural Coastal Seagrass"
+    },
+    {
+      "key": "MOQ",
+      "value": "200 Pieces"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Sleek Elongated Oval Silhouette",
+    "High-Contrast Framing Border",
+    "Naturally Resilient Against Foot Traffic",
+    "Zero Microplastics & 100% Biodegradable"
+  ]
+},
+{
+  "id": "GFC-SFM-006",
+  "slug": "oval-natural-braided-seagrass-floor-mat-gfc-sfm-006",
+  "code": "GFC-SFM-006",
+  "name": "Oval Natural Braided Seagrass Floor Mat",
+  "category": "seagrass",
+  "categoryName": "Seagrass",
+  "categorySlug": "seagrass",
+  "subCategory": "floor-mats",
+  "image": "/products/gfc_sfm_006.jpg",
+  "galleryImages": [
+    "/products/gfc_sfm_006.jpg"
+  ],
+  "description": "Timeless all-natural oval hand-braided seagrass floor mat featuring seamless concentric elliptic coils and an organic self-braided edge.",
+  "longDescription": {
+    "overview": "The Oval Natural Braided Seagrass Floor Mat (Art No: GFC-SFM-006) celebrates pure organic minimalism. Showing off the untamed beauty and warm honey hues of natural seagrass without artificial dyes, it brings an earthy, calming ambiance to living rooms, bathrooms, sunrooms, and kitchen spaces.",
+    "craftsmanship": "Hand-braided and hand-coiled by skilled artisan women in rural Bangladesh. Every mat uses 100% natural sun-bleached seagrass, coiled smoothly into symmetrical oval rings and stitched securely with concealed industrial-strength natural cords.",
+    "exportDetails": "Packed flat or rolled with protective kraft paper sleeves, 10 pieces per export master carton. Certified mold-free and moisture-tested prior to container loading.",
+    "careInstructions": "Shake out debris or vacuum gently. For spot cleaning, dab with a damp cloth and dry in open shade or indoors."
+  },
+  "unit": "Single Piece",
+  "cbmPerCarton": 0.065,
+  "setPerCarton": 10,
+  "nwPerCtn": 14.8,
+  "gwPerCtn": 16.4,
+  "material": "100% Coastal Wild Seagrass",
+  "color": "Natural Golden Straw / Warm Tan",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-SFM-006"
+    },
+    {
+      "key": "Item Name",
+      "value": "Oval Natural Braided Seagrass Floor Mat"
+    },
+    {
+      "key": "Specification",
+      "value": "60cm x 100cm"
+    },
+    {
+      "key": "Materials",
+      "value": "100% Pure Natural Seagrass"
+    },
+    {
+      "key": "MOQ",
+      "value": "200 Pieces"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Pure Undyed 100% Natural Seagrass",
+    "Harmonious Elliptical Geometry",
+    "Double-Sided Reversible Utility",
+    "Soft & Cool Tactile Texture Underfoot"
+  ]
+},
   {
   "id": "GFC-SPM-001",
   "slug": "round-seagrass-table-placemat-set-gfc-spm-001",
