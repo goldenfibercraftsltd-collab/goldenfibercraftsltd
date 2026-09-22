@@ -77,7 +77,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
     { path: '/infrastructure', label: 'INFRASTRUCTURE' },
     { path: '/sustainability', label: 'SUSTAINABILITY' },
     { path: '/quality', label: 'QUALITY' },
-    { path: '/blog', label: 'BLOG' },
     { path: '/clients', label: 'CLIENTS' },
     { path: '/contact', label: 'CONTACT' },
   ];

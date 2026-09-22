@@ -7363,6 +7363,228 @@ export const PRODUCTS: ProductItem[] = [
     ],
     features: ['Internal Waterproof Plastic Liner', 'Natural Plant Accent', 'Multi-size Set', 'Sustainable Harvest']
   },
+  {
+    id: 'GFC-SP-0030',
+    slug: 'belly-shape-seagrass-planter-basket-gfc-sp-0030',
+    code: 'GFC-SP-0030',
+    name: 'Belly Shape Seagrass Planter Basket with Handles',
+    category: 'seagrass',
+    categoryName: 'Seagrass',
+    categorySlug: 'seagrass',
+    subCategory: 'planters',
+    image: '/products/gfc_sp_0030.jpg',
+    galleryImages: [
+      '/products/gfc_sp_0030.jpg'
+    ],
+    description: 'Nested set of 3 artisanal belly-shaped coastal seagrass planter baskets featuring sturdy ear handles, flexible folding body, and waterproof protective inner liner.',
+    longDescription: {
+      overview: 'The Belly Shape Seagrass Planter Basket set (GFC-SP-0030) combines traditional Bangladeshi coastal craftsmanship with versatile multi-functional utility. Featuring a rounded belly silhouette that can be used upright with handles or folded down as a shallow bowl, making it ideal for indoor houseplants, fiddle-leaf figs, and decorative greenery.',
+      craftsmanship: 'Handwoven by skilled rural artisans using 100% sun-cured natural coastal seagrass fiber twisted into dense, pliable coils with double-reinforced loop handles.',
+      exportDetails: 'Supplied nested S/3 (Small, Medium, Large) flat-packed or nested in heavy-duty 5-ply export master cartons with moisture barrier desiccant.',
+      careInstructions: 'Wipe with a damp cloth or soft brush. Keep indoors or under covered patio. Suitable for potted plants with nursery pot inside.'
+    },
+    unit: 'S/3',
+    cbmPerCarton: 0.065,
+    setPerCarton: 4,
+    nwPerCtn: 4.8,
+    gwPerCtn: 6.2,
+    material: '100% Coastal Wild Seagrass & Waterproof PE Liner',
+    color: 'Natural Golden Straw / Warm Honey',
+    specifications: [
+      { key: 'Item Code', value: 'GFC-SP-0030' },
+      { key: 'Item Name', value: 'Belly Shape Seagrass Planter Basket with Handles' },
+      { key: 'Specification', value: 'S: Dia 28cm x H 26cm, M: Dia 32cm x H 28cm, L: Dia 36cm x H 32cm' },
+      { key: 'Materials', value: '100% Natural Coastal Seagrass & PE Liner' },
+      { key: 'MOQ', value: '200 Sets' },
+      { key: 'Country of Origin', value: 'Bangladesh' }
+    ],
+    features: ['Nested Set of 3 Sizes', 'Collapsible Belly Silhouette', 'Integrated Dual Ear Handles', 'Thick Waterproof PE Plastic Inner Liner']
+  },
+  {
+    id: 'GFC-SP-0031',
+    slug: 'tapered-cylinder-seagrass-planters-gfc-sp-0031',
+    code: 'GFC-SP-0031',
+    name: 'Tapered Cylinder Seagrass Planter Pot Covers',
+    category: 'seagrass',
+    categoryName: 'Seagrass',
+    categorySlug: 'seagrass',
+    subCategory: 'planters',
+    image: '/products/gfc_sp_0031.jpg',
+    galleryImages: [
+      '/products/gfc_sp_0031.jpg'
+    ],
+    description: 'Nested set of 3 cylindrical tapered seagrass plant pot covers featuring thick sewn-in transparent waterproof liners for nursery plant pots.',
+    longDescription: {
+      overview: 'Engineered specifically for commercial plant nurseries, home decor retailers, and interior designers, these tapered cylindrical seagrass planter covers fit standard nursery grow pots perfectly. The factory-stitched waterproof plastic membrane ensures no water or soil touches the natural woven fiber.',
+      craftsmanship: 'Dense diagonal interlocking braided seagrass weave with reinforced rolled top rim and stable flat-bottom base.',
+      exportDetails: 'Nested S/3 per set, stacked compactly to optimize shipping container loadability (CBM).',
+      careInstructions: 'Empty standing drainage water periodically. Wipe outer seagrass with dry or slightly damp cloth.'
+    },
+    unit: 'S/3',
+    cbmPerCarton: 0.056,
+    setPerCarton: 4,
+    nwPerCtn: 4.2,
+    gwPerCtn: 5.6,
+    material: 'Natural Coastal Seagrass & Heavy-Duty Plastic Liner',
+    color: 'Natural Golden Khaki',
+    specifications: [
+      { key: 'Item Code', value: 'GFC-SP-0031' },
+      { key: 'Item Name', value: 'Tapered Cylinder Seagrass Planter Pot Covers' },
+      { key: 'Specification', value: 'S: Dia 20cm x H 18cm, M: Dia 25cm x H 22cm, L: Dia 30cm x H 27cm' },
+      { key: 'Materials', value: '100% Natural Wild Seagrass with Waterproof Liner' },
+      { key: 'MOQ', value: '250 Sets' },
+      { key: 'Country of Origin', value: 'Bangladesh' }
+    ],
+    features: ['Factory-Stitched Thick Plastic Liner', 'Flat-Bottom Stable Design', 'Tapered Cylindrical Profile', 'Nested Compact Export Packing']
+  },
+  {
+    id: 'GFC-SP-0032',
+    slug: 'standing-seagrass-planter-wooden-legs-gfc-sp-0032',
+    code: 'GFC-SP-0032',
+    name: 'Standing Seagrass Planter with Wooden Tripod Legs',
+    category: 'seagrass',
+    categoryName: 'Seagrass',
+    categorySlug: 'seagrass',
+    subCategory: 'planters',
+    image: '/products/gfc_sp_0032.jpg',
+    galleryImages: [
+      '/products/gfc_sp_0032.jpg'
+    ],
+    description: 'Elevated indoor plant stand featuring a hand-coiled natural seagrass planter basket supported by three solid tapered natural wooden tripod legs.',
+    longDescription: {
+      overview: 'Add Scandinavian elegance and organic warmth to interior living spaces with this elevated seagrass plant stand. Designed with a sturdy cylindrical basket mounted securely onto three solid tapered hardwood legs, elevating houseplants for optimal sunlight and aesthetic presentation.',
+      craftsmanship: 'Precision-coiled natural coastal seagrass over a durable frame, attached to solid lathe-turned natural beechwood legs with pre-installed screw hardware.',
+      exportDetails: 'Detachable knock-down (KD) screw legs packed flat inside each basket cavity to minimize freight volume.',
+      careInstructions: 'Easy screw-in tool-free assembly. Keep in dry indoor living areas.'
+    },
+    unit: 'S/1',
+    cbmPerCarton: 0.048,
+    setPerCarton: 4,
+    nwPerCtn: 5.5,
+    gwPerCtn: 7.0,
+    material: 'Natural Coastal Seagrass, Solid Ash/Beechwood Legs',
+    color: 'Natural Seagrass & Light Natural Wood',
+    specifications: [
+      { key: 'Item Code', value: 'GFC-SP-0032' },
+      { key: 'Item Name', value: 'Standing Seagrass Planter with Wooden Tripod Legs' },
+      { key: 'Specification', value: 'Basket Dia 26cm x H 22cm (Total Height with Legs: 42cm)' },
+      { key: 'Materials', value: 'Handwoven Seagrass & Solid Hardwood Legs' },
+      { key: 'MOQ', value: '150 Pieces' },
+      { key: 'Country of Origin', value: 'Bangladesh' }
+    ],
+    features: ['Elevated Modern Plant Stand', 'Solid Natural Wooden Tripod Legs', 'Knock-Down Flat-Pack Assembly', 'Internal Moisture Protection']
+  },
+  {
+    id: 'GFC-SP-0033',
+    slug: 'chevron-geometric-seagrass-planters-gfc-sp-0033',
+    code: 'GFC-SP-0033',
+    name: 'Geometric Chevron Seagrass Planter Baskets',
+    category: 'seagrass',
+    categoryName: 'Seagrass',
+    categorySlug: 'seagrass',
+    subCategory: 'planters',
+    image: '/products/gfc_sp_0033.jpg',
+    galleryImages: [
+      '/products/gfc_sp_0033.jpg'
+    ],
+    description: 'Set of 2 nesting cylindrical seagrass plant pot baskets accented with a distinctive handwoven black chevron zigzag geometric mid-body pattern.',
+    longDescription: {
+      overview: 'A striking blend of rustic natural texture and contemporary graphic styling. The Geometric Chevron Seagrass Planter duo features contrast dyed black seagrass fiber woven into an intricate herringbone arrow motif that elevates modern bohemian and minimalist home interiors.',
+      craftsmanship: 'Fine hand-braided coastal seagrass with azo-free dyed black accent cords woven into the core structure.',
+      exportDetails: 'Nested S/2 set packed in polybag with silica gel desiccant inside corrugated export master cartons.',
+      careInstructions: 'Avoid direct outdoor weather exposure. For indoor potted plants, use with clear nursery saucers or pot liners.'
+    },
+    unit: 'S/2',
+    cbmPerCarton: 0.052,
+    setPerCarton: 6,
+    nwPerCtn: 5.2,
+    gwPerCtn: 6.8,
+    material: '100% Coastal Seagrass & Azo-Free Eco Dye',
+    color: 'Natural Golden Honey & Matte Black',
+    specifications: [
+      { key: 'Item Code', value: 'GFC-SP-0033' },
+      { key: 'Item Name', value: 'Geometric Chevron Seagrass Planter Baskets' },
+      { key: 'Specification', value: 'S: Dia 22cm x H 20cm, M: Dia 28cm x H 26cm' },
+      { key: 'Materials', value: 'Natural Wild Seagrass with Black Fiber Pattern' },
+      { key: 'MOQ', value: '200 Sets' },
+      { key: 'Country of Origin', value: 'Bangladesh' }
+    ],
+    features: ['Handwoven Black Chevron Accent Band', 'Nested Set of 2 Sizes', 'Rolled Double-Reinforced Rim', 'Eco-Friendly Biodegradable Fibers']
+  },
+  {
+    id: 'GFC-SP-0034',
+    slug: 'two-tone-hanging-seagrass-planter-gfc-sp-0034',
+    code: 'GFC-SP-0034',
+    name: 'Two-Tone Seagrass Hanging Planter Basket',
+    category: 'seagrass',
+    categoryName: 'Seagrass',
+    categorySlug: 'seagrass',
+    subCategory: 'planters',
+    image: '/products/gfc_sp_0034.jpg',
+    galleryImages: [
+      '/products/gfc_sp_0034.jpg'
+    ],
+    description: 'Artisanal round hanging plant basket handwoven from natural seagrass with cream-white cotton band, suspended by heavy-duty twisted jute hanger ropes.',
+    longDescription: {
+      overview: 'Display trailing pothos, ivy, ferns, and string-of-pearls in natural style with our Two-Tone Seagrass Hanging Planter Basket. Featuring a coiled natural seagrass bowl with cream woven cotton rim and sturdy quadruple-strand jute suspension cords with handcrafted macrame gathering knots.',
+      craftsmanship: 'Sun-dried seagrass tightly coiled with cream cotton twine, fitted with robust 4-ply natural jute suspension rope and metal hanging ring.',
+      exportDetails: 'Folded ropes tucked neatly into basket interior, individually poly-wrapped, 12 units per export carton.',
+      careInstructions: 'Maximum safe load weight 5 kg. Clean with soft bristled dusting brush.'
+    },
+    unit: 'S/1',
+    cbmPerCarton: 0.055,
+    setPerCarton: 12,
+    nwPerCtn: 6.8,
+    gwPerCtn: 8.2,
+    material: 'Natural Seagrass, Cotton Cord & Twisted Jute Rope',
+    color: 'Natural Golden Seagrass & Cream White',
+    specifications: [
+      { key: 'Item Code', value: 'GFC-SP-0034' },
+      { key: 'Item Name', value: 'Two-Tone Seagrass Hanging Planter Basket' },
+      { key: 'Specification', value: 'Basket Dia 25cm x H 16cm (Total Hanging Length: 85cm)' },
+      { key: 'Materials', value: 'Coastal Seagrass & 100% Natural Jute Rope' },
+      { key: 'MOQ', value: '250 Pieces' },
+      { key: 'Country of Origin', value: 'Bangladesh' }
+    ],
+    features: ['Quadruple Twisted Jute Rope Suspension', 'Decorative Cream-White Coiled Rim', 'Accommodates Up to 5kg Plant Weight', 'Internal Waterproof Protective Membrane']
+  },
+  {
+    id: 'GFC-SP-0035',
+    slug: 'oval-trough-seagrass-planter-gfc-sp-0035',
+    code: 'GFC-SP-0035',
+    name: 'Oval Trough Seagrass Planter Basket with Handles',
+    category: 'seagrass',
+    categoryName: 'Seagrass',
+    categorySlug: 'seagrass',
+    subCategory: 'planters',
+    image: '/products/gfc_sp_0035.jpg',
+    galleryImages: [
+      '/products/gfc_sp_0035.jpg'
+    ],
+    description: 'Elongated oval trough seagrass planter basket with dual woven side handles and built-in waterproof PE liner, ideal for windowsill herbs & succulent displays.',
+    longDescription: {
+      overview: 'Designed for windowsills, dining table centerpieces, and patio herb arrangements, this elongated oval trough planter provides generous planting space for multiple smaller pots or succulents. Complete with an internal waterproof liner to preserve natural fiber longevity.',
+      craftsmanship: 'Handwoven with horizontal continuous seagrass rope braiding over a firm oval wire-reinforced frame with integrated arch handles.',
+      exportDetails: 'Nesting sets or bulk packed in 5-ply export master cartons with protective desiccant bags.',
+      careInstructions: 'Wipe clean with a damp cloth. Do not soak in standing water.'
+    },
+    unit: 'S/1',
+    cbmPerCarton: 0.060,
+    setPerCarton: 8,
+    nwPerCtn: 5.6,
+    gwPerCtn: 7.2,
+    material: 'Natural Coastal Seagrass & Clear PE Liner',
+    color: 'Natural Golden Straw',
+    specifications: [
+      { key: 'Item Code', value: 'GFC-SP-0035' },
+      { key: 'Item Name', value: 'Oval Trough Seagrass Planter Basket with Handles' },
+      { key: 'Specification', value: 'L 42cm x W 22cm x H 16cm' },
+      { key: 'Materials', value: '100% Coastal Seagrass with PE Liner' },
+      { key: 'MOQ', value: '200 Pieces' },
+      { key: 'Country of Origin', value: 'Bangladesh' }
+    ],
+    features: ['Elongated Oval Trough Silhouette', 'Built-in Clear Waterproof PE Liner', 'Dual Braided Side Carrying Handles', 'Ideal for Herbs, Succulents & Windowsills']
+  },
 
   // 2. Jute Products
   {
