@@ -11573,4 +11573,164 @@ export const PRODUCTS: ProductItem[] = [
     "Sturdy Ottoman Table Stable Base"
   ]
 },
+  {
+    id: "GFC-KB-006",
+    slug: "coiled-kans-grass-round-storage-bowl-baskets-gfc-kb-006",
+    code: "GFC-KB-006",
+    name: "Coiled Kans Grass Round Storage Bowl Baskets (Set of 3)",
+    category: "kans-grass",
+    categoryName: "Kans Grass",
+    categorySlug: "kans-grass",
+    subCategory: "baskets",
+    image: "/products/gfc_kb_006.jpg",
+    galleryImages: ["/products/gfc_kb_006.jpg"],
+    description: "Set of 3 shallow nesting round bowls handcrafted from wild river Kans grass (Kaisa grass) tightly bound with natural cotton thread in earthy terracotta red-orange, golden mustard yellow, and natural cream.",
+    longDescription: {
+      "overview": "The Coiled Kans Grass Round Storage Bowl Baskets (Art No: GFC-KB-006) bring earthy warmth and authentic artisanal beauty to modern dining tables and living spaces. Woven in a nesting set of three, each bowl features a distinctive harmonious colorway.",
+      "craftsmanship": "Handmade by rural women artisans in Bangladesh utilizing wild perennial Kans grass harvested from riverbanks, tightly coiled and wrapped with durable cotton cord for lasting structural integrity.",
+      "exportDetails": "Nested in sets of 3, bundled with moisture-barrier wrapping and placed in 5-ply export master cartons with silica gel desiccant packs.",
+      "careInstructions": "Wipe with a soft dry cloth. Keep in dry indoor environments away from excessive direct water immersion."
+},
+    specifications: [
+      { key: "Item Code", value: "GFC-KB-006" },
+      { key: "Item Name", value: "Coiled Kans Grass Round Storage Bowl Baskets (Set of 3)" },
+      { key: "Specification", value: "L: Dia 28cm x H 11cm | M: Dia 24cm x H 10cm | S: Dia 20cm x H 8.5cm" },
+      { key: "Materials", value: "100% Wild Kans Grass (Saccharum spontaneum) & Natural Cotton Thread" },
+      { key: "MOQ", value: "300 Sets" },
+      { key: "Country of Origin", value: "Bangladesh" }
+    ],
+    features: [
+      "Hand-Coiled Dense Wild Kans Grass Core",
+      "Eco-Friendly Azo-Free Thread Wrapping",
+      "Set of 3 Space-Saving Nesting Bowls",
+      "Versatile Tabletop Serving & Storage Catchall"
+],
+    unit: "S/3",
+    cbmPerCarton: 0.054,
+    setPerCarton: 12,
+    nwPerCtn: 5.8,
+    gwPerCtn: 7.2,
+    material: "100% Wild Kans Grass (Saccharum spontaneum) & Natural Cotton Thread",
+    color: "Terracotta Red, Golden Mustard & Natural Straw Beige"
+  },
+  {
+    id: "GFC-KB-007",
+    slug: "multicolored-ribbed-kans-grass-serving-bowls-gfc-kb-007",
+    code: "GFC-KB-007",
+    name: "Multicolored Ribbed Kans Grass Serving Bowl Baskets (Set of 3)",
+    category: "kans-grass",
+    categoryName: "Kans Grass",
+    categorySlug: "kans-grass",
+    subCategory: "baskets",
+    image: "/products/gfc_kb_007.jpg",
+    galleryImages: ["/products/gfc_kb_007.jpg"],
+    description: "Artisanal trio of nesting round shallow bowl baskets hand-coiled with wild Kans grass core and wrapped in vibrant concentric rings of turquoise blue, goldenrod yellow, terracotta orange, and natural cream.",
+    longDescription: {
+      "overview": "Our Multicolored Ribbed Kans Grass Serving Bowls (Art No: GFC-KB-007) combine traditional Bengali coiling techniques with lively contemporary color blocking, creating eye-catching tabletop centerpieces for global retailers.",
+      "craftsmanship": "Carefully hand-wound around sustainable Kans grass fibers using centuries-old coiling traditions, finished with smooth rim selvage and durable ribbed sidewalls.",
+      "exportDetails": "Each set of 3 nested together with barcode hangtag, packed 12 sets per heavy-duty double-wall export carton.",
+      "careInstructions": "Spot clean with dry or slightly damp towel. Store in well-ventilated dry spaces."
+},
+    specifications: [
+      { key: "Item Code", value: "GFC-KB-007" },
+      { key: "Item Name", value: "Multicolored Ribbed Kans Grass Serving Bowl Baskets (Set of 3)" },
+      { key: "Specification", value: "L: Dia 26cm x H 12cm | M: Dia 22cm x H 10cm | S: Dia 18cm x H 8cm" },
+      { key: "Materials", value: "100% Wild River Kans Grass & Eco-Dyed Cotton Yarn" },
+      { key: "MOQ", value: "300 Sets" },
+      { key: "Country of Origin", value: "Bangladesh" }
+    ],
+    features: [
+      "Vibrant Multi-Color Concentric Striped Weave",
+      "Nesting Set of 3 Flared Shallow Bowls",
+      "Ideal for Bread, Dry Fruits, Keys & Jewelry Catchall",
+      "Lightweight, Rigid & Biodegradable Craft"
+],
+    unit: "S/3",
+    cbmPerCarton: 0.048,
+    setPerCarton: 12,
+    nwPerCtn: 5.2,
+    gwPerCtn: 6.5,
+    material: "100% Wild River Kans Grass & Eco-Dyed Cotton Yarn",
+    color: "Turquoise Teal, Sun Yellow, Brick Orange & Cream"
+  },
+  {
+    id: "GFC-KB-008",
+    slug: "cylindrical-kans-grass-planter-storage-baskets-gfc-kb-008",
+    code: "GFC-KB-008",
+    name: "Cylindrical Kans Grass Planter & Storage Baskets with Liners (Set of 3)",
+    category: "kans-grass",
+    categoryName: "Kans Grass",
+    categorySlug: "kans-grass",
+    subCategory: "baskets",
+    image: "/products/gfc_kb_008.jpg",
+    galleryImages: ["/products/gfc_kb_008.jpg"],
+    description: "Modern ethnic monochrome cylindrical Kans grass plant pot covers and desktop storage organizers featuring intricate black and off-white geometric diamond weaving, equipped with waterproof clear liners.",
+    longDescription: {
+      "overview": "The Cylindrical Kans Grass Planter & Storage Baskets (Art No: GFC-KB-008) offer sophisticated botanical styling with functional indoor protection. The pre-fitted transparent plastic liner ensures that plants can be watered without wetting the outer grass weave.",
+      "craftsmanship": "Artisans intricately interweave black and cream cords over a sturdy wild Kans grass core to create bold Aztec/tribal inspired diamond patterns on a vertical cylinder frame.",
+      "exportDetails": "Nesting set of 3 stacked with protective foam sheets, 8 sets per carton with drop-tested international packaging standards.",
+      "careInstructions": "Empty drainage overflow from plastic liner after watering. Wipe exterior with dry cloth."
+},
+    specifications: [
+      { key: "Item Code", value: "GFC-KB-008" },
+      { key: "Item Name", value: "Cylindrical Kans Grass Planter & Storage Baskets with Liners (Set of 3)" },
+      { key: "Specification", value: "L: Dia 24cm x H 22cm | M: Dia 20cm x H 18cm | S: Dia 16cm x H 15cm" },
+      { key: "Materials", value: "Wild Kans Grass, Durable Monochrome Thread Wrapping, Clear Waterproof PVC Liner" },
+      { key: "MOQ", value: "300 Sets" },
+      { key: "Country of Origin", value: "Bangladesh" }
+    ],
+    features: [
+      "Built-In Waterproof Clear Plant Liner",
+      "Contemporary Monochrome Tribal Diamond Pattern",
+      "Set of 3 Nesting Upright Cylinders",
+      "Perfect for Indoor Botanicals, Desk & Bath Organizers"
+],
+    unit: "S/3",
+    cbmPerCarton: 0.065,
+    setPerCarton: 8,
+    nwPerCtn: 6.4,
+    gwPerCtn: 7.9,
+    material: "Wild Kans Grass, Durable Monochrome Thread Wrapping, Clear Waterproof PVC Liner",
+    color: "Matte Black & Ivory Cream Geometric Pattern"
+  },
+  {
+    id: "GFC-KB-009",
+    slug: "two-tone-kans-grass-handled-storage-totes-gfc-kb-009",
+    code: "GFC-KB-009",
+    name: "Two-Tone Kans Grass Handled Storage Totes (Set of 3)",
+    category: "kans-grass",
+    categoryName: "Kans Grass",
+    categorySlug: "kans-grass",
+    subCategory: "baskets",
+    image: "/products/gfc_kb_009.jpg",
+    galleryImages: ["/products/gfc_kb_009.jpg"],
+    description: "Set of 3 round Kans grass storage baskets with integrated ear loop handles, featuring natural golden wild grass upper body and a crisp clean white dipped lower base wrap.",
+    longDescription: {
+      "overview": "Designed for Scandinavian and bohemian interior aesthetics, the Two-Tone Kans Grass Handled Storage Totes (Art No: GFC-KB-009) provide lightweight yet remarkably strong utility storage for living rooms, nurseries, and bedrooms.",
+      "craftsmanship": "Hand-braided and coiled from sun-cured Kans grass with firmly stitched ear handles designed to safely carry up to 12kg of household essentials.",
+      "exportDetails": "Nest-packed sets of 3, 6 nested sets per master carton.",
+      "careInstructions": "Gently vacuum or wipe clean with dry microfiber cloth. Avoid exposure to sustained outdoor rain."
+},
+    specifications: [
+      { key: "Item Code", value: "GFC-KB-009" },
+      { key: "Item Name", value: "Two-Tone Kans Grass Handled Storage Totes (Set of 3)" },
+      { key: "Specification", value: "L: Dia 34cm x H 30cm | M: Dia 28cm x H 25cm | S: Dia 22cm x H 20cm" },
+      { key: "Materials", value: "100% Wild River Kans Grass & Cotton Cord" },
+      { key: "MOQ", value: "300 Sets" },
+      { key: "Country of Origin", value: "Bangladesh" }
+    ],
+    features: [
+      "Integrated Dual Braided Ear Loop Handles",
+      "Chic Two-Tone Dipped White Aesthetic",
+      "Generous Cylindrical Storage Capacity",
+      "Ideal for Laundry, Blankets, Toys, and Retail Displays"
+],
+    unit: "S/3",
+    cbmPerCarton: 0.075,
+    setPerCarton: 6,
+    nwPerCtn: 7,
+    gwPerCtn: 8.5,
+    material: "100% Wild River Kans Grass & Cotton Cord",
+    color: "Natural Golden Honey Kans Grass & Crisp White Base"
+  }
 ];
