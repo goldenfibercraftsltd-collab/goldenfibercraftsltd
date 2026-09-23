@@ -9774,9 +9774,9 @@ export const PRODUCTS: ProductItem[] = [
   ]
 },
   {
-  "id": "GFC-ST-001",
-  "slug": "seagrass-serving-tray-with-handles-gfc-st-001",
-  "code": "GFC-ST-001",
+  "id": "GFC-STH-008",
+  "slug": "seagrass-serving-tray-with-handles-gfc-sth-008",
+  "code": "GFC-STH-008",
   "name": "Seagrass Serving Tray with Handles",
   "category": "seagrass",
   "categoryName": "Seagrass",
@@ -9803,7 +9803,7 @@ export const PRODUCTS: ProductItem[] = [
   "specifications": [
     {
       "key": "Item Code",
-      "value": "GFC-ST-001"
+      "value": "GFC-STH-008"
     },
     {
       "key": "Item Name",
@@ -11271,6 +11271,306 @@ export const PRODUCTS: ProductItem[] = [
     "Hospitality Grade",
     "100% Organic Fiber",
     "Natural Heat Resistance"
+  ]
+},
+{
+  "id": "GFC-ST-002",
+  "slug": "round-braided-seagrass-serving-tray-with-cutout-handles-gfc-st-002",
+  "code": "GFC-ST-002",
+  "name": "Round Braided Seagrass Serving Tray with Cutout Handles",
+  "category": "seagrass",
+  "categoryName": "Seagrass",
+  "categorySlug": "seagrass",
+  "subCategory": "trays",
+  "image": "/products/gfc_st_002.jpg",
+  "galleryImages": [
+    "/products/gfc_st_002.jpg"
+  ],
+  "description": "Handcrafted round coastal seagrass serving tray tightly coiled in concentric spirals with two integrated cutout carrying handles.",
+  "longDescription": {
+    "overview": "The Round Braided Seagrass Serving Tray (Art No: GFC-ST-002) is masterfully hand-coiled by rural artisan women in coastal Bangladesh. Featuring ergonomic cut-out handles embedded seamlessly into the raised rim, it serves as an elegant centerpiece for coffee tables, ottoman displays, and breakfast service.",
+    "craftsmanship": "Tightly hand-braided and coiled from 100% natural, sun-bleached coastal seagrass cords, reinforced with concealed binding for lifelong dimensional stability.",
+    "exportDetails": "Individually wrapped with protective tissue and corner safeguards. 16 pieces nested securely per 5-ply export master carton.",
+    "careInstructions": "Spot clean with a soft dry or slightly damp cloth. Keep in well-ventilated dry areas. Avoid prolonged direct moisture exposure."
+  },
+  "unit": "Single Piece",
+  "cbmPerCarton": 0.046,
+  "setPerCarton": 16,
+  "nwPerCtn": 6,
+  "gwPerCtn": 7.2,
+  "material": "100% Natural Coastal Seagrass",
+  "color": "Natural Golden Honey Tan",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-ST-002"
+    },
+    {
+      "key": "Item Name",
+      "value": "Round Braided Seagrass Serving Tray with Cutout Handles"
+    },
+    {
+      "key": "Specification",
+      "value": "Diameter 35cm x Height 6cm"
+    },
+    {
+      "key": "Materials",
+      "value": "100% Natural Seagrass"
+    },
+    {
+      "key": "MOQ",
+      "value": "250 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Concentric Spiral Hand-Coiling",
+    "Integrated Cutout Side Handles",
+    "Multi-functional Ottoman & Table Centerpiece",
+    "100% Biodegradable Coastal Seagrass"
+  ]
+},
+{
+  "id": "GFC-ST-003",
+  "slug": "rectangular-herringbone-seagrass-serving-vanity-tray-gfc-st-003",
+  "code": "GFC-ST-003",
+  "name": "Rectangular Herringbone Seagrass Serving & Vanity Tray",
+  "category": "seagrass",
+  "categoryName": "Seagrass",
+  "categorySlug": "seagrass",
+  "subCategory": "trays",
+  "image": "/products/gfc_st_003.jpg",
+  "galleryImages": [
+    "/products/gfc_st_003.jpg"
+  ],
+  "description": "Premium shallow rectangular seagrass organizer tray woven in an intricate herringbone chevron pattern with ergonomic cutout handles.",
+  "longDescription": {
+    "overview": "Engineered for boutique hotel breakfast amenities, desk organizing, or bathroom vanity styling, the GFC-ST-003 features a crisp rectangular silhouette with reinforced corners and flush cutout handles.",
+    "craftsmanship": "Fine herringbone twill weave hand-plaited over a lightweight, rust-proof internal metal wire frame for sharp rectangular geometry.",
+    "exportDetails": "Shrink-wrapped with moisture-absorbing silica packets. 12 units per master carton.",
+    "careInstructions": "Dust with a soft brush or wipe with a damp microfiber cloth."
+  },
+  "unit": "Single Piece",
+  "cbmPerCarton": 0.044,
+  "setPerCarton": 12,
+  "nwPerCtn": 5.8,
+  "gwPerCtn": 7,
+  "material": "Natural Coastal Seagrass & Steel Wire Frame",
+  "color": "Natural Warm Wheat",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-ST-003"
+    },
+    {
+      "key": "Item Name",
+      "value": "Rectangular Herringbone Seagrass Serving & Vanity Tray"
+    },
+    {
+      "key": "Specification",
+      "value": "40cm L x 28cm W x 6cm H"
+    },
+    {
+      "key": "Materials",
+      "value": "Seagrass & Wire Frame"
+    },
+    {
+      "key": "MOQ",
+      "value": "200 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Intricate Chevron Herringbone Weave",
+    "Flush Cutout Oval Handles",
+    "Reinforced Internal Structural Frame",
+    "Zero Plastic Eco-Friendly Design"
+  ]
+},
+{
+  "id": "GFC-ST-004",
+  "slug": "oval-coastal-seagrass-breakfast-tray-with-upright-handles-gfc-st-004",
+  "code": "GFC-ST-004",
+  "name": "Oval Coastal Seagrass Breakfast Tray with Upright Handles",
+  "category": "seagrass",
+  "categoryName": "Seagrass",
+  "categorySlug": "seagrass",
+  "subCategory": "trays",
+  "image": "/products/gfc_st_004.jpg",
+  "galleryImages": [
+    "/products/gfc_st_004.jpg"
+  ],
+  "description": "Graceful oval serving tray woven from natural braided seagrass cord with two upright arched carrying handles.",
+  "longDescription": {
+    "overview": "The Oval Coastal Seagrass Breakfast Tray (Art No: GFC-ST-004) brings natural coastal warmth to hospitality and homeware collections. Its elongated contour is ideal for serving tea, coffee, wine glasses, or fresh artisanal baguettes.",
+    "craftsmanship": "Continuous braided seagrass rim hand-knitted to thick braided base cords, complemented by dual upright curved handles wrapped tightly with natural fiber rope.",
+    "exportDetails": "Packed 12 pieces nested per carton with corrugated separation sheets.",
+    "careInstructions": "Spot clean only. Air dry completely if damp."
+  },
+  "unit": "Single Piece",
+  "cbmPerCarton": 0.052,
+  "setPerCarton": 12,
+  "nwPerCtn": 5.4,
+  "gwPerCtn": 6.8,
+  "material": "100% Coastal Seagrass",
+  "color": "Sun-Drenched Golden Tan",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-ST-004"
+    },
+    {
+      "key": "Item Name",
+      "value": "Oval Coastal Seagrass Breakfast Tray with Upright Handles"
+    },
+    {
+      "key": "Specification",
+      "value": "45cm L x 30cm W x 7cm H"
+    },
+    {
+      "key": "Materials",
+      "value": "100% Coastal Seagrass"
+    },
+    {
+      "key": "MOQ",
+      "value": "250 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Elongated Oval Profile",
+    "Dual Upright Curved Arch Handles",
+    "Heavy-Duty Hand-Braided Construction",
+    "Food-Safe Natural Curing"
+  ]
+},
+{
+  "id": "GFC-ST-005",
+  "slug": "two-tone-seagrass-tray-with-cream-cotton-rim-gfc-st-005",
+  "code": "GFC-ST-005",
+  "name": "Two-Tone Seagrass Tray with Cream Cotton Rim",
+  "category": "seagrass",
+  "categoryName": "Seagrass",
+  "categorySlug": "seagrass",
+  "subCategory": "trays",
+  "image": "/products/gfc_st_005.jpg",
+  "galleryImages": [
+    "/products/gfc_st_005.jpg"
+  ],
+  "description": "Artisanal round seagrass decorative tray featuring a coiled natural fiber center with an off-white cotton wrapped border and loop ear handles.",
+  "longDescription": {
+    "overview": "Blending coastal rustic texture with contemporary Scandinavian minimalism, the GFC-ST-005 showcases contrast craftsmanship. Perfect for modern retail boutiques, nursery decor trays, or living room accent styling.",
+    "craftsmanship": "Natural golden seagrass tightly bound in circular spiral weave, framed by a soft bleached cotton rope binding on the perimeter with two stitched ear loop handles.",
+    "exportDetails": "Bulk export packaging with 16 pieces per master carton.",
+    "careInstructions": "Spot clean with a clean white damp cloth. Do not bleach."
+  },
+  "unit": "Single Piece",
+  "cbmPerCarton": 0.048,
+  "setPerCarton": 16,
+  "nwPerCtn": 5.9,
+  "gwPerCtn": 7.3,
+  "material": "Natural Seagrass & Cotton Yarn",
+  "color": "Natural Amber & Cream White",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-ST-005"
+    },
+    {
+      "key": "Item Name",
+      "value": "Two-Tone Seagrass Tray with Cream Cotton Rim"
+    },
+    {
+      "key": "Specification",
+      "value": "Diameter 36cm x Height 5.5cm"
+    },
+    {
+      "key": "Materials",
+      "value": "Seagrass & Cotton Rope"
+    },
+    {
+      "key": "MOQ",
+      "value": "200 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Two-Tone Contrast Coastal Design",
+    "Off-White Cotton Bound Perimeter",
+    "Side Ear Loop Handles",
+    "Artisan Hand-Stitched Finishing"
+  ]
+},
+{
+  "id": "GFC-ST-006",
+  "slug": "square-braided-seagrass-ottoman-organizer-tray-gfc-st-006",
+  "code": "GFC-ST-006",
+  "name": "Square Braided Seagrass Ottoman Organizer Tray",
+  "category": "seagrass",
+  "categoryName": "Seagrass",
+  "categorySlug": "seagrass",
+  "subCategory": "trays",
+  "image": "/products/gfc_st_006.jpg",
+  "galleryImages": [
+    "/products/gfc_st_006.jpg"
+  ],
+  "description": "Heavy-duty square coastal seagrass tray with thick braided rim walls, woven checkerboard bottom, and cutout handles.",
+  "longDescription": {
+    "overview": "Specially engineered for coffee table ottomans, console tables, and hospitality tray service. The square profile maximizes usable tray surface area while providing robust edge containment.",
+    "craftsmanship": "Thick hand-braided plait weave formed over an internal galvanized frame with flush reinforced cutout handholds.",
+    "exportDetails": "10 pieces per heavy-duty export carton with individual corner buffers.",
+    "careInstructions": "Wipe clean with a dry towel. Store in dry environmental conditions."
+  },
+  "unit": "Single Piece",
+  "cbmPerCarton": 0.05,
+  "setPerCarton": 10,
+  "nwPerCtn": 6.2,
+  "gwPerCtn": 7.5,
+  "material": "Natural Bangladesh Coastal Seagrass & Internal Frame",
+  "color": "Natural Earthy Golden Seagrass",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-ST-006"
+    },
+    {
+      "key": "Item Name",
+      "value": "Square Braided Seagrass Ottoman Organizer Tray"
+    },
+    {
+      "key": "Specification",
+      "value": "38cm x 38cm x 6.5cm"
+    },
+    {
+      "key": "Materials",
+      "value": "Coastal Seagrass & Wire Core"
+    },
+    {
+      "key": "MOQ",
+      "value": "200 Pcs"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Generous Square Usable Surface",
+    "Heavy-Duty Braided Border",
+    "Integrated Cutout Handles",
+    "Sturdy Ottoman Table Stable Base"
   ]
 },
 ];
