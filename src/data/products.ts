@@ -9894,65 +9894,295 @@ export const PRODUCTS: ProductItem[] = [
   ]
 },
   {
-  "id": "GFC-KPM-001",
-  "slug": "kaisa-grass-round-placemat-gfc-kpm-001",
-  "code": "GFC-KPM-001",
-  "name": "Kaisa Grass Round Placemat",
-  "category": "kans-grass",
-  "categoryName": "Kans Grass",
-  "categorySlug": "kans-grass",
-  "subCategory": "placemats",
-  "image": "/products/gfc_kpm_001.jpg",
-  "galleryImages": [
-    "/products/gfc_kpm_001.jpg"
-  ],
-  "description": "Traditional round dining placemat hand-stitched from wild riverbank Kaisa grass bound with natural off-white cotton wrapping.",
-  "longDescription": {
-    "overview": "Harvested wild along the river floodplains of Bangladesh, Kaisa grass is known for its remarkable rigidity and natural pale golden color. Beautifully wrapped with cotton cord for modern dining elegance.",
-    "craftsmanship": "Coiled by hand and cross-stitched using authentic Bengali needle binding techniques.",
-    "exportDetails": "Bundled in sets of 6 pcs per inner pack. Master carton contains 36 sets.",
-    "careInstructions": "Wipe dry with clean cloth."
-  },
-  "unit": "S/6 Set",
-  "cbmPerCarton": 0.034,
-  "setPerCarton": 12,
-  "nwPerCtn": 4.5,
-  "gwPerCtn": 5.6,
-  "material": "Wild Kaisa Grass, Cotton Cord",
-  "color": "Pale Gold & Off-White",
-  "specifications": [
-    {
-      "key": "Item Code",
-      "value": "GFC-KPM-001"
-    },
-    {
-      "key": "Item Name",
-      "value": "Kaisa Grass Round Placemat"
-    },
-    {
-      "key": "Specification",
-      "value": "33cm Diameter"
-    },
-    {
-      "key": "Materials",
-      "value": "Kaisa Grass & Cotton"
-    },
-    {
-      "key": "MOQ",
-      "value": "300 Sets"
-    },
-    {
-      "key": "Country of Origin",
-      "value": "Bangladesh"
-    }
-  ],
-  "features": [
-    "Wild Harvested Fiber",
-    "Hand-Bound Cotton Stitching",
-    "Heat-Resistant",
-    "Fair Trade Artisan Made"
-  ]
+    id: "GFC-KPM-001",
+    slug: "kaisa-grass-round-placemat-gfc-kpm-001",
+    code: "GFC-KPM-001",
+    name: "Kaisa Grass Round Dining Placemat",
+    category: "kans-grass",
+    categoryName: "Kans Grass",
+    categorySlug: "kans-grass",
+    subCategory: "placemats",
+    image: "/products/gfc_kpm_001.jpg",
+    galleryImages: ["/products/gfc_kpm_001.jpg","/products/gfc_kpm_002.jpg"],
+    description: "Traditional handcrafted round dining placemat tightly needle-stitched from wild riverbank Kans (Kaisa) grass bound with natural off-white cotton thread.",
+    longDescription: {
+      "overview": "Harvested wild along the river floodplains of Bangladesh, Kaisa grass (Saccharum spontaneum) is prized for its rigid natural structure and soothing pale blonde tone. Beautifully bound with unbleached cotton cord for organic luxury dining tables.",
+      "craftsmanship": "Hand-coiled strand by strand and cross-stitched by skilled rural women artisans using authentic Bengali needle binding traditions.",
+      "exportDetails": "Bundled in sets of 6 pcs with moisture-barrier kraft wrap and silica desiccant. Master carton holds 12 sets (72 pcs).",
+      "careInstructions": "Wipe clean with a soft dry cloth. Safe for warm plates and heat insulation."
 },
+    specifications: [
+      {
+            "key": "Item Code",
+            "value": "GFC-KPM-001"
+      },
+      {
+            "key": "Item Name",
+            "value": "Kaisa Grass Round Dining Placemat"
+      },
+      {
+            "key": "Specification",
+            "value": "Dia 33cm x H 0.8cm"
+      },
+      {
+            "key": "Materials",
+            "value": "Wild Kans Grass & Natural Cotton"
+      },
+      {
+            "key": "MOQ",
+            "value": "300 Sets"
+      },
+      {
+            "key": "Country of Origin",
+            "value": "Bangladesh"
+      }
+],
+    features: [
+      "Wild Riverbank Harvested Fiber",
+      "Hand-Bound Off-White Cotton Stitching",
+      "Heat-Resistant Tabletop Protection",
+      "100% Biodegradable & Chemical-Free"
+],
+    unit: "S/6 Set",
+    cbmPerCarton: 0.034,
+    setPerCarton: 12,
+    nwPerCtn: 4.5,
+    gwPerCtn: 5.6,
+    material: "100% Wild River Kans Grass & Natural Cotton Thread",
+    color: "Natural Pale Straw & Off-White"
+  },
+  {
+    id: "GFC-KPM-002",
+    slug: "concentric-spiral-kans-grass-round-placemat-gfc-kpm-002",
+    code: "GFC-KPM-002",
+    name: "Concentric Spiral Kans Grass Round Placemat",
+    category: "kans-grass",
+    categoryName: "Kans Grass",
+    categorySlug: "kans-grass",
+    subCategory: "placemats",
+    image: "/products/gfc_kpm_002.jpg",
+    galleryImages: ["/products/gfc_kpm_002.jpg"],
+    description: "Modern luxury dining table placemat featuring dense concentric spiral coils of unbleached wild Kans grass bound with fine artisanal cross-stitching.",
+    longDescription: {
+      "overview": "Designed for minimalist and organic modern interiors, the Concentric Spiral Kans Grass Placemat highlights the untouched golden-blonde luster of sun-cured river grass. Perfect for hospitality and fine dining presentations.",
+      "craftsmanship": "Coiled continuously from core to edge with microscopic needle precision, ensuring flat non-warping durability under everyday use.",
+      "exportDetails": "Flat packed in sets of 6 in poly-lined inner boxes, 12 sets per heavy-duty export carton.",
+      "careInstructions": "Spot clean with dry or slightly damp towel. Store in dry ventilated space."
+},
+    specifications: [
+      {
+            "key": "Item Code",
+            "value": "GFC-KPM-002"
+      },
+      {
+            "key": "Item Name",
+            "value": "Concentric Spiral Kans Grass Round Placemat"
+      },
+      {
+            "key": "Specification",
+            "value": "Dia 35cm x H 1.0cm"
+      },
+      {
+            "key": "Materials",
+            "value": "Sun-Cured Kans Grass & Ecru Cotton"
+      },
+      {
+            "key": "MOQ",
+            "value": "300 Sets"
+      },
+      {
+            "key": "Country of Origin",
+            "value": "Bangladesh"
+      }
+],
+    features: [
+      "Ultra-Dense Concentric Spiral Coiling",
+      "Seamless Flat Lay Construction",
+      "Stain & Crumbs Easily Brushed Off",
+      "Sustainable Artisanal Production"
+],
+    unit: "S/6 Set",
+    cbmPerCarton: 0.038,
+    setPerCarton: 12,
+    nwPerCtn: 4.8,
+    gwPerCtn: 6,
+    material: "100% Sun-Dried Riverbank Kans Grass & Ecru Cotton Warp",
+    color: "Golden Straw Blonde & Natural Ecru"
+  },
+  {
+    id: "GFC-KPM-003",
+    slug: "sunburst-terracotta-stitched-kans-grass-placemat-gfc-kpm-003",
+    code: "GFC-KPM-003",
+    name: "Sunburst Terracotta-Stitched Kans Grass Placemat",
+    category: "kans-grass",
+    categoryName: "Kans Grass",
+    categorySlug: "kans-grass",
+    subCategory: "placemats",
+    image: "/products/gfc_kpm_003.jpg",
+    galleryImages: ["/products/gfc_kpm_003.jpg"],
+    description: "Artisan dining charger placemat woven from sun-cured Kans grass accented with an eye-catching terracotta sunburst radial border stitch.",
+    longDescription: {
+      "overview": "Bringing warmth and festive charm to tablescapes, this placemat combines the rustic texture of wild river grass with vibrant sunburst rays embroidered in azo-free terracotta-red cotton thread.",
+      "craftsmanship": "Individual ray flairs are intricately stitched by needle into the outer border coils, creating a striking sunburst halo effect.",
+      "exportDetails": "Nested and flat packed with barcode tags, 12 sets of 6 pcs per master export carton.",
+      "careInstructions": "Dust off or wipe with dry microfiber cloth. Avoid prolonged moisture immersion."
+},
+    specifications: [
+      {
+            "key": "Item Code",
+            "value": "GFC-KPM-003"
+      },
+      {
+            "key": "Item Name",
+            "value": "Sunburst Terracotta-Stitched Kans Grass Placemat"
+      },
+      {
+            "key": "Specification",
+            "value": "Dia 36cm x H 1.0cm"
+      },
+      {
+            "key": "Materials",
+            "value": "Wild Kans Grass & Dyed Cotton Cord"
+      },
+      {
+            "key": "MOQ",
+            "value": "300 Sets"
+      },
+      {
+            "key": "Country of Origin",
+            "value": "Bangladesh"
+      }
+],
+    features: [
+      "Decorative Terracotta Sunburst Radial Border",
+      "Large Charger Diameter Accommodates Full Dinnerware",
+      "Vibrant Azo-Free Fast Color Thread",
+      "Fair Trade Handcrafted by Women Weavers"
+],
+    unit: "S/6 Set",
+    cbmPerCarton: 0.04,
+    setPerCarton: 12,
+    nwPerCtn: 5,
+    gwPerCtn: 6.2,
+    material: "100% Wild River Kans Grass & Eco-Dyed Terracotta Cotton Cord",
+    color: "Warm Terracotta Red & Natural Golden Straw"
+  },
+  {
+    id: "GFC-KPM-004",
+    slug: "tribal-geometric-monochrome-kans-grass-placemat-gfc-kpm-004",
+    code: "GFC-KPM-004",
+    name: "Tribal Geometric Monochrome Kans Grass Placemat",
+    category: "kans-grass",
+    categoryName: "Kans Grass",
+    categorySlug: "kans-grass",
+    subCategory: "placemats",
+    image: "/products/gfc_kpm_004.jpg",
+    galleryImages: ["/products/gfc_kpm_004.jpg"],
+    description: "Contemporary Scandinavian-ethnic tableware charger featuring intricate geometric tribal diamond cross-stitch motifs over dense coiled Kans grass core.",
+    longDescription: {
+      "overview": "A sophisticated fusion of modern Scandinavian minimalism and ancient tribal Bengal embroidery, this placemat showcases bold black diamond motifs radiating across blonde wild grass coils.",
+      "craftsmanship": "Master weavers spend over 6 hours hand-guiding black cotton thread through rigid grass stalks to achieve flawless geometric symmetry.",
+      "exportDetails": "Packed in shrink-wrapped sets of 6 with branded hangtag. 12 sets per reinforced export box.",
+      "careInstructions": "Wipe with a clean dry towel. Dry completely if exposed to accidental spills."
+},
+    specifications: [
+      {
+            "key": "Item Code",
+            "value": "GFC-KPM-004"
+      },
+      {
+            "key": "Item Name",
+            "value": "Tribal Geometric Monochrome Kans Grass Placemat"
+      },
+      {
+            "key": "Specification",
+            "value": "Dia 38cm x H 1.0cm"
+      },
+      {
+            "key": "Materials",
+            "value": "Wild Kans Grass & High-Tensile Black Cotton"
+      },
+      {
+            "key": "MOQ",
+            "value": "300 Sets"
+      },
+      {
+            "key": "Country of Origin",
+            "value": "Bangladesh"
+      }
+],
+    features: [
+      "Intricate Tribal Diamond Embroidery",
+      "Striking High-Contrast Modern Aesthetic",
+      "Generous 38cm Table Charger Dimension",
+      "Natural Plant Fiber Backing Protects Wood & Glass"
+],
+    unit: "S/6 Set",
+    cbmPerCarton: 0.042,
+    setPerCarton: 12,
+    nwPerCtn: 5.2,
+    gwPerCtn: 6.5,
+    material: "100% Wild River Kans Grass & Matte Black Cotton Thread",
+    color: "Matte Black & Natural Honey Grass"
+  },
+  {
+    id: "GFC-KPM-005",
+    slug: "oval-handwoven-kans-grass-dining-placemat-gfc-kpm-005",
+    code: "GFC-KPM-005",
+    name: "Oval Handwoven Kans Grass Dining Table Placemat",
+    category: "kans-grass",
+    categoryName: "Kans Grass",
+    categorySlug: "kans-grass",
+    subCategory: "placemats",
+    image: "/products/gfc_kpm_005.jpg",
+    galleryImages: ["/products/gfc_kpm_005.jpg"],
+    description: "Generously sized oval table placemat hand-coiled from wild riverbank Kans grass, offering heat protection and natural organic warmth for modern dining settings.",
+    longDescription: {
+      "overview": "The Oval Handwoven Kans Grass Placemat offers expansive tabletop coverage designed to easily accommodate dinner plates, cutlery, and glassware in a cohesive natural frame.",
+      "craftsmanship": "Crafted along an elliptical concentric axis with reinforced border stitching that prevents fraying and maintains a crisp silhouette.",
+      "exportDetails": "Flat stacked 6 pcs per set with corner protectors, 12 sets per corrugated master carton.",
+      "careInstructions": "Gently wipe with dry cloth or soft bristle brush. Store in dry area."
+},
+    specifications: [
+      {
+            "key": "Item Code",
+            "value": "GFC-KPM-005"
+      },
+      {
+            "key": "Item Name",
+            "value": "Oval Handwoven Kans Grass Dining Table Placemat"
+      },
+      {
+            "key": "Specification",
+            "value": "42cm L x 30cm W x 0.9cm H"
+      },
+      {
+            "key": "Materials",
+            "value": "100% Wild River Kans Grass & Cotton"
+      },
+      {
+            "key": "MOQ",
+            "value": "300 Sets"
+      },
+      {
+            "key": "Country of Origin",
+            "value": "Bangladesh"
+      }
+],
+    features: [
+      "Generous Oval Shape Fits Plate & Cutlery Together",
+      "Dense Wild Grass Core Delivers Superior Heat Resistance",
+      "Organic Scandinavian & Japandi Dining Style",
+      "Sturdy Bound Selvage Outer Edge"
+],
+    unit: "S/6 Set",
+    cbmPerCarton: 0.045,
+    setPerCarton: 12,
+    nwPerCtn: 5.5,
+    gwPerCtn: 6.8,
+    material: "100% Wild River Kans Grass & Natural Off-White Cotton Thread",
+    color: "Natural Golden Blonde Straw"
+  },
   {
   "id": "GFC-KT-001",
   "slug": "kans-grass-bread-fruit-tray-gfc-kt-001",

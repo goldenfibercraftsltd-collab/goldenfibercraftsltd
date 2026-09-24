@@ -36,28 +36,51 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onOpenQuoteModal }) 
     };
   }, []);
 
-  // Find category by slug or ID with fallback
-  const category = useMemo(() => {
-    if (!categorySlug) return allCategories[0] || CATEGORIES[0];
+  // Find category or subcategory by slug or ID with fallback
+  const { category, subCategoryInfo } = useMemo(() => {
+    if (!categorySlug) return { category: allCategories[0] || CATEGORIES[0], subCategoryInfo: null };
     const cleanSlug = categorySlug.toLowerCase().trim();
-    return (
-      allCategories.find((c) => c.slug === categorySlug || c.id === categorySlug || c.slug.toLowerCase() === cleanSlug) ||
-      CATEGORIES.find((c) => c.slug === categorySlug || c.id === categorySlug || c.slug.toLowerCase() === cleanSlug) ||
-      allCategories[0] ||
-      CATEGORIES[0]
-    );
+
+    // 1. Direct category match
+    const directCat = allCategories.find((c) => c.slug === categorySlug || c.id === categorySlug || c.slug.toLowerCase() === cleanSlug) ||
+      CATEGORIES.find((c) => c.slug === categorySlug || c.id === categorySlug || c.slug.toLowerCase() === cleanSlug);
+    if (directCat) return { category: directCat, subCategoryInfo: null };
+
+    // 2. Check if slug matches a subcategory (e.g., 'kans-grass-placemats')
+    for (const cat of [...allCategories, ...CATEGORIES]) {
+      if (cat.subcategories && Array.isArray(cat.subcategories)) {
+        const sub = cat.subcategories.find((s: any) => s.slug === cleanSlug || s.id === cleanSlug || s.slug === categorySlug);
+        if (sub) {
+          return { category: cat, subCategoryInfo: sub };
+        }
+      }
+    }
+
+    return { category: allCategories[0] || CATEGORIES[0], subCategoryInfo: null };
   }, [allCategories, categorySlug]);
 
   const categoryProducts = useMemo(() => {
-    return allProducts.filter((p) => 
-      p.categorySlug === category.slug || 
-      p.category === category.id ||
-      p.category === category.slug ||
-      p.categorySlug === category.id
-    );
-  }, [allProducts, category]);
+    return allProducts.filter((p) => {
+      const matchCat = (
+        p.categorySlug === category.slug || 
+        p.category === category.id ||
+        p.category === category.slug ||
+        p.categorySlug === category.id
+      );
+      if (!matchCat) return false;
 
-  usePageTitle(category?.name || 'Category');
+      if (subCategoryInfo) {
+        const pSub = String(p.subCategory || '').toLowerCase();
+        const subId = String(subCategoryInfo.id).toLowerCase();
+        const subName = String(subCategoryInfo.name).toLowerCase();
+        return pSub === subId || pSub.includes(subId) || pSub.includes(subName) || (p.slug && p.slug.includes(subId));
+      }
+      return true;
+    });
+  }, [allProducts, category, subCategoryInfo]);
+
+  const pageDisplayName = subCategoryInfo ? `${category.name} > ${subCategoryInfo.name}` : (category?.name || 'Category');
+  usePageTitle(pageDisplayName);
 
   const getCategoryIcon = (iconName: string) => {
     switch (iconName) {
@@ -84,7 +107,17 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onOpenQuoteModal }) 
           <span>/</span>
           <Link to="/products" className="hover:text-emerald-700 text-stone-800">Products</Link>
           <span>/</span>
-          <span className="text-black font-extrabold">{category.name}</span>
+          {subCategoryInfo ? (
+            <>
+              <Link to={`/categories/${category.slug}`} className="hover:text-emerald-700 text-stone-800">
+                {category.name}
+              </Link>
+              <span>/</span>
+              <span className="text-black font-extrabold">{subCategoryInfo.name}</span>
+            </>
+          ) : (
+            <span className="text-black font-extrabold">{category.name}</span>
+          )}
         </nav>
 
         {/* Category Header Hero with reveal-up */}
@@ -95,7 +128,7 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({ onOpenQuoteModal }) 
             </div>
             <div>
               <h1 className="font-serif text-3xl sm:text-4xl font-extrabold text-black tracking-tight">
-                {category.name}
+                {subCategoryInfo ? `${category.name} ${subCategoryInfo.name}` : category.name}
               </h1>
               <p className="text-xs sm:text-sm text-stone-900 mt-1 font-medium max-w-2xl">
                 {category.description}
