@@ -21,9 +21,10 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
   const currentSlug = slug || articleSlug || (pathSlug && pathSlug !== 'blog' ? pathSlug : '') || 'jute-bag-manufacturer-bangladesh';
   const article = getArticleBySlug(currentSlug) || ARTICLES_DATA[0];
 
-  const isPlacematArticle = article.slug.includes('placemat') || article.category_slug === 'placemats';
-  const isBagArticle = !isPlacematArticle && (article.slug.includes('bag') || article.category_slug === 'bags');
-  const isMatArticle = !isPlacematArticle && (article.slug.includes('floor-mat') || article.category_slug === 'floor-mats' || (article.slug.includes('mat') && !article.slug.includes('placemat')) || article.id.includes('floor-mat'));
+  const isPlanterArticle = article.slug.includes('planter') || article.category_slug === 'planters' || article.slug.includes('netherlands');
+  const isPlacematArticle = !isPlanterArticle && (article.slug.includes('placemat') || article.category_slug === 'placemats');
+  const isBagArticle = !isPlanterArticle && !isPlacematArticle && (article.slug.includes('bag') || article.category_slug === 'bags');
+  const isMatArticle = !isPlanterArticle && !isPlacematArticle && (article.slug.includes('floor-mat') || article.category_slug === 'floor-mats' || (article.slug.includes('mat') && !article.slug.includes('placemat')) || article.id.includes('floor-mat'));
 
   usePageTitle(
     article.title,
@@ -185,7 +186,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
 
             <div className="flex items-center gap-2">
               <button
-                onClick={() => onOpenQuoteModal({ productCode: isBagArticle ? 'JUTE-BAG-OEM' : isMatArticle ? 'JUTE-FLOOR-MAT-OEM' : isPlacematArticle ? 'JUTE-PLACEMAT-OEM' : 'JUTE-BASKET-OEM' })}
+                onClick={() => onOpenQuoteModal({ productCode: isPlanterArticle ? 'SEAGRASS-PLANTER-OEM' : isBagArticle ? 'JUTE-BAG-OEM' : isMatArticle ? 'JUTE-FLOOR-MAT-OEM' : isPlacematArticle ? 'JUTE-PLACEMAT-OEM' : 'JUTE-BASKET-OEM' })}
                 className="px-4 py-2 bg-amber-600 hover:bg-amber-500 text-white rounded-lg text-xs font-semibold transition shadow-xs flex items-center gap-1.5"
               >
                 <Mail className="w-3.5 h-3.5" />
@@ -251,13 +252,13 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                   Direct Factory Desk
                 </span>
                 <h4 className="font-serif font-bold text-base text-white">
-                  {isBagArticle ? 'Need Custom Jute Bag Samples?' : isMatArticle ? 'Need Custom Jute Floor Mat Samples?' : isPlacematArticle ? 'Need Custom Jute Placemat Samples?' : 'Need Custom Jute Basket Samples?'}
+                  {isPlanterArticle ? 'Need Custom Seagrass Planter Samples?' : isBagArticle ? 'Need Custom Jute Bag Samples?' : isMatArticle ? 'Need Custom Jute Floor Mat Samples?' : isPlacematArticle ? 'Need Custom Jute Placemat Samples?' : 'Need Custom Jute Basket Samples?'}
                 </h4>
                 <p className="mt-2 text-xs text-amber-100/90 leading-relaxed">
                   We supply OEM sample prototypes with custom screen printing, PMS color dyeing, and direct FOB Chattogram container quotes in 24 hours.
                 </p>
                 <button
-                  onClick={() => onOpenQuoteModal({ productCode: isBagArticle ? 'OEM-JUTE-BAGS' : isMatArticle ? 'OEM-JUTE-FLOOR-MATS' : isPlacematArticle ? 'OEM-JUTE-PLACEMATS' : 'OEM-JUTE-BASKETS' })}
+                  onClick={() => onOpenQuoteModal({ productCode: isPlanterArticle ? 'OEM-SEAGRASS-PLANTERS' : isBagArticle ? 'OEM-JUTE-BAGS' : isMatArticle ? 'OEM-JUTE-FLOOR-MATS' : isPlacematArticle ? 'OEM-JUTE-PLACEMATS' : 'OEM-JUTE-BASKETS' })}
                   className="mt-4 w-full py-2.5 bg-white hover:bg-stone-100 text-amber-950 rounded-lg text-xs font-bold transition shadow-xs flex items-center justify-center gap-1.5"
                 >
                   <Mail className="w-3.5 h-3.5" />
@@ -273,11 +274,11 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                 </div>
                 <div className="flex justify-between text-stone-600">
                   <span>Origin:</span>
-                  <span className="font-medium text-stone-900">Bangladesh (Tosha Jute)</span>
+                  <span className="font-medium text-stone-900">{isPlanterArticle ? 'Bangladesh (Coastal Seagrass)' : 'Bangladesh (Tosha Jute)'}</span>
                 </div>
                 <div className="flex justify-between text-stone-600">
                   <span>Standard MOQ:</span>
-                  <span className="font-medium text-stone-900">{isBagArticle ? '500 Pieces (Flexible)' : isMatArticle ? '300 Pieces (Flexible)' : isPlacematArticle ? '500 Pieces (125 Sets of 4)' : '200 Sets (Flexible)'}</span>
+                  <span className="font-medium text-stone-900">{isPlanterArticle ? '200 Sets (Flexible)' : isBagArticle ? '500 Pieces (Flexible)' : isMatArticle ? '300 Pieces (Flexible)' : isPlacematArticle ? '500 Pieces (125 Sets of 4)' : '200 Sets (Flexible)'}</span>
                 </div>
                 <div className="flex justify-between text-stone-600">
                   <span>Moisture Tolerance:</span>
@@ -303,9 +304,457 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
           <main className="lg:col-span-8 order-1 lg:order-2 space-y-12">
 
             {/* ========================================================================= */}
-            {/* JUTE BAG EDITORIAL CONTENT (WHEN isBagArticle IS TRUE) */}
+            {/* SEAGRASS PLANTER BASKETS EDITORIAL (WHEN isPlanterArticle IS TRUE) */}
             {/* ========================================================================= */}
-            {isBagArticle ? (
+            {isPlanterArticle ? (
+              <>
+                {/* Section 1: Fiber Anatomy & Material Engineering */}
+                <section id="fiber-anatomy-engineering" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    1. Coastal Seagrass Anatomy & Botanical Pot Engineering: The Natural Fiber Advantage
+                  </h2>
+                  
+                  {/* GEO/AEO Direct Answer Snippet Callout */}
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Direct Definition:</strong>
+                    A commercial seagrass planter basket is an artisanal, plant-based botanical container handwoven from the resilient, salt-tolerant wild coastal grass fibers of the Bay of Bengal estuary in Bangladesh. Engineered with a natural waxy cuticle (cutin), 52%–56% cellulose reinforced with bio-silica, and high tensile flexibility, genuine seagrass planters deliver organic thermal insulation for plant root balls, breathability, and complete circular biodegradability—eliminating single-use plastic pot waste across European retail nurseries.
+                  </div>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    In the global horticultural and interior biophilic decor landscape, coastal seagrass represents the premier plant-based material for decorative plant pots and indoor plant covers. Derived from saline estuarine meadows along the coastal belt of Bangladesh (Cox's Bazar, Noakhali, and the Sundarbans periphery), wild seagrass thrives in brackish tidal waters. This natural saline immersion infuses the dried fibers with unmatched resilience against rot, surface humidity, and fungal spores compared to freshwater reeds.
+                  </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-5 text-xs text-stone-700">
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="font-bold text-stone-900 text-sm block mb-1 text-amber-800">52%–56% Cellulose & Silica</span>
+                      <span>High crystalline polymer matrix providing strong tensile endurance, preventing basket deformation under heavy potted soil weight.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="font-bold text-stone-900 text-sm block mb-1 text-amber-800">Natural Cutin Waxy Layer</span>
+                      <span>Natural waxy epidermis offering superior water-shedding properties, resisting surface dampness and keeping planters fresh for years.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="font-bold text-stone-900 text-sm block mb-1 text-amber-800">280–380 kgf/cm² Flexibility</span>
+                      <span>Exceptional torsional flexibility allowing belly baskets to fold inward without cracking, splitting, or fiber breakage.</span>
+                    </div>
+                  </div>
+
+                  {/* Image 4: Raw Fiber Inspection & Grading */}
+                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs bg-stone-50 flex flex-col items-center">
+                    <img
+                      src="/images/blog/raw-coastal-seagrass-fiber-grading-bangladesh.jpg"
+                      alt="Raw coastal wild seagrass fiber bundles sorted and air-dried on racks in Bangladesh for export planter weaving"
+                      className="w-full h-auto max-h-[560px] object-contain mx-auto block"
+                    />
+                    <figcaption className="w-full p-3 text-xs text-stone-500 bg-stone-50 border-t border-stone-100 flex items-center justify-between">
+                      <span>Bangladeshi wild coastal seagrass fibers graded for tensile flexibility, length, and golden-straw luster at Golden Fiber Crafts.</span>
+                      <span className="font-mono text-[11px] text-amber-700 font-semibold">COASTAL SEAGRASS FIBER</span>
+                    </figcaption>
+                  </figure>
+                </section>
+
+                {/* Section 2: Why Dutch & European Retailers Are Switching */}
+                <section id="why-retailers-switch" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    2. Why Dutch & European Garden Centers Are Transitioning to Natural Seagrass Planters
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Direct Answer:</strong>
+                    Garden center networks across the Netherlands (such as Intratuin, Dille & Kamille, and GroenRijk) and European interior chains are aggressively replacing non-recyclable virgin plastic plant pots with natural handwoven seagrass planters. Driven by the EU Packaging and Packaging Waste Regulation (PPWR), corporate Scope 3 emissions pledges, and booming consumer demand for biophilic natural interiors, seagrass planters elevate plant retail prices by 300% while providing 100% biodegradable end-of-life circularity.
+                  </div>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    The rapid acceleration of natural seagrass planter imports through the Port of Rotterdam is governed by four commercial and legislative pillars:
+                  </p>
+
+                  <ul className="mt-3 space-y-3 text-xs sm:text-sm text-stone-700 list-disc pl-5">
+                    <li>
+                      <strong>EU Packaging & Waste Directives (PPWR & ESPR):</strong> European Union regulations strictly penalize single-use virgin plastic packaging and unrecyclable composite flowerpots. Handcrafted natural fiber planters provide European importers complete compliance immunity, qualifying as reusable, multi-year eco-friendly homeware.
+                    </li>
+                    <li>
+                      <strong>High Retail Value & Margin Expansion:</strong> Selling an indoor houseplant (such as a Ficus Lyrata or Monstera Deliciosa) in an ugly plastic nursery pot generates basic margins. Dropping that exact same plant into an artisanal belly shape seagrass planter transforms it into a premium design object, allowing Dutch florists and garden centers to achieve retail markups of 3x to 5x.
+                    </li>
+                    <li>
+                      <strong>Optimal Plant Root Aeration & Thermal Regulation:</strong> Unlike non-porous ceramic glazed pots or synthetic plastic buckets that trap standing water and induce anaerobic root rot (Pythium), woven seagrass allows natural air circulation around the root ball, protecting tropical indoor plants from temperature shock during harsh European winters.
+                    </li>
+                    <li>
+                      <strong>Zero Microplastic Contamination:</strong> As European eco-conscious consumers reject petroleum-derived plastic home goods that shed microscopic synthetic dust indoors, 100% natural, unbleached coastal seagrass offers an authentic, hypoallergenic, and grounding design texture.
+                    </li>
+                  </ul>
+
+                  <aside className="my-5 rounded-xl border border-emerald-300 bg-emerald-50/80 p-4 text-emerald-950 text-xs sm:text-sm">
+                    <div className="flex items-center gap-2 font-bold mb-1">
+                      <Award className="w-4 h-4 text-emerald-700" />
+                      <span>The Ecological Math of Coastal Seagrass</span>
+                    </div>
+                    <p className="text-stone-700 leading-relaxed">
+                      Wild coastal seagrass is a rapidly regenerating wild estuarine halophyte. It requires zero chemical pesticides, zero synthetic fertilizers, and zero freshwater irrigation—growing wild along Bangladesh’s maritime delta while naturally sequestering blue carbon and stabilizing coastal embankments against tidal erosion.
+                    </p>
+                  </aside>
+                </section>
+
+                {/* Section 3: Commercial Classifications */}
+                <section id="commercial-classifications" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    3. Commercial Classifications & Structural Styles of Seagrass Planter Baskets
+                  </h2>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    Golden Fiber Crafts Limited manufactures four primary structural classifications of export-grade seagrass planters, precision-engineered for European nursery standards and retail catalog collections:
+                  </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                    <div className="p-4 rounded-xl border border-stone-200 bg-white shadow-2xs">
+                      <div className="flex items-center gap-2 text-amber-800 font-bold font-serif text-sm">
+                        <ShoppingBag className="w-4 h-4" />
+                        <h4>1. Foldable Belly Baskets with Ear Handles (GFC-SP-0030)</h4>
+                      </div>
+                      <p className="text-xs text-stone-600 mt-2 leading-relaxed">
+                        The iconic dual-form bohemian planter. Features a flexible mid-body waistline allowing the top half to fold inward, transforming an upright handled plant basket into a shallow display bowl. Nested in calibrated Sets of 3 (Dia 28, 32, 36 cm) with sturdy woven ear handles tested to hold 18+ kg potted specimens.
+                      </p>
+                    </div>
+
+                    <div className="p-4 rounded-xl border border-stone-200 bg-white shadow-2xs">
+                      <div className="flex items-center gap-2 text-amber-800 font-bold font-serif text-sm">
+                        <ShoppingBag className="w-4 h-4" />
+                        <h4>2. Tapered Cylindrical Nursery Pot Covers (GFC-SP-0031)</h4>
+                      </div>
+                      <p className="text-xs text-stone-600 mt-2 leading-relaxed">
+                        Structured, upright cylindrical planters engineered specifically to conceal standard European injection-molded plastic nursery pots (matching C12, C15, C17, C19, C21, C24 spec containers). Features a tight vertical ribbed coil weave and a sewn-in puncture-proof transparent PE liner.
+                      </p>
+                    </div>
+
+                    <div className="p-4 rounded-xl border border-stone-200 bg-white shadow-2xs">
+                      <div className="flex items-center gap-2 text-amber-800 font-bold font-serif text-sm">
+                        <ShoppingBag className="w-4 h-4" />
+                        <h4>3. Standing Planters with Wooden Tripod Legs (GFC-SP-0032)</h4>
+                      </div>
+                      <p className="text-xs text-stone-600 mt-2 leading-relaxed">
+                        Architectural elevated planters combining a deep hand-coiled seagrass pot with three tapered solid natural ashwood or beechwood legs. Legs utilize internal threaded metal screw dowels, allowing flat-pack knockdown packaging for optimal ocean container CBM displacement and mail-order delivery.
+                      </p>
+                    </div>
+
+                    <div className="p-4 rounded-xl border border-stone-200 bg-white shadow-2xs">
+                      <div className="flex items-center gap-2 text-amber-800 font-bold font-serif text-sm">
+                        <ShoppingBag className="w-4 h-4" />
+                        <h4>4. Two-Tone Dipped & Geometric Chevron Planters (GFC-SP-0033/34)</h4>
+                      </div>
+                      <p className="text-xs text-stone-600 mt-2 leading-relaxed">
+                        Contemporary styling featuring chalk-white dipped bottoms or contrasting dyed charcoal/black chevron zigzag geometric bands. Formulated with 100% AZO-free non-toxic water-based colorants compliant with European Union REACH environmental directives.
+                      </p>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section 4: Manufacturing Process */}
+                <section id="manufacturing-process" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    4. The 7-Stage Manufacturing Process: From Coastal Harvest to Rotterdam Master Carton
+                  </h2>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    At Golden Fiber Crafts Limited, every seagrass planter is handcrafted through a verified 7-stage quality protocol designed to withstand international maritime transit and deliver flawless presentation:
+                  </p>
+
+                  <div className="space-y-3 mt-4 text-xs sm:text-sm text-stone-700">
+                    <div className="p-3.5 bg-white rounded-lg border border-stone-200 flex gap-3">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-900 font-bold flex items-center justify-center shrink-0 text-xs">1</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif">Wild Coastal Grass Harvesting</strong>
+                        Artisans sustainably harvest mature, long-stemmed seagrass from coastal river estuaries. Only upper vegetative blades are clipped, preserving the rhizome root systems for regenerative regrowth in the next seasonal tide.
+                      </div>
+                    </div>
+
+                    <div className="p-3.5 bg-white rounded-lg border border-stone-200 flex gap-3">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-900 font-bold flex items-center justify-center shrink-0 text-xs">2</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif">Graded Sun-Curing & De-Moisturizing</strong>
+                        Freshly harvested green blades are spread over elevated bamboo aeration racks under natural tropical sunshine for 5–7 days. Gradual drying cures the fibers from vivid green to a warm, uniform golden-honey straw hue while reducing initial sap moisture.
+                      </div>
+                    </div>
+
+                    <div className="p-3.5 bg-white rounded-lg border border-stone-200 flex gap-3">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-900 font-bold flex items-center justify-center shrink-0 text-xs">3</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif">Strand Sorting & Calibrated Cord Twisting</strong>
+                        Cured seagrass is sorted by tensile grade and fiber thickness. Skilled craftsmen twist multiple strands together into uniform 6mm, 8mm, or 10mm high-density braided ropes, ensuring consistent tensile strength and diameter throughout the coil.
+                      </div>
+                    </div>
+
+                    <div className="p-3.5 bg-white rounded-lg border border-stone-200 flex gap-3">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-900 font-bold flex items-center justify-center shrink-0 text-xs">4</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif">Artisan Hand-Weaving & Form Shaping</strong>
+                        Master craftswomen coil and interlock the twisted cords over precision wooden shaping molds. Each consecutive coil is secured with industrial monofilament lock-stitching or natural fiber binding, ensuring symmetrical diameters and flush nesting tolerance.
+                      </div>
+                    </div>
+
+                    <div className="p-3.5 bg-white rounded-lg border border-stone-200 flex gap-3">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-900 font-bold flex items-center justify-center shrink-0 text-xs">5</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif">Ultrasonic Heat-Sealed Waterproof Inner PE Liner Installation</strong>
+                        Every planter is fitted with a heavy-duty, puncture-resistant 0.04mm virgin PE or TPU drop-in liner. Liner bottom seams are ultrasonically welded and lock-stitched beneath the top rim, ensuring 100% leakproof defense against overwatering.
+                      </div>
+                    </div>
+
+                    <div className="p-3.5 bg-white rounded-lg border border-stone-200 flex gap-3">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-900 font-bold flex items-center justify-center shrink-0 text-xs">6</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif">Climate-Controlled Dehumidification Chamber</strong>
+                        Finished planters enter an industrial forced hot-air circulation chamber operating at 45°C–50°C until internal moisture stabilizes strictly below 10%–12%, eliminating all mold or mildew risks during 25–30 days of ocean transit.
+                      </div>
+                    </div>
+
+                    <div className="p-3.5 bg-white rounded-lg border border-stone-200 flex gap-3">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-900 font-bold flex items-center justify-center shrink-0 text-xs">7</span>
+                      <div>
+                        <strong className="text-stone-900 block font-serif">Nesting Assembly, Poly Barrier Sealing & Master Export Cartons</strong>
+                        Baskets are nested into Sets of 3 (Small inside Medium inside Large), sealed inside a heavy virgin polyethylene moisture barrier bag with 50g–100g industrial clay desiccants, and packed into heavy 5-ply export master cartons ready for container drayage.
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Image 2: Artisan Weaving */}
+                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs bg-stone-50 flex flex-col items-center">
+                    <img
+                      src="/images/blog/bangladeshi-artisan-weaving-seagrass-planter.jpg"
+                      alt="Bangladeshi artisan craftswoman sitting on porch weaving a natural seagrass planter basket"
+                      className="w-full h-auto max-h-[560px] object-contain mx-auto block"
+                    />
+                    <figcaption className="w-full p-3 text-xs text-stone-500 bg-stone-50 border-t border-stone-100 flex items-center justify-between">
+                      <span>Bangladeshi artisan craftswoman hand-weaving a coastal seagrass planter basket in a rural workshop, preserving traditional handcraft techniques.</span>
+                      <span className="font-mono text-[11px] text-amber-700 font-semibold">HANDMADE CRAFTSMANSHIP</span>
+                    </figcaption>
+                  </figure>
+                </section>
+
+                {/* Section 5: OEM Customization */}
+                <section id="oem-customization" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    5. OEM / ODM Customization Options for European Private-Label Retailers
+                  </h2>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    As an integrated direct manufacturer, Golden Fiber Crafts Limited provides complete OEM and ODM private-label development for Dutch garden centers, European department stores, and e-commerce homeware brands:
+                  </p>
+
+                  <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-stone-700">
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>European Nursery Pot Calibration:</strong> Dimensions engineered to match standard Dutch injection-molded pots (C9, C12, C15, C17, C19, C21, C24, C30 cm) with seamless drop-in fit.</span>
+                    </div>
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Waterproof Liner Specifications:</strong> 0.04mm food-grade virgin PE sewn-in liners, removable heavy TPU saucers, or transparent drip trays.</span>
+                    </div>
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Pantone FHI Reactive Dyeing:</strong> AZO-free reactive dipped bases (chalk white, sage green, terracotta, charcoal) matched to Pantone Fashion, Home + Interiors standards.</span>
+                    </div>
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Handle Ergonomics:</strong> Foldable ear handles, genuine vegetable-tanned leather straps, thick natural cotton marine rope, or handle-free flush cylinders.</span>
+                    </div>
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Branding & GS1 Packaging:</strong> Blind debossed leather logo badges, laser-etched wooden tags, FSC kraft belly bands, and GS1-compliant EAN-13 retail barcode labels.</span>
+                    </div>
+                    <div className="p-3 bg-white rounded-lg border border-stone-200 flex items-start gap-2">
+                      <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Elevated Tripod Hardware:</strong> Solid FSC-certified ashwood or beechwood tapered tripod legs with anti-scratch felt floor pads and flat-pack hardware.</span>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section 6: Quality Control */}
+                <section id="quality-control" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    6. Quality Control, Leakproof Testing & Moisture Defense: The AQL 2.5 Standard
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Direct Answer:</strong>
+                    Golden Fiber Crafts enforces AQL 2.5 General Inspection Level II standards across every export batch. Key testing gates include: (1) electrical pin-probe moisture readings strictly under 10%–12%; (2) 24-hour hydrostatic leak testing of inner liners to ensure zero water seepage; (3) 100% conveyor broken needle/metal detection (&lt;0.8mm sensitivity); and (4) handle pull-tension tests exceeding 20 kgf.
+                  </div>
+
+                  {/* Image 5: QC Inspection */}
+                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs bg-stone-50 flex flex-col items-center">
+                    <img
+                      src="/images/blog/seagrass-planter-quality-control-moisture-inspection.jpg"
+                      alt="Quality control technician in factory testing moisture percentage of handcrafted basket using digital pin meter"
+                      className="w-full h-auto max-h-[560px] object-contain mx-auto block"
+                    />
+                    <figcaption className="w-full p-3 text-xs text-stone-500 bg-stone-50 border-t border-stone-100 flex items-center justify-between">
+                      <span>Digital moisture probe inspection: every production lot is measured to ensure fiber moisture is strictly under 12% before master carton packaging.</span>
+                      <span className="font-mono text-[11px] text-amber-700 font-semibold">QA MOISTURE PROTOCOL</span>
+                    </figcaption>
+                  </figure>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs mt-3">
+                    <div className="p-3.5 bg-stone-100 rounded-lg">
+                      <span className="font-bold text-stone-900 block mb-1">1. Moisture &lt;10%–12%</span>
+                      <span>Calibrated electrical resistance pin meters ensure absolute dryness, preventing mold during maritime voyages across the Indian Ocean and Suez Canal.</span>
+                    </div>
+                    <div className="p-3.5 bg-stone-100 rounded-lg">
+                      <span className="font-bold text-stone-900 block mb-1">2. 100% Needle Detection</span>
+                      <span>Tunnel conveyor metal detectors scan 100% of finished baskets to ensure zero broken sewing needles reach consumer hands or retail floors.</span>
+                    </div>
+                    <div className="p-3.5 bg-stone-100 rounded-lg">
+                      <span className="font-bold text-stone-900 block mb-1">3. 24-Hr Hydrostatic Test</span>
+                      <span>Batch samples of PE waterproof liners are filled with standing water for 24 hours to verify 100% zero capillary seepage or pinhole defects.</span>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section 7: Packaging Logistics */}
+                <section id="packaging-logistics" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    7. Packaging Logistics & Ocean Freight Optimization to Port of Rotterdam (CBM Calculations)
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Logistics Breakthrough:</strong>
+                    Because international maritime ocean freight is billed on volumetric cubic meters (CBM), shipping unnested hollow baskets wastes up to 70% of container space. By engineering graduated diameters, smaller baskets nest flush inside larger baskets. A Set of 3 (S/3) occupies the dimensional footprint of a single large basket—allowing a 40ft High Cube container to carry over 4,500 Sets (13,500+ individual planters) directly to the Port of Rotterdam, lowering ocean freight cost per planter to just $0.18–$0.24.
+                  </div>
+
+                  {/* Image 3: Studio Catalog Showcase */}
+                  <figure className="my-6 rounded-xl overflow-hidden border border-stone-200 shadow-xs bg-stone-50 flex flex-col items-center">
+                    <img
+                      src="/images/blog/custom-seagrass-planters-wholesale-display.jpg"
+                      alt="Collection of handcrafted export-grade seagrass planter baskets including belly baskets and cylindrical pot covers on display plinths"
+                      className="w-full h-auto max-h-[560px] object-contain mx-auto block"
+                    />
+                    <figcaption className="w-full p-3 text-xs text-stone-500 bg-stone-50 border-t border-stone-100 flex items-center justify-between">
+                      <span>Export-grade product lines: from belly-shaped folding baskets to cylindrical nursery pot covers, engineered for flush nesting and ocean container loading.</span>
+                      <span className="font-mono text-[11px] text-amber-700 font-semibold">EUROPEAN EXPORT CATALOG</span>
+                    </figcaption>
+                  </figure>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    Our export packaging protocol guarantees zero moisture intrusion, carton crush resistance, and seamless European pallet handling:
+                  </p>
+
+                  <ul className="mt-2 space-y-2 text-xs sm:text-sm text-stone-700 list-disc pl-5">
+                    <li><strong>5-Ply Heavy-Duty Master Cartons:</strong> Double-wall corrugated boxes with Edge Crush Test (ECT) rating of 44 lbs/in and burst strength of 275 psi.</li>
+                    <li><strong>Hermetic Polyethylene Moisture Liner:</strong> Each carton is lined with a heavy virgin PE barrier bag, heat-sealed after packing to lock out sea humid air.</li>
+                    <li><strong>Active Industrial Desiccant Pouches:</strong> Two 50g activated clay or silica gel desiccant packs inside each carton to maintain dry micro-climates.</li>
+                    <li><strong>Euro-Pallet Loading (120 x 80 cm):</strong> Carton dimensions configured for optimal stacking on standard European wooden pallets without overhang.</li>
+                  </ul>
+                </section>
+
+                {/* Section 8: Why Source From Bangladesh to Netherlands */}
+                <section id="why-bangladesh" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    8. Why Source Seagrass Planters Directly From Bangladesh to the Netherlands?
+                  </h2>
+
+                  <div className="my-4 p-4 rounded-xl border-l-4 border-amber-600 bg-amber-50/80 text-stone-800 text-sm leading-relaxed">
+                    <strong className="text-amber-950 font-semibold block mb-1">Direct Answer:</strong>
+                    Sourcing directly from Golden Fiber Crafts Limited in Bangladesh provides Dutch and European buyers four decisive competitive advantages: (1) 0% customs import duty under EU Everything But Arms (EBA) and GSP schemes (saving 4.5%–6.5% standard duty); (2) direct factory pricing bypassing European trading middlemen (saving 25%–35%); (3) rich coastal raw material reserves; and (4) direct maritime container dispatch from Chattogram Seaport to Port of Rotterdam (Haven van Rotterdam).
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4 text-xs sm:text-sm text-stone-700">
+                    <div className="p-4 rounded-xl bg-white border border-stone-200">
+                      <span className="font-bold text-stone-900 block font-serif text-sm mb-1">Duty-Free European Market Entry (0% Duty)</span>
+                      <span>Under the EU Generalized Scheme of Preferences (GSP) and Everything But Arms (EBA) agreement, handcrafted natural fiber planters from Bangladesh enter the Netherlands with 0% import customs tariff.</span>
+                    </div>
+                    <div className="p-4 rounded-xl bg-white border border-stone-200">
+                      <span className="font-bold text-stone-900 block font-serif text-sm mb-1">Direct Factory Pricing</span>
+                      <span>By partnering directly with our manufacturing facilities, European retail chains eliminate Dutch and German import trading houses, boosting gross retail margins significantly.</span>
+                    </div>
+                    <div className="p-4 rounded-xl bg-white border border-stone-200">
+                      <span className="font-bold text-stone-900 block font-serif text-sm mb-1">Rotterdam Maritime Feeder Connectivity</span>
+                      <span>Direct container feeder vessels connect Chattogram Port (BDCGP) via Colombo or Singapore directly to Port of Rotterdam (NLRTM) within 22–26 maritime transit days.</span>
+                    </div>
+                    <div className="p-4 rounded-xl bg-white border border-stone-200">
+                      <span className="font-bold text-stone-900 block font-serif text-sm mb-1">Full Chemical Safety (EU REACH)</span>
+                      <span>All processing aids, reactive dyes, stitching threads, and waterproof liners undergo laboratory verification: zero banned AZO dyes, zero phthalates, and zero heavy metals.</span>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section 9: Sustainability & Ethics */}
+                <section id="sustainable-ethics" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    9. Sustainable Harvesting, Zero Waste & Coastal Women Artisan Empowerment
+                  </h2>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-4">
+                    At Golden Fiber Crafts Limited, sustainability encompasses ecological preservation and social empowerment. Over 85% of our seagrass harvesting, braiding, and coiling artisans are rural coastal Bangladeshi women in Cox's Bazar and Noakhali districts. Through dignified, fair-wage employment, safe and well-ventilated cottage hubs, and flexible home-based weaving programs, we empower women to build financial independence and provide education for their children.
+                  </p>
+
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-2">
+                    On the factory floor, 100% of seagrass trimmings, cord offcuts, and fiber scraps are collected and repurposed into organic mulch or composite paper manufacturing—ensuring zero production waste reaches local landfills.
+                  </p>
+                </section>
+
+                {/* Section 10: Buyer Due Diligence */}
+                <section id="buyer-due-diligence" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    10. Buyer Due Diligence Audit Checklist for European Plant Importers
+                  </h2>
+
+                  <div className="mt-4 p-5 bg-white rounded-xl border border-stone-200 shadow-2xs space-y-3 text-xs sm:text-sm">
+                    <div className="flex items-start gap-2.5 text-stone-800">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Verify Direct Factory Ownership:</strong> Confirm physical production workshops, tax identification, and export registration in Bangladesh rather than third-party trading brokers.</span>
+                    </div>
+                    <div className="flex items-start gap-2.5 text-stone-800">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Require Hydrostatic Leak Test Reports:</strong> Demand certified test documentation confirming 24-hour standing water tests with zero pinhole seepage on plastic inner liners.</span>
+                    </div>
+                    <div className="flex items-start gap-2.5 text-stone-800">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Inspect Fiber Moisture Records:</strong> Require lot-by-lot written pin-meter moisture logs demonstrating internal fiber moisture strictly below 10%–12%.</span>
+                    </div>
+                    <div className="flex items-start gap-2.5 text-stone-800">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Validate Nesting Tolerances:</strong> Inspect pre-production sample sets to ensure baskets nest completely flush without binding or oval distortion.</span>
+                    </div>
+                    <div className="flex items-start gap-2.5 text-stone-800">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                      <span><strong>Verify EU REACH & Zero AZO Dyes:</strong> Ensure all dyed color accents conform to European chemical standards with certified safety data sheets (SDS).</span>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section 11: Procurement Guide */}
+                <section id="procurement-guide" className="prose prose-stone max-w-none">
+                  <h2 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 border-b border-stone-200 pb-2.5">
+                    11. Step-by-Step International Procurement Guide (Inquiry to FOB Rotterdam/Chattogram)
+                  </h2>
+
+                  <div className="mt-4 grid grid-cols-1 sm:grid-cols-5 gap-3 text-xs">
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center mb-2">1</span>
+                      <strong className="text-stone-900 block font-serif text-sm">Spec & RFQ</strong>
+                      <span className="text-stone-500 mt-1 block leading-relaxed">Provide target planter dimensions, nursery pot code, liner spec, and required set configuration.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center mb-2">2</span>
+                      <strong className="text-stone-900 block font-serif text-sm">Sample Prototyping</strong>
+                      <span className="text-stone-500 mt-1 block leading-relaxed">Physical pre-production sample sets handwoven and dispatched in 5–7 days via DHL/FedEx Express.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center mb-2">3</span>
+                      <strong className="text-stone-900 block font-serif text-sm">PO & Contract</strong>
+                      <span className="text-stone-500 mt-1 block leading-relaxed">Proforma Invoice locked with 30% commercial deposit or Irrevocable Commercial L/C at Sight.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center mb-2">4</span>
+                      <strong className="text-stone-900 block font-serif text-sm">Bulk Production</strong>
+                      <span className="text-stone-500 mt-1 block leading-relaxed">25–35 days manufacturing for 20ft FCL with ongoing in-line AQL 2.5 leakproof quality audits.</span>
+                    </div>
+                    <div className="p-3.5 bg-white rounded-xl border border-stone-200 shadow-2xs">
+                      <span className="w-6 h-6 rounded-full bg-amber-100 text-amber-800 font-bold flex items-center justify-center mb-2">5</span>
+                      <strong className="text-stone-900 block font-serif text-sm">Ocean Freight</strong>
+                      <span className="text-stone-500 mt-1 block leading-relaxed">Container drayage to Chattogram Port, ISPM 15 fumigation, customs clearance, and Bill of Lading issuance.</span>
+                    </div>
+                  </div>
+                </section>
+              </>
+            ) : isBagArticle ? (
               <>
                 {/* Section 1: Fiber Anatomy & Material Engineering */}
                 <section id="fiber-anatomy-engineering" className="prose prose-stone max-w-none">
@@ -2196,20 +2645,27 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                 <div>
                   <span className="text-amber-700 text-xs font-semibold uppercase tracking-wider block mb-1">Catalog Spotlight</span>
                   <h3 className="text-xl font-serif font-bold text-stone-900">
-                    {isBagArticle ? 'Featured Jute Bag Export Models' : isMatArticle ? 'Featured Jute Floor Mat Export Models' : isPlacematArticle ? 'Featured Jute Placemat Export Models' : 'Featured Jute Basket Export Models'}
+                    {isPlanterArticle ? 'Featured Seagrass Planter Export Models' : isBagArticle ? 'Featured Jute Bag Export Models' : isMatArticle ? 'Featured Jute Floor Mat Export Models' : isPlacematArticle ? 'Featured Jute Placemat Export Models' : 'Featured Jute Basket Export Models'}
                   </h3>
                 </div>
                 <Link
-                  to={isBagArticle ? '/categories/bags' : isMatArticle ? '/categories/jute' : isPlacematArticle ? '/categories/jute' : '/categories/baskets'}
+                  to={isPlanterArticle ? '/categories/seagrass' : isBagArticle ? '/categories/bags' : isMatArticle ? '/categories/jute' : isPlacematArticle ? '/categories/jute' : '/categories/baskets'}
                   className="inline-flex items-center gap-1 text-xs font-semibold text-amber-700 hover:text-amber-800"
                 >
-                  <span>{isBagArticle ? 'View All 24 Bag Models' : isMatArticle ? 'View All Floor Mat Models' : isPlacematArticle ? 'View All Placemat Models' : 'View All 42 Basket Models'}</span>
+                  <span>{isPlanterArticle ? 'View All Seagrass Planters' : isBagArticle ? 'View All 24 Bag Models' : isMatArticle ? 'View All Floor Mat Models' : isPlacematArticle ? 'View All Placemat Models' : 'View All 42 Basket Models'}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {(isBagArticle ? [
+                {(isPlanterArticle ? [
+                  { code: 'GFC-SP-0030', name: 'Belly Shape Seagrass Planter (S/3)', img: '/products/gfc_sp_0030.jpg', desc: 'Foldable body with ear handles' },
+                  { code: 'GFC-SP-0031', name: 'Tapered Cylinder Pot Covers (S/3)', img: '/products/gfc_sp_0031.jpg', desc: 'Sewn-in waterproof PE leakproof liner' },
+                  { code: 'GFC-SP-0032', name: 'Standing Planter w/ Tripod Legs', img: '/products/gfc_sp_0032.jpg', desc: 'Handcrafted seagrass + solid ashwood legs' },
+                  { code: 'GFC-SP-0033', name: 'Geometric Chevron Planter (S/2)', img: '/products/gfc_sp_0033.jpg', desc: 'Charcoal dyed geometric zigzag weave' },
+                  { code: 'GFC-SP-0034', name: 'Two-Tone Dipped White Basket (S/3)', img: '/products/gfc_sp_0034.jpg', desc: 'Chalk white dipped rim accent' },
+                  { code: 'GFC-SP-0035', name: 'Hanging Seagrass Planter (S/2)', img: '/products/gfc_sp_0035.jpg', desc: 'Concentric bowl + macrame jute cord' }
+                ] : isBagArticle ? [
                   { code: 'BJB-68', name: 'Checkered Woven Jute Bag', img: '/products/bjb_68_new.jpg', desc: 'Artisanal two-tone diamond weave' },
                   { code: 'BJB-57', name: 'Mandala Laminated Tote', img: '/products/bjb_57_new.jpg', desc: 'Food-grade PE lined grocery tote' },
                   { code: 'BJB-60', name: 'Striped Jute Oval Bag', img: '/products/bjb_60_new.jpg', desc: 'Genuine leather shoulder straps' },
@@ -2339,19 +2795,23 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                   Direct Factory Export Partner • Bangladesh
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-serif font-bold tracking-tight">
-                  {isBagArticle
+                  {isPlanterArticle
+                    ? 'Launch Your Custom Seagrass Planter Program for Netherlands & Europe'
+                    : isBagArticle
                     ? 'Launch Your Custom Jute Bag Program with Golden Fiber Crafts'
                     : isMatArticle
                     ? 'Launch Your Custom Jute Floor Mat Collection with Golden Fiber Crafts'
                     : 'Launch Your Custom Jute Basket Collection with Golden Fiber Crafts'}
                 </h3>
                 <p className="mt-3 text-sm sm:text-base text-stone-300 leading-relaxed font-light">
-                  Partner directly with an authentic manufacturer in Bangladesh. We provide tailored OEM/ODM prototypes within 7 days, custom Pantone reactive dyeing, precision screen branding, and direct FOB Chattogram container shipping.
+                  {isPlanterArticle
+                    ? 'Partner directly with Bangladesh’s premier natural fiber planter manufacturer. We supply OEM sample prototypes in 7 days, European nursery container sizing, ultrasonic waterproof liners, and direct FOB ocean container shipping to the Port of Rotterdam.'
+                    : 'Partner directly with an authentic manufacturer in Bangladesh. We provide tailored OEM/ODM prototypes within 7 days, custom Pantone reactive dyeing, precision screen branding, and direct FOB Chattogram container shipping.'}
                 </p>
                 
                 <div className="mt-6 flex flex-wrap gap-4 items-center">
                   <button
-                    onClick={() => onOpenQuoteModal({ productCode: isBagArticle ? 'JUTE-BAG-CONTAINER-RFQ' : isMatArticle ? 'JUTE-FLOOR-MAT-CONTAINER-RFQ' : 'JUTE-BASKET-CONTAINER-RFQ' })}
+                    onClick={() => onOpenQuoteModal({ productCode: isPlanterArticle ? 'SEAGRASS-PLANTER-ROTTERDAM-RFQ' : isBagArticle ? 'JUTE-BAG-CONTAINER-RFQ' : isMatArticle ? 'JUTE-FLOOR-MAT-CONTAINER-RFQ' : 'JUTE-BASKET-CONTAINER-RFQ' })}
                     className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold rounded-lg text-sm transition shadow-sm flex items-center gap-2"
                   >
                     <Mail className="w-4 h-4" />

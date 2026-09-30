@@ -47,6 +47,13 @@ const corePages = [
     { loc: 'https://goldenfibercraftsltd.com/images/blog/raw-jute-fiber-grading-placemats-bangladesh.jpg', title: 'Raw Golden Jute Bast Fiber Grading Placemats Bangladesh' },
     { loc: 'https://goldenfibercraftsltd.com/images/blog/jute-placemat-quality-control-moisture-inspection.jpg', title: 'Jute Placemat Quality Control Moisture Meter Inspection' }
   ]},
+  { url: '/seagrass-planter-basket-manufacturer-netherlands', priority: '0.95', changefreq: 'weekly', images: [
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-seagrass-planter-basket-manufacturer-netherlands.jpg', title: 'Custom Seagrass Planter Basket Manufacturer Wholesale Netherlands' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/bangladeshi-artisan-weaving-seagrass-planter.jpg', title: 'Bangladeshi Artisan Weaving Seagrass Planter Basket' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/custom-seagrass-planters-wholesale-display.jpg', title: 'Custom Seagrass Planters Wholesale Catalog Display' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/raw-coastal-seagrass-fiber-grading-bangladesh.jpg', title: 'Raw Coastal Seagrass Fiber Grading Bangladesh' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/seagrass-planter-quality-control-moisture-inspection.jpg', title: 'Seagrass Planter Quality Control and Moisture Meter Inspection' }
+  ]},
   { url: '/about', priority: '0.8', changefreq: 'weekly' },
   { url: '/materials', priority: '0.8', changefreq: 'weekly' },
   { url: '/infrastructure', priority: '0.8', changefreq: 'weekly' },
