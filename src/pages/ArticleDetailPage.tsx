@@ -8,6 +8,7 @@ import {
   Layers, Package, Compass, Check, AlertCircle, Share2, Anchor,
   ShoppingBag, CheckSquare, Award, Droplet, Truck, Globe2, HelpCircle
 } from 'lucide-react';
+import { KaisaGrassBasketEditorial } from '../components/articles/KaisaGrassBasketEditorial';
 
 interface ArticleDetailPageProps {
   onOpenQuoteModal: (productCodeOrData?: string | any) => void;
@@ -21,10 +22,11 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
   const currentSlug = slug || articleSlug || (pathSlug && pathSlug !== 'blog' ? pathSlug : '') || 'jute-bag-manufacturer-bangladesh';
   const article = getArticleBySlug(currentSlug) || ARTICLES_DATA[0];
 
-  const isPlanterArticle = article.slug.includes('planter') || article.category_slug === 'planters' || article.slug.includes('netherlands');
-  const isPlacematArticle = !isPlanterArticle && (article.slug.includes('placemat') || article.category_slug === 'placemats');
-  const isBagArticle = !isPlanterArticle && !isPlacematArticle && (article.slug.includes('bag') || article.category_slug === 'bags');
-  const isMatArticle = !isPlanterArticle && !isPlacematArticle && (article.slug.includes('floor-mat') || article.category_slug === 'floor-mats' || (article.slug.includes('mat') && !article.slug.includes('placemat')) || article.id.includes('floor-mat'));
+  const isKaisaArticle = article.slug.includes('kaisa') || article.category_slug === 'kans-grass' || article.id.includes('kaisa');
+  const isPlanterArticle = !isKaisaArticle && (article.slug.includes('planter') || article.category_slug === 'planters' || (article.slug.includes('netherlands') && !article.slug.includes('kaisa')));
+  const isPlacematArticle = !isKaisaArticle && !isPlanterArticle && (article.slug.includes('placemat') || article.category_slug === 'placemats');
+  const isBagArticle = !isKaisaArticle && !isPlanterArticle && !isPlacematArticle && (article.slug.includes('bag') || article.category_slug === 'bags');
+  const isMatArticle = !isKaisaArticle && !isPlanterArticle && !isPlacematArticle && (article.slug.includes('floor-mat') || article.category_slug === 'floor-mats' || (article.slug.includes('mat') && !article.slug.includes('placemat')) || article.id.includes('floor-mat'));
 
   usePageTitle(
     article.title,
@@ -186,7 +188,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
 
             <div className="flex items-center gap-2">
               <button
-                onClick={() => onOpenQuoteModal({ productCode: isPlanterArticle ? 'SEAGRASS-PLANTER-OEM' : isBagArticle ? 'JUTE-BAG-OEM' : isMatArticle ? 'JUTE-FLOOR-MAT-OEM' : isPlacematArticle ? 'JUTE-PLACEMAT-OEM' : 'JUTE-BASKET-OEM' })}
+                onClick={() => onOpenQuoteModal({ productCode: isKaisaArticle ? 'KAISA-BASKET-ROTTERDAM-RFQ' : isPlanterArticle ? 'SEAGRASS-PLANTER-OEM' : isBagArticle ? 'JUTE-BAG-OEM' : isMatArticle ? 'JUTE-FLOOR-MAT-OEM' : isPlacematArticle ? 'JUTE-PLACEMAT-OEM' : 'JUTE-BASKET-OEM' })}
                 className="px-4 py-2 bg-amber-600 hover:bg-amber-500 text-white rounded-lg text-xs font-semibold transition shadow-xs flex items-center gap-1.5"
               >
                 <Mail className="w-3.5 h-3.5" />
@@ -252,13 +254,13 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                   Direct Factory Desk
                 </span>
                 <h4 className="font-serif font-bold text-base text-white">
-                  {isPlanterArticle ? 'Need Custom Seagrass Planter Samples?' : isBagArticle ? 'Need Custom Jute Bag Samples?' : isMatArticle ? 'Need Custom Jute Floor Mat Samples?' : isPlacematArticle ? 'Need Custom Jute Placemat Samples?' : 'Need Custom Jute Basket Samples?'}
+                  {isKaisaArticle ? 'Need Custom Kaisa Grass Basket Samples?' : isPlanterArticle ? 'Need Custom Seagrass Planter Samples?' : isBagArticle ? 'Need Custom Jute Bag Samples?' : isMatArticle ? 'Need Custom Jute Floor Mat Samples?' : isPlacematArticle ? 'Need Custom Jute Placemat Samples?' : 'Need Custom Jute Basket Samples?'}
                 </h4>
                 <p className="mt-2 text-xs text-amber-100/90 leading-relaxed">
                   We supply OEM sample prototypes with custom screen printing, PMS color dyeing, and direct FOB Chattogram container quotes in 24 hours.
                 </p>
                 <button
-                  onClick={() => onOpenQuoteModal({ productCode: isPlanterArticle ? 'OEM-SEAGRASS-PLANTERS' : isBagArticle ? 'OEM-JUTE-BAGS' : isMatArticle ? 'OEM-JUTE-FLOOR-MATS' : isPlacematArticle ? 'OEM-JUTE-PLACEMATS' : 'OEM-JUTE-BASKETS' })}
+                  onClick={() => onOpenQuoteModal({ productCode: isKaisaArticle ? 'OEM-KAISA-BASKETS' : isPlanterArticle ? 'OEM-SEAGRASS-PLANTERS' : isBagArticle ? 'OEM-JUTE-BAGS' : isMatArticle ? 'OEM-JUTE-FLOOR-MATS' : isPlacematArticle ? 'OEM-JUTE-PLACEMATS' : 'OEM-JUTE-BASKETS' })}
                   className="mt-4 w-full py-2.5 bg-white hover:bg-stone-100 text-amber-950 rounded-lg text-xs font-bold transition shadow-xs flex items-center justify-center gap-1.5"
                 >
                   <Mail className="w-3.5 h-3.5" />
@@ -274,11 +276,11 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                 </div>
                 <div className="flex justify-between text-stone-600">
                   <span>Origin:</span>
-                  <span className="font-medium text-stone-900">{isPlanterArticle ? 'Bangladesh (Coastal Seagrass)' : 'Bangladesh (Tosha Jute)'}</span>
+                  <span className="font-medium text-stone-900">{isKaisaArticle ? 'Bangladesh (Wild Kaisa Grass)' : isPlanterArticle ? 'Bangladesh (Coastal Seagrass)' : 'Bangladesh (Tosha Jute)'}</span>
                 </div>
                 <div className="flex justify-between text-stone-600">
                   <span>Standard MOQ:</span>
-                  <span className="font-medium text-stone-900">{isPlanterArticle ? '200 Sets (Flexible)' : isBagArticle ? '500 Pieces (Flexible)' : isMatArticle ? '300 Pieces (Flexible)' : isPlacematArticle ? '500 Pieces (125 Sets of 4)' : '200 Sets (Flexible)'}</span>
+                  <span className="font-medium text-stone-900">{isKaisaArticle ? '200 Sets (Flexible)' : isPlanterArticle ? '200 Sets (Flexible)' : isBagArticle ? '500 Pieces (Flexible)' : isMatArticle ? '300 Pieces (Flexible)' : isPlacematArticle ? '500 Pieces (125 Sets of 4)' : '200 Sets (Flexible)'}</span>
                 </div>
                 <div className="flex justify-between text-stone-600">
                   <span>Moisture Tolerance:</span>
@@ -304,9 +306,16 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
           <main className="lg:col-span-8 order-1 lg:order-2 space-y-12">
 
             {/* ========================================================================= */}
-            {/* SEAGRASS PLANTER BASKETS EDITORIAL (WHEN isPlanterArticle IS TRUE) */}
+            {/* KAISA GRASS BASKETS EDITORIAL (WHEN isKaisaArticle IS TRUE) */}
             {/* ========================================================================= */}
-            {isPlanterArticle ? (
+            {isKaisaArticle ? (
+              <KaisaGrassBasketEditorial
+                article={article}
+                activeFaqIndex={activeFaqIndex}
+                setActiveFaqIndex={setActiveFaqIndex}
+                onOpenQuoteModal={onOpenQuoteModal}
+              />
+            ) : isPlanterArticle ? (
               <>
                 {/* Section 1: Fiber Anatomy & Material Engineering */}
                 <section id="fiber-anatomy-engineering" className="prose prose-stone max-w-none">
@@ -2645,20 +2654,27 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                 <div>
                   <span className="text-amber-700 text-xs font-semibold uppercase tracking-wider block mb-1">Catalog Spotlight</span>
                   <h3 className="text-xl font-serif font-bold text-stone-900">
-                    {isPlanterArticle ? 'Featured Seagrass Planter Export Models' : isBagArticle ? 'Featured Jute Bag Export Models' : isMatArticle ? 'Featured Jute Floor Mat Export Models' : isPlacematArticle ? 'Featured Jute Placemat Export Models' : 'Featured Jute Basket Export Models'}
+                    {isKaisaArticle ? 'Featured Kaisa Grass Basket Export Models' : isPlanterArticle ? 'Featured Seagrass Planter Export Models' : isBagArticle ? 'Featured Jute Bag Export Models' : isMatArticle ? 'Featured Jute Floor Mat Export Models' : isPlacematArticle ? 'Featured Jute Placemat Export Models' : 'Featured Jute Basket Export Models'}
                   </h3>
                 </div>
                 <Link
-                  to={isPlanterArticle ? '/categories/seagrass' : isBagArticle ? '/categories/bags' : isMatArticle ? '/categories/jute' : isPlacematArticle ? '/categories/jute' : '/categories/baskets'}
+                  to={isKaisaArticle ? '/categories/kans-grass' : isPlanterArticle ? '/categories/seagrass' : isBagArticle ? '/categories/bags' : isMatArticle ? '/categories/jute' : isPlacematArticle ? '/categories/jute' : '/categories/baskets'}
                   className="inline-flex items-center gap-1 text-xs font-semibold text-amber-700 hover:text-amber-800"
                 >
-                  <span>{isPlanterArticle ? 'View All Seagrass Planters' : isBagArticle ? 'View All 24 Bag Models' : isMatArticle ? 'View All Floor Mat Models' : isPlacematArticle ? 'View All Placemat Models' : 'View All 42 Basket Models'}</span>
+                  <span>{isKaisaArticle ? 'View All Kaisa Grass Baskets' : isPlanterArticle ? 'View All Seagrass Planters' : isBagArticle ? 'View All 24 Bag Models' : isMatArticle ? 'View All Floor Mat Models' : isPlacematArticle ? 'View All Placemat Models' : 'View All 42 Basket Models'}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {(isPlanterArticle ? [
+                {(isKaisaArticle ? [
+                  { code: 'GFC-KB-005', name: 'Kaisa Grass Basket Bowl', img: '/products/gfc_kb_005.png', desc: 'Handwoven natural Kans grass' },
+                  { code: 'GFC-KB-006', name: 'Two-Tone Kaisa Basket w/ Lid', img: '/products/gfc_kb_006.jpg', desc: 'Fitted lid with white woven accent' },
+                  { code: 'GFC-KB-007', name: 'Braided Kaisa Laundry Hamper (S/3)', img: '/products/gfc_kb_007.jpg', desc: 'Tall nested storage hamper with handles' },
+                  { code: 'GFC-KB-008', name: 'Oval Kaisa Bread Basket (S/2)', img: '/products/gfc_kb_008.jpg', desc: 'Handcrafted tabletop serving tray' },
+                  { code: 'GFC-KB-009', name: 'Cylindrical Kaisa Storage Bin', img: '/products/gfc_kb_009.jpg', desc: 'Coiled wild grass with ear handles' },
+                  { code: 'GFC-KPM-001', name: 'Round Kaisa Dining Placemat', img: '/products/gfc_kpm_001.jpg', desc: 'Heat-resistant wild grass charger' }
+                ] : isPlanterArticle ? [
                   { code: 'GFC-SP-0030', name: 'Belly Shape Seagrass Planter (S/3)', img: '/products/gfc_sp_0030.jpg', desc: 'Foldable body with ear handles' },
                   { code: 'GFC-SP-0031', name: 'Tapered Cylinder Pot Covers (S/3)', img: '/products/gfc_sp_0031.jpg', desc: 'Sewn-in waterproof PE leakproof liner' },
                   { code: 'GFC-SP-0032', name: 'Standing Planter w/ Tripod Legs', img: '/products/gfc_sp_0032.jpg', desc: 'Handcrafted seagrass + solid ashwood legs' },
@@ -2795,7 +2811,9 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                   Direct Factory Export Partner • Bangladesh
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-serif font-bold tracking-tight">
-                  {isPlanterArticle
+                  {isKaisaArticle
+                    ? 'Launch Your Custom Kaisa Grass Basket (Kaisa Manden) Program for Netherlands & Europe'
+                    : isPlanterArticle
                     ? 'Launch Your Custom Seagrass Planter Program for Netherlands & Europe'
                     : isBagArticle
                     ? 'Launch Your Custom Jute Bag Program with Golden Fiber Crafts'
@@ -2804,14 +2822,16 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                     : 'Launch Your Custom Jute Basket Collection with Golden Fiber Crafts'}
                 </h3>
                 <p className="mt-3 text-sm sm:text-base text-stone-300 leading-relaxed font-light">
-                  {isPlanterArticle
+                  {isKaisaArticle
+                    ? 'Partner directly with Bangladesh’s premier wild kaisa grass basket manufacturer. We deliver OEM sample prototypes in 7 days, European retail nesting sets of 3, strict moisture mitigation (<12%), 0% GSP import duty, and direct FOB container shipping to the Port of Rotterdam.'
+                    : isPlanterArticle
                     ? 'Partner directly with Bangladesh’s premier natural fiber planter manufacturer. We supply OEM sample prototypes in 7 days, European nursery container sizing, ultrasonic waterproof liners, and direct FOB ocean container shipping to the Port of Rotterdam.'
                     : 'Partner directly with an authentic manufacturer in Bangladesh. We provide tailored OEM/ODM prototypes within 7 days, custom Pantone reactive dyeing, precision screen branding, and direct FOB Chattogram container shipping.'}
                 </p>
                 
                 <div className="mt-6 flex flex-wrap gap-4 items-center">
                   <button
-                    onClick={() => onOpenQuoteModal({ productCode: isPlanterArticle ? 'SEAGRASS-PLANTER-ROTTERDAM-RFQ' : isBagArticle ? 'JUTE-BAG-CONTAINER-RFQ' : isMatArticle ? 'JUTE-FLOOR-MAT-CONTAINER-RFQ' : 'JUTE-BASKET-CONTAINER-RFQ' })}
+                    onClick={() => onOpenQuoteModal({ productCode: isKaisaArticle ? 'KAISA-BASKET-ROTTERDAM-RFQ' : isPlanterArticle ? 'SEAGRASS-PLANTER-ROTTERDAM-RFQ' : isBagArticle ? 'JUTE-BAG-CONTAINER-RFQ' : isMatArticle ? 'JUTE-FLOOR-MAT-CONTAINER-RFQ' : 'JUTE-BASKET-CONTAINER-RFQ' })}
                     className="px-6 py-3 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold rounded-lg text-sm transition shadow-sm flex items-center gap-2"
                   >
                     <Mail className="w-4 h-4" />

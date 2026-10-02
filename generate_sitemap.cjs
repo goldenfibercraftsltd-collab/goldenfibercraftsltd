@@ -54,6 +54,13 @@ const corePages = [
     { loc: 'https://goldenfibercraftsltd.com/images/blog/raw-coastal-seagrass-fiber-grading-bangladesh.jpg', title: 'Raw Coastal Seagrass Fiber Grading Bangladesh' },
     { loc: 'https://goldenfibercraftsltd.com/images/blog/seagrass-planter-quality-control-moisture-inspection.jpg', title: 'Seagrass Planter Quality Control and Moisture Meter Inspection' }
   ]},
+  { url: '/kaisa-grass-basket-manufacturer-netherlands', priority: '0.95', changefreq: 'weekly', images: [
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-kaisa-grass-basket-manufacturer-netherlands.jpg', title: 'Custom Kaisa Grass Basket Manufacturer Wholesale Netherlands & Europe' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/raw-wild-kaisa-grass-fiber-harvest-bangladesh.jpg', title: 'Raw Wild Kaisa Grass Fiber Harvest Bangladesh' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/bangladeshi-artisan-weaving-kaisa-grass-basket.jpg', title: 'Bangladeshi Artisan Weaving Kaisa Grass Storage Basket' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/kaisa-grass-basket-quality-control-moisture-inspection.jpg', title: 'Kaisa Grass Basket Quality Control Moisture Inspection' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/custom-kaisa-grass-baskets-wholesale-display.jpg', title: 'Custom Kaisa Grass Baskets Wholesale Export Display' }
+  ]},
   { url: '/about', priority: '0.8', changefreq: 'weekly' },
   { url: '/materials', priority: '0.8', changefreq: 'weekly' },
   { url: '/infrastructure', priority: '0.8', changefreq: 'weekly' },
