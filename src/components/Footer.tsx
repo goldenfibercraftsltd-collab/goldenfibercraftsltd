@@ -71,7 +71,7 @@ export const Footer: React.FC = () => {
             </a>
 
             <p className="text-xs sm:text-sm text-emerald-100/90 font-normal leading-relaxed max-w-xs">
-              {settings.footer_description || "Bangladesh’s premier manufacturer & global exporter of sustainable, 100% natural fiber handicrafts."}
+              {settings.footer_description || "Golden Fiber Crafts Ltd. (GFCL) is a Bangladesh-based manufacturer and exporter of natural, biodegradable, and sustainably crafted lifestyle products, specializing in jute, seagrass, hogla, water hyacinth, and other natural fibers."}
             </p>
           </div>
 

@@ -4,6 +4,7 @@ import { CATEGORIES, ProductItem } from '../data/products';
 import { getAllActiveProducts, fetchLiveProducts, formatDbProductToItem } from '../utils/productStore';
 import { ImageMagnifier } from '../components/ImageMagnifier';
 import { useCart, CartItem } from '../context/CartContext';
+import { setPageTitle } from '../utils/usePageTitle';
 import { Check, AlertTriangle, ChevronLeft, ChevronRight, Home, ArrowLeft, Send, FileText, ShoppingCart } from 'lucide-react';
 
 export const PRODUCT_SEO_TITLES: Record<string, string> = {
@@ -148,8 +149,44 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenQuot
     setAddedSuccess(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    // Dynamic document title for SEO
-    document.title = `${seoTitle}`;
+    // Dynamic document title & meta tags for Google SEO
+    const productDesc = product.description 
+      ? `${product.name} (${product.code || product.id}) - ${product.description}. Export quality natural handcrafted in Bangladesh by Golden Fiber Crafts Ltd.`
+      : `${product.name} (${product.code || product.id}) - Premium wholesale ${product.material || 'jute and natural fiber'} handicraft manufactured in Bangladesh by Golden Fiber Crafts Ltd.`;
+    
+    setPageTitle(seoTitle, undefined, productDesc);
+
+    // Dynamic Product JSON-LD structured data for Google Search
+    const schemaId = 'gfcl-product-schema';
+    let scriptEl = document.getElementById(schemaId) as HTMLScriptElement | null;
+    if (!scriptEl) {
+      scriptEl = document.createElement('script');
+      scriptEl.id = schemaId;
+      scriptEl.type = 'application/ld+json';
+      document.head.appendChild(scriptEl);
+    }
+    scriptEl.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: product.name,
+      image: product.image?.startsWith('http') ? product.image : `https://goldenfibercraftsltd.com${product.image}`,
+      description: productDesc,
+      sku: product.code || product.id,
+      brand: {
+        '@type': 'Brand',
+        name: 'Golden Fiber Crafts Ltd',
+      },
+      manufacturer: {
+        '@type': 'Organization',
+        name: 'Golden Fiber Crafts Ltd',
+        url: 'https://goldenfibercraftsltd.com/',
+      },
+    });
+
+    return () => {
+      const existingScript = document.getElementById(schemaId);
+      if (existingScript) existingScript.remove();
+    };
   }, [productSlug, product, setPerCarton, seoTitle]);
 
   // Dynamic calculations

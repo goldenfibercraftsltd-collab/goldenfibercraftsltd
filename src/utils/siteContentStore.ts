@@ -128,7 +128,7 @@ export const DEFAULT_SITE_SETTINGS: SiteSettingsData = {
   payment_terms: TECHNICAL_INFORMATION.paymentTerms,
   annual_turnover: TECHNICAL_INFORMATION.annualTurnover,
 
-  footer_description: 'Golden Fiber Crafts Ltd. is a premier government-compliant manufacturer & exporter of 100% natural, biodegradable jute, seagrass, and handmade lifestyle crafts from Bangladesh to retail partners worldwide.',
+  footer_description: 'Golden Fiber Crafts Ltd. (GFCL) is a Bangladesh-based manufacturer and exporter of natural, biodegradable, and sustainably crafted lifestyle products, specializing in jute, seagrass, hogla, water hyacinth, and other natural fibers. We develop beautiful, functional, and customizable products for international B2B buyers and private-label collections.',
   about_intro: 'Crafting 100% natural, biodegradable handicraft solutions while empowering rural Bangladeshi women artisans with fair living wages and safe working environments.',
   copyright_text: 'Golden Fiber Crafts Ltd. All rights reserved.',
 

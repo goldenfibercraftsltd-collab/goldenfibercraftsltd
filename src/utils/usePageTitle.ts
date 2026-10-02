@@ -3,20 +3,24 @@ import { COMPANY_NAME } from '../data/products';
 
 export const BRAND_NAME = COMPANY_NAME || 'Golden Fiber Crafts Ltd.';
 
-export const DEFAULT_HOME_TITLE = "Golden Fiber Crafts Ltd. | Jute & Natural Fiber Handicraft Manufacturer";
-export const DEFAULT_HOME_DESCRIPTION = "Reliable Bangladesh manufacturer & exporter of jute, seagrass, water-hyacinth and natural-fiber handicrafts- Baskets, platers, Bags, Floor mat, Rugs, Placements, Macrames. Custom designs, private label, OEM/ODM, quality control and competitive FOB pricing for global buyers.";
+export const DEFAULT_HOME_TITLE = "Jute & Natural Fiber Handicraft Manufacturer & Exporter | Golden Fiber Crafts Ltd.";
+export const DEFAULT_HOME_DESCRIPTION = "Golden Fiber Crafts Ltd. (GFCL) is a Bangladesh-based manufacturer and exporter of natural, biodegradable, and sustainably crafted lifestyle products, specializing in jute, seagrass, hogla, water hyacinth, and other natural fibers. We develop beautiful, functional, and customizable products for international B2B buyers and private-label collections.";
 
 /**
  * Generates formatted title with Page Title first, followed by brand / tagline
  * e.g. "About Us - Golden Fiber Crafts Ltd."
  * or "Jute Baskets - Golden Fiber Crafts Ltd."
- * or Home Page: "Golden Fiber Crafts Ltd. | Jute & Natural Fiber Handicraft Manufacturer"
+ * or Home Page: "Jute & Natural Fiber Handicraft Manufacturer & Exporter | Golden Fiber Crafts Ltd."
  */
 export function formatPageTitle(pageTitle?: string, subtitleOrTagline?: string): string {
   const brand = 'Golden Fiber Crafts Ltd.';
   
   if (!pageTitle || pageTitle.trim() === '' || pageTitle.toLowerCase() === 'home') {
     return DEFAULT_HOME_TITLE;
+  }
+
+  if (pageTitle.includes(brand) || pageTitle.includes('Golden Fiber Crafts')) {
+    return pageTitle;
   }
 
   if (subtitleOrTagline && subtitleOrTagline.trim()) {
@@ -32,6 +36,15 @@ export function formatPageTitle(pageTitle?: string, subtitleOrTagline?: string):
 export function setPageTitle(pageTitle?: string, subtitleOrTagline?: string, description?: string) {
   const fullTitle = formatPageTitle(pageTitle, subtitleOrTagline);
   document.title = fullTitle;
+
+  // Ensure OpenGraph Site Name
+  let ogSiteName = document.querySelector('meta[property="og:site_name"]');
+  if (!ogSiteName) {
+    ogSiteName = document.createElement('meta');
+    ogSiteName.setAttribute('property', 'og:site_name');
+    document.head.appendChild(ogSiteName);
+  }
+  ogSiteName.setAttribute('content', 'Golden Fiber Crafts Ltd');
 
   // Update OpenGraph Title
   const ogTitle = document.querySelector('meta[property="og:title"]');

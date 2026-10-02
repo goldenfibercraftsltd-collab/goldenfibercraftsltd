@@ -17,7 +17,7 @@ export const HomePage: React.FC<HomePageProps> = ({
   return (
     <div className="space-y-12 pb-16">
       {/* Primary SEO Heading for Google Crawlers & Accessibility */}
-      <h1 className="sr-only">Golden Fiber Crafts Ltd. | Jute &amp; Natural Fiber Handicraft Manufacturer</h1>
+      <h1 className="sr-only">Golden Fiber Crafts Ltd - Jute &amp; Natural Fiber Handicraft Manufacturer &amp; Exporter</h1>
 
       {/* 1. Header Auto Banner Carousel */}
       <HeroBannerCarousel onOpenQuoteModal={() => onOpenQuoteModal()} />
