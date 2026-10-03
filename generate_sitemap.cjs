@@ -105,7 +105,7 @@ for (const f of jsonFiles) {
 }
 
 // Also scan products.ts for any additional items
-const prodMatches = [...content.matchAll(/{\s*id:\s*['\x22]([^'\x22]+)['\x22][\s\S]*?slug:\s*['\x22]([^'\x22]+)['\x22][\s\S]*?name:\s*['\x22]([^'\x22]+)['\x22][\s\S]*?image:\s*['\x22]([^'\x22]+)['\x22]/g)];
+const prodMatches = [...content.matchAll(/{\s*["']?id["']?\s*:\s*['\x22]([^'\x22]+)['\x22][\s\S]*?["']?slug["']?\s*:\s*['\x22]([^'\x22]+)['\x22][\s\S]*?["']?name["']?\s*:\s*['\x22]([^'\x22]+)['\x22][\s\S]*?["']?image["']?\s*:\s*['\x22]([^'\x22]+)['\x22]/g)];
 for (const m of prodMatches) {
   const id = m[1];
   const slug = m[2];

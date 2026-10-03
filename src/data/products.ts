@@ -7363,228 +7363,6 @@ export const PRODUCTS: ProductItem[] = [
     ],
     features: ['Internal Waterproof Plastic Liner', 'Natural Plant Accent', 'Multi-size Set', 'Sustainable Harvest']
   },
-  {
-    id: 'GFC-SP-0030',
-    slug: 'belly-shape-seagrass-planter-basket-gfc-sp-0030',
-    code: 'GFC-SP-0030',
-    name: 'Belly Shape Seagrass Planter Basket with Handles',
-    category: 'seagrass',
-    categoryName: 'Seagrass',
-    categorySlug: 'seagrass',
-    subCategory: 'planters',
-    image: '/products/gfc_sp_0030.jpg',
-    galleryImages: [
-      '/products/gfc_sp_0030.jpg'
-    ],
-    description: 'Nested set of 3 artisanal belly-shaped coastal seagrass planter baskets featuring sturdy ear handles, flexible folding body, and waterproof protective inner liner.',
-    longDescription: {
-      overview: 'The Belly Shape Seagrass Planter Basket set (GFC-SP-0030) combines traditional Bangladeshi coastal craftsmanship with versatile multi-functional utility. Featuring a rounded belly silhouette that can be used upright with handles or folded down as a shallow bowl, making it ideal for indoor houseplants, fiddle-leaf figs, and decorative greenery.',
-      craftsmanship: 'Handwoven by skilled rural artisans using 100% sun-cured natural coastal seagrass fiber twisted into dense, pliable coils with double-reinforced loop handles.',
-      exportDetails: 'Supplied nested S/3 (Small, Medium, Large) flat-packed or nested in heavy-duty 5-ply export master cartons with moisture barrier desiccant.',
-      careInstructions: 'Wipe with a damp cloth or soft brush. Keep indoors or under covered patio. Suitable for potted plants with nursery pot inside.'
-    },
-    unit: 'S/3',
-    cbmPerCarton: 0.065,
-    setPerCarton: 4,
-    nwPerCtn: 4.8,
-    gwPerCtn: 6.2,
-    material: '100% Coastal Wild Seagrass & Waterproof PE Liner',
-    color: 'Natural Golden Straw / Warm Honey',
-    specifications: [
-      { key: 'Item Code', value: 'GFC-SP-0030' },
-      { key: 'Item Name', value: 'Belly Shape Seagrass Planter Basket with Handles' },
-      { key: 'Specification', value: 'S: Dia 28cm x H 26cm, M: Dia 32cm x H 28cm, L: Dia 36cm x H 32cm' },
-      { key: 'Materials', value: '100% Natural Coastal Seagrass & PE Liner' },
-      { key: 'MOQ', value: '200 Sets' },
-      { key: 'Country of Origin', value: 'Bangladesh' }
-    ],
-    features: ['Nested Set of 3 Sizes', 'Collapsible Belly Silhouette', 'Integrated Dual Ear Handles', 'Thick Waterproof PE Plastic Inner Liner']
-  },
-  {
-    id: 'GFC-SP-0031',
-    slug: 'tapered-cylinder-seagrass-planters-gfc-sp-0031',
-    code: 'GFC-SP-0031',
-    name: 'Tapered Cylinder Seagrass Planter Pot Covers',
-    category: 'seagrass',
-    categoryName: 'Seagrass',
-    categorySlug: 'seagrass',
-    subCategory: 'planters',
-    image: '/products/gfc_sp_0031.jpg',
-    galleryImages: [
-      '/products/gfc_sp_0031.jpg'
-    ],
-    description: 'Nested set of 3 cylindrical tapered seagrass plant pot covers featuring thick sewn-in transparent waterproof liners for nursery plant pots.',
-    longDescription: {
-      overview: 'Engineered specifically for commercial plant nurseries, home decor retailers, and interior designers, these tapered cylindrical seagrass planter covers fit standard nursery grow pots perfectly. The factory-stitched waterproof plastic membrane ensures no water or soil touches the natural woven fiber.',
-      craftsmanship: 'Dense diagonal interlocking braided seagrass weave with reinforced rolled top rim and stable flat-bottom base.',
-      exportDetails: 'Nested S/3 per set, stacked compactly to optimize shipping container loadability (CBM).',
-      careInstructions: 'Empty standing drainage water periodically. Wipe outer seagrass with dry or slightly damp cloth.'
-    },
-    unit: 'S/3',
-    cbmPerCarton: 0.056,
-    setPerCarton: 4,
-    nwPerCtn: 4.2,
-    gwPerCtn: 5.6,
-    material: 'Natural Coastal Seagrass & Heavy-Duty Plastic Liner',
-    color: 'Natural Golden Khaki',
-    specifications: [
-      { key: 'Item Code', value: 'GFC-SP-0031' },
-      { key: 'Item Name', value: 'Tapered Cylinder Seagrass Planter Pot Covers' },
-      { key: 'Specification', value: 'S: Dia 20cm x H 18cm, M: Dia 25cm x H 22cm, L: Dia 30cm x H 27cm' },
-      { key: 'Materials', value: '100% Natural Wild Seagrass with Waterproof Liner' },
-      { key: 'MOQ', value: '250 Sets' },
-      { key: 'Country of Origin', value: 'Bangladesh' }
-    ],
-    features: ['Factory-Stitched Thick Plastic Liner', 'Flat-Bottom Stable Design', 'Tapered Cylindrical Profile', 'Nested Compact Export Packing']
-  },
-  {
-    id: 'GFC-SP-0032',
-    slug: 'standing-seagrass-planter-wooden-legs-gfc-sp-0032',
-    code: 'GFC-SP-0032',
-    name: 'Standing Seagrass Planter with Wooden Tripod Legs',
-    category: 'seagrass',
-    categoryName: 'Seagrass',
-    categorySlug: 'seagrass',
-    subCategory: 'planters',
-    image: '/products/gfc_sp_0032.jpg',
-    galleryImages: [
-      '/products/gfc_sp_0032.jpg'
-    ],
-    description: 'Elevated indoor plant stand featuring a hand-coiled natural seagrass planter basket supported by three solid tapered natural wooden tripod legs.',
-    longDescription: {
-      overview: 'Add Scandinavian elegance and organic warmth to interior living spaces with this elevated seagrass plant stand. Designed with a sturdy cylindrical basket mounted securely onto three solid tapered hardwood legs, elevating houseplants for optimal sunlight and aesthetic presentation.',
-      craftsmanship: 'Precision-coiled natural coastal seagrass over a durable frame, attached to solid lathe-turned natural beechwood legs with pre-installed screw hardware.',
-      exportDetails: 'Detachable knock-down (KD) screw legs packed flat inside each basket cavity to minimize freight volume.',
-      careInstructions: 'Easy screw-in tool-free assembly. Keep in dry indoor living areas.'
-    },
-    unit: 'S/1',
-    cbmPerCarton: 0.048,
-    setPerCarton: 4,
-    nwPerCtn: 5.5,
-    gwPerCtn: 7.0,
-    material: 'Natural Coastal Seagrass, Solid Ash/Beechwood Legs',
-    color: 'Natural Seagrass & Light Natural Wood',
-    specifications: [
-      { key: 'Item Code', value: 'GFC-SP-0032' },
-      { key: 'Item Name', value: 'Standing Seagrass Planter with Wooden Tripod Legs' },
-      { key: 'Specification', value: 'Basket Dia 26cm x H 22cm (Total Height with Legs: 42cm)' },
-      { key: 'Materials', value: 'Handwoven Seagrass & Solid Hardwood Legs' },
-      { key: 'MOQ', value: '150 Pieces' },
-      { key: 'Country of Origin', value: 'Bangladesh' }
-    ],
-    features: ['Elevated Modern Plant Stand', 'Solid Natural Wooden Tripod Legs', 'Knock-Down Flat-Pack Assembly', 'Internal Moisture Protection']
-  },
-  {
-    id: 'GFC-SP-0033',
-    slug: 'chevron-geometric-seagrass-planters-gfc-sp-0033',
-    code: 'GFC-SP-0033',
-    name: 'Geometric Chevron Seagrass Planter Baskets',
-    category: 'seagrass',
-    categoryName: 'Seagrass',
-    categorySlug: 'seagrass',
-    subCategory: 'planters',
-    image: '/products/gfc_sp_0033.jpg',
-    galleryImages: [
-      '/products/gfc_sp_0033.jpg'
-    ],
-    description: 'Set of 2 nesting cylindrical seagrass plant pot baskets accented with a distinctive handwoven black chevron zigzag geometric mid-body pattern.',
-    longDescription: {
-      overview: 'A striking blend of rustic natural texture and contemporary graphic styling. The Geometric Chevron Seagrass Planter duo features contrast dyed black seagrass fiber woven into an intricate herringbone arrow motif that elevates modern bohemian and minimalist home interiors.',
-      craftsmanship: 'Fine hand-braided coastal seagrass with azo-free dyed black accent cords woven into the core structure.',
-      exportDetails: 'Nested S/2 set packed in polybag with silica gel desiccant inside corrugated export master cartons.',
-      careInstructions: 'Avoid direct outdoor weather exposure. For indoor potted plants, use with clear nursery saucers or pot liners.'
-    },
-    unit: 'S/2',
-    cbmPerCarton: 0.052,
-    setPerCarton: 6,
-    nwPerCtn: 5.2,
-    gwPerCtn: 6.8,
-    material: '100% Coastal Seagrass & Azo-Free Eco Dye',
-    color: 'Natural Golden Honey & Matte Black',
-    specifications: [
-      { key: 'Item Code', value: 'GFC-SP-0033' },
-      { key: 'Item Name', value: 'Geometric Chevron Seagrass Planter Baskets' },
-      { key: 'Specification', value: 'S: Dia 22cm x H 20cm, M: Dia 28cm x H 26cm' },
-      { key: 'Materials', value: 'Natural Wild Seagrass with Black Fiber Pattern' },
-      { key: 'MOQ', value: '200 Sets' },
-      { key: 'Country of Origin', value: 'Bangladesh' }
-    ],
-    features: ['Handwoven Black Chevron Accent Band', 'Nested Set of 2 Sizes', 'Rolled Double-Reinforced Rim', 'Eco-Friendly Biodegradable Fibers']
-  },
-  {
-    id: 'GFC-SP-0034',
-    slug: 'two-tone-hanging-seagrass-planter-gfc-sp-0034',
-    code: 'GFC-SP-0034',
-    name: 'Two-Tone Seagrass Hanging Planter Basket',
-    category: 'seagrass',
-    categoryName: 'Seagrass',
-    categorySlug: 'seagrass',
-    subCategory: 'planters',
-    image: '/products/gfc_sp_0034.jpg',
-    galleryImages: [
-      '/products/gfc_sp_0034.jpg'
-    ],
-    description: 'Artisanal round hanging plant basket handwoven from natural seagrass with cream-white cotton band, suspended by heavy-duty twisted jute hanger ropes.',
-    longDescription: {
-      overview: 'Display trailing pothos, ivy, ferns, and string-of-pearls in natural style with our Two-Tone Seagrass Hanging Planter Basket. Featuring a coiled natural seagrass bowl with cream woven cotton rim and sturdy quadruple-strand jute suspension cords with handcrafted macrame gathering knots.',
-      craftsmanship: 'Sun-dried seagrass tightly coiled with cream cotton twine, fitted with robust 4-ply natural jute suspension rope and metal hanging ring.',
-      exportDetails: 'Folded ropes tucked neatly into basket interior, individually poly-wrapped, 12 units per export carton.',
-      careInstructions: 'Maximum safe load weight 5 kg. Clean with soft bristled dusting brush.'
-    },
-    unit: 'S/1',
-    cbmPerCarton: 0.055,
-    setPerCarton: 12,
-    nwPerCtn: 6.8,
-    gwPerCtn: 8.2,
-    material: 'Natural Seagrass, Cotton Cord & Twisted Jute Rope',
-    color: 'Natural Golden Seagrass & Cream White',
-    specifications: [
-      { key: 'Item Code', value: 'GFC-SP-0034' },
-      { key: 'Item Name', value: 'Two-Tone Seagrass Hanging Planter Basket' },
-      { key: 'Specification', value: 'Basket Dia 25cm x H 16cm (Total Hanging Length: 85cm)' },
-      { key: 'Materials', value: 'Coastal Seagrass & 100% Natural Jute Rope' },
-      { key: 'MOQ', value: '250 Pieces' },
-      { key: 'Country of Origin', value: 'Bangladesh' }
-    ],
-    features: ['Quadruple Twisted Jute Rope Suspension', 'Decorative Cream-White Coiled Rim', 'Accommodates Up to 5kg Plant Weight', 'Internal Waterproof Protective Membrane']
-  },
-  {
-    id: 'GFC-SP-0035',
-    slug: 'oval-trough-seagrass-planter-gfc-sp-0035',
-    code: 'GFC-SP-0035',
-    name: 'Oval Trough Seagrass Planter Basket with Handles',
-    category: 'seagrass',
-    categoryName: 'Seagrass',
-    categorySlug: 'seagrass',
-    subCategory: 'planters',
-    image: '/products/gfc_sp_0035.jpg',
-    galleryImages: [
-      '/products/gfc_sp_0035.jpg'
-    ],
-    description: 'Elongated oval trough seagrass planter basket with dual woven side handles and built-in waterproof PE liner, ideal for windowsill herbs & succulent displays.',
-    longDescription: {
-      overview: 'Designed for windowsills, dining table centerpieces, and patio herb arrangements, this elongated oval trough planter provides generous planting space for multiple smaller pots or succulents. Complete with an internal waterproof liner to preserve natural fiber longevity.',
-      craftsmanship: 'Handwoven with horizontal continuous seagrass rope braiding over a firm oval wire-reinforced frame with integrated arch handles.',
-      exportDetails: 'Nesting sets or bulk packed in 5-ply export master cartons with protective desiccant bags.',
-      careInstructions: 'Wipe clean with a damp cloth. Do not soak in standing water.'
-    },
-    unit: 'S/1',
-    cbmPerCarton: 0.060,
-    setPerCarton: 8,
-    nwPerCtn: 5.6,
-    gwPerCtn: 7.2,
-    material: 'Natural Coastal Seagrass & Clear PE Liner',
-    color: 'Natural Golden Straw',
-    specifications: [
-      { key: 'Item Code', value: 'GFC-SP-0035' },
-      { key: 'Item Name', value: 'Oval Trough Seagrass Planter Basket with Handles' },
-      { key: 'Specification', value: 'L 42cm x W 22cm x H 16cm' },
-      { key: 'Materials', value: '100% Coastal Seagrass with PE Liner' },
-      { key: 'MOQ', value: '200 Pieces' },
-      { key: 'Country of Origin', value: 'Bangladesh' }
-    ],
-    features: ['Elongated Oval Trough Silhouette', 'Built-in Clear Waterproof PE Liner', 'Dual Braided Side Carrying Handles', 'Ideal for Herbs, Succulents & Windowsills']
-  },
 
   // 2. Jute Products
   {
@@ -9774,9 +9552,9 @@ export const PRODUCTS: ProductItem[] = [
   ]
 },
   {
-  "id": "GFC-STH-008",
-  "slug": "seagrass-serving-tray-with-handles-gfc-sth-008",
-  "code": "GFC-STH-008",
+  "id": "GFC-ST-001",
+  "slug": "seagrass-serving-tray-with-handles-gfc-st-001",
+  "code": "GFC-ST-001",
   "name": "Seagrass Serving Tray with Handles",
   "category": "seagrass",
   "categoryName": "Seagrass",
@@ -9803,7 +9581,7 @@ export const PRODUCTS: ProductItem[] = [
   "specifications": [
     {
       "key": "Item Code",
-      "value": "GFC-STH-008"
+      "value": "GFC-ST-001"
     },
     {
       "key": "Item Name",
@@ -9894,295 +9672,65 @@ export const PRODUCTS: ProductItem[] = [
   ]
 },
   {
-    id: "GFC-KPM-001",
-    slug: "kaisa-grass-round-placemat-gfc-kpm-001",
-    code: "GFC-KPM-001",
-    name: "Kaisa Grass Round Dining Placemat",
-    category: "kans-grass",
-    categoryName: "Kans Grass",
-    categorySlug: "kans-grass",
-    subCategory: "placemats",
-    image: "/products/gfc_kpm_001.jpg",
-    galleryImages: ["/products/gfc_kpm_001.jpg","/products/gfc_kpm_002.jpg"],
-    description: "Traditional handcrafted round dining placemat tightly needle-stitched from wild riverbank Kans (Kaisa) grass bound with natural off-white cotton thread.",
-    longDescription: {
-      "overview": "Harvested wild along the river floodplains of Bangladesh, Kaisa grass (Saccharum spontaneum) is prized for its rigid natural structure and soothing pale blonde tone. Beautifully bound with unbleached cotton cord for organic luxury dining tables.",
-      "craftsmanship": "Hand-coiled strand by strand and cross-stitched by skilled rural women artisans using authentic Bengali needle binding traditions.",
-      "exportDetails": "Bundled in sets of 6 pcs with moisture-barrier kraft wrap and silica desiccant. Master carton holds 12 sets (72 pcs).",
-      "careInstructions": "Wipe clean with a soft dry cloth. Safe for warm plates and heat insulation."
-},
-    specifications: [
-      {
-            "key": "Item Code",
-            "value": "GFC-KPM-001"
-      },
-      {
-            "key": "Item Name",
-            "value": "Kaisa Grass Round Dining Placemat"
-      },
-      {
-            "key": "Specification",
-            "value": "Dia 33cm x H 0.8cm"
-      },
-      {
-            "key": "Materials",
-            "value": "Wild Kans Grass & Natural Cotton"
-      },
-      {
-            "key": "MOQ",
-            "value": "300 Sets"
-      },
-      {
-            "key": "Country of Origin",
-            "value": "Bangladesh"
-      }
-],
-    features: [
-      "Wild Riverbank Harvested Fiber",
-      "Hand-Bound Off-White Cotton Stitching",
-      "Heat-Resistant Tabletop Protection",
-      "100% Biodegradable & Chemical-Free"
-],
-    unit: "S/6 Set",
-    cbmPerCarton: 0.034,
-    setPerCarton: 12,
-    nwPerCtn: 4.5,
-    gwPerCtn: 5.6,
-    material: "100% Wild River Kans Grass & Natural Cotton Thread",
-    color: "Natural Pale Straw & Off-White"
+  "id": "GFC-KPM-001",
+  "slug": "kaisa-grass-round-placemat-gfc-kpm-001",
+  "code": "GFC-KPM-001",
+  "name": "Kaisa Grass Round Placemat",
+  "category": "kans-grass",
+  "categoryName": "Kans Grass",
+  "categorySlug": "kans-grass",
+  "subCategory": "placemats",
+  "image": "/products/gfc_kpm_001.jpg",
+  "galleryImages": [
+    "/products/gfc_kpm_001.jpg"
+  ],
+  "description": "Traditional round dining placemat hand-stitched from wild riverbank Kaisa grass bound with natural off-white cotton wrapping.",
+  "longDescription": {
+    "overview": "Harvested wild along the river floodplains of Bangladesh, Kaisa grass is known for its remarkable rigidity and natural pale golden color. Beautifully wrapped with cotton cord for modern dining elegance.",
+    "craftsmanship": "Coiled by hand and cross-stitched using authentic Bengali needle binding techniques.",
+    "exportDetails": "Bundled in sets of 6 pcs per inner pack. Master carton contains 36 sets.",
+    "careInstructions": "Wipe dry with clean cloth."
   },
-  {
-    id: "GFC-KPM-002",
-    slug: "concentric-spiral-kans-grass-round-placemat-gfc-kpm-002",
-    code: "GFC-KPM-002",
-    name: "Concentric Spiral Kans Grass Round Placemat",
-    category: "kans-grass",
-    categoryName: "Kans Grass",
-    categorySlug: "kans-grass",
-    subCategory: "placemats",
-    image: "/products/gfc_kpm_002.jpg",
-    galleryImages: ["/products/gfc_kpm_002.jpg"],
-    description: "Modern luxury dining table placemat featuring dense concentric spiral coils of unbleached wild Kans grass bound with fine artisanal cross-stitching.",
-    longDescription: {
-      "overview": "Designed for minimalist and organic modern interiors, the Concentric Spiral Kans Grass Placemat highlights the untouched golden-blonde luster of sun-cured river grass. Perfect for hospitality and fine dining presentations.",
-      "craftsmanship": "Coiled continuously from core to edge with microscopic needle precision, ensuring flat non-warping durability under everyday use.",
-      "exportDetails": "Flat packed in sets of 6 in poly-lined inner boxes, 12 sets per heavy-duty export carton.",
-      "careInstructions": "Spot clean with dry or slightly damp towel. Store in dry ventilated space."
+  "unit": "S/6 Set",
+  "cbmPerCarton": 0.034,
+  "setPerCarton": 12,
+  "nwPerCtn": 4.5,
+  "gwPerCtn": 5.6,
+  "material": "Wild Kaisa Grass, Cotton Cord",
+  "color": "Pale Gold & Off-White",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-KPM-001"
+    },
+    {
+      "key": "Item Name",
+      "value": "Kaisa Grass Round Placemat"
+    },
+    {
+      "key": "Specification",
+      "value": "33cm Diameter"
+    },
+    {
+      "key": "Materials",
+      "value": "Kaisa Grass & Cotton"
+    },
+    {
+      "key": "MOQ",
+      "value": "300 Sets"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Wild Harvested Fiber",
+    "Hand-Bound Cotton Stitching",
+    "Heat-Resistant",
+    "Fair Trade Artisan Made"
+  ]
 },
-    specifications: [
-      {
-            "key": "Item Code",
-            "value": "GFC-KPM-002"
-      },
-      {
-            "key": "Item Name",
-            "value": "Concentric Spiral Kans Grass Round Placemat"
-      },
-      {
-            "key": "Specification",
-            "value": "Dia 35cm x H 1.0cm"
-      },
-      {
-            "key": "Materials",
-            "value": "Sun-Cured Kans Grass & Ecru Cotton"
-      },
-      {
-            "key": "MOQ",
-            "value": "300 Sets"
-      },
-      {
-            "key": "Country of Origin",
-            "value": "Bangladesh"
-      }
-],
-    features: [
-      "Ultra-Dense Concentric Spiral Coiling",
-      "Seamless Flat Lay Construction",
-      "Stain & Crumbs Easily Brushed Off",
-      "Sustainable Artisanal Production"
-],
-    unit: "S/6 Set",
-    cbmPerCarton: 0.038,
-    setPerCarton: 12,
-    nwPerCtn: 4.8,
-    gwPerCtn: 6,
-    material: "100% Sun-Dried Riverbank Kans Grass & Ecru Cotton Warp",
-    color: "Golden Straw Blonde & Natural Ecru"
-  },
-  {
-    id: "GFC-KPM-003",
-    slug: "sunburst-terracotta-stitched-kans-grass-placemat-gfc-kpm-003",
-    code: "GFC-KPM-003",
-    name: "Sunburst Terracotta-Stitched Kans Grass Placemat",
-    category: "kans-grass",
-    categoryName: "Kans Grass",
-    categorySlug: "kans-grass",
-    subCategory: "placemats",
-    image: "/products/gfc_kpm_003.jpg",
-    galleryImages: ["/products/gfc_kpm_003.jpg"],
-    description: "Artisan dining charger placemat woven from sun-cured Kans grass accented with an eye-catching terracotta sunburst radial border stitch.",
-    longDescription: {
-      "overview": "Bringing warmth and festive charm to tablescapes, this placemat combines the rustic texture of wild river grass with vibrant sunburst rays embroidered in azo-free terracotta-red cotton thread.",
-      "craftsmanship": "Individual ray flairs are intricately stitched by needle into the outer border coils, creating a striking sunburst halo effect.",
-      "exportDetails": "Nested and flat packed with barcode tags, 12 sets of 6 pcs per master export carton.",
-      "careInstructions": "Dust off or wipe with dry microfiber cloth. Avoid prolonged moisture immersion."
-},
-    specifications: [
-      {
-            "key": "Item Code",
-            "value": "GFC-KPM-003"
-      },
-      {
-            "key": "Item Name",
-            "value": "Sunburst Terracotta-Stitched Kans Grass Placemat"
-      },
-      {
-            "key": "Specification",
-            "value": "Dia 36cm x H 1.0cm"
-      },
-      {
-            "key": "Materials",
-            "value": "Wild Kans Grass & Dyed Cotton Cord"
-      },
-      {
-            "key": "MOQ",
-            "value": "300 Sets"
-      },
-      {
-            "key": "Country of Origin",
-            "value": "Bangladesh"
-      }
-],
-    features: [
-      "Decorative Terracotta Sunburst Radial Border",
-      "Large Charger Diameter Accommodates Full Dinnerware",
-      "Vibrant Azo-Free Fast Color Thread",
-      "Fair Trade Handcrafted by Women Weavers"
-],
-    unit: "S/6 Set",
-    cbmPerCarton: 0.04,
-    setPerCarton: 12,
-    nwPerCtn: 5,
-    gwPerCtn: 6.2,
-    material: "100% Wild River Kans Grass & Eco-Dyed Terracotta Cotton Cord",
-    color: "Warm Terracotta Red & Natural Golden Straw"
-  },
-  {
-    id: "GFC-KPM-004",
-    slug: "tribal-geometric-monochrome-kans-grass-placemat-gfc-kpm-004",
-    code: "GFC-KPM-004",
-    name: "Tribal Geometric Monochrome Kans Grass Placemat",
-    category: "kans-grass",
-    categoryName: "Kans Grass",
-    categorySlug: "kans-grass",
-    subCategory: "placemats",
-    image: "/products/gfc_kpm_004.jpg",
-    galleryImages: ["/products/gfc_kpm_004.jpg"],
-    description: "Contemporary Scandinavian-ethnic tableware charger featuring intricate geometric tribal diamond cross-stitch motifs over dense coiled Kans grass core.",
-    longDescription: {
-      "overview": "A sophisticated fusion of modern Scandinavian minimalism and ancient tribal Bengal embroidery, this placemat showcases bold black diamond motifs radiating across blonde wild grass coils.",
-      "craftsmanship": "Master weavers spend over 6 hours hand-guiding black cotton thread through rigid grass stalks to achieve flawless geometric symmetry.",
-      "exportDetails": "Packed in shrink-wrapped sets of 6 with branded hangtag. 12 sets per reinforced export box.",
-      "careInstructions": "Wipe with a clean dry towel. Dry completely if exposed to accidental spills."
-},
-    specifications: [
-      {
-            "key": "Item Code",
-            "value": "GFC-KPM-004"
-      },
-      {
-            "key": "Item Name",
-            "value": "Tribal Geometric Monochrome Kans Grass Placemat"
-      },
-      {
-            "key": "Specification",
-            "value": "Dia 38cm x H 1.0cm"
-      },
-      {
-            "key": "Materials",
-            "value": "Wild Kans Grass & High-Tensile Black Cotton"
-      },
-      {
-            "key": "MOQ",
-            "value": "300 Sets"
-      },
-      {
-            "key": "Country of Origin",
-            "value": "Bangladesh"
-      }
-],
-    features: [
-      "Intricate Tribal Diamond Embroidery",
-      "Striking High-Contrast Modern Aesthetic",
-      "Generous 38cm Table Charger Dimension",
-      "Natural Plant Fiber Backing Protects Wood & Glass"
-],
-    unit: "S/6 Set",
-    cbmPerCarton: 0.042,
-    setPerCarton: 12,
-    nwPerCtn: 5.2,
-    gwPerCtn: 6.5,
-    material: "100% Wild River Kans Grass & Matte Black Cotton Thread",
-    color: "Matte Black & Natural Honey Grass"
-  },
-  {
-    id: "GFC-KPM-005",
-    slug: "oval-handwoven-kans-grass-dining-placemat-gfc-kpm-005",
-    code: "GFC-KPM-005",
-    name: "Oval Handwoven Kans Grass Dining Table Placemat",
-    category: "kans-grass",
-    categoryName: "Kans Grass",
-    categorySlug: "kans-grass",
-    subCategory: "placemats",
-    image: "/products/gfc_kpm_005.jpg",
-    galleryImages: ["/products/gfc_kpm_005.jpg"],
-    description: "Generously sized oval table placemat hand-coiled from wild riverbank Kans grass, offering heat protection and natural organic warmth for modern dining settings.",
-    longDescription: {
-      "overview": "The Oval Handwoven Kans Grass Placemat offers expansive tabletop coverage designed to easily accommodate dinner plates, cutlery, and glassware in a cohesive natural frame.",
-      "craftsmanship": "Crafted along an elliptical concentric axis with reinforced border stitching that prevents fraying and maintains a crisp silhouette.",
-      "exportDetails": "Flat stacked 6 pcs per set with corner protectors, 12 sets per corrugated master carton.",
-      "careInstructions": "Gently wipe with dry cloth or soft bristle brush. Store in dry area."
-},
-    specifications: [
-      {
-            "key": "Item Code",
-            "value": "GFC-KPM-005"
-      },
-      {
-            "key": "Item Name",
-            "value": "Oval Handwoven Kans Grass Dining Table Placemat"
-      },
-      {
-            "key": "Specification",
-            "value": "42cm L x 30cm W x 0.9cm H"
-      },
-      {
-            "key": "Materials",
-            "value": "100% Wild River Kans Grass & Cotton"
-      },
-      {
-            "key": "MOQ",
-            "value": "300 Sets"
-      },
-      {
-            "key": "Country of Origin",
-            "value": "Bangladesh"
-      }
-],
-    features: [
-      "Generous Oval Shape Fits Plate & Cutlery Together",
-      "Dense Wild Grass Core Delivers Superior Heat Resistance",
-      "Organic Scandinavian & Japandi Dining Style",
-      "Sturdy Bound Selvage Outer Edge"
-],
-    unit: "S/6 Set",
-    cbmPerCarton: 0.045,
-    setPerCarton: 12,
-    nwPerCtn: 5.5,
-    gwPerCtn: 6.8,
-    material: "100% Wild River Kans Grass & Natural Off-White Cotton Thread",
-    color: "Natural Golden Blonde Straw"
-  },
   {
   "id": "GFC-KT-001",
   "slug": "kans-grass-bread-fruit-tray-gfc-kt-001",
@@ -11503,464 +11051,236 @@ export const PRODUCTS: ProductItem[] = [
     "Natural Heat Resistance"
   ]
 },
-{
-  "id": "GFC-ST-002",
-  "slug": "round-braided-seagrass-serving-tray-with-cutout-handles-gfc-st-002",
-  "code": "GFC-ST-002",
-  "name": "Round Braided Seagrass Serving Tray with Cutout Handles",
-  "category": "seagrass",
-  "categoryName": "Seagrass",
-  "categorySlug": "seagrass",
-  "subCategory": "trays",
-  "image": "/products/gfc_st_002.jpg",
-  "galleryImages": [
-    "/products/gfc_st_002.jpg"
-  ],
-  "description": "Handcrafted round coastal seagrass serving tray tightly coiled in concentric spirals with two integrated cutout carrying handles.",
-  "longDescription": {
-    "overview": "The Round Braided Seagrass Serving Tray (Art No: GFC-ST-002) is masterfully hand-coiled by rural artisan women in coastal Bangladesh. Featuring ergonomic cut-out handles embedded seamlessly into the raised rim, it serves as an elegant centerpiece for coffee tables, ottoman displays, and breakfast service.",
-    "craftsmanship": "Tightly hand-braided and coiled from 100% natural, sun-bleached coastal seagrass cords, reinforced with concealed binding for lifelong dimensional stability.",
-    "exportDetails": "Individually wrapped with protective tissue and corner safeguards. 16 pieces nested securely per 5-ply export master carton.",
-    "careInstructions": "Spot clean with a soft dry or slightly damp cloth. Keep in well-ventilated dry areas. Avoid prolonged direct moisture exposure."
-  },
-  "unit": "Single Piece",
-  "cbmPerCarton": 0.046,
-  "setPerCarton": 16,
-  "nwPerCtn": 6,
-  "gwPerCtn": 7.2,
-  "material": "100% Natural Coastal Seagrass",
-  "color": "Natural Golden Honey Tan",
-  "specifications": [
-    {
-      "key": "Item Code",
-      "value": "GFC-ST-002"
-    },
-    {
-      "key": "Item Name",
-      "value": "Round Braided Seagrass Serving Tray with Cutout Handles"
-    },
-    {
-      "key": "Specification",
-      "value": "Diameter 35cm x Height 6cm"
-    },
-    {
-      "key": "Materials",
-      "value": "100% Natural Seagrass"
-    },
-    {
-      "key": "MOQ",
-      "value": "250 Pcs"
-    },
-    {
-      "key": "Country of Origin",
-      "value": "Bangladesh"
-    }
-  ],
-  "features": [
-    "Concentric Spiral Hand-Coiling",
-    "Integrated Cutout Side Handles",
-    "Multi-functional Ottoman & Table Centerpiece",
-    "100% Biodegradable Coastal Seagrass"
-  ]
-},
-{
-  "id": "GFC-ST-003",
-  "slug": "rectangular-herringbone-seagrass-serving-vanity-tray-gfc-st-003",
-  "code": "GFC-ST-003",
-  "name": "Rectangular Herringbone Seagrass Serving & Vanity Tray",
-  "category": "seagrass",
-  "categoryName": "Seagrass",
-  "categorySlug": "seagrass",
-  "subCategory": "trays",
-  "image": "/products/gfc_st_003.jpg",
-  "galleryImages": [
-    "/products/gfc_st_003.jpg"
-  ],
-  "description": "Premium shallow rectangular seagrass organizer tray woven in an intricate herringbone chevron pattern with ergonomic cutout handles.",
-  "longDescription": {
-    "overview": "Engineered for boutique hotel breakfast amenities, desk organizing, or bathroom vanity styling, the GFC-ST-003 features a crisp rectangular silhouette with reinforced corners and flush cutout handles.",
-    "craftsmanship": "Fine herringbone twill weave hand-plaited over a lightweight, rust-proof internal metal wire frame for sharp rectangular geometry.",
-    "exportDetails": "Shrink-wrapped with moisture-absorbing silica packets. 12 units per master carton.",
-    "careInstructions": "Dust with a soft brush or wipe with a damp microfiber cloth."
-  },
-  "unit": "Single Piece",
-  "cbmPerCarton": 0.044,
-  "setPerCarton": 12,
-  "nwPerCtn": 5.8,
-  "gwPerCtn": 7,
-  "material": "Natural Coastal Seagrass & Steel Wire Frame",
-  "color": "Natural Warm Wheat",
-  "specifications": [
-    {
-      "key": "Item Code",
-      "value": "GFC-ST-003"
-    },
-    {
-      "key": "Item Name",
-      "value": "Rectangular Herringbone Seagrass Serving & Vanity Tray"
-    },
-    {
-      "key": "Specification",
-      "value": "40cm L x 28cm W x 6cm H"
-    },
-    {
-      "key": "Materials",
-      "value": "Seagrass & Wire Frame"
-    },
-    {
-      "key": "MOQ",
-      "value": "200 Pcs"
-    },
-    {
-      "key": "Country of Origin",
-      "value": "Bangladesh"
-    }
-  ],
-  "features": [
-    "Intricate Chevron Herringbone Weave",
-    "Flush Cutout Oval Handles",
-    "Reinforced Internal Structural Frame",
-    "Zero Plastic Eco-Friendly Design"
-  ]
-},
-{
-  "id": "GFC-ST-004",
-  "slug": "oval-coastal-seagrass-breakfast-tray-with-upright-handles-gfc-st-004",
-  "code": "GFC-ST-004",
-  "name": "Oval Coastal Seagrass Breakfast Tray with Upright Handles",
-  "category": "seagrass",
-  "categoryName": "Seagrass",
-  "categorySlug": "seagrass",
-  "subCategory": "trays",
-  "image": "/products/gfc_st_004.jpg",
-  "galleryImages": [
-    "/products/gfc_st_004.jpg"
-  ],
-  "description": "Graceful oval serving tray woven from natural braided seagrass cord with two upright arched carrying handles.",
-  "longDescription": {
-    "overview": "The Oval Coastal Seagrass Breakfast Tray (Art No: GFC-ST-004) brings natural coastal warmth to hospitality and homeware collections. Its elongated contour is ideal for serving tea, coffee, wine glasses, or fresh artisanal baguettes.",
-    "craftsmanship": "Continuous braided seagrass rim hand-knitted to thick braided base cords, complemented by dual upright curved handles wrapped tightly with natural fiber rope.",
-    "exportDetails": "Packed 12 pieces nested per carton with corrugated separation sheets.",
-    "careInstructions": "Spot clean only. Air dry completely if damp."
-  },
-  "unit": "Single Piece",
-  "cbmPerCarton": 0.052,
-  "setPerCarton": 12,
-  "nwPerCtn": 5.4,
-  "gwPerCtn": 6.8,
-  "material": "100% Coastal Seagrass",
-  "color": "Sun-Drenched Golden Tan",
-  "specifications": [
-    {
-      "key": "Item Code",
-      "value": "GFC-ST-004"
-    },
-    {
-      "key": "Item Name",
-      "value": "Oval Coastal Seagrass Breakfast Tray with Upright Handles"
-    },
-    {
-      "key": "Specification",
-      "value": "45cm L x 30cm W x 7cm H"
-    },
-    {
-      "key": "Materials",
-      "value": "100% Coastal Seagrass"
-    },
-    {
-      "key": "MOQ",
-      "value": "250 Pcs"
-    },
-    {
-      "key": "Country of Origin",
-      "value": "Bangladesh"
-    }
-  ],
-  "features": [
-    "Elongated Oval Profile",
-    "Dual Upright Curved Arch Handles",
-    "Heavy-Duty Hand-Braided Construction",
-    "Food-Safe Natural Curing"
-  ]
-},
-{
-  "id": "GFC-ST-005",
-  "slug": "two-tone-seagrass-tray-with-cream-cotton-rim-gfc-st-005",
-  "code": "GFC-ST-005",
-  "name": "Two-Tone Seagrass Tray with Cream Cotton Rim",
-  "category": "seagrass",
-  "categoryName": "Seagrass",
-  "categorySlug": "seagrass",
-  "subCategory": "trays",
-  "image": "/products/gfc_st_005.jpg",
-  "galleryImages": [
-    "/products/gfc_st_005.jpg"
-  ],
-  "description": "Artisanal round seagrass decorative tray featuring a coiled natural fiber center with an off-white cotton wrapped border and loop ear handles.",
-  "longDescription": {
-    "overview": "Blending coastal rustic texture with contemporary Scandinavian minimalism, the GFC-ST-005 showcases contrast craftsmanship. Perfect for modern retail boutiques, nursery decor trays, or living room accent styling.",
-    "craftsmanship": "Natural golden seagrass tightly bound in circular spiral weave, framed by a soft bleached cotton rope binding on the perimeter with two stitched ear loop handles.",
-    "exportDetails": "Bulk export packaging with 16 pieces per master carton.",
-    "careInstructions": "Spot clean with a clean white damp cloth. Do not bleach."
-  },
-  "unit": "Single Piece",
-  "cbmPerCarton": 0.048,
-  "setPerCarton": 16,
-  "nwPerCtn": 5.9,
-  "gwPerCtn": 7.3,
-  "material": "Natural Seagrass & Cotton Yarn",
-  "color": "Natural Amber & Cream White",
-  "specifications": [
-    {
-      "key": "Item Code",
-      "value": "GFC-ST-005"
-    },
-    {
-      "key": "Item Name",
-      "value": "Two-Tone Seagrass Tray with Cream Cotton Rim"
-    },
-    {
-      "key": "Specification",
-      "value": "Diameter 36cm x Height 5.5cm"
-    },
-    {
-      "key": "Materials",
-      "value": "Seagrass & Cotton Rope"
-    },
-    {
-      "key": "MOQ",
-      "value": "200 Pcs"
-    },
-    {
-      "key": "Country of Origin",
-      "value": "Bangladesh"
-    }
-  ],
-  "features": [
-    "Two-Tone Contrast Coastal Design",
-    "Off-White Cotton Bound Perimeter",
-    "Side Ear Loop Handles",
-    "Artisan Hand-Stitched Finishing"
-  ]
-},
-{
-  "id": "GFC-ST-006",
-  "slug": "square-braided-seagrass-ottoman-organizer-tray-gfc-st-006",
-  "code": "GFC-ST-006",
-  "name": "Square Braided Seagrass Ottoman Organizer Tray",
-  "category": "seagrass",
-  "categoryName": "Seagrass",
-  "categorySlug": "seagrass",
-  "subCategory": "trays",
-  "image": "/products/gfc_st_006.jpg",
-  "galleryImages": [
-    "/products/gfc_st_006.jpg"
-  ],
-  "description": "Heavy-duty square coastal seagrass tray with thick braided rim walls, woven checkerboard bottom, and cutout handles.",
-  "longDescription": {
-    "overview": "Specially engineered for coffee table ottomans, console tables, and hospitality tray service. The square profile maximizes usable tray surface area while providing robust edge containment.",
-    "craftsmanship": "Thick hand-braided plait weave formed over an internal galvanized frame with flush reinforced cutout handholds.",
-    "exportDetails": "10 pieces per heavy-duty export carton with individual corner buffers.",
-    "careInstructions": "Wipe clean with a dry towel. Store in dry environmental conditions."
-  },
-  "unit": "Single Piece",
-  "cbmPerCarton": 0.05,
-  "setPerCarton": 10,
-  "nwPerCtn": 6.2,
-  "gwPerCtn": 7.5,
-  "material": "Natural Bangladesh Coastal Seagrass & Internal Frame",
-  "color": "Natural Earthy Golden Seagrass",
-  "specifications": [
-    {
-      "key": "Item Code",
-      "value": "GFC-ST-006"
-    },
-    {
-      "key": "Item Name",
-      "value": "Square Braided Seagrass Ottoman Organizer Tray"
-    },
-    {
-      "key": "Specification",
-      "value": "38cm x 38cm x 6.5cm"
-    },
-    {
-      "key": "Materials",
-      "value": "Coastal Seagrass & Wire Core"
-    },
-    {
-      "key": "MOQ",
-      "value": "200 Pcs"
-    },
-    {
-      "key": "Country of Origin",
-      "value": "Bangladesh"
-    }
-  ],
-  "features": [
-    "Generous Square Usable Surface",
-    "Heavy-Duty Braided Border",
-    "Integrated Cutout Handles",
-    "Sturdy Ottoman Table Stable Base"
-  ]
-},
   {
-    id: "GFC-KB-006",
-    slug: "coiled-kans-grass-round-storage-bowl-baskets-gfc-kb-006",
-    code: "GFC-KB-006",
-    name: "Coiled Kans Grass Round Storage Bowl Baskets (Set of 3)",
+    id: "GFC-KT-002",
+    slug: "handwoven-rectangular-kans-grass-serving-tray-gfc-kt-002",
+    code: "GFC-KT-002",
+    name: "Handwoven Rectangular Kans Grass Serving Tray with Handles",
     category: "kans-grass",
     categoryName: "Kans Grass",
     categorySlug: "kans-grass",
-    subCategory: "baskets",
-    image: "/products/gfc_kb_006.jpg",
-    galleryImages: ["/products/gfc_kb_006.jpg"],
-    description: "Set of 3 shallow nesting round bowls handcrafted from wild river Kans grass (Kaisa grass) tightly bound with natural cotton thread in earthy terracotta red-orange, golden mustard yellow, and natural cream.",
+    subCategory: "trays",
+    image: "/products/gfc_kt_002.jpg",
+    galleryImages: ["/products/gfc_kt_002.jpg"],
+    description: "Artisanal rectangular serving tray intricately hand-coiled from wild river Kans grass with integrated raised carrying handles and a sturdy flat base.",
     longDescription: {
-      "overview": "The Coiled Kans Grass Round Storage Bowl Baskets (Art No: GFC-KB-006) bring earthy warmth and authentic artisanal beauty to modern dining tables and living spaces. Woven in a nesting set of three, each bowl features a distinctive harmonious colorway.",
-      "craftsmanship": "Handmade by rural women artisans in Bangladesh utilizing wild perennial Kans grass harvested from riverbanks, tightly coiled and wrapped with durable cotton cord for lasting structural integrity.",
-      "exportDetails": "Nested in sets of 3, bundled with moisture-barrier wrapping and placed in 5-ply export master cartons with silica gel desiccant packs.",
-      "careInstructions": "Wipe with a soft dry cloth. Keep in dry indoor environments away from excessive direct water immersion."
+      "overview": "The Handwoven Rectangular Kans Grass Serving Tray (Art No: GFC-KT-002) is an eco-friendly centerpiece designed for luxury dining service, breakfast trays, and living room ottoman tables. Handcrafted with traditional needle-coiling techniques, it blends natural warmth with structural durability.",
+      "craftsmanship": "Rural artisans in northern Bangladesh harvest wild perennial Kans grass from riverbanks, sun-cure the fibers to a luminous golden tone, and coil each strand tightly with unbleached cotton cord binding.",
+      "exportDetails": "Each piece is wrapped in moisture-barrier protective film, master packed 12 pieces per export carton with silica gel desiccant packs.",
+      "careInstructions": "Wipe with a soft dry cloth. Keep in dry ventilated areas away from standing water."
 },
     specifications: [
-      { key: "Item Code", value: "GFC-KB-006" },
-      { key: "Item Name", value: "Coiled Kans Grass Round Storage Bowl Baskets (Set of 3)" },
-      { key: "Specification", value: "L: Dia 28cm x H 11cm | M: Dia 24cm x H 10cm | S: Dia 20cm x H 8.5cm" },
-      { key: "Materials", value: "100% Wild Kans Grass (Saccharum spontaneum) & Natural Cotton Thread" },
-      { key: "MOQ", value: "300 Sets" },
-      { key: "Country of Origin", value: "Bangladesh" }
-    ],
-    features: [
-      "Hand-Coiled Dense Wild Kans Grass Core",
-      "Eco-Friendly Azo-Free Thread Wrapping",
-      "Set of 3 Space-Saving Nesting Bowls",
-      "Versatile Tabletop Serving & Storage Catchall"
+      {
+            "key": "Item Code",
+            "value": "GFC-KT-002"
+      },
+      {
+            "key": "Item Name",
+            "value": "Handwoven Rectangular Kans Grass Serving Tray with Handles"
+      },
+      {
+            "key": "Specification",
+            "value": "42cm L x 30cm W x 7cm H (Handle H: 10cm)"
+      },
+      {
+            "key": "Materials",
+            "value": "100% Wild River Kans Grass (Saccharum spontaneum) & Natural Cotton Thread"
+      },
+      {
+            "key": "MOQ",
+            "value": "300 Pcs"
+      },
+      {
+            "key": "Country of Origin",
+            "value": "Bangladesh"
+      }
 ],
-    unit: "S/3",
-    cbmPerCarton: 0.054,
+    features: [
+      "Ergonomic Integrated Woven Handles",
+      "Dense Coiled Structure for Flat Stability",
+      "Eco-Friendly Biodegradable River Fiber",
+      "Ideal for Breakfast, Tea, Coffee & Ottoman Decor"
+],
+    unit: "Single Piece",
+    cbmPerCarton: 0.052,
     setPerCarton: 12,
-    nwPerCtn: 5.8,
-    gwPerCtn: 7.2,
-    material: "100% Wild Kans Grass (Saccharum spontaneum) & Natural Cotton Thread",
-    color: "Terracotta Red, Golden Mustard & Natural Straw Beige"
+    nwPerCtn: 6.2,
+    gwPerCtn: 7.6,
+    material: "100% Wild River Kans Grass (Saccharum spontaneum) & Natural Cotton Thread",
+    color: "Natural Golden Blonde Straw & Cream"
   },
   {
-    id: "GFC-KB-007",
-    slug: "multicolored-ribbed-kans-grass-serving-bowls-gfc-kb-007",
-    code: "GFC-KB-007",
-    name: "Multicolored Ribbed Kans Grass Serving Bowl Baskets (Set of 3)",
+    id: "GFC-KT-003",
+    slug: "round-kans-grass-vanity-fruit-platter-tray-gfc-kt-003",
+    code: "GFC-KT-003",
+    name: "Round Kans Grass Vanity & Fruit Platter Tray",
     category: "kans-grass",
     categoryName: "Kans Grass",
     categorySlug: "kans-grass",
-    subCategory: "baskets",
-    image: "/products/gfc_kb_007.jpg",
-    galleryImages: ["/products/gfc_kb_007.jpg"],
-    description: "Artisanal trio of nesting round shallow bowl baskets hand-coiled with wild Kans grass core and wrapped in vibrant concentric rings of turquoise blue, goldenrod yellow, terracotta orange, and natural cream.",
+    subCategory: "trays",
+    image: "/products/gfc_kt_003.jpg",
+    galleryImages: ["/products/gfc_kt_003.jpg"],
+    description: "Circular shallow woven serving platter tray crafted from dense concentric rings of natural Kans grass featuring subtle terracotta earth-tone stitch accents.",
     longDescription: {
-      "overview": "Our Multicolored Ribbed Kans Grass Serving Bowls (Art No: GFC-KB-007) combine traditional Bengali coiling techniques with lively contemporary color blocking, creating eye-catching tabletop centerpieces for global retailers.",
-      "craftsmanship": "Carefully hand-wound around sustainable Kans grass fibers using centuries-old coiling traditions, finished with smooth rim selvage and durable ribbed sidewalls.",
-      "exportDetails": "Each set of 3 nested together with barcode hangtag, packed 12 sets per heavy-duty double-wall export carton.",
-      "careInstructions": "Spot clean with dry or slightly damp towel. Store in well-ventilated dry spaces."
+      "overview": "The Round Kans Grass Vanity & Fruit Platter Tray (Art No: GFC-KT-003) showcases fine rhythmic coiling with subtle terracotta highlights. Its shallow profile makes it equally functional as a dining table fruit server, vanity catchall, or bohemian wall art display.",
+      "craftsmanship": "Expertly hand-stitched by female craft collectives in Bangladesh utilizing wild river kaisa grass and azo-free dyed cotton thread, celebrating heritage Bengali hand-coiling arts.",
+      "exportDetails": "Flat stacked with interleaving tissue paper and moisture desiccants, 16 units per 5-ply export master carton.",
+      "careInstructions": "Dust with a dry brush or soft cloth. Store in well-ventilated dry spaces."
 },
     specifications: [
-      { key: "Item Code", value: "GFC-KB-007" },
-      { key: "Item Name", value: "Multicolored Ribbed Kans Grass Serving Bowl Baskets (Set of 3)" },
-      { key: "Specification", value: "L: Dia 26cm x H 12cm | M: Dia 22cm x H 10cm | S: Dia 18cm x H 8cm" },
-      { key: "Materials", value: "100% Wild River Kans Grass & Eco-Dyed Cotton Yarn" },
-      { key: "MOQ", value: "300 Sets" },
-      { key: "Country of Origin", value: "Bangladesh" }
-    ],
-    features: [
-      "Vibrant Multi-Color Concentric Striped Weave",
-      "Nesting Set of 3 Flared Shallow Bowls",
-      "Ideal for Bread, Dry Fruits, Keys & Jewelry Catchall",
-      "Lightweight, Rigid & Biodegradable Craft"
+      {
+            "key": "Item Code",
+            "value": "GFC-KT-003"
+      },
+      {
+            "key": "Item Name",
+            "value": "Round Kans Grass Vanity & Fruit Platter Tray"
+      },
+      {
+            "key": "Specification",
+            "value": "Dia 36cm x H 4.5cm"
+      },
+      {
+            "key": "Materials",
+            "value": "100% Wild River Kans Grass & Eco-Dyed Cotton Thread"
+      },
+      {
+            "key": "MOQ",
+            "value": "300 Pcs"
+      },
+      {
+            "key": "Country of Origin",
+            "value": "Bangladesh"
+      }
 ],
-    unit: "S/3",
+    features: [
+      "Concentric Mandala Spiral Weaving",
+      "Low Raised Protective Rim",
+      "Versatile Fruit Platter, Vanity Tray & Wall Hanging",
+      "100% Chemical-Free Renewable Material"
+],
+    unit: "Single Piece",
+    cbmPerCarton: 0.046,
+    setPerCarton: 16,
+    nwPerCtn: 5.6,
+    gwPerCtn: 6.9,
+    material: "100% Wild River Kans Grass & Eco-Dyed Cotton Thread",
+    color: "Natural Golden Straw with Terracotta Accent"
+  },
+  {
+    id: "GFC-KT-004",
+    slug: "oval-kans-grass-bread-pastry-tray-gfc-kt-004",
+    code: "GFC-KT-004",
+    name: "Oval Hand-Coiled Kans Grass Bread & Pastry Tray with Braided Handles",
+    category: "kans-grass",
+    categoryName: "Kans Grass",
+    categorySlug: "kans-grass",
+    subCategory: "trays",
+    image: "/products/gfc_kt_004.jpg",
+    galleryImages: ["/products/gfc_kt_004.jpg"],
+    description: "Classic oval bread and pastry serving tray hand-coiled from wild Kans grass with twin braided rope handles, perfect for bakery displays and breakfast tables.",
+    longDescription: {
+      "overview": "The Oval Hand-Coiled Kans Grass Bread & Pastry Tray (Art No: GFC-KT-004) brings natural rustic charm to breakfast tables, buffets, and organic cafes. The breathable grass structure allows air circulation around freshly baked goods.",
+      "craftsmanship": "Constructed with thick bundles of wild-growing riverside grass wrapped tightly with cotton cord, finished with firmly anchored braided loop handles.",
+      "exportDetails": "Nesting configuration with desiccant protection, 14 units per export carton.",
+      "careInstructions": "Shake out loose crumbs. Wipe clean with a dry microfiber cloth."
+},
+    specifications: [
+      {
+            "key": "Item Code",
+            "value": "GFC-KT-004"
+      },
+      {
+            "key": "Item Name",
+            "value": "Oval Hand-Coiled Kans Grass Bread & Pastry Tray with Braided Handles"
+      },
+      {
+            "key": "Specification",
+            "value": "40cm L x 26cm W x 6cm H"
+      },
+      {
+            "key": "Materials",
+            "value": "100% Wild River Kans Grass & Pure Cotton Rope"
+      },
+      {
+            "key": "MOQ",
+            "value": "300 Pcs"
+      },
+      {
+            "key": "Country of Origin",
+            "value": "Bangladesh"
+      }
+],
+    features: [
+      "Twin Twisted Braided Rope Handles",
+      "Elongated Oval Shape Ideal for Baguettes & Pastries",
+      "Breathable Woven Fiber Keeps Breads Fresh",
+      "Heavy-Duty Reinforced Base Selvage"
+],
+    unit: "Single Piece",
     cbmPerCarton: 0.048,
-    setPerCarton: 12,
-    nwPerCtn: 5.2,
-    gwPerCtn: 6.5,
-    material: "100% Wild River Kans Grass & Eco-Dyed Cotton Yarn",
-    color: "Turquoise Teal, Sun Yellow, Brick Orange & Cream"
+    setPerCarton: 14,
+    nwPerCtn: 5.8,
+    gwPerCtn: 7.1,
+    material: "100% Wild River Kans Grass & Pure Cotton Rope",
+    color: "Natural Honey Straw & Off-White"
   },
   {
-    id: "GFC-KB-008",
-    slug: "cylindrical-kans-grass-planter-storage-baskets-gfc-kb-008",
-    code: "GFC-KB-008",
-    name: "Cylindrical Kans Grass Planter & Storage Baskets with Liners (Set of 3)",
+    id: "GFC-KT-005",
+    slug: "nesting-rectangular-kans-grass-utility-trays-gfc-kt-005",
+    code: "GFC-KT-005",
+    name: "Nesting Rectangular Kans Grass Utility Trays with Cutout Handles (Set of 3)",
     category: "kans-grass",
     categoryName: "Kans Grass",
     categorySlug: "kans-grass",
-    subCategory: "baskets",
-    image: "/products/gfc_kb_008.jpg",
-    galleryImages: ["/products/gfc_kb_008.jpg"],
-    description: "Modern ethnic monochrome cylindrical Kans grass plant pot covers and desktop storage organizers featuring intricate black and off-white geometric diamond weaving, equipped with waterproof clear liners.",
+    subCategory: "trays",
+    image: "/products/gfc_kt_005.jpg",
+    galleryImages: ["/products/gfc_kt_005.jpg"],
+    description: "Set of 3 nesting rectangular utility trays handcrafted from natural Kans grass with carved woven cutout handles, offering tiered storage and versatile tabletop organization.",
     longDescription: {
-      "overview": "The Cylindrical Kans Grass Planter & Storage Baskets (Art No: GFC-KB-008) offer sophisticated botanical styling with functional indoor protection. The pre-fitted transparent plastic liner ensures that plants can be watered without wetting the outer grass weave.",
-      "craftsmanship": "Artisans intricately interweave black and cream cords over a sturdy wild Kans grass core to create bold Aztec/tribal inspired diamond patterns on a vertical cylinder frame.",
-      "exportDetails": "Nesting set of 3 stacked with protective foam sheets, 8 sets per carton with drop-tested international packaging standards.",
-      "careInstructions": "Empty drainage overflow from plastic liner after watering. Wipe exterior with dry cloth."
+      "overview": "The Nesting Rectangular Kans Grass Utility Trays (Art No: GFC-KT-005) offer a compact, graduated storage and presentation solution. The three nesting sizes save retail shipping volume while providing customers with versatile coordinating organizers.",
+      "craftsmanship": "Handmade by rural artisan communities in Bangladesh using sun-dried Kans grass woven over a strong core with precision handle cutouts.",
+      "exportDetails": "Nested in sets of 3, bundled with moisture-proof wrapping, 6 sets per double-wall corrugated master carton.",
+      "careInstructions": "Dust regularly. Avoid prolonged contact with water or humid damp areas."
 },
     specifications: [
-      { key: "Item Code", value: "GFC-KB-008" },
-      { key: "Item Name", value: "Cylindrical Kans Grass Planter & Storage Baskets with Liners (Set of 3)" },
-      { key: "Specification", value: "L: Dia 24cm x H 22cm | M: Dia 20cm x H 18cm | S: Dia 16cm x H 15cm" },
-      { key: "Materials", value: "Wild Kans Grass, Durable Monochrome Thread Wrapping, Clear Waterproof PVC Liner" },
-      { key: "MOQ", value: "300 Sets" },
-      { key: "Country of Origin", value: "Bangladesh" }
-    ],
+      {
+            "key": "Item Code",
+            "value": "GFC-KT-005"
+      },
+      {
+            "key": "Item Name",
+            "value": "Nesting Rectangular Kans Grass Utility Trays with Cutout Handles (Set of 3)"
+      },
+      {
+            "key": "Specification",
+            "value": "L: 38x28x10cm | M: 34x24x9cm | S: 30x20x8cm"
+      },
+      {
+            "key": "Materials",
+            "value": "100% Wild River Kans Grass & Off-White Cotton Binding"
+      },
+      {
+            "key": "MOQ",
+            "value": "300 Sets"
+      },
+      {
+            "key": "Country of Origin",
+            "value": "Bangladesh"
+      }
+],
     features: [
-      "Built-In Waterproof Clear Plant Liner",
-      "Contemporary Monochrome Tribal Diamond Pattern",
-      "Set of 3 Nesting Upright Cylinders",
-      "Perfect for Indoor Botanicals, Desk & Bath Organizers"
+      "Set of 3 Multi-Size Nesting Trays",
+      "Dual Cutout Carrying Handles on All Sizes",
+      "Rigid Straight-Walled Construction",
+      "Multi-Purpose: Desktop, Vanity, Wardrobe & Kitchen Organizing"
 ],
     unit: "S/3",
-    cbmPerCarton: 0.065,
-    setPerCarton: 8,
-    nwPerCtn: 6.4,
-    gwPerCtn: 7.9,
-    material: "Wild Kans Grass, Durable Monochrome Thread Wrapping, Clear Waterproof PVC Liner",
-    color: "Matte Black & Ivory Cream Geometric Pattern"
-  },
-  {
-    id: "GFC-KB-009",
-    slug: "two-tone-kans-grass-handled-storage-totes-gfc-kb-009",
-    code: "GFC-KB-009",
-    name: "Two-Tone Kans Grass Handled Storage Totes (Set of 3)",
-    category: "kans-grass",
-    categoryName: "Kans Grass",
-    categorySlug: "kans-grass",
-    subCategory: "baskets",
-    image: "/products/gfc_kb_009.jpg",
-    galleryImages: ["/products/gfc_kb_009.jpg"],
-    description: "Set of 3 round Kans grass storage baskets with integrated ear loop handles, featuring natural golden wild grass upper body and a crisp clean white dipped lower base wrap.",
-    longDescription: {
-      "overview": "Designed for Scandinavian and bohemian interior aesthetics, the Two-Tone Kans Grass Handled Storage Totes (Art No: GFC-KB-009) provide lightweight yet remarkably strong utility storage for living rooms, nurseries, and bedrooms.",
-      "craftsmanship": "Hand-braided and coiled from sun-cured Kans grass with firmly stitched ear handles designed to safely carry up to 12kg of household essentials.",
-      "exportDetails": "Nest-packed sets of 3, 6 nested sets per master carton.",
-      "careInstructions": "Gently vacuum or wipe clean with dry microfiber cloth. Avoid exposure to sustained outdoor rain."
-},
-    specifications: [
-      { key: "Item Code", value: "GFC-KB-009" },
-      { key: "Item Name", value: "Two-Tone Kans Grass Handled Storage Totes (Set of 3)" },
-      { key: "Specification", value: "L: Dia 34cm x H 30cm | M: Dia 28cm x H 25cm | S: Dia 22cm x H 20cm" },
-      { key: "Materials", value: "100% Wild River Kans Grass & Cotton Cord" },
-      { key: "MOQ", value: "300 Sets" },
-      { key: "Country of Origin", value: "Bangladesh" }
-    ],
-    features: [
-      "Integrated Dual Braided Ear Loop Handles",
-      "Chic Two-Tone Dipped White Aesthetic",
-      "Generous Cylindrical Storage Capacity",
-      "Ideal for Laundry, Blankets, Toys, and Retail Displays"
-],
-    unit: "S/3",
-    cbmPerCarton: 0.075,
+    cbmPerCarton: 0.068,
     setPerCarton: 6,
-    nwPerCtn: 7,
-    gwPerCtn: 8.5,
-    material: "100% Wild River Kans Grass & Cotton Cord",
-    color: "Natural Golden Honey Kans Grass & Crisp White Base"
+    nwPerCtn: 6.8,
+    gwPerCtn: 8.2,
+    material: "100% Wild River Kans Grass & Off-White Cotton Binding",
+    color: "Natural Blonde Straw"
   }
 ];
