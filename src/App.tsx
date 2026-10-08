@@ -85,6 +85,8 @@ export const AppContent: React.FC = () => {
       document.title = formatPageTitle('Seagrass Planter Basket Manufacturer | Wholesale Netherlands & Europe');
     } else if (p === '/kaisa-grass-basket-manufacturer-netherlands' || p === '/kaisa-grass-baskets-manufacturer-netherlands') {
       document.title = formatPageTitle('Kaisa Grass Basket Manufacturer | Wholesale Netherlands & Europe');
+    } else if (p === '/jute-pouf-manufacturer-bangladesh' || p === '/jute-poufs-manufacturer-bangladesh') {
+      document.title = formatPageTitle('Jute Pouf Manufacturer in Bangladesh | Custom Wholesale & OEM Exporter');
     } else if (p === '/admin/login') {
       document.title = formatPageTitle('Admin Login');
     } else if (p === '/admin' || p === '/admin/dashboard') {
@@ -212,6 +214,8 @@ export const AppContent: React.FC = () => {
           <Route path="/seagrass-planter-basket-manufacturer-netherlands" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
           <Route path="/kaisa-grass-basket-manufacturer-netherlands" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
           <Route path="/kaisa-grass-baskets-manufacturer-netherlands" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
+          <Route path="/jute-pouf-manufacturer-bangladesh" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
+          <Route path="/jute-poufs-manufacturer-bangladesh" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
           <Route path="/:slug" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
         </Routes>
 

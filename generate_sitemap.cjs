@@ -61,6 +61,12 @@ const corePages = [
     { loc: 'https://goldenfibercraftsltd.com/images/blog/kaisa-grass-basket-quality-control-moisture-inspection.jpg', title: 'Kaisa Grass Basket Quality Control Moisture Inspection' },
     { loc: 'https://goldenfibercraftsltd.com/images/blog/custom-kaisa-grass-baskets-wholesale-display.jpg', title: 'Custom Kaisa Grass Baskets Wholesale Export Display' }
   ]},
+  { url: '/jute-pouf-manufacturer-bangladesh', priority: '0.95', changefreq: 'weekly', images: [
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-jute-pouf-manufacturer-bangladesh.jpg', title: 'Custom Jute Pouf Manufacturer in Bangladesh Wholesale' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/bangladeshi-artisan-weaving-jute-pouf.jpg', title: 'Bangladeshi Artisan Hand Stitching Braided Jute Pouf' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/custom-jute-poufs-wholesale-display.jpg', title: 'Custom Jute Poufs Wholesale Showroom Display' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/jute-pouf-quality-control-moisture-inspection.jpg', title: 'Jute Pouf Quality Control and Moisture Meter Inspection' }
+  ]},
   { url: '/about', priority: '0.8', changefreq: 'weekly' },
   { url: '/materials', priority: '0.8', changefreq: 'weekly' },
   { url: '/infrastructure', priority: '0.8', changefreq: 'weekly' },
