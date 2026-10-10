@@ -21,7 +21,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenQuoteModal }) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
-  const categories = ['all', 'Jute Bags', 'Jute Baskets', 'Jute Floor Mats', 'Sustainability', 'Export Logistics', 'Material Guide'];
+  const categories = ['all', ...Array.from(new Set(ARTICLES_DATA.map((a) => a.category)))];
 
   const filteredArticles = ARTICLES_DATA.filter((article) => {
     const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
