@@ -9793,31 +9793,31 @@ export const PRODUCTS: ProductItem[] = [
 },
   {
   "id": "GFC-DLB-001",
-  "slug": "date-leaf-storage-hamper-gfc-dlb-001",
+  "slug": "date-leaf-storage-hamper-lid-gfc-dlb-001",
   "code": "GFC-DLB-001",
-  "name": "Date Leaf Storage Hamper Set",
+  "name": "Date Leaf Storage Hamper with Lid",
   "category": "date-leaf",
   "categoryName": "Date Leaf",
   "categorySlug": "date-leaf",
   "subCategory": "baskets",
-  "image": "/materials/orig_BDD-03.jpg",
+  "image": "/products/gfc_dlb_001.jpg",
   "galleryImages": [
-    "/materials/orig_BDD-03.jpg"
+    "/products/gfc_dlb_001.jpg"
   ],
-  "description": "Authentic Bangladesh date palm leaf braided hamper baskets with fitted lids for eco-friendly nursery and living storage.",
+  "description": "Handcrafted cylindrical date palm leaf storage hamper basket with fitted lid and dual carry handles for laundry, nursery, and living storage.",
   "longDescription": {
-    "overview": "Crafted from sun-bleached date palm leaves, these traditional nested hampers offer generous storage capacity with a lightweight, smooth natural texture.",
-    "craftsmanship": "Braided by skilled women weavers using thin date leaf strips stitched into sturdy cylindrical hamper forms.",
-    "exportDetails": "Nested in sets of 3 or 4 inside master corrugated cartons.",
-    "careInstructions": "Keep in dry ventilated areas."
+    "overview": "Crafted from sun-bleached date palm leaves, this traditional cylindrical hamper offers generous storage capacity with a lightweight, smooth natural texture.",
+    "craftsmanship": "Braided by skilled women weavers using thin date leaf strips stitched into sturdy cylindrical hamper forms with fitted lid.",
+    "exportDetails": "Nested inside master corrugated cartons with silica gel moisture protection.",
+    "careInstructions": "Keep in dry ventilated areas. Dust regularly with dry soft brush."
   },
-  "unit": "S/3 Set",
-  "cbmPerCarton": 0.062,
+  "unit": "S/1 PC",
+  "cbmPerCarton": 0.055,
   "setPerCarton": 4,
-  "nwPerCtn": 3.5,
-  "gwPerCtn": 4.8,
-  "material": "100% Date Palm Leaf",
-  "color": "Natural Cream / Pale Beige",
+  "nwPerCtn": 4,
+  "gwPerCtn": 5.2,
+  "material": "100% Date Palm Leaf (Khejur Pata)",
+  "color": "Natural Blonde Cream",
   "specifications": [
     {
       "key": "Item Code",
@@ -9825,11 +9825,71 @@ export const PRODUCTS: ProductItem[] = [
     },
     {
       "key": "Item Name",
-      "value": "Date Leaf Storage Hamper Set"
+      "value": "Date Leaf Storage Hamper with Lid"
     },
     {
       "key": "Specification",
-      "value": "S/3: D25xH20cm, D30xH25cm, D35xH30cm"
+      "value": "Dia 35cm x H 42cm"
+    },
+    {
+      "key": "Materials",
+      "value": "100% Date Palm Leaf"
+    },
+    {
+      "key": "MOQ",
+      "value": "200 Pieces"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Fitted Woven Lid",
+    "Reinforced Side Handles",
+    "Lightweight & Tough",
+    "Zero Chemical Treatment"
+  ]
+},
+  {
+  "id": "GFC-DLB-002",
+  "slug": "date-leaf-braided-round-storage-basket-set-gfc-dlb-002",
+  "code": "GFC-DLB-002",
+  "name": "Date Leaf Braided Round Storage Basket Set",
+  "category": "date-leaf",
+  "categoryName": "Date Leaf",
+  "categorySlug": "date-leaf",
+  "subCategory": "baskets",
+  "image": "/products/gfc_dlb_002.jpg",
+  "galleryImages": [
+    "/products/gfc_dlb_002.jpg"
+  ],
+  "description": "Set of 3 nesting round date palm leaf utility baskets with braided loop handles, ideal for shelf organizing, linens, and accessories.",
+  "longDescription": {
+    "overview": "A versatile nested set of three round baskets braided from natural date palm leaves, providing durable, stackable eco-friendly storage.",
+    "craftsmanship": "Tightly coiled and plaited with diagonal herringbone stitching and reinforced double-bound rim.",
+    "exportDetails": "Packaged nested S/3 per set, 4 sets per export master carton.",
+    "careInstructions": "Wipe clean with a dry or slightly damp cloth; air dry completely."
+  },
+  "unit": "S/3 Set",
+  "cbmPerCarton": 0.062,
+  "setPerCarton": 4,
+  "nwPerCtn": 3.8,
+  "gwPerCtn": 5,
+  "material": "100% Date Palm Leaf",
+  "color": "Natural Pale Tan / Blonde",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-DLB-002"
+    },
+    {
+      "key": "Item Name",
+      "value": "Date Leaf Braided Round Storage Basket Set"
+    },
+    {
+      "key": "Specification",
+      "value": "S/3: D24xH18cm, D28xH22cm, D34xH26cm"
     },
     {
       "key": "Materials",
@@ -9845,10 +9905,430 @@ export const PRODUCTS: ProductItem[] = [
     }
   ],
   "features": [
-    "Fitted Woven Lids",
-    "Nested S/3 Set",
-    "Lightweight & Tough",
-    "Zero Chemical Treatment"
+    "Nested Set of 3",
+    "Dual Braided Loop Handles",
+    "Durable Coiled Rim",
+    "Eco-Friendly Natural Finish"
+  ]
+},
+  {
+  "id": "GFC-DLB-003",
+  "slug": "date-palm-leaf-tall-laundry-hamper-gfc-dlb-003",
+  "code": "GFC-DLB-003",
+  "name": "Date Palm Leaf Tall Laundry Hamper",
+  "category": "date-leaf",
+  "categoryName": "Date Leaf",
+  "categorySlug": "date-leaf",
+  "subCategory": "baskets",
+  "image": "/products/gfc_dlb_003.jpg",
+  "galleryImages": [
+    "/products/gfc_dlb_003.jpg"
+  ],
+  "description": "Tall handcrafted date palm leaf laundry hamper featuring a fitted conical woven lid with braided finial knob handle and breathable weave.",
+  "longDescription": {
+    "overview": "An elegant freestanding tall laundry hamper handwoven from resilient date palm fronds with an artisan conical top lid.",
+    "craftsmanship": "Spiral braided weave by rural artisan cooperatives in southwestern Bangladesh.",
+    "exportDetails": "Carton packed with corner protectors and moisture desiccant.",
+    "careInstructions": "Store in well-ventilated indoor space."
+  },
+  "unit": "S/1 PC",
+  "cbmPerCarton": 0.075,
+  "setPerCarton": 2,
+  "nwPerCtn": 3.5,
+  "gwPerCtn": 4.8,
+  "material": "100% Natural Date Palm Fronds",
+  "color": "Natural Sandy Beige",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-DLB-003"
+    },
+    {
+      "key": "Item Name",
+      "value": "Date Palm Leaf Tall Laundry Hamper"
+    },
+    {
+      "key": "Specification",
+      "value": "Dia 38cm x H 58cm"
+    },
+    {
+      "key": "Materials",
+      "value": "100% Natural Date Palm Fronds"
+    },
+    {
+      "key": "MOQ",
+      "value": "150 Pieces"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Artisan Conical Lid with Finial Knob",
+    "Tall Freestanding Form",
+    "Breathable Organic Fiber",
+    "Handmade in Bangladesh"
+  ]
+},
+  {
+  "id": "GFC-DLB-004",
+  "slug": "date-leaf-foldable-belly-basket-gfc-dlb-004",
+  "code": "GFC-DLB-004",
+  "name": "Date Leaf Foldable Belly Basket",
+  "category": "date-leaf",
+  "categoryName": "Date Leaf",
+  "categorySlug": "date-leaf",
+  "subCategory": "baskets",
+  "image": "/products/gfc_dlb_004.jpg",
+  "galleryImages": [
+    "/products/gfc_dlb_004.jpg"
+  ],
+  "description": "Artisan-crafted date palm leaf belly basket with collapsible upper rim and woven loop handles, serving as a plant pot cover or market tote.",
+  "longDescription": {
+    "overview": "A flexible two-way belly basket that folds flat into a shallow bowl or pops up into a roomy basket with sturdy handles.",
+    "craftsmanship": "Hand-plaited from sun-cured date palm leaves with pliable middle fold seam.",
+    "exportDetails": "Shipped collapsed flat to maximize carton volume efficiency.",
+    "careInstructions": "Gently reshape when opened; keep away from prolonged water contact."
+  },
+  "unit": "S/1 PC",
+  "cbmPerCarton": 0.04,
+  "setPerCarton": 12,
+  "nwPerCtn": 4.5,
+  "gwPerCtn": 5.8,
+  "material": "100% Handwoven Date Palm Leaf",
+  "color": "Natural Cream / Warm Tan",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-DLB-004"
+    },
+    {
+      "key": "Item Name",
+      "value": "Date Leaf Foldable Belly Basket"
+    },
+    {
+      "key": "Specification",
+      "value": "Dia 36cm x H 32cm"
+    },
+    {
+      "key": "Materials",
+      "value": "100% Date Palm Leaf"
+    },
+    {
+      "key": "MOQ",
+      "value": "300 Pieces"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Collapsible Two-Way Design",
+    "Dual Woven Loop Handles",
+    "Multi-Purpose Storage & Planter Cover",
+    "Space-Saving Flat Shipping"
+  ]
+},
+  {
+  "id": "GFC-DLB-005",
+  "slug": "date-leaf-rectangular-shelf-organizer-basket-gfc-dlb-005",
+  "code": "GFC-DLB-005",
+  "name": "Date Leaf Rectangular Shelf Organizer Basket",
+  "category": "date-leaf",
+  "categoryName": "Date Leaf",
+  "categorySlug": "date-leaf",
+  "subCategory": "baskets",
+  "image": "/products/gfc_dlb_005.jpg",
+  "galleryImages": [
+    "/products/gfc_dlb_005.jpg"
+  ],
+  "description": "Structured rectangular closet and shelf organizer basket hand-plaited from date palm leaves with integrated side cutout handles.",
+  "longDescription": {
+    "overview": "Designed for modular shelving systems, wardrobes, and pantry storage, providing crisp rectangular lines and natural texture.",
+    "craftsmanship": "Braided over a lightweight internal bamboo support frame with smooth cutout handle openings.",
+    "exportDetails": "Nested inside cartons of 8 to 12 pieces.",
+    "careInstructions": "Vacuum gently with brush attachment or dust with microfiber cloth."
+  },
+  "unit": "S/1 PC",
+  "cbmPerCarton": 0.048,
+  "setPerCarton": 8,
+  "nwPerCtn": 4.8,
+  "gwPerCtn": 6.2,
+  "material": "Date Palm Leaf & Bamboo Rim",
+  "color": "Natural Blonde Fiber",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-DLB-005"
+    },
+    {
+      "key": "Item Name",
+      "value": "Date Leaf Rectangular Shelf Organizer Basket"
+    },
+    {
+      "key": "Specification",
+      "value": "L 38cm x W 28cm x H 20cm"
+    },
+    {
+      "key": "Materials",
+      "value": "Date Palm Leaf & Bamboo Frame"
+    },
+    {
+      "key": "MOQ",
+      "value": "250 Pieces"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Structured Rectangular Form",
+    "Built-in Cutout Handles",
+    "Fits Standard Cubby Shelves",
+    "Reinforced Bamboo Framework"
+  ]
+},
+  {
+  "id": "GFC-DLB-006",
+  "slug": "date-leaf-tapered-planter-basket-set-gfc-dlb-006",
+  "code": "GFC-DLB-006",
+  "name": "Date Leaf Tapered Planter Basket Set",
+  "category": "date-leaf",
+  "categoryName": "Date Leaf",
+  "categorySlug": "date-leaf",
+  "subCategory": "baskets",
+  "image": "/products/gfc_dlb_006.jpg",
+  "galleryImages": [
+    "/products/gfc_dlb_006.jpg"
+  ],
+  "description": "Set of 3 nested cylindrical date palm leaf indoor planter baskets with thick braided top rims and stable flat bottoms.",
+  "longDescription": {
+    "overview": "Elevate house plants with organic natural warmth. These handcrafted date leaf planters fit standard indoor nursery pots.",
+    "craftsmanship": "Thick-braided date leaf bands stitched consecutively into tapered cylindrical pots.",
+    "exportDetails": "Nested S/3 sets packed 6 sets per master carton.",
+    "careInstructions": "Use with an inner plastic saucer to avoid water seepage."
+  },
+  "unit": "S/3 Set",
+  "cbmPerCarton": 0.058,
+  "setPerCarton": 6,
+  "nwPerCtn": 4.2,
+  "gwPerCtn": 5.5,
+  "material": "100% Date Palm Leaf",
+  "color": "Natural Sun-Bleached Beige",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-DLB-006"
+    },
+    {
+      "key": "Item Name",
+      "value": "Date Leaf Tapered Planter Basket Set"
+    },
+    {
+      "key": "Specification",
+      "value": "S/3: D20xH18cm, D25xH22cm, D30xH26cm"
+    },
+    {
+      "key": "Materials",
+      "value": "100% Date Palm Leaf"
+    },
+    {
+      "key": "MOQ",
+      "value": "200 Sets"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Set of 3 Progressive Sizes",
+    "Thick Braided Border Rim",
+    "Indoor Plant Pot Cover",
+    "Biodegradable & Non-Toxic"
+  ]
+},
+  {
+  "id": "GFC-DLB-007",
+  "slug": "date-leaf-oval-bread-fruit-basket-gfc-dlb-007",
+  "code": "GFC-DLB-007",
+  "name": "Date Leaf Oval Tabletop Bread & Fruit Basket",
+  "category": "date-leaf",
+  "categoryName": "Date Leaf",
+  "categorySlug": "date-leaf",
+  "subCategory": "baskets",
+  "image": "/products/gfc_dlb_007.jpg",
+  "galleryImages": [
+    "/products/gfc_dlb_007.jpg"
+  ],
+  "description": "Shallow oval dining and kitchen gathering basket hand-braided from sun-dried date palm fronds with rolled smooth edge border.",
+  "longDescription": {
+    "overview": "A tabletop essential for artisan bread loaves, fresh fruits, or countertop mail display made of natural date palm foliage.",
+    "craftsmanship": "Fine herringbone plaiting pattern around an oval wooden/bamboo base rim.",
+    "exportDetails": "Interleaved with tissue paper in master cartons of 20 pieces.",
+    "careInstructions": "Shake out food crumbs and wipe dry."
+  },
+  "unit": "S/1 PC",
+  "cbmPerCarton": 0.038,
+  "setPerCarton": 20,
+  "nwPerCtn": 4.6,
+  "gwPerCtn": 5.8,
+  "material": "100% Food-Safe Date Palm Leaf",
+  "color": "Natural Light Wheat",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-DLB-007"
+    },
+    {
+      "key": "Item Name",
+      "value": "Date Leaf Oval Tabletop Bread & Fruit Basket"
+    },
+    {
+      "key": "Specification",
+      "value": "L 36cm x W 26cm x H 10cm"
+    },
+    {
+      "key": "Materials",
+      "value": "100% Natural Date Palm Fronds"
+    },
+    {
+      "key": "MOQ",
+      "value": "300 Pieces"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Shallow Oval Tabletop Profile",
+    "Natural Food-Safe Material",
+    "Rolled Smooth Edge Rim",
+    "Artisan Herringbone Weave"
+  ]
+},
+  {
+  "id": "GFC-DLB-008",
+  "slug": "date-leaf-scalloped-decorative-bowl-basket-gfc-dlb-008",
+  "code": "GFC-DLB-008",
+  "name": "Date Leaf Scalloped Decorative Bowl Basket",
+  "category": "date-leaf",
+  "categoryName": "Date Leaf",
+  "categorySlug": "date-leaf",
+  "subCategory": "baskets",
+  "image": "/products/gfc_dlb_008.jpg",
+  "galleryImages": [
+    "/products/gfc_dlb_008.jpg"
+  ],
+  "description": "Eye-catching round centerpiece decorative bowl basket with undulating scalloped rim and radial spiral base weave crafted from date palm leaves.",
+  "longDescription": {
+    "overview": "Showcasing the sculptural beauty of Bangladeshi date leaf craftsmanship with a distinctive petal-scalloped edge rim.",
+    "craftsmanship": "Sunburst spiral coiling method radiating from center to sculpted flower-form scalloped walls.",
+    "exportDetails": "Nested inside cartons with individual paper wrapping.",
+    "careInstructions": "Dust with feather duster or soft brush."
+  },
+  "unit": "S/1 PC",
+  "cbmPerCarton": 0.042,
+  "setPerCarton": 16,
+  "nwPerCtn": 3.8,
+  "gwPerCtn": 5.1,
+  "material": "100% Date Palm Leaf",
+  "color": "Natural Cream / Pale Amber",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-DLB-008"
+    },
+    {
+      "key": "Item Name",
+      "value": "Date Leaf Scalloped Decorative Bowl Basket"
+    },
+    {
+      "key": "Specification",
+      "value": "Dia 32cm x H 15cm"
+    },
+    {
+      "key": "Materials",
+      "value": "100% Date Palm Leaf"
+    },
+    {
+      "key": "MOQ",
+      "value": "250 Pieces"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Distinctive Scalloped Petal Rim",
+    "Intricate Radial Sunburst Weave",
+    "Decorative Coffee Table Centerpiece",
+    "100% Artisan Handmade"
+  ]
+},
+  {
+  "id": "GFC-DLB-009",
+  "slug": "date-leaf-hanging-wall-pocket-basket-gfc-dlb-009",
+  "code": "GFC-DLB-009",
+  "name": "Date Leaf Hanging Wall Pocket Basket",
+  "category": "date-leaf",
+  "categoryName": "Date Leaf",
+  "categorySlug": "date-leaf",
+  "subCategory": "baskets",
+  "image": "/products/gfc_dlb_009.jpg",
+  "galleryImages": [
+    "/products/gfc_dlb_009.jpg"
+  ],
+  "description": "Handcrafted teardrop date palm leaf wall hanging basket with reinforced hanging loop for vertical dried botanicals or mail organization.",
+  "longDescription": {
+    "overview": "Brings vertical texture to living spaces, entryways, and covered porches. Flat back allows flush wall hanging.",
+    "craftsmanship": "Tear-drop sculpted braid with reinforced integrated loop handle for wall pegs or hooks.",
+    "exportDetails": "Packed flat in cartons of 24 pieces.",
+    "careInstructions": "Indoor decorative use only; keep dry."
+  },
+  "unit": "S/1 PC",
+  "cbmPerCarton": 0.045,
+  "setPerCarton": 24,
+  "nwPerCtn": 4,
+  "gwPerCtn": 5.4,
+  "material": "100% Date Palm Leaf",
+  "color": "Natural Sandy Beige",
+  "specifications": [
+    {
+      "key": "Item Code",
+      "value": "GFC-DLB-009"
+    },
+    {
+      "key": "Item Name",
+      "value": "Date Leaf Hanging Wall Pocket Basket"
+    },
+    {
+      "key": "Specification",
+      "value": "W 26cm x H 36cm x D 14cm"
+    },
+    {
+      "key": "Materials",
+      "value": "100% Date Palm Leaf"
+    },
+    {
+      "key": "MOQ",
+      "value": "300 Pieces"
+    },
+    {
+      "key": "Country of Origin",
+      "value": "Bangladesh"
+    }
+  ],
+  "features": [
+    "Teardrop Wall Hanging Silhouette",
+    "Reinforced Hanging Loop Handle",
+    "Ideal for Dried Botanicals & Mail",
+    "Sustainably Harvested Date Palm"
   ]
 },
   {
