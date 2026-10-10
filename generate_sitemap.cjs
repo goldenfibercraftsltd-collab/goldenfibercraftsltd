@@ -67,6 +67,12 @@ const corePages = [
     { loc: 'https://goldenfibercraftsltd.com/images/blog/custom-jute-poufs-wholesale-display.jpg', title: 'Custom Jute Poufs Wholesale Showroom Display' },
     { loc: 'https://goldenfibercraftsltd.com/images/blog/jute-pouf-quality-control-moisture-inspection.jpg', title: 'Jute Pouf Quality Control and Moisture Meter Inspection' }
   ]},
+  { url: '/jute-lampshade-manufacturer-uk-netherlands', priority: '0.95', changefreq: 'weekly', images: [
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-jute-lampshade-manufacturer-uk-netherlands.jpg', title: 'Custom Jute Lampshade Manufacturer Wholesale UK & Netherlands' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/bangladeshi-artisan-weaving-jute-lampshade.jpg', title: 'Bangladeshi Artisan Weaving Jute Lampshade Wireframe' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/custom-jute-lampshades-wholesale-display.jpg', title: 'Custom Jute Lampshades Wholesale Export Display' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/jute-lampshade-quality-control-moisture-inspection.jpg', title: 'Jute Lampshade Quality Control Moisture Testing' }
+  ]},
   { url: '/about', priority: '0.8', changefreq: 'weekly' },
   { url: '/materials', priority: '0.8', changefreq: 'weekly' },
   { url: '/infrastructure', priority: '0.8', changefreq: 'weekly' },
