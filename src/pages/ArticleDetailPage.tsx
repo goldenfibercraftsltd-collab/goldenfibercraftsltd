@@ -11,6 +11,7 @@ import {
 import { KaisaGrassBasketEditorial } from '../components/articles/KaisaGrassBasketEditorial';
 import { JutePoufEditorial } from '../components/articles/JutePoufEditorial';
 import { JuteLampshadeEditorial } from '../components/articles/JuteLampshadeEditorial';
+import { JuteMacrameEditorial } from '../components/articles/JuteMacrameEditorial';
 
 interface ArticleDetailPageProps {
   onOpenQuoteModal: (productCodeOrData?: string | any) => void;
@@ -24,13 +25,14 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
   const currentSlug = slug || articleSlug || (pathSlug && pathSlug !== 'blog' ? pathSlug : '') || 'jute-bag-manufacturer-bangladesh';
   const article = getArticleBySlug(currentSlug) || ARTICLES_DATA[0];
 
-  const isLampshadeArticle = article.slug.includes('lampshade') || article.category_slug === 'lampshades' || article.id.includes('lampshade');
-  const isKaisaArticle = !isLampshadeArticle && (article.slug.includes('kaisa') || article.category_slug === 'kans-grass' || article.id.includes('kaisa'));
-  const isPoufArticle = !isLampshadeArticle && !isKaisaArticle && (article.slug.includes('pouf') || article.category_slug === 'poufs' || article.id.includes('pouf'));
-  const isPlanterArticle = !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && (article.slug.includes('planter') || article.category_slug === 'planters' || (article.slug.includes('netherlands') && !article.slug.includes('kaisa')));
-  const isPlacematArticle = !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && !isPlanterArticle && (article.slug.includes('placemat') || article.category_slug === 'placemats');
-  const isBagArticle = !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && !isPlanterArticle && !isPlacematArticle && (article.slug.includes('bag') || article.category_slug === 'bags');
-  const isMatArticle = !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && !isPlanterArticle && !isPlacematArticle && (article.slug.includes('floor-mat') || article.category_slug === 'floor-mats' || (article.slug.includes('mat') && !article.slug.includes('placemat')) || article.id.includes('floor-mat'));
+  const isMacrameArticle = article.slug.includes('macrame') || article.category_slug === 'macrames' || article.id.includes('macrame');
+  const isLampshadeArticle = !isMacrameArticle && (article.slug.includes('lampshade') || article.category_slug === 'lampshades' || article.id.includes('lampshade'));
+  const isKaisaArticle = !isMacrameArticle && !isLampshadeArticle && (article.slug.includes('kaisa') || article.category_slug === 'kans-grass' || article.id.includes('kaisa'));
+  const isPoufArticle = !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && (article.slug.includes('pouf') || article.category_slug === 'poufs' || article.id.includes('pouf'));
+  const isPlanterArticle = !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && (article.slug.includes('planter') || article.category_slug === 'planters' || (article.slug.includes('netherlands') && !article.slug.includes('kaisa')));
+  const isPlacematArticle = !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && !isPlanterArticle && (article.slug.includes('placemat') || article.category_slug === 'placemats');
+  const isBagArticle = !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && !isPlanterArticle && !isPlacematArticle && (article.slug.includes('bag') || article.category_slug === 'bags');
+  const isMatArticle = !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && !isPlanterArticle && !isPlacematArticle && (article.slug.includes('floor-mat') || article.category_slug === 'floor-mats' || (article.slug.includes('mat') && !article.slug.includes('placemat')) || article.id.includes('floor-mat'));
 
   usePageTitle(
     article.title,
@@ -258,13 +260,13 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                   Direct Factory Desk
                 </span>
                 <h4 className="font-serif font-bold text-base text-white">
-                  {isLampshadeArticle ? 'Need Custom Jute Lampshade Samples?' : isKaisaArticle ? 'Need Custom Kaisa Grass Basket Samples?' : isPoufArticle ? 'Need Custom Jute Pouf & Ottoman Samples?' : isPlanterArticle ? 'Need Custom Seagrass Planter Samples?' : isBagArticle ? 'Need Custom Jute Bag Samples?' : isMatArticle ? 'Need Custom Jute Floor Mat Samples?' : isPlacematArticle ? 'Need Custom Jute Placemat Samples?' : 'Need Custom Jute Basket Samples?'}
+                  {isMacrameArticle ? 'Need Custom Jute Macrame Samples?' : isLampshadeArticle ? 'Need Custom Jute Lampshade Samples?' : isKaisaArticle ? 'Need Custom Kaisa Grass Basket Samples?' : isPoufArticle ? 'Need Custom Jute Pouf & Ottoman Samples?' : isPlanterArticle ? 'Need Custom Seagrass Planter Samples?' : isBagArticle ? 'Need Custom Jute Bag Samples?' : isMatArticle ? 'Need Custom Jute Floor Mat Samples?' : isPlacematArticle ? 'Need Custom Jute Placemat Samples?' : 'Need Custom Jute Basket Samples?'}
                 </h4>
                 <p className="mt-2 text-xs text-amber-100/90 leading-relaxed">
                   We supply OEM sample prototypes with custom screen printing, PMS color dyeing, and direct FOB Chattogram container quotes in 24 hours.
                 </p>
                 <button
-                  onClick={() => onOpenQuoteModal({ productCode: isLampshadeArticle ? 'OEM-JUTE-LAMPSHADES' : isKaisaArticle ? 'OEM-KAISA-BASKETS' : isPoufArticle ? 'OEM-JUTE-POUFS' : isPlanterArticle ? 'OEM-SEAGRASS-PLANTERS' : isBagArticle ? 'OEM-JUTE-BAGS' : isMatArticle ? 'OEM-JUTE-FLOOR-MATS' : isPlacematArticle ? 'OEM-JUTE-PLACEMATS' : 'OEM-JUTE-BASKETS' })}
+                  onClick={() => onOpenQuoteModal({ productCode: isMacrameArticle ? 'OEM-JUTE-MACRAME' : isLampshadeArticle ? 'OEM-JUTE-LAMPSHADES' : isKaisaArticle ? 'OEM-KAISA-BASKETS' : isPoufArticle ? 'OEM-JUTE-POUFS' : isPlanterArticle ? 'OEM-SEAGRASS-PLANTERS' : isBagArticle ? 'OEM-JUTE-BAGS' : isMatArticle ? 'OEM-JUTE-FLOOR-MATS' : isPlacematArticle ? 'OEM-JUTE-PLACEMATS' : 'OEM-JUTE-BASKETS' })}
                   className="mt-4 w-full py-2.5 bg-white hover:bg-stone-100 text-amber-950 rounded-lg text-xs font-bold transition shadow-xs flex items-center justify-center gap-1.5"
                 >
                   <Mail className="w-3.5 h-3.5" />
@@ -284,7 +286,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                 </div>
                 <div className="flex justify-between text-stone-600">
                   <span>Standard MOQ:</span>
-                  <span className="font-medium text-stone-900">{isLampshadeArticle ? '200 Pieces (Flexible)' : isKaisaArticle ? '200 Sets (Flexible)' : isPoufArticle ? '100 Pcs (Filled) / 200 (Covers)' : isPlanterArticle ? '200 Sets (Flexible)' : isBagArticle ? '500 Pieces (Flexible)' : isMatArticle ? '300 Pieces (Flexible)' : isPlacematArticle ? '500 Pieces (125 Sets of 4)' : '200 Sets (Flexible)'}</span>
+                  <span className="font-medium text-stone-900">{isMacrameArticle ? '250 Pieces (Flexible)' : isLampshadeArticle ? '200 Pieces (Flexible)' : isKaisaArticle ? '200 Sets (Flexible)' : isPoufArticle ? '100 Pcs (Filled) / 200 (Covers)' : isPlanterArticle ? '200 Sets (Flexible)' : isBagArticle ? '500 Pieces (Flexible)' : isMatArticle ? '300 Pieces (Flexible)' : isPlacematArticle ? '500 Pieces (125 Sets of 4)' : '200 Sets (Flexible)'}</span>
                 </div>
                 <div className="flex justify-between text-stone-600">
                   <span>Moisture Tolerance:</span>
@@ -310,9 +312,16 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
           <main className="lg:col-span-8 order-1 lg:order-2 space-y-12">
 
             {/* ========================================================================= */}
-            {/* JUTE LAMPSHADES EDITORIAL (WHEN isLampshadeArticle IS TRUE) */}
+            {/* JUTE MACRAME / LAMPSHADES / KAISA / POUF EDITORIAL BRANCHING */}
             {/* ========================================================================= */}
-            {isLampshadeArticle ? (
+            {isMacrameArticle ? (
+              <JuteMacrameEditorial
+                article={article}
+                activeFaqIndex={activeFaqIndex}
+                setActiveFaqIndex={setActiveFaqIndex}
+                onOpenQuoteModal={onOpenQuoteModal}
+              />
+            ) : isLampshadeArticle ? (
               <JuteLampshadeEditorial
                 article={article}
                 activeFaqIndex={activeFaqIndex}

@@ -73,6 +73,12 @@ const corePages = [
     { loc: 'https://goldenfibercraftsltd.com/images/blog/custom-jute-lampshades-wholesale-display.jpg', title: 'Custom Jute Lampshades Wholesale Export Display' },
     { loc: 'https://goldenfibercraftsltd.com/images/blog/jute-lampshade-quality-control-moisture-inspection.jpg', title: 'Jute Lampshade Quality Control Moisture Testing' }
   ]},
+  { url: '/jute-macrame-manufacturer-bangladesh', priority: '0.95', changefreq: 'weekly', images: [
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-jute-macrame-manufacturer-bangladesh.jpg', title: 'Custom Jute Macrame Manufacturer in Bangladesh Wholesale' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/bangladeshi-artisan-knotting-jute-macrame.jpg', title: 'Bangladeshi Artisan Hand Knotting Jute Macrame Wall Hanging' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/custom-jute-macrames-wholesale-display.jpg', title: 'Custom Jute Macrame Wall Hangings and Plant Hangers Wholesale Display' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/jute-macrame-quality-control-moisture-inspection.jpg', title: 'Jute Macrame Quality Control and Moisture Meter Inspection' }
+  ]},
   { url: '/about', priority: '0.8', changefreq: 'weekly' },
   { url: '/materials', priority: '0.8', changefreq: 'weekly' },
   { url: '/infrastructure', priority: '0.8', changefreq: 'weekly' },
