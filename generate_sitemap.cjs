@@ -79,6 +79,13 @@ const corePages = [
     { loc: 'https://goldenfibercraftsltd.com/images/blog/custom-jute-macrames-wholesale-display.jpg', title: 'Custom Jute Macrame Wall Hangings and Plant Hangers Wholesale Display' },
     { loc: 'https://goldenfibercraftsltd.com/images/blog/jute-macrame-quality-control-moisture-inspection.jpg', title: 'Jute Macrame Quality Control and Moisture Meter Inspection' }
   ]},
+  { url: '/date-palm-leaf-placemat-manufacturer-bangladesh', priority: '0.95', changefreq: 'weekly', images: [
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-date-palm-leaf-placemat-manufacturer-bangladesh.jpg', title: 'Custom Date Palm Leaf Placemats Manufacturer in Bangladesh Wholesale' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/bangladeshi-artisan-weaving-date-palm-leaf-placemat.jpg', title: 'Bangladeshi Artisan Hand Weaving Date Palm Leaf Placemat' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/custom-date-palm-leaf-placemats-wholesale-display.jpg', title: 'Custom Date Palm Leaf Placemats and Chargers Wholesale Display' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/raw-date-palm-leaf-fronds-sun-curing-bangladesh.jpg', title: 'Raw Wild Date Palm Leaf Fronds Sun Curing in Bangladesh' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/date-palm-leaf-placemat-quality-control-moisture-inspection.jpg', title: 'Date Palm Leaf Placemat Quality Control and Moisture Meter Inspection' }
+  ]},
   { url: '/about', priority: '0.8', changefreq: 'weekly' },
   { url: '/materials', priority: '0.8', changefreq: 'weekly' },
   { url: '/infrastructure', priority: '0.8', changefreq: 'weekly' },

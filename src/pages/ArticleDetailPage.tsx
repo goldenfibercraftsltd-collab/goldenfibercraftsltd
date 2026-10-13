@@ -12,6 +12,7 @@ import { KaisaGrassBasketEditorial } from '../components/articles/KaisaGrassBask
 import { JutePoufEditorial } from '../components/articles/JutePoufEditorial';
 import { JuteLampshadeEditorial } from '../components/articles/JuteLampshadeEditorial';
 import { JuteMacrameEditorial } from '../components/articles/JuteMacrameEditorial';
+import { DatePalmLeafPlacematEditorial } from '../components/articles/DatePalmLeafPlacematEditorial';
 
 interface ArticleDetailPageProps {
   onOpenQuoteModal: (productCodeOrData?: string | any) => void;
@@ -25,14 +26,15 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
   const currentSlug = slug || articleSlug || (pathSlug && pathSlug !== 'blog' ? pathSlug : '') || 'jute-bag-manufacturer-bangladesh';
   const article = getArticleBySlug(currentSlug) || ARTICLES_DATA[0];
 
-  const isMacrameArticle = article.slug.includes('macrame') || article.category_slug === 'macrames' || article.id.includes('macrame');
-  const isLampshadeArticle = !isMacrameArticle && (article.slug.includes('lampshade') || article.category_slug === 'lampshades' || article.id.includes('lampshade'));
-  const isKaisaArticle = !isMacrameArticle && !isLampshadeArticle && (article.slug.includes('kaisa') || article.category_slug === 'kans-grass' || article.id.includes('kaisa'));
-  const isPoufArticle = !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && (article.slug.includes('pouf') || article.category_slug === 'poufs' || article.id.includes('pouf'));
-  const isPlanterArticle = !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && (article.slug.includes('planter') || article.category_slug === 'planters' || (article.slug.includes('netherlands') && !article.slug.includes('kaisa')));
-  const isPlacematArticle = !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && !isPlanterArticle && (article.slug.includes('placemat') || article.category_slug === 'placemats');
-  const isBagArticle = !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && !isPlanterArticle && !isPlacematArticle && (article.slug.includes('bag') || article.category_slug === 'bags');
-  const isMatArticle = !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && !isPlanterArticle && !isPlacematArticle && (article.slug.includes('floor-mat') || article.category_slug === 'floor-mats' || (article.slug.includes('mat') && !article.slug.includes('placemat')) || article.id.includes('floor-mat'));
+  const isDateLeafArticle = article.slug.includes('date-palm-leaf') || article.category_slug === 'date-leaf' || article.id.includes('date-palm-leaf');
+  const isMacrameArticle = !isDateLeafArticle && (article.slug.includes('macrame') || article.category_slug === 'macrames' || article.id.includes('macrame'));
+  const isLampshadeArticle = !isDateLeafArticle && !isMacrameArticle && (article.slug.includes('lampshade') || article.category_slug === 'lampshades' || article.id.includes('lampshade'));
+  const isKaisaArticle = !isDateLeafArticle && !isMacrameArticle && !isLampshadeArticle && (article.slug.includes('kaisa') || article.category_slug === 'kans-grass' || article.id.includes('kaisa'));
+  const isPoufArticle = !isDateLeafArticle && !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && (article.slug.includes('pouf') || article.category_slug === 'poufs' || article.id.includes('pouf'));
+  const isPlanterArticle = !isDateLeafArticle && !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && (article.slug.includes('planter') || article.category_slug === 'planters' || (article.slug.includes('netherlands') && !article.slug.includes('kaisa')));
+  const isPlacematArticle = !isDateLeafArticle && !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && !isPlanterArticle && (article.slug.includes('placemat') || article.category_slug === 'placemats');
+  const isBagArticle = !isDateLeafArticle && !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && !isPlanterArticle && !isPlacematArticle && (article.slug.includes('bag') || article.category_slug === 'bags');
+  const isMatArticle = !isDateLeafArticle && !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && !isPlanterArticle && !isPlacematArticle && (article.slug.includes('floor-mat') || article.category_slug === 'floor-mats' || (article.slug.includes('mat') && !article.slug.includes('placemat')) || article.id.includes('floor-mat'));
 
   usePageTitle(
     article.title,
@@ -312,9 +314,16 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
           <main className="lg:col-span-8 order-1 lg:order-2 space-y-12">
 
             {/* ========================================================================= */}
-            {/* JUTE MACRAME / LAMPSHADES / KAISA / POUF EDITORIAL BRANCHING */}
+            {/* DATE PALM LEAF / JUTE MACRAME / LAMPSHADES / KAISA / POUF EDITORIAL BRANCHING */}
             {/* ========================================================================= */}
-            {isMacrameArticle ? (
+            {isDateLeafArticle ? (
+              <DatePalmLeafPlacematEditorial
+                article={article}
+                activeFaqIndex={activeFaqIndex}
+                setActiveFaqIndex={setActiveFaqIndex}
+                onOpenQuoteModal={onOpenQuoteModal}
+              />
+            ) : isMacrameArticle ? (
               <JuteMacrameEditorial
                 article={article}
                 activeFaqIndex={activeFaqIndex}
