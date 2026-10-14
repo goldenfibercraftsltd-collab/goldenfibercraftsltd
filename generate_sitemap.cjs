@@ -86,6 +86,12 @@ const corePages = [
     { loc: 'https://goldenfibercraftsltd.com/images/blog/raw-date-palm-leaf-fronds-sun-curing-bangladesh.jpg', title: 'Raw Wild Date Palm Leaf Fronds Sun Curing in Bangladesh' },
     { loc: 'https://goldenfibercraftsltd.com/images/blog/date-palm-leaf-placemat-quality-control-moisture-inspection.jpg', title: 'Date Palm Leaf Placemat Quality Control and Moisture Meter Inspection' }
   ]},
+  { url: '/seagrass-basket-manufacturer-bangladesh', priority: '0.95', changefreq: 'weekly', images: [
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-seagrass-basket-manufacturer-bangladesh.jpg', title: 'Handcrafted Seagrass Basket Manufacturer Wholesale Storage Baskets Bangladesh' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/bangladeshi-artisan-weaving-seagrass-basket.jpg', title: 'Bangladeshi Artisan Hand Weaving Seagrass Storage Basket' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/custom-seagrass-storage-baskets-wholesale-display.jpg', title: 'Custom Seagrass Storage Baskets Wholesale Export Showroom Display' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/seagrass-basket-quality-control-moisture-inspection.jpg', title: 'Seagrass Basket Quality Control and Moisture Meter Inspection' }
+  ]},
   { url: '/about', priority: '0.8', changefreq: 'weekly' },
   { url: '/materials', priority: '0.8', changefreq: 'weekly' },
   { url: '/infrastructure', priority: '0.8', changefreq: 'weekly' },
