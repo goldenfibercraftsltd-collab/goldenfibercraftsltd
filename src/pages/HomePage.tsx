@@ -17,7 +17,11 @@ export const HomePage: React.FC<HomePageProps> = ({
   return (
     <div className="space-y-12 pb-16">
       {/* Primary SEO Heading for Google Crawlers & Accessibility */}
-      <h1 className="sr-only">Golden Fiber Crafts Ltd - Jute &amp; Natural Fiber Handicraft Manufacturer &amp; Exporter</h1>
+      <div className="sr-only">
+        <h1>Golden Fiber Crafts Ltd</h1>
+        <h2>Jute &amp; Natural Fiber Handicraft Manufacturer &amp; Exporter</h2>
+        <p>Golden Fiber Crafts Ltd. (GFCL) is a Bangladesh-based manufacturer and exporter of natural, biodegradable, and sustainably crafted lifestyle products, specializing in jute, seagrass, hogla, water hyacinth, and other natural fibers. We develop beautiful, functional, and customizable products for international B2B buyers and private-label collections.</p>
+      </div>
 
       {/* 1. Header Auto Banner Carousel */}
       <HeroBannerCarousel onOpenQuoteModal={() => onOpenQuoteModal()} />
