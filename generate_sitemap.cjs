@@ -190,16 +190,16 @@ for (const slug of categorySlugs) {
 for (const p of allProducts) {
   const code = p.code || p.id || '';
   const imgUrl = p.image.startsWith('http') ? p.image : `${BASE_URL}${p.image}`;
-  const imgTitle = `${escapeXml(p.name)} (${escapeXml(code)}) - Golden Fiber Crafts Ltd.`;
-  const imgCaption = `${escapeXml(p.name)} (${escapeXml(code)}) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh`;
+  const imgTitle = escapeXml(`${p.name} (${code}) - Golden Fiber Crafts Ltd.`);
+  const imgCaption = escapeXml(`${p.name} (${code}) - Wholesale Handcrafted Eco-Friendly Jute & Natural Fiber Handicrafts Exporter Bangladesh`);
 
   xml += `  <url>\n`;
-  xml += `    <loc>${BASE_URL}/products/${p.slug}</loc>\n`;
+  xml += `    <loc>${BASE_URL}/products/${escapeXml(p.slug)}</loc>\n`;
   xml += `    <lastmod>${TODAY}</lastmod>\n`;
   xml += `    <changefreq>weekly</changefreq>\n`;
   xml += `    <priority>0.80</priority>\n`;
   xml += `    <image:image>\n`;
-  xml += `      <image:loc>${imgUrl}</image:loc>\n`;
+  xml += `      <image:loc>${escapeXml(imgUrl)}</image:loc>\n`;
   xml += `      <image:title>${imgTitle}</image:title>\n`;
   xml += `      <image:caption>${imgCaption}</image:caption>\n`;
   xml += `    </image:image>\n`;
