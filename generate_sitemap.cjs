@@ -92,6 +92,12 @@ const corePages = [
     { loc: 'https://goldenfibercraftsltd.com/images/blog/custom-seagrass-storage-baskets-wholesale-display.jpg', title: 'Custom Seagrass Storage Baskets Wholesale Export Showroom Display' },
     { loc: 'https://goldenfibercraftsltd.com/images/blog/seagrass-basket-quality-control-moisture-inspection.jpg', title: 'Seagrass Basket Quality Control and Moisture Meter Inspection' }
   ]},
+  { url: '/water-hyacinth-basket-manufacturer-bangladesh', priority: '0.95', changefreq: 'weekly', images: [
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-water-hyacinth-basket-manufacturer-bangladesh.jpg', title: 'Handcrafted Water Hyacinth Basket Manufacturer Wholesale Storage Baskets Bangladesh' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/bangladeshi-artisan-weaving-water-hyacinth-basket.jpg', title: 'Bangladeshi Artisan Hand Weaving Water Hyacinth Storage Basket on Iron Frame' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/water-hyacinth-fiber-harvest-drying-bangladesh.jpg', title: 'Raw Water Hyacinth Stems Sun Curing on Bamboo Racks Along Riverbank Bangladesh' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/water-hyacinth-basket-quality-control-moisture-inspection.jpg', title: 'Water Hyacinth Basket Quality Control and Moisture Meter Inspection' }
+  ]},
   { url: '/about', priority: '0.8', changefreq: 'weekly' },
   { url: '/materials', priority: '0.8', changefreq: 'weekly' },
   { url: '/infrastructure', priority: '0.8', changefreq: 'weekly' },

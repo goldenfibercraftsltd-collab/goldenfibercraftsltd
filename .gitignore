@@ -25,3 +25,7 @@ dist-ssr
 
 PortableGit.exe
 _tmp_header.txt
+ 
+*credentials*.json
+gsc-*.json
+lively-listener-*.json
