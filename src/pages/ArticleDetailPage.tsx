@@ -14,6 +14,7 @@ import { JuteLampshadeEditorial } from '../components/articles/JuteLampshadeEdit
 import { JuteMacrameEditorial } from '../components/articles/JuteMacrameEditorial';
 import { DatePalmLeafPlacematEditorial } from '../components/articles/DatePalmLeafPlacematEditorial';
 import { SeagrassBasketEditorial } from '../components/articles/SeagrassBasketEditorial';
+import { SeagrassPlacematEditorial } from '../components/articles/SeagrassPlacematEditorial';
 import { WaterHyacinthBasketEditorial } from '../components/articles/WaterHyacinthBasketEditorial';
 
 interface ArticleDetailPageProps {
@@ -29,16 +30,17 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
   const article = getArticleBySlug(currentSlug) || ARTICLES_DATA[0];
 
   const isDateLeafArticle = article.slug.includes('date-palm-leaf') || article.category_slug === 'date-leaf' || article.id.includes('date-palm-leaf');
-  const isSeagrassBasketArticle = !isDateLeafArticle && (article.slug.includes('seagrass-basket') || article.category_slug === 'seagrass-baskets' || article.id.includes('seagrass-basket'));
-  const isHyacinthArticle = !isDateLeafArticle && !isSeagrassBasketArticle && (article.slug.includes('water-hyacinth') || article.category_slug === 'water-hyacinth' || article.id.includes('water-hyacinth'));
-  const isMacrameArticle = !isDateLeafArticle && !isSeagrassBasketArticle && !isHyacinthArticle && (article.slug.includes('macrame') || article.category_slug === 'macrames' || article.id.includes('macrame'));
-  const isLampshadeArticle = !isDateLeafArticle && !isSeagrassBasketArticle && !isHyacinthArticle && !isMacrameArticle && (article.slug.includes('lampshade') || article.category_slug === 'lampshades' || article.id.includes('lampshade'));
-  const isKaisaArticle = !isDateLeafArticle && !isSeagrassBasketArticle && !isHyacinthArticle && !isMacrameArticle && !isLampshadeArticle && (article.slug.includes('kaisa') || article.category_slug === 'kans-grass' || article.id.includes('kaisa'));
-  const isPoufArticle = !isDateLeafArticle && !isSeagrassBasketArticle && !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && (article.slug.includes('pouf') || article.category_slug === 'poufs' || article.id.includes('pouf'));
-  const isPlanterArticle = !isDateLeafArticle && !isSeagrassBasketArticle && !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && (article.slug.includes('planter') || article.category_slug === 'planters' || (article.slug.includes('netherlands') && !article.slug.includes('kaisa')));
-  const isPlacematArticle = !isDateLeafArticle && !isSeagrassBasketArticle && !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && !isPlanterArticle && (article.slug.includes('placemat') || article.category_slug === 'placemats');
-  const isBagArticle = !isDateLeafArticle && !isSeagrassBasketArticle && !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && !isPlanterArticle && !isPlacematArticle && (article.slug.includes('bag') || article.category_slug === 'bags');
-  const isMatArticle = !isDateLeafArticle && !isSeagrassBasketArticle && !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && !isPlanterArticle && !isPlacematArticle && (article.slug.includes('floor-mat') || article.category_slug === 'floor-mats' || (article.slug.includes('mat') && !article.slug.includes('placemat')) || article.id.includes('floor-mat'));
+  const isSeagrassPlacematArticle = !isDateLeafArticle && (article.slug.includes('seagrass-placemat') || article.category_slug === 'seagrass-placemats' || article.id.includes('seagrass-placemat'));
+  const isSeagrassBasketArticle = !isDateLeafArticle && !isSeagrassPlacematArticle && (article.slug.includes('seagrass-basket') || article.category_slug === 'seagrass-baskets' || article.id.includes('seagrass-basket'));
+  const isHyacinthArticle = !isDateLeafArticle && !isSeagrassPlacematArticle && !isSeagrassBasketArticle && (article.slug.includes('water-hyacinth') || article.category_slug === 'water-hyacinth' || article.id.includes('water-hyacinth'));
+  const isMacrameArticle = !isDateLeafArticle && !isSeagrassPlacematArticle && !isSeagrassBasketArticle && !isHyacinthArticle && (article.slug.includes('macrame') || article.category_slug === 'macrames' || article.id.includes('macrame'));
+  const isLampshadeArticle = !isDateLeafArticle && !isSeagrassPlacematArticle && !isSeagrassBasketArticle && !isHyacinthArticle && !isMacrameArticle && (article.slug.includes('lampshade') || article.category_slug === 'lampshades' || article.id.includes('lampshade'));
+  const isKaisaArticle = !isDateLeafArticle && !isSeagrassPlacematArticle && !isSeagrassBasketArticle && !isHyacinthArticle && !isMacrameArticle && !isLampshadeArticle && (article.slug.includes('kaisa') || article.category_slug === 'kans-grass' || article.id.includes('kaisa'));
+  const isPoufArticle = !isDateLeafArticle && !isSeagrassPlacematArticle && !isSeagrassBasketArticle && !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && (article.slug.includes('pouf') || article.category_slug === 'poufs' || article.id.includes('pouf'));
+  const isPlanterArticle = !isDateLeafArticle && !isSeagrassPlacematArticle && !isSeagrassBasketArticle && !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && (article.slug.includes('planter') || article.category_slug === 'planters' || (article.slug.includes('netherlands') && !article.slug.includes('kaisa')));
+  const isPlacematArticle = !isDateLeafArticle && !isSeagrassPlacematArticle && !isSeagrassBasketArticle && !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && !isPlanterArticle && (article.slug.includes('placemat') || article.category_slug === 'placemats');
+  const isBagArticle = !isDateLeafArticle && !isSeagrassPlacematArticle && !isSeagrassBasketArticle && !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && !isPlanterArticle && !isPlacematArticle && (article.slug.includes('bag') || article.category_slug === 'bags');
+  const isMatArticle = !isDateLeafArticle && !isSeagrassPlacematArticle && !isSeagrassBasketArticle && !isMacrameArticle && !isLampshadeArticle && !isKaisaArticle && !isPoufArticle && !isPlanterArticle && !isPlacematArticle && (article.slug.includes('floor-mat') || article.category_slug === 'floor-mats' || (article.slug.includes('mat') && !article.slug.includes('placemat')) || article.id.includes('floor-mat'));
 
   usePageTitle(
     article.title,
@@ -200,7 +202,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
 
             <div className="flex items-center gap-2">
               <button
-                onClick={() => onOpenQuoteModal({ productCode: isKaisaArticle ? 'KAISA-BASKET-ROTTERDAM-RFQ' : isPoufArticle ? 'BJP-01-POUF-OEM' : isPlanterArticle ? 'SEAGRASS-PLANTER-OEM' : isBagArticle ? 'JUTE-BAG-OEM' : isMatArticle ? 'JUTE-FLOOR-MAT-OEM' : isPlacematArticle ? 'JUTE-PLACEMAT-OEM' : 'JUTE-BASKET-OEM' })}
+                onClick={() => onOpenQuoteModal({ productCode: isSeagrassPlacematArticle ? 'GFC-SPM-002-OEM' : isKaisaArticle ? 'KAISA-BASKET-ROTTERDAM-RFQ' : isPoufArticle ? 'BJP-01-POUF-OEM' : isPlanterArticle ? 'SEAGRASS-PLANTER-OEM' : isBagArticle ? 'JUTE-BAG-OEM' : isMatArticle ? 'JUTE-FLOOR-MAT-OEM' : isPlacematArticle ? 'JUTE-PLACEMAT-OEM' : 'JUTE-BASKET-OEM' })}
                 className="px-4 py-2 bg-amber-600 hover:bg-amber-500 text-white rounded-lg text-xs font-semibold transition shadow-xs flex items-center gap-1.5"
               >
                 <Mail className="w-3.5 h-3.5" />
@@ -266,13 +268,13 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                   Direct Factory Desk
                 </span>
                 <h4 className="font-serif font-bold text-base text-white">
-                  {isHyacinthArticle ? 'Need Custom Water Hyacinth Basket Samples?' : isMacrameArticle ? 'Need Custom Jute Macrame Samples?' : isLampshadeArticle ? 'Need Custom Jute Lampshade Samples?' : isKaisaArticle ? 'Need Custom Kaisa Grass Basket Samples?' : isPoufArticle ? 'Need Custom Jute Pouf & Ottoman Samples?' : isPlanterArticle ? 'Need Custom Seagrass Planter Samples?' : isBagArticle ? 'Need Custom Jute Bag Samples?' : isMatArticle ? 'Need Custom Jute Floor Mat Samples?' : isPlacematArticle ? 'Need Custom Jute Placemat Samples?' : 'Need Custom Jute Basket Samples?'}
+                  {isSeagrassPlacematArticle ? 'Need Custom Seagrass Placemat Samples?' : isHyacinthArticle ? 'Need Custom Water Hyacinth Basket Samples?' : isMacrameArticle ? 'Need Custom Jute Macrame Samples?' : isLampshadeArticle ? 'Need Custom Jute Lampshade Samples?' : isKaisaArticle ? 'Need Custom Kaisa Grass Basket Samples?' : isPoufArticle ? 'Need Custom Jute Pouf & Ottoman Samples?' : isPlanterArticle ? 'Need Custom Seagrass Planter Samples?' : isBagArticle ? 'Need Custom Jute Bag Samples?' : isMatArticle ? 'Need Custom Jute Floor Mat Samples?' : isPlacematArticle ? 'Need Custom Jute Placemat Samples?' : 'Need Custom Jute Basket Samples?'}
                 </h4>
                 <p className="mt-2 text-xs text-amber-100/90 leading-relaxed">
                   We supply OEM sample prototypes with custom screen printing, PMS color dyeing, and direct FOB Chattogram container quotes in 24 hours.
                 </p>
                 <button
-                  onClick={() => onOpenQuoteModal({ productCode: isHyacinthArticle ? 'OEM-WATER-HYACINTH-BASKETS' : isMacrameArticle ? 'OEM-JUTE-MACRAME' : isLampshadeArticle ? 'OEM-JUTE-LAMPSHADES' : isKaisaArticle ? 'OEM-KAISA-BASKETS' : isPoufArticle ? 'OEM-JUTE-POUFS' : isPlanterArticle ? 'OEM-SEAGRASS-PLANTERS' : isBagArticle ? 'OEM-JUTE-BAGS' : isMatArticle ? 'OEM-JUTE-FLOOR-MATS' : isPlacematArticle ? 'OEM-JUTE-PLACEMATS' : 'OEM-JUTE-BASKETS' })}
+                  onClick={() => onOpenQuoteModal({ productCode: isSeagrassPlacematArticle ? 'OEM-SEAGRASS-PLACEMATS' : isHyacinthArticle ? 'OEM-WATER-HYACINTH-BASKETS' : isMacrameArticle ? 'OEM-JUTE-MACRAME' : isLampshadeArticle ? 'OEM-JUTE-LAMPSHADES' : isKaisaArticle ? 'OEM-KAISA-BASKETS' : isPoufArticle ? 'OEM-JUTE-POUFS' : isPlanterArticle ? 'OEM-SEAGRASS-PLANTERS' : isBagArticle ? 'OEM-JUTE-BAGS' : isMatArticle ? 'OEM-JUTE-FLOOR-MATS' : isPlacematArticle ? 'OEM-JUTE-PLACEMATS' : 'OEM-JUTE-BASKETS' })}
                   className="mt-4 w-full py-2.5 bg-white hover:bg-stone-100 text-amber-950 rounded-lg text-xs font-bold transition shadow-xs flex items-center justify-center gap-1.5"
                 >
                   <Mail className="w-3.5 h-3.5" />
@@ -288,11 +290,11 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                 </div>
                 <div className="flex justify-between text-stone-600">
                   <span>Origin:</span>
-                  <span className="font-medium text-stone-900">{isHyacinthArticle ? 'Bangladesh (Freshwater Hyacinth)' : isKaisaArticle ? 'Bangladesh (Wild Kaisa Grass)' : isPlanterArticle ? 'Bangladesh (Coastal Seagrass)' : 'Bangladesh (Tosha Jute)'}</span>
+                  <span className="font-medium text-stone-900">{isSeagrassPlacematArticle ? 'Bangladesh (Coastal Seagrass)' : isHyacinthArticle ? 'Bangladesh (Freshwater Hyacinth)' : isKaisaArticle ? 'Bangladesh (Wild Kaisa Grass)' : isPlanterArticle ? 'Bangladesh (Coastal Seagrass)' : 'Bangladesh (Tosha Jute)'}</span>
                 </div>
                 <div className="flex justify-between text-stone-600">
                   <span>Standard MOQ:</span>
-                  <span className="font-medium text-stone-900">{isHyacinthArticle ? '300 Sets (Flexible)' : isMacrameArticle ? '250 Pieces (Flexible)' : isLampshadeArticle ? '200 Pieces (Flexible)' : isKaisaArticle ? '200 Sets (Flexible)' : isPoufArticle ? '100 Pcs (Filled) / 200 (Covers)' : isPlanterArticle ? '200 Sets (Flexible)' : isBagArticle ? '500 Pieces (Flexible)' : isMatArticle ? '300 Pieces (Flexible)' : isPlacematArticle ? '500 Pieces (125 Sets of 4)' : '200 Sets (Flexible)'}</span>
+                  <span className="font-medium text-stone-900">{isSeagrassPlacematArticle ? '300 Pieces (Flexible)' : isHyacinthArticle ? '300 Sets (Flexible)' : isMacrameArticle ? '250 Pieces (Flexible)' : isLampshadeArticle ? '200 Pieces (Flexible)' : isKaisaArticle ? '200 Sets (Flexible)' : isPoufArticle ? '100 Pcs (Filled) / 200 (Covers)' : isPlanterArticle ? '200 Sets (Flexible)' : isBagArticle ? '500 Pieces (Flexible)' : isMatArticle ? '300 Pieces (Flexible)' : isPlacematArticle ? '500 Pieces (125 Sets of 4)' : '200 Sets (Flexible)'}</span>
                 </div>
                 <div className="flex justify-between text-stone-600">
                   <span>Moisture Tolerance:</span>
@@ -318,10 +320,17 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
           <main className="lg:col-span-8 order-1 lg:order-2 space-y-12">
 
             {/* ========================================================================= */}
-            {/* DATE PALM LEAF / SEAGRASS / WATER HYACINTH / JUTE MACRAME / LAMPSHADES / KAISA / POUF EDITORIAL BRANCHING */}
+            {/* DATE PALM LEAF / SEAGRASS PLACEMAT / SEAGRASS BASKET / WATER HYACINTH / JUTE MACRAME / LAMPSHADES / KAISA / POUF EDITORIAL BRANCHING */}
             {/* ========================================================================= */}
             {isDateLeafArticle ? (
               <DatePalmLeafPlacematEditorial
+                article={article}
+                activeFaqIndex={activeFaqIndex}
+                setActiveFaqIndex={setActiveFaqIndex}
+                onOpenQuoteModal={onOpenQuoteModal}
+              />
+            ) : isSeagrassPlacematArticle ? (
+              <SeagrassPlacematEditorial
                 article={article}
                 activeFaqIndex={activeFaqIndex}
                 setActiveFaqIndex={setActiveFaqIndex}

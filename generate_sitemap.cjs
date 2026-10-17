@@ -98,6 +98,12 @@ const corePages = [
     { loc: 'https://goldenfibercraftsltd.com/images/blog/water-hyacinth-fiber-harvest-drying-bangladesh.jpg', title: 'Raw Water Hyacinth Stems Sun Curing on Bamboo Racks Along Riverbank Bangladesh' },
     { loc: 'https://goldenfibercraftsltd.com/images/blog/water-hyacinth-basket-quality-control-moisture-inspection.jpg', title: 'Water Hyacinth Basket Quality Control and Moisture Meter Inspection' }
   ]},
+  { url: '/seagrass-placemat-manufacturer-bangladesh', priority: '0.95', changefreq: 'weekly', images: [
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-seagrass-placemat-manufacturer-bangladesh.jpg', title: 'Custom Seagrass Placemat & Table Charger Manufacturer Wholesale Bangladesh' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/bangladeshi-artisan-weaving-seagrass-placemat.jpg', title: 'Bangladeshi Artisan Hand Weaving Coastal Seagrass Table Placemat' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/custom-seagrass-placemats-wholesale-display.jpg', title: 'Custom Seagrass Placemats and Dining Chargers Wholesale Display' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/seagrass-placemat-quality-control-moisture-inspection.jpg', title: 'Seagrass Placemat Quality Control and Moisture Meter Testing' }
+  ]},
   { url: '/about', priority: '0.8', changefreq: 'weekly' },
   { url: '/materials', priority: '0.8', changefreq: 'weekly' },
   { url: '/infrastructure', priority: '0.8', changefreq: 'weekly' },
