@@ -26,6 +26,13 @@ const corePages = [
     { loc: 'https://goldenfibercraftsltd.com/images/blog/raw-tosha-jute-fiber-inspection-bangladesh.jpg', title: 'Raw Tosha Jute Fiber Inspection Bangladesh' },
     { loc: 'https://goldenfibercraftsltd.com/images/blog/jute-bag-quality-control-moisture-inspection.jpg', title: 'Jute Bag Quality Control and Moisture Inspection' }
   ]},
+  { url: '/jute-basket-manufacturers', priority: '0.98', changefreq: 'weekly', images: [
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-jute-basket-manufacturers-europe.jpg', title: 'Jute Basket Manufacturers Wholesale B2B Exporter for European Retailers' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/bangladeshi-artisan-stitching-jute-basket-workshop.jpg', title: 'Bangladeshi Artisan Stitching Jute Basket in Workshop' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/jute-planter-laundry-storage-baskets-wholesale-europe.jpg', title: 'Jute Planter and Laundry Storage Baskets Wholesale Europe' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/jute-basket-quality-control-moisture-inspection-europe.jpg', title: 'Jute Basket Quality Control Moisture Inspection Europe' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/raw-tosha-jute-fiber-hackling-braiding-bangladesh.jpg', title: 'Raw Tosha Jute Fiber Hackling and Braiding Bangladesh' }
+  ]},
   { url: '/jute-basket-manufacturer-bangladesh', priority: '0.95', changefreq: 'weekly', images: [
     { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-jute-basket-manufacturer-bangladesh.jpg', title: 'Custom Jute Basket Manufacturer in Bangladesh Wholesale' },
     { loc: 'https://goldenfibercraftsltd.com/images/blog/bangladeshi-artisan-stitching-coiled-jute-basket.jpg', title: 'Bangladeshi Artisan Stitching Coiled Jute Basket' },

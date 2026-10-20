@@ -17,6 +17,7 @@ import { DatePalmLeafPlacematEditorial } from '../components/articles/DatePalmLe
 import { SeagrassBasketEditorial } from '../components/articles/SeagrassBasketEditorial';
 import { SeagrassPlacematEditorial } from '../components/articles/SeagrassPlacematEditorial';
 import { WaterHyacinthBasketEditorial } from '../components/articles/WaterHyacinthBasketEditorial';
+import { JuteBasketManufacturersEuropeEditorial } from '../components/articles/JuteBasketManufacturersEuropeEditorial';
 
 interface ArticleDetailPageProps {
   onOpenQuoteModal: (productCodeOrData?: string | any) => void;
@@ -30,7 +31,8 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
   const currentSlug = slug || articleSlug || (pathSlug && pathSlug !== 'blog' ? pathSlug : '') || 'jute-bag-manufacturer-bangladesh';
   const article = getArticleBySlug(currentSlug) || ARTICLES_DATA[0];
 
-  const isDateLeafArticle = article.slug.includes('date-palm-leaf') || article.category_slug === 'date-leaf' || article.id.includes('date-palm-leaf');
+  const isJuteBasketEuropeArticle = article.slug === 'jute-basket-manufacturers' || article.id === 'art-jute-basket-manufacturers-europe' || currentSlug === 'jute-basket-manufacturers';
+  const isDateLeafArticle = !isJuteBasketEuropeArticle && (article.slug.includes('date-palm-leaf') || article.category_slug === 'date-leaf' || article.id.includes('date-palm-leaf'));
   const isKaisaTrayArticle = !isDateLeafArticle && (article.slug.includes('kaisa-grass-tray') || article.slug.includes('tray') || article.id.includes('kaisa-grass-tray'));
   const isSeagrassPlacematArticle = !isDateLeafArticle && !isKaisaTrayArticle && (article.slug.includes('seagrass-placemat') || article.category_slug === 'seagrass-placemats' || article.id.includes('seagrass-placemat'));
   const isSeagrassBasketArticle = !isDateLeafArticle && !isKaisaTrayArticle && !isSeagrassPlacematArticle && (article.slug.includes('seagrass-basket') || article.category_slug === 'seagrass-baskets' || article.id.includes('seagrass-basket'));
@@ -322,9 +324,16 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
           <main className="lg:col-span-8 order-1 lg:order-2 space-y-12">
 
             {/* ========================================================================= */}
-            {/* DATE PALM LEAF / SEAGRASS PLACEMAT / SEAGRASS BASKET / WATER HYACINTH / JUTE MACRAME / LAMPSHADES / KAISA / POUF EDITORIAL BRANCHING */}
+            {/* JUTE BASKET EUROPE / DATE PALM LEAF / SEAGRASS PLACEMAT / SEAGRASS BASKET / WATER HYACINTH / JUTE MACRAME / LAMPSHADES / KAISA / POUF EDITORIAL BRANCHING */}
             {/* ========================================================================= */}
-            {isDateLeafArticle ? (
+            {isJuteBasketEuropeArticle ? (
+              <JuteBasketManufacturersEuropeEditorial
+                article={article}
+                activeFaqIndex={activeFaqIndex}
+                setActiveFaqIndex={setActiveFaqIndex}
+                onOpenQuoteModal={onOpenQuoteModal}
+              />
+            ) : isDateLeafArticle ? (
               <DatePalmLeafPlacematEditorial
                 article={article}
                 activeFaqIndex={activeFaqIndex}
