@@ -3,8 +3,8 @@ import { COMPANY_NAME } from '../data/products';
 
 export const BRAND_NAME = COMPANY_NAME || 'Golden Fiber Crafts Ltd';
 
-export const DEFAULT_HOME_TITLE = "Jute & Natural Fiber Handicraft Manufacturer & Exporter | Golden Fiber Crafts Ltd";
-export const DEFAULT_HOME_DESCRIPTION = "Golden Fiber Crafts Ltd. (GFCL) is a Bangladesh-based manufacturer and exporter of natural, biodegradable, and sustainably crafted lifestyle products, specializing in jute, seagrass, hogla, water hyacinth, and other natural fibers. We develop beautiful, functional, and customizable products for international B2B buyers and private-label collections.";
+export const DEFAULT_HOME_TITLE = "Jute & Natural Fiber Manufacturer | Golden Fiber Crafts Ltd";
+export const DEFAULT_HOME_DESCRIPTION = "Golden Fiber Crafts Ltd. (GFCL) is a Bangladesh-based manufacturer and exporter of natural, biodegradable, and sustainably crafted lifestyle products.";
 
 /**
  * Generates formatted title with Page Title first, followed by brand / tagline
