@@ -61,6 +61,13 @@ const corePages = [
     { loc: 'https://goldenfibercraftsltd.com/images/blog/kaisa-grass-basket-quality-control-moisture-inspection.jpg', title: 'Kaisa Grass Basket Quality Control Moisture Inspection' },
     { loc: 'https://goldenfibercraftsltd.com/images/blog/custom-kaisa-grass-baskets-wholesale-display.jpg', title: 'Custom Kaisa Grass Baskets Wholesale Export Display' }
   ]},
+  { url: '/kaisa-grass-tray-manufacturer-bangladesh', priority: '0.95', changefreq: 'weekly', images: [
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-kaisa-grass-tray-manufacturer-bangladesh.jpg', title: 'Custom Kaisa Grass Tray Manufacturer in Bangladesh Wholesale' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/bangladeshi-artisan-weaving-kaisa-grass-tray.jpg', title: 'Bangladeshi Artisan Hand Weaving Kaisa Grass Serving Tray' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/custom-kaisa-grass-trays-wholesale-display.jpg', title: 'Custom Kaisa Grass Trays and Bread Platters Wholesale Display' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/raw-wild-kaisa-grass-fiber-harvest-bangladesh.jpg', title: 'Raw Wild Kaisa Grass Riverbank Harvest Bangladesh' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/kaisa-grass-basket-quality-control-moisture-inspection.jpg', title: 'Kaisa Grass Tray Quality Control and Moisture Meter Inspection' }
+  ]},
   { url: '/jute-pouf-manufacturer-bangladesh', priority: '0.95', changefreq: 'weekly', images: [
     { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-jute-pouf-manufacturer-bangladesh.jpg', title: 'Custom Jute Pouf Manufacturer in Bangladesh Wholesale' },
     { loc: 'https://goldenfibercraftsltd.com/images/blog/bangladeshi-artisan-weaving-jute-pouf.jpg', title: 'Bangladeshi Artisan Hand Stitching Braided Jute Pouf' },
