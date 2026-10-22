@@ -26,6 +26,12 @@ const corePages = [
     { loc: 'https://goldenfibercraftsltd.com/images/blog/raw-tosha-jute-fiber-inspection-bangladesh.jpg', title: 'Raw Tosha Jute Fiber Inspection Bangladesh' },
     { loc: 'https://goldenfibercraftsltd.com/images/blog/jute-bag-quality-control-moisture-inspection.jpg', title: 'Jute Bag Quality Control and Moisture Inspection' }
   ]},
+  { url: '/jute-rug-manufacturers', priority: '0.98', changefreq: 'weekly', images: [
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-jute-rug-manufacturers-europe.jpg', title: 'Jute Rug Manufacturers Wholesale Braided Area Rugs Exporter to Europe' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/bangladeshi-artisan-weaving-braided-jute-rug.jpg', title: 'Bangladeshi Artisan Weaving Braided Jute Rug' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/wholesale-braided-jute-rugs-collection-europe.jpg', title: 'Wholesale Braided Jute Rugs Collection Europe' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/jute-rug-factory-quality-inspection-bangladesh.jpg', title: 'Jute Rug Factory Quality Inspection Moisture Meter Bangladesh' }
+  ]},
   { url: '/jute-basket-manufacturers', priority: '0.98', changefreq: 'weekly', images: [
     { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-jute-basket-manufacturers-europe.jpg', title: 'Jute Basket Manufacturers Wholesale B2B Exporter for European Retailers' },
     { loc: 'https://goldenfibercraftsltd.com/images/blog/bangladeshi-artisan-stitching-jute-basket-workshop.jpg', title: 'Bangladeshi Artisan Stitching Jute Basket in Workshop' },

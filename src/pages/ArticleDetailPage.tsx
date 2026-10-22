@@ -18,6 +18,7 @@ import { SeagrassBasketEditorial } from '../components/articles/SeagrassBasketEd
 import { SeagrassPlacematEditorial } from '../components/articles/SeagrassPlacematEditorial';
 import { WaterHyacinthBasketEditorial } from '../components/articles/WaterHyacinthBasketEditorial';
 import { JuteBasketManufacturersEuropeEditorial } from '../components/articles/JuteBasketManufacturersEuropeEditorial';
+import { JuteRugManufacturersEuropeEditorial } from '../components/articles/JuteRugManufacturersEuropeEditorial';
 
 interface ArticleDetailPageProps {
   onOpenQuoteModal: (productCodeOrData?: string | any) => void;
@@ -31,7 +32,8 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
   const currentSlug = slug || articleSlug || (pathSlug && pathSlug !== 'blog' ? pathSlug : '') || 'jute-bag-manufacturer-bangladesh';
   const article = getArticleBySlug(currentSlug) || ARTICLES_DATA[0];
 
-  const isJuteBasketEuropeArticle = article.slug === 'jute-basket-manufacturers' || article.id === 'art-jute-basket-manufacturers-europe' || currentSlug === 'jute-basket-manufacturers';
+  const isJuteRugEuropeArticle = article.slug === 'jute-rug-manufacturers' || article.id === 'art-jute-rug-manufacturers-europe' || currentSlug === 'jute-rug-manufacturers' || currentSlug === 'jute-rug-manufacturer-bangladesh' || currentSlug === 'jute-rugs-manufacturer-bangladesh';
+  const isJuteBasketEuropeArticle = !isJuteRugEuropeArticle && (article.slug === 'jute-basket-manufacturers' || article.id === 'art-jute-basket-manufacturers-europe' || currentSlug === 'jute-basket-manufacturers');
   const isDateLeafArticle = !isJuteBasketEuropeArticle && (article.slug.includes('date-palm-leaf') || article.category_slug === 'date-leaf' || article.id.includes('date-palm-leaf'));
   const isKaisaTrayArticle = !isDateLeafArticle && (article.slug.includes('kaisa-grass-tray') || article.slug.includes('tray') || article.id.includes('kaisa-grass-tray'));
   const isSeagrassPlacematArticle = !isDateLeafArticle && !isKaisaTrayArticle && (article.slug.includes('seagrass-placemat') || article.category_slug === 'seagrass-placemats' || article.id.includes('seagrass-placemat'));
@@ -206,7 +208,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
 
             <div className="flex items-center gap-2">
               <button
-                onClick={() => onOpenQuoteModal({ productCode: isSeagrassPlacematArticle ? 'GFC-SPM-002-OEM' : isKaisaArticle ? 'KAISA-BASKET-ROTTERDAM-RFQ' : isPoufArticle ? 'BJP-01-POUF-OEM' : isPlanterArticle ? 'SEAGRASS-PLANTER-OEM' : isBagArticle ? 'JUTE-BAG-OEM' : isMatArticle ? 'JUTE-FLOOR-MAT-OEM' : isPlacematArticle ? 'JUTE-PLACEMAT-OEM' : 'JUTE-BASKET-OEM' })}
+                onClick={() => onOpenQuoteModal({ productCode: isJuteRugEuropeArticle ? 'JUTE-RUG-OEM-EU' : isSeagrassPlacematArticle ? 'GFC-SPM-002-OEM' : isKaisaArticle ? 'KAISA-BASKET-ROTTERDAM-RFQ' : isPoufArticle ? 'BJP-01-POUF-OEM' : isPlanterArticle ? 'SEAGRASS-PLANTER-OEM' : isBagArticle ? 'JUTE-BAG-OEM' : isMatArticle ? 'JUTE-FLOOR-MAT-OEM' : isPlacematArticle ? 'JUTE-PLACEMAT-OEM' : 'JUTE-BASKET-OEM' })}
                 className="px-4 py-2 bg-amber-600 hover:bg-amber-500 text-white rounded-lg text-xs font-semibold transition shadow-xs flex items-center gap-1.5"
               >
                 <Mail className="w-3.5 h-3.5" />
@@ -298,7 +300,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                 </div>
                 <div className="flex justify-between text-stone-600">
                   <span>Standard MOQ:</span>
-                  <span className="font-medium text-stone-900">{isKaisaTrayArticle ? '300 Pcs / 100 Sets of 3' : isSeagrassPlacematArticle ? '300 Pieces (Flexible)' : isHyacinthArticle ? '300 Sets (Flexible)' : isMacrameArticle ? '250 Pieces (Flexible)' : isLampshadeArticle ? '200 Pieces (Flexible)' : isKaisaArticle ? '200 Sets (Flexible)' : isPoufArticle ? '100 Pcs (Filled) / 200 (Covers)' : isPlanterArticle ? '200 Sets (Flexible)' : isBagArticle ? '500 Pieces (Flexible)' : isMatArticle ? '300 Pieces (Flexible)' : isPlacematArticle ? '500 Pieces (125 Sets of 4)' : '200 Sets (Flexible)'}</span>
+                  <span className="font-medium text-stone-900">{isJuteRugEuropeArticle ? '200 Pieces (Flexible)' : isKaisaTrayArticle ? '300 Pcs / 100 Sets of 3' : isSeagrassPlacematArticle ? '300 Pieces (Flexible)' : isHyacinthArticle ? '300 Sets (Flexible)' : isMacrameArticle ? '250 Pieces (Flexible)' : isLampshadeArticle ? '200 Pieces (Flexible)' : isKaisaArticle ? '200 Sets (Flexible)' : isPoufArticle ? '100 Pcs (Filled) / 200 (Covers)' : isPlanterArticle ? '200 Sets (Flexible)' : isBagArticle ? '500 Pieces (Flexible)' : isMatArticle ? '300 Pieces (Flexible)' : isPlacematArticle ? '500 Pieces (125 Sets of 4)' : '200 Sets (Flexible)'}</span>
                 </div>
                 <div className="flex justify-between text-stone-600">
                   <span>Moisture Tolerance:</span>
@@ -324,9 +326,16 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
           <main className="lg:col-span-8 order-1 lg:order-2 space-y-12">
 
             {/* ========================================================================= */}
-            {/* JUTE BASKET EUROPE / DATE PALM LEAF / SEAGRASS PLACEMAT / SEAGRASS BASKET / WATER HYACINTH / JUTE MACRAME / LAMPSHADES / KAISA / POUF EDITORIAL BRANCHING */}
+            {/* JUTE RUGS EUROPE / JUTE BASKET EUROPE / DATE PALM LEAF / SEAGRASS PLACEMAT / SEAGRASS BASKET / WATER HYACINTH / JUTE MACRAME / LAMPSHADES / KAISA / POUF EDITORIAL BRANCHING */}
             {/* ========================================================================= */}
-            {isJuteBasketEuropeArticle ? (
+            {isJuteRugEuropeArticle ? (
+              <JuteRugManufacturersEuropeEditorial
+                article={article}
+                activeFaqIndex={activeFaqIndex}
+                setActiveFaqIndex={setActiveFaqIndex}
+                onOpenQuoteModal={onOpenQuoteModal}
+              />
+            ) : isJuteBasketEuropeArticle ? (
               <JuteBasketManufacturersEuropeEditorial
                 article={article}
                 activeFaqIndex={activeFaqIndex}
