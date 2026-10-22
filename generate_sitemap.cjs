@@ -124,6 +124,10 @@ const corePages = [
     { loc: 'https://goldenfibercraftsltd.com/images/blog/custom-seagrass-placemats-wholesale-display.jpg', title: 'Custom Seagrass Placemats and Dining Chargers Wholesale Display' },
     { loc: 'https://goldenfibercraftsltd.com/images/blog/seagrass-placemat-quality-control-moisture-inspection.jpg', title: 'Seagrass Placemat Quality Control and Moisture Meter Testing' }
   ]},
+  { url: '/date-palm-leaf-basket-manufacturer-bangladesh', priority: '0.98', changefreq: 'weekly', images: [
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-date-palm-leaf-basket-manufacturer-bangladesh.jpg', title: 'Custom Date Palm Leaf Basket Manufacturer in Bangladesh Wholesale' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/date-palm-leaf-basket-quality-inspection-bangladesh.jpg', title: 'Date Palm Leaf Basket Quality Control Moisture Meter Inspection' }
+  ]},
   { url: '/about', priority: '0.8', changefreq: 'weekly' },
   { url: '/materials', priority: '0.8', changefreq: 'weekly' },
   { url: '/infrastructure', priority: '0.8', changefreq: 'weekly' },

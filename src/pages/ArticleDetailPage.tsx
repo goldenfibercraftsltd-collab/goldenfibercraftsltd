@@ -14,6 +14,7 @@ import { JutePoufEditorial } from '../components/articles/JutePoufEditorial';
 import { JuteLampshadeEditorial } from '../components/articles/JuteLampshadeEditorial';
 import { JuteMacrameEditorial } from '../components/articles/JuteMacrameEditorial';
 import { DatePalmLeafPlacematEditorial } from '../components/articles/DatePalmLeafPlacematEditorial';
+import { DatePalmLeafBasketEditorial } from '../components/articles/DatePalmLeafBasketEditorial';
 import { SeagrassBasketEditorial } from '../components/articles/SeagrassBasketEditorial';
 import { SeagrassPlacematEditorial } from '../components/articles/SeagrassPlacematEditorial';
 import { WaterHyacinthBasketEditorial } from '../components/articles/WaterHyacinthBasketEditorial';
@@ -34,8 +35,9 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
 
   const isJuteRugEuropeArticle = article.slug === 'jute-rug-manufacturers' || article.id === 'art-jute-rug-manufacturers-europe' || currentSlug === 'jute-rug-manufacturers' || currentSlug === 'jute-rug-manufacturer-bangladesh' || currentSlug === 'jute-rugs-manufacturer-bangladesh';
   const isJuteBasketEuropeArticle = !isJuteRugEuropeArticle && (article.slug === 'jute-basket-manufacturers' || article.id === 'art-jute-basket-manufacturers-europe' || currentSlug === 'jute-basket-manufacturers');
-  const isDateLeafArticle = !isJuteBasketEuropeArticle && (article.slug.includes('date-palm-leaf') || article.category_slug === 'date-leaf' || article.id.includes('date-palm-leaf'));
-  const isKaisaTrayArticle = !isDateLeafArticle && (article.slug.includes('kaisa-grass-tray') || article.slug.includes('tray') || article.id.includes('kaisa-grass-tray'));
+  const isDateLeafBasketArticle = article.slug === 'date-palm-leaf-basket-manufacturer-bangladesh' || article.id === 'art-date-palm-leaf-basket-manufacturer-bangladesh' || currentSlug === 'date-palm-leaf-basket-manufacturer-bangladesh' || currentSlug.includes('date-palm-leaf-basket');
+  const isDateLeafArticle = !isDateLeafBasketArticle && !isJuteBasketEuropeArticle && (article.slug.includes('date-palm-leaf') || article.category_slug === 'date-leaf' || article.id.includes('date-palm-leaf'));
+  const isKaisaTrayArticle = !isDateLeafBasketArticle && !isDateLeafArticle && (article.slug.includes('kaisa-grass-tray') || article.slug.includes('tray') || article.id.includes('kaisa-grass-tray'));
   const isSeagrassPlacematArticle = !isDateLeafArticle && !isKaisaTrayArticle && (article.slug.includes('seagrass-placemat') || article.category_slug === 'seagrass-placemats' || article.id.includes('seagrass-placemat'));
   const isSeagrassBasketArticle = !isDateLeafArticle && !isKaisaTrayArticle && !isSeagrassPlacematArticle && (article.slug.includes('seagrass-basket') || article.category_slug === 'seagrass-baskets' || article.id.includes('seagrass-basket'));
   const isHyacinthArticle = !isDateLeafArticle && !isKaisaTrayArticle && !isSeagrassPlacematArticle && !isSeagrassBasketArticle && (article.slug.includes('water-hyacinth') || article.category_slug === 'water-hyacinth' || article.id.includes('water-hyacinth'));
@@ -208,7 +210,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
 
             <div className="flex items-center gap-2">
               <button
-                onClick={() => onOpenQuoteModal({ productCode: isJuteRugEuropeArticle ? 'JUTE-RUG-OEM-EU' : isSeagrassPlacematArticle ? 'GFC-SPM-002-OEM' : isKaisaArticle ? 'KAISA-BASKET-ROTTERDAM-RFQ' : isPoufArticle ? 'BJP-01-POUF-OEM' : isPlanterArticle ? 'SEAGRASS-PLANTER-OEM' : isBagArticle ? 'JUTE-BAG-OEM' : isMatArticle ? 'JUTE-FLOOR-MAT-OEM' : isPlacematArticle ? 'JUTE-PLACEMAT-OEM' : 'JUTE-BASKET-OEM' })}
+                onClick={() => onOpenQuoteModal({ productCode: isDateLeafBasketArticle ? 'GFC-DLB-001-OEM' : isJuteRugEuropeArticle ? 'JUTE-RUG-OEM-EU' : isSeagrassPlacematArticle ? 'GFC-SPM-002-OEM' : isKaisaArticle ? 'KAISA-BASKET-ROTTERDAM-RFQ' : isPoufArticle ? 'BJP-01-POUF-OEM' : isPlanterArticle ? 'SEAGRASS-PLANTER-OEM' : isBagArticle ? 'JUTE-BAG-OEM' : isMatArticle ? 'JUTE-FLOOR-MAT-OEM' : isPlacematArticle ? 'JUTE-PLACEMAT-OEM' : 'JUTE-BASKET-OEM' })}
                 className="px-4 py-2 bg-amber-600 hover:bg-amber-500 text-white rounded-lg text-xs font-semibold transition shadow-xs flex items-center gap-1.5"
               >
                 <Mail className="w-3.5 h-3.5" />
@@ -296,11 +298,11 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
                 </div>
                 <div className="flex justify-between text-stone-600">
                   <span>Origin:</span>
-                  <span className="font-medium text-stone-900">{isKaisaTrayArticle ? 'Bangladesh (Wild Kaisa Grass)' : isSeagrassPlacematArticle ? 'Bangladesh (Coastal Seagrass)' : isHyacinthArticle ? 'Bangladesh (Freshwater Hyacinth)' : isKaisaArticle ? 'Bangladesh (Wild Kaisa Grass)' : isPlanterArticle ? 'Bangladesh (Coastal Seagrass)' : 'Bangladesh (Tosha Jute)'}</span>
+                  <span className="font-medium text-stone-900">{isDateLeafBasketArticle || isDateLeafArticle ? 'Bangladesh (Wild Date Palm Fronds)' : isKaisaTrayArticle ? 'Bangladesh (Wild Kaisa Grass)' : isSeagrassPlacematArticle ? 'Bangladesh (Coastal Seagrass)' : isHyacinthArticle ? 'Bangladesh (Freshwater Hyacinth)' : isKaisaArticle ? 'Bangladesh (Wild Kaisa Grass)' : isPlanterArticle ? 'Bangladesh (Coastal Seagrass)' : 'Bangladesh (Tosha Jute)'}</span>
                 </div>
                 <div className="flex justify-between text-stone-600">
                   <span>Standard MOQ:</span>
-                  <span className="font-medium text-stone-900">{isJuteRugEuropeArticle ? '200 Pieces (Flexible)' : isKaisaTrayArticle ? '300 Pcs / 100 Sets of 3' : isSeagrassPlacematArticle ? '300 Pieces (Flexible)' : isHyacinthArticle ? '300 Sets (Flexible)' : isMacrameArticle ? '250 Pieces (Flexible)' : isLampshadeArticle ? '200 Pieces (Flexible)' : isKaisaArticle ? '200 Sets (Flexible)' : isPoufArticle ? '100 Pcs (Filled) / 200 (Covers)' : isPlanterArticle ? '200 Sets (Flexible)' : isBagArticle ? '500 Pieces (Flexible)' : isMatArticle ? '300 Pieces (Flexible)' : isPlacematArticle ? '500 Pieces (125 Sets of 4)' : '200 Sets (Flexible)'}</span>
+                  <span className="font-medium text-stone-900">{isDateLeafBasketArticle ? '200 Sets / 300 Pcs (Flexible)' : isJuteRugEuropeArticle ? '200 Pieces (Flexible)' : isKaisaTrayArticle ? '300 Pcs / 100 Sets of 3' : isSeagrassPlacematArticle ? '300 Pieces (Flexible)' : isHyacinthArticle ? '300 Sets (Flexible)' : isMacrameArticle ? '250 Pieces (Flexible)' : isLampshadeArticle ? '200 Pieces (Flexible)' : isKaisaArticle ? '200 Sets (Flexible)' : isPoufArticle ? '100 Pcs (Filled) / 200 (Covers)' : isPlanterArticle ? '200 Sets (Flexible)' : isBagArticle ? '500 Pieces (Flexible)' : isMatArticle ? '300 Pieces (Flexible)' : isPlacematArticle ? '500 Pieces (125 Sets of 4)' : '200 Sets (Flexible)'}</span>
                 </div>
                 <div className="flex justify-between text-stone-600">
                   <span>Moisture Tolerance:</span>
@@ -337,6 +339,13 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
               />
             ) : isJuteBasketEuropeArticle ? (
               <JuteBasketManufacturersEuropeEditorial
+                article={article}
+                activeFaqIndex={activeFaqIndex}
+                setActiveFaqIndex={setActiveFaqIndex}
+                onOpenQuoteModal={onOpenQuoteModal}
+              />
+            ) : isDateLeafBasketArticle ? (
+              <DatePalmLeafBasketEditorial
                 article={article}
                 activeFaqIndex={activeFaqIndex}
                 setActiveFaqIndex={setActiveFaqIndex}
