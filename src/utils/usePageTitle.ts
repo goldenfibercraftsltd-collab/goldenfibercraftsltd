@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { COMPANY_NAME } from '../data/products';
 
-export const BRAND_NAME = COMPANY_NAME || 'Golden Fiber Crafts Ltd';
+export const BRAND_NAME = 'Golden Fiber Crafts Ltd';
 
-export const DEFAULT_HOME_TITLE = "Jute & Natural Fiber Manufacturer | Golden Fiber Crafts Ltd";
-export const DEFAULT_HOME_DESCRIPTION = "Golden Fiber Crafts Ltd. (GFCL) is a Bangladesh-based manufacturer and exporter of natural, biodegradable, and sustainably crafted lifestyle products.";
+export const DEFAULT_HOME_TITLE = "Jute & Natural Fiber Handicraft Manufacturer & Exporter | Golden Fiber Crafts Ltd";
+export const DEFAULT_HOME_DESCRIPTION = "Golden Fiber Crafts Ltd is a Bangladesh-based manufacturer and exporter of eco-friendly jute, seagrass, and natural fiber handicrafts for global B2B buyers.";
 
 /**
  * Generates formatted title with Page Title first, followed by brand / tagline

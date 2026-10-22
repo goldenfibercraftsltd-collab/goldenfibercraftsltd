@@ -50,7 +50,7 @@ export interface ProductItem {
 
 export const TAGLINE = "Nature Woven into Every Creation.";
 export const SUB_TAGLINE = "Sustainable Jute | Natural Fiber | Handcrafted Excellence";
-export const COMPANY_NAME = "Golden Fiber Crafts Ltd.";
+export const COMPANY_NAME = "Golden Fiber Crafts Ltd";
 export const OFFICIAL_EMAIL = "shafiq@goldenfibercraftsltd.com";
 export const SECONDARY_EMAIL = "shafiq@goldenfibercraftsltd.com";
 export const OFFICIAL_WEBSITE = "www.goldenfibercraftsltd.com";

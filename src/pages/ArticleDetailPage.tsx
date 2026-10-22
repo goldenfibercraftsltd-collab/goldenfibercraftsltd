@@ -93,7 +93,7 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
         {
           "@type": "Organization",
           "@id": "https://goldenfibercraftsltd.com/#organization",
-          "name": "Golden Fiber Crafts Limited",
+          "name": "Golden Fiber Crafts Ltd",
           "url": "https://goldenfibercraftsltd.com",
           "logo": {
             "@type": "ImageObject",

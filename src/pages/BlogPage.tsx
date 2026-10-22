@@ -14,8 +14,8 @@ interface BlogPageProps {
 export const BlogPage: React.FC<BlogPageProps> = ({ onOpenQuoteModal }) => {
   usePageTitle(
     'B2B Sourcing Insights & Industry Blog',
-    'Golden Fiber Crafts Ltd.',
-    'Explore authoritative B2B guides, manufacturing insights, export logistics, and sustainable home decor sourcing knowledge from Bangladesh manufacturer Golden Fiber Crafts Limited.'
+    'Golden Fiber Crafts Ltd',
+    'Explore authoritative B2B guides, manufacturing insights, export logistics, and sustainable home decor sourcing knowledge from Bangladesh manufacturer Golden Fiber Crafts Ltd.'
   );
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -199,7 +199,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({ onOpenQuoteModal }) => {
               Ready to Manufacture Your Custom Natural Fiber Line?
             </h3>
             <p className="mt-3 text-sm sm:text-base text-stone-300 font-light leading-relaxed">
-              Golden Fiber Crafts Limited works directly with global homeware retailers, department stores, and wholesale distributors. We engineer custom dimensions, nesting packaging, and complete private labeling.
+              Golden Fiber Crafts Ltd works directly with global homeware retailers, department stores, and wholesale distributors. We engineer custom dimensions, nesting packaging, and complete private labeling.
             </p>
             <div className="mt-6 flex flex-wrap gap-4 items-center">
               {onOpenQuoteModal ? (
