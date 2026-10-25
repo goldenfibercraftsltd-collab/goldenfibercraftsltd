@@ -20,6 +20,7 @@ import { SeagrassPlacematEditorial } from '../components/articles/SeagrassPlacem
 import { WaterHyacinthBasketEditorial } from '../components/articles/WaterHyacinthBasketEditorial';
 import { JuteBasketManufacturersEuropeEditorial } from '../components/articles/JuteBasketManufacturersEuropeEditorial';
 import { JuteRugManufacturersEuropeEditorial } from '../components/articles/JuteRugManufacturersEuropeEditorial';
+import { SeagrassTrayEditorial } from '../components/articles/SeagrassTrayEditorial';
 
 interface ArticleDetailPageProps {
   onOpenQuoteModal: (productCodeOrData?: string | any) => void;
@@ -37,7 +38,8 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
   const isJuteBasketEuropeArticle = !isJuteRugEuropeArticle && (article.slug === 'jute-basket-manufacturers' || article.id === 'art-jute-basket-manufacturers-europe' || currentSlug === 'jute-basket-manufacturers');
   const isDateLeafBasketArticle = article.slug === 'date-palm-leaf-basket-manufacturer-bangladesh' || article.id === 'art-date-palm-leaf-basket-manufacturer-bangladesh' || currentSlug === 'date-palm-leaf-basket-manufacturer-bangladesh' || currentSlug.includes('date-palm-leaf-basket');
   const isDateLeafArticle = !isDateLeafBasketArticle && !isJuteBasketEuropeArticle && (article.slug.includes('date-palm-leaf') || article.category_slug === 'date-leaf' || article.id.includes('date-palm-leaf'));
-  const isKaisaTrayArticle = !isDateLeafBasketArticle && !isDateLeafArticle && (article.slug.includes('kaisa-grass-tray') || article.slug.includes('tray') || article.id.includes('kaisa-grass-tray'));
+  const isSeagrassTrayArticle = article.slug === 'seagrass-tray-manufacturer-bangladesh' || article.id === 'art-seagrass-tray-manufacturer-bangladesh' || currentSlug === 'seagrass-tray-manufacturer-bangladesh' || currentSlug === 'seagrass-tray-manufacturers' || currentSlug.includes('seagrass-tray');
+  const isKaisaTrayArticle = !isSeagrassTrayArticle && !isDateLeafBasketArticle && !isDateLeafArticle && (article.slug.includes('kaisa-grass-tray') || (article.slug.includes('tray') && !article.slug.includes('seagrass')) || article.id.includes('kaisa-grass-tray'));
   const isSeagrassPlacematArticle = !isDateLeafArticle && !isKaisaTrayArticle && (article.slug.includes('seagrass-placemat') || article.category_slug === 'seagrass-placemats' || article.id.includes('seagrass-placemat'));
   const isSeagrassBasketArticle = !isDateLeafArticle && !isKaisaTrayArticle && !isSeagrassPlacematArticle && (article.slug.includes('seagrass-basket') || article.category_slug === 'seagrass-baskets' || article.id.includes('seagrass-basket'));
   const isHyacinthArticle = !isDateLeafArticle && !isKaisaTrayArticle && !isSeagrassPlacematArticle && !isSeagrassBasketArticle && (article.slug.includes('water-hyacinth') || article.category_slug === 'water-hyacinth' || article.id.includes('water-hyacinth'));
@@ -388,6 +390,13 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
               />
             ) : isLampshadeArticle ? (
               <JuteLampshadeEditorial
+                article={article}
+                activeFaqIndex={activeFaqIndex}
+                setActiveFaqIndex={setActiveFaqIndex}
+                onOpenQuoteModal={onOpenQuoteModal}
+              />
+            ) : isSeagrassTrayArticle ? (
+              <SeagrassTrayEditorial
                 article={article}
                 activeFaqIndex={activeFaqIndex}
                 setActiveFaqIndex={setActiveFaqIndex}

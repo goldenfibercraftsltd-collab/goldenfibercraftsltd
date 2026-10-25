@@ -99,6 +99,8 @@ export const AppContent: React.FC = () => {
       document.title = formatPageTitle('Seagrass Placemat Manufacturer & Wholesale Table Chargers Exporter');
     } else if (p === '/date-palm-leaf-basket-manufacturer-bangladesh' || p === '/date-palm-leaf-baskets-manufacturer-bangladesh' || p === '/date-leaf-basket-manufacturer-bangladesh') {
       document.title = formatPageTitle('Date Palm Leaf Basket Manufacturer in Bangladesh | Wholesale Storage Hampers & Planters');
+    } else if (p === '/seagrass-tray-manufacturer-bangladesh' || p === '/seagrass-tray-manufacturers' || p === '/seagrass-trays-manufacturer-bangladesh') {
+      document.title = formatPageTitle('Seagrass Tray Manufacturer in Bangladesh | Custom Wholesale & OEM Exporter');
     } else if (p === '/admin/login') {
       document.title = formatPageTitle('Admin Login');
     } else if (p === '/admin' || p === '/admin/dashboard') {
@@ -251,6 +253,9 @@ export const AppContent: React.FC = () => {
           <Route path="/date-palm-leaf-basket-manufacturer-bangladesh" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
           <Route path="/date-palm-leaf-baskets-manufacturer-bangladesh" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
           <Route path="/date-leaf-basket-manufacturer-bangladesh" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
+          <Route path="/seagrass-tray-manufacturer-bangladesh" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
+          <Route path="/seagrass-tray-manufacturers" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
+          <Route path="/seagrass-trays-manufacturer-bangladesh" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
           <Route path="/:slug" element={<ArticleDetailPage onOpenQuoteModal={handleOpenQuoteModal} />} />
         </Routes>
 

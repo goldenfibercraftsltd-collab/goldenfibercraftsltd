@@ -128,6 +128,11 @@ const corePages = [
     { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-date-palm-leaf-basket-manufacturer-bangladesh.jpg', title: 'Custom Date Palm Leaf Basket Manufacturer in Bangladesh Wholesale' },
     { loc: 'https://goldenfibercraftsltd.com/images/blog/date-palm-leaf-basket-quality-inspection-bangladesh.jpg', title: 'Date Palm Leaf Basket Quality Control Moisture Meter Inspection' }
   ]},
+  { url: '/seagrass-tray-manufacturer-bangladesh', priority: '0.98', changefreq: 'weekly', images: [
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-seagrass-tray-manufacturer-bangladesh.jpg', title: 'Custom Seagrass Tray Manufacturer in Bangladesh Wholesale' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/bangladeshi-artisan-weaving-seagrass-tray.jpg', title: 'Bangladeshi Artisan Hand Weaving Seagrass Tray' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/seagrass-tray-quality-control-moisture-inspection.jpg', title: 'Seagrass Tray Quality Control and Moisture Meter Inspection' }
+  ]},
   { url: '/about', priority: '0.8', changefreq: 'weekly' },
   { url: '/materials', priority: '0.8', changefreq: 'weekly' },
   { url: '/infrastructure', priority: '0.8', changefreq: 'weekly' },
