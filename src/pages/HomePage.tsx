@@ -22,13 +22,13 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* Primary Brand Introduction & Crawlable Heading for Google Search */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-2 pb-4">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-stone-900 tracking-tight">
-          Golden Fiber Crafts Ltd
+          Golden Fiber Crafts Ltd <span className="text-stone-500 font-sans font-normal text-base sm:text-xl block sm:inline sm:ml-2">(goldenfibercraftsltd)</span>
         </h1>
         <h2 className="text-sm sm:text-base text-amber-800 font-medium mt-1">
-          Jute &amp; Natural Fiber Handicraft Manufacturer &amp; Exporter
+          Official Website | Jute &amp; Natural Fiber Handicraft Manufacturer &amp; Exporter Bangladesh
         </h2>
         <p className="text-xs sm:text-sm text-stone-600 max-w-4xl mx-auto mt-2 leading-relaxed">
-          Golden Fiber Crafts Ltd. (GFCL) is a Bangladesh-based manufacturer and exporter of natural, biodegradable, and sustainably crafted lifestyle products, specializing in jute, seagrass, hogla, water hyacinth, and other natural fibers. We develop beautiful, functional, and customizable products for international B2B buyers and private-label collections.
+          Welcome to the official website of <strong>Golden Fiber Crafts Ltd</strong> (<strong>goldenfibercraftsltd.com</strong>). Based in Bangladesh with manufacturing facilities in Kishoreganj and Gazipur, we are a premier manufacturer and exporter of eco-friendly jute, seagrass, kaisa grass, date palm leaf, and natural fiber lifestyle handicrafts for international B2B buyers, wholesalers, and private-label retail collections worldwide.
         </p>
       </section>
 

@@ -6,6 +6,12 @@ interface Env {
 export const onRequest: PagesFunction<Env> = async (context) => {
   const url = new URL(context.request.url);
 
+  // 1. Force 301 Permanent Redirect from www to apex domain (goldenfibercraftsltd.com)
+  if (url.hostname === 'www.goldenfibercraftsltd.com') {
+    url.hostname = 'goldenfibercraftsltd.com';
+    return Response.redirect(url.toString(), 301);
+  }
+
   // Pass static assets and API requests through untouched
   if (
     url.pathname.startsWith('/api/') ||
@@ -43,7 +49,9 @@ export const onRequest: PagesFunction<Env> = async (context) => {
     const cleanPath = url.pathname.length > 1 && url.pathname.endsWith('/') 
       ? url.pathname.slice(0, -1) 
       : url.pathname;
-    const canonicalUrl = `https://goldenfibercraftsltd.com${cleanPath === '/' ? '' : cleanPath}`;
+    const canonicalUrl = cleanPath === '/' 
+      ? 'https://goldenfibercraftsltd.com/' 
+      : `https://goldenfibercraftsltd.com${cleanPath}`;
 
     let html = await response.text();
 

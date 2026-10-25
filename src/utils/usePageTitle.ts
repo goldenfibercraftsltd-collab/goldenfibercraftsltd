@@ -3,14 +3,14 @@ import { COMPANY_NAME } from '../data/products';
 
 export const BRAND_NAME = 'Golden Fiber Crafts Ltd';
 
-export const DEFAULT_HOME_TITLE = "Jute & Natural Fiber Handicraft Manufacturer & Exporter | Golden Fiber Crafts Ltd";
-export const DEFAULT_HOME_DESCRIPTION = "Golden Fiber Crafts Ltd is a Bangladesh-based manufacturer and exporter of eco-friendly jute, seagrass, and natural fiber handicrafts for global B2B buyers.";
+export const DEFAULT_HOME_TITLE = "Golden Fiber Crafts Ltd (goldenfibercraftsltd) | Jute & Natural Fiber Handicraft Manufacturer Bangladesh";
+export const DEFAULT_HOME_DESCRIPTION = "Official website of Golden Fiber Crafts Ltd (goldenfibercraftsltd.com). Leading Bangladesh manufacturer and exporter of eco-friendly jute, seagrass, and natural fiber handicrafts for global B2B buyers.";
 
 /**
  * Generates formatted title with Page Title first, followed by brand / tagline
  * e.g. "About Us - Golden Fiber Crafts Ltd"
  * or "Jute Baskets - Golden Fiber Crafts Ltd"
- * or Home Page: "Jute & Natural Fiber Handicraft Manufacturer & Exporter | Golden Fiber Crafts Ltd"
+ * or Home Page: "Golden Fiber Crafts Ltd (goldenfibercraftsltd) | Jute & Natural Fiber Handicraft Manufacturer Bangladesh"
  */
 export function formatPageTitle(pageTitle?: string, subtitleOrTagline?: string): string {
   const brand = 'Golden Fiber Crafts Ltd';
@@ -83,7 +83,9 @@ export function setPageTitle(pageTitle?: string, subtitleOrTagline?: string, des
     const cleanPath = currentPath.length > 1 && currentPath.endsWith('/') 
       ? currentPath.slice(0, -1) 
       : currentPath;
-    const canonicalUrl = `https://goldenfibercraftsltd.com${cleanPath === '/' ? '' : cleanPath}`;
+    const canonicalUrl = cleanPath === '/' 
+      ? 'https://goldenfibercraftsltd.com/' 
+      : `https://goldenfibercraftsltd.com${cleanPath}`;
 
     let canonicalEl = document.querySelector('link[rel="canonical"]');
     if (!canonicalEl) {
