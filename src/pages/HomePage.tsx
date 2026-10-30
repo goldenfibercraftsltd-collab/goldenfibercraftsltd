@@ -22,13 +22,13 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* Primary Brand Introduction & Crawlable Heading for Google Search */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-2 pb-4">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-stone-900 tracking-tight">
-          Golden Fiber Crafts Ltd <span className="text-stone-500 font-sans font-normal text-base sm:text-xl block sm:inline sm:ml-2">(goldenfibercraftsltd)</span>
+          Golden Fiber Crafts Ltd
         </h1>
         <h2 className="text-sm sm:text-base text-amber-800 font-medium mt-1">
-          Official Website | Jute &amp; Natural Fiber Handicraft Manufacturer &amp; Exporter Bangladesh
+          Jute &amp; Natural Fiber Handicraft Manufacturer &amp; Exporter | Bangladesh
         </h2>
         <p className="text-xs sm:text-sm text-stone-600 max-w-4xl mx-auto mt-2 leading-relaxed">
-          Welcome to the official website of <strong>Golden Fiber Crafts Ltd</strong> (<strong>goldenfibercraftsltd.com</strong>). Based in Bangladesh with manufacturing facilities in Kishoreganj and Gazipur, we are a premier manufacturer and exporter of eco-friendly jute, seagrass, kaisa grass, date palm leaf, and natural fiber lifestyle handicrafts for international B2B buyers, wholesalers, and private-label retail collections worldwide.
+          Welcome to the official website of <strong>Golden Fiber Crafts Ltd</strong>. Based in Bangladesh with manufacturing facilities in Kishoreganj and Gazipur, we are a premier manufacturer and exporter of eco-friendly jute, seagrass, kaisa grass, date palm leaf, and natural fiber lifestyle handicrafts for international B2B buyers, wholesalers, and private-label retail collections worldwide.
         </p>
       </section>
 

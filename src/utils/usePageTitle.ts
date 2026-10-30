@@ -3,14 +3,14 @@ import { COMPANY_NAME } from '../data/products';
 
 export const BRAND_NAME = 'Golden Fiber Crafts Ltd';
 
-export const DEFAULT_HOME_TITLE = "Golden Fiber Crafts Ltd (goldenfibercraftsltd) | Jute & Natural Fiber Handicraft Manufacturer Bangladesh";
-export const DEFAULT_HOME_DESCRIPTION = "Official website of Golden Fiber Crafts Ltd (goldenfibercraftsltd.com). Leading Bangladesh manufacturer and exporter of eco-friendly jute, seagrass, and natural fiber handicrafts for global B2B buyers.";
+export const DEFAULT_HOME_TITLE = "Jute & Natural Fiber Handicraft Manufacturer & Exporter | Golden Fiber Crafts Ltd";
+export const DEFAULT_HOME_DESCRIPTION = "Golden Fiber Crafts Ltd. (GFCL) is a Bangladesh-based manufacturer and exporter of natural, biodegradable, and sustainably crafted lifestyle products, specializing in jute, seagrass, hogla, water hyacinth, and other natural fibers. We develop beautiful, functional, and customizable products for international B2B buyers and private-label collections.";
 
 /**
  * Generates formatted title with Page Title first, followed by brand / tagline
  * e.g. "About Us - Golden Fiber Crafts Ltd"
  * or "Jute Baskets - Golden Fiber Crafts Ltd"
- * or Home Page: "Golden Fiber Crafts Ltd (goldenfibercraftsltd) | Jute & Natural Fiber Handicraft Manufacturer Bangladesh"
+ * or Home Page: "Jute & Natural Fiber Handicraft Manufacturer & Exporter | Golden Fiber Crafts Ltd"
  */
 export function formatPageTitle(pageTitle?: string, subtitleOrTagline?: string): string {
   const brand = 'Golden Fiber Crafts Ltd';
