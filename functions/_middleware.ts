@@ -67,6 +67,143 @@ export const onRequest: PagesFunction<Env> = async (context) => {
       `<meta property="og:url" content="${canonicalUrl}" />`
     );
 
+    // Extract potential article slug from path
+    // Supports /jute-bag-manufacturers or /blog/jute-bag-manufacturers
+    let articleSlug = '';
+    if (cleanPath.startsWith('/blog/')) {
+      articleSlug = cleanPath.replace('/blog/', '').trim();
+    } else if (cleanPath !== '/' && !cleanPath.includes('/admin') && !cleanPath.includes('/buyer') && !cleanPath.includes('/category') && !cleanPath.includes('/products')) {
+      articleSlug = cleanPath.replace('/', '').trim();
+    }
+
+    if (articleSlug && context.env && context.env.DB) {
+      try {
+        const article = await context.env.DB.prepare(
+          "SELECT title, meta_title, meta_description, excerpt, featured_image, featured_image_alt, published_date, author, faqs, primary_keyword FROM articles WHERE slug = ? AND status = 'published'"
+        ).bind(articleSlug).first() as any;
+
+        if (article) {
+          const pageTitle = article.meta_title || `${article.title} | Golden Fiber Crafts Ltd`;
+          const pageDesc = article.meta_description || article.excerpt || '';
+          const pageImage = article.featured_image 
+            ? (article.featured_image.startsWith('http') ? article.featured_image : `https://goldenfibercraftsltd.com${article.featured_image}`)
+            : 'https://goldenfibercraftsltd.com/images/og-cover.jpg';
+
+          // Replace <title>
+          html = html.replace(/<title>[^<]*<\/title>/i, `<title>${pageTitle}</title>`);
+
+          // Replace <meta name="description">
+          html = html.replace(
+            /<meta[^>]*name=["']description["'][^>]*content=["'][^"']*["'][^>]*>/i,
+            `<meta name="description" content="${pageDesc.replace(/"/g, '&quot;')}" />`
+          );
+
+          // Replace og:title & og:description & og:image
+          html = html.replace(
+            /<meta property="og:title"[^>]*>/i,
+            `<meta property="og:title" content="${pageTitle.replace(/"/g, '&quot;')}" />`
+          );
+          html = html.replace(
+            /<meta property="og:description"[^>]*>/i,
+            `<meta property="og:description" content="${pageDesc.replace(/"/g, '&quot;')}" />`
+          );
+          html = html.replace(
+            /<meta property="og:image"[^>]*>/i,
+            `<meta property="og:image" content="${pageImage}" />`
+          );
+
+          // Build Article & Breadcrumb Schema
+          const articleSchema = {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": article.title,
+            "description": pageDesc,
+            "image": pageImage,
+            "datePublished": article.published_date || "2026-11-01",
+            "dateModified": article.published_date || "2026-11-01",
+            "author": {
+              "@type": "Organization",
+              "name": "Golden Fiber Crafts Ltd",
+              "url": "https://goldenfibercraftsltd.com"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Golden Fiber Crafts Ltd",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://goldenfibercraftsltd.com/logo.png"
+              }
+            },
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": canonicalUrl
+            }
+          };
+
+          const breadcrumbSchema = {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://goldenfibercraftsltd.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Guides & Insights",
+                "item": "https://goldenfibercraftsltd.com/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": article.title,
+                "item": canonicalUrl
+              }
+            ]
+          };
+
+          let schemasToInject = `
+    <script type="application/ld+json">
+    ${JSON.stringify(articleSchema)}
+    </script>
+    <script type="application/ld+json">
+    ${JSON.stringify(breadcrumbSchema)}
+    </script>`;
+
+          if (article.faqs) {
+            try {
+              const parsedFaqs = typeof article.faqs === 'string' ? JSON.parse(article.faqs) : article.faqs;
+              if (Array.isArray(parsedFaqs) && parsedFaqs.length > 0) {
+                const faqSchema = {
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  "mainEntity": parsedFaqs.map((faq: any) => ({
+                    "@type": "Question",
+                    "name": faq.q || faq.question,
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": faq.a || faq.answer
+                    }
+                  }))
+                };
+                schemasToInject += `
+    <script type="application/ld+json">
+    ${JSON.stringify(faqSchema)}
+    </script>`;
+              }
+            } catch (e) {}
+          }
+
+          html = html.replace('</head>', `${schemasToInject}\n  </head>`);
+        }
+      } catch (err) {
+        // Fallback to default html if DB error occurs
+      }
+    }
+
     const newHeaders = new Headers(response.headers);
     newHeaders.set('Content-Type', 'text/html; charset=UTF-8');
 
