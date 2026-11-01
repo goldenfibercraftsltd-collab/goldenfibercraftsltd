@@ -20,6 +20,7 @@ import { SeagrassPlacematEditorial } from '../components/articles/SeagrassPlacem
 import { WaterHyacinthBasketEditorial } from '../components/articles/WaterHyacinthBasketEditorial';
 import { JuteBasketManufacturersEuropeEditorial } from '../components/articles/JuteBasketManufacturersEuropeEditorial';
 import { JuteRugManufacturersEuropeEditorial } from '../components/articles/JuteRugManufacturersEuropeEditorial';
+import { JuteBagManufacturersEuropeEditorial } from '../components/articles/JuteBagManufacturersEuropeEditorial';
 import { SeagrassTrayEditorial } from '../components/articles/SeagrassTrayEditorial';
 
 interface ArticleDetailPageProps {
@@ -34,7 +35,8 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
   const currentSlug = slug || articleSlug || (pathSlug && pathSlug !== 'blog' ? pathSlug : '') || 'jute-bag-manufacturer-bangladesh';
   const article = getArticleBySlug(currentSlug) || ARTICLES_DATA[0];
 
-  const isJuteRugEuropeArticle = article.slug === 'jute-rug-manufacturers' || article.id === 'art-jute-rug-manufacturers-europe' || currentSlug === 'jute-rug-manufacturers' || currentSlug === 'jute-rug-manufacturer-bangladesh' || currentSlug === 'jute-rugs-manufacturer-bangladesh';
+  const isJuteBagEuropeArticle = article.slug === 'jute-bag-manufacturers' || article.id === 'art-jute-bag-manufacturers-europe' || currentSlug === 'jute-bag-manufacturers';
+  const isJuteRugEuropeArticle = !isJuteBagEuropeArticle && (article.slug === 'jute-rug-manufacturers' || article.id === 'art-jute-rug-manufacturers-europe' || currentSlug === 'jute-rug-manufacturers' || currentSlug === 'jute-rug-manufacturer-bangladesh' || currentSlug === 'jute-rugs-manufacturer-bangladesh');
   const isJuteBasketEuropeArticle = !isJuteRugEuropeArticle && (article.slug === 'jute-basket-manufacturers' || article.id === 'art-jute-basket-manufacturers-europe' || currentSlug === 'jute-basket-manufacturers');
   const isDateLeafBasketArticle = article.slug === 'date-palm-leaf-basket-manufacturer-bangladesh' || article.id === 'art-date-palm-leaf-basket-manufacturer-bangladesh' || currentSlug === 'date-palm-leaf-basket-manufacturer-bangladesh' || currentSlug.includes('date-palm-leaf-basket');
   const isDateLeafArticle = !isDateLeafBasketArticle && !isJuteBasketEuropeArticle && (article.slug.includes('date-palm-leaf') || article.category_slug === 'date-leaf' || article.id.includes('date-palm-leaf'));
@@ -330,9 +332,16 @@ export const ArticleDetailPage: React.FC<ArticleDetailPageProps> = ({ onOpenQuot
           <main className="lg:col-span-8 order-1 lg:order-2 space-y-12">
 
             {/* ========================================================================= */}
-            {/* JUTE RUGS EUROPE / JUTE BASKET EUROPE / DATE PALM LEAF / SEAGRASS PLACEMAT / SEAGRASS BASKET / WATER HYACINTH / JUTE MACRAME / LAMPSHADES / KAISA / POUF EDITORIAL BRANCHING */}
+            {/* JUTE BAGS EUROPE / JUTE RUGS EUROPE / JUTE BASKET EUROPE / DATE PALM LEAF / SEAGRASS PLACEMAT / SEAGRASS BASKET / WATER HYACINTH / JUTE MACRAME / LAMPSHADES / KAISA / POUF EDITORIAL BRANCHING */}
             {/* ========================================================================= */}
-            {isJuteRugEuropeArticle ? (
+            {isJuteBagEuropeArticle ? (
+              <JuteBagManufacturersEuropeEditorial
+                article={article}
+                activeFaqIndex={activeFaqIndex}
+                setActiveFaqIndex={setActiveFaqIndex}
+                onOpenQuoteModal={onOpenQuoteModal}
+              />
+            ) : isJuteRugEuropeArticle ? (
               <JuteRugManufacturersEuropeEditorial
                 article={article}
                 activeFaqIndex={activeFaqIndex}

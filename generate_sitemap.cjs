@@ -19,6 +19,13 @@ const corePages = [
   { url: '/', priority: '1.0', changefreq: 'daily' },
   { url: '/products', priority: '0.9', changefreq: 'daily' },
   { url: '/blog', priority: '0.9', changefreq: 'weekly' },
+  { url: '/jute-bag-manufacturers', priority: '0.98', changefreq: 'weekly', images: [
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-jute-bag-manufacturers-europe.jpg', title: 'Jute Bag Manufacturers Wholesale B2B Sourcing Guide for European Retailers' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/bangladeshi-artisan-stitching-jute-bag-europe.jpg', title: 'Bangladeshi Artisan Stitching Jute Bags for Europe' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/wholesale-jute-shopping-bags-collection-europe.jpg', title: 'Wholesale Jute Shopping Bags Collection Europe' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/jute-bag-quality-control-moisture-inspection.jpg', title: 'Jute Bag Quality Control and Moisture Inspection' },
+    { loc: 'https://goldenfibercraftsltd.com/images/blog/raw-tosha-jute-fiber-inspection-bangladesh.jpg', title: 'Raw Tosha Jute Fiber Inspection Bangladesh' }
+  ]},
   { url: '/jute-bag-manufacturer-bangladesh', priority: '0.95', changefreq: 'weekly', images: [
     { loc: 'https://goldenfibercraftsltd.com/images/blog/featured-jute-bag-manufacturer-bangladesh.jpg', title: 'Custom Jute Bag Manufacturer in Bangladesh Wholesale' },
     { loc: 'https://goldenfibercraftsltd.com/images/blog/bangladeshi-artisan-stitching-jute-bag.jpg', title: 'Bangladeshi Artisan Stitching Jute Bags' },
